@@ -84,9 +84,19 @@ layout: table_wrappers
       {% if site.aux_links %}
         <nav aria-label="Auxiliary" class="aux-nav">
           <ul class="aux-nav-list">
+            {%- assign link_array = page.url | split: "/" -%}
+            {%- assign url_top = link_array[1] -%}
             {% for link in site.aux_links %}
+              {%- assign link_array = link.last | split: "/" -%}
+              {%- assign aux_link_top = link_array[1] | replace: '"]', '' -%}
+
               <li class="aux-nav-list-item">
-                <a href="{{ link.last }}" class="site-button"
+                <a href="{{ link.last }}"
+                  {% if url_top == aux_link_top %}
+                  class="site-button site-button-active"
+                  {% else %}
+                  class="site-button"
+                  {% endif %}
                   {% if site.aux_links_new_tab %}
                   target="_blank" rel="noopener noreferrer"
                   {% endif %}
