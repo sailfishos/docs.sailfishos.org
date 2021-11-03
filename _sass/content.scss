@@ -228,4 +228,18 @@
       margin-top: 0;
     }
   }
+
+  .nested-numbered-list ol {
+    padding-left: 10px;
+    margin-top: 0;
+    counter-reset: item;
+  }
+  .nested-numbered-list li {
+    display: block;
+  }
+  .nested-numbered-list li::before {
+    position: static;
+    content: counters(item, ".") " ";
+    counter-increment: item;
+  }
 }
