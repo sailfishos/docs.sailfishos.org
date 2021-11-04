@@ -93,3 +93,142 @@ a:not([class]) {
     font-weight: bold;
   }
 }
+
+.landing {
+  max-width:1010px;
+  width:100% !important;
+}
+.clearfix  {
+  clear: both;
+}
+
+.landing-container {
+  text-align:center;
+  display:inline-block;
+}
+
+.landing-text {
+  font-size:small;
+  padding-top:13px;
+  font-weight:bold;
+}
+
+.main-content > .landing-text {
+  padding:0 10%;
+}
+
+.landing-head {
+  font-size:x-large;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+.landing-blank > .landing-box-text,
+.landing-foot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-bottom:12px;
+}
+
+.landing-foot,
+.landing-link {
+  font-weight: bold;
+}
+
+.landing-img > .landing-box-text {
+  width:60%;
+}
+
+.landing-blank > .landing-box-text {
+  width:90%;
+}
+
+.landing-img,
+.landing-blank {
+  position: relative;
+  margin: 10px;
+  padding-top: 15px;
+  text-align: left;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+
+.landing-blank > .landing-head,
+.landing-blank > .landing-foot,
+.landing-link {
+  color: #053766;
+}
+
+// FIXME: rewrite hardcoded 1024px cases using "@media (min-width: 50rem)" example below
+@media only screen and (min-device-width: 1024px) {
+  .landing-img {
+    width: 451px;
+    height: 181px;
+  }
+  .landing-img,
+  .landing-blank,
+  .landing-blank > .landing-box-text,
+  .landing-foot {
+    padding-left:17px;
+  }
+  .landing-blank {
+    height: 190px;
+  }
+  .landing-blank-container {
+    display: inline-flex;
+  }
+}
+
+// FIXME: rewrite hardcoded 1024px cases using "@media (min-width: 50rem)" example below
+@media only screen and (max-device-width: 1024px) {
+  .landing-img {
+    width: 235pt;
+    height: 94pt;
+  }
+  .landing-img > .landing-box-text {
+    font-size:x-small;
+  }
+  .landing-head {
+    font-size:medium;
+  }
+  .landing-blank-container {
+    display: inline-grid;
+  }
+  .landing-img,
+  .landing-blank,
+  .landing-blank > .landing-box-text,
+  .landing-foot {
+    padding-left:10px;
+  }
+  .landing-box-text {
+    line-height: 1.25
+  }
+  .landing-blank {
+    height: 150px;
+  }
+}
+
+.landing-img {
+  color: white;
+  background-size: contain;
+  display: inline-table;
+}
+
+.landing-blank {
+  color: #222;
+  background-color: #e1e1e1;
+  width: 215.5px;
+}
+
+.landing-container > a:hover .landing-foot  {
+  color: #ccc;
+}
+
+.landing-blank-container > a:hover .landing-link {
+  color: #3D6F9E;
+}
+
+.landing-highlight {
+  color: #053766;
+}
