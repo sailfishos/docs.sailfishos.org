@@ -44,6 +44,12 @@ a:visited code {
 // Kramdown line_numbers = true: fences have a wider gutter than with Liquid?
 
 // ```[LANG]...```
+
+// FIXME: this is an ugly hack to force an unrecognised syntax to be treated as
+// code block. This is because Jekyll generates <pre><code class="language-...
+// for unrecognised syntax highlighters, but they might work in future
+// (and some, e.g. specfile, already work fine in GitHub editor preview).
+pre:not([class]),
 div.highlighter-rouge {
   padding: $sp-3;
   margin-top: 0;
