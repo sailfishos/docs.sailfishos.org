@@ -15,7 +15,6 @@
     "stylelint-selector-no-utility": "^4.0.0"
   },
   "scripts": {
-    "test": "stylelint '**/*.scss'",
     "format": "prettier --write '**/*.{scss,js,json}'",
     "stylelint-check": "stylelint-config-prettier-check"
   },
