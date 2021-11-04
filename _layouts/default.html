@@ -42,7 +42,14 @@ layout: table_wrappers
 
   <div class="side-bar">
     <div class="site-header">
-      <a href="{{ '/' | absolute_url }}" class="site-title lh-tight">{% include title.html %}</a>
+      <a href="https://sailfishos.org" class="">
+        <div style="width:69px;height:54px;background-image: url('/assets/images/sfos.svg');background-repeat: no-repeat; background-position: left center; background-size: contain;"></div>
+      </a>
+      <a href="/">
+        <div class="landing-highlight" style="height:100%; padding-left:1em; padding-right:1em; display:flex; align-items:center; font-size:large;">
+          <b>Documentation</b>
+        </div>
+      </a>
       <a href="#" id="menu-button" class="site-button">
         <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
       </a>
@@ -68,15 +75,6 @@ layout: table_wrappers
   </div>
   <div class="main" id="top">
     <div id="main-header" class="main-header">
-      {% if site.search_enabled != false %}
-        <div class="search">
-          <div class="search-input-wrap">
-            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search {{ site.title }}" aria-label="Search {{ site.title }}" autocomplete="off">
-            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
-          </div>
-          <div id="search-results" class="search-results"></div>
-        </div>
-      {% endif %}
       {% include header_custom.html %}
       {% if site.aux_links %}
         <nav aria-label="Auxiliary" class="aux-nav">
@@ -105,6 +103,20 @@ layout: table_wrappers
           </ul>
         </nav>
       {% endif %}
+      <div class="search-and-logo">
+      {% if site.search_enabled != false %}
+        <div class="search">
+          <div class="search-input-wrap">
+            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Sailfish OS docs" aria-label="Search {{ site.title }}" autocomplete="off">
+            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      {% endif %}
+        <a href="https://jolla.com">
+	  <img src="/assets/images/jolla.svg" class="img-logo" style="margin:11px;width:40px;height:31px">
+        </a>
+      </div>
     </div>
     <div id="main-content-wrap" class="main-content-wrap">
       {% unless page.url == "/" %}

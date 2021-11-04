@@ -1,0 +1,95 @@
+---
+---
+{% if site.color_scheme and site.color_scheme != "nil" %}
+  {% assign color_scheme = site.color_scheme %}
+{% else %}
+  {% assign color_scheme = "light" %}
+{% endif %}
+{% include css/just-the-docs.scss.liquid color_scheme=color_scheme %}
+
+@font-face { font-family: Source Sans Pro; src: url('/assets/fonts/SourceSansPro-Light.otf') }
+@font-face { font-family: Source Sans Pro; src: url('/assets/fonts/SourceSansPro-Regular.otf'); font-weight: bold }
+
+blockquote {
+  margin: 0 !important;
+  padding: 0.001em 2.5em !important;
+  border-left: 0.35em solid #eee !important;
+}
+
+// Used to decorate SFOS Architecture blocks
+.btn-sec {
+  display: block;
+  padding: 0.35em 0;
+  border: 1px solid transparent;
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+}
+
+a:not([class]) {
+  background-image: unset;
+  background-repeat: unset;
+  background-position: unset;
+  background-size: unset;
+
+  &:hover {
+    background-image: unset;
+    background-size: unset;
+  }
+}
+
+.main-content {
+  a {
+    // Wrap URLs normally like text, otherwise end up with too wide tables 
+    white-space: normal;
+  }
+
+  .toc {
+    line-height: 1.3;
+  }
+}
+
+.side-bar {
+  border-right: unset;
+}
+
+// For the hamburger menu to be right-aligned in narrow (mobile) viewports
+.site-header {
+  justify-content: space-between;
+}
+@media (min-width: 50rem) {
+  .site-header {
+    justify-content: unset;
+  }
+  .aux-nav {
+    float:left;
+    width:60%;
+  }
+  .search-and-logo {
+    float:right;
+    width:40%;
+  }
+  .search {
+    float:left;
+  }
+  .img-logo {
+    float:right;
+  }
+  .search {
+    width: 68% !important;
+  }
+}
+
+.site-button {
+  padding: 15px;
+}
+
+.site-button:hover {
+  color: #6c6c6c;
+  background-image: unset;
+}
+
+.aux-nav {
+  .aux-nav-list-item {
+    font-weight: bold;
+  }
+}

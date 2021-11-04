@@ -159,7 +159,8 @@
 .aux-nav {
   height: 100%;
   overflow-x: auto;
-  @include fs-2;
+  // Increase font size to match sailfishos.org
+  @include fs-3;
 
   .aux-nav-list {
     display: flex;

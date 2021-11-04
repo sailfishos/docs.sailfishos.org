@@ -142,6 +142,7 @@
   height: 100%;
   padding: $gutter-spacing-sm;
   align-items: center;
+  color: $body-text-color;
 }
 
 @include mq(md) {
@@ -157,6 +158,10 @@
     rgba($feedback-color, 0.8) 80%,
     rgba($feedback-color, 0) 100%
   );
+}
+
+.site-button-active {
+  color: $link-color;
 }
 
 .site-button:hover {
