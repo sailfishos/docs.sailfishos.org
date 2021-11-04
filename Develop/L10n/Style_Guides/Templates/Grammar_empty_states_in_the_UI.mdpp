@@ -1,0 +1,9 @@
+## Empty states in the UI
+
+User Interface empty states are typically written in the 2-sentence form, using verbs and active tone and, where possible, guiding the user towards the next possible steps to take. Keep sentences short and content informative. Where possible, guide user to reflect the good sides of an application or service (like referring to friends instead of
+contacts in the People app). For example:\
+(tell the situation, what items are missing) (point user to next actions)\
+No contacts yet. Pull down to add your friends.
+
+App covers (that are shown in the Home) for empty states aim to be short informative messages. Length is typically two words.
+

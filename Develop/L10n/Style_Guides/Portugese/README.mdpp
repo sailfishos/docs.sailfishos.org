@@ -1,0 +1,102 @@
+---
+title: Portugese
+permalink: Develop/L10n/Style_Guides/Portugese/
+parent: Style Guides
+grand_parent: L10n
+layout: default
+---
+
+!INCLUDE "../Templates/Guidelines_and_principles.mdpp"
+In Portuguese you should always adopt the informal “tu” tone, similar to that employed in some social media sites, as opposed to the more formal “você” tone.
+
+!INCLUDE "../Templates/Basics_of_good_writing.mdpp"
+!INCLUDE "../Templates/Language_and_culture.mdpp"
+# Grammar
+
+In all Sailfish OS translations, you should use the new European Portuguese spelling and grammar rules, as implemented by the new Orthographic Agreement. Whenever in doubt, please check the available resources (Jolla glossaries and translation memories, [Infopedia](http://www.infopedia.pt) and [Priberam](http://www.priberam.pt/dlpo/Default.aspx) dictionaries, or [Portal da Língua Portuguesa](http://www.portaldalinguaportuguesa.org), for instance). Pay special attention to words that currently have two acceptable spellings (always check the project memories to ensure the utmost consistency).
+
+!INCLUDE "../Templates/Grammar_articles.mdpp"
+!INCLUDE "../Templates/Grammar_person.mdpp"
+In European Portuguese, you should pay special attention to possessive pronouns, such as “seu” or “sua”, which should only be used when strictly necessary.
+
+!INCLUDE "../Templates/Grammar_gender.mdpp"
+For example:
+
+  - Chairperson: **direção**
+
+Should it not be possible to use a gender-neutral term in your Portuguese translation, then you should use the appropriate masculine term ‒ **diretor** in this instance.
+
+## Tense
+
+Use the present tense. E.g.:
+
+  - Correct: **O leitor multimédia escolhe as músicas.**
+  - Incorrect: **O leitor multimédia irá escolher as músicas.**
+
+!INCLUDE "../Templates/Grammar_voice.mdpp"
+For example:
+
+  - Correct: **Criar as Definições da Conta em...**
+  - Incorrect: **As Definições da Conta serão criadas em...**
+
+!INCLUDE "../Templates/Grammar_mood.mdpp"
+For example:
+
+  - Correct: **Entra nas Definições**
+  - Incorrect: **O Utilizador entra nas Definições**
+
+!INCLUDE "../Templates/Grammar_capitalisation.mdpp"
+Observe the rules of European Portuguese under the new Orthographic Agreement (for instance, month names should be in lowercase, except when these appear at the start of a sentence or as a standalone menu option).
+
+!INCLUDE "../Templates/Grammar_menu_in_the_UI.mdpp"
+!INCLUDE "../Templates/Grammar_empty_states_in_the_UI.mdpp"
+# Punctuation
+
+!INCLUDE "../Templates/Punctuation_end.mdpp"
+!INCLUDE "../Templates/Punctuation_abbreviations.mdpp"
+!INCLUDE "../Templates/Punctuation_contractions.mdpp"
+## Independent clauses
+
+Do not use a comma between independent clauses joined by and (**e**) and or (**ou**), even when one is used in the English source string. You should however use a comma between independent clauses joined by but.
+
+  - To open Account, go to Settings, and create new: **Para abrir a Conta, entra nas Definições e cria uma nova**
+
+## Series
+
+Use a comma to separate elements in a series, except for the last two elements.
+
+  - Create new, modify, and delete: **Criar novo, modificar ou eliminar**
+
+Use a semicolon to separate items in a series when one or more items have internal punctuation.
+
+!INCLUDE "../Templates/Punctuation_plurals.mdpp"
+!INCLUDE "../Templates/Punctuation_quotation_marks.mdpp"
+## Hyphenation
+
+Pay special attention to the new rules of hyphenation under the new Portuguese Orthographic Agreement. Whenever in doubt, please check the available resources. For example:
+
+  - Correct: **autoestrada, hiper-resistente**
+  - Incorrect: **auto-estradainstead, hiper resistente**
+
+!INCLUDE "../Templates/Punctuation_lists.mdpp"
+!INCLUDE "../Templates/Punctuation_headings.mdpp"
+!INCLUDE "../Templates/Punctuation_text_modules.mdpp"
+!INCLUDE "../Templates/Punctuation_procedures.mdpp"
+# Numerals
+
+!INCLUDE "../Templates/Numerals_numbers.mdpp"
+For example:
+
+  - Correct: **1 mensagem recebida**
+  - Incorrect: **Uma mensagem recebida**
+
+In European Portuguese, use a comma as decimal separator (eg. 2,5%) and a dot as thousand separator (ex. 1.000).
+
+!INCLUDE "../Templates/Numerals_measurements.mdpp"
+# Terminology
+
+!INCLUDE "../Templates/Terminology.mdpp"
+!INCLUDE "../Templates/Terminology_company_names.mdpp"
+!INCLUDE "../Templates/Terminology_product_names.mdpp"
+!INCLUDE "../Templates/Terminology_legal_text.mdpp"
+!INCLUDE "../Templates/Checklist.mdpp"

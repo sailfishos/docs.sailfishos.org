@@ -1,0 +1,129 @@
+---
+title: Chinese (Hong Kong)
+permalink: Develop/L10n/Style_Guides/Chinese_(Hong_Kong)/
+parent: Style Guides
+grand_parent: L10n
+layout: default
+---
+
+!INCLUDE "../Templates/Guidelines_and_principles.mdpp"
+!INCLUDE "../Templates/Basics_of_good_writing.mdpp"
+!INCLUDE "../Templates/Language_and_culture.mdpp"
+# Grammar
+
+!INCLUDE "../Templates/Grammar_person.mdpp"
+## Tense
+
+Use the present tense.
+For example:
+
+  - Correct: Media player selects songs: **媒體播放器會選擇歌曲**
+  - Incorrect: Media player will select songs: **媒體播放器將會選擇歌曲**
+
+Follow the tense of the source language.
+For example: Configuring your system...: **正在配置系统...**
+
+!INCLUDE "../Templates/Grammar_voice.mdpp"
+For example:
+
+  - Correct: Create Account Setting: **建立帳戶設定**
+  - Incorrect: Account Settings are created: **帳戶設定被建立**
+
+!INCLUDE "../Templates/Grammar_mood.mdpp"
+For example:
+
+  - Correct: Go to Settings: '''轉至設定 '''
+  - Incorrect: User goes to Settings: **用戶轉至設定**
+
+!INCLUDE "../Templates/Grammar_capitalisation.mdpp"
+!INCLUDE "../Templates/Grammar_menu_in_the_UI.mdpp"
+!INCLUDE "../Templates/Grammar_empty_states_in_the_UI.mdpp"
+# Punctuation
+
+In Chinese, always use the double-byte punctuation.
+
+!INCLUDE "../Templates/Punctuation_end.mdpp"
+!INCLUDE "../Templates/Punctuation_abbreviations.mdpp"
+!INCLUDE "../Templates/Punctuation_contractions.mdpp"
+## Plurals
+
+Change the plural form of abbreviations to the singular one.
+For example: This product is shipped with several CD-ROMs: **本产品随带了若干个 CD-ROM。**
+
+!INCLUDE "../Templates/Punctuation_quotation_marks.mdpp"
+!INCLUDE "../Templates/Punctuation_lists.mdpp"
+!INCLUDE "../Templates/Punctuation_headings.mdpp"
+!INCLUDE "../Templates/Punctuation_text_modules.mdpp"
+!INCLUDE "../Templates/Punctuation_procedures.mdpp"
+# Numerals
+
+!INCLUDE "../Templates/Numerals_numbers.mdpp"
+For example:
+
+  - Correct:1 message received: **收到了 1 個訊息。**
+  - Incorrect: One message received: **收到了一個訊息。**
+
+Write numbers as Chinese digits if they are idioms or set phrases. E.g. **一清二楚**
+
+Write numbers as Chinese digits if two consecutive numbers are written together for approximate numbers. E.g. **二三十米**
+
+!INCLUDE "../Templates/Numerals_measurements.mdpp"
+# Terminology
+
+!INCLUDE "../Templates/Terminology.mdpp"
+!INCLUDE "../Templates/Terminology_company_names.mdpp"
+!INCLUDE "../Templates/Terminology_product_names.mdpp"
+!INCLUDE "../Templates/Terminology_legal_text.mdpp"
+# Special instructions for the UI
+
+| Punctuation           | Format      | Spacing                                                                                                              |
+| --------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------- |
+| full stop             | double-byte |                                                                                                                      |
+| comma                 | double-byte |                                                                                                                      |
+| parentheses           | single-byte | No space between it and the adjacent Chinese characters.<br/>A space between it and the adjacent English characters. |
+| double quotation mark | double-byte |                                                                                                                      |
+| colon                 | single-byte | A space between it and the character after it.                                                                       |
+| question mark         | single-byte | No space between it and the Chinese character before it.<br/>A space between it and the sentence after it.           |
+| ellipsis              | single-byte |                                                                                                                      |
+| exclamation mark      | single-byte | No space between it and the Chinese character before it.<br/>A space between it and the sentence after it.           |
+
+Use single-byte parentheses to enclose shortcut keys and leave no space between Chinese characters and parentheses. For example:
+
+  - \&File: **文件(\&F)**
+  - About \&ABC: **关于 ABC(\&A)**
+  - &50%: **50%(&5)**
+  - \&Font…: **字体(\&F)…**
+  - Le\&ft: **左(\&F)**
+
+# Special instructions for technical writing
+
+When translating UIs in documentation (or other technical writing), always follow its terminology for consistency.
+
+Spacing rules:
+
+  - There should be a space between Chinese characters and single-byte characters (such as English characters, numbers and single-byte punctuation).
+  - There should be no space before and after double-byte punctuation, including Chinese parentheses.
+
+Please see the table below for UI reference format (adapted to Chinese (Hong Kong) from the following source: <http://www.ccjk.com/common-rule-on-translation>):
+
+| Item                                                             | Format                                                                   | Example                                                | Translation                                                        |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------ | ------------------------------------------------------------------ |
+| Menu name                                                        | Use double-byte double quotation mark                                    | The File menu                                          | 「檔案」功能表                                                            |
+| Command name                                                     | <center>"</center>                                                       | The Page Setup command                                 | 「頁面設定」指令                                                           |
+| Dialog box title                                                 | <center>"</center>                                                       | The Options dialog box                                 | 「選項」對話方塊                                                           |
+| Tab name                                                         | <center>"</center>                                                       | The View tab                                           | 「檢視」標籤                                                             |
+| Option name                                                      | <center>"</center>                                                       | The Portrait option                                    | 「縱向」選項                                                             |
+| Button name                                                      | <center>"</center>                                                       | The Cancel button                                      | 「取消」按鈕                                                             |
+| List box name                                                    | <center>"</center>                                                       | The File of Type list box                              | 「檔案類型」列表方塊                                                         |
+| List box content                                                 | <center>"</center>                                                       | Choose Arial from the Font list box.                   | 「字體」列表方塊中選擇「Arial」。                                                |
+| Text box name                                                    | <center>"</center>                                                       | The Password text box                                  | 「密碼」文字方塊                                                           |
+| Check box name                                                   | <center>"</center>                                                       | The Read Only check box                                | 「唯讀」核取方塊                                                           |
+| Radio button name                                                | <center>"</center>                                                       | The None radio button                                  | 「無」圓鈕                                                              |
+| UIs that are enclosed with format tags (such as bold and italic) | Follow the source format and don’t use double-byte double quotation mark | Click \<b\>Close\</b\> button                          | 按下\<b\>關閉\</b\>按鈕                       |
+| <center>"</center>                                               | <center>"</center>                                                       | Press \<:cs "Helvetica9ptBold" 1\>CALL/ANSWER\<:/cs\>. | 按下\<:cs "Helvetica9ptBold" 1\>致電/接聽\<:/cs\>。        |
+| Window name                                                      | Use double-byte double quotation mark                                    | The Print window                                       | 「列印」視窗                                                             |
+| Window (general description)                                     | Don’t use double-byte double quotation mark                              | In the document window                                 | 在文件視窗中                                                             |
+| Manual name                                                      | Use double-byte book title mark                                          | See Chapter 6 in the User's Guide.                     | 参閱《用戶指南》的第 6 章。                                                    |
+| Chapter and appendix                                             | Use double-byte double quotation mark                                    | See "To Copy files" in chapter 2, "Managing files."    | 参閱第 2 章「管理檔案」的「複製檔案」一節。                                            |
+
+!INCLUDE "../Templates/Checklist.mdpp"

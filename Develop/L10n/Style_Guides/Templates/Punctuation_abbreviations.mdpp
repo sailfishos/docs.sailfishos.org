@@ -1,0 +1,21 @@
+## Abbreviations
+
+In technical writing, use common abbreviations. Do not use Latin abbreviations.
+
+In the UI, use common abbreviations, including Latin abbreviations. Make sure text clarity does not suffer. If in doubt, do not use an abbreviation.
+
+Do not use a full stop in or after acronyms or initialisms, e.g.:
+
+  - Correct: **WLAN**
+  - Incorrect: **W.L.A.N.**
+
+Do not use a full stop with unit (measurement) symbols, e.g.:
+
+  - Correct: **kg**
+  - Incorrect: **kg.**
+
+Use a full stop with Latin abbreviations, e.g.:
+
+  - Correct: **e.g., ca., etc.**
+  - Incorrect: **eg, ca, etc**
+

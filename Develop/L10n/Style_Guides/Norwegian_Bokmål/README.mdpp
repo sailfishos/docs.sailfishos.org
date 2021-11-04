@@ -1,0 +1,90 @@
+---
+title: Norwegian Bokmål
+permalink: Develop/L10n/Style_Guides/Norwegian_Bokmål/
+parent: Style Guides
+grand_parent: L10n
+layout: default
+---
+
+!INCLUDE "../Templates/Guidelines_and_principles.mdpp"
+!INCLUDE "../Templates/Basics_of_good_writing.mdpp"
+!INCLUDE "../Templates/Language_and_culture.mdpp"
+# Grammar
+
+!INCLUDE "../Templates/Grammar_person.mdpp"
+!INCLUDE "../Templates/Grammar_gender.mdpp"
+For example:
+
+  - Correct: **styreleder**
+  - Incorrect: **styreformann**
+
+## Tense
+
+Use the present tense. E.g.:
+
+  - Correct: **Medieavspilleren velger sangene**
+  - Incorrect: **Medieavspilleren vil velge sangene**
+
+!INCLUDE "../Templates/Grammar_voice.mdpp"
+For example:
+
+  - Correct: **Angi kontoinnstillinger**
+  - Incorrect: **Angivelse av kontoinnstillinger**
+
+!INCLUDE "../Templates/Grammar_mood.mdpp"
+For example:
+
+  - Correct: **Gå til Innstillinger**
+  - Incorrect: **Brukeren må gå til Innstillinger**
+
+!INCLUDE "../Templates/Grammar_capitalisation.mdpp"
+!INCLUDE "../Templates/Grammar_menu_in_the_UI.mdpp"
+!INCLUDE "../Templates/Grammar_empty_states_in_the_UI.mdpp"
+# Punctuation
+
+!INCLUDE "../Templates/Punctuation_end.mdpp"
+!INCLUDE "../Templates/Punctuation_abbreviations.mdpp"
+!INCLUDE "../Templates/Punctuation_contractions.mdpp"
+## Hyphenation
+
+Hyphenate according to standard rules for Norwegian:
+
+  - Correct: '''Facebook-konto '''
+  - Incorrect: **Facebookkonto** or **Facebook konto**
+
+## Independent clauses
+
+Use a comma between independent clauses joined by **og, men**, and **eller**:
+
+  - **Gå til Innstillinger, og klikk deretter på Opprett ny.**
+
+!INCLUDE "../Templates/Punctuation_plurals.mdpp"
+## Series
+
+Use a comma to separate elements in a series, but not between the last two elements.
+
+  - **Opprett ny, endre og slett.**
+
+Use a semicolon to separate items in a series when one or more items have internal punctuation.
+
+!INCLUDE "../Templates/Punctuation_quotation_marks.mdpp"
+!INCLUDE "../Templates/Punctuation_lists.mdpp"
+!INCLUDE "../Templates/Punctuation_headings.mdpp"
+!INCLUDE "../Templates/Punctuation_text_modules.mdpp"
+!INCLUDE "../Templates/Punctuation_procedures.mdpp"
+# Numerals
+
+!INCLUDE "../Templates/Numerals_numbers.mdpp"
+For example:
+
+  - Correct: **1 melding mottatt**
+  - Incorrect: **Én melding mottatt**
+
+!INCLUDE "../Templates/Numerals_measurements.mdpp"
+# Terminology
+
+!INCLUDE "../Templates/Terminology.mdpp"
+!INCLUDE "../Templates/Terminology_company_names.mdpp"
+!INCLUDE "../Templates/Terminology_product_names.mdpp"
+!INCLUDE "../Templates/Terminology_legal_text.mdpp"
+!INCLUDE "../Templates/Checklist.mdpp"

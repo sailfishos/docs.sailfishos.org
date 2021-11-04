@@ -1,0 +1,6 @@
+## End punctuation
+
+In UI strings, do not use a full stop at the end of a sentence if there’s only one sentence. If there are two or more sentences, use full stops normally.
+
+If the segment ends with the colon or ellipsis, the translation should follow the source.
+

@@ -1,0 +1,91 @@
+---
+title: Spanish
+permalink: Develop/L10n/Style_Guides/Spanish/
+parent: Style Guides
+grand_parent: L10n
+layout: default
+---
+
+!INCLUDE "../Templates/Guidelines_and_principles.mdpp"
+In case of doubt, please refer to Spanish language normative found on the following references:
+
+  - Ortografía de la lengua española, Academias de la Lengua Española, Ed. Espasa, 2010.
+  - Diccionario panhispánico de dudas, Real Academia Española & Asociación de Academias de la Lengua Española, Madrid, Ed. Santillana, 2005. And <http://lema.rae.es/dpd/>
+  - Diccionario de la lengua española, (Vigésima segunda edición), Real Academia Española, Madrid, Ed. Espasa-Calpe, 2001. And <http://lema.rae.es/drae/>
+  - Nueva gramática de la lengua española, Real Academia Española y Asociación de Academias de la Lengua Española, Madrid, Ed. Espasa-Calpe, 2009.
+
+!INCLUDE "../Templates/Basics_of_good_writing.mdpp"
+!INCLUDE "../Templates/Language_and_culture.mdpp"
+# Grammar
+
+!INCLUDE "../Templates/Grammar_articles.mdpp"
+  - Correct: **Nombre de usuario**
+  - Incorrect: **Nombre del usuario**
+
+!INCLUDE "../Templates/Grammar_person.mdpp"
+In Spanish, address users as **tu**, as opposed to **vos** or **usted**.
+
+!INCLUDE "../Templates/Grammar_gender.mdpp"
+Please remember that gender neutral in Spanish is masculine.
+
+## Tense
+
+Use the present tense. E.g.:
+
+  - Correct: **Media player selecciona canciones.**
+  - Incorrect: **Media player seleccionará canciones.**
+
+!INCLUDE "../Templates/Grammar_voice.mdpp"
+For example:
+
+  - Correct: **Crear configuración de cuenta en...**
+  - Incorrect: **La configuración de la cuenta está creada en...**
+
+!INCLUDE "../Templates/Grammar_mood.mdpp"
+For example:
+
+  - Correct: **Ve a Configuración**
+  - Incorrect: **El usuario debe ir a Configuración**
+
+!INCLUDE "../Templates/Grammar_capitalisation.mdpp"
+!INCLUDE "../Templates/Grammar_menu_in_the_UI.mdpp"
+!INCLUDE "../Templates/Grammar_empty_states_in_the_UI.mdpp"
+# Punctuation
+
+!INCLUDE "../Templates/Punctuation_end.mdpp"
+!INCLUDE "../Templates/Punctuation_abbreviations.mdpp"
+Please follow Spanish normative in abbreviations. In case of doubt, refer to <http://lema.rae.es/dpd/?key=abreviatura>
+
+!INCLUDE "../Templates/Punctuation_contractions.mdpp"
+## Series
+
+Use a semicolon to separate items in a series when one or more items have internal punctuation.
+
+!INCLUDE "../Templates/Punctuation_plurals.mdpp"
+In Spanish, please do not use “/s” either.
+
+!INCLUDE "../Templates/Punctuation_quotation_marks.mdpp"
+!INCLUDE "../Templates/Punctuation_lists.mdpp"
+!INCLUDE "../Templates/Punctuation_headings.mdpp"
+!INCLUDE "../Templates/Punctuation_text_modules.mdpp"
+!INCLUDE "../Templates/Punctuation_procedures.mdpp"
+# Numerals
+
+!INCLUDE "../Templates/Numerals_numbers.mdpp"
+For example:
+
+  - Correct: **Se ha recibido 1 mensaje**
+  - Incorrect: **Se ha recibido un mensaje**
+
+!INCLUDE "../Templates/Numerals_measurements.mdpp"
+For rules regarding to spacing between the numeral and the unit please refer to: <http://lema.rae.es/dpd/srv/search?id=QHaq7I8KrD6FQAyXTS>
+
+Please remember that new normative includes a space between numeral and percentage symbol as shown in Ortografía de la lengua española, Academias de la Lengua Española, Ed. Espasa, 2010.
+
+# Terminology
+
+!INCLUDE "../Templates/Terminology.mdpp"
+!INCLUDE "../Templates/Terminology_company_names.mdpp"
+!INCLUDE "../Templates/Terminology_product_names.mdpp"
+!INCLUDE "../Templates/Terminology_legal_text.mdpp"
+!INCLUDE "../Templates/Checklist.mdpp"

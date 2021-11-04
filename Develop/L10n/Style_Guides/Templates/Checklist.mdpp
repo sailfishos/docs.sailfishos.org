@@ -1,0 +1,18 @@
+# Checklist
+
+When finalising translations for the UI, check the following:
+
+  - Everything has been translated to your best knowledge.
+  - Spell check is done.
+  - Check consistency with the other translations done for the language.
+  - Ensure correct Sailfish OS terminology is used. If needed, propose new term entries.
+  - Confirm legal texts are consistent with the source.
+  - Company and product names, trademarks, symbols, and measurements have not been hyphenated.
+  - Ensure regional formats are retained, such as date, time, numeric and quotation literals.
+
+When finalising texts for the technical writing, check these points as well:
+
+  - Titles and headings are structured and accurate.
+  - Language is clear and consistent.
+  - Sentences vary in length and have a clear form.
+

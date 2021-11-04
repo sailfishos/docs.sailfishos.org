@@ -1,0 +1,92 @@
+---
+title: English (United Kingdom)
+permalink: Develop/L10n/Style_Guides/English_(United_Kingdom)/
+parent: Style Guides
+grand_parent: L10n
+layout: default
+---
+
+!INCLUDE "../Templates/Guidelines_and_principles.mdpp"
+!INCLUDE "../Templates/Basics_of_good_writing.mdpp"
+!INCLUDE "../Templates/Language_and_culture.mdpp"
+# Grammar
+
+!INCLUDE "../Templates/Grammar_articles.mdpp"
+!INCLUDE "../Templates/Grammar_person.mdpp"
+!INCLUDE "../Templates/Grammar_gender.mdpp"
+For example:
+
+  - Correct: **Chair, chairperson**
+  - Incorrect: **Chairman**
+
+## Tense
+
+Use the present tense. E.g.:
+
+  - Correct: **Media player selects songs.**
+  - Incorrect: **Media player will select songs.**
+
+!INCLUDE "../Templates/Grammar_voice.mdpp"
+For example:
+
+  - Correct: **Create Account Settings in...**
+  - Incorrect: **Account Settings are created in...**
+
+!INCLUDE "../Templates/Grammar_mood.mdpp"
+For example:
+
+  - Correct: **Go to Settings**
+  - Incorrect: **User goes to Settings**
+
+!INCLUDE "../Templates/Grammar_capitalisation.mdpp"
+!INCLUDE "../Templates/Grammar_menu_in_the_UI.mdpp"
+!INCLUDE "../Templates/Grammar_empty_states_in_the_UI.mdpp"
+# Punctuation
+
+!INCLUDE "../Templates/Punctuation_end.mdpp"
+!INCLUDE "../Templates/Punctuation_abbreviations.mdpp"
+!INCLUDE "../Templates/Punctuation_contractions.mdpp"
+## Hyphenation
+
+Hyphenate in object-verbal noun compounds.
+
+  - Correct: **read-only file**
+  - Incorrect: **read only file** or **readonly file**
+
+## Independent clauses
+
+Use a comma between independent clauses joined by and, but, and or.
+
+  - Example: **To open Account, go to Settings, and create new.**
+
+!INCLUDE "../Templates/Punctuation_plurals.mdpp"
+!INCLUDE "../Templates/Punctuation_quotation_marks.mdpp"
+## Series
+
+Use a comma to separate elements in a series, including the last two elements.
+
+  - Correct: **Create new, modify, and delete**
+  - Incorrect: **Create new, modify and delete**
+
+Use a semicolon to separate items in a series when one or more items have internal punctuation.
+
+!INCLUDE "../Templates/Punctuation_lists.mdpp"
+!INCLUDE "../Templates/Punctuation_headings.mdpp"
+!INCLUDE "../Templates/Punctuation_text_modules.mdpp"
+!INCLUDE "../Templates/Punctuation_procedures.mdpp"
+# Numerals
+
+!INCLUDE "../Templates/Numerals_numbers.mdpp"
+For example:
+
+  - Correct: **1 message received**
+  - Incorrect: **One message received**
+
+!INCLUDE "../Templates/Numerals_measurements.mdpp"
+# Terminology
+
+!INCLUDE "../Templates/Terminology.mdpp"
+!INCLUDE "../Templates/Terminology_company_names.mdpp"
+!INCLUDE "../Templates/Terminology_product_names.mdpp"
+!INCLUDE "../Templates/Terminology_legal_text.mdpp"
+!INCLUDE "../Templates/Checklist.mdpp"

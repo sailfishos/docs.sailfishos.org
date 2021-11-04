@@ -1,0 +1,94 @@
+---
+title: Slovak
+permalink: Develop/L10n/Style_Guides/Slovak/
+parent: Style Guides
+grand_parent: L10n
+layout: default
+---
+
+!INCLUDE "../Templates/Guidelines_and_principles.mdpp"
+!INCLUDE "../Templates/Basics_of_good_writing.mdpp"
+!INCLUDE "../Templates/Language_and_culture.mdpp"
+# Grammar
+
+Take a quick look or check if you are not sure: <http://www.juls.savba.sk/ediela/psp2000/psp.pdf>
+
+!INCLUDE "../Templates/Grammar_person.mdpp"
+Používateľovi vykáme, ale zámená píšeme s malým začiatočným písmenom, t.j. vám, váš..
+
+!INCLUDE "../Templates/Grammar_gender.mdpp"
+## Tense
+
+Use the present tense. E.g.:
+
+  - Correct: **Prehrávač médií vyberá skladby.**
+  - Incorrect: **Prehrávač médií vyberie skladby.**
+
+!INCLUDE "../Templates/Grammar_voice.mdpp"
+For example:
+
+  - Correct: **Vytvoriť nastavenia účtu v...**
+  - Incorrect: **Nastavenia účtu sa vytvárajú v...**
+
+!INCLUDE "../Templates/Grammar_mood.mdpp"
+For example:
+
+  - Correct: **Prejsť do Nastavení**
+  - Incorrect: **Užívateľ ide do Nastavení**
+
+## Capitalisation
+
+Capitalise application names and company names. Only start the first word with a capital letter:
+
+  - Correct: **Nastavenia účtu, Užívateľské nastavenia...**
+  - Incorrect: **Nastavenia Účtu, Užívateľské Nastavenia...**
+
+However, distinguish between application name and activity/action/.., i.e. **Prejsť do Nastavení**(name of application, Settings), but **Vykonať nastavenia...**. In the UI, start the first word with a capital letter. Please remember that the days of the week, months, seasons and language names are not capitalized in Slovak.
+
+!INCLUDE "../Templates/Grammar_menu_in_the_UI.mdpp"
+!INCLUDE "../Templates/Grammar_empty_states_in_the_UI.mdpp"
+# Punctuation
+
+!INCLUDE "../Templates/Punctuation_end.mdpp"
+!INCLUDE "../Templates/Punctuation_abbreviations.mdpp"
+## Hyphenation
+
+An Em Dash (pomlčka, alt+0151) is used to separate two parts of a sentence (space before and after the dash) use a hyphen (spojovník) otherwise (no space before and after the hyphen).
+
+## Compound sentences
+
+How to use a comma between compound sentences: <http://www.slovencina.vselico.com/ciarky.html>
+
+!INCLUDE "../Templates/Punctuation_plurals.mdpp"
+!INCLUDE "../Templates/Punctuation_quotation_marks.mdpp"
+Preferably use these: „ (alt+0132) “ (alt+0147).
+
+## Series
+
+Use a comma to separate elements in a series, except the last two elements joined by a conjunction (viď odkaz s čiarkami).
+
+  - Correct: **Vytvoriť nové, upraviť a zmazať**
+  - Incorrect: **Vytvoriť nové, upraviť, a zmazať**
+
+!INCLUDE "../Templates/Punctuation_lists.mdpp"
+!INCLUDE "../Templates/Punctuation_headings.mdpp"
+!INCLUDE "../Templates/Punctuation_text_modules.mdpp"
+!INCLUDE "../Templates/Punctuation_procedures.mdpp"
+# Numerals
+
+!INCLUDE "../Templates/Numerals_numbers.mdpp"
+For example:
+
+  - Correct: **1 správa prijatá**
+  - Incorrect: **Jedna správa prijatá**
+
+See a link in Plurals section to use correct way of handling plurals.
+
+!INCLUDE "../Templates/Numerals_measurements.mdpp"
+# Terminology
+
+!INCLUDE "../Templates/Terminology.mdpp"
+!INCLUDE "../Templates/Terminology_company_names.mdpp"
+!INCLUDE "../Templates/Terminology_product_names.mdpp"
+!INCLUDE "../Templates/Terminology_legal_text.mdpp"
+!INCLUDE "../Templates/Checklist.mdpp"
