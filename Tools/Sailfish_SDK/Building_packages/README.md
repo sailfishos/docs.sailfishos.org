@@ -58,7 +58,7 @@ my-app-0-1.aarch64.rpm
 
 These `.rpm` files may be installed to the device or the build target as described in the page on [deploying packages](/Tools/Sailfish_SDK/Deploying_packages).
 
-See `sfdk --help-building` for more information on building packages or jump directory to an all-in-one guide with `sfdk --help-all`.
+See `sfdk --help-building` for more information on building packages or jump directly to the all-in-one manual with `sfdk --help-all`.
 
 ### Installing Missing Dependencies
 
