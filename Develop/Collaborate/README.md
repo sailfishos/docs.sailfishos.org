@@ -52,6 +52,7 @@ Reviewers will comment on the created merge request. Common issues include:
   - missing unit tests
   - performance regression
   - edge-case logic errors
+  - missing or outdated [qmltypes files](https://doc.qt.io/qtcreator/creator-qml-modules-with-plugins.html#generating-qmltypes-files)
 
 Every contributor and reviewer shall be polite and considerate to each other when reviewing contributions and discussing those changes, and ask contributors to understand that review comments are not intended to be a sign of lack of appreciation for the work they have done, but rather are intended to further improve the contribution by helping the original contributor in their goal of improving Sailfish OS.
 
