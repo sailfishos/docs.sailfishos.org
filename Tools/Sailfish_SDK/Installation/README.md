@@ -12,7 +12,7 @@ We provide a graphical installer to make it easy to setup the Sailfish SDK.
 
 Sailfish SDK functionality has been verified on the following systems:
 
-  - Ubuntu 18.04 64 bit
+  - Ubuntu 20.04 64 bit
   - Windows 10 64 bit
   - OS X 10.12.6
 
@@ -58,10 +58,13 @@ You may also consider configuring MSYS2 to use your Windows user home directory.
 
 ### Others
 
-- libtinfo.so.5 is required on Linux - not all distributions ship this library by default
-    - On Ubuntu 20.04, the package libtinfo5 may be installed.
-    - On Fedora the package ncurses-compat-libs may be installed
-    - If you find no way to fix libtinfo.so.5 on your system, you may try creating it as a symbolic link to your system libncurses.so.5 (or even libncurses.so.6 or libtinfo.so.6)
+#### libtinfo.so.5
+
+In order to maintain compatibility with older Linux distributions, Sailfish SDK links to this library, which is usually not installed by default on more recent distributions:
+
+  - On Ubuntu 20.04, the package libtinfo5 must be installed
+  - On Fedora the package ncurses-compat-libs must be installed
+  - If you find no way to fix libtinfo.so.5 on your system, you may try creating it as a symbolic link to your system libncurses.so.5 (or even libncurses.so.6 or libtinfo.so.6)
 
 See also [Sailfish SDK Known Issues](/Tools/Sailfish_SDK/Known_Issues).
 
