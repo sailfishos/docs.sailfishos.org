@@ -80,3 +80,8 @@ These are the known issues with the Sailfish SDK. If you have any questions, fee
   - Microsoft Hyper-V is incompatible with Virtualbox ([Virtualbox ticket 16801](https://www.virtualbox.org/ticket/16801)). Please, check that it's disabled in Windows Features before starting the Emulator or the Build Engine. This is a known issue especially with Windows 10.
       - Recent Windows and VirtualBox versions are said to remove this limitation - please check the [What are the compatibility issues with Sailfish OS emulators on Windows?](/Tools/Sailfish_SDK/FAQ#what-are-the-compatibility-issues-with-sailfish-os-emulators-on-windows) entry in our Docker related FAQ.
   - If you need to set a proxy to connect to the Internet, connections from the Emulator are known to fail. Proxy settings for the Build Engine can be configured inside Sailfish IDE, under Options \> Sailfish OS \> Build Engine.
+  - The rpmlint validation suite is unusable with 4.3.0.12 build targets. It fails with error “No such file or directory”. If you wish to use rpmlint validation suite, you can fix the tooling by issuing the following command:
+
+        sfdk tools exec SailfishOS-4.3.0.12 zypper in gnu-cpio
+
+    When prompted, select Solution 1.
