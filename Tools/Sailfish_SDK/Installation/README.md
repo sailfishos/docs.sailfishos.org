@@ -40,9 +40,17 @@ For Sailfish OS Emulator, Oracle VM VirtualBox is needed regardless of the host 
 
 On Linux, you should install the virtualization platform packages supplied by your distribution. On other operating systems, we recommend using installation packages from <http://www.virtualbox.org> or <https://hub.docker.com/search/?q=&type=edition>.
 
-### Git
+### MSYS2 (Windows only)
 
-Git is a prerequisite for the Sailfish SDK on Windows. Git for Windows can be obtained Git from <https://git-scm.com/download/win>
+MSYS2 is not just the recommended environment in case you plan command line use of Sailfish SDK on Windows. It also satisfies certain dependencies of the Sailfish IDE.
+
+Follow the general installation instructions on <https://www.msys2.org/>, then install the tools required by Sailfish SDK by issuing the following command under the shell invoked with the "MSYS2 MSYS" Start menu item:
+
+    pacman -S --needed base-devel git
+
+You may also consider configuring MSYS2 to use your Windows user home directory. Otherwise it will use a directory located under MSYS2 installation directory. This can be changed by editing `/etc/nsswitch.conf` under MSYS2 shell, applying the following configuration:
+
+    db_home: windows cygwin desc
 
 ### System Requirements
   - About 15GB of free disk space for the default component selection
