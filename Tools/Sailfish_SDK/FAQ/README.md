@@ -100,10 +100,6 @@ The native platform for Sailfish OS software development is GNU/Linux (Linux). U
 
 This essentially means that the "mersdk" user account in the build engine is, as far as possible, your account. If you wish to share additional directories then please discuss this with the community.
 
-## Why is the emulator showing a black screen?
-
-It thinks it is a real device and is saving power. We have a solution planned for this. In the meantime a mouse movement will wake it up from application or Home screen – if it is on the Lock screen you need to do a big Pull down or emulate the Power button by pressing Host + ‘H’.
-
 ## I see scrollbars in the emulator window. How do I scale it to the window size?
 
 Modern devices have a high vertical resolution which can be more than some screens. The emulator uses a vertical resolution of 960 pixels and allowance should be made for window borders too. In the VM menu select **View→Scale** or press Host + ‘C’ to scale.
