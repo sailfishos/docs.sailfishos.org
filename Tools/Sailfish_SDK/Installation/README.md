@@ -18,19 +18,32 @@ Sailfish SDK functionality has been verified on the following systems:
 
 Sailfish SDK should work on other Linux flavours as well, but at this stage, its functionality on other host environments has not been fully verified.
 
-## Common pre-requisites
+## Pre-requisites
 
-  - Virtualization platform. On Linux and Windows, both Oracle VirtualBox (version 4.1.18 or higher) and Docker (version 18.09.3 or higher) are supported. On MacOS, only VirtualBox is supported. On Linux, you should install the virtualization platform packages supplied by your distribution. On other operating systems, we recommend using installation packages from <http://www.virtualbox.org> or <https://hub.docker.com/search/?q=&type=edition>
-  - For emulator you need Oracle VirtualBox regardless of your choice of virtualization for the build engine
-  - Git is a prerequisite for the Sailfish SDK on Windows. Git for Windows can be obtained Git from <https://git-scm.com/download/win>
+### Virtualization Platform
+
+On Linux and Windows, both Oracle VirtualBox (version 4.1.18 or higher) and Docker (version 18.09.3 or higher) are supported. On MacOS, only VirtualBox is supported. On Linux, you should install the virtualization platform packages supplied by your distribution. On other operating systems, we recommend using installation packages from <http://www.virtualbox.org> or <https://hub.docker.com/search/?q=&type=edition>
+
+For emulator you need Oracle VirtualBox regardless of your choice of virtualization for the build engine.
+
+### Git
+
+Git is a prerequisite for the Sailfish SDK on Windows. Git for Windows can be obtained Git from <https://git-scm.com/download/win>
+
+### System Requirements
   - About 15GB of free disk space for the default component selection
   - 4GB of RAM or more is recommended.
-  - libtinfo.so.5 is required on Linux - not all distributions ship this library by default
-      - On Ubuntu 20.04, the package libtinfo5 may be installed.
-      - On Fedora the package ncurses-compat-libs may be installed
-      - If you find no way to fix libtinfo.so.5 on your system, you may try creating it as a symbolic link to your system libncurses.so.5 (or even libncurses.so.6 or libtinfo.so.6)
+
+### Others
+
+- libtinfo.so.5 is required on Linux - not all distributions ship this library by default
+    - On Ubuntu 20.04, the package libtinfo5 may be installed.
+    - On Fedora the package ncurses-compat-libs may be installed
+    - If you find no way to fix libtinfo.so.5 on your system, you may try creating it as a symbolic link to your system libncurses.so.5 (or even libncurses.so.6 or libtinfo.so.6)
 
 See also [Sailfish SDK Known Issues](/Tools/Sailfish_SDK/Known_Issues).
+
+## Sailfish SDK Installer
 
 ### SDK Installer on Linux
 
