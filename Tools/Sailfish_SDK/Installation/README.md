@@ -66,6 +66,10 @@ In order to maintain compatibility with older Linux distributions, Sailfish SDK 
   - On Fedora the package ncurses-compat-libs must be installed
   - If you find no way to fix libtinfo.so.5 on your system, you may try creating it as a symbolic link to your system libncurses.so.5 (or even libncurses.so.6 or libtinfo.so.6)
 
+#### Modern bash
+
+Command completion for sfdk, the command line frontend to the Sailfish SDK, is only provided for bash shell interpreter. This requirement concerns especially macOS users, where the default shell is either a too old bash or zsh. If you plan to use Sailfish SDK from CLI on macOS, it is recommended to use newer `bash` and `bash-completion@2` packages from [Homebrew](https://brew.sh).
+
 See also [Sailfish SDK Known Issues](/Tools/Sailfish_SDK/Known_Issues).
 
 ## Sailfish SDK Installer
