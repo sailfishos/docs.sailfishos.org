@@ -90,7 +90,7 @@ If you make any changes to the target on the build engine, be sure to re-sync wi
 
 ## Why are you using virtual machines?
 
-Using virtual machines allows us to efficiently deliver a consistent build environment to a wide range of platforms. Whilst there is a small performance penalty, we think this is a worthwhile tradeoff for the benefits it gives us all. We have further optimisations planned.
+The native platform for Sailfish OS software development is GNU/Linux (Linux). Use of virtual machines allows us to efficiently deliver a consistent build environment to a wide range of platforms. Whilst there is a small performance penalty, we think this is a worthwhile tradeoff for the benefits it gives us all. Best build performance can be achieved with Docker-based build engine on Linux – in this case the performance penalty is near to zero when compared to a native build environment setup. We have further optimisations planned for other host platforms.
 
 ## What are the shared folders for?
 
