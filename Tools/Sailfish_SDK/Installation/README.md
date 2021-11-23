@@ -22,9 +22,23 @@ Sailfish SDK should work on other Linux flavours as well, but at this stage, its
 
 ### Virtualization Platform
 
-On Linux and Windows, both Oracle VirtualBox (version 4.1.18 or higher) and Docker (version 18.09.3 or higher) are supported. On MacOS, only VirtualBox is supported. On Linux, you should install the virtualization platform packages supplied by your distribution. On other operating systems, we recommend using installation packages from <http://www.virtualbox.org> or <https://hub.docker.com/search/?q=&type=edition>
+The native platform for Sailfish OS software development is GNU/Linux (Linux). In order to enable development on macOS and Windows as well as to support miscellaneous Linux variants more easily, Sailfish SDK encapsulates its back-end in a virtual machine running a specifically tailored Linux distribution, the so called SDK Build Engine.
 
-For emulator you need Oracle VirtualBox regardless of your choice of virtualization for the build engine.
+In addition to that, Sailfish SDK provides virtualized runtime environment for testing Sailfish OS applications - the Sailfish OS Emulator.
+
+On Linux and Windows, both Oracle VM VirtualBox (version 4.1.18 or higher) and Docker (version 18.09.3 or higher) are supported by the SDK Build Engine. On macOS, only VirtualBox is supported.
+
+  - Oracle VM VirtualBox\
+    ➕ Fully fledged solution\
+    ➖ Less optimal build performance
+  - Docker\
+    ➕ Optimal build performance\
+    ➖ Not as matured as the other option\
+    ➖ Compatibility issues with Sailfish OS emulators (Windows only)
+
+For Sailfish OS Emulator, Oracle VM VirtualBox is needed regardless of the host platform.
+
+On Linux, you should install the virtualization platform packages supplied by your distribution. On other operating systems, we recommend using installation packages from <http://www.virtualbox.org> or <https://hub.docker.com/search/?q=&type=edition>.
 
 ### Git
 
