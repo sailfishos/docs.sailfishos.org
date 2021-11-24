@@ -45,7 +45,6 @@ These are the known issues with the Sailfish SDK. If you have any questions, fee
 
   - If the Emulator fails to boot to user interface, the reason might be disabled virtualization technology settings in host computer’s BIOS. By turning on virtualization technology settings from BIOS, the emulator should boot up to user interface.
   - Emulator may display a banner about Charging status when starting up. It can be dismissed by clicking on it. Emulator follows the battery status of the host computer.
-  - Emulator pulley menu sounds are not always played.
   - The Emulator screen is bigger vertically than many laptop screens and ‘scaling’ may be needed for some uses. Scaling can be controlled from Sailfish IDE, menu Tools -\> Sailfish OS -\> Emulator Mode.
   - Emulator might start flickering on slow computers.
   - Timeout problems connecting to emulator
