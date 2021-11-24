@@ -40,6 +40,12 @@ For Sailfish OS Emulator, Oracle VM VirtualBox is needed regardless of the host 
 
 On Linux, you should install the virtualization platform packages supplied by your distribution. On other operating systems, we recommend using installation packages from <http://www.virtualbox.org> or <https://hub.docker.com/search/?q=&type=edition>.
 
+A few hints on Docker installation:
+
+  - Follow the [generic instructions](https://hub.docker.com/search/?type=edition&offering=community)
+  - Linux users may need an [extra step](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user) to ensure that Sailfish SDK can manage Docker as a non-root user
+  - Windows users should ensure that Docker is set up to use [Linux containers](https://docs.docker.com/desktop/windows/#switch-between-windows-and-linux-containers) (instead of Windows containers)
+
 ### MSYS2 (Windows only)
 
 MSYS2 is not just the recommended environment in case you plan command line use of Sailfish SDK on Windows. It also satisfies certain dependencies of the Sailfish IDE.
