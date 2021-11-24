@@ -21,7 +21,6 @@ These are the known issues with the Sailfish SDK. If you have any questions, fee
 
   - Sailfish IDE might show a kit called “Desktop”. It cannot be used to create Sailfish OS applications and you should not select it when configuring Sailfish OS projects.
   - When launching applications from the toolbar or using ctrl+R, it is possible to launch multiple instances of an application which need terminating from the Home screen.
-  - Selecting Build / Clean all or Clean Project does not remove the Makefile.
   - SDK cannot be installed to a path with whitespace. Projects cannot be created to paths with whitespace.
   - Some Windows 8 setups do not have HOME, which is needed by MerSDK.
   - In OS X /tmp directory cannot be used as alternate source directory.
