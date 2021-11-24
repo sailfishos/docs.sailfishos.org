@@ -37,7 +37,6 @@ These are the known issues with the Sailfish SDK. If you have any questions, fee
     127.0.0.1 localhost.localdomain localhost SailfishSDK
     ```
   - Issues with Docker-based build engine
-      - Packages built from sources under the alternate source directory have all files executable
       - Old sailfish-os-build-engine images keep piling up (see [this from the FAQ](/Tools/Sailfish_SDK/FAQ#old-sailfish-os-build-engine-images-keep-piling-up-is-this-desired))
       - Failure to deploy from docker based build engine to emulator with customized SSH port
       - Sailfish IDE needs restart after changing SSH port of a Docker based build engine
