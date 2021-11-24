@@ -179,10 +179,6 @@ Should you need to continue using CRLF line endings for your project files, it i
 
 ## Docker
 
-### What is the minimum Sailfish SDK version supporting the Docker-based build engine?
-
-Sailfish SDK version 3.1 or later is required.
-
 ### I just upgraded my SDK, how can I switch to the Docker-based build engine?
 
 Build engine selection is only possible during fresh Sailfish SDK installation. You need to reinstall.
@@ -213,7 +209,7 @@ Recent versions of Docker Desktop for macOS come up with options to tune the sha
 
 ### Old sailfish-os-build-engine images keep piling up, is this desired?
 
-This is a known issue with the initial Docker support (Sailfish SDK 3.1). With every build engine start/stop cycle, one new image layer is created. This issue is likely going to be addressed with the next Sailfish SDK release. Should you hit the limit of maximum 127 layers per Docker image meanwhile, there are basically two options how to recover:
+This is a known issue with the initial Docker support. With every build engine start/stop cycle, one new image layer is created. Should you hit the limit of maximum 127 layers per Docker image meanwhile, there are basically two options how to recover:
 
 1.  Reinstall the Sailfish SDK (recommended)
 2.  Flatten the history manually by following one of those guides available on the web, e.g., [4](https://tuhrig.de/flatten-a-docker-container-or-image/) and taking care of restoring all the LABELs and the CMD set on the image.
