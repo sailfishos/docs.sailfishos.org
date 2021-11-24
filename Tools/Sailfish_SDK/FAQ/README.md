@@ -183,14 +183,6 @@ Should you need to continue using CRLF line endings for your project files, it i
 
 Sailfish SDK version 3.1 or later is required.
 
-### How can I set up Docker for use with Sailfish SDK?
-
-Follow the generic instructions [1](https://hub.docker.com/search/?type=edition&offering=community).
-
-Linux users should also follow [2](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user) to ensure that Sailfish SDK can manage Docker as a non-root user.
-
-Windows users should make sure that Docker is set up to use Linux containers (instead of Windows containers).
-
 ### I just upgraded my SDK, how can I switch to the Docker-based build engine?
 
 Build engine selection is only possible during fresh Sailfish SDK installation. You need to reinstall.
