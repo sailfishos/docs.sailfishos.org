@@ -12,7 +12,6 @@ These are the known issues with the Sailfish SDK. If you have any questions, fee
 
   - If you want to reinstall the SDK to another location it is recommended to first remove SDK installation and then manually delete the config file directory (in Linux and Mac it’s in $HOME/.config/SailfishSDK, in Windows this is not necessary anymore) and then reinstall SDK.
   - When uninstalling – SDKMaintenanceTool might show a dialog of some certain directories not being empty. This is OK and can be bypassed by selecting ‘Ignore’.
-  - Virtual machines and Sailfish IDE must be shut down for the uninstaller to run cleanly.
   - If your /home dir has free space but / (root dir) does not then installer will complain. Solution: pre-create the destination directory and the installer will continue or if that does not work, additionally set the environment value TMPDIR to a path that has enough space.
   - If installing Sailfish SDK into /opt doesn’t work then please install to /home/$USER/Sailfish OS.
   - On Mac and Windows the automatic check for updates may fail randomly due to an error in Qt Installer Framework. It is possible to start updater manually from menu Help in Sailfish IDE.
