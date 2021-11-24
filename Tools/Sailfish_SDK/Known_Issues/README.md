@@ -23,7 +23,7 @@ These are the known issues with the Sailfish SDK. If you have any questions, fee
   - When launching applications from the toolbar or using ctrl+R, it is possible to launch multiple instances of an application which need terminating from the Home screen.
   - SDK cannot be installed to a path with whitespace. Projects cannot be created to paths with whitespace.
   - In OS X /tmp directory cannot be used as alternate source directory.
-  - The following warnings are produced for build targets older than 3.3.0.x: Could not resolve the prototype "SilicaItem" of "PageHeader". (M301)
+  - Various warnings are produced by the QML static code checker for Sailfish.Silica types with the build targets matching recent Sailfish OS releases, like `Could not resolve the prototype "SilicaItem" of "PageHeader". (M301)`
 
 ### SDK CLI (sfdk)
 
