@@ -52,7 +52,10 @@ These are the known issues with the Sailfish SDK. If you have any questions, fee
 ### Debugging
 
   - GDB may crash occasionally when stepping into code.
-  - On Linux the debugger binary depends on `libtinfo.so.5`. On some ditributions this library is not installed by default when symbols normally provided by this library are available from `libncurses.so.5`. E.g. on Fedora the package `ncurses-compat-libs` must be installed manually, on Ubuntu 19.10 it is `libncurses5`. If you find no way to fix `libtinfo.so.5` on your system, you can create it as a symlink to your system `libncurses.so.5` in `~/SailfishOS/lib/` and set `LD_LIBRARY_PATH` accordingly prior to running `~/SailfishOS/bin/qtcreator`.
+  - In order to maintain compatibility with older Linux distributions, Sailfish SDK links to this library, which is usually not installed by default on more recent distributions:
+    - On Ubuntu 20.04, the package libtinfo5 must be installed
+    - On Fedora the package ncurses-compat-libs must be installed
+    - If you find no way to fix libtinfo.so.5 on your system, you may try creating it as a symbolic link to your system libncurses.so.5 (or even libncurses.so.6 or libtinfo.so.6)
 
 ### General / Other
 
