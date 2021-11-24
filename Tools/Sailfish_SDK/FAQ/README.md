@@ -102,7 +102,7 @@ This essentially means that the "mersdk" user account in the build engine is, as
 
 ## I see scrollbars in the emulator window. How do I scale it to the window size?
 
-Modern devices have a high vertical resolution which can be more than some screens. The emulator uses a vertical resolution of 960 pixels and allowance should be made for window borders too. In the VM menu select **View→Scale** or press Host + ‘C’ to scale.
+Modern handheld devices have high display resolutions, often higher than desktop computers have. Sailfish OS Emulator is capable of scaling down its display resolution. This can be controlled under Sailfish IDE with **Options → Sailfish OS → Emulator → Emulator Mode...**. For the emulator used by the active **Run Configuration** a shortcut exists as **Tools → Sailfish OS → Emulator Mode...**. As a fallback option it is also possible to select **View → Scale** or press Host + ‘C’ in the emulator window.
 
 ## Now I’ve built an awesome application – where do I share it?
 
