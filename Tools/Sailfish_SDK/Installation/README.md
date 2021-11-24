@@ -66,7 +66,7 @@ _Sailfish SDK 3.6 and older:_ Ensure that the `usr\bin` directory from MSYS2 ins
 
 ### Others
 
-#### libtinfo.so.5
+#### libtinfo.so.5 (Linux only)
 
 In order to maintain compatibility with older Linux distributions, Sailfish SDK links to this library, which is usually not installed by default on more recent distributions:
 
