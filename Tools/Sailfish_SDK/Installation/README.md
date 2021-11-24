@@ -52,6 +52,8 @@ You may also consider configuring MSYS2 to use your Windows user home directory.
 
     db_home: windows cygwin desc
 
+_Sailfish SDK 3.6 and older:_ Ensure that the `usr\bin` directory from MSYS2 installation tree is on Windows PATH.
+
 ### System Requirements
   - About 15GB of free disk space for the default component selection
   - 4GB of RAM or more is recommended.
@@ -67,6 +69,8 @@ In order to maintain compatibility with older Linux distributions, Sailfish SDK 
   - If you find no way to fix libtinfo.so.5 on your system, you may try creating it as a symbolic link to your system libncurses.so.5 (or even libncurses.so.6 or libtinfo.so.6)
 
 #### Modern bash
+
+_Sailfish SDK 3.7 and newer._
 
 Command completion for sfdk, the command line frontend to the Sailfish SDK, is only provided for bash shell interpreter. This requirement concerns especially macOS users, where the default shell is either a too old bash or zsh. If you plan to use Sailfish SDK from CLI on macOS, it is recommended to use newer `bash` and `bash-completion@2` packages from [Homebrew](https://brew.sh).
 
