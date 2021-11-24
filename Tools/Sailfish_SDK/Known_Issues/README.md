@@ -26,6 +26,9 @@ These are the known issues with the Sailfish SDK. If you have any questions, fee
   - Various warnings are produced by the QML static code checker for Sailfish.Silica types with the build targets matching recent Sailfish OS releases, like `Could not resolve the prototype "SilicaItem" of "PageHeader". (M301)`
 
 ### SDK CLI (sfdk)
+ - `sfdk tools list --available` hangs when SDK updates are available
+ - Suspending under terminal (`^Z`) is not always possible
+ - Not possible to run multiple builds simultaneously due to conflicts in package creation phase
 
 ### Sailfish SDK Build Engine
 
