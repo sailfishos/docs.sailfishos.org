@@ -29,20 +29,10 @@ These are the known issues with the Sailfish SDK. If you have any questions, fee
 
 ### Sailfish OS Build Engine
 
-  - Timeout problems connecting to Build Engine\
-    Some users may experience random timeouts when deploying applications from Sailfish IDE. This can for example happen in an environment where your computer has no Internet connection or changes WiFi station during the day. The error condition will look similar to what’s below:
-    ```
-    ... Checking for unpackaged file(s): /usr/lib/rpm/check-files /home/deploy/installroot
-    Project ERROR: Could not connect to Sailfish OS Build Engine Virtual Machine. Timeout waiting for reply from server.
-    The process "/Users/username/.config/SailfishBeta1/mer-sdk-tools/MerSDK/SailfishOS-i486/deploy" exited with code 1.
-    Error while building/deploying project foobar (kit: MerSDK-SailfishOS-i486) When executing step 'Rpm'
-    ```
+  - Timeout errors when connecting to the Build Engine\
+    Some users may experience random connection timeout errors when building and/or deploying applications from Sailfish IDE. This can for example happen in an environment where your computer has no Internet connection or changes WiFi station during the day.
 
-    It may be possible to fix this condition by adding the name SailfishSDK to your computer’s hosts file:
-    ```
-    127.0.0.1 SailfishSDK
-    ```
-    Or if you already have a line with 127.0.0.1 there, just add the SailfishSDK to the end of the existing line like this:
+    It may be possible to fix this condition by adding the name SailfishSDK to your computer’s hosts file, e.g.:
     ```
     127.0.0.1 localhost.localdomain localhost SailfishSDK
     ```
