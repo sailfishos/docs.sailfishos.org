@@ -213,3 +213,32 @@ This is a known issue with the initial Docker support. With every build engine s
 
 1.  Reinstall the Sailfish SDK (recommended)
 2.  Flatten the history manually by following one of those guides available on the web, e.g., [4](https://tuhrig.de/flatten-a-docker-container-or-image/) and taking care of restoring all the LABELs and the CMD set on the image.
+
+### How can I debug build engine boot issues?
+
+You can learn the arguments necessary for successul build engine container instantiation from sfdk's debug output. sfdk will only create the container if it is missing, so remove the possibly existing container first:
+
+```
+docker container rm sailfish-sdk-build-engine
+QT_LOGGING_RULES=sfdk.queue.debug=true sfdk engine start
+```
+
+Look for a line like
+
+```
+sfdk.queue: [D] Enqueued 0x55bc04834be0 "/usr/bin/docker" ("create", ..., "/sbin/init")
+```
+
+Store the arguments in a shell variable for later use:
+
+```
+args=("create", ..., "/sbin/init")
+args=("${args[@]%,}") # drop trailing commas
+unset args[0] # drop the command name
+```
+
+Now you can start playing with the container:
+
+```
+docker container run --rm --interactive --tty "${args[@]}" --show-status
+```
