@@ -43,6 +43,8 @@ These are the known issues with the Sailfish SDK. If you have any questions, fee
       - Old sailfish-sdk-build-engine images keep piling up (see [this from the FAQ](/Tools/Sailfish_SDK/FAQ#old-sailfish-os-build-engine-images-keep-piling-up-is-this-desired))
       - Failure to deploy from docker based build engine to emulator with customized SSH port
       - Sailfish IDE needs restart after changing SSH port of a Docker based build engine
+      - Error starting the build engine on [Linux hosts with cgroups v2](https://forum.sailfishos.org/t/issues-with-installing-sailfish-sdk-docker-with-debian-bullseye-11/4454)
+          - It is usually possible to revert back to cgroups v1 by adding `systemd.unified_cgroup_hierarchy=false` to the host kernel command line
 
 ### Sailfish OS Emulator
 
