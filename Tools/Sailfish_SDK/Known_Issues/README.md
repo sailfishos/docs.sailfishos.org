@@ -10,7 +10,6 @@ These are the known issues with the Sailfish SDK. If you have any questions, fee
 
 ### Installer / Uninstaller
 
-  - In Windows 8 the installer tool (SDKMaintenanceTool.exe) should be started only from the directory containing Sailfish SDK. Invoking it from Control Panel -\> Programs and Features might lead to erroneous behavior.
   - If you want to reinstall the SDK to another location it is recommended to first remove SDK installation and then manually delete the config file directory (in Linux and Mac it’s in $HOME/.config/SailfishSDK, in Windows this is not necessary anymore) and then reinstall SDK.
   - When uninstalling – SDKMaintenanceTool might show a dialog of some certain directories not being empty. This is OK and can be bypassed by selecting ‘Ignore’.
   - The installer does not handle all error conditions.
