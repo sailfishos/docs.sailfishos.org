@@ -17,9 +17,9 @@ It’s free to join and submit applications to Sailfish OS Store.
 
 ## Validating your app
 
-Before you submit your app to Harbour, you should run it through the RPM validator, which makes sure that your app conforms to the rules of Harbour - e.g. that it uses only the allowed APIs. When you use our SDK for creating your application packages, the validator runs automatically when you deploy your package, and you can see the results of the validator run in the compilation window.
+Before you submit your app to Harbour, you should run it through the RPM validator, which makes sure that your app conforms to the rules of Harbour - e.g. that it uses only the allowed APIs and permissions. When you use our SDK for creating your application packages, the validator runs automatically when you deploy your package, and you can see the results of the validator run in the compilation window.
 
-In case you are wondering which APIs are allowed, they are listed on the [Harbour Allowed APIs](/Develop/Apps/Harbour/Allowed_APIs) page. And if you are wondering what it takes to get an API added to the list of allowed APIs, there's a [ separate page for that ](/Develop/Apps/Harbour/API_Checklist)
+In case you are wondering which APIs are allowed, they are listed on the [Harbour Allowed APIs](/Develop/Apps/Harbour/Allowed_APIs) page. Similarly, the allowed permissions are listed on the [Allowed Permissions](/Develop/Apps/Harbour/Allowed_Permissions) page. And if you are wondering what it takes to get an API added to the list of allowed APIs, there's a [ separate page for that ](/Develop/Apps/Harbour/API_Checklist)
 
 ## Submit a new app
 
