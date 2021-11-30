@@ -4,7 +4,7 @@ permalink: Develop/Apps/Harbour/Allowed_Permissions/
 parent: Harbour
 grand_parent: Apps
 layout: default
-nav_order: 200
+nav_order: 300
 ---
 
 This information is valid as of Sailfish OS 4.3.0 release
