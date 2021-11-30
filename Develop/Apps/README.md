@@ -67,7 +67,7 @@ A Sailfish OS application takes advantage of the Sailfish OS stack to allow rapi
 
 ### Qt 5
 
-Qt 5 is the latest major version of Qt. It enables developers to develop applications with intuitive user interfaces for multiple targets, faster than ever before. Qt 5 makes it easier to address the latest UI paradigm shifts that touch screens and tablets require. More info about Qt 5 can be found from [Qt Project’s website](http://doc.qt.io/qt-5).
+Sailfish OS apps are based on Qt 5, which enables developers to develop applications with intuitive user interfaces for multiple targets, faster than ever before. Qt 5 makes it easier to address the latest UI paradigm shifts that touch screens and tablets require. More info about Qt can be found from [Qt Project’s website](http://doc.qt.io/qt-5).
 
 ### Qt Quick2
 
