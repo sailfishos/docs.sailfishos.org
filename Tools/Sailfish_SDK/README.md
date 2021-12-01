@@ -20,7 +20,7 @@ After downloading the SDK for your platform, please follow through with the [ins
 
 ### Release Notes
 
-The release notes for this SDK release are available at [Sailfish OS Forum](https://forum.sailfishos.org/t/8418).
+The release notes for this SDK release are available at [Sailfish OS Forum](https://forum.sailfishos.org/t/9195).
 
 ### All Download Options
 
