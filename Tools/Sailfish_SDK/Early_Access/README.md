@@ -48,7 +48,7 @@ The latest Sailfish SDK Early Access release can be downloaded for Linux, macOS 
 
 ### Release Notes
 
-The release notes for this SDK release are available at [Sailfish OS Forum](https://forum.sailfishos.org/t/8418).
+The release notes for this SDK release are available at [Sailfish OS Forum](https://forum.sailfishos.org/t/9195).
 
 ### All Download Options
 
