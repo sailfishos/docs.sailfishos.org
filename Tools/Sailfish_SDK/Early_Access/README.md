@@ -12,25 +12,27 @@ Sailfish SDK Early Access releases will provide the new SDK features and fixes a
 
 If you are looking for the regular SDK release or general information about the SDK itself, check out the [Sailfish SDK](/Tools/Sailfish_SDK) page.
 
-## Early Access Build Targets
+## Early Access Build Targets and Emulator
 
-The early access build targets are supported in both the Sailfish SDK and Sailfish SDK Early Access releases.
+The early access build targets and emulator are supported in both the Sailfish SDK and Sailfish SDK Early Access releases.
 
-The latest early access targets can be installed by using the SDKMaintenanceTool:
+Installation is possible by using the SDKMaintenanceTool:
 
 1\. Open the **SDKMaintenanceTool**
 
 2\. Choose **Add or remove components** and click **Continue**
 
-3\. Click the **Sailfish OS Build Targets** branch open from the components list
+3\. Click the **Build Targets** branch open from the components list and check any of those `SailfishOS-ea-<arch>` component(s) for installation
 
-4\. **Check** `SailfishOS-ea-armv7hl` and/or `SailfishOS-ea-i486` component(s) for installation
+4\. Click the **Emulators** branch open from the components list and check the `SailfishOS-ea` component for installation
 
 5\. Click **Continue** and follow through with the installation
 
-The early access build targets will be released in sync with the early access releases of the Sailfish OS. Generally these releases will be available about a week earlier than the official public release. This allows developers to test and refine their apps before the public release.
+Unattended installation is possible with the `sfdk tools install` and `sfdk emulator install` commands.
 
-If you have installed an early access build target or targets by using the SDKMaintenanceTool, you will get an update notification automatically when a newer early access build target release is available.
+The early access build targets and emulator will be released in sync with the early access releases of the Sailfish OS. Generally these releases will be available about a week earlier than the official public release. This allows developers to test and refine their apps before the public release.
+
+If you have installed early access build targets or emulators, you will get an update notification under the Sailfish IDE automatically when a newer early access release is available.
 
 Please, remember, that the Early Access build targets should not be used for submitting apps to the Jolla Harbour. For that purpose, you should always use the latest non-EA (`SailfishOS-latest-armv7hl` or `SailfishOS-latest-i486`) build targets.
 
