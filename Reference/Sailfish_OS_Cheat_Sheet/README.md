@@ -157,15 +157,17 @@ RateLimitInterval=5s
 ```
 
 Which will cause systemd to throttle journal output from any process which emits more than 9999 lines of output in any five second interval NOTE: after doing changes for /etc/systemd/journald.conf you should reboot the device.
+
 Various processes can be made more verbose by setting certain environment variables:
 ```nosh
 QT_LOGGING_RULES="*.debug=true"               # any application or service using Qt Categorized Logging
-QT_LOGGING_RULES="buteo.*.debug=true"                        # Buteo processes and any Buteo sync plugin
+QT_LOGGING_RULES="buteo.*.debug=true"         # Buteo processes and any Buteo sync plugin
 SSO_LOGGING_LEVEL=3 SSOUI_LOGGING_LEVEL=3     # Accounts&SSO services
 CONTACTSD_DEBUG=1                             # contactsd instant messaging roster synchronisation daemon
 QTCONTACTS_SQLITE_TWCSA_TRACE=1 QTCONTACTS_SQLITE_TRACE=1  # qtcontacts-sqlite backend debug output
-KCALDEBUG=1                             # calendar application and plugins, mkcal and KCal debug output
-LIPSTICK_COMPOSITOR_DEBUG=1             # homescreen debug output
+QT_LOGGING_RULES="org.kde.pim.mkcal.debug=true"            # mKCal debug output
+QT_LOGGING_RULES="kf.calendarcore.debug=true" # KCalendarCore debug output
+LIPSTICK_COMPOSITOR_DEBUG=1                   # homescreen debug output
 ```
 
 Qt category logging can be contolled by editing qtlogging.ini. This is an override file - so if that file doesn't exist, just the "default" logging categories are enabled, but if that file does exist, then the categories specified in the file are used:
