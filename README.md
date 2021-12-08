@@ -8,6 +8,7 @@ Welcome to the Sailfish OS Docs source repo.
     * [Preview via GitHub Pages](#preview-via-github-pages)
     * [Preview on your desktop](#preview-on-your-desktop)
     * [Upstream just-the-docs status](#upstream-just-the-docs-status)
+  * [Review guidelines](#review-guidelines)
   * [Common pitfalls](#common-pitfalls)
     * [Tables](#tables)
     * [Escaping Markdown syntax](#escaping-markdown-syntax)
@@ -78,6 +79,22 @@ Unfortunately the [Just the Docs upstream](https://github.com/pmarsceill/just-th
 Its state however is sufficiently feature complete, truly standing out from the crowd of Jekyll docs generators.
 
 If you are fixing a substantial issue for the Sailfish OS docs template (such as replacing all absolute URLs with relative ones), please first check amongst open PRs upstream in case it has already been addressed.
+
+### Review guidelines
+
+When you have been asked to review a pull request in this repository, please follow the following guidelines:
+
+ * Be polite and considerate
+ * Ensure that contributors understand that review comments are not intended to be a sign of lack of appreciation for the work they have done, but rather are intended to further improve the contribution
+ * Working with pull requests might seem daunting for first time contributors. Please guide them through the process - just asking them to fix errors might not be enough.
+ * Check that the proposed change fits the scope of the documentation: the purpose of the site is to document Sailfish OS, development of Sailfish OS and development of Sailfish Applications
+ * Check the list of [common pitfalls](#common-pitfalls).
+ * Check that the source style matches the rest of this repository, such as no hard text wrapping, how images are included etc.
+ * Check that Git commit message format matches the history of commits (e.g. no [context] or JB refs in the first line of the commit)
+ * Check that the contribution uses neutral but friendly tone of voice
+ * Check that topics are not duplicated - it is better to link to another page of the documentation
+ * Check that the used terminology is aligned with existing Sailfish OS products, websites and documentation unless there is a specific reason not to
+ * Verify that the contributor has signed the Contributor License Agreement. For new contributors you should see a message from CLAassistant, stating that all committers have signed the CLA. For old contributors, the signature is checked as part of the automated workflow - you should see message about it in the checks section.
 
 ### Common pitfalls
 
