@@ -502,10 +502,12 @@ Import events from iCal
 devel-su -p icalconverter import calendar.ics
 ```
 
-Import events using Calendar import page
+Import events using Calendar import page (two possibilities)
 ```nosh
-dbus-send --print-reply --type=method_call --dest=com.jolla.calendar.ui /com/jolla/calendar/ui com.jolla.calendar.ui.importFile string:/home/<user>/calendar.ics
+dbus-send --print-reply --type=method_call --dest=com.jolla.calendar.ui /com/jolla/calendar/ui com.jolla.calendar.ui.importFile string:$HOME/<readableDir>/calendar.ics
+xdg-open calendar.ics
 ```
+Both assume that the ICS data are actually in a directory that is visible from inside the jail the calendar application is running into, for instance `$HOME/Documents/`.
 
 Export local calendar events to iCal
 ```nosh
