@@ -56,7 +56,7 @@ git config --global user.email "you@example.com"
 repo init -u git://github.com/mer-hybris/android.git -b $HAVERSION -m tagged-localbuild.xml
 # Adjust X to bandwidth capabilities
 repo sync -jX --fetch-submodules
-git clone --recurse-submodules https://github.com/mer-hybris/droid-src-sony droid-src
+git clone --recurse-submodules https://github.com/mer-hybris/droid-src-sony droid-src -b "hybris-"$HAVERSION
 ln -s droid-src/patches
 droid-src/apply-patches.sh --mb
 ./setup-sources.sh --mb
