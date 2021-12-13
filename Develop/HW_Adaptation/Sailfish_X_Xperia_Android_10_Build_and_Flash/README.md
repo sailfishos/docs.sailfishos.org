@@ -181,23 +181,7 @@ You will find the instructions on our website (yet use your own built .zip bundl
 
 ## Adaptation Status
 
-Feel free to help out in areas that you like.
-
-What works:
-
-  - audio, gps, bluetooth, wifi & internet sharing, modem, camera
-  - fingerprint works (but is not available for the community build)
-  - USB networking
-
-Known issues:
-
-  - Multiple camera support is available via community's app <https://openrepos.net/content/piggz/advanced-camera>
-  - First boot after flash makes speaker emit a frequency test
-  - Mobile data over 3G and 2G connections might not work. LTE/4G does work.
-  - While restarting the phone for the 1st time after completing the startup wizard, Xperia 10 II tends to lose the saved WiFi network(s). This does not happen on the following restarts, though .
-  - There may be issues with routing the voice to some headsets (need to tap the Loudspeaker icon, followed by Headset icon). In addition, the speaker’s voice may be echoed to his/her ears with unnecessarily high volume with some headsets.
-  - Wired headset microphone does not work, you will need to talk into the phone’s microphone during phone calls (this is a side-effect of fixing a very broken routing in <https://github.com/mer-hybris/droid-config-sony-seine/pull/30>)
-  - You’ll hear your own voice through the wired headset, it’s an intended feature called “sidetone” (it helps to avoid talking louder). Unfortunately it will currently be picked up from your phone’s microphone, as per the issue above
+Feel free to help out in areas that you like. The list of known issues can be found here: https://forum.sailfishos.org/t/release-notes-suomenlinna-4-3-0/8495
 
 ## Feedback
 
