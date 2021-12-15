@@ -15,7 +15,7 @@ The Sailfish Platform SDK contains [Development Tools](/Tools/Development) like 
 
 If you're in a hurry then this should get you going (if it doesn't work then read the full instructions carefully!) :
 ```nosh
-export PLATFORM_SDK_ROOT=/srv/mer
+export PLATFORM_SDK_ROOT=/srv/sailfishos
 curl -k -O https://releases.sailfishos.org/sdk/installers/latest/Jolla-latest-SailfishOS_Platform_SDK_Chroot-i486.tar.bz2
 sudo mkdir -p $PLATFORM_SDK_ROOT/sdks/sfossdk
 sudo tar --numeric-owner -p -xjf Jolla-latest-SailfishOS_Platform_SDK_Chroot-i486.tar.bz2 -C $PLATFORM_SDK_ROOT/sdks/sfossdk
@@ -71,7 +71,7 @@ The Platform SDK is provided as a rootfs tarball that contains essential tools f
 Filesystem requirements:
 
   - The Platform SDK can be installed to any location with enough space - we'll use /srv/ as per the [Linux FHS](http://www.pathname.com/fhs/pub/fhs-2.3.html#SRVDATAFORSERVICESPROVIDEDBYSYSTEM) (feel free to adapt the commands to use any other location).
-  - The installation path must contain an intermediate directory called 'sdks' which only has Platform SDKs inside. eg /srv/mer/sdks/sfossdk/...
+  - The installation path must contain an intermediate directory called 'sdks' which only has Platform SDKs inside. eg /srv/sailfishos/sdks/sfossdk/...
 
 To setup the Platform SDK:
 
@@ -86,8 +86,8 @@ curl -k -O https://releases.sailfishos.org/sdk/installers/latest/Jolla-latest-Sa
 
   - Create a directory for the Platform SDK rootfs and extract the tarball as root or with sudo:
 ```nosh
-sudo mkdir -p /srv/mer/sdks/sfossdk
-sudo tar --numeric-owner -p -C /srv/mer/sdks/sfossdk -xjf Jolla-latest-SailfishOS_Platform_SDK_Chroot-i486.tar.bz2
+sudo mkdir -p /srv/sailfishos/sdks/sfossdk
+sudo tar --numeric-owner -p -C /srv/sailfishos/sdks/sfossdk -xjf Jolla-latest-SailfishOS_Platform_SDK_Chroot-i486.tar.bz2
 ```
 
 **Attention:** If you chose installation prefix other than `/srv/mer` and your SDK version is 4.3.0.15 (check `/etc/os-release` inside), the following workaround is needed:
@@ -121,7 +121,7 @@ If you use multiple Platform SDK instances, you can utilise the `SAILFISH_SDK` s
 
 To enter the Platform SDK rootfs with the helper script run
 ```nosh
-/srv/mer/sdks/sfossdk/sdk-chroot
+/srv/sailfishos/sdks/sfossdk/sdk-chroot
 ```
 
 You should find that you are operating under your normal username and that your home directory is available as `/home/<username>` and any other mountpoints are mounted under `/parentroot/*`
@@ -132,7 +132,7 @@ You have sudo rights automatically. If sudo fails within the sdk, make sure that
 
 If you tend to use a single instance of the Platform SDK then this alias is useful
 ```nosh
-echo alias sfossdk=/srv/mer/sdks/sfossdk/sdk-chroot >> ~/.bashrc ; exec bash
+echo alias sfossdk=/srv/sailfishos/sdks/sfossdk/sdk-chroot >> ~/.bashrc ; exec bash
 ```
 
 # Next Steps
@@ -150,7 +150,7 @@ sudo zypper dup
 
 # Removing the Platform SDK
 
-[Remove all SDK Targets and Toolings](/Tools/Platform_SDK/Target_Installation#installing-sdk-target-and-tooling-tarballs), then simply exit all chroot instances and, using sudo, remove `/srv/mers/sdks/sfossdk`.
+[Remove all SDK Targets and Toolings](/Tools/Platform_SDK/Target_Installation#installing-sdk-target-and-tooling-tarballs), then simply exit all chroot instances and, using sudo, remove `/srv/sailfishos/sdks/sfossdk`.
 
 # Extras
 
