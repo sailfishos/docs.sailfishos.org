@@ -75,8 +75,8 @@ Build the new library
 ```nosh
 source `pwd`/obj-build-mer-qt-xr/rpm-shared.env
 make -j16 -C `pwd`/obj-build-mer-qt-xr/<path to rebuild>
-make -j16 -C `pwd`/obj-build-mer-qt-xr/toolkit/library
-strip obj-build-mer-qt-xr/toolkit/library/libxul.so
+make -j16 -C `pwd`/obj-build-mer-qt-xr/toolkit
+strip obj-build-mer-qt-xr/toolkit/library/build/libxul.so
 ```
 
 If you need to get stacktraces from gdb and don't mind a large transfer, you can skip the strip step. Then from outside the target:
