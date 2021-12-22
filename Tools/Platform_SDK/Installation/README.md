@@ -117,7 +117,7 @@ fi
 EOF
 ```
 
-If you use multiple Platform SDK instances, you can utilise the `MERSDK` shell variable to determine the absolute path to the Platform SDK chroot in use (since Sailfish OS release 2.1.3).
+If you use multiple Platform SDK instances, you can utilise the `SAILFISH_SDK` shell variable to determine the absolute path to the Platform SDK chroot in use (since Sailfish OS release 4.3.0.15).
 
 To enter the Platform SDK rootfs with the helper script run
 ```nosh
