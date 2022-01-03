@@ -552,6 +552,11 @@ Remove weather locations
 rm /home/<user>/.local/share/sailfish-weather/weather.json
 ```
 
+In some SFOS installations, the location is here:
+```nosh
+rm /home/<user>/.local/share/org.sailfishos/sailfish-weather/weather.json
+```    
+    
 ## Blocking Device Suspend
 
 Install mcetool
