@@ -47,6 +47,7 @@ A few hints on Docker installation:
     - [extra steps](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user) to ensure that Sailfish SDK can manage Docker as a non-root user
     - [extra steps](https://blog.christophersmart.com/2019/12/15/enabling-docker-in-fedora-31-by-reverting-to-cgroups-v1/) to ensure their host is using cgroups v1
   - Windows users should ensure that Docker is set up to use [Linux containers](https://docs.docker.com/desktop/windows/#switch-between-windows-and-linux-containers) (instead of Windows containers)
+  - Using Docker in rootless mode is not supported
 
 ### MSYS2 (Windows only)
 
