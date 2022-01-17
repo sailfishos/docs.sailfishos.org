@@ -38,7 +38,7 @@ The app launcher framework provides easy access for adding and removing apps fro
 
 ## Compositor
 
-The Lipstick Compositor manages all displayed windows. It uses [Qt Wayland](https://wiki.qt.io/QtWayland) to manage displayed surfaces and includes handling for [Android™ AppSupport](/AppSupport "brokenlink") application windows. It also handles screen orientation changes and turning the display on/off.
+The Lipstick Compositor manages all displayed windows. It uses [Qt Wayland](https://wiki.qt.io/QtWayland) to manage displayed surfaces and includes handling for [Android™ AppSupport](/Reference/Android_Compatibility/#appsupport) application windows. It also handles screen orientation changes and turning the display on/off.
 
 Aside from managing ordinary application windows, the Compositor also manages the layering of special window types such as the Lock screen, system windows (such as the USB connection dialog) and alarm dialogs. It also implements the core system swipe gesture capabilities for "peeking" behind the current application window and swiping between the Home screen and other main system screens.
 
@@ -60,5 +60,3 @@ Past event notifications are automatically displayed in the Events screen, unles
 ## Event notifications
 
 The Lipstick notifications framework allows apps to send user notifications to Lipstick in order to display them in the UI. This can range from system-level notifications about low battery levels to user space -level notifications about new emails. The notification framework implements the [Desktop Notifications Specification](https://people.gnome.org/~mccann/docs/notification-spec/notification-spec-latest.html) and receives notification information via D-Bus.
-
-See the the <https://github.com/sailfishos/lipstick> Lipstick source package for detailed doxygen-based documentation on the notifications framework.
