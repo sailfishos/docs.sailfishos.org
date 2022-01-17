@@ -60,3 +60,9 @@ Past event notifications are automatically displayed in the Events screen, unles
 ## Event notifications
 
 The Lipstick notifications framework allows apps to send user notifications to Lipstick in order to display them in the UI. This can range from system-level notifications about low battery levels to user space -level notifications about new emails. The notification framework implements the [Desktop Notifications Specification](https://people.gnome.org/~mccann/docs/notification-spec/notification-spec-latest.html) and receives notification information via D-Bus.
+
+## Launchers
+
+The Lipstick app launcher framework supports launching apps from files following [Desktop Entry Specification](https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html). In addition to launching the processes directly, it supports launching them through mapplauncherd boosters, through D-Bus activation and with or without sandboxing. See [Launchers](Launchers) for more information on how to use them in applications.
+
+Lipstick supports [_org.freedesktop.Application_ D-Bus API](https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html#dbus) for opening files and window activation. Additionally Sailjail sandboxing provides dynamic creation of D-Bus service files to support D-Bus activation. See [D-Bus activation](Launchers#d-bus-activation) for more information on that.
