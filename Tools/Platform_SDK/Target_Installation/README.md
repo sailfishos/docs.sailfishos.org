@@ -1,7 +1,6 @@
 ---
 title: Target Installation
 permalink: Tools/Platform_SDK/Target_Installation/
-nav_exclude: true
 parent: Platform SDK
 layout: default
 nav_order: 200
@@ -22,7 +21,7 @@ Whenever you enter a ScratchBox2 shell (via `sb2`), you must specify the target 
 
 ## Installing SDK Target and Tooling Tarballs
 
-The latest public releases of Sailfish OS targets (and appropriate toolings) are found here: <http://releases.sailfishos.org/sdk/targets/>
+The latest public releases of Sailfish OS targets (and appropriate toolings) are found here: <https://releases.sailfishos.org/sdk/targets/>
 
 The SDK Assistant tool is available within the Platform SDK chroot environment that simplifies the creation and deletion of ScratchBox2 targets. The most common use for the SDK Assistant tool is to create a new SDK target:
 ```nosh
