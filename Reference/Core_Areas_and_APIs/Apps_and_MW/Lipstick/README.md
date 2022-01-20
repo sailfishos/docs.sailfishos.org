@@ -38,7 +38,7 @@ The app launcher framework provides easy access for adding and removing apps fro
 
 ## Compositor
 
-The Lipstick Compositor manages all displayed windows. It uses [Qt Wayland](https://wiki.qt.io/QtWayland) to manage displayed surfaces and includes handling for [Android™ AppSupport](/AppSupport "brokenlink") application windows. It also handles screen orientation changes and turning the display on/off.
+The Lipstick Compositor manages all displayed windows. It uses [Qt Wayland](https://wiki.qt.io/QtWayland) to manage displayed surfaces and includes handling for [Android™ AppSupport](/Reference/Android_Compatibility/#appsupport) application windows. It also handles screen orientation changes and turning the display on/off.
 
 Aside from managing ordinary application windows, the Compositor also manages the layering of special window types such as the Lock screen, system windows (such as the USB connection dialog) and alarm dialogs. It also implements the core system swipe gesture capabilities for "peeking" behind the current application window and swiping between the Home screen and other main system screens.
 
@@ -61,4 +61,8 @@ Past event notifications are automatically displayed in the Events screen, unles
 
 The Lipstick notifications framework allows apps to send user notifications to Lipstick in order to display them in the UI. This can range from system-level notifications about low battery levels to user space -level notifications about new emails. The notification framework implements the [Desktop Notifications Specification](https://people.gnome.org/~mccann/docs/notification-spec/notification-spec-latest.html) and receives notification information via D-Bus.
 
-See the the <https://github.com/sailfishos/lipstick> Lipstick source package for detailed doxygen-based documentation on the notifications framework.
+## Launchers
+
+The Lipstick app launcher framework supports launching apps from files following [Desktop Entry Specification](https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html). In addition to launching the processes directly, it supports launching them through mapplauncherd boosters, through D-Bus activation and with or without sandboxing. See [Launchers](Launchers) for more information on how to use them in applications.
+
+Lipstick supports [_org.freedesktop.Application_ D-Bus API](https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html#dbus) for opening files and window activation. Additionally Sailjail sandboxing provides dynamic creation of D-Bus service files to support D-Bus activation. See [D-Bus activation](Launchers#d-bus-activation) for more information on that.
