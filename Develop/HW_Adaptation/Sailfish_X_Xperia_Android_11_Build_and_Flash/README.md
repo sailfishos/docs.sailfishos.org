@@ -1,18 +1,18 @@
 ---
-title: Sailfish X Xperia Android 10 Build and Flash
-permalink: Develop/HW_Adaptation/Sailfish_X_Xperia_Android_10_Build_and_Flash/
+title: Sailfish X Xperia Android 11 Build and Flash
+permalink: Develop/HW_Adaptation/Sailfish_X_Xperia_Android_11_Build_and_Flash/
 parent: HW Adaptation
 layout: default
-nav_order: 500
+nav_order: 600
 ---
 
-# Sailfish OS Hardware Adaptation Development Kit for Sony Xperia 10 II
+# Sailfish OS Hardware Adaptation Development Kit for Sony Xperia 10 III
 
-Here you will find instructions how to build Sailfish OS image and flash it to Sony Xperia 10 II device, which can be used as reference to port any other Sony Xperia Open Device that has Android 10 support.
+Here you will find instructions how to build Sailfish OS image and flash it to Sony Xperia 10 III device, which can be used as reference to port any other Sony Xperia Open Device that has Android 11 support.
 
 ## ChangeLog
 
-  - 2021-02-12: Published as technical guidance for Android 10 64bit ARM adaptations
+  - 2021-12-13: Published as technical guidance for Android 11 64bit ARM adaptations
 
 ## Building
 
@@ -20,23 +20,23 @@ Please download the latest Sailfish OS HADK (Hardware Adaptation Development Kit
 
 Please check the requirements for your build host: <https://source.android.com/setup/build/requirements>
 
-Minimum Sailfish OS version for this port is 4.1.0.
+Minimum Sailfish OS version for this port is 4.3.0.
 
 If you are new to HADK, please carefully read the disclaimer on page 1, then **chapters 1 and 2**.
 
-The disk space requirement for this build is not what HADK says, but around 200GB . The download size requirement is around 50GB.
+The disk space requirement for this build is not what HADK says, but around 300GB . The download size requirement is around 50GB.
 
-HADK uses LineageOS/CyanogenMod as reference base. Here we'll instead have AOSP (Android Open Source Project) 10.0. Now you can read through **chapter 3** of the HADK.
+HADK uses LineageOS/CyanogenMod as reference base. Here we'll instead have AOSP (Android Open Source Project) 11.0. Now you can read through **chapter 3** of the HADK.
 
 If you ever run into difficulties, please look through the links in the topic of the [#sailfishos-porters](https://webchat.oftc.net/?channels=#sailfishos-porters) channel on IRC at oftc.net.
 
-In **chapter 4** (*Setting up the SDKs*) setup the environment as requested in ~/.hadk.env, but then set and add the following additional variables (here we'll build for Sony Xperia 10 II Dual SIM variant):
+In **chapter 4** (*Setting up the SDKs*) setup the environment as requested in ~/.hadk.env, but then set and add the following additional variables (here we'll build for Sony Xperia 10 III, Dual SIM variant being its only one):
 ```nosh
 export VENDOR=sony
-export DEVICE=xqau52
-export HABUILD_DEVICE=pdx201
-export FAMILY=seine
-export ANDROID_VERSION_MAJOR=10
+export DEVICE=xqbt52
+export HABUILD_DEVICE=pdx213
+export FAMILY=lena
+export ANDROID_VERSION_MAJOR=11
 export HAVERSION="sony-aosp-"$ANDROID_VERSION_MAJOR
 ```
 
@@ -53,9 +53,10 @@ git clone --recurse-submodules https://github.com/mer-hybris/droid-hal-sony-$FAM
 git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
 
+# To save space, you can add "--depth=1 -c" flags to repo init:
 repo init -u git://github.com/mer-hybris/android.git -b $HAVERSION -m tagged-localbuild.xml
 # Adjust X to bandwidth capabilities
-repo sync -jX --fetch-submodules
+repo sync -jX
 git clone --recurse-submodules https://github.com/mer-hybris/droid-src-sony droid-src -b "hybris-"$HAVERSION
 ln -s droid-src/patches
 droid-src/apply-patches.sh --mb
@@ -64,9 +65,9 @@ droid-src/apply-patches.sh --mb
 source build/envsetup.sh
 export USE_CCACHE=1
 lunch aosp_$DEVICE-user
-cd kernel/sony/msm-4.14/common-kernel
+cd kernel/sony/msm-4.19/common-kernel
 ./build-kernels-clang.sh -d $HABUILD_DEVICE -O $ANDROID_ROOT/out/target/product/$HABUILD_DEVICE/obj/kernel
-# FIXME after this is merged: https://github.com/sonyxperiadev/kernel-sony-msm-4.14-common/pull/14
+# FIXME after this is merged and reapplied: https://github.com/sonyxperiadev/kernel-sony-msm-4.14-common/pull/14
 cp dtbo-$HABUILD_DEVICE.img $ANDROID_ROOT/out/target/product/$HABUILD_DEVICE/dtbo.img
 cd -
 git clone https://github.com/sailfishos/droidmedia external/droidmedia
@@ -96,7 +97,11 @@ rpm/dhd/helpers/build_packages.sh --configs
 cd hybris/mw/libhybris
 git checkout master
 cd -
-rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/sailfish-connman-plugin-suspend.git
+
+# Remove the next two lines when a new SFOS release comes out (one after 4.3.0):
+rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/libgbinder.git
+rpm/dhd/helpers/build_packages.sh --mw=https://github.com/sailfishos/sensorfw.git --spec=rpm/sensorfw-qt5-binder.spec
+
 rpm/dhd/helpers/build_packages.sh --mw # select "all" option when asked
 ```
 
@@ -107,10 +112,10 @@ HABUILD_SDK $
 sudo mkdir -p $ANDROID_ROOT-syspart
 sudo chown -R $USER $ANDROID_ROOT-syspart
 cd $ANDROID_ROOT-syspart
-# if you plan to contribute to syspart (/system partition), remove "--depth=1" and "-c" flags below
-repo init -u git://github.com/mer-hybris/android.git -b $HAVERSION -m tagged-manifest.xml --depth=1
+# If you plan to contribute to syspart (/system partition), remove the "--depth=1 -c" flags below
+repo init -u git://github.com/mer-hybris/android.git -b $HAVERSION -m tagged-manifest.xml --depth=1 -c
 # Adjust X to bandwidth capabilities
-repo sync -jX --fetch-submodules -c
+repo sync -jX --fetch-submodules
 ln -s rpm/patches .
 rpm/apply-patches.sh --mb
 
@@ -155,7 +160,6 @@ PLATFORM_SDK $
 cd $ANDROID_ROOT
 rpm/dhd/helpers/build_packages.sh --gg
 rpm/dhd/helpers/build_bootimg_packages.sh
-git clone --recursive https://github.com/mer-hybris/droid-hal-img-boot-sony-$FAMILY hybris/mw/droid-hal-img-boot-sony-$FAMILY
 rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/droid-hal-img-boot-sony-$FAMILY --do-not-install --spec=rpm/droid-hal-$HABUILD_DEVICE-img-boot.spec
 
 rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/droid-system-sony-template --do-not-install --spec=rpm/droid-system-$HABUILD_DEVICE.spec --spec=rpm/droid-system-$HABUILD_DEVICE-$DEVICE.spec
@@ -164,7 +168,7 @@ git clone --recursive https://github.com/mer-hybris/droid-hal-version-sony-$FAMI
 rpm/dhd/helpers/build_packages.sh --version
 
 # The next two variables are explained in chapter 8
-export RELEASE=4.1.0.24
+export RELEASE=4.3.0.12
 export EXTRA_NAME=-my1
 sudo zypper in lvm2 atruncate pigz android-tools
 cd $ANDROID_ROOT
@@ -177,11 +181,56 @@ The command above will yield a flashable archive, such as `$ANDROID_ROOT/Sailfis
 
 ## Flashing
 
-You will find the instructions on our website (yet use your own built .zip bundle!): <https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-linux/>
+You will find the instructions for Xperia 10 II on our website that you can easily refer from (yet use your own built .zip bundle!): <https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-linux/>
 
 ## Adaptation Status
 
-Feel free to help out in areas that you like. The list of known issues can be found here: https://forum.sailfishos.org/t/release-notes-suomenlinna-4-3-0/8495
+Feel free to help out in areas that you like.
+
+What works:
+
+  - gps, bluetooth, wifi & internet sharing, mobile data, modem (SIM1 slot only), camera (photos only), sensors, music/video playback
+  - fingerprint works (but is not available for the community build, however potential fix effort is ongoing for 4.4.0)
+  - USB networking
+
+Known issues:
+
+  - Failing to mark boot as successful, same problem on AOSP too, fix WIP: https://github.com/sonyxperiadev/bug_tracker/issues/740
+  - Camera:
+    - Switching to front camera shows mirrored rear camera, similar bug on AOSP too: https://github.com/sonyxperiadev/bug_tracker/issues/732
+    - Cannot auto focus, nor by tapping to focus manually
+  - Modem:
+    - SIM card is sometimes not detected during boot - happens on AOSP too: https://github.com/sonyxperiadev/bug_tracker/issues/736
+  - Audio
+    - Incall audio is not working, the implementation is pending a rework
+    - Wired headset detection also doesn't work
+  - Mobile data over 3G and 2G connections might not work. LTE/4G does work.
+  - Sensors may not work on some reboots (race condition?)
+
+
+### Contributing to Sony AOSP
+
+If you want to help out with underlying issues in AOSP (fixing those will also fix them in SFOS, magic!:), follow this guide to build an AOSP 11 image: https://developer.sony.com/develop/open-devices/guides/aosp-build-instructions/build-aosp-android-android-11-0-0
+
+Use this script to flash the AOSP images (the above website is pending an update for that step):
+
+```nosh
+fastboot reboot fastboot
+fastboot flash boot_a boot.img
+fastboot flash dtbo_a dtbo.img
+fastboot flash product_a product.img
+fastboot flash recovery_a recovery.img
+fastboot flash oem SW_binaries_for_Xperia_Android_11_4.19_v8a_lena.img
+fastboot flash --disable-verity --disable-verification vbmeta_a vbmeta.img
+fastboot flash --disable-verity --disable-verification vbmeta_system_a vbmeta_system.img
+fastboot flash vendor_a vendor.img
+fastboot flash system_a system.img
+fastboot flash system_ext_a system_ext.img
+fastboot flash userdata userdata.img
+fastboot erase metadata
+fastboot --set-active=a
+fastboot reboot
+```
 
 ## Feedback
 
