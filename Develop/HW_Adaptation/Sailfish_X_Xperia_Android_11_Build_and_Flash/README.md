@@ -109,9 +109,10 @@ Without waiting for the middleware to finish, open new shell terminal.
 ```nosh
 HABUILD_SDK $
 
-sudo mkdir -p $ANDROID_ROOT-syspart
-sudo chown -R $USER $ANDROID_ROOT-syspart
-cd $ANDROID_ROOT-syspart
+export ANDROID_SYSPART=$ANDROID_ROOT-syspart
+sudo mkdir -p $ANDROID_SYSPART
+sudo chown -R $USER $ANDROID_SYSPART
+cd $ANDROID_SYSPART
 # If you plan to contribute to syspart (/system partition), remove the "--depth=1 -c" flags below
 repo init -u git://github.com/mer-hybris/android.git -b $HAVERSION -m tagged-manifest.xml --depth=1 -c
 # Adjust X to bandwidth capabilities
@@ -127,30 +128,30 @@ lunch aosp_$DEVICE-user
 make -j$(nproc --all) systemimage vendorimage
 # This might take some time (~2.5 hours on Intel Xeon's 12 cores)
 
-mkdir -p $ANDROID_ROOT-tmp
-sudo mkdir -p $ANDROID_ROOT-mnt-system
-simg2img $ANDROID_ROOT-syspart/out/target/product/$HABUILD_DEVICE/system.img $ANDROID_ROOT-tmp/system.img.raw
-sudo mount $ANDROID_ROOT-tmp/system.img.raw $ANDROID_ROOT-mnt-system
+mkdir -p $ANDROID_SYSPART-tmp
+sudo mkdir -p $ANDROID_SYSPART-mnt-system
+simg2img $ANDROID_SYSPART/out/target/product/$HABUILD_DEVICE/system.img $ANDROID_SYSPART-tmp/system.img.raw
+sudo mount $ANDROID_SYSPART-tmp/system.img.raw $ANDROID_SYSPART-mnt-system
 
-sudo mkdir -p $ANDROID_ROOT-mnt-vendor/vendor
-simg2img $ANDROID_ROOT-syspart/out/target/product/$HABUILD_DEVICE/vendor.img $ANDROID_ROOT-tmp/vendor.img.raw
-sudo mount $ANDROID_ROOT-tmp/vendor.img.raw $ANDROID_ROOT-mnt-vendor/vendor
+sudo mkdir -p $ANDROID_SYSPART-mnt-vendor/vendor
+simg2img $ANDROID_SYSPART/out/target/product/$HABUILD_DEVICE/vendor.img $ANDROID_SYSPART-tmp/vendor.img.raw
+sudo mount $ANDROID_SYSPART-tmp/vendor.img.raw $ANDROID_SYSPART-mnt-vendor/vendor
 
 cd $ANDROID_ROOT/hybris/mw
 D=droid-system-$VENDOR-template
 git clone --recursive https://github.com/mer-hybris/$D
 cd $D
-sudo droid-system-device/helpers/copy_tree.sh $ANDROID_ROOT-mnt-system/system $ANDROID_ROOT-mnt-vendor/vendor rpm/droid-system-$HABUILD_DEVICE.spec
+sudo droid-system-device/helpers/copy_tree.sh $ANDROID_SYSPART-mnt-system/system $ANDROID_SYSPART-mnt-vendor/vendor rpm/droid-system-$HABUILD_DEVICE.spec
+sudo chown -R $USER .
 # You can commit the changes, but before you push them out, make sure:
 # - to check binary file/repo size limits
 # - to rename the public repo as droid-system-sony-$FAMILY-$HABUILD_DEVICE
 # - to not contribute binary files to this *-template repo
-sudo chown -R $USER .
-sudo umount $ANDROID_ROOT-mnt-vendor/vendor
-sudo umount $ANDROID_ROOT-mnt-system
-rm $ANDROID_ROOT-tmp/{system,vendor}.img.raw
-sudo rm -rf $ANDROID_ROOT-mnt-{system,vendor}
-rmdir $ANDROID_ROOT-tmp || true
+sudo umount $ANDROID_SYSPART-mnt-vendor/vendor
+sudo umount $ANDROID_SYSPART-mnt-system
+rm $ANDROID_SYSPART-tmp/{system,vendor}.img.raw
+sudo rm -rf $ANDROID_SYSPART-mnt-{system,vendor}
+rmdir $ANDROID_SYSPART-tmp || true
 ```
 
 You can now close the above shell terminal. Next, please proceed with:
