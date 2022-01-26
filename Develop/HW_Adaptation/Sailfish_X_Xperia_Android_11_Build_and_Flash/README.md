@@ -195,12 +195,12 @@ What works:
 
 Known issues:
 
-  - Failing to mark boot as successful, same problem on AOSP too, fix WIP: https://github.com/sonyxperiadev/bug_tracker/issues/740
+  - Failing to mark boot as successful, same problem on AOSP too, fix WIP: <https://github.com/sonyxperiadev/bug_tracker/issues/740>
   - Camera:
-    - Switching to front camera shows mirrored rear camera, similar bug on AOSP too: https://github.com/sonyxperiadev/bug_tracker/issues/732
+    - Switching to front camera shows mirrored rear camera, similar bug on AOSP too: <https://github.com/sonyxperiadev/bug_tracker/issues/732>
     - Cannot auto focus, nor by tapping to focus manually
   - Modem:
-    - SIM card is sometimes not detected during boot - happens on AOSP too: https://github.com/sonyxperiadev/bug_tracker/issues/736
+    - SIM card is sometimes not detected during boot - happens on AOSP too: <https://github.com/sonyxperiadev/bug_tracker/issues/736>
   - Audio
     - Incall audio is not working, the implementation is pending a rework
     - Wired headset detection also doesn't work
@@ -210,7 +210,7 @@ Known issues:
 
 ### Contributing to Sony AOSP
 
-If you want to help out with underlying issues in AOSP (fixing those will also fix them in SFOS, magic!:), follow this guide to build an AOSP 11 image: https://developer.sony.com/develop/open-devices/guides/aosp-build-instructions/build-aosp-android-android-11-0-0
+If you want to help out with underlying issues in AOSP (fixing those will also fix them in SFOS, magic!:), follow this guide to build an AOSP 11 image: <https://developer.sony.com/develop/open-devices/guides/aosp-build-instructions/build-aosp-android-android-11-0-0>
 
 Use this script to flash the AOSP images (the above website is pending an update for that step):
 
