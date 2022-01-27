@@ -109,9 +109,10 @@ Without waiting for the middleware to finish, open new shell terminal.
 ```nosh
 HABUILD_SDK $
 
-sudo mkdir -p $ANDROID_ROOT-syspart
-sudo chown -R $USER $ANDROID_ROOT-syspart
-cd $ANDROID_ROOT-syspart
+export ANDROID_SYSPART=$ANDROID_ROOT-syspart
+sudo mkdir -p $ANDROID_SYSPART
+sudo chown -R $USER $ANDROID_SYSPART
+cd $ANDROID_SYSPART
 # If you plan to contribute to syspart (/system partition), remove the "--depth=1 -c" flags below
 repo init -u git://github.com/mer-hybris/android.git -b $HAVERSION -m tagged-manifest.xml --depth=1 -c
 # Adjust X to bandwidth capabilities
@@ -127,30 +128,30 @@ lunch aosp_$DEVICE-user
 make -j$(nproc --all) systemimage vendorimage
 # This might take some time (~2.5 hours on Intel Xeon's 12 cores)
 
-mkdir -p $ANDROID_ROOT-tmp
-sudo mkdir -p $ANDROID_ROOT-mnt-system
-simg2img $ANDROID_ROOT-syspart/out/target/product/$HABUILD_DEVICE/system.img $ANDROID_ROOT-tmp/system.img.raw
-sudo mount $ANDROID_ROOT-tmp/system.img.raw $ANDROID_ROOT-mnt-system
+mkdir -p $ANDROID_SYSPART-tmp
+sudo mkdir -p $ANDROID_SYSPART-mnt-system
+simg2img $ANDROID_SYSPART/out/target/product/$HABUILD_DEVICE/system.img $ANDROID_SYSPART-tmp/system.img.raw
+sudo mount $ANDROID_SYSPART-tmp/system.img.raw $ANDROID_SYSPART-mnt-system
 
-sudo mkdir -p $ANDROID_ROOT-mnt-vendor/vendor
-simg2img $ANDROID_ROOT-syspart/out/target/product/$HABUILD_DEVICE/vendor.img $ANDROID_ROOT-tmp/vendor.img.raw
-sudo mount $ANDROID_ROOT-tmp/vendor.img.raw $ANDROID_ROOT-mnt-vendor/vendor
+sudo mkdir -p $ANDROID_SYSPART-mnt-vendor/vendor
+simg2img $ANDROID_SYSPART/out/target/product/$HABUILD_DEVICE/vendor.img $ANDROID_SYSPART-tmp/vendor.img.raw
+sudo mount $ANDROID_SYSPART-tmp/vendor.img.raw $ANDROID_SYSPART-mnt-vendor/vendor
 
 cd $ANDROID_ROOT/hybris/mw
 D=droid-system-$VENDOR-template
 git clone --recursive https://github.com/mer-hybris/$D
 cd $D
-sudo droid-system-device/helpers/copy_tree.sh $ANDROID_ROOT-mnt-system/system $ANDROID_ROOT-mnt-vendor/vendor rpm/droid-system-$HABUILD_DEVICE.spec
+sudo droid-system-device/helpers/copy_tree.sh $ANDROID_SYSPART-mnt-system/system $ANDROID_SYSPART-mnt-vendor/vendor rpm/droid-system-$HABUILD_DEVICE.spec
+sudo chown -R $USER .
 # You can commit the changes, but before you push them out, make sure:
 # - to check binary file/repo size limits
 # - to rename the public repo as droid-system-sony-$FAMILY-$HABUILD_DEVICE
 # - to not contribute binary files to this *-template repo
-sudo chown -R $USER .
-sudo umount $ANDROID_ROOT-mnt-vendor/vendor
-sudo umount $ANDROID_ROOT-mnt-system
-rm $ANDROID_ROOT-tmp/{system,vendor}.img.raw
-sudo rm -rf $ANDROID_ROOT-mnt-{system,vendor}
-rmdir $ANDROID_ROOT-tmp || true
+sudo umount $ANDROID_SYSPART-mnt-vendor/vendor
+sudo umount $ANDROID_SYSPART-mnt-system
+rm $ANDROID_SYSPART-tmp/{system,vendor}.img.raw
+sudo rm -rf $ANDROID_SYSPART-mnt-{system,vendor}
+rmdir $ANDROID_SYSPART-tmp || true
 ```
 
 You can now close the above shell terminal. Next, please proceed with:
@@ -190,17 +191,28 @@ Feel free to help out in areas that you like.
 What works:
 
   - gps, bluetooth, wifi & internet sharing, mobile data, modem (SIM1 slot only), camera (photos only), sensors, music/video playback
-  - fingerprint works (but is not available for the community build, however potential fix effort is ongoing for 4.4.0)
+  - fingerprint works (but is not available for the community build, however potential fix effort is ongoing for a release after 4.3.0)
   - USB networking
 
 Known issues:
 
-  - Failing to mark boot as successful, same problem on AOSP too, fix WIP: https://github.com/sonyxperiadev/bug_tracker/issues/740
   - Camera:
-    - Switching to front camera shows mirrored rear camera, similar bug on AOSP too: https://github.com/sonyxperiadev/bug_tracker/issues/732
+    - Switching to front camera shows mirrored rear camera, similar bug on AOSP too: <https://github.com/sonyxperiadev/bug_tracker/issues/732>
     - Cannot auto focus, nor by tapping to focus manually
-  - Modem:
-    - SIM card is sometimes not detected during boot - happens on AOSP too: https://github.com/sonyxperiadev/bug_tracker/issues/736
+  - Modem: SIM card is sometimes not detected during boot - happens on AOSP too: <https://github.com/sonyxperiadev/bug_tracker/issues/736>
+    - Above may result in undismissable spinner (but only on community builds against 4.3.0), proper fix probably needs telephony related backports, but for now work around it:
+      - Security code query can still be entered even when black screen with spinner is shown
+      - Ensure have set it to something easy, such as `00000` (can change later)
+      - Enter the code blind in the dark when spinner is shown (you will know tapping succeeds via haptic feedback, horizontal swipe will ensure you are in the keypad view)
+      - Once unlocked, you may see the spinner restart, swipe from edge to reveal home screen
+      - Go to Settings | Device lock, and set to "Not in use" when unlocking
+      - Now you can just swipe the boot-time spinner away from an edge
+    - Workaround to get modem working:
+      ```
+      devel-su /system/bin/stop vendor.qcrild
+      devel-su /system/bin/start vendor.qcrild
+      devel-su systemctl restart ofono
+      ```
   - Audio
     - Incall audio is not working, the implementation is pending a rework
     - Wired headset detection also doesn't work
@@ -210,7 +222,7 @@ Known issues:
 
 ### Contributing to Sony AOSP
 
-If you want to help out with underlying issues in AOSP (fixing those will also fix them in SFOS, magic!:), follow this guide to build an AOSP 11 image: https://developer.sony.com/develop/open-devices/guides/aosp-build-instructions/build-aosp-android-android-11-0-0
+If you want to help out with underlying issues in AOSP (fixing those will also fix them in SFOS, magic!:), follow this guide to build an AOSP 11 image: <https://developer.sony.com/develop/open-devices/guides/aosp-build-instructions/build-aosp-android-android-11-0-0>
 
 Use this script to flash the AOSP images (the above website is pending an update for that step):
 
