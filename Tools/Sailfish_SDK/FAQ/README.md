@@ -179,6 +179,10 @@ Should you need to continue using CRLF line endings for your project files, it i
 
 ## Docker
 
+### How can I set up Docker for use with Sailfish SDK?
+
+Please find the instructions on the [Sailfish SDK Installation](/Tools/Sailfish_SDK/Installation) page.
+
 ### I just upgraded my SDK, how can I switch to the Docker-based build engine?
 
 Build engine selection is only possible during fresh Sailfish SDK installation. You need to reinstall.
