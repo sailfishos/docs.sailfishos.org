@@ -46,7 +46,7 @@ A few hints on Docker installation:
   - (_Sailfish SDK 3.8 only_) Ensure that Docker is not using [BuildKit](https://stackoverflow.com/questions/66839443/how-to-enable-disable-buildkit-in-docker) when the Sailfish SDK installer/updater is running. Once the SDK installation/update is completed, it is safe to enable BuildKit again.
   - Linux users may need
     - [extra steps](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user) to ensure that Sailfish SDK can manage Docker as a non-root user
-    - [extra steps](https://blog.christophersmart.com/2019/12/15/enabling-docker-in-fedora-31-by-reverting-to-cgroups-v1/) to ensure their host is using cgroups v1
+    - (_Sailfish SDK older than 3.8_) [extra steps](https://blog.christophersmart.com/2019/12/15/enabling-docker-in-fedora-31-by-reverting-to-cgroups-v1/) to ensure their host is using cgroups v1
   - Windows users should ensure that Docker is set up to use [Linux containers](https://docs.docker.com/desktop/windows/#switch-between-windows-and-linux-containers) (instead of Windows containers)
   - Using Docker in rootless mode is not supported
 
