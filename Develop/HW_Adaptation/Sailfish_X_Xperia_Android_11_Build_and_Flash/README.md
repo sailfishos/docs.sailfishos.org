@@ -93,6 +93,9 @@ fi
 if [ -z "$(grep jolla-devicelock-daemon-encsfa $ANDROID_ROOT/hybris/droid-configs/patterns/patterns-sailfish-device-adaptation-$HABUILD_DEVICE.inc)" ]; then
   sed -i "s/sailfish-devicelock-fpd/jolla-devicelock-daemon-encsfa/" $ANDROID_ROOT/hybris/droid-configs/patterns/patterns-sailfish-device-adaptation-$HABUILD_DEVICE.inc
 fi
+if [ "$(grep 'Requires: ofono-binder-plugin' $ANDROID_ROOT/hybris/droid-configs/patterns/patterns-sailfish-device-adaptation-$HABUILD_DEVICE.inc)" ]; then
+  sed -i "s/ofono-binder-plugin/ofono-ril-binder-plugin/" $ANDROID_ROOT/hybris/droid-configs/patterns/patterns-sailfish-device-adaptation-$HABUILD_DEVICE.inc
+fi
 rpm/dhd/helpers/build_packages.sh --configs
 cd hybris/mw/libhybris
 git checkout master
