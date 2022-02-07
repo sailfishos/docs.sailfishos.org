@@ -24,6 +24,7 @@ These are the known issues with the Sailfish SDK. If you have any questions, fee
   - SDK cannot be installed to a path with whitespace. Projects cannot be created to paths with whitespace.
   - In macOS /tmp directory cannot be used as alternate source directory.
   - Various warnings are produced by the QML static code checker for Sailfish.Silica types with the build targets matching recent Sailfish OS releases, like `Could not resolve the prototype "SilicaItem" of "PageHeader". (M301)`
+    - There is a [partial workaround](https://forum.sailfishos.org/t/resolve-error-in-qt-creator/9889/8).
 
 ### SDK CLI (sfdk)
  - `sfdk tools list --available` hangs when SDK updates are available
