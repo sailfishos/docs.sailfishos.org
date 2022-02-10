@@ -20,7 +20,7 @@ Please download the latest Sailfish OS HADK (Hardware Adaptation Development Kit
 
 Please check the requirements for your build host: <https://source.android.com/setup/build/requirements>
 
-Minimum Sailfish OS version for this port is 4.1.0.
+Minimum Sailfish OS version for this port is 4.3.0.15.
 
 If you are new to HADK, please carefully read the disclaimer on page 1, then **chapters 1 and 2**.
 
@@ -167,7 +167,7 @@ git clone --recursive https://github.com/mer-hybris/droid-hal-version-sony-$FAMI
 rpm/dhd/helpers/build_packages.sh --version
 
 # The next two variables are explained in chapter 8
-export RELEASE=4.1.0.24
+export RELEASE=4.3.0.15
 export EXTRA_NAME=-my1
 sudo zypper in lvm2 atruncate pigz android-tools
 cd $ANDROID_ROOT
