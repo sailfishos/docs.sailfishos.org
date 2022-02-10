@@ -47,7 +47,7 @@ git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
 ```
 
-At this point, install Android's repo tool: <https://source.android.com/source/downloading#installing-repo>. Then
+You'll need to ensure you have the `repo` command from the AOSP source code repositories installed. See the [Android Source instructions](https://source.android.com/setup/develop#installing-repo) for how to install it. Once available you can continue:
 ```nosh
 HABUILD_SDK $
 
@@ -135,6 +135,7 @@ cd $ANDROID_ROOT/hybris/mw
 D=droid-system-$VENDOR-$ANDROID_FLAVOUR-template
 git clone --recursive https://github.com/mer-hybris/$D
 cd $D
+# The following command may throw up patch errors for `init.wod.rc` and `ld.config.29.txt`. These are to be expected and can be ignored.
 sudo droid-system-device/helpers/copy_system.sh $ANDROID_ROOT-mnt/system rpm/droid-system-$HABUILD_DEVICE.spec
 # You can commit the changes, but before you push them out, make sure:
 # - to check binary file/repo size limits
@@ -150,6 +151,7 @@ cd $ANDROID_ROOT/hybris/mw
 D=droid-vendor-$VENDOR-$ANDROID_FLAVOUR-template
 git clone --recursive https://github.com/mer-hybris/$D
 cd $D
+# The following command may throw up patch error for `init.wod.rc`. These are to be expected and can be ignored.
 sudo droid-system-device/helpers/copy_vendor.sh $ANDROID_ROOT-mnt rpm/droid-system-vendor-$HABUILD_DEVICE.spec
 sudo chown -R $USER .
 sudo umount $ANDROID_ROOT-mnt

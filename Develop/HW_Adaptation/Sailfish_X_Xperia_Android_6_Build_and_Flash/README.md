@@ -58,7 +58,7 @@ git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
 ```
 
-At this point, install Android's repo tool: <https://source.android.com/source/downloading#installing-repo>. Then
+You'll need to ensure you have the `repo` command from the AOSP source code repositories installed. See the [Android Source instructions](https://source.android.com/setup/develop#installing-repo) for how to install it. Once available you can continue:
 ```nosh
 HABUILD_SDK $
 
