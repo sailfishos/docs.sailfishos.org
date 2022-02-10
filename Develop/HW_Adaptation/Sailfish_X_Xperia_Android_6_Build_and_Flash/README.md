@@ -134,9 +134,10 @@ PLATFORM_SDK $
 
 cd $ANDROID_ROOT
 rpm/dhd/helpers/build_packages.sh --gg
+
 sb2 -t $VENDOR-$DEVICE-$PORT_ARCH -m sdk-install -R zypper in --force-resolution droid-hal-$DEVICE-kernel-modules
-git clone --recursive https://github.com/mer-hybris/droid-hal-img-boot-$DEVICE hybris/mw/droid-hal-img-boot-$DEVICE
 rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/droid-hal-img-boot-$DEVICE
+
 rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/bluetooth-rfkill-event --spec=rpm/bluetooth-rfkill-event-hciattach.spec
 
 git clone --recursive https://github.com/mer-hybris/droid-hal-version-$DEVICE hybris/droid-hal-version-$DEVICE

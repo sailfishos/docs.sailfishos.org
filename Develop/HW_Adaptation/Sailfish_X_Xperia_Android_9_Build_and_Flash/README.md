@@ -162,8 +162,8 @@ PLATFORM_SDK $
 
 cd $ANDROID_ROOT
 rpm/dhd/helpers/build_packages.sh --gg
+
 sb2 -t $VENDOR-$DEVICE-$PORT_ARCH -m sdk-install -R zypper in --force-resolution droid-hal-$HABUILD_DEVICE-kernel-modules
-git clone --recursive https://github.com/mer-hybris/droid-hal-img-boot-sony-$FAMILY-$ANDROID_FLAVOUR hybris/mw/droid-hal-img-boot-sony-$FAMILY-$ANDROID_FLAVOUR
 rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/droid-hal-img-boot-sony-$FAMILY-$ANDROID_FLAVOUR --spec=rpm/droid-hal-$HABUILD_DEVICE-img-boot.spec
 
 rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/droid-system-sony-$ANDROID_FLAVOUR-template --spec=rpm/droid-system-$HABUILD_DEVICE.spec --spec=rpm/droid-system-$HABUILD_DEVICE-$DEVICE.spec

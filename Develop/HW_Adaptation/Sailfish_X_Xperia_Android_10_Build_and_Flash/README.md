@@ -157,7 +157,7 @@ PLATFORM_SDK $
 
 cd $ANDROID_ROOT
 rpm/dhd/helpers/build_packages.sh --gg
-git clone --recursive https://github.com/mer-hybris/droid-hal-img-boot-sony-$FAMILY hybris/mw/droid-hal-img-boot-sony-$FAMILY
+
 rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/droid-hal-img-boot-sony-$FAMILY --spec=rpm/droid-hal-$HABUILD_DEVICE-img-boot.spec
 
 rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/droid-system-sony-template --spec=rpm/droid-system-$HABUILD_DEVICE.spec --spec=rpm/droid-system-$HABUILD_DEVICE-$DEVICE.spec
