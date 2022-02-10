@@ -44,7 +44,7 @@ Follow through the **chapter 4** until the end, and **ignore chapter 5**, instea
 ```nosh
 HABUILD_SDK $
 
-sudo apt-get install libssl-dev
+sudo apt-get install cpio libssl-dev
 sudo mkdir -p $ANDROID_ROOT
 sudo chown -R $USER $ANDROID_ROOT
 cd $ANDROID_ROOT
@@ -65,7 +65,7 @@ source build/envsetup.sh
 export USE_CCACHE=1
 lunch aosp_$DEVICE-user
 cd kernel/sony/msm-4.14/common-kernel
-./build-kernels-clang.sh -d $HABUILD_DEVICE -O $ANDROID_ROOT/out/target/product/$HABUILD_DEVICE/obj/kernel
+./build-kernels-clang.sh -d $HABUILD_DEVICE -O $ANDROID_ROOT/out/target/product/$HABUILD_DEVICE/obj/kernel || echo ERROR: kernel build failed, please inspect the log file
 # FIXME after this is merged: https://github.com/sonyxperiadev/kernel-sony-msm-4.14-common/pull/14
 cp dtbo-$HABUILD_DEVICE.img $ANDROID_ROOT/out/target/product/$HABUILD_DEVICE/dtbo.img
 cd -
