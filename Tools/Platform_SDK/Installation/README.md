@@ -26,6 +26,12 @@ echo '[ -d /etc/bash_completion.d ] && for i in /etc/bash_completion.d/*;do . $i
 sfossdk
 ```
 
+**Attention:** If you chose `PLATFORM_SDK_ROOT` other than `/srv/mer` and your SDK version is 4.3.0.15 (check `/etc/os-release` inside), the following workaround is needed:
+
+```nosh
+echo 'mount_sdk() { sudo mount -o rbind "$sdkroot/srv" "$sdkroot/parentroot/srv"; }' >> ~/.mersdkrc
+```
+
 Once you've installed the Platform SDK you'll need to [install a Platform SDK Target](/Tools/Platform_SDK/Target_Installation).
 
 It's recommended that you read sections below for pre-requisites, options and details on installing extra architecture toolchains, tools etc.
@@ -82,6 +88,12 @@ curl -k -O https://releases.sailfishos.org/sdk/installers/latest/Jolla-latest-Sa
 ```nosh
 sudo mkdir -p /srv/mer/sdks/sfossdk
 sudo tar --numeric-owner -p -C /srv/mer/sdks/sfossdk -xjf Jolla-latest-SailfishOS_Platform_SDK_Chroot-i486.tar.bz2
+```
+
+**Attention:** If you chose installation prefix other than `/srv/mer` and your SDK version is 4.3.0.15 (check `/etc/os-release` inside), the following workaround is needed:
+
+```nosh
+echo 'mount_sdk() { sudo mount -o rbind "$sdkroot/srv" "$sdkroot/parentroot/srv"; }' >> ~/.mersdkrc
 ```
 
 ## Platform SDK control script
