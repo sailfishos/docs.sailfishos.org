@@ -20,7 +20,7 @@ curl -k -O https://releases.sailfishos.org/sdk/installers/latest/Jolla-latest-Sa
 sudo mkdir -p $PLATFORM_SDK_ROOT/sdks/sfossdk
 sudo tar --numeric-owner -p -xjf Jolla-latest-SailfishOS_Platform_SDK_Chroot-i486.tar.bz2 -C $PLATFORM_SDK_ROOT/sdks/sfossdk
 echo "export PLATFORM_SDK_ROOT=$PLATFORM_SDK_ROOT" >> ~/.bashrc
-echo 'alias sfossdk=$PLATFORM_SDK_ROOT/sdks/sfossdk/mer-sdk-chroot' >> ~/.bashrc; exec bash
+echo 'alias sfossdk=$PLATFORM_SDK_ROOT/sdks/sfossdk/sdk-chroot' >> ~/.bashrc; exec bash
 echo 'PS1="PlatformSDK $PS1"' > ~/.mersdk.profile
 echo '[ -d /etc/bash_completion.d ] && for i in /etc/bash_completion.d/*;do . $i;done' >> ~/.mersdk.profile
 sfossdk
@@ -98,7 +98,7 @@ echo 'mount_sdk() { sudo mount -o rbind "$sdkroot/srv" "$sdkroot/parentroot/srv"
 
 ## Platform SDK control script
 
-The Platform SDK rootfs contains a helper script to enter the chroot named 'mer-sdk-chroot'. The helper script is located in the root directory (/) of the rootfs. It requires you to have sudo ability.
+The Platform SDK rootfs contains a helper script to enter the chroot named 'sdk-chroot'. The helper script is located in the root directory (/) of the rootfs. It requires you to have sudo ability.
 
 As mentioned, the Platform SDK is location independent so it uses the location of the helper script to determine which Platform SDK to enter.
 
@@ -117,11 +117,11 @@ fi
 EOF
 ```
 
-If you use multiple Platform SDK instances, you can utilise the `MERSDK` shell variable to determine the absolute path to the Platform SDK chroot in use (since Sailfish OS release 2.1.3).
+If you use multiple Platform SDK instances, you can utilise the `SAILFISH_SDK` shell variable to determine the absolute path to the Platform SDK chroot in use (since Sailfish OS release 4.3.0.15).
 
 To enter the Platform SDK rootfs with the helper script run
 ```nosh
-/srv/mer/sdks/sfossdk/mer-sdk-chroot
+/srv/mer/sdks/sfossdk/sdk-chroot
 ```
 
 You should find that you are operating under your normal username and that your home directory is available as `/home/<username>` and any other mountpoints are mounted under `/parentroot/*`
@@ -132,7 +132,7 @@ You have sudo rights automatically. If sudo fails within the sdk, make sure that
 
 If you tend to use a single instance of the Platform SDK then this alias is useful
 ```nosh
-echo alias sfossdk=/srv/mer/sdks/sfossdk/mer-sdk-chroot >> ~/.bashrc ; exec bash
+echo alias sfossdk=/srv/mer/sdks/sfossdk/sdk-chroot >> ~/.bashrc ; exec bash
 ```
 
 # Next Steps
