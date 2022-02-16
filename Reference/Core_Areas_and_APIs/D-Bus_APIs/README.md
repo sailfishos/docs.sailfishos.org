@@ -210,7 +210,7 @@ dbus-send --system --print-reply --dest=org.freedesktop.DBus /org/freedesktop/DB
 
 List activeable D-Bus services:
 ```nosh
-dbus-send --system --print-reply --dest=org.freedesktop.DBus /org/freedesktop/DBus org.freedesktop.DBus.LisActivatableNames
+dbus-send --system --print-reply --dest=org.freedesktop.DBus /org/freedesktop/DBus org.freedesktop.DBus.ListActivatableNames
 ```
 
 Replace `--system` with `--session` if introspecting session bus.
