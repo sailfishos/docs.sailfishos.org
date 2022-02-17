@@ -53,7 +53,7 @@ At this point, install Android's repo tool: <https://source.android.com/source/d
 ```nosh
 HABUILD_SDK $
 
-sudo apt-get install libssl-dev
+sudo apt-get install cpio libssl-dev
 sudo mkdir -p $ANDROID_ROOT
 sudo chown -R $USER $ANDROID_ROOT
 cd $ANDROID_ROOT
