@@ -203,6 +203,7 @@ Hints:
 
   - Some sources mention Windows 10 1809 and VirtualBox 6.1.6 as the minimum versions
   - Some sources mention troubles to persist (or emerge) with newer versions
+  - Our testing indicates that VirtualBox 6.1.30 works reasonably well - if you are having issues, try downgrading your VirtualBox to this version
   - Try increasing the number of processors available to the emulator VM (sfdk emulator set vm.cpuCount=N). Try setting the maximum first
 
 ### Is macOS support on the plan?
