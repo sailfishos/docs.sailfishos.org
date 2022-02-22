@@ -101,10 +101,10 @@ rpm/dhd/helpers/build_packages.sh --gg
 rpm/dhd/helpers/build_bootimg_packages.sh
 sb2 -t $VENDOR-$DEVICE-$PORT_ARCH -m sdk-install -R zypper in --force-resolution droid-hal-$HABUILD_DEVICE-kernel-modules
 git clone --recursive https://github.com/mer-hybris/droid-hal-img-boot-sony-$FAMILY hybris/mw/droid-hal-img-boot-sony-$FAMILY
-rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/droid-hal-img-boot-sony-$FAMILY --do-not-install --spec=rpm/droid-hal-$HABUILD_DEVICE-img-boot.spec
+rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/droid-hal-img-boot-sony-$FAMILY --spec=rpm/droid-hal-$HABUILD_DEVICE-img-boot.spec
 
-rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/droid-system-sony-$FAMILY-$HABUILD_DEVICE --do-not-install --spec=rpm/droid-system-$HABUILD_DEVICE.spec --spec=rpm/droid-system-$HABUILD_DEVICE-$DEVICE.spec
-rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/droid-vendor-sony-$FAMILY-$HABUILD_DEVICE --do-not-install --spec=rpm/droid-system-vendor-$HABUILD_DEVICE.spec --spec=rpm/droid-system-vendor-$HABUILD_DEVICE-$DEVICE.spec
+rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/droid-system-sony-$FAMILY-$HABUILD_DEVICE --spec=rpm/droid-system-$HABUILD_DEVICE.spec --spec=rpm/droid-system-$HABUILD_DEVICE-$DEVICE.spec
+rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/droid-vendor-sony-$FAMILY-$HABUILD_DEVICE --spec=rpm/droid-system-vendor-$HABUILD_DEVICE.spec --spec=rpm/droid-system-vendor-$HABUILD_DEVICE-$DEVICE.spec
 
 git clone --recursive https://github.com/mer-hybris/droid-hal-version-sony-$FAMILY hybris/droid-hal-version-$DEVICE
 rpm/dhd/helpers/build_packages.sh --version
