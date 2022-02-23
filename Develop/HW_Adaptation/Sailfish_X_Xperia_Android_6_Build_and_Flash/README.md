@@ -30,7 +30,7 @@ Here you will find instructions how to build Sailfish OS image and flash it to S
 
 Please download the latest Sailfish OS HADK (Hardware Adaptation Development Kit) from within [this link](https://sailfishos.org/hadk).
 
-If used previously, you'll need to re-install/update your build environment to Sailfish OS Platform SDK 3.0.0 (or newer), delete old target, and create new target, just like HADK \>=v3 instructs.
+Minimum Sailfish OS version for this port is 4.3.0.15.
 
 If you are new to HADK, please carefully read the disclaimer on page 1, then **chapters 1 and 2**.
 
@@ -58,7 +58,7 @@ git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
 ```
 
-At this point, install Android's repo tool: <https://source.android.com/source/downloading#installing-repo>. Then
+You'll need to ensure you have the `repo` command from the AOSP source code repositories installed. See the [Android Source instructions](https://source.android.com/setup/develop#installing-repo) for how to install it. Once available you can continue:
 ```nosh
 HABUILD_SDK $
 
@@ -134,10 +134,10 @@ PLATFORM_SDK $
 
 cd $ANDROID_ROOT
 rpm/dhd/helpers/build_packages.sh --gg
-rpm/dhd/helpers/build_bootimg_packages.sh
+
 sb2 -t $VENDOR-$DEVICE-$PORT_ARCH -m sdk-install -R zypper in --force-resolution droid-hal-$DEVICE-kernel-modules
-git clone --recursive https://github.com/mer-hybris/droid-hal-img-boot-$DEVICE hybris/mw/droid-hal-img-boot-$DEVICE
 rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/droid-hal-img-boot-$DEVICE
+
 rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/bluetooth-rfkill-event --spec=rpm/bluetooth-rfkill-event-hciattach.spec
 
 git clone --recursive https://github.com/mer-hybris/droid-hal-version-$DEVICE hybris/droid-hal-version-$DEVICE
@@ -148,7 +148,7 @@ Next, please proceed with:
 ```nosh
 PLATFORM_SDK $
 
-export RELEASE=3.3.0.16
+export RELEASE=4.3.0.15
 export EXTRA_NAME=-my1
 sudo zypper in lvm2 atruncate pigz
 sudo zypper in android-tools

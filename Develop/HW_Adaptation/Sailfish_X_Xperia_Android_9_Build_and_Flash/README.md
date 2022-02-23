@@ -19,6 +19,8 @@ Here you will find instructions how to build Sailfish OS image and flash it to S
 
 Please download the latest Sailfish OS HADK (Hardware Adaptation Development Kit) from within [this link](https://sailfishos.org/hadk).
 
+Minimum Sailfish OS version for this port is 4.3.0.15.
+
 If you are new to HADK, please carefully read the disclaimer on page 1, then **chapters 1 and 2**.
 
 The disk space requirement for this build is not what HADK says, but around 200GB . The download size requirement is around 50GB.
@@ -45,7 +47,7 @@ git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
 ```
 
-At this point, install Android's repo tool: <https://source.android.com/source/downloading#installing-repo>. Then
+You'll need to ensure you have the `repo` command from the AOSP source code repositories installed. See the [Android Source instructions](https://source.android.com/setup/develop#installing-repo) for how to install it. Once available you can continue:
 ```nosh
 HABUILD_SDK $
 
@@ -133,6 +135,7 @@ cd $ANDROID_ROOT/hybris/mw
 D=droid-system-$VENDOR-$ANDROID_FLAVOUR-template
 git clone --recursive https://github.com/mer-hybris/$D
 cd $D
+# The following command may throw up patch errors for `init.wod.rc` and `ld.config.29.txt`. These are to be expected and can be ignored.
 sudo droid-system-device/helpers/copy_system.sh $ANDROID_ROOT-mnt/system rpm/droid-system-$HABUILD_DEVICE.spec
 # You can commit the changes, but before you push them out, make sure:
 # - to check binary file/repo size limits
@@ -148,6 +151,7 @@ cd $ANDROID_ROOT/hybris/mw
 D=droid-vendor-$VENDOR-$ANDROID_FLAVOUR-template
 git clone --recursive https://github.com/mer-hybris/$D
 cd $D
+# The following command may throw up patch error for `init.wod.rc`. These are to be expected and can be ignored.
 sudo droid-system-device/helpers/copy_vendor.sh $ANDROID_ROOT-mnt rpm/droid-system-vendor-$HABUILD_DEVICE.spec
 sudo chown -R $USER .
 sudo umount $ANDROID_ROOT-mnt
@@ -160,9 +164,8 @@ PLATFORM_SDK $
 
 cd $ANDROID_ROOT
 rpm/dhd/helpers/build_packages.sh --gg
-rpm/dhd/helpers/build_bootimg_packages.sh
+
 sb2 -t $VENDOR-$DEVICE-$PORT_ARCH -m sdk-install -R zypper in --force-resolution droid-hal-$HABUILD_DEVICE-kernel-modules
-git clone --recursive https://github.com/mer-hybris/droid-hal-img-boot-sony-$FAMILY-$ANDROID_FLAVOUR hybris/mw/droid-hal-img-boot-sony-$FAMILY-$ANDROID_FLAVOUR
 rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/droid-hal-img-boot-sony-$FAMILY-$ANDROID_FLAVOUR --spec=rpm/droid-hal-$HABUILD_DEVICE-img-boot.spec
 
 rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/droid-system-sony-$ANDROID_FLAVOUR-template --spec=rpm/droid-system-$HABUILD_DEVICE.spec --spec=rpm/droid-system-$HABUILD_DEVICE-$DEVICE.spec
@@ -172,7 +175,7 @@ git clone --recursive https://github.com/mer-hybris/droid-hal-version-sony-$FAMI
 rpm/dhd/helpers/build_packages.sh --version
 
 # The next two variables are explained in chapter 8
-RELEASE=3.3.0.16
+RELEASE=4.3.0.15
 EXTRA_NAME=-my1
 sudo zypper in lvm2 atruncate pigz
 sudo zypper in android-tools

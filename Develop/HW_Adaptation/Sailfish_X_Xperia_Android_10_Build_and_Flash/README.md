@@ -20,7 +20,7 @@ Please download the latest Sailfish OS HADK (Hardware Adaptation Development Kit
 
 Please check the requirements for your build host: <https://source.android.com/setup/build/requirements>
 
-Minimum Sailfish OS version for this port is 4.1.0.
+Minimum Sailfish OS version for this port is 4.3.0.15.
 
 If you are new to HADK, please carefully read the disclaimer on page 1, then **chapters 1 and 2**.
 
@@ -52,7 +52,12 @@ git clone --recurse-submodules https://github.com/mer-hybris/droid-hal-sony-$FAM
 
 git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
+```
 
+You'll need to ensure you have the `repo` command from the AOSP source code repositories installed. See the [Android Source instructions](https://source.android.com/setup/develop#installing-repo) for how to install it. Once available you can continue:
+
+```nosh
+# To save space, you can add "--depth=1 -c" flags to repo init:
 repo init -u git://github.com/mer-hybris/android.git -b $HAVERSION -m tagged-localbuild.xml
 # Adjust X to bandwidth capabilities
 repo sync -jX --fetch-submodules
@@ -138,6 +143,7 @@ cd $ANDROID_ROOT/hybris/mw
 D=droid-system-$VENDOR-template
 git clone --recursive https://github.com/mer-hybris/$D
 cd $D
+# The following command will throw up patch errors for `init.wod.rc` and `ld.config.28.txt`. These are to be expected and can be ignored.
 sudo droid-system-device/helpers/copy_tree.sh $ANDROID_ROOT-mnt-system/system $ANDROID_ROOT-mnt-vendor/vendor rpm/droid-system-$HABUILD_DEVICE.spec
 # You can commit the changes, but before you push them out, make sure:
 # - to check binary file/repo size limits
@@ -157,8 +163,7 @@ PLATFORM_SDK $
 
 cd $ANDROID_ROOT
 rpm/dhd/helpers/build_packages.sh --gg
-rpm/dhd/helpers/build_bootimg_packages.sh
-git clone --recursive https://github.com/mer-hybris/droid-hal-img-boot-sony-$FAMILY hybris/mw/droid-hal-img-boot-sony-$FAMILY
+
 rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/droid-hal-img-boot-sony-$FAMILY --spec=rpm/droid-hal-$HABUILD_DEVICE-img-boot.spec
 
 rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/droid-system-sony-template --spec=rpm/droid-system-$HABUILD_DEVICE.spec --spec=rpm/droid-system-$HABUILD_DEVICE-$DEVICE.spec
@@ -167,7 +172,7 @@ git clone --recursive https://github.com/mer-hybris/droid-hal-version-sony-$FAMI
 rpm/dhd/helpers/build_packages.sh --version
 
 # The next two variables are explained in chapter 8
-export RELEASE=4.1.0.24
+export RELEASE=4.3.0.15
 export EXTRA_NAME=-my1
 sudo zypper in lvm2 atruncate pigz android-tools
 cd $ANDROID_ROOT
