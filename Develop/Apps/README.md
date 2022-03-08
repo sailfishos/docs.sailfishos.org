@@ -176,3 +176,21 @@ See [Notifications API documentation](https://sailfishos.org/develop/docs/nemo-q
 Mobile device management is an important requirement for many use cases, allowing the functionality of a particular device or fleet of devices to be restricted or controlled in a variety of ways or in response to certain events (e.g. in the case of a lost or stolen device). Sailfish OS provides the Sailfish OS MDM Framework to allow permitted MDM applications to apply restrictive policies or to manually enable, disable, or trigger specific functionality on the device. The 2nd party API provided by MDM Framework is still in active development and to some extent subject to change.
 
 See [MDM API documentation](https://sailfishos.org/develop/docs/sailfish-mdm/) for more information.
+
+## Sailfish Share API
+
+The Sailfish Share API allows the Sharing UI to be loaded out-of-process, and display the sharing capabilities to allow the user to share files and content via any available sharing method, such as Bluetooth, SMS, email, social media accounts, etc.
+
+See [Sailfish Share API documentation](https://sailfishos.org/develop/docs/declarative-transferengine/) for more information.
+
+## Sailfish WebView API
+
+The Sailfish WebView provides a straightforward and flexible way for you to introduce access to Web pages and websites into your applciation.
+
+See [Sailfish WebView API documentation](https://sailfishos.org/develop/docs/sailfish-components-webview/) for more information.
+
+## Amber Web Authorization Framework
+
+Many applications need to interact with remote services to provide their functionality to the user. One industry-standard mechanism by which the remote service can delegate authorization for specific actions to the application is called OAuth. The Amber Web Authorization Framework provides both C++ and QML API which allows application developers to easily integrate OAuth1.0a and OAuth2 flows into their application, including a simple TCP server which can listen for web-browser redirects.
+
+See [Amber Web Authorization Framework documentation](https://sailfishos.org/develop/docs/amber-web-authorization/) for more information.
