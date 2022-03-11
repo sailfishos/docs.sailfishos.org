@@ -155,3 +155,17 @@ On Linux (exclusively) you can also simply symlink `sfdk` into `~/bin`.
 Start by reading the built-in help.
 
     sfdk --help
+
+## Unattended/headless installation
+
+Invoke the Sailfish SDK installer application with the following arguments to avoid need for any interaction during the installation process.
+
+    ./installer.run non-interactive=1 accept-licenses=1 build-engine-type={vbox|docker}
+
+On Linux, the installer application may be run without graphical user interface too. Set the `QT_QPA_PLATFORM` environment variable to achieve this.
+
+    QT_QPA_PLATFORM=minimal ./installer.run --verbose ...
+
+When installed on a multiuser machine, change the TCP ports used by the build engine to avoid conflicts with other users.
+
+    sfdk engine set ssh.port=<number> dbus.port=<number>
