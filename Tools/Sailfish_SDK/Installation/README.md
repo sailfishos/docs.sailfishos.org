@@ -137,3 +137,21 @@ Click **Finish**. The Sailfish IDE launches automatically once the setup wizard 
   - On OS X you can launch the Sailfish IDE by opening Launchpad and typing `Sailfish IDE`. (With Spotlight it can be found by typing `Qt Creator`.)
 
 Once the SDK is installed, proceed to creating your [first application](/Tools/Sailfish_SDK/#guides)!
+
+## Using the command line interface
+
+[sfdk](/Develop/Apps/#sfdk-command-line-tool), the command line frontend to the Sailfish SDK, can be found under the `bin` subdirectory of the installation directory.
+
+Adding SDK's `bin` directory to `PATH` is not recommended. Creating a shell wrapper under your `~/bin` directory is the most widely available option (provided that your `~/bin` directory is on `PATH`)
+
+    cat >~/bin/sfdk <<'END'
+    #!/bin/sh
+    exec /path/to/SailfishOS/bin/sfdk "$@"
+    END
+    chmod +x ~/bin/sfdk
+
+On Linux (exclusively) you can also simply symlink `sfdk` into `~/bin`.
+
+Start by reading the built-in help.
+
+    sfdk --help
