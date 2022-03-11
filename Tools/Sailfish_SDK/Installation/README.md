@@ -132,7 +132,7 @@ Click **Finish**. The Sailfish IDE launches automatically once the setup wizard 
 ## Launching the Sailfish IDE
 
   - The SDK will be added to your system menus and a launch icon will be available for future sessions.
-  - On Linux you can launch the Sailfish IDE from desktop launcher by typing `Sailfish IDE` and choosing the appropriate icon. Alternatively, you can stat it from command line by running `~/SailfishOS/bin/qtcreator`.
+  - On Linux you can launch the Sailfish IDE from desktop launcher by typing `Sailfish IDE` and choosing the appropriate icon. Alternatively, you can start it from command line by running `~/SailfishOS/bin/qtcreator`.
   - On Windows you can launch the Sailfish IDE by pressing Start and typing `Sailfish IDE` and choosing the appropriate application.
   - On OS X you can launch the Sailfish IDE by opening Launchpad and typing `Sailfish IDE`. (With Spotlight it can be found by typing `Qt Creator`.)
 
