@@ -199,7 +199,7 @@ Feel free to help out in areas that you like.
 
 What works:
 
-  - gps, bluetooth, wifi & internet sharing, mobile data, modem (SIM1 slot only), camera (photos only), sensors, music/video playback
+  - gps, bluetooth, wifi & internet sharing, mobile data, modem, camera, sensors, music/video playback
   - fingerprint works (but is not available for the community build, however potential fix effort is ongoing for a release after 4.3.0)
   - USB networking
 
@@ -207,12 +207,8 @@ Known issues:
 
   - Camera:
     - Switching to front camera shows mirrored rear camera, similar bug on AOSP too: <https://github.com/sonyxperiadev/bug_tracker/issues/732>
-    - Cannot auto focus, nor by tapping to focus manually
-  - Audio
-    - Incall audio is not working, the implementation is pending a rework
-    - Wired headset detection also doesn't work
+    - Need to restart Camera app after finishing recording video, upstream bug <https://github.com/sonyxperiadev/bug_tracker/issues/761>
   - Mobile data over 3G and 2G connections might not work. LTE/4G does work.
-  - Sensors may not work on some reboots (race condition?)
 
 
 ### Contributing to Sony AOSP
