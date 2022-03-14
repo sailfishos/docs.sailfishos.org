@@ -97,16 +97,17 @@ fi
 if [ -z "$(grep jolla-devicelock-daemon-encsfa $ANDROID_ROOT/hybris/droid-configs/patterns/patterns-sailfish-device-adaptation-$HABUILD_DEVICE.inc)" ]; then
   sed -i "s/sailfish-devicelock-fpd/jolla-devicelock-daemon-encsfa/" $ANDROID_ROOT/hybris/droid-configs/patterns/patterns-sailfish-device-adaptation-$HABUILD_DEVICE.inc
 fi
-if [ "$(grep 'Requires: ofono-binder-plugin' $ANDROID_ROOT/hybris/droid-configs/patterns/patterns-sailfish-device-adaptation-$HABUILD_DEVICE.inc)" ]; then
-  sed -i "s/ofono-binder-plugin/ofono-ril-binder-plugin/" $ANDROID_ROOT/hybris/droid-configs/patterns/patterns-sailfish-device-adaptation-$HABUILD_DEVICE.inc
-fi
 rpm/dhd/helpers/build_packages.sh --configs
 cd hybris/mw/libhybris
 git checkout master
 cd -
 
-# Remove the next two lines when a new SFOS release comes out (one after 4.3.0):
+# Remove the next 6 lines when a new SFOS release comes out (one after 4.3.0):
 rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/libgbinder.git
+rpm/dhd/helpers/build_packages.sh --mw=https://github.com/sailfishos/libglibutil.git
+rpm/dhd/helpers/build_packages.sh --mw=https://github.com/sailfishos/ofono.git
+rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/libgbinder-radio.git
+rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/ofono-binder-plugin.git
 rpm/dhd/helpers/build_packages.sh --mw=https://github.com/sailfishos/sensorfw.git --spec=rpm/sensorfw-qt5-binder.spec
 
 rpm/dhd/helpers/build_packages.sh --mw # select "all" option when asked
@@ -198,7 +199,7 @@ Feel free to help out in areas that you like.
 
 What works:
 
-  - gps, bluetooth, wifi & internet sharing, mobile data, modem (SIM1 slot only), camera (photos only), sensors, music/video playback
+  - gps, bluetooth, wifi & internet sharing, mobile data, modem, camera, sensors, music/video playback
   - fingerprint works (but is not available for the community build, however potential fix effort is ongoing for a release after 4.3.0)
   - USB networking
 
@@ -206,26 +207,8 @@ Known issues:
 
   - Camera:
     - Switching to front camera shows mirrored rear camera, similar bug on AOSP too: <https://github.com/sonyxperiadev/bug_tracker/issues/732>
-    - Cannot auto focus, nor by tapping to focus manually
-  - Modem: SIM card is sometimes not detected during boot - happens on AOSP too: <https://github.com/sonyxperiadev/bug_tracker/issues/736>
-    - Above may result in undismissable spinner (but only on community builds against 4.3.0), proper fix probably needs telephony related backports, but for now work around it:
-      - Security code query can still be entered even when black screen with spinner is shown
-      - Ensure have set it to something easy, such as `00000` (can change later)
-      - Enter the code blind in the dark when spinner is shown (you will know tapping succeeds via haptic feedback, horizontal swipe will ensure you are in the keypad view)
-      - Once unlocked, you may see the spinner restart, swipe from edge to reveal home screen
-      - Go to Settings | Device lock, and set to "Not in use" when unlocking
-      - Now you can just swipe the boot-time spinner away from an edge
-    - Workaround to get modem working:
-      ```
-      devel-su /system/bin/stop vendor.qcrild
-      devel-su /system/bin/start vendor.qcrild
-      devel-su systemctl restart ofono
-      ```
-  - Audio
-    - Incall audio is not working, the implementation is pending a rework
-    - Wired headset detection also doesn't work
+    - Need to restart Camera app after finishing recording video, upstream bug <https://github.com/sonyxperiadev/bug_tracker/issues/761>
   - Mobile data over 3G and 2G connections might not work. LTE/4G does work.
-  - Sensors may not work on some reboots (race condition?)
 
 
 ### Contributing to Sony AOSP
