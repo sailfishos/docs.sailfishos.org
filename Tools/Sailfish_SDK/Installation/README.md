@@ -66,6 +66,7 @@ _Sailfish SDK 3.6 and older:_ Ensure that the `usr\bin` directory from MSYS2 ins
 
 ### System Requirements
   - About 15GB of free disk space for the default component selection
+    - When Docker is used, installed files are split between the Sailfish SDK installation directory and Docker's [data-root](https://docs.docker.com/config/daemon/#docker-daemon-directory). Ensure that both provide enough free space.
   - 4GB of RAM or more is recommended.
 
 ### Others
