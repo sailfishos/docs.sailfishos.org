@@ -13,10 +13,4 @@ The web browser in Sailfish OS is a fully open-source component which has been d
 
 ## Debugging
 
-For newer versions of Gecko, the environment variable MOZ_LOG is used to enable logging for various modules. There is no option to turn all logging on, so explicit module names must be found in the source (grep for LazyLogModule).
-
-Useful module names we've used so far include:
-
-  - nsComponentManager - Component loading and unloading
-  - GMP - Gecko Media Plugin activity
-  - PlatformDecoderModule - system codecs such as ffmpeg
+Logging instruction can be found on the [browser development page](/Reference/Core_Areas_and_APIs/Browser/Working_with_Browser/#enabling-module-log-output).
