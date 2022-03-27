@@ -72,17 +72,17 @@ This function takes five seconds to run. Twice a second it will send a signal wh
 ```python
 class Downloader:
     def __init__(self):
-    # Set bgthread to a finished thread so we never
-    # have to check if it is None.
-    self.bgthread = threading.Thread()
-    self.bgthread.start()
+        # Set bgthread to a finished thread so we never
+        # have to check if it is None.
+        self.bgthread = threading.Thread()
+        self.bgthread.start()
 
-def download(self):
-    if self.bgthread.is_alive():
-        return
+    def download(self):
+        if self.bgthread.is_alive():
+            return
 
-    self.bgthread = threading.Thread(target=slow_function)
-    self.bgthread.start()
+        self.bgthread = threading.Thread(target=slow_function)
+        self.bgthread.start()
 ```
 
 This class holds the single background thread instance. We initialise the bgthread variable with an empty thread that exits immediately. The reason for this is in the `download` method. If the method is called when there is already a thread running, we just return. If there is no running thread we create a new one and start it. As the final step we create an instance of this class so we can call it from QML.
