@@ -46,7 +46,7 @@ Test cases
 
 ### Performance testing results
 
-Results are preliminary. Higher numbers are better but are not comparible across different test cases.
+Results are preliminary. Higher numbers are better but are not comparable across different test cases.
 
 | Device name          | Release version      | Engine version | Test case            | Test result          |
 | -------------------- | -------------------- | ---------------| -------------------- | -------------------- |
