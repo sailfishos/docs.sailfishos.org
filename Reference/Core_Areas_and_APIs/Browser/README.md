@@ -46,9 +46,22 @@ Test cases
 
 ### Performance testing results
 
+Results are preliminary. Higher numbers are better but are not comparable across different test cases.
+
 | Device name          | Release version      | Engine version | Test case            | Test result          |
 | -------------------- | -------------------- | ---------------| -------------------- | -------------------- |
-| Xperia 10 II         | 4.4.0.xy             |      TBD       |        TBD           |         TBD          |
+| Xperia 10            | 4.3.0.15             | 60.9.1         | Octane 2.0           | 4801                 |
+| Xperia 10            | 4.4.0.58             | 78.15.1        | Octane 2.0           | 4209                 |
+| Xperia 10 II         | 4.3.0.15             | 60.9.1         | Octane 2.0           | 1194                 |
+| Xperia 10 II         | 4.4.0.58             | 78.15.1        | Octane 2.0           | 6696                 |
+| Xperia 10            | 4.3.0.15             | 60.9.1         | JetStream2           | 13.24                |
+| Xperia 10            | 4.4.0.58             | 78.15.1        | JetStream2           | 13.376               |
+| Xperia 10 II         | 4.3.0.15             | 60.9.1         | JetStream2           | Failed to complete   |
+| Xperia 10 II         | 4.4.0.58             | 78.15.1        | JetStream2           | 19.046               |
+| Xperia 10            | 4.3.0.15             | 60.9.1         | Speedometer          | 5.21 ± 0.15          |
+| Xperia 10            | 4.4.0.58             | 78.15.1        | Speedometer          | 6.29 ± 0.13          |
+| Xperia 10 II         | 4.3.0.15             | 60.9.1         | Speedometer          | 8.61 ± 0.16          |
+| Xperia 10 II         | 4.4.0.58             | 78.15.1        | Speedometer          | 8.85 ± 0.13          |
 
 ## Debugging
 
