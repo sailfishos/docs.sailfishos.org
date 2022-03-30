@@ -206,8 +206,10 @@ What works:
 Known issues:
 
   - Camera:
-    - Switching to front camera shows mirrored rear camera, similar bug on AOSP too: <https://github.com/sonyxperiadev/bug_tracker/issues/732>
-    - Need to restart Camera app after finishing recording video, upstream bug <https://github.com/sonyxperiadev/bug_tracker/issues/761>
+    - Sensors of tele and uwide lenses are disabled for now, because they depend on MultiCamera which creates issues when switching between front and rear in Camera1 API mode.
+      Similar bug on AOSP too: <https://github.com/sonyxperiadev/bug_tracker/issues/732>
+    - Need to restart Camera app or turn the screen off and on after finishing recording video, upstream bug <https://github.com/sonyxperiadev/bug_tracker/issues/761>
+  - Screen brightness does not correspond to slider value, also on AOSP <https://github.com/sonyxperiadev/bug_tracker/issues/764>. This causes display luminosity to fluctuate when automatic brightness setting is enabled.
   - Mobile data over 3G and 2G connections might not work. LTE/4G does work.
 
 
