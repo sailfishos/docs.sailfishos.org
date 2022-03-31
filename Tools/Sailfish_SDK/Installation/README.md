@@ -159,6 +159,8 @@ Start by reading the built-in help.
 
 ## Unattended/headless installation
 
+_Sailfish SDK 3.9 and newer._
+
 Invoke the Sailfish SDK installer application with the following arguments to avoid need for any interaction during the installation process.
 
     ./installer.run non-interactive=1 accept-licenses=1 build-engine-type={vbox|docker}
