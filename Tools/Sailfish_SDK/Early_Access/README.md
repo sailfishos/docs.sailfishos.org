@@ -40,28 +40,28 @@ Please, remember, that the Early Access build targets should not be used for sub
 
 The latest Sailfish SDK Early Access release can be downloaded for Linux, macOS and Windows platforms from below.
 
-### **Sailfish SDK 3.8**
+### **Sailfish SDK 3.9**
 
 | Linux                                                                                                                                 | macOS                                                                                                                         | Windows                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| [**SailfishSDK-3.8.3-linux64-online.run**](https://releases.sailfishos.org/sdk/installers/3.8.3/SailfishSDK-3.8.3-linux64-online.run) | [**SailfishSDK-3.8.3-mac-online.dmg**](https://releases.sailfishos.org/sdk/installers/3.8.3/SailfishSDK-3.8.3-mac-online.dmg) | [**SailfishSDK-3.8.3-windows-online.exe**](https://releases.sailfishos.org/sdk/installers/3.8.3/SailfishSDK-3.8.3-windows-online.exe) |
+| [**SailfishSDK-3.9.6-linux64-online.run**](https://releases.sailfishos.org/sdk/installers/3.9.6/SailfishSDK-3.9.6-linux64-online.run) | [**SailfishSDK-3.9.6-mac-online.dmg**](https://releases.sailfishos.org/sdk/installers/3.9.6/SailfishSDK-3.9.6-mac-online.dmg) | [**SailfishSDK-3.9.6-windows-online.exe**](https://releases.sailfishos.org/sdk/installers/3.9.6/SailfishSDK-3.9.6-windows-online.exe) |
 
 **Please, read the section [Installing the Early Access SDK](/Tools/Sailfish_SDK/Early_Access#installing-the-early-access-sdk) before using these installers. The Early Access SDK repository should be taken into use before installation.**
 
 ### Release Notes
 
-The release notes for this SDK release are available at [Sailfish OS Forum](https://forum.sailfishos.org/t/10195).
+The release notes for this SDK release are available at [Sailfish OS Forum](https://forum.sailfishos.org/t/10941).
 
 ### All Download Options
 
 | Filename                                                                                                                                | Size                    | MD5 Hash                                                                                                                               |
 | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| [**SailfishSDK-3.8.3-linux64-online.run**](https://releases.sailfishos.org/sdk/installers/3.8.3/SailfishSDK-3.8.3-linux64-online.run)   | 29M (29628736 bytes)    | [**c65c0698d415f743942b9820fbdff714**](https://releases.sailfishos.org/sdk/installers/3.8.3/SailfishSDK-3.8.3-linux64-online.run.md5)  |
-| [**SailfishSDK-3.8.3-linux64-offline.run**](https://releases.sailfishos.org/sdk/installers/3.8.3/SailfishSDK-3.8.3-linux64-offline.run) | 1.9G (1964355951 bytes) | [**6de598d1b2aad806c6d984f7f785f1f7**](https://releases.sailfishos.org/sdk/installers/3.8.3/SailfishSDK-3.8.3-linux64-offline.run.md5) |
-| [**SailfishSDK-3.8.3-mac-online.dmg**](https://releases.sailfishos.org/sdk/installers/3.8.3/SailfishSDK-3.8.3-mac-online.dmg)           | 12M (11814600 bytes)    | [**038ab0db7aead6814dffed69d125ee07**](https://releases.sailfishos.org/sdk/installers/3.8.3/SailfishSDK-3.8.3-mac-online.dmg.md5)      |
-| [**SailfishSDK-3.8.3-mac-offline.dmg**](https://releases.sailfishos.org/sdk/installers/3.8.3/SailfishSDK-3.8.3-mac-offline.dmg)         | 1.8G (1893864999 bytes) | [**608e9e1ec2041a70538736184f9c516d**](https://releases.sailfishos.org/sdk/installers/3.8.3/SailfishSDK-3.8.3-mac-offline.dmg.md5)     |
-| [**SailfishSDK-3.8.3-windows-online.exe**](https://releases.sailfishos.org/sdk/installers/3.8.3/SailfishSDK-3.8.3-windows-online.exe)   | 24M (25007805 bytes)    | [**89702bc656301316f447703b166fc72e**](https://releases.sailfishos.org/sdk/installers/3.8.3/SailfishSDK-3.8.3-windows-online.exe.md5)  |
-| [**SailfishSDK-3.8.3-windows-offline.exe**](https://releases.sailfishos.org/sdk/installers/3.8.3/SailfishSDK-3.8.3-windows-offline.exe) | 1.8G (1865825021 bytes) | [**27ee301a8e0cdf22a8777efa5974adb2**](https://releases.sailfishos.org/sdk/installers/3.8.3/SailfishSDK-3.8.3-windows-offline.exe.md5) |
+| [**SailfishSDK-3.9.6-linux64-online.run**](https://releases.sailfishos.org/sdk/installers/3.9.6/SailfishSDK-3.9.6-linux64-online.run)   | 29M (29628739 bytes)    | [**c2f9509388d9753e88be979138055986**](https://releases.sailfishos.org/sdk/installers/3.9.6/SailfishSDK-3.9.6-linux64-online.run.md5)  |
+| [**SailfishSDK-3.9.6-linux64-offline.run**](https://releases.sailfishos.org/sdk/installers/3.9.6/SailfishSDK-3.9.6-linux64-offline.run) | 1.9G (1953822127 bytes) | [**afacb1fe2611187786c02ab3c79f827d**](https://releases.sailfishos.org/sdk/installers/3.9.6/SailfishSDK-3.9.6-linux64-offline.run.md5) |
+| [**SailfishSDK-3.9.6-mac-online.dmg**](https://releases.sailfishos.org/sdk/installers/3.9.6/SailfishSDK-3.9.6-mac-online.dmg)           | 12M (11814683 bytes)    | [**580dc3d35db417cad3e74bfa0e27f6bb**](https://releases.sailfishos.org/sdk/installers/3.9.6/SailfishSDK-3.9.6-mac-online.dmg.md5)      |
+| [**SailfishSDK-3.9.6-mac-offline.dmg**](https://releases.sailfishos.org/sdk/installers/3.9.6/SailfishSDK-3.9.6-mac-offline.dmg)         | 1.8G (1883157694 bytes) | [**ea26dd99bd4d248c3cdc5bc4bb346be8**](https://releases.sailfishos.org/sdk/installers/3.9.6/SailfishSDK-3.9.6-mac-offline.dmg.md5)     |
+| [**SailfishSDK-3.9.6-windows-online.exe**](https://releases.sailfishos.org/sdk/installers/3.9.6/SailfishSDK-3.9.6-windows-online.exe)   | 24M (25007808 bytes)    | [**8951a85f83aeec5790eb32f9c32d1b26**](https://releases.sailfishos.org/sdk/installers/3.9.6/SailfishSDK-3.9.6-windows-online.exe.md5)  |
+| [**SailfishSDK-3.9.6-windows-offline.exe**](https://releases.sailfishos.org/sdk/installers/3.9.6/SailfishSDK-3.9.6-windows-offline.exe) | 1.8G (1855268385 bytes) | [**17c161db90df7366b96399adfed3159b**](https://releases.sailfishos.org/sdk/installers/3.9.6/SailfishSDK-3.9.6-windows-offline.exe.md5) |
 
 Offline installers allow Sailfish SDK installation with VirtualBox-based build engine, latest build targets and latest emulator on hosts with limited network access.
 

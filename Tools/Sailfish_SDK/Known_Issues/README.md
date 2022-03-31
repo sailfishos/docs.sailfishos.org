@@ -23,8 +23,16 @@ These are the known issues with the Sailfish SDK. If you have any questions, fee
   - When launching applications from the toolbar or using ctrl+R, it is possible to launch multiple instances of an application which need terminating from the Home screen.
   - SDK cannot be installed to a path with whitespace. Projects cannot be created to paths with whitespace.
   - In macOS /tmp directory cannot be used as alternate source directory.
-  - Various warnings are produced by the QML static code checker for Sailfish.Silica types with the build targets matching recent Sailfish OS releases, like `Could not resolve the prototype "SilicaItem" of "PageHeader". (M301)`
+  - Various warnings are produced by the QML static code checker for Sailfish.Silica types with the build targets matching a few Sailfish OS releases prior to 4.4.0.58, like `Could not resolve the prototype "SilicaItem" of "PageHeader". (M301)`
     - There is a [partial workaround](https://forum.sailfishos.org/t/resolve-error-in-qt-creator/9889/8).
+  - The Amber.Mpris QML module is not initially recognized by the IDE (SDK 3.9)
+    - This can be fixed by installing the `amber-qml-plugin-mpris` package under build targets using Options > Sailfish OS > Build Engine > Manage Build Targets… > Manage Packages
+  - Sailfish IDE may not find header files from packages added as dependencies via PKGCONFIG qmake variable.
+    - This is often caused by "qmake system() behavior when parsing" option under Build Settings set to "Ignore". See the next item to learn about the drawbacks before changing it to "Run". (SDK 3.9+)
+  - Qmake's system() function is ignored by the project parser under the default configuration.
+    - This is controlled by the "qmake system() behavior when parsing" option under Build Settings. (SDK 3.9+)
+    - It is ignored by default because it runs directly on host, not under the build environment as one would expect.
+
 
 ### SDK CLI (sfdk)
  - `sfdk tools list --available` hangs when SDK updates are available
