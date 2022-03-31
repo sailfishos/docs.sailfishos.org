@@ -133,8 +133,40 @@ Click **Finish**. The Sailfish IDE launches automatically once the setup wizard 
 ## Launching the Sailfish IDE
 
   - The SDK will be added to your system menus and a launch icon will be available for future sessions.
-  - On Linux you can launch the Sailfish IDE from desktop launcher by typing `Sailfish IDE` and choosing the appropriate icon. Alternatively, you can stat it from command line by running `~/SailfishOS/bin/qtcreator`.
+  - On Linux you can launch the Sailfish IDE from desktop launcher by typing `Sailfish IDE` and choosing the appropriate icon. Alternatively, you can start it from command line by running `~/SailfishOS/bin/qtcreator`.
   - On Windows you can launch the Sailfish IDE by pressing Start and typing `Sailfish IDE` and choosing the appropriate application.
   - On OS X you can launch the Sailfish IDE by opening Launchpad and typing `Sailfish IDE`. (With Spotlight it can be found by typing `Qt Creator`.)
 
 Once the SDK is installed, proceed to creating your [first application](/Tools/Sailfish_SDK/#guides)!
+
+## Using the command line interface
+
+[sfdk](/Develop/Apps/#sfdk-command-line-tool), the command line frontend to the Sailfish SDK, can be found under the `bin` subdirectory of the installation directory.
+
+Adding SDK's `bin` directory to `PATH` is not recommended. Creating a shell wrapper under your `~/bin` directory is the most widely available option (provided that your `~/bin` directory is on `PATH`)
+
+    cat >~/bin/sfdk <<'END'
+    #!/bin/sh
+    exec /path/to/SailfishOS/bin/sfdk "$@"
+    END
+    chmod +x ~/bin/sfdk
+
+On Linux (exclusively) you can also simply symlink `sfdk` into `~/bin`.
+
+Start by reading the built-in help.
+
+    sfdk --help
+
+## Unattended/headless installation
+
+Invoke the Sailfish SDK installer application with the following arguments to avoid need for any interaction during the installation process.
+
+    ./installer.run non-interactive=1 accept-licenses=1 build-engine-type={vbox|docker}
+
+On Linux, the installer application may be run without graphical user interface too. Set the `QT_QPA_PLATFORM` environment variable to achieve this.
+
+    QT_QPA_PLATFORM=minimal ./installer.run --verbose ...
+
+When installed on a multiuser machine, change the TCP ports used by the build engine to avoid conflicts with other users.
+
+    sfdk engine set ssh.port=<number> dbus.port=<number>
