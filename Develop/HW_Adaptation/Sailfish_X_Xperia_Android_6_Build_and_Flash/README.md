@@ -65,7 +65,7 @@ HABUILD_SDK $
 sudo mkdir -p $ANDROID_ROOT
 sudo chown -R $USER $ANDROID_ROOT
 cd $ANDROID_ROOT
-repo init -u git://github.com/mer-hybris/android.git -b hybris-$HAVERSION -m tagged-manifest.xml
+repo init -u https://github.com/mer-hybris/android.git -b hybris-$HAVERSION -m tagged-manifest.xml
 # Adjust X to your bandwidth capabilities
 repo sync -jX --fetch-submodules
 source build/envsetup.sh
@@ -107,7 +107,7 @@ sudo apt-get install rsync
 cd $ANDROID_ROOT/..
 mkdir syspart
 cd syspart
-repo init -u git://github.com/mer-hybris/android.git -b syspart-$HAVERSION -m tagged-manifest.xml
+repo init -u https://github.com/mer-hybris/android.git -b syspart-$HAVERSION -m tagged-manifest.xml
 # Adjust X to your bandwidth capabilities
 repo sync -jX --fetch-submodules
 source build/envsetup.sh

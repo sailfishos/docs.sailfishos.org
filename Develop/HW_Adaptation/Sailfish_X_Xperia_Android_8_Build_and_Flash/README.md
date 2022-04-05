@@ -57,7 +57,7 @@ sudo apt-get install cpio libssl-dev
 sudo mkdir -p $ANDROID_ROOT
 sudo chown -R $USER $ANDROID_ROOT
 cd $ANDROID_ROOT
-repo init -u git://github.com/mer-hybris/android.git -b hybris-$HAVERSION -m tagged-manifest.xml
+repo init -u https://github.com/mer-hybris/android.git -b hybris-$HAVERSION -m tagged-manifest.xml
 # Adjust X to your bandwidth capabilities
 repo sync -jX --fetch-submodules
 source build/envsetup.sh
