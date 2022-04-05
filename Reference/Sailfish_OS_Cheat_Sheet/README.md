@@ -350,6 +350,62 @@ systemctl restart ofono
 systemctl-user restart voicecall-manager
 ```
 
+## Repository handling
+
+All following commands require root access rights
+```nosh
+devel-su
+```
+
+Register the device for R&D services. This is the same as enabling it from Settings app user interface by enabling Setting | "Developer tools" | "Enable developer updates" toggle.
+```nosh
+ssu r
+```
+
+Check that the time is correct on the device
+```nosh
+ssu up
+```
+    
+Go to RnD mode
+```nosh
+ssu re -r latest
+```
+    
+Query and change RnD Flavour
+```nosh
+ssu fl # query
+ssu fl devel|staging
+```
+
+Set to normal sales release device
+```nosh
+ssu domain sales
+ssu release <latest release>
+# set registered=false in ssu.ini
+pkcon refresh
+```
+    
+Add custom repository (credentials automatically added, if required)
+```nosh
+ssu ar repository-name URL
+ssu updaterepos     #alternative: ssu ur
+pkcon refresh
+pkcon update
+```
+    
+Manage custom repositories. Custom repositories appear in the section "Enabled repositories (user)" in the output of the command ssu lr.
+```nosh
+ssu rr repository-name  # remove
+ssu dr repository-name  # disable
+ssu er repository-name  # enable
+ssu lr                  # list
+
+ssu updaterepos
+pkcon refresh
+pkcon update
+```    
+    
 ## Package Handling
 
 Privileged rights required
