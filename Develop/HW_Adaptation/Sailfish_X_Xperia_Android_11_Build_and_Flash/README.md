@@ -10,9 +10,6 @@ nav_order: 600
 
 Here you will find instructions how to build Sailfish OS image and flash it to Sony Xperia 10 III device, which can be used as reference to port any other Sony Xperia Open Device that has Android 11 support.
 
-## ChangeLog
-
-  - 2021-12-13: Published as technical guidance for Android 11 64bit ARM adaptations
 
 ## Building
 
