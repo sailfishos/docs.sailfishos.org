@@ -222,7 +222,7 @@ fastboot flash boot_a boot.img
 fastboot flash dtbo_a dtbo.img
 fastboot flash product_a product.img
 fastboot flash recovery_a recovery.img
-fastboot flash oem SW_binaries_for_Xperia_Android_11_4.19_v8a_lena.img
+fastboot flash oem SW_binaries_for_Xperia_Android_11_4.19_v9a_$FAMILY.img
 fastboot flash --disable-verity --disable-verification vbmeta_a vbmeta.img
 fastboot flash --disable-verity --disable-verification vbmeta_system_a vbmeta_system.img
 fastboot flash vendor_a vendor.img
