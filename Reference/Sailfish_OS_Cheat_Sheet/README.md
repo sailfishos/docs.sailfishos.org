@@ -549,11 +549,15 @@ If that doesn't write any contacts, you need to specify the collection. Obtain a
 ```nosh
 devel-su -p contacts-tool collections
 ```
-This will print something like the following, use the complete string starting with `qtcontacts:` as the collecion ID:
+This will print something like the following:
 ```nosh
    ID: qtcontacts:org.nemomobile.contacts.sqlite::xxxxxxxx31  Name: aggregate
    ID: qtcontacts:org.nemomobile.contacts.sqlite::xxxxxxxx32  Name: local
    ID: qtcontacts:org.nemomobile.contacts.sqlite::xxxxxxxx33  Name: SIM    
+```
+Use the complete string starting with `qtcontacts:` as the collecion ID:
+```nosh
+devel-su -p vcardconverter --export local_contaacts.vcf qtcontacts:org.nemomobile.contacts.sqlite::xxxxxxxx32
 ```
 
 ### Calendar
