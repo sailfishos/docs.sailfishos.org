@@ -557,7 +557,7 @@ This will print something like the following:
 ```
 Use the complete string starting with `qtcontacts:` as the collecion ID:
 ```nosh
-devel-su -p vcardconverter --export local_contaacts.vcf qtcontacts:org.nemomobile.contacts.sqlite::xxxxxxxx32
+devel-su -p vcardconverter --export local_contacts.vcf qtcontacts:org.nemomobile.contacts.sqlite::xxxxxxxx32
 ```
 
 ### Calendar
