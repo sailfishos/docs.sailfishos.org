@@ -541,7 +541,7 @@ Import contacts from vCard
 devel-su -p vcardconverter contacts.vcf
 ```
 
-Export local contacts to vCard
+Export contacts that are stored in the device internal memory to vCard
 ```nosh
 devel-su -p vcardconverter --export contacts.vcf
 ```
