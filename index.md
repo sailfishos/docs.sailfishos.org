@@ -49,6 +49,46 @@ Sailfish OS is developed by <a href="https://jolla.com">Jolla</a> and powered by
 </div>
 <br>
 <div class="landing-container landing-blank-container">
+  <a href="https://shop.jolla.com/">
+  <div class="landing-blank">
+    <span class="landing-head">Supported<br/>Devices</span>
+    <div  class="landing-text landing-box-text">
+      Officially supported devices running Sailfish OS.
+      <br/><br/><br/>
+      <span class="landing-link">Learn more ›</span>
+    </div>
+  </div></a>
+  <a href="/Releases">
+  <div class="landing-blank">
+    <span class="landing-head">Releases</span>
+    <div  class="landing-text landing-box-text">
+      Public Sailfish OS releases.
+      <br/><br/><br/><br/>
+      <span class="landing-link">Learn more ›</span>
+    </div>
+  </div></a>
+</div>
+<div class="landing-container landing-blank-container">
+  <a href="https://sailfishos.org/design/">
+  <div class="landing-blank">
+    <span class="landing-head">User<br/>Experience</span>
+    <div  class="landing-text landing-box-text">
+      Logic, consistency and intuitive movement.
+      <br/><br/><br/>
+      <span class="landing-link">Learn more ›</span>
+    </div>
+  </div></a>
+  <a href="https://forum.sailfishos.org">
+  <div class="landing-blank">
+    <span class="landing-head">Forum</span>
+    <div  class="landing-text landing-box-text">
+      The Sailfish OS forum is a helpful and friendly place to ask for advice.
+      <br/><br/>
+      <span class="landing-link">Learn more ›</span>
+    </div>
+  </div></a>
+</div>
+<div class="landing-container landing-blank-container">
   <a href="/Reference">
   <div class="landing-blank">
     <span class="landing-head">Reference</span>
@@ -67,7 +107,8 @@ Sailfish OS is developed by <a href="https://jolla.com">Jolla</a> and powered by
       <span class="landing-link">Learn more ›</span>
     </div>
   </div></a>
-</div><div class="landing-container landing-blank-container">
+</div>
+<div class="landing-container landing-blank-container">
   <a href="/Services/Development">
   <div class="landing-blank">
     <span class="landing-head">Development Services</span>
@@ -89,4 +130,3 @@ Sailfish OS is developed by <a href="https://jolla.com">Jolla</a> and powered by
   <div class="clearfix"></div>
 </div>
 <div class="landing-text" style="margin-top: 2rem; margin-bottom: 4rem;">
-<p>If you can’t find what you’re looking for here, the <a href="https://forum.sailfishos.org">Sailfish OS forum</a> is helpful and friendly place to ask for advice.</p>
