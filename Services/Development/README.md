@@ -10,7 +10,7 @@ Development for Sailfish OS involves a number of web services to track developme
 
 The main services in this process are:
 
-  - [Issue tracking](/Develop/Collaborate#reporting-issues): Issues are reported to Sailfish OS Forum or component specific issue tracker in github.
+  - [Issue tracking](/Develop/Collaborate#reporting-issues): Issues are reported to Sailfish OS Forum.
   - [Git Server](/Services/Development/Sailfish_OS_Source): A git server allowing users to submit code changes.
   - [Webhooks](/Services/Development/Webhooks): A service that accepts git change triggers from git servers and triggers builds in OBS.
   - [Open Build Service](/Services/Development/Open_Build_Service) (OBS): An automated build system that takes source code from a git server and produces standalone packages from the source repositories.
