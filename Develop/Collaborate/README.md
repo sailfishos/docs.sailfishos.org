@@ -12,7 +12,7 @@ Before starting you should familiarize with Sailfish OS [Platform Development](/
 
 ### Reporting issues
 
-One of the most common tasks in software development process and testing is reporting issues. Sailfish OS has a community forum at <https://forum.sailfishos.org/> that is used to discuss on different things. On the forum we have a [separate category](https://forum.sailfishos.org/c/bug-reports/13) for bug reports. For those components which have their code stored in github, one can also use the component specific issue tracker in github.
+Sailfish OS has a community forum at <https://forum.sailfishos.org/> that is used to discuss on different things. On the forum we have a [separate category](https://forum.sailfishos.org/c/bug-reports/13) for bug reports.
 
 When filing an issue, it is vital that the report contains all of the information required to reproduce the issue. A reported issue should contain only one issue. Examples of an issue reports can be found from [Issue_Report_Example](/Develop/Collaborate/Issue_Report_Example)
 
