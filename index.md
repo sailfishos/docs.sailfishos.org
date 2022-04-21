@@ -58,6 +58,8 @@ Sailfish OS is developed by <a href="https://jolla.com">Jolla</a> and powered by
       <span class="landing-link">Learn more ›</span>
     </div>
   </div></a>
+</div>
+<div class="landing-container landing-blank-container">
   <a href="/Releases">
   <div class="landing-blank">
     <span class="landing-head">Releases</span>
@@ -78,6 +80,8 @@ Sailfish OS is developed by <a href="https://jolla.com">Jolla</a> and powered by
       <span class="landing-link">Learn more ›</span>
     </div>
   </div></a>
+</div>
+<div class="landing-container landing-blank-container">
   <a href="https://forum.sailfishos.org">
   <div class="landing-blank">
     <span class="landing-head">Forum</span>
@@ -98,6 +102,8 @@ Sailfish OS is developed by <a href="https://jolla.com">Jolla</a> and powered by
       <span class="landing-link">Learn more ›</span>
     </div>
   </div></a>
+</div>
+<div class="landing-container landing-blank-container">
   <a href="/Tools">
   <div class="landing-blank">
     <span class="landing-head">Tools</span>
@@ -118,6 +124,8 @@ Sailfish OS is developed by <a href="https://jolla.com">Jolla</a> and powered by
       <span class="landing-link">Learn more ›</span>
     </div>
   </div></a>
+</div>
+<div class="landing-container landing-blank-container">
   <a href="/Services/Deployment">
   <div class="landing-blank">
     <span class="landing-head">Deployment Services</span>
