@@ -60,11 +60,23 @@ Once happy, create PR which will automatically point to `https://github.com/sail
 #### Preview on your desktop
 
 To build on your local machine, perform the following commands:
+
+Ubuntu
 ```nosh
 sudo apt install git ruby-bundler ruby-dev gcc g++ make
+sudo gem install bundler
+```
+
+Fedora
+```nosh
+sudo dnf install git gcc g++ make ruby ruby-devel
+gem install bundler
+```
+
+Clone docs and config, install and start jekyll site generator
+```nosh
 git clone https://github.com/sailfishos/docs.sailfishos.org
 cd docs.sailfishos.org/
-sudo gem install bundler
 bundle config set --local path 'vendor/bundle'
 bundle install
 bundle exec jekyll serve
