@@ -26,14 +26,18 @@ $ sfdk --help-building
 List the installed build tools and choose the build target to build for. Learn more in the aforementioned built-in help of `sfdk`.
 ```
 $ sfdk tools list
-SailfishOS-4.3.0.12              sdk-provided,latest
-├── SailfishOS-4.3.0.12-armv7hl  sdk-provided,latest
-└── SailfishOS-4.3.0.12-i486     sdk-provided,latest
+SailfishOS-4.4.0.58                          sdk-provided,latest
+├── SailfishOS-4.4.0.58-aarch64              sdk-provided,latest
+│   └── SailfishOS-4.4.0.58-aarch64.default  snapshot
+├── SailfishOS-4.4.0.58-armv7hl              sdk-provided,latest
+│   └── SailfishOS-4.4.0.58-armv7hl.default  snapshot
+└── SailfishOS-4.4.0.58-i486                 sdk-provided,latest
+    └── SailfishOS-4.4.0.58-i486.default     snapshot
 ```
 
 Choose the `i486` target as we will be running in emulator first.
 ```nosh
-$ sfdk config target=SailfishOS-4.3.0.12-i486
+$ sfdk config target=SailfishOS-4.4.0.58-i486
 ```
 
 This guide assumes that all build dependencies that are not available by default are declared in the RPM `spec` file, so that they get installed automatically when you build your package. Should there be a reason to install more build dependencies manually, it can be done using `sfdk tools package-install` and related commands.
@@ -67,14 +71,14 @@ It is very strongly recommended that you only deploy your application in form of
 List the available devices to determine the name of the device corresponding to the emulator.
 ```
 $ sfdk device list
-#0 "Sailfish OS Emulator 4.3.0.12"
+#0 "Sailfish OS Emulator 4.4.0.58"
     emulator         autodetected  defaultuser@127.0.0.1:2223
     private-key: ~/SailfishOS/vmshare/ssh/private_keys/sdk
 ```
 
 Configure `sfdk` to use the device corresponding to the emulator.
 ```nosh
-$ sfdk config device="Sailfish OS Emulator 4.3.0.12"
+$ sfdk config device="Sailfish OS Emulator 4.4.0.58"
 ```
 
 Deploy the packages built in previous steps.
@@ -118,7 +122,7 @@ $ sfdk device exec
 Alternatively, plain `scp` may be used to transfer packages available from other location than current build directory. SSH connection parameters may be determined from the device listing provided by `sfdk`.
 ```
 $ sfdk device list
-#0 "Sailfish OS Emulator 4.3.0.12"
+#0 "Sailfish OS Emulator 4.4.0.58"
     emulator         autodetected  defaultuser@127.0.0.1:2223
     private-key: ~/SailfishOS/vmshare/ssh/private_keys/sdk
 ```
@@ -136,7 +140,7 @@ First of all you need to register your device with Sailfish SDK. This is current
 Then configure `sfdk` to use the configured device.
 ```
 $ sfdk device list
-#0 "Sailfish OS Emulator 4.3.0.12"
+#0 "Sailfish OS Emulator 4.4.0.58"
     emulator         autodetected  defaultuser@127.0.0.1:2223
     private-key: ~/SailfishOS/vmshare/ssh/private_keys/sdk
 #1 "Xperia 10 - Dual SIM (ARM)"
@@ -148,7 +152,7 @@ $ sfdk config device="Xperia 10 - Dual SIM (ARM)"
 
 If you followed this guide from the beginning, you built the application for deployment to Sailfish OS emulator before. While Sailfish OS emulators are i486 targets, most Sailfish OS hardware devices, like the Xperia 10 used in this example, are ARM targets. Therefore, another build of the application is needed. List the installed build tools and choose an appropriate build target as we did before, in the [Preparation](#preparation) section.
 ```nosh
-$ sfdk config target=SailfishOS-4.3.0.12-armv7hl
+$ sfdk config target=SailfishOS-4.4.0.58-armv7hl
 ```
 
 Create a build directory for this target a build the application again.
@@ -183,7 +187,7 @@ See `sfdk --help-building` to learn how to combine this with the `task` configur
 
 Later we will use emulator again, so take the i486 target back into use if you switched to the ARM target before.
 ```nosh
-$ sfdk config target=SailfishOS-4.3.0.12-i486
+$ sfdk config target=SailfishOS-4.4.0.58-i486
 ```
 
 Clone the sample library and build it. Unlike with qmake or CMake based projects, Automake (Autotools) based projects are rarely packaged in a way that would allow performing a shadow build with `sfdk`. Fortunately, the sample library is a better example in this sense, so let's excercise this option. (Learn more about the limitations with shadow builds from `sfdk --help-building`.)
@@ -329,6 +333,6 @@ $ sfdk check
 
 It is also possible to validate packages built before, i.e., without access to the build tree. Simply pass them on the command line:
 ```nosh
-$ sfdk config target=SailfishOS-4.3.0.12-armv7hl
+$ sfdk config target=SailfishOS-4.4.0.58-armv7hl
 $ sfdk check ...path/to/harbour-cmakesample-1.0-1.armv7hl.rpm
 ```
