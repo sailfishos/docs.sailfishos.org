@@ -88,6 +88,24 @@ The SSH daemon (and other network services) on the virtual machines can only be 
 
 If you make any changes to the target on the build engine, be sure to re-sync with the host using **Options → Sailfish OS → Build Engine → Manage Build Targets... → Synchronize** from the IDE. (With Sailfish SDK older than 3.0 use **Control Center → Targets → SailfishOS-i486 → manage → sync**.)
 
+## How do I install packages to emulator?
+
+See [Advanced techniques](https://docs.sailfishos.org/Develop/Apps/Tutorials/Building_packages_-_advanced_techniques/) when using using sfdk tool.
+
+Alternatively you can use scp as follows.
+
+```nosh
+scp -P 2223 -i ~/SailfishOS/vmshare/ssh/private_keys/sdk <path-to-rpm-package>/<my-package>.i486.rpm defaultuser@localhost:
+```
+
+Then login to emulator as root and install package using rpm.
+
+```nosh
+$ ssh -p 2223 -i ~/SailfishOS/vmshare/ssh/private_keys/sdk root@localhost
+$ cd /home/defaultuser
+$ rpm -U <my-package>.i486.rpm
+```
+
 ## Why are you using virtual machines?
 
 The native platform for Sailfish OS software development is GNU/Linux (Linux). Use of virtual machines allows us to efficiently deliver a consistent build environment to a wide range of platforms. Whilst there is a small performance penalty, we think this is a worthwhile tradeoff for the benefits it gives us all. Best build performance can be achieved with Docker-based build engine on Linux – in this case the performance penalty is near to zero when compared to a native build environment setup. We have further optimisations planned for other host platforms.
