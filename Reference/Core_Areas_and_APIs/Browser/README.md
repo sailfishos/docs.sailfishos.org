@@ -54,14 +54,17 @@ Results are preliminary. Higher numbers are better but are not comparable across
 | Xperia 10            | 4.4.0.58             | 78.15.1        | Octane 2.0           | 4209                 |
 | Xperia 10 II         | 4.3.0.15             | 60.9.1         | Octane 2.0           | 1194                 |
 | Xperia 10 II         | 4.4.0.58             | 78.15.1        | Octane 2.0           | 6696                 |
+| Xperia 10 III        | 4.4.0.64             | 78.15.1        | Octane 2.0           | 15925                |
 | Xperia 10            | 4.3.0.15             | 60.9.1         | JetStream2           | 13.24                |
 | Xperia 10            | 4.4.0.58             | 78.15.1        | JetStream2           | 13.376               |
 | Xperia 10 II         | 4.3.0.15             | 60.9.1         | JetStream2           | Failed to complete   |
 | Xperia 10 II         | 4.4.0.58             | 78.15.1        | JetStream2           | 19.046               |
+| Xperia 10 III        | 4.4.0.64             | 78.15.1        | JetStream2           | 36.622               |
 | Xperia 10            | 4.3.0.15             | 60.9.1         | Speedometer          | 5.21 ± 0.15          |
 | Xperia 10            | 4.4.0.58             | 78.15.1        | Speedometer          | 6.29 ± 0.13          |
 | Xperia 10 II         | 4.3.0.15             | 60.9.1         | Speedometer          | 8.61 ± 0.16          |
 | Xperia 10 II         | 4.4.0.58             | 78.15.1        | Speedometer          | 8.85 ± 0.13          |
+| Xperia 10 III        | 4.4.0.64             | 78.15.1        | Speedometer          | 13.8 ± 0.37          |
 
 ## Debugging
 
