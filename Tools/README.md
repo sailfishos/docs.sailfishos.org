@@ -28,7 +28,7 @@ The Sailfish Hardware Adaptation Development Kit is a CLI environment enabling t
 
 It it divided into two parts:
 
-  - [Platform SDK](/Tools/Platform_SDK): A subset of Sailfish SDK used for building the Sailfish OS specific bits and integrating the full solution
+  - [Sailfish Platform SDK](/Tools/Platform_SDK): A subset of Sailfish SDK used for building the Sailfish OS specific bits and integrating the full solution
   - Android SDK: An Ubuntu based development environment for building the Android specific bits
 
 See the [Hardware Development](/Tools/Hardware_Adaptation_Development_Kit) area for the detailed information.
