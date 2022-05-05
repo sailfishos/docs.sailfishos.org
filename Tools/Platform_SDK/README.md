@@ -1,7 +1,6 @@
 ---
-title: Platform SDK
+title: Sailfish Platform SDK
 permalink: Tools/Platform_SDK/
-nav_exclude: true
 has_children: true
 layout: default
 nav_order: 200

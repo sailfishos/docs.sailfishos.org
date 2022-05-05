@@ -1,8 +1,7 @@
 ---
 title: Target Installation
 permalink: Tools/Platform_SDK/Target_Installation/
-nav_exclude: true
-parent: Platform SDK
+parent: Sailfish Platform SDK
 layout: default
 nav_order: 200
 ---
