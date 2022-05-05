@@ -39,3 +39,5 @@ The Sailfish OS reference documentation describes all the key areas of the OS.
       - [Input](/Reference/Core_Areas_and_APIs#input)
       - [Filesystem](/Reference/Core_Areas_and_APIs#filesystem)
   - [Android Compatibility](/Reference/Android_Compatibility)
+  - [Cheat Sheet](/Reference/Sailfish_OS_Cheat_Sheet)
+  - [Tips and Tricks](/Reference/Sailfish_OS_Tips_and_Tricks)
