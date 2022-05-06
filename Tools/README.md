@@ -22,6 +22,10 @@ It consists of
 
 Installation and first steps with the Sailfish SDK are covered in the [Application Development](/Develop/Apps) area. Advanced usage and instructions related to developing the core Sailfish OS functionality are further elaborated in the [Platform Development](/Develop/Platform) area.
 
+## Sailfish Platform SDK
+
+The [Sailfish Platform SDK](/Tools/Platform_SDK) is a powerful command line environment for Sailfish operating system component developers.
+
 ## Sailfish HADK
 
 The Sailfish Hardware Adaptation Development Kit is a CLI environment enabling to set up a new Sailfish OS based Linux system that will run on an Android device, on top of an existing Android Hardware Adaptation kernel and drivers. It is available on Linux only.
