@@ -1,22 +1,21 @@
 ---
 title: Target Installation
 permalink: Tools/Platform_SDK/Target_Installation/
-nav_exclude: true
-parent: Platform SDK
+parent: Sailfish Platform SDK
 layout: default
 nav_order: 200
 ---
 
-**Attention: These instructions are only valid for Platform SDK versions newer than or equal to 3.0.0. If you have an older Platform SDK, please [upgrade it first](/Tools/Platform_SDK/Installation#updating-the-platform-sdk). If you are doing a fresh installation, please ignore this note.**
+**Attention: These instructions are only valid for Sailfish Platform SDK versions newer than or equal to 3.0.0. If you have an older Sailfish Platform SDK, please [upgrade it first](/Tools/Platform_SDK/Installation#updating-the-platform-sdk). If you are doing a fresh installation, please ignore this note.**
 
 
-## Platform SDK Targets and Toolings
+## Sailfish Platform SDK Targets and Toolings
 
-The Platform SDK provides a chroot environment within which ScratchBox2 is available. ScratchBox2 uses qemu emulation to allow architecture-specific binaries to be run on a host machine with a different architecture. For example, it allows a user to run ARMv7 binaries on an x86 host.
+The Sailfish Platform SDK provides a chroot environment within which ScratchBox2 is available. ScratchBox2 uses qemu emulation to allow architecture-specific binaries to be run on a host machine with a different architecture. For example, it allows a user to run ARMv7 binaries on an x86 host.
 
-Build tools specific to particular version of target operating system are provided as a "tools distribution" (the terminology used in ScratchBox2 documentation varies). In Sailfish OS Platform SDK this is called "SDK tooling".
+Build tools specific to particular version of target operating system are provided as a "tools distribution" (the terminology used in ScratchBox2 documentation varies). In Sailfish Platform SDK this is called "SDK tooling".
 
-In order to meaningfully use ScratchBox2 to build software for Sailfish OS devices, a target-architecture root filesystem (commonly known as an "SDK rootfs" but again - the terminology varies) must be installed into the Platform SDK chroot environment. This root filesystem contains build dependencies (including binary executables and libraries) which are needed to build software packages for the target device. It is the most recognized part of a ScratchBox2 target configuration and so the terms "rootfs" and "target" are often used interchangeably. In Sailfish OS Platform SDK this is called "SDK target".
+In order to meaningfully use ScratchBox2 to build software for Sailfish OS devices, a target-architecture root filesystem (commonly known as an "SDK rootfs" but again - the terminology varies) must be installed into the Sailfish Platform SDK chroot environment. This root filesystem contains build dependencies (including binary executables and libraries) which are needed to build software packages for the target device. It is the most recognized part of a ScratchBox2 target configuration and so the terms "rootfs" and "target" are often used interchangeably. In Sailfish Platform SDK this is called "SDK target".
 
 Whenever you enter a ScratchBox2 shell (via `sb2`), you must specify the target which should be activated. Similarly, whenever you use the Sailfish SDK Build script (i.e. `mb2`) to build a package, you must specify the target (which is then activated by ScratchBox2).
 
@@ -24,7 +23,7 @@ Whenever you enter a ScratchBox2 shell (via `sb2`), you must specify the target 
 
 The latest public releases of Sailfish OS targets (and appropriate toolings) are found here: <https://releases.sailfishos.org/sdk/targets/>
 
-The SDK Assistant tool is available within the Platform SDK chroot environment that simplifies the creation and deletion of ScratchBox2 targets. The most common use for the SDK Assistant tool is to create a new SDK target:
+The SDK Assistant tool is available within the Sailfish Platform SDK chroot environment that simplifies the creation and deletion of ScratchBox2 targets. The most common use for the SDK Assistant tool is to create a new SDK target:
 ```nosh
 sdk-assistant create SailfishOS-latest Sailfish_OS-latest-Sailfish_SDK_Tooling-i486.tar.7z
 sdk-assistant create SailfishOS-latest-armv7hl Sailfish_OS-latest-Sailfish_SDK_Target-armv7hl.tar.7z

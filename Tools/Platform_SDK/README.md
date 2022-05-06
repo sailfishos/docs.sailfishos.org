@@ -1,19 +1,18 @@
 ---
-title: Platform SDK
+title: Sailfish Platform SDK
 permalink: Tools/Platform_SDK/
-nav_exclude: true
 has_children: true
 layout: default
 nav_order: 200
 ---
 
-**Attention: Platform development is now more convenient with the regular [Sailfish SDK](/Develop/Platform) through its command line frontend 'sfdk', available on all Linux, macOS and Windows. The Linux-only chroot based Platform SDK remains available for special applications. It also remains the default (documented) option for [Hardware Adaptation Development](/Tools/Hardware_Adaptation_Development_Kit), although the regular Sailfish SDK can be used for that purpose as well.**
+**Attention: Platform development is now more convenient with the regular [Sailfish SDK](/Develop/Platform) through its command line frontend 'sfdk', available on all Linux, macOS and Windows. The Linux-only chroot based Sailfish Platform SDK remains available for special applications. It also remains the default (documented) option for [Hardware Adaptation Development](/Tools/Hardware_Adaptation_Development_Kit), although the regular Sailfish SDK can be used for that purpose as well.**
 
 # Overview
 
-The Platform SDK is a flexible and powerful command line environment which provides access to a range of [Development tools](/Tools/Development) in order to build, test and deploy Sailfish OS packages.
+The Sailfish Platform SDK is a flexible and powerful command line environment which provides access to a range of [Development tools](/Tools/Development) in order to build, test and deploy Sailfish OS packages.
 
-Installation is covered in the [Platform SDK Installation](/Tools/Platform_SDK/Installation) and the [Platform SDK Target Installation](/Tools/Platform_SDK/Target_Installation) guides.
+Installation is covered in the [Sailfish Platform SDK Installation](/Tools/Platform_SDK/Installation) and the [Sailfish Platform SDK Target Installation](/Tools/Platform_SDK/Target_Installation) guides.
 
 # SDK Design and Terminology
 
@@ -46,12 +45,12 @@ How this affects things in practice:
 
 Installing the SDK requires a few steps:
 
-1.  install the Platform SDK
+1.  install the Sailfish Platform SDK
 2.  add suitable repositories for Sailfish OS development
 3.  install toolchains
 4.  install and set up suitable targets
 
-For details follow the [Platform SDK Installation](/Tools/Platform_SDK/Installation) guide.
+For details follow the [Sailfish Platform SDK Installation](/Tools/Platform_SDK/Installation) guide.
 
 ## Setup Target(s)
 
@@ -63,4 +62,4 @@ Targets are easy to install:
 2.  Download the Target tarball
 3.  Use the sdk-assistant to install the target
 
-See the [Platform SDK Target Installation](/Tools/Platform_SDK/Target_Installation) guide for details.
+See the [Sailfish Platform SDK Target Installation](/Tools/Platform_SDK/Target_Installation) guide for details.

@@ -1,13 +1,12 @@
 ---
 title: Installation
 permalink: Tools/Platform_SDK/Installation/
-nav_exclude: true
-parent: Platform SDK
+parent: Sailfish Platform SDK
 layout: default
 nav_order: 100
 ---
 
-**Attention: Platform development is now more convenient with the regular [Sailfish SDK](/Develop/Platform) through its command line frontend 'sfdk', available on all Linux, macOS and Windows. The Linux-only chroot based Platform SDK remains available for special applications. It also remains the default (documented) option for [Hardware Adaptation Development](/Tools/Hardware_Adaptation_Development_Kit), although the regular Sailfish SDK can be used for that purpose as well.**
+**Attention: Platform development is now more convenient with the regular [Sailfish SDK](/Develop/Platform) through its command line frontend 'sfdk', available on all Linux, macOS and Windows. The Linux-only chroot based Sailfish Platform SDK remains available for special applications. It also remains the default (documented) option for [Hardware Adaptation Development](/Tools/Hardware_Adaptation_Development_Kit), although the regular Sailfish SDK can be used for that purpose as well.**
 
 The Sailfish Platform SDK contains [Development Tools](/Tools/Development) like Scratchbox2, [MIC (Image Creation)](mic "brokenlink"), [Spectacle](/Spectacle "brokenlink"), osc, qemu, etc, to make it easier for a developer to work with Sailfish OS.
 
@@ -32,11 +31,11 @@ sfossdk
 echo 'mount_sdk() { sudo mount -o rbind "$sdkroot/srv" "$sdkroot/parentroot/srv"; }' >> ~/.mersdkrc
 ```
 
-Once you've installed the Platform SDK you'll need to [install a Platform SDK Target](/Tools/Platform_SDK/Target_Installation).
+Once you've installed the Sailfish Platform SDK you'll need to [install a Sailfish Platform SDK Target](/Tools/Platform_SDK/Target_Installation).
 
 It's recommended that you read sections below for pre-requisites, options and details on installing extra architecture toolchains, tools etc.
 
-# Platform SDK
+# Sailfish Platform SDK
 
 The default download contains:
 
@@ -51,11 +50,11 @@ You can also install :
   - Python development
   - Ruby development
 
-# Installing the Platform SDK
+# Installing the Sailfish Platform SDK
 
 ## SDK Requirements
 
-The Platform SDK will run on most modern Linux machines. It needs:
+The Sailfish Platform SDK will run on most modern Linux machines. It needs:
 
   - Linux distribution (one in a virtual machine works well), running 2.6.37 or newer kernel
   - about 400Mb free space to install
@@ -66,25 +65,25 @@ The Platform SDK will run on most modern Linux machines. It needs:
 
 ## Installation / setup
 
-The Platform SDK is provided as a rootfs tarball that contains essential tools for Sailfish OS platform development along with a helper script to enter the rootfs.
+The Sailfish Platform SDK is provided as a rootfs tarball that contains essential tools for Sailfish OS platform development along with a helper script to enter the rootfs.
 
 Filesystem requirements:
 
-  - The Platform SDK can be installed to any location with enough space - we'll use /srv/ as per the [Linux FHS](http://www.pathname.com/fhs/pub/fhs-2.3.html#SRVDATAFORSERVICESPROVIDEDBYSYSTEM) (feel free to adapt the commands to use any other location).
-  - The installation path must contain an intermediate directory called 'sdks' which only has Platform SDKs inside. eg /srv/sailfishos/sdks/sfossdk/...
+  - The Sailfish Platform SDK can be installed to any location with enough space - we'll use /srv/ as per the [Linux FHS](http://www.pathname.com/fhs/pub/fhs-2.3.html#SRVDATAFORSERVICESPROVIDEDBYSYSTEM) (feel free to adapt the commands to use any other location).
+  - The installation path must contain an intermediate directory called 'sdks' which only has Sailfish Platform SDKs inside. eg /srv/sailfishos/sdks/sfossdk/...
 
-To setup the Platform SDK:
+To setup the Sailfish Platform SDK:
 
-  - Download the latest stable Platform SDK rootfs tarball with the common armv7hl toolchain preinstalled:
+  - Download the latest stable Sailfish Platform SDK rootfs tarball with the common armv7hl toolchain preinstalled:
 ```nosh
 curl -k -O https://releases.sailfishos.org/sdk/installers/latest/Jolla-latest-SailfishOS_Platform_SDK_Chroot-i486.tar.bz2
 ```
 
-  - Optionally, you can check the release notes from the [Sailfish SDK Release Notes](/Tools/Sailfish_SDK#release-notes). The SDK Build Engine section also contains the latest changes to the Platform SDK.
+  - Optionally, you can check the release notes from the [Sailfish SDK Release Notes](/Tools/Sailfish_SDK#release-notes). The SDK Build Engine section also contains the latest changes to the Sailfish Platform SDK.
 
 <!-- end list -->
 
-  - Create a directory for the Platform SDK rootfs and extract the tarball as root or with sudo:
+  - Create a directory for the Sailfish Platform SDK rootfs and extract the tarball as root or with sudo:
 ```nosh
 sudo mkdir -p /srv/sailfishos/sdks/sfossdk
 sudo tar --numeric-owner -p -C /srv/sailfishos/sdks/sfossdk -xjf Jolla-latest-SailfishOS_Platform_SDK_Chroot-i486.tar.bz2
@@ -96,15 +95,15 @@ sudo tar --numeric-owner -p -C /srv/sailfishos/sdks/sfossdk -xjf Jolla-latest-Sa
 echo 'mount_sdk() { sudo mount -o rbind "$sdkroot/srv" "$sdkroot/parentroot/srv"; }' >> ~/.mersdkrc
 ```
 
-## Platform SDK control script
+## Sailfish Platform SDK control script
 
-The Platform SDK rootfs contains a helper script to enter the chroot named 'sdk-chroot'. The helper script is located in the root directory (/) of the rootfs. It requires you to have sudo ability.
+The Sailfish Platform SDK rootfs contains a helper script to enter the chroot named 'sdk-chroot'. The helper script is located in the root directory (/) of the rootfs. It requires you to have sudo ability.
 
-As mentioned, the Platform SDK is location independent so it uses the location of the helper script to determine which Platform SDK to enter.
+As mentioned, the Sailfish Platform SDK is location independent so it uses the location of the helper script to determine which Sailfish Platform SDK to enter.
 
-## Entering Platform SDK
+## Entering Sailfish Platform SDK
 
-Before entering the Platform SDK you may want to make an Platform SDK equivalent of ".profile" to give you a nice prompt to remind you that you are in the Platform SDK. This also reads the bash autocompletion scripts from inside the chroot.
+Before entering the Sailfish Platform SDK you may want to make an Sailfish Platform SDK equivalent of ".profile" to give you a nice prompt to remind you that you are in the Sailfish Platform SDK. This also reads the bash autocompletion scripts from inside the chroot.
 ```nosh
 cat << EOF >> ~/.mersdk.profile
 PS1="PlatformSDK \$PS1"
@@ -117,9 +116,9 @@ fi
 EOF
 ```
 
-If you use multiple Platform SDK instances, you can utilise the `SAILFISH_SDK` shell variable to determine the absolute path to the Platform SDK chroot in use (since Sailfish OS release 4.3.0.15).
+If you use multiple Sailfish Platform SDK instances, you can utilise the `SAILFISH_SDK` shell variable to determine the absolute path to the Sailfish Platform SDK chroot in use (since Sailfish OS release 4.3.0.15).
 
-To enter the Platform SDK rootfs with the helper script run
+To enter the Sailfish Platform SDK rootfs with the helper script run
 ```nosh
 /srv/sailfishos/sdks/sfossdk/sdk-chroot
 ```
@@ -130,16 +129,16 @@ You have sudo rights automatically. If sudo fails within the sdk, make sure that
 
 ## Useful Alias
 
-If you tend to use a single instance of the Platform SDK then this alias is useful
+If you tend to use a single instance of the Sailfish Platform SDK then this alias is useful
 ```nosh
 echo alias sfossdk=/srv/sailfishos/sdks/sfossdk/sdk-chroot >> ~/.bashrc ; exec bash
 ```
 
 # Next Steps
 
-The next step is to look at [setting up the Platform SDK Targets](/Tools/Platform_SDK/Target_Installation) and installing and using more [Development Tools](/Tools/Development)
+The next step is to look at [setting up the Sailfish Platform SDK Targets](/Tools/Platform_SDK/Target_Installation) and installing and using more [Development Tools](/Tools/Development)
 
-# Updating the Platform SDK
+# Updating the Sailfish Platform SDK
 
 You can check your current release version by executing `ssu re` in the SDK. For a newer SDK release version check out the [Sailfish SDK Release Notes](/Tools/Sailfish_SDK#release-notes). In this example we will use Jolla release `2.0.2.48`.
 ```nosh
@@ -148,18 +147,18 @@ sudo zypper ref
 sudo zypper dup
 ```
 
-# Removing the Platform SDK
+# Removing the Sailfish Platform SDK
 
 [Remove all SDK Targets and Toolings](/Tools/Platform_SDK/Target_Installation#installing-sdk-target-and-tooling-tarballs), then simply exit all chroot instances and, using sudo, remove `/srv/sailfishos/sdks/sfossdk`.
 
 # Extras
 
-## Multiple Platform SDKs
+## Multiple Sailfish Platform SDKs
 
-You should be able to install and connect to multiple Platform SDKs at the same time.
+You should be able to install and connect to multiple Sailfish Platform SDKs at the same time.
 
 ## Known Issues
 
 ### "not enough disk space left" or similar
 
-If you do actually have enough disk then the problem is possible that the kernel on your host is too old. To run Platform SDK you should be running kernel 2.6.37 or newer on your host.
+If you do actually have enough disk then the problem is possible that the kernel on your host is too old. To run Sailfish Platform SDK you should be running kernel 2.6.37 or newer on your host.
