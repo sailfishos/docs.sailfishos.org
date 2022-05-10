@@ -2,7 +2,7 @@
 title: Releases
 permalink: Releases/
 layout: default
-nav_exclude: true
+has_children: true
 ---
 
 ## Sailfish 4 - Finnish Unesco world heritage sites
