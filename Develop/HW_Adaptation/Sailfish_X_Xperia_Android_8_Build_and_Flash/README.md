@@ -85,10 +85,6 @@ fi
 if [ -z "$(grep patterns-sailfish-consumer-generic $ANDROID_ROOT/hybris/droid-configs/patterns/jolla-configuration-$DEVICE.yaml)" ]; then
   sed -i "/Summary: Jolla Configuration $DEVICE/i- patterns-sailfish-consumer-generic\n- pattern:sailfish-porter-tools\n" $ANDROID_ROOT/hybris/droid-configs/patterns/jolla-configuration-$DEVICE.yaml
 fi
-if [ -z "$(grep jolla-devicelock-daemon-encsfa $ANDROID_ROOT/hybris/droid-configs/patterns/jolla-hw-adaptation-$HABUILD_DEVICE.yaml)" ]; then
-  sed -i "s/sailfish-devicelock-fpd/jolla-devicelock-daemon-encsfa/" $ANDROID_ROOT/hybris/droid-configs/patterns/jolla-hw-adaptation-$HABUILD_DEVICE.yaml
-  sed -i "/Obsoletes: jolla-devicelock-[a-z]*-encsfa/d" $ANDROID_ROOT/hybris/droid-configs/droid-config-common.inc
-fi
 rpm/dhd/helpers/build_packages.sh --configs
 rpm/dhd/helpers/build_packages.sh --mw # select "all" option when asked
 ```
