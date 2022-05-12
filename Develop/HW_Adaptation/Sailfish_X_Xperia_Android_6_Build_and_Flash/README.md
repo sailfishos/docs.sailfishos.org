@@ -30,7 +30,7 @@ Here you will find instructions how to build Sailfish OS image and flash it to S
 
 Please download the latest Sailfish OS HADK (Hardware Adaptation Development Kit) from within [this link](https://sailfishos.org/hadk).
 
-Minimum Sailfish OS version for this port is 4.3.0.15.
+Minimum Sailfish OS version for this port is 4.4.0.58.
 
 If you are new to HADK, please carefully read the disclaimer on page 1, then **chapters 1 and 2**.
 
@@ -148,7 +148,7 @@ Next, please proceed with:
 ```nosh
 PLATFORM_SDK $
 
-export RELEASE=4.3.0.15
+export RELEASE=4.4.0.58
 export EXTRA_NAME=-my1
 sudo zypper in lvm2 atruncate pigz
 sudo zypper in android-tools
