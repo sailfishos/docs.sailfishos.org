@@ -201,7 +201,7 @@ Feel free to help out in areas that you like.
 What works:
 
   - gps, bluetooth, wifi & internet sharing, mobile data, modem, camera, sensors, music/video playback
-  - fingerprint works (but is not available for the community build, however potential fix effort is ongoing for a release after 4.3.0)
+  - fingerprint works
   - USB networking
 
 Known issues:
