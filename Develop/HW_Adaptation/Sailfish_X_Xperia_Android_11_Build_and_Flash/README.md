@@ -92,10 +92,10 @@ if [ -z "$(grep patterns-sailfish-consumer-generic $ANDROID_ROOT/hybris/droid-co
   sed -i "/Summary: Jolla Configuration $DEVICE/aRequires: patterns-sailfish-consumer-generic\n\n# Early stages of porting benefit from these:\nRequires: patterns-sailfish-device-tools" $ANDROID_ROOT/hybris/droid-configs/patterns/patterns-sailfish-device-configuration-$DEVICE.inc
 fi
 # Clean out unavailable packages
-if [ -z "$(grep modem_auto_config $ANDROID_ROOT/hybris/droid-configs/patterns/patterns-sailfish-device-adaptation-$HABUILD_DEVICE.inc)" ]; then
+if [ -n "$(grep modem_auto_config $ANDROID_ROOT/hybris/droid-configs/patterns/patterns-sailfish-device-adaptation-$HABUILD_DEVICE.inc)" ]; then
   sed -i "/modem_auto_config/d" $ANDROID_ROOT/hybris/droid-configs/patterns/patterns-sailfish-device-adaptation-$HABUILD_DEVICE.inc
 fi
-if [ -z "$(grep ofono-vendor-qti-radio-plugin $ANDROID_ROOT/hybris/droid-configs/patterns/patterns-sailfish-device-adaptation-$HABUILD_DEVICE.inc)" ]; then
+if [ -n "$(grep ofono-vendor-qti-radio-plugin $ANDROID_ROOT/hybris/droid-configs/patterns/patterns-sailfish-device-adaptation-$HABUILD_DEVICE.inc)" ]; then
   sed -i "/ofono-vendor-qti-radio-plugin/d" $ANDROID_ROOT/hybris/droid-configs/patterns/patterns-sailfish-device-adaptation-$HABUILD_DEVICE.inc
 fi
 rpm/dhd/helpers/build_packages.sh --configs
