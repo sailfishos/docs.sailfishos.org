@@ -38,15 +38,24 @@ Starting with April 2022, members of the community support Jolla with coordinati
 ### Reponsibilities and Expectations
 
 #### CBC Team
+
+Scrutinize existing non-tracked bug reports.  
+Ensure "well-formed"ness.
+Optionally, if possible try to reproduce. 
+Optionally, suggest to "solve"as duplicate if applicable
+
 ##### The Coordinator's List 
 
-The team uses various tools and manual trawling of the forums to colloect (hopefully all) bug reports, and their well-formedness.
+The team uses various tools and manual trawling of the forums to colloect (hopefully all) bug reports, and their well-formedness, and collect them in the "Coordinator's List".
+This serves as a coordination tool as well as the base for forwarding to Jolla.
 
 ##### Conditions for bugs to be forwarded to Jolla
 
 Until we have found a better heuristic, the 10 to-be-presented bugs are selected at random, with a slight bias towards new reports.
 
 #### Jolla Team
+
+All the fuzz about well-formedness should make it easy
 ##### Tagging 
 
 Depending the situation, Jolla will tag as tracked, pending or fixed.
