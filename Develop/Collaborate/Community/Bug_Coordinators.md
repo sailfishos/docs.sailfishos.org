@@ -7,8 +7,8 @@ Starting with April 2022, members of the community support Jolla with coordinati
  - Improving transparency of internal bug handling
  - Improved communication about new bug reports
  - Improved bug report quality
- 
-### Lifecycle of a bug
+
+### Life-Cycle of a bug
 
  1. A bug report is created by the user in the "Bug Reports" category
  1. Coordinators (and other forum members) work with the reporter to achieve  "well-written" status.
@@ -26,18 +26,18 @@ Starting with April 2022, members of the community support Jolla with coordinati
     - the report has been identified as duplicate (see below)
 
 
-#### Conditions for the report to be regarded as well-written
- * Bug report is written on the right category ("Bug Reports")
- * Important information are given (Device and Version)
+#### Conditions for the report to be regarded as "well-written"
+ * Bug report is submitted in the right category ("Bug Reports")
+ * Important information is given (Device, Version and other information from the Bug Report Template)
  * Title is comprehensible
  * Description is provided
  * Expected result is provided
  * Step-by-step instructions for reproducing the bug are provided
  * The first topic contains the most recent information (important bits are not hidden in later topics)
 
-### Reponsibilities and Expectations
+### Responsibilities and Expectations
 
-#### CBC Team
+#### Responsibilities of the CBC Team
 
 Scrutinize existing non-tracked bug reports, or for other bug-report-like topics which should become bug reports.  
 Ensure it is "well-written", encouraging users to add information as required.  
@@ -54,28 +54,35 @@ This serves as a backlog, coordination tool as well as the base for forwarding t
 
 ##### Submission at the Community Meeting
 
-Community Meetings at IRC, and their announcements at the Forum are used to make the Jolla team aware of the bugs.
+Community Meetings held at IRC, and their announcements at the Forum are used
+to make the Jolla team aware of the bugs.
 
 During the meeting, the list of bugs is presented, and a time slot allocated
-for discussing them, requesting more information, and other action items.
+for discussing them, requesting more information, and other action items.  
+To give everyone the opportunity to prepare for this, the bugs are previously
+listed in the corresponding Meeting Announcement topic on the Forum.
 
-Until a better heuristic has been determined, the 10 to-be-presented bugs are
-selected at random, with a slight bias towards new reports.
+Until a better heuristic has been determined, the to-be-presented bugs are
+selected from the Coordinator's lists by picking 10 bugs reports at random,
+with a slight bias towards new reports.
 
-#### Jolla Team
+#### Responsibilities of the Jolla Team
 
-Creates internal Bug reports or updates existing ones from those presented at the Meeting.
-Tags the Bug Report topic according to the internal bug's progress.
+Create internal Bug reports or update existing ones from those presented at the
+Meeting.  
+Tag the Bug Report topic according to the internal bug's progress, releases which contain the fix, and other applicable events.
 
 ##### Tagging 
 
 Depending the situation, Jolla will tag the Bug Report topics as *tracked*, *pending* or *fixed*.
 
- - **tracked**: an internal bug report exists and is open
- - **pending**:
- - **fixed**: A SailfishOS version has been released which contains a fix for this bug.
+ - **tracked**: An internal bug report exists and is open.
+ - **pending**: The bug report has been considered, but is neither tracked nor fixed.
+ - **fixed**: A Sailfish OS version has been released which contains a fix for this bug.
 
-#### Reporters
+#### Responsibilities of the Bug Reporter
+
+Reporters of original Bug Report topics should ideally be responsive to any updates to their report. They also should mark their report as Solved if applicable:
 
 **Solved** 
 The original reporter should mark the Bug Report topic as "Solved":
@@ -84,10 +91,8 @@ The original reporter should mark the Bug Report topic as "Solved":
     - another solution (e.g. satisfying workaround) has been found
 
 **Duplicates**
-If a bug report is reported twice (or more). It should ideally contains the
-main bug report as comment and set as solution.  
-After, the topic should be closed.
-
+If a bug report is found to be reported twice (or more), it should ideally contain the
+main bug report as comment, and that comment set as the solution.  
 
 ### Tools 
 
@@ -122,4 +127,5 @@ Criteria for wellformed and relevant:
 2022-04-05: (private) [Internal Discussions](https://forum.sailfishos.org/t/re-new-role-community-bug-coordinator/11032) by the new coordinator team on how to proceed  
 2022-04-xx: Various tools created to support the process  
 2022-04-xx: Forum Bug Report Template improved  
+2022-04-28: Process fleshed out at [Community Meeting](https://irclogs.sailfishos.org/meetings/sailfishos-meeting/2022/sailfishos-meeting.2022-04-28-07.00.log.html)  
 2022-nn-nn: Process documented on docs.sailfishos.org  
