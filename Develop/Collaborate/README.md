@@ -40,7 +40,7 @@ Next one should submit a pull/merge request to the upstream repository. At this 
 
 At times one is not sure if the direction of the change is not correct and you want to get some early feedback on your changes. In such cases one should always add `WIP:` in the merge request Title so that people know that this merge request should not be handled as a final one but is an early version of it. It is a good practice to list any known issues and missing details with the implementation that can be used as check that all issues have been solved before merging the feature.
 
-Try to avoid big merge requests. A merge request should cover one feature or a bug fix, not many. If you are new to Sailfish OS development it is anyhow better to start with small contributions like bug fixes before taking on substantial feature tasks. Also if you are planning to introduce a big change it is good to contact Jolla senior developers on IRC, through developer mailing list or raise the topic in the community collaboration meetings early to reduce risk uncovering fundamental issues late in the code review phase when much of the work has already been completed.
+Try to avoid big merge requests. A merge request should cover one feature or a bug fix, not many. If you are new to Sailfish OS development it is anyhow better to start with small contributions like bug fixes before taking on substantial feature tasks. Also if you are planning to introduce a big change it is good to contact Jolla senior developers on IRC, [Sailfish OS forum](https://forum.sailfishos.org/) or raise the topic in the community collaboration meetings early to reduce risk uncovering fundamental issues late in the code review phase when much of the work has already been completed.
 
 #### Review Feedback
 
