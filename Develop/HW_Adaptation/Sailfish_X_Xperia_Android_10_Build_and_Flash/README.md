@@ -94,6 +94,13 @@ fi
 if [ "$(grep 'Requires: ofono-binder-plugin' $ANDROID_ROOT/hybris/droid-configs/patterns/patterns-sailfish-device-adaptation-$HABUILD_DEVICE.inc)" ]; then
   sed -i "s/ofono-binder-plugin/ofono-ril-binder-plugin/" $ANDROID_ROOT/hybris/droid-configs/patterns/patterns-sailfish-device-adaptation-$HABUILD_DEVICE.inc
 fi
+# Clean out unavailable packages
+if [ -n "$(grep ofono-modem-switcher-plugin $ANDROID_ROOT/hybris/droid-configs/patterns/patterns-sailfish-device-adaptation-$HABUILD_DEVICE.inc)" ]; then
+  sed -i "/ofono-modem-switcher-plugin/d" $ANDROID_ROOT/hybris/droid-configs/patterns/patterns-sailfish-device-adaptation-$HABUILD_DEVICE.inc
+fi
+if [ -n "$(grep ofono-vendor-qti-radio-plugin $ANDROID_ROOT/hybris/droid-configs/patterns/patterns-sailfish-device-adaptation-$HABUILD_DEVICE.inc)" ]; then
+  sed -i "/ofono-vendor-qti-radio-plugin/d" $ANDROID_ROOT/hybris/droid-configs/patterns/patterns-sailfish-device-adaptation-$HABUILD_DEVICE.inc
+fi
 rpm/dhd/helpers/build_packages.sh --configs
 cd hybris/mw/libhybris
 git checkout master
