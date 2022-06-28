@@ -404,8 +404,22 @@ ssu lr                  # list
 ssu updaterepos
 pkcon refresh
 pkcon update
-```    
-    
+```
+
+Never override global repositories such as *adaptation-common* as that will mess up your device when upgrading it. Before upgrade make sure *Enabled repositories (global)* are not listed in *Enabled repositories (user)* as follows:
+
+```nosh
+devel-su ssu lr
+```
+
+If you have *Enabled repositories (global)* listed in the *Enabled repositories (user)*, remove each of them as follows (e.g. *adaptation-common*):
+
+```nosh
+devel-su ssu rr adaptation-common
+devel-su ssu up
+devel-su pkcon refresh
+```
+
 ## Package Handling
 
 Privileged rights required
