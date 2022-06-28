@@ -211,7 +211,7 @@ Known issues:
       Similar bug on AOSP too: <https://github.com/sonyxperiadev/bug_tracker/issues/732>
   - 3rd party caller may hear their own voice echo; use low volume, wired headphones, or loudspeaker as workaround. AOSP report: <https://github.com/sonyxperiadev/bug_tracker/issues/771>
   - LED indicator colours have a visibly stronger green component: <https://github.com/sonyxperiadev/bug_tracker/issues/772>
-
+  - The FM Radio is not currently available for use.
 
 ### Contributing to Sony AOSP
 
