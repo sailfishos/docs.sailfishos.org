@@ -559,6 +559,20 @@ Export contacts that are stored in the device internal memory to vCard
 ```nosh
 devel-su -p vcardconverter --export contacts.vcf
 ```
+If that doesn't write any contacts, you need to specify the collection. Obtain a list of available collections like so:
+```nosh
+devel-su -p contacts-tool collections
+```
+This will print something like the following:
+```nosh
+   ID: qtcontacts:org.nemomobile.contacts.sqlite::xxxxxxxx31  Name: aggregate
+   ID: qtcontacts:org.nemomobile.contacts.sqlite::xxxxxxxx32  Name: local
+   ID: qtcontacts:org.nemomobile.contacts.sqlite::xxxxxxxx33  Name: SIM    
+```
+Use the complete string starting with `qtcontacts:` as the collecion ID:
+```nosh
+devel-su -p vcardconverter --export local_contacts.vcf qtcontacts:org.nemomobile.contacts.sqlite::xxxxxxxx32
+```
 
 ### Calendar
 
