@@ -116,6 +116,8 @@ gh_edit_repository: "https://github.com/sailfishos/docs.sailfishos.org" # the gi
 gh_edit_branch: "master" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
+gh_edit_history_link: true # show or hide commit history link
+gh_edit_history_text: "View page history"
 
 # Color scheme currently only supports "dark", "light"/nil (default), or a custom scheme that you define
 color_scheme: sfos
