@@ -1,9 +1,7 @@
 @charset "UTF-8";
 
-//
 // Styles for rendered markdown in the .main-content container
-//
-// stylelint-disable selector-no-type, max-nesting-depth, selector-max-compound-selectors, selector-max-type
+// stylelint-disable selector-no-type, max-nesting-depth, selector-max-compound-selectors, selector-max-type, selector-max-specificity, selector-max-id
 
 .main-content {
   line-height: $content-line-height;
@@ -97,6 +95,9 @@
 
   .task-list-item-checkbox {
     margin-right: 0.6em;
+    margin-left: -1.4em;
+
+    // The same margin-left is used above for ul > li::before
   }
 
   hr + * {
@@ -121,6 +122,7 @@
     grid-column: 1;
     font-weight: 500;
     text-align: right;
+
     &::after {
       content: ":";
     }
@@ -130,6 +132,7 @@
     grid-column: 2;
     margin-bottom: 0;
     margin-left: 1em;
+
     blockquote,
     div,
     dl,

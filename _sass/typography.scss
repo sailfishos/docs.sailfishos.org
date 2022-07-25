@@ -1,11 +1,11 @@
-//
 // Typography
-//
-// stylelint-disable primer/selector-no-utility, primer/no-override, selector-no-type, selector-max-type
+
+// stylelint-disable selector-no-type, selector-max-type, selector-max-specificity, selector-max-id
 
 h1,
 .text-alpha {
   @include fs-8;
+
   font-weight: 300;
 }
 
