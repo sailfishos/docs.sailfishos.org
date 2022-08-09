@@ -50,14 +50,20 @@ showing a window too early.
 
 Sailfish OS 4.5.0 and later support using [_org.freedesktop.Application_ D-Bus
 interface](https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html#dbus)
-for opening files and activating windows. By specifying _DBusActivatable=true_ in _Desktop Entry_
-section Lipstick can be instructed to call that API instead of executing a new process. When _Open_
-or _Activate_ are called, they should also activate the window of the application. Failing to do
-that may lead to users being unable to open the application. What's different from the specification
-however, is that Lipstick also supports using D-Bus bus name derived from _X-Sailjail_ section
+for opening files and activating windows. However, Sailfish's implementation extends the
+specification in two important ways: Firstly, in addition to _DBusActivatable=true_ key in _Desktop
+Entry_ section, a prefixed custom _X-DBusActivatable=true_ key is also supported. They behave
+identically. Secondly, Lipstick also supports using D-Bus bus name derived from _X-Sailjail_ section
 instead of deriving it from the file name of the Desktop Entry file. See [Application sandboxing
 profile](#application-sandboxing-profile) above for more information on that bus name derivation.
-Lipstick does not support _ActivateAction_ method currently.
+These additions were implemented as currently Sailfish does not use reverse domain name notation for
+Desktop Entry file names but some tools enforce these rules.
+
+By specifying _X-DBusActivatable=true_ in _Desktop Entry_ section Lipstick can be instructed to call
+that above-mentioned D-Bus API instead of executing a new process. When _Open_ or _Activate_ are
+called, they should also activate the window of the application. Failing to do that may lead to
+users being unable to open the application. Note that Lipstick does not support _ActivateAction_
+method currently.
 
 #### Errata
 In Sailfish OS 4.3.0 _ExecDBus_ is not considered when validating the arguments for an application
