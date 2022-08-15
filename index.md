@@ -115,22 +115,11 @@ Sailfish OS is developed by <a href="https://jolla.com">Jolla</a> and powered by
   </div></a>
 </div>
 <div class="landing-container landing-blank-container">
-  <a href="/Services/Development">
+  <a href="/Services">
   <div class="landing-blank">
-    <span class="landing-head">Development Services</span>
+    <span class="landing-head">Services</span>
     <div  class="landing-text landing-box-text">
-      The online tools we use to facilitate the development process.
-      <br/><br/>
-      <span class="landing-link">Learn more ›</span>
-    </div>
-  </div></a>
-</div>
-<div class="landing-container landing-blank-container">
-  <a href="/Services/Deployment">
-  <div class="landing-blank">
-    <span class="landing-head">Deployment Services</span>
-    <div  class="landing-text landing-box-text">
-      Getting your apps onto users' devices.
+      The online tools we use to facilitate the development and deployment process.
       <br/><br/><br/>
       <span class="landing-link">Learn more ›</span>
     </div>
