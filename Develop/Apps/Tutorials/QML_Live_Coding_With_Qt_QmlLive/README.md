@@ -75,6 +75,15 @@ Let's say you would like to concentrate now on a single component from your appl
 
 If you develop for multiple devices, it is possible to run the application simultaneously on all the devices. In that case you will find useful the **All Hosts** widget. Dropping a document onto this widget influences all connected hosts. Another feature useful when working with multiple hosts is the **Follow** behavior. Activating a document in the workspace view (e.g. by double clicking it – depending on your platform) triggers active document change on all **Follow**-enabled hosts.
 
+## Troubleshooting
+
+#### Syncing changes is very slow / Stange output during syncing
+QmlLive is syncing the set workspace directory to your phone. If this directory contains lots of files, e.g. a test folder with test data or cached dependencies, it is syncing all those.
+You can restrict QmlLive to the qml folder by clicking on the details button next to where QmlLive is enabled and append to the workspace e.g. the qml folder. Target workspace needs to be updated accordingly.
+If you application has the standard qml folder the resulting settings would be: 
+ - Bench workspace: `$projectPath/qml` 
+ - Target workspace: `qml`
+
 ## Standalone Usage
 
 This section assumes you have read the above sections and that you are familiar with building packages [manually](/Develop/Apps/Tutorials/Building_packages_-_advanced_techniques).
