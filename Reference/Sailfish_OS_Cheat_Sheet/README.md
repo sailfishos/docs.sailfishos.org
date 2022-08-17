@@ -511,6 +511,16 @@ Install commhistory-tool if not already installed.
 devel-su -p pkcon install libcommhistory-qt5-tools
 ```
 
+Export call logs, run as user
+```nosh
+commhistory-tool export -calls call_logs.dat
+```
+
+Import, run as user
+```nosh
+commhistory-tool import call_logs.dat
+```
+
 Clear call logs, run as user
 ```nosh
 commhistory-tool deleteall -calls
@@ -527,6 +537,16 @@ pkill voicecall-ui
 ```
 
 ### Messages
+
+Export messages, run as user
+```nosh
+commhistory-tool export -groups messages.dat
+```
+
+Import, run as user
+```nosh
+commhistory-tool import messages.dat
+```
 
 Remove all message conversations, run as user
 ```nosh
