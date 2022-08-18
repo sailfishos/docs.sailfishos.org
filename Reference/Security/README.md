@@ -15,12 +15,10 @@ Privacy is similarly important. Privacy is related to the way that consumer data
 
 Sailfish OS devices can be updated with so called "hotfixes" for specific security issues outside of the normal release update cadence. This allows vendors to provide users with security updates as they become available, with minimal delay. These fixes are provided as package updates via the normal package management systems, and are fully versioned and delivered securely with end-to-end encryption to avoid man-in-the-middle or other contamination attacks.
 
-### Current Security Architecture
+### Security Architecture
 
-Sailfish OS currently uses a two-level security architecture. Applications available in the Harbour are rigorously tested to ensure that no malicious applications are installable by end users. Furthermore, applications available in the Harbour run at a lowered privilege level, so that they do not have access to the user's data.
+Sailfish OS currently uses a three-level security architecture.
 
-Linux user groups are used to separate privileged applications from non-privileged applications, and file system access is enforced by the Linux kernel.
-
-### Future Security Architecture
-
-In the future, Sailfish OS will use application sandboxing and per-application access control lists to control application behaviour and limit the scope of malicious activity achievable by exploiting a vulnerability in any given application or service. This security architecture will be applied to core Sailfish OS services and applications, as well as third-party Harbour applications.
+- Third-party applications submitted through the [Harbour](/Develop/Apps/Harbour) are rigorously examined for any signs of malicious behaviour.
+- Every application, irrespective of its origin, is run in a [Sailjail](/Develop/Apps/Application_Permissions) sandbox with an explicitly assigned set of application permissions to limit the scope of malicious activity achievable by exploiting a possible vulnerability in the application.
+- Furthermore, access to certain sensitive user's data like the address book or communication records, is only available to a limited set of privileged applications and/or services. Linux user groups are used to separate privileged processes from non-privileged ones and file system access control is enforced by the Linux kernel.
