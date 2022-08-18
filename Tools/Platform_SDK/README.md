@@ -6,11 +6,9 @@ layout: default
 nav_order: 200
 ---
 
-**Attention: Platform development is now more convenient with the regular [Sailfish SDK](/Develop/Platform) through its command line frontend 'sfdk', available on all Linux, macOS and Windows. The Linux-only chroot based Sailfish Platform SDK remains available for special applications. It also remains the default (documented) option for [Hardware Adaptation Development](/Tools/Hardware_Adaptation_Development_Kit), although the regular Sailfish SDK can be used for that purpose as well.**
-
 # Overview
 
-The Sailfish Platform SDK is a flexible and powerful command line environment which provides access to a range of [Development tools](/Tools/Development) in order to build, test and deploy Sailfish OS packages.
+The Linux-only chroot based Sailfish Platform SDK is a flexible and powerful command line environment which provides access to a range of [Development tools](/Tools/Development) in order to build, test and deploy Sailfish OS packages. It is the default (documented) option for [Hardware Adaptation Development](/Tools/Hardware_Adaptation_Development_Kit).
 
 Installation is covered in the [Sailfish Platform SDK Installation](/Tools/Platform_SDK/Installation) and the [Sailfish Platform SDK Target Installation](/Tools/Platform_SDK/Target_Installation) guides.
 
