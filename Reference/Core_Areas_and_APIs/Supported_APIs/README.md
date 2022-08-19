@@ -8,4 +8,4 @@ nav_order: 700
 
 Supported APIs: <https://sailfishos.org/develop/docs/>
 
-Additionally, see list of allowed [QML imports](https://github.com/sailfish-sdk/sdk-harbour-rpmvalidator/blob/harbour-qa/allowed_qmlimports.conf) and [list of allowed native libraries](https://github.com/sailfish-sdk/sdk-harbour-rpmvalidator/blob/harbour-qa/allowed_libraries.conf)
+Additionally, see list of [Harbour Allowed APIs](/Develop/Apps/Harbour/Allowed_APIs).
