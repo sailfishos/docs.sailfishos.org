@@ -394,7 +394,7 @@ The following libraries have been deprecated, and they should no longer be used 
   - libssl.so.10
   - libcrypto.so.10
 
-### deprecated in Sailfish OS 4.4.0
+### Deprecated in Sailfish OS 4.4.0
 
   - libQt5WebKit.so.5
 
