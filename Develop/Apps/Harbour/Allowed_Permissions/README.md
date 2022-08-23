@@ -7,7 +7,7 @@ layout: default
 nav_order: 300
 ---
 
-This information is valid as of Sailfish OS 4.3.0 release
+This information is valid as of Sailfish OS 4.4.0 release
 
 You can always check the up-to-date list from the [validator config files](https://github.com/sailfishos/sdk-harbour-rpmvalidator)
 
@@ -32,3 +32,4 @@ Your application is allowed to define the following permissions in its X-Sailjai
   - Pictures
   - PublicDir
   - Videos
+  - Compatibility

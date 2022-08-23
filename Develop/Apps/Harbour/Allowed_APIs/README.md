@@ -7,7 +7,7 @@ layout: default
 nav_order: 200
 ---
 
-This information is valid as of Sailfish OS 4.3.0 release
+This information is valid as of Sailfish OS 4.4.0 release
 
 You can always check the up-to-date list from the [validator config files](https://github.com/sailfishos/sdk-harbour-rpmvalidator)
 
@@ -74,7 +74,6 @@ Your application can link against the following libraries:
   - libQt5XmlPatterns.so.5
   - libQt5Xml.so.5
   - libQt5DBus.so.5
-  - libQt5WebKit.so.5
   - libQt5Sensors.so.5
   - libQt5Positioning.so.5
   - libQt5WebSockets.so.5
@@ -137,6 +136,7 @@ Your app is not allowed to have QML imports matching the following patterns:
 
 ### Disallowed QML Imports
 
+  - Amber.*
   - Bluetooth.*
   - Meego.*
   - Mer.*
@@ -168,6 +168,10 @@ The exceptions to this rule are the following imports:
 
   - Amber.Web.Authorization 1.0
 
+### Amber MPRIS Library
+
+  - Amber.Mpris 1.0
+
 ### Qt APIs
 
   - QtQml 2.0
@@ -198,7 +202,6 @@ The exceptions to this rule are the following imports:
   - QtMultimedia 5.4
   - QtMultimedia 5.5
   - QtMultimedia 5.6
-  - QtWebKit 3.0
   - QtWebSockets 1.0
   - QtWebSockets 1.1
   - QtSensors 5.0
@@ -282,6 +285,11 @@ Usually you shouldn't add library depencencies or python module dependencies to 
   - amber-web-authorization
   - libamberwebauthorization.so.1
 
+### Amber MPRIS Library
+
+  - amber-qml-plugin-mpris
+  - qml(Amber.Mpris)
+
 ### QML Imports
 
   - qt5-qtdeclarative-import-xmllistmodel
@@ -289,7 +297,6 @@ Usually you shouldn't add library depencencies or python module dependencies to 
   - qt5-qtdeclarative-import-localstorageplugin
   - qt5-qtdeclarative-import-multimedia
   - qt5-qtdeclarative-import-websockets
-  - qt5-qtqml-import-webkitplugin
   - qt5-qtdeclarative-import-particles2
   - qt5-qtdeclarative-qtquickparticles
   - qt5-qtsvg
@@ -326,9 +333,7 @@ Usually you shouldn't add library depencencies or python module dependencies to 
 ### Other libraries
 
   - mlite-qt5
-  - libcrypto.so.10
   - libcrypto.so.1.1
-  - libssl.so.10
   - libssl.so.1.1
   - liblzma.so.5
   - libbz2.so.1
@@ -389,6 +394,10 @@ The following libraries have been deprecated, and they should no longer be used 
   - libssl.so.10
   - libcrypto.so.10
 
+### Deprecated in Sailfish OS 4.4.0
+
+  - libQt5WebKit.so.5
+
 ## Deprecated QML Imports
 
 The following QML Imports have been renamed. The old imports should no longer be used in new code. They will be dropped from allowed imports in a future release:
@@ -401,3 +410,5 @@ The following QML Imports have been renamed. The old imports should no longer be
     - Renamed as 'Nemo.Configuration 1.0'
   - org.nemomobile.thumbnailer 1.0
     - Renamed as 'Nemo.Thumbnailer 1.0'
+  - QtWebKit 3.0
+    - Deprecated in Sailfish 4.4.0
