@@ -31,6 +31,30 @@ Ssh to your device and as a user write the following configuration value:
 dconf write /desktop/sailfish/experimental/quickAppToggleGesture false
 ```
 
+### Partnerspace
+
+Partnerspace items are placed to the right of the Switcher.
+
+- Value of the key is a string array
+- Each partnerspace item is defined as a desktop file path and separated by a comma
+- Maximum number of desktop files is three (3)
+
+#### Enable Partnerspace
+
+Ssh to your device and as a user write the following configuration value to add for example Sailfish Weather as a partner item:
+
+```nosh
+dconf write /desktop/lipstick-jolla-home/partnerspace/applications "['/usr/share/applications/sailfish-weather.desktop']"
+```
+
+#### Disable Partnerspace
+
+Ssh to your device and as a user write the following configuration value:
+
+```
+dconf write /desktop/lipstick-jolla-home/partnerspace/applications "@as []"
+```
+
 ### Easing edge swipe
 
 The ease of performing edge swipes may differ from user to user due to various reasons. For example shape & size of your finger matters, protective cover might affect it, and use of a screen protector may hinder performing the edge swipe.
