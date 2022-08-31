@@ -49,7 +49,7 @@ Sailfish OS is developed by <a href="https://jolla.com">Jolla</a> and powered by
 </div>
 <br>
 <div class="landing-container landing-blank-container">
-  <a href="https://shop.jolla.com/">
+  <a href="/SupportedDevices">
   <div class="landing-blank">
     <span class="landing-head">Supported<br/>Devices</span>
     <div  class="landing-text landing-box-text">
