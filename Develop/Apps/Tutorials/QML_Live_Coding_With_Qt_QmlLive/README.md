@@ -77,7 +77,7 @@ If you develop for multiple devices, it is possible to run the application simul
 
 ## Troubleshooting
 
-#### Syncing changes is very slow / Stange output during syncing
+#### Syncing changes is very slow / Strange output during syncing
 QmlLive is syncing the set workspace directory to your phone. If this directory contains lots of files, e.g. a test folder with test data or cached dependencies, it is syncing all those.
 You can restrict QmlLive to the qml folder by clicking on the details button next to where QmlLive is enabled and append to the workspace e.g. the qml folder. Target workspace needs to be updated accordingly.
 If you application has the standard qml folder the resulting settings would be: 
