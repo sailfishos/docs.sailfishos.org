@@ -84,6 +84,8 @@ If you application has the standard qml folder the resulting settings would be:
  - Bench workspace: `$projectPath/qml` 
  - Target workspace: `qml`
 
+If the folder is not updated in QmlLive, try pressing enter in the workspace input fields.
+
 ## Standalone Usage
 
 This section assumes you have read the above sections and that you are familiar with building packages [manually](/Develop/Apps/Tutorials/Building_packages_-_advanced_techniques).
