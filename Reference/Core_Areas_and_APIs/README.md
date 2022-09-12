@@ -12,7 +12,7 @@ This page provides a summary of the core areas of Sailfish OS.
 
 Sailfish OS is a GNU/Linux system and as such relies on many of the standard GNU applications (shell tools): bash, coreutils, sed, ncurses, gzip, gawk, findutils, readline, emacs, and so on.
 
-The central C library is glibc 2.28.
+The central C library is glibc 2.30.
 
 ## Session management
 
