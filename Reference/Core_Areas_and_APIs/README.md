@@ -117,7 +117,7 @@ Sailfish OS supports a number of email communication protocols and services. The
   - SMTP, POP3 and IMAP access
   - Microsoft Exchange ActiveSync access
   - Scheduling of email synchronization through the Buteo synchronization framework
-  - Rendering of HTML emails through WebKit
+  - All emails, text/plain and text/html, rendered with [Sailfish WebView](https://github.com/sailfishos/sailfish-components-webview/)
 
 [More info](/Reference/Core_Areas_and_APIs/Apps_and_MW/Email)
 
