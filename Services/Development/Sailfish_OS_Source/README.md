@@ -36,9 +36,19 @@ If you have developer mode installed, via command line you can search for more d
 pkcon search name browser
 ```
 
+Alternatively, you can utilise the `rpm` tool, combined with `grep` to query installed packages on the device:
+```nosh
+rpm --query --all|grep browser
+```
+
 ... and after finding the package name you can get more details:
 ```nosh
 pkcon get-details sailfish-browser
+```
+
+or
+```nosh
+rpm --query --info sailfish-browser
 ```
 
 Same actions can be done also with zypper (zypper not included by default, and needs to be installed, with `devel-su pkcon -p install zypper`)
@@ -50,6 +60,11 @@ devel-su zypper info sailfish-browser
 If you want to know which package a file belongs to you can check with `rpm` the package name:
 ```nosh
 rpm -qf /etc/gps.conf
+```
+
+The other way around, to list all files a package contains, use:
+```nosh
+rpm --query --list sailfish-browser
 ```
 
 If all other means fail and the package name is known, the contributor can search for it on an available [OBS](/Services/Development/Open_Build_Service) instance and then examine that package's `_service` file to determine the source code repository.
