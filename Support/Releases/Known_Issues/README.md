@@ -1,6 +1,6 @@
 ---
-title: Known issues in OS releases
-permalink: Releases/Known_Issues/
+title: Known Issues
+permalink: Support/Releases/Known_Issues/
 parent: Releases
 layout: default
 nav_order: 100

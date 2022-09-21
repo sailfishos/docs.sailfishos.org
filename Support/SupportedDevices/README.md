@@ -1,8 +1,8 @@
 ---
 title: Supported Devices
-permalink: SupportedDevices/
+permalink: Support/SupportedDevices/
 layout: default
-nav_exclude: true
+nav_order: 200
 ---
 
 Status in July 2022: Jolla has ported Sailfish OS to the following phone models. Sailfish OS can be installed
