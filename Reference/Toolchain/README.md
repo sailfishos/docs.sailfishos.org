@@ -47,6 +47,8 @@ Here is how the terms native to Scratchbox 2 map to the terms used in Sailfish S
 
 (\*) The word "tooling" is used instead of "tools" simply for the possibility to distinguish single from multiple.
 
+Depending on your choice of SDK, please see their corresponding documentation pages for listing and interacting with the toolings and targets: [Sailfish Platform SDK](/Tools/Platform_SDK/Building_Packages#listing-installed-build-targets) and [Sailfish SDK](/Tools/Sailfish_SDK/Building_packages#building-packages-locally)
+
 ### Build Tools
 
 The cross-compilation toolchain consists of Linaro GCC, the GNU ld linker and GNU libc, run within a ScratchBox 2 virtual machine within the SDK Build Engine. As described before, a single Sailfish SDK installation can include multiple SDK Build Targets. Any particular build target is used to perform builds for a specific HW architecture (e.g., armv7, i586, etc) and OS version. You can check to see which version of the build tools are installed for a given architecture and OS version by checking the version of the `cross-[arch]-gcc` and `cross-[arch]-binutils` packages under the corresponding SDK Build Tooling.
