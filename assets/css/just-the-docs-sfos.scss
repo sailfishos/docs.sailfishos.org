@@ -79,6 +79,12 @@ a:not([class]) {
   }
 }
 
+@media (max-width: 55rem) {
+    .site-button {
+        padding: 10px !important;
+    }
+}
+
 .site-button {
   padding: 15px;
 }
