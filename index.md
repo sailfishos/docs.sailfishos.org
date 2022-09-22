@@ -49,7 +49,7 @@ Sailfish OS is developed by <a href="https://jolla.com">Jolla</a> and powered by
 </div>
 <br>
 <div class="landing-container landing-blank-container">
-  <a href="/SupportedDevices">
+  <a href="/Support/Supported_Devices">
   <div class="landing-blank">
     <span class="landing-head">Supported<br/>Devices</span>
     <div  class="landing-text landing-box-text">
@@ -60,7 +60,7 @@ Sailfish OS is developed by <a href="https://jolla.com">Jolla</a> and powered by
   </div></a>
 </div>
 <div class="landing-container landing-blank-container">
-  <a href="/Releases">
+  <a href="/Support/Releases">
   <div class="landing-blank">
     <span class="landing-head">Releases</span>
     <div  class="landing-text landing-box-text">
