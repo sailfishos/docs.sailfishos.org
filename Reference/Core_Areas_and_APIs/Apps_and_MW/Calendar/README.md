@@ -16,15 +16,11 @@ The Calendar stack in Sailfish OS includes several API components. All of the na
 
 #### Platform API
 
-Sailfish OS currently uses the mKCal extensions to the KCalCore API as its platform API. Sailfish OS is currently the defacto upstream for mKCal, which was open-sourced by Nokia previously, while KCalCore is a well-maintained KDE API.
+Sailfish OS uses the [KCalendarCore](https://invent.kde.org/frameworks/kcalendarcore) API. It is a well-maintained KDE API that provides access to calendar information like events, to-dos, journals, alarms, ... It is also providing serialisation and deserialisation to iCalendar format through [libical](https://github.com/libical/libical). On top of it, mKCal is responsible for storage of calendar data on device. Sailfish OS is currently the defacto upstream for mKCal, which was previously open-sourced by Nokia.
 
-There are plans in the future to switch to using the QtPIM QtOrganizer API as the platform API, however this requires three steps: first, an mKCal backend for the QtOrganizer API could be written during the transition phase; second, an sqlite-based QtOrganizer backend could be implemented directly; finally, the QtProject would need to release the QtPIM API in an official release. At this stage, the platform API is not available to third-party developers to use in native applications, due to the plan to switch to the QtPIM API in the future.
-
-The KCalCore repository can be found at: <https://github.com/sailfishos/kcalcore>
+The KCalendarCore repository can be found at: <https://github.com/sailfishos/kf5-calendarcore>
 
 The mKCal repository can be found at: <https://github.com/sailfishos/mkcal>
-
-The QtPIM QtOrganizer API (currently in tech-preview status) can be found at: <http://code.qt.io/cgit/qt/qtpim.git/>
 
 #### UI Layer API
 
@@ -42,11 +38,11 @@ Sailfish OS includes a variety of middleware pieces related to the calendar doma
 
 #### Storage Backend
 
-The mKCal platform API also includes an sqlite-based storage backend. There are plans to migrate way from mKCal eventually, for reasons of maintainability, and as part of that process two things would occur: first, a QtOrganizer backend could use mKCal as its storage provider during a transition phase; second, a native QtOrganizer sqlite backend could be written specifically to take advantage of the performance and maintainability improvements which would result.
+The mKCal platform API also includes an sqlite-based storage backend.
 
 #### Synchronization
 
-As with other data-related domains, synchronization of calendar data is controlled by Buteo (the synchronization framework used in SailfishOS). Synchronization with a variety of data sources is supported through a number of data-source-specific synchronization plugins. Each plugin is independent, although many of them share significant amounts of code to ease maintenance.
+As with other data-related domains, synchronization of calendar data is controlled by Buteo (the synchronization framework used in Sailfish OS). Synchronization with a variety of data sources is supported through a number of data-source-specific synchronization plugins. Each plugin is independent, although many of them share significant amounts of code to ease maintenance.
 
 The various synchronization plugins are listed below:
 
@@ -59,13 +55,12 @@ The various synchronization plugins are listed below:
 
 ### Contribution
 
-Community or third-party contributions to various components of the location and positioning stack in Sailfish OS is encouraged and appreciated. The vast majority of the components are open-source, found on <https://github.com/sailfishos>, with discussions via IRC (#sailfishos via oftc.net) and via email.
+Community or third-party contributions to various components of the calendar stack in Sailfish OS is encouraged and appreciated. The vast majority of the components are open-source, found on <https://github.com/sailfishos>, with discussions via IRC (#sailfishos via oftc.net) and via the forum.
 
 Specifically, contributions would be very welcome in the following areas:
 
   - unit test improvements both for the current platform API and mKCal storage backend, and for synchronization plugins
   - test accounts on CalDAV instances
   - test robots to perform smoke testing for synchronization plugins
-  - implementation of a native, sqlite-based QtOrganizer backend
 
 For in-depth information about contributing to the CalDAV synchronisation plugin, please see [CalDAV and CardDAV Community Contributions](/Develop/Collaborate/CalDAV_and_CardDAV_Community_Contributions).
