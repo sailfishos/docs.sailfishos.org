@@ -1,6 +1,6 @@
 ---
 title: Supported Devices
-permalink: Support/SupportedDevices/
+permalink: Support/Supported_Devices/
 layout: default
 nav_order: 200
 ---
