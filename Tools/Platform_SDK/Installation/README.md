@@ -31,7 +31,7 @@ sfossdk
 echo 'mount_sdk() { sudo mount -o rbind "$sdkroot/srv" "$sdkroot/parentroot/srv"; }' >> ~/.mersdkrc
 ```
 
-Once you've installed the Sailfish Platform SDK you'll need to [install a Sailfish Platform SDK Target](/Tools/Platform_SDK/Target_Installation).
+Once you've installed the Sailfish Platform SDK you'll need to [install an SDK Build Target](/Tools/Platform_SDK/Target_Installation).
 
 It's recommended that you read sections below for pre-requisites, options and details on installing extra architecture toolchains, tools etc.
 
@@ -136,7 +136,7 @@ echo alias sfossdk=/srv/sailfishos/sdks/sfossdk/sdk-chroot >> ~/.bashrc ; exec b
 
 # Next Steps
 
-The next step is to look at [setting up the Sailfish Platform SDK Targets](/Tools/Platform_SDK/Target_Installation) and installing and using more [Development Tools](/Tools/Development)
+The next step is to look at [setting up the SDK Build Targets](/Tools/Platform_SDK/Target_Installation) and installing and using more [Development Tools](/Tools/Development)
 
 # Updating the Sailfish Platform SDK
 
