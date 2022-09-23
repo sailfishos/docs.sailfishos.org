@@ -11,19 +11,22 @@ nav_order: 200
 
 ## Sailfish Platform SDK Targets and Toolings
 
-The Sailfish Platform SDK provides a chroot environment within which ScratchBox2 is available. ScratchBox2 uses qemu emulation to allow architecture-specific binaries to be run on a host machine with a different architecture. For example, it allows a user to run ARMv7 binaries on an x86 host.
+Sailfish SDK abstracts the support for cross-development for particular target HW architectures and Sailfish OS versions (forward compatibility applies) in form of add-on SDK Build Tools.
 
-Build tools specific to particular version of target operating system are provided as a "tools distribution" (the terminology used in ScratchBox2 documentation varies). In Sailfish Platform SDK this is called "SDK tooling".
+Two types of SDK Build Tools are recognized:
 
-In order to meaningfully use ScratchBox2 to build software for Sailfish OS devices, a target-architecture root filesystem (commonly known as an "SDK rootfs" but again - the terminology varies) must be installed into the Sailfish Platform SDK chroot environment. This root filesystem contains build dependencies (including binary executables and libraries) which are needed to build software packages for the target device. It is the most recognized part of a ScratchBox2 target configuration and so the terms "rootfs" and "target" are often used interchangeably. In Sailfish Platform SDK this is called "SDK target".
+1. SDK Build Target - a target-compatible Sailfish OS image, and
+2. SDK Build Tooling - a host-compatible collection of programs used at build time.
 
-Whenever you enter a ScratchBox2 shell (via `sb2`), you must specify the target which should be activated. Similarly, whenever you use the Sailfish SDK Build script (i.e. `mb2`) to build a package, you must specify the target (which is then activated by ScratchBox2).
+The shorter terms "build tools", "(build) tooling(s)" and "(build) target(s)" are used instead of the official terms where the context admits.
+
+Single build tooling is required to enable development for a particular Sailfish OS version, accompanied with one or more build targets for each target HW architecture to support.
 
 ## Installing SDK Target and Tooling Tarballs
 
-The latest public releases of Sailfish OS targets (and appropriate toolings) are found here: <https://releases.sailfishos.org/sdk/targets/>
+The latest public releases of build target and tooling images can be found here: <https://releases.sailfishos.org/sdk/targets/>
 
-The SDK Assistant tool is available within the Sailfish Platform SDK chroot environment that simplifies the creation and deletion of ScratchBox2 targets. The most common use for the SDK Assistant tool is to create a new SDK target:
+Use the sdk-assistant tool within Sailfish Platform SDK to create new targets and toolings from the downloaded images:
 ```nosh
 sdk-assistant create SailfishOS-latest Sailfish_OS-latest-Sailfish_SDK_Tooling-i486.tar.7z
 sdk-assistant create SailfishOS-latest-armv7hl Sailfish_OS-latest-Sailfish_SDK_Target-armv7hl.tar.7z
@@ -42,7 +45,7 @@ sdk-assistant create SailfishOS-latest-aarch64 https://releases.sailfishos.org/s
 sdk-assistant create SailfishOS-latest-i486 https://releases.sailfishos.org/sdk/targets/Sailfish_OS-latest-Sailfish_SDK_Target-i486.tar.7z
 ```
 
-This will create three generic (i.e., hardware agnostic) SDK targets, "SailfishOS-latest-armv7hl" for ARMv7, "SailfishOS-latest-aarch64" for ARM64, and "SailfishOS-latest-i486" for i486 platform. Their names are to be used as an argument to `sb2`'s or `mb2`'s `-t` option. The single created SDK tooling "SailfishOS-latest" will be picked up automatically based on its SSU release. If multiple toolings exist with the same SSU release, the selection can be done explicitly with the `--tooling <name>` option.
+This will create three generic (i.e., hardware agnostic) SDK targets, "SailfishOS-latest-armv7hl" for ARMv7, "SailfishOS-latest-aarch64" for ARM64, and "SailfishOS-latest-i486" for i486 platform. Their names are to be used as an argument to `mb2`'s `-t` option. The single created SDK tooling "SailfishOS-latest" will be picked up automatically based on the OS release. If multiple toolings exist for one OS release, the selection can be done explicitly with the `--tooling <name>` option.
 
 You can also use this tool for listing your installed toolings and targets:
 ```nosh
