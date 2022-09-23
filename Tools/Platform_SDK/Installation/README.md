@@ -8,7 +8,7 @@ nav_order: 100
 
 **Attention: Platform development is now more convenient with the regular [Sailfish SDK](/Develop/Platform) through its command line frontend 'sfdk', available on all Linux, macOS and Windows. The Linux-only chroot based Sailfish Platform SDK remains available for special applications. It also remains the default (documented) option for [Hardware Adaptation Development](/Tools/Hardware_Adaptation_Development_Kit), although the regular Sailfish SDK can be used for that purpose as well.**
 
-The Sailfish Platform SDK contains [Development Tools](/Tools/Development) like Scratchbox2, [MIC (Image Creation)](mic "brokenlink"), [Spectacle](/Spectacle "brokenlink"), osc, qemu, etc, to make it easier for a developer to work with Sailfish OS.
+The Sailfish Platform SDK contains [Development Tools](/Tools/Development) like mb2, [MIC (Image Creation)](mic "brokenlink"), osc, etc, to make it easier for a developer to work with Sailfish OS.
 
 # Quick start
 
