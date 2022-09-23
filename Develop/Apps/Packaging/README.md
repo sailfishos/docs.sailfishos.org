@@ -128,9 +128,9 @@ Now that everything is in place for RPM package creation, the `.yaml` file comes
 
 ### About Qt Feature File Paths
 
-Note that although you can examine the `.prf` files under Sailfish SDK installation directory, these are not actually the feature files used when you build your project. As the build is performed by the build engine virtual machine, the `.prf` files are actually inside the Scratchbox 2 environment in the virtual machine. The feature files themselves are, however, identical in both locations.
+Note that although you can examine the `.prf` files under Sailfish SDK installation directory, these are not actually the feature files used when you build your project. As the build is performed by the build engine virtual machine, the `.prf` files are actually inside the build environment in the virtual machine. The feature files themselves are, however, identical in both locations.
 
-To see this, enter the build target where you’ll find the feature files in the directory `/usr/share/qt5/mkspecs/features`.
+To see this, enter the build environment where you’ll find the feature files in the directory `/usr/share/qt5/mkspecs/features`.
 ```nosh
 $ sfdk build-shell ls /usr/share/qt5/mkspecs/features
 ```
