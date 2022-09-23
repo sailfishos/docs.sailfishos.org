@@ -70,9 +70,9 @@ devel-su mv omni.ja /usr/lib/xulrunner-qt5-60.9.1/
 
 Gecko takes a long time to build, even if only a couple of source files have been modified. Luckily there is a way to build part of the tree and reconstruct a libxul.so with that, which can be done much more quickly. The new library can be copied over to a device and directly replace the installed version. The compiled library will be huge as it contains all the debug symbols, so run strip on it before you copy it over.
 
-Enter the target:
+Enter the build environment:
 ```nosh
-sb2
+mb2 build-shell
 ```
 
 Build the new library
@@ -83,7 +83,7 @@ make -j16 -C `pwd`/obj-build-mer-qt-xr/toolkit
 strip obj-build-mer-qt-xr/toolkit/library/build/libxul.so
 ```
 
-If you need to get stacktraces from gdb and don't mind a large transfer, you can skip the strip step. Then from outside the target:
+If you need to get stacktraces from gdb and don't mind a large transfer, you can skip the strip step. Then leave the build environment and copy the new library to the device:
 ```nosh
 scp obj-build-mer-qt-xr/toolkit/library/libxul.so user@device:~
 ```
