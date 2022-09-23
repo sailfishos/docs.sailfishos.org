@@ -132,7 +132,7 @@ Note that although you can examine the `.prf` files under Sailfish SDK installat
 
 To see this, enter the build target where you’ll find the feature files in the directory `/usr/share/qt5/mkspecs/features`.
 ```nosh
-$ sfdk tools exec <target> ls /usr/share/qt5/mkspecs/features
+$ sfdk build-shell ls /usr/share/qt5/mkspecs/features
 ```
 
 ### The .yaml File
