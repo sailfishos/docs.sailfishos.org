@@ -6,9 +6,6 @@ layout: default
 nav_order: 200
 ---
 
-**Attention: These instructions are only valid for Sailfish Platform SDK versions newer than or equal to 3.0.0. If you have an older Sailfish Platform SDK, please [upgrade it first](/Tools/Platform_SDK/Installation#updating-the-platform-sdk). If you are doing a fresh installation, please ignore this note.**
-
-
 ## Sailfish Platform SDK Targets and Toolings
 
 Sailfish SDK abstracts the support for cross-development for particular target HW architectures and Sailfish OS versions (forward compatibility applies) in form of add-on SDK Build Tools.
