@@ -57,11 +57,10 @@ You can also install :
 The Sailfish Platform SDK will run on most modern Linux machines. It needs:
 
   - Linux distribution (one in a virtual machine works well), running 2.6.37 or newer kernel
-  - about 400Mb free space to install
+  - About 3 GB of free disk space is the minimum for SDK installation with one build target enabled
   - The SDK must be installed on a standard filesystem and "nosuid" must not be set. (Note: [recent ecryptfs](http://askubuntu.com/questions/210048/error-when-running-binary-with-root-setuid-under-encrypted-home-directory) will automatically use and enforce nosuid. Automounted usb drives typically have "nosuid" set too.)
-  - hundreds of Mb for rpm caches for osc and mic as well as for SB2 targets
   - Generic x86 CPU
-  - user must have sudo rights
+  - User must have sudo rights
 
 ## Installation / setup
 
