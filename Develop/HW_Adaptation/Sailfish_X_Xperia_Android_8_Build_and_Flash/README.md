@@ -95,7 +95,7 @@ PLATFORM_SDK $
 
 rpm/dhd/helpers/build_packages.sh --gg
 
-sb2 -t $VENDOR-$DEVICE-$PORT_ARCH -m sdk-install -R zypper in --force-resolution droid-hal-$HABUILD_DEVICE-kernel-modules
+sdk-assistant maintain $VENDOR-$DEVICE-$PORT_ARCH zypper in --force-resolution droid-hal-$HABUILD_DEVICE-kernel-modules
 rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/droid-hal-img-boot-sony-$FAMILY --spec=rpm/droid-hal-$HABUILD_DEVICE-img-boot.spec
 
 rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/droid-system-sony-$FAMILY-$HABUILD_DEVICE --spec=rpm/droid-system-$HABUILD_DEVICE.spec --spec=rpm/droid-system-$HABUILD_DEVICE-$DEVICE.spec
