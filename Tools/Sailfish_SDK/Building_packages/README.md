@@ -20,7 +20,7 @@ See the page about [deploying packages](/Tools/Sailfish_SDK/Deploying_packages) 
 
 ## Building Packages Locally
 
-Once the user has installed the [Sailfish SDK](/Tools/Sailfish_SDK/Installation), they can build packages locally for the target architecture using the tool called `sfdk`. This tool provides a number of sub-commands wrapping around ScratchBox2 (`sb2`) and `rpmbuild` in a way which makes it simple to build packages from source repositories, given an RPM specification (.spec) file.
+Once the user has installed the [Sailfish SDK](/Tools/Sailfish_SDK/Installation), they can build packages locally for the target architecture using the tool called `sfdk`. This tool provides a number of sub-commands wrapping around `rpmbuild` and others in a way which makes it simple to cross-compile packages from source repositories, given an RPM specification (.spec) file.
 
 The `sfdk` tool can be found in the `bin` subdirectory of the Sailfish SDK installation directory. Further code examples assume the tool is available on `PATH` or by other means simply as `sfdk`.
 
