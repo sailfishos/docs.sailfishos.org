@@ -112,6 +112,7 @@ Should be noted that Sailfish OS does not have kernel provided with the OS but k
 | Sensors                 | [sensorfw-qt5](https://github.com/sailfishos/sensorfw/) \<\> [sensorfw-qt5-hybris](https://github.com/sailfishos/sensorfw/) \<\> [libgbinder](https://github.com/mer-hybris/libgbinder/) \<\> Android BSP HAL: android.hardware.sensors                                                                                                                                                                                                                              | Android BSP \>= 8                                    |
 | <center>"</center>      | [sensorfw-qt5](https://github.com/sailfishos/sensorfw/) \<\> [sensorfw-qt5-hybris](https://github.com/sailfishos/sensorfw/) \<\> [libhybris](https://github.com/mer-hybris/libhybris) \<\> Android BSP HAL: sensors                                                                                                                                                                                                                                                  | Android BSP \<= 7                                    |
 | Storage (eMMC & sdcard) | [udisks2](https://github.com/sailfishos/udisks2/) \<\> kernel                                                                                                                                                                                                                                                                                                                                                                                                            |                                                      |
+| Touch | app \<\> [lipstick](https://github.com/sailfishos/lipstick/) \<\> [qtbase](https://github.com/sailfishos/qtbase) \<\> evdev \<\> kernel | See [below](#touch) |
 | USB                     | [usb_moded](https://github.com/sailfishos/usb-moded/) \<\> kernel                                                                                                                                                                                                                                                                                                                                                                                                          |                                                      |
 | MTP                     | [buteo-mtp](https://github.com/sailfishos/buteo-mtp) \<\> [usb_moded](https://github.com/sailfishos/usb-moded/) \<\> kernel                                                                                                                                                                                                                                                                                                                                           | See [Architecture#MTP](/Reference/Architecture#mtp)  |
 | WiFi                    | [connman](https://github.com/sailfishos/connman) ([sailfish_wifi plugin](https://github.com/sailfishos/connman/blob/master/connman/plugins/sailfish_wifi.c)) \<\> [libgsupplicant](https://github.com/sailfishos/libgsupplicant) \<\> [wpa_supplicant](https://github.com/sailfishos/wpa_supplicant) \<\> kernel                                                                                                                                        |                                                      |
@@ -125,6 +126,21 @@ For more information on the areas covered by middleware libraries and services, 
 ### MTP
 
 usb-moded detects usb connection based on udev notification from kernel and initiates gadget configuration and starts buteo-mtp. buteo-mtp then finalizes the gadget configuration and handles data transmission.
+
+### Touch
+
+`mce-tools` package provides `evdev_trace` command.
+Use `--show-readers` option to figure out which device handles touch input (e.g. `ABS_MT_TRACKING_ID`). See [kernel documentation](https://www.kernel.org/doc/Documentation/input/multi-touch-protocol.txt) for more information about the multi-touch protocol.
+```nosh
+$ /usr/sbin/evdev_trace --show-readers
+```
+
+Start tracing your touch screen (event2 is an example).
+```nosh
+$ /usr/sbin/evdev_trace -t /dev/input/event2
+```
+
+Qt handles evdev touch events via evdev plugin (`/usr/lib64/qt5/plugins/generic/libqevdevtouchplugin.so` on a 64bit device). Qt logging category would be "qt.qpa.input". QEvdevTouchScreenHandler auto detects touchscreen.
 
 ## Key Architectural Areas
 
