@@ -33,7 +33,7 @@ The cellular stack consists of:
 
 ## How and Why is Android involved?
 
-Android currently dominates the mobile industry which leads to the almost exclusive provision of BSPs for the Android OS. SFOS therefore must make use of the low level software components (the HAL) intended for use by Android - it does this using the [libhybris](libhybris "brokenlink") compatibility mechanism.
+Android currently dominates the mobile industry which leads to the almost exclusive provision of BSPs for the Android OS. SFOS therefore must make use of the low level software components (the HAL) intended for use by Android - it does this using the [libhybris](/Tools/Hardware_Adaptation_Development_Kit/#libhybris) compatibility mechanism.
 
 Although the upper levels of the Telephony stack are open the modem and audio hardware adaptations are almost always proprietary.
 

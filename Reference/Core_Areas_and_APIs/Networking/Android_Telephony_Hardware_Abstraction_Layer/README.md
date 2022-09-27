@@ -31,6 +31,6 @@ The vendor RIL handles the actual communication with the modem driver and the mo
 
 Communication between RIL and the application framework is through a socket. There are two types of commands used in RIL interaction : commands and events. The commands are originated by the application framework and include their responses. The events are indications originating from the modem. For example, the indication of incoming call is received as an event.
 
-The data passed in a command is constructed as a [Binder](/Binder "brokenlink") parcel object. (A Parcel object is a container for an IPC message used by libbinder in Android.)
+The data passed in a command is constructed as a Binder parcel object. (A Parcel object is a container for an IPC message used by libbinder in Android.)
 
 In Sailfish OS the RIL is handled by oFono.
