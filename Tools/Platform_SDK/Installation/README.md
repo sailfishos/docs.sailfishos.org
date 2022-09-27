@@ -8,7 +8,7 @@ nav_order: 100
 
 **Attention: Platform development is now more convenient with the regular [Sailfish SDK](/Develop/Platform) through its command line frontend 'sfdk', available on all Linux, macOS and Windows. The Linux-only chroot based Sailfish Platform SDK remains available for special applications. It also remains the default (documented) option for [Hardware Adaptation Development](/Tools/Hardware_Adaptation_Development_Kit), although the regular Sailfish SDK can be used for that purpose as well.**
 
-The Sailfish Platform SDK contains [Development Tools](/Tools/Development) like Scratchbox2, [MIC (Image Creation)](mic "brokenlink"), [Spectacle](/Spectacle "brokenlink"), osc, qemu, etc, to make it easier for a developer to work with Sailfish OS.
+The Sailfish Platform SDK contains [Development Tools](/Tools/Development) like mb2, [MIC (Image Creation)](mic "brokenlink"), osc, etc, to make it easier for a developer to work with Sailfish OS.
 
 # Quick start
 
@@ -31,7 +31,7 @@ sfossdk
 echo 'mount_sdk() { sudo mount -o rbind "$sdkroot/srv" "$sdkroot/parentroot/srv"; }' >> ~/.mersdkrc
 ```
 
-Once you've installed the Sailfish Platform SDK you'll need to [install a Sailfish Platform SDK Target](/Tools/Platform_SDK/Target_Installation).
+Once you've installed the Sailfish Platform SDK you'll need to [install an SDK Build Target](/Tools/Platform_SDK/Target_Installation).
 
 It's recommended that you read sections below for pre-requisites, options and details on installing extra architecture toolchains, tools etc.
 
@@ -57,11 +57,10 @@ You can also install :
 The Sailfish Platform SDK will run on most modern Linux machines. It needs:
 
   - Linux distribution (one in a virtual machine works well), running 2.6.37 or newer kernel
-  - about 400Mb free space to install
+  - About 3 GB of free disk space is the minimum for SDK installation with one build target enabled
   - The SDK must be installed on a standard filesystem and "nosuid" must not be set. (Note: [recent ecryptfs](http://askubuntu.com/questions/210048/error-when-running-binary-with-root-setuid-under-encrypted-home-directory) will automatically use and enforce nosuid. Automounted usb drives typically have "nosuid" set too.)
-  - hundreds of Mb for rpm caches for osc and mic as well as for SB2 targets
   - Generic x86 CPU
-  - user must have sudo rights
+  - User must have sudo rights
 
 ## Installation / setup
 
@@ -136,7 +135,7 @@ echo alias sfossdk=/srv/sailfishos/sdks/sfossdk/sdk-chroot >> ~/.bashrc ; exec b
 
 # Next Steps
 
-The next step is to look at [setting up the Sailfish Platform SDK Targets](/Tools/Platform_SDK/Target_Installation) and installing and using more [Development Tools](/Tools/Development)
+The next step is to look at [setting up the SDK Build Targets](/Tools/Platform_SDK/Target_Installation) and installing and using more [Development Tools](/Tools/Development)
 
 # Updating the Sailfish Platform SDK
 

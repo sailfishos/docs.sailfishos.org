@@ -125,7 +125,7 @@ mb2 -t $VENDOR-$DEVICE-$PORT_ARCH -s droid-system-$DEVICE/rpm/droid-system-$DEVI
 rm -f $ANDROID_ROOT/droid-local-repo/$DEVICE/droid-system-*.rpm
 mv RPMS/droid-system-*-0.1.1-1.armv7hl.rpm $ANDROID_ROOT/droid-local-repo/$DEVICE/
 createrepo_c "$ANDROID_ROOT/droid-local-repo/$DEVICE"
-sb2 -t $VENDOR-$DEVICE-$PORT_ARCH -m sdk-install -R zypper ref
+sdk-assistant maintain $VENDOR-$DEVICE-$PORT_ARCH zypper ref
 ```
 
 Close the current terminal window, go back to previous window, then:
@@ -135,7 +135,7 @@ PLATFORM_SDK $
 cd $ANDROID_ROOT
 rpm/dhd/helpers/build_packages.sh --gg
 
-sb2 -t $VENDOR-$DEVICE-$PORT_ARCH -m sdk-install -R zypper in --force-resolution droid-hal-$DEVICE-kernel-modules
+sdk-assistant maintain $VENDOR-$DEVICE-$PORT_ARCH zypper in --force-resolution droid-hal-$DEVICE-kernel-modules
 rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/droid-hal-img-boot-$DEVICE
 
 rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/bluetooth-rfkill-event --spec=rpm/bluetooth-rfkill-event-hciattach.spec
