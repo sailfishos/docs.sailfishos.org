@@ -59,6 +59,21 @@ cppqml-1.0-1.aarch64.rpm
 
 The recipe for building the package can be found in a .spec file in the rpm directory, in our exacmple case `rpm/cppqml.spec`.
 
+## Using snapshots
+
+Whenever you make changes to the build targets, the changes persist there. This includes e.g. installing packages as part of the build process. These changes could then interfere with building another package. In order to avoid that, mb2 uses a working copy of a build target to set up the build environment.  These working copies are called snapshots.
+
+You can see all existing snapshots in the [target list](#listing-installed-build-targets). By default, mb2 uses a snapshot called `default`. You can specify another snapshot using the `--snapshot` option:
+```nosh
+$ mb2 --snapshot=mysnapshot build
+```
+
+The original build target defines the clean state of the build environment. You can always reset the snapshot to the clean state using command `mb2 build-requires reset`. If you update the original target, the snapshots will be reset automatically during next build.
+
+If you don't want to use snapshots, you can perform your build operations directly on the original target by specifying the `--no-snapshot` option. But bear in mind, that even though you save a little bit of disk space by not using snapshots, you lose the ability to easily restore the target to a clean state. Also, it is much easier to make packaging errors (forgetting to add BuildRequires in .spec file) when not using clean build targets, i.e. snapshots for building.
+
+Use the `mb2 build-requires diff` command to see how the current build environment differs from the clean build environment in terms of package installations, removals and replacements.
+
 ## Running arbitrary commands
 
 When you don't have a spec file, or you want to execute a command which is not in the spec, you can use the `mb2 build-shell` command to enter the build environment and execute commands directly. You can give the actual command you want to execute as an additional parameter.
@@ -92,24 +107,9 @@ NOTICE: Using the 'SailfishOS-4.4.0.58-aarch64.default' snapshot of the build ta
 [SailfishOS-4.4.0.58-aarch64] #
 ```
 
-Any changes done under the build environment are persisted under build targets. Unless the --no-snapshot option is used, mb2 uses a working copy (a "snapshot") of the actual build target to persist your build environment. You have seen the informal message regarding the use of a snapshot a few times already. Thanks to this you can revert any modifications to the build environment using the 'build-requires reset' command, so don't be afraid to experiment, but be aware that changes may get reset implicitly under certain conditions (read more in the built-in help of mb2).
-
-Use the 'build-requires diff' command to see how the current build environment differs from the clean build environment in terms of package installations, removals and replacements.
+Any changes done under the build environment are persisted under build targets. Just like with the `build` command, mb2 uses a snapshot unless you give the `--no-snapshot` option.
 
 **Note:** Installing packages with maintenance mode might be handy when experimenting, but you should always add the packages required for building packages as BuildRequires in the .spec file. It is a good habit to always verify that building a package works with a clean build enviroment.
-
-## Using snapshots
-
-Whenever you make changes to the build targets, the changes persist there. This includes e.g. installing packages as part of the build process. These changes could then interfere with building another package. In order to avoid that, mb2 uses a working copy of a build target to set up the build environment.  These working copies are called snapshots.
-
-You can see all existing snapshots in the [target list](#listing-installed-build-targets). By default, mb2 uses a snapshot called `default`. You can specify another snapshot using the `--snapshot` option:
-```nosh
-$ mb2 --snapshot=mysnapshot build
-```
-
-The original build target defines the clean state of the build environment. You can always reset the snapshot to the clean state using command `mb2 build-requires reset`. If you update the original target, the snapshots will be reset automatically during next build.
-
-If you don't want to use snapshots, you can perform your build operations directly on the original target by specifying the `--no-snapshot` option. But bear in mind, that even though you save a little bit of disk space by not using snapshots, you lose the ability to easily restore the target to a clean state. Also, it is much easier to make packaging errors (forgetting to add BuildRequires in .spec file) when not using clean build targets, i.e. snapshots for building.
 
 ## Further reading
 
