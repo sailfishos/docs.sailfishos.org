@@ -9,16 +9,16 @@ Sailfish OS development uses a variety of tools. The basic use is explained in v
 
 ## Build and Development
 
-  - [sfdk](sfdk "brokenlink"): The CLI frontend to the Sailfish SDK
-  - [git](git "brokenlink") : Sailfish OS uses git extensively for change control
-  - [scratchbox2](scratchbox2 "brokenlink") : a powerful cross-compilation suite
-  - [mic](mic "brokenlink") : Local image generation tool
-  - [osc](osc "brokenlink") : a client for the [OBS](/Services/Development/Open_Build_Service)
+  - [sfdk](/Develop/Apps/#sfdk-command-line-tool): The CLI frontend to the Sailfish SDK
+  - [git](https://github.com/sailfishos-mirror/git/#readme) : Sailfish OS uses git extensively for change control. We have a [separate repo for packaging git](https://github.com/sailfishos/git)
+  - [scratchbox2](/Reference/Toolchain/#scratchbox-2) : a powerful cross-compilation suite
+  - [mic](https://github.com/sailfishos/mic/#readme) : Local image generation tool
+  - [osc](https://github.com/sailfishos-mirror/osc/#readme) : a client for the [OBS](/Services/Development/Open_Build_Service). We have [separate repo for packaging osc](https://github.com/sailfishos/osc/) as well.
 
 ## Toolchain
 
-  - Lenaro [gcc](gcc "brokenlink") toolchain : GNU Compiler Collection
-  - [gdb](gdb "brokenlink") : GNU Debugger
+  - Linaro [gcc](https://github.com/sailfishos/gcc) toolchain : GNU Compiler Collection
+  - [gdb](https://github.com/sailfishos-mirror/gdb/#readme) : GNU Debugger. We have a [separate repo for packaging](https://github.com/sailfishos/gdb/)
 
 ## Analysis
 

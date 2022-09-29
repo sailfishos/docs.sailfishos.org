@@ -77,8 +77,6 @@ This is a complex area and will cover:
   - Promotion, testing
   - Bug/Feature management
 
-Read more about [Build Engineering](/Build_Engineering "brokenlink").
-
 ### QA engineer
 
 Quality matters and testing is a key part of ensuring that all the components in a Sailfish OS device work together.
@@ -91,8 +89,6 @@ As well as running through various test cases you'll need to be familiar with:
   - Bug reproduction
   - Test tools
   - Bug reporting
-
-Read more about [QA Engineering](/QA_Engineering "brokenlink").
 
 ## Collaborative development process
 

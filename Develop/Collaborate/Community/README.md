@@ -8,7 +8,7 @@ nav_order: 700
 
 Sailfish OS has a vibrant and passionate community following ( o/ everyone!! )
 
-Our [Open Source](/Develop/Open_Source) philosophy and our [heritage](heritage "brokenlink") from Maemo, MeeGo and Mer means that our community has roots (and members) going back over 10 years.
+Our [Open Source](/Develop/Open_Source) philosophy and our heritage from Maemo, MeeGo and Mer means that our community has roots (and members) going back over 10 years.
 
 ## What's it about?
 

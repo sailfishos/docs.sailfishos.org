@@ -21,6 +21,6 @@ The internal storage is split into a number of partitions each (or many) of whic
   - other filesystems
   - backups of any of the above
 
-There are both development tools such as the recovery system, [fastboot](fastboot "brokenlink") and [adb](adb "brokenlink") as well as on-device user-level applications such as the system updater which are capable of writing to these partitions.
+There are both development tools such as the recovery system, fastboot and adb as well as on-device user-level applications such as the system updater which are capable of writing to these partitions.
 
 For more details about flashing for developers please see the [Hardware Adaptation Development Kit](/Tools/Hardware_Adaptation_Development_Kit).
