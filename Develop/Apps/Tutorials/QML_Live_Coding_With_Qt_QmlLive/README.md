@@ -7,7 +7,7 @@ layout: default
 nav_order: 400
 ---
 
-Creating Qt Quick applications for Sailfish OS can be more effective with the help of Qt QmlLive tool from [Qt Automotive Suite](https://doc.qt.io/QtAutomotiveSuite/qtas-overview.html). Starting with version 1701 of the Sailfish OS SDK a QmlLive version specifically tailored for Sailfish OS application development comes preinstalled with the SDK. It can control any [libsailfishapp](/Develop/Apps#libsailfishapp)-based application. Used in cooperation with Sailfish IDE it automatically determines all Sailfish OS devices registered to the IDE, maintains its own workspace directory to match the active project directory in the IDE, allows per-project settings to be configured from within the IDE and more. It can be also used as a standalone tool where development within the IDE is not suitable.
+Creating Qt Quick applications for Sailfish OS can be more effective with the help of Qt QmlLive tool from [Qt Automotive Suite](https://doc.qt.io/QtAutomotiveSuite/qtas-overview.html). A QmlLive version specifically tailored for Sailfish OS application development comes preinstalled with the Sailfish SDK. It can control any [libsailfishapp](/Develop/Apps#libsailfishapp)-based application. Used in cooperation with Sailfish IDE it automatically determines all Sailfish OS devices registered to the IDE, maintains its own workspace directory to match the active project directory in the IDE, allows per-project settings to be configured from within the IDE and more. It can be also used as a standalone tool where development within the IDE is not suitable.
 
 ## Design Your Application
 
@@ -90,7 +90,7 @@ If the folder is not updated in QmlLive, try pressing enter in the workspace inp
 
 This section assumes you have read the above sections and that you are familiar with building packages [manually](/Develop/Apps/Tutorials/Building_packages_-_advanced_techniques).
 
-QmlLive Bench can be run independently of the IDE – find its executable in the `bin` subdirectory of the Sailfish OS SDK installation directory. On the device side `qmlliveruntime-sailfish` exec wrapper is available to set up your application to accept connection from QmlLive Bench. Without the IDE it is necessary to connect the host manually in the QmlLive Bench after the application is executed.
+QmlLive Bench can be run independently of the IDE – find its executable in the `bin` subdirectory of the Sailfish SDK installation directory. On the device side `qmlliveruntime-sailfish` exec wrapper is available to set up your application to accept connection from QmlLive Bench. Without the IDE it is necessary to connect the host manually in the QmlLive Bench after the application is executed.
 
 Basic usage, identical to running the application from the IDE:
 ```nosh

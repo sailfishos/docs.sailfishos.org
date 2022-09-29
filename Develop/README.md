@@ -19,7 +19,7 @@ Although there can be some overlap it is helpful to break Sailfish OS developmen
 
 Applications extend Sailfish OS functionality and usually provide a user with a new interface to use with their device; they range from small and simple standalone apps to sophisticated suites with complex interactions both with Sailfish OS and the rest of the world. Sailfish OS provides the Silica components (which are built using Qt's QML) to allow developers to integrate the native look and feel into their applications
 
-If you're doing this type of development then you're typically using the Sailfish OS SDK as your primary code development tool (although you are free to use your own tools in conjunction with those found in the platform developer's toolbox).
+If you're doing this type of development then you're typically using the Sailfish SDK as your primary code development tool (although you are free to use your own tools in conjunction with those found in the platform developer's toolbox).
 
 The code you are working on may or may not be open source - but you'll certainly be interacting with open source code, tools and/or projects.
 
