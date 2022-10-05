@@ -91,10 +91,11 @@ Disabled repositories (global, might be overridden by user config):
 ```nosh
 # she registered her device using the "my device" name within the Sailfish IDE before
 ~/alice-embedlite-components $ sfdk config device="my device"
+# she can deploy the convenient zypper-dup way
+~/alice-embedlite-components $ sfdk deploy --zypper-dup
+# or the forceful way
 ~/alice-embedlite-components $ sfdk deploy --manual
 ~/alice-embedlite-components $ sfdk device exec
-[defaultuser@XperiaXA2-DualSIM ~]$ devel-su zypper -p RPMS dup --from ~plus-repo-1 --details
-# or the forceful way
 [defaultuser@XperiaXA2-DualSIM ~]$ devel-su rpm -Uvh --force RPMS/embedlite-components-qt5-1.0.0-1.armv7hl.rpm
 ```
 
