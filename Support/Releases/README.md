@@ -10,7 +10,7 @@ nav_order: 100
 
 | Release   | Name                 | Published     | Note                        |
 | --------- | -------------------- | ------------- | --------------------------- |
-| 4.4.0.72  | Vanha Rauma          | 30th Aug 2022 | **Stop release**            |
+| 4.4.0.72  | Vanha Rauma          | 30th Sep 2022 | **Stop release**            |
 | 4.3.0.15  | Suomenlinna          | 10th Feb 2022 | **Stop release**            |
 | 4.2.0.21  | Verla                | 16th Sep 2021 | **Stop release**            |
 | 4.1.0.24  | Kvarken              | 27th May 2021 | **Stop release** &nbsp;Support for aarch64 |
