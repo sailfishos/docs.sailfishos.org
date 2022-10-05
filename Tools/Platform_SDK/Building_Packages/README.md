@@ -26,14 +26,11 @@ You can use the command `sdk-assistant list` to list available  [build targets](
 $ sdk-assistant list
 SailfishOS-4.4.0.58
 ├─SailfishOS-4.4.0.58-aarch64
-│ └─SailfishOS-4.4.0.58-aarch64.default  (snapshot)
 ├─SailfishOS-4.4.0.58-armv7hl
-│ └─SailfishOS-4.4.0.58-armv7hl.default  (snapshot)
 └─SailfishOS-4.4.0.58-i486
-  └─SailfishOS-4.4.0.58-i486.default  (snapshot)
 ```
 
-Each build target lets you build software for a specific operating system version running on a specific hardware. Each target is listed under one tooling supporting the given OS version. Under each build target are listed existing snapshots of the target. So, in our example, we have installed one tooling (SailfishOS-4.4.0.58) and three targets for it (aarch64, armv7hl and i486). Each target has one snapshot (default).
+Each build target lets you build software for a specific operating system version running on a specific hardware. Each target is listed under one tooling supporting the given OS version. So, in our example, we have installed one tooling (SailfishOS-4.4.0.58) and three targets for it (aarch64, armv7hl and i486).
 
 ## Selecting build target
 

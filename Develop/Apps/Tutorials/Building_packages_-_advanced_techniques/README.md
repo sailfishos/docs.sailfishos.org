@@ -28,11 +28,8 @@ List the installed build tools and choose the build target to build for. Learn m
 $ sfdk tools list
 SailfishOS-4.4.0.58                          sdk-provided,latest
 ├── SailfishOS-4.4.0.58-aarch64              sdk-provided,latest
-│   └── SailfishOS-4.4.0.58-aarch64.default  snapshot
 ├── SailfishOS-4.4.0.58-armv7hl              sdk-provided,latest
-│   └── SailfishOS-4.4.0.58-armv7hl.default  snapshot
 └── SailfishOS-4.4.0.58-i486                 sdk-provided,latest
-    └── SailfishOS-4.4.0.58-i486.default     snapshot
 ```
 
 Choose the `i486` target as we will be running in emulator first.
