@@ -8,7 +8,7 @@ nav_order: 500
 
 ## Deploying Packages
 
-Once a package has been built, it must be deployed to the device (or SDK build target, in the case of -devel packages). Depending on whether the package was built locally or remotely, there are different ways to deploy the package to the device.
+Once a package has been built, it must be deployed to the device (or SDK build environment, in the case of -devel packages). Depending on whether the package was built locally or remotely, there are different ways to deploy the package to the device.
 
 ### Deploying Local RPMs
 
@@ -35,9 +35,9 @@ sfdk deploy --zypper-dup
 
 Add `--dry-run` to preview the effect before actually applying it.
 
-### Deploying Local RPMs into Build Targets
+### Deploying Local RPMs into the Build Environment
 
-When multiple packages are modified under a task and build time dependencies exist between those, one needs to ensure that the updated versions of the required packages are available under the build target. See [Working with dependent packages](/Develop/Apps/Tutorials/Building_packages_-_advanced_techniques#working-with-dependent-packages) to learn how to achieve that conveniently.
+When multiple packages are modified under a task and build time dependencies exist between those, one needs to ensure that the updated versions of the required packages are available under the build environment. See [Working with dependent packages](/Develop/Apps/Tutorials/Building_packages_-_advanced_techniques#working-with-dependent-packages) to learn how to achieve that conveniently.
 
 ### Deploying From Repository
 

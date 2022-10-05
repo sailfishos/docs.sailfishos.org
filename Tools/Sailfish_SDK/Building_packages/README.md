@@ -56,18 +56,26 @@ $ ls ./RPMS
 my-app-0-1.aarch64.rpm
 ```
 
-These `.rpm` files may be installed to the device or the build target as described in the page on [deploying packages](/Tools/Sailfish_SDK/Deploying_packages).
+These `.rpm` files may be installed to the device or the build environment as described in the page on [deploying packages](/Tools/Sailfish_SDK/Deploying_packages).
 
 See `sfdk --help-building` for more information on building packages or jump directly to the all-in-one manual with `sfdk --help-all`.
 
-### Installing Missing Dependencies
+### Enabling Additional Package Repositories
 
-In some cases, the developer will have to add or enable repositories within their build target, if the `sfdk` tools complains that a dependency cannot be installed. This can be done by issuing maintenance commands under the build target with the help of the `tools exec` command:
+In some cases, the developer will have to add or enable repositories within their build environment if the `sfdk` tools complains that a dependency cannot be installed. This can be done with the `ssu` command available under the build environment.
+
+Normally you execute maintenance commands under the build environment with the help of:
+
 ```nosh
-sfdk tools exec <name> [<command> [<arg>...]]
+sfdk build-shell --maintain [<command> [<arg>...]]
 ```
 
-Use the command
+Changes done to the build environment this way can be reverted at your will with the `sfdk build-requires reset` command, which also happens implicitly under certain situations as described in sfdk's built-in manual. Changing the list of repositories is the sort of changes you would likely want to have applied permanently to your build environment. As you can learn in the built-in help of the `sfdk build-shell` command, you can do permanent changes to your build environment using an alternative command:
+```nosh
+sfdk tools exec <build-target-name> [<command> [<arg>...]]
+```
+
+Inside the build environment you can use the command
 ```nosh
 ssu ar <repo_name> <repo_url>
 ```
@@ -86,7 +94,7 @@ to update the installable package information. `ssu lr` may be used to list know
 
 Example:
 ```nosh
-# enter the build target
+# enter the build environment
 ~ $ sfdk tools exec SailfishOS-4.3.0.12-aarch64
 
 # add a repository
@@ -102,9 +110,9 @@ It should be noted that device or hardware-platform-specific packages (especiall
 
 ## Building Binaries Locally
 
-In some cases, you will not want to build an entire package (.rpm) to install, but instead want to build a single binary from a simple (most likely Qt-based) project. This can be handy, for example, during testing or prototyping.
+In some cases, you will not want to build an entire package (.rpm) to install, but instead want to build a single binary from a simple (most likely Qt-based) project for which you do not have an RPM SPEC file yet. This can be handy, for example, during testing or prototyping.
 
-In this case, you simply need to build the project from within a build-shell. For example, to build a simple Qt-based project (called "test", located under `~/test/` of the host) the following steps could be taken:
+In this case, you simply need to invoke the build commands directly from within the build environment. For example, to build a simple Qt-based project (located under `~/test/` of the host) the following steps could be taken:
 ```nosh
 ~ $ cd ~/test && sfdk build-shell qmake && sfdk build-shell make
 ```

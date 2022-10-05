@@ -86,7 +86,7 @@ $ ssh -p 2222 -i ~/SailfishOS/vmshare/ssh/private_keys/sdk root@localhost
 
 The SSH daemon (and other network services) on the virtual machines can only be accessed from the host.
 
-If you make any changes to the target on the build engine, be sure to re-sync with the host using **Options → Sailfish OS → Build Engine → Manage Build Targets... → Synchronize** from the IDE. (With Sailfish SDK older than 3.0 use **Control Center → Targets → SailfishOS-i486 → manage → sync**.)
+If you make any changes to a build target on the build engine, be sure to re-sync with the host using **Options → Sailfish OS → Build Engine → Manage Build Targets... → Synchronize** from the IDE. (With Sailfish SDK older than 3.0 use **Control Center → Targets → SailfishOS-i486 → manage → sync**.)
 
 ## How do I install packages to emulator?
 

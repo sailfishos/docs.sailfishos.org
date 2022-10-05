@@ -177,7 +177,7 @@ The alternative deployment options are basically the same as those demonstrated 
 
 **Note:** Parts of this section are only applicable with SDK \>= 3.3
 
-When multiple packages are modified under a task and build time dependencies exist between those, one needs to ensure that the updated versions of the required packages are available under the build target. This can be conveniently achieved with the help of `sfdk`'s `output-prefix` and `search-output-dir` configuration options (the latter being implied by the former). With the following configuration a common output directory will be used for the resulting RPMs and `sfdk` will consider existing packages under this directory when resolving build time dependencies.
+When multiple packages are modified under a task and build time dependencies exist between those, one needs to ensure that the updated versions of the required packages are available under the build environment. This can be conveniently achieved with the help of `sfdk`'s `output-prefix` and `search-output-dir` configuration options (the latter being implied by the former). With the following configuration a common output directory will be used for the resulting RPMs and `sfdk` will consider existing packages under this directory when resolving build time dependencies.
 ```nosh
 $ mkdir ~/RPMS
 $ sfdk config --global --push output-prefix ~/RPMS

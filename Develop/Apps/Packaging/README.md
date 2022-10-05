@@ -276,7 +276,7 @@ For most Sailfish OS Qt Quick applications, there is no need to change the gener
 
 ### Tips and Tricks
 
-This section shows a few terminal commands that may be useful for tracking down specific packages or names as they should appear in the *PkgBR*, *PkgConfigBR*, and *Requires* sections of the `.yaml` file. All of the commands should be run under a build target with `sfdk tools exec`.
+This section shows a few terminal commands that may be useful for tracking down specific packages or names as they should appear in the *PkgBR*, *PkgConfigBR*, and *Requires* sections of the `.yaml` file. All of the commands should be run under a build environment with `sfdk build-shell --maintain`.
 
 Note that the `zypper` package manager is not available in the emulator nor on a real device in their default configurations. The equivalent command in the emulator virtual machine or on a device is `pkcon`. These two commands have slightly different options and one may not support all the functionality the other has, but both may coexists on one system - `zypper` can be installed with `pkcon install zypper`.
 

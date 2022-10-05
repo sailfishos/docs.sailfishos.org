@@ -61,7 +61,7 @@ Description    : abzaza
   Development files for xulrunner.
 ```
 
-9\) She now knows that it comes from the "jolla" repository. She goes back to her development terminal, and enters the build target to update the ssu repositories.
+9\) She now knows that it comes from the "jolla" repository. She goes back to her development terminal, and enables the repository under her build environment the way suggested in [Enabling Additional Package Repositories](/Tools/Sailfish_SDK/Building_packages/#enabling-additional-package-repositories):
 ```nosh
 ~/alice-embedlite-components $ sfdk tools exec SailfishOS-4.3.0.12-armv7hl
 
