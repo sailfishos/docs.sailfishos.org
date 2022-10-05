@@ -100,19 +100,6 @@ To determine which repository provides a given package, a contributor should use
 
 It should be noted that device or hardware-platform-specific packages (especially those needed to build hybris-related packages) are best installed into a separate SDK target, to avoid complications. See [Clean Builds](#clean-builds) below to learn how to achieve that conveniently without explicitly installing separate SDK targets.
 
-### Clean Builds
-
-It is possible to avoid polluting build targets with build time dependencies of a particular package by using `sfdk` with its `snapshot` configuration option active. With this option the build target is not used directly. Instead a snapshot is taken and the build is done using the snapshot of the build target.
-
-Consider enabling the `snapshot` globally:
-```nosh
-$ sfdk config --global --push snapshot
-```
-
-Should you need to customize the snapshot, like by adding custom repositories, consider using the `pre-pull-build-requires` hook for that purpose.
-
-Check `sfdk --help-building` for more details.
-
 ## Building Binaries Locally
 
 In some cases, you will not want to build an entire package (.rpm) to install, but instead want to build a single binary from a simple (most likely Qt-based) project. This can be handy, for example, during testing or prototyping.
