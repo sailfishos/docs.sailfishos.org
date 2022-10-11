@@ -1,6 +1,6 @@
 ---
 title: Reinstalling Sailfish OS
-permalink: Support/Help_Articles/Reinstalling_Sailfish_OS
+permalink: Support/Help_Articles/Reinstalling_Sailfish_OS/
 parent: Help Articles
 layout: default
 nav_order: 100
