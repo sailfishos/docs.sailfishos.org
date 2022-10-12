@@ -22,7 +22,7 @@ For this example, we will consider a hypothetical bug which affects the Sailfish
 
 6\) She clones that personal fork to her local host machine via `git clone https://github.com/alice/embedlite-components.git> alice-embedlite-components`
 
-7\) She builds the package
+7\) She attempts to build the package but it fails to locate some build time dependencies
 ```nosh
 # cd into her local clone
 ~ $ cd alice-embedlite-components
@@ -36,10 +36,10 @@ Building for target armv7hl-meego-linux
 error: Failed build dependencies:
     xulrunner-qt5-devel >= 60.9.1 is needed by embedlite-components-qt5-1.0.0-1.armv7hl
     pkgconfig(nspr) is needed by embedlite-components-qt5-1.0.0-1.armv7hl
+```
 
-# she knows that she needs to update her SDK target.
-# to find out which ssu repository provides those packages, she now ssh's into her device,
-# and runs `zypper info` (can also use `pkcon get-details` or search on OBS).
+8\) She knows that she needs to enable additional package repositories under her build environment. To find out which ssu repository provides those packages, she now ssh's into her device, and runs `zypper info` (can also use `pkcon get-details` or search on OBS).
+```nosh
 ~/alice-embedlite-components $ ssh defaultuser@device
 [defaultuser@XperiaXA2-DualSIM ~]$ devel-su -p pkcon install zypper
 ## snipped ##
@@ -59,10 +59,10 @@ Installed Size : 6.4 MiB
 Summary        : Headers for xulrunner
 Description    : abzaza
   Development files for xulrunner.
+```
 
-# she now knows that it comes from the "jolla" repository.
-# she goes back to her development terminal, and
-# enters the build target to update the ssu repositories.
+9\) She now knows that it comes from the "jolla" repository. She goes back to her development terminal, and enables the repository under her build environment the way suggested in [Enabling Additional Package Repositories](/Tools/Sailfish_SDK/Building_packages/#enabling-additional-package-repositories):
+```nosh
 ~/alice-embedlite-components $ sfdk tools exec SailfishOS-4.3.0.12-armv7hl
 
 # might be required to register her SDK depending on her SDK setup.
@@ -87,23 +87,24 @@ Disabled repositories (global, might be overridden by user config):
 # success! The missing package was found now
 ```
 
-8\) Now that she has successfully built the package locally, she tests deploying the package.
+10\) Now that she has successfully built the package locally, she tests deploying the package.
 ```nosh
 # she registered her device using the "my device" name within the Sailfish IDE before
 ~/alice-embedlite-components $ sfdk config device="my device"
+# she can deploy the convenient zypper-dup way
+~/alice-embedlite-components $ sfdk deploy --zypper-dup
+# or the forceful way
 ~/alice-embedlite-components $ sfdk deploy --manual
 ~/alice-embedlite-components $ sfdk device exec
-[defaultuser@XperiaXA2-DualSIM ~]$ devel-su zypper -p RPMS dup --from ~plus-repo-1 --details
-# or the forceful way
 [defaultuser@XperiaXA2-DualSIM ~]$ devel-su rpm -Uvh --force RPMS/embedlite-components-qt5-1.0.0-1.armv7hl.rpm
 ```
 
-9\) After rebooting the device and opening browser, she sees that it works. She is now ready to begin development. She makes changes, adds debug statements, deploys the package to the device, and retrieves the logging information from the journal with `devel-su journalctl -af | grep browser`.
+11\) After rebooting the device and opening browser, she sees that it works. She is now ready to begin development. She makes changes, adds debug statements, deploys the package to the device, and retrieves the logging information from the journal with `devel-su journalctl -af | grep browser`.
 
-10\) After she has resolved the issue, and commits her fix locally. She then pushes the commit to her personal fork, and creates a pull request to the upstream repository. This will look something like <https://github.com/sailfishos/embedlite-components/pull/14>
+12\) After she has resolved the issue, and commits her fix locally. She then pushes the commit to her personal fork, and creates a pull request to the upstream repository. This will look something like <https://github.com/sailfishos/embedlite-components/pull/14>
 
-11\) She now updates the issue report with her findings, and a link to her pull request.
+13\) She now updates the issue report with her findings, and a link to her pull request.
 
-12\) After receiving some review comments, she updates her commit with `git commit --amend`, force pushes it to her personal fork via `git push origin master:master --force` and comments in the merge request that it has been updated.
+14\) After receiving some review comments, she updates her commit with `git commit --amend`, force pushes it to her personal fork via `git push origin master:master --force` and comments in the merge request that it has been updated.
 
-13\) The maintainer merges the patch, tags it, and comments on the original bug report the tagged version which should be in a future release.
+15\) The maintainer merges the patch, tags it, and comments on the original bug report the tagged version which should be in a future release.
