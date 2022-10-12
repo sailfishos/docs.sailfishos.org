@@ -46,8 +46,8 @@ $ alias mb2='mb2 --target SailfishOS-4.4.0.58-aarch64'
 
 Enter a package directory. If you don’t have an existing package available, you can use the sample application as in the following example.
 ```nosh
-$ git clone https://github.com/sailfishos/cppqml-sample.git
-$ cd cppqml-sample
+$ git clone https://github.com/sailfishos/sample-app-cppqml.git
+$ cd sample-app-cppqml
 ```
 
 You can now perform an all-in-one build procedure using the `mb2 build` command. After a succesfull build the resulting RPM package(s) can be found under the RPMS directory:

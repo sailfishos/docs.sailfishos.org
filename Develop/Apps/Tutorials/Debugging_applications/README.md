@@ -13,7 +13,7 @@ Once you reach a situation when your application does not do what you want, e.g.
 
 ## Sample project
 
-The template project is a bit too simple for providing meaningful example about debugging, let's use the project from the [Combining C++ with QML tutorial](/Develop/Apps/Tutorials/Combining_C++_with_QML/) here. You can find the source code for the project in the [github repository](https://github.com/sailfishos/cppqml-sample). After cloning the project, you can open it in Sailfish IDE, by selecting the `cppqml.pro` file. Just like when creating a new project, select the suitable kits for your device and the emulator.
+The template project is a bit too simple for providing meaningful example about debugging, let's use the project from the [Combining C++ with QML tutorial](/Develop/Apps/Tutorials/Combining_C++_with_QML/) here. You can find the source code for the project in the [github repository](https://github.com/sailfishos/sample-app-cppqml). After cloning the project, you can open it in Sailfish IDE, by selecting the `cppqml.pro` file. Just like when creating a new project, select the suitable kits for your device and the emulator.
 
 <a href="configure.png" style="width:30em;display:block">
     <img src="configure.png"

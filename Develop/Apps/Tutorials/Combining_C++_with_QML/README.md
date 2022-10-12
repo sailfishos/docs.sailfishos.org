@@ -13,7 +13,7 @@ QML is the preferred way of developing apps for Sailfish OS. However there are m
 |-|
 |<span class="md_figcaption">Screenshot</span>|
 
-Combining C++ and QML requires three distinct steps. First we need to create a data model, then we need to expose it to the QML engine and finally we need to call methods on it. Let’s go through these steps in detail. Full source code for this sample can be checked out from [this repository](https://github.com/sailfishos/cppqml-sample).
+Combining C++ and QML requires three distinct steps. First we need to create a data model, then we need to expose it to the QML engine and finally we need to call methods on it. Let’s go through these steps in detail. Full source code for this sample can be checked out from [this repository](https://github.com/sailfishos/sample-app-cppqml).
 
 ## Creating the model
 
