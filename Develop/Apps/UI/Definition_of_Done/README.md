@@ -19,7 +19,7 @@ When you've developed a new feature, fixed a bug or generally have a contributio
       - There are no abrupt jumps, stutters or other noticeable drops in the frame rate during interaction.
       - Introduced changes do not compromise the application or page loading times.
       - All UI state transitions are fluid and smoothly animated.
-      - Use the available [performance tools] to measure and analyze the perfomance.
+      - Use the available performance tools to measure and analyze the perfomance.
       - Application memory consumption stays reasonable (e.g. measure with [smem](http://www.selenic.com/smem)).
       - UI scales gracefully to a lot of data points.
   - Feature is feature complete.
