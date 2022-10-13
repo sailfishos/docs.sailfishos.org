@@ -19,7 +19,7 @@ The template project is a bit too simple for providing meaningful example about 
     <img src="configure.png"
          alt="configure.png"
          class="md_thumbnail" style="max-width=100" />
-</a>         
+</a>
 
 ## Debugging with the Emulator
 
