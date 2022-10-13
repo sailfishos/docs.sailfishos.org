@@ -15,6 +15,7 @@ Welcome to the Sailfish OS Docs source repo.
     * [URLs](#urls)
     * [Syntax highlighting](#syntax-highlighting)
     * [Templates and forgotten ./precheckin.sh](#templates-and-forgotten-precheckinsh)
+    * [Images](#images)
 * [Feedback](#feedback)
 * [Credits](#credits)
 
@@ -157,6 +158,48 @@ It's good practice to surround URLs: `<http://some.url>`. GitHub will linkify ev
 #### Templates and forgotten `./precheckin.sh`
 
 If you are modifying a template (`*.mdpp` file), don't forget to run `./precheckin.sh` before committing.
+
+#### Images
+
+There is helper style `flex-images` for adding images. You can use it as follows:
+
+```
+<div class="flex-images" markdown="1">
+
+* <a href="example1.png"><img src="example1.png" alt="Example image 1"></a>
+  <span class="md_figcaption">
+    Example image 1
+  </span>
+</div>
+```
+
+If your image is narrow and tall, like device screenshots, you can use additional `narrow-image` style on the anchor tag.
+
+```
+<div class="flex-images" markdown="1">
+
+* <a href="example2.png" class="narrow-image"><img src="example2.png" alt="Example narrow image"></a>
+  <span class="md_figcaption">
+    Example narrow image
+  </span>
+</div>
+```
+
+You can use the `flex-images` style to add two narrow images, e.g. device screenshots, on a single row. In this case you don't have to use the `narrow-image` style. The style will gracefully fall back to displaying the images on separate rows if there isn't enough space to display them on one row. 
+
+```
+<div class="flex-images" markdown="1">
+
+* <a href="example1.png"><img src="example1.png" alt="Example image 1"></a>
+  <span class="md_figcaption">
+    Example image 1
+  </span>
+* <a href="example2.png"><img src="example2.png" alt="Example image 2"></a>
+  <span class="md_figcaption">
+    Example image 2
+  </span>
+</div>
+```
 
 ## Feedback
 
