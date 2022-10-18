@@ -41,7 +41,7 @@ Follow through the **chapter 4** until the end, and **ignore chapter 5**, instea
 ```nosh
 HABUILD_SDK $
 
-sudo apt-get install cpio libssl-dev
+sudo apt-get install cpio libssl-dev ccache
 sudo mkdir -p $ANDROID_ROOT
 sudo chown -R $USER $ANDROID_ROOT
 cd $ANDROID_ROOT
@@ -65,6 +65,7 @@ droid-src/apply-patches.sh --mb
 
 source build/envsetup.sh
 export USE_CCACHE=1
+export CCACHE_EXEC=/usr/bin/ccache
 lunch aosp_$DEVICE-user
 cd kernel/sony/msm-4.19/common-kernel
 ./build-kernels-clang.sh -d $HABUILD_DEVICE -O $ANDROID_ROOT/out/target/product/$HABUILD_DEVICE/obj/kernel || echo ERROR: kernel build failed, please inspect the log file
@@ -131,6 +132,7 @@ rpm/apply-patches.sh --mb
 
 source build/envsetup.sh
 export USE_CCACHE=1
+export CCACHE_EXEC=/usr/bin/ccache
 lunch aosp_$DEVICE-user
 # Ensure the middleware in the previous shell terminal has finished building
 # Change $(nproc --all) to your building capabilities, it will be very heavy on RAM if you go for more cores, proceed with care:
