@@ -3,6 +3,7 @@ title: Software Packaging
 permalink: Reference/Software_Packaging/
 layout: default
 nav_order: 200
+has_children: true
 ---
 
 Sailfish OS uses modern software packaging systems to allow controlled over-the-air updates. A given device will be registered for a specific variation of the operating system, where the variant specifies which packages (and which versions of which packages) that device should have access to.
