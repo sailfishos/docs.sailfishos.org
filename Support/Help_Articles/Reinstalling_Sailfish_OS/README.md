@@ -6,13 +6,16 @@ layout: default
 nav_order: 100
 ---
 
-Reverting Xperia device to Android OS and reinstalling Sailfish OS
+# Reverting Xperia device to Android OS and reinstalling Sailfish OS
 
 It has turned out that the following procedure may help if something has gone wrong while preparing the device for Sailfish OS and/or while installing Sailfish OS.
 
-These instructions were originally written for Xperia X. However, the same works for Xperia XA2, Xperia 10, Xperia 10 II, and Xperia 10 III models, too.
+These instructions are applicable for all [Xperia models supported by Sailfish OS](https://docs.sailfishos.org/Support/Supported_Devices/).
 
-Depending on the problems observed on your Xperia, it may be enough to reinstall ("reflash") Sailfish OS to it -- see this **[help article](https://jolla.zendesk.com/hc/en-us/articles/360002304714)**. However, if your Xperia cannot use the services of cellular network properly (or at all), then it may be necessary to revert the device back to Android first, and finally, reinstall Sailfish X.
+Depending on the problems observed on your Xperia, it may be enough to just **reinstall ("reflash") Sailfish OS** to it. It is good to try this easier way first. In this case, skip to chapter "[Installing Sailfish X again to Xperia](https://docs.sailfishos.org/Support/Help_Articles/Reinstalling_Sailfish_OS/#installing-sailfish-x-again-to-xperia)" in this document.
+
+
+However, if your Xperia cannot use the services of cellular network properly (or at all), then it may be necessary to revert the device back to Android OS first, and finally, reinstall Sailfish X.
 
 **NOTE:** Reverting the device back to Android means that **all data** in the device memory **will be deleted**. Only the SD and SIM cards remain untouched.
 
@@ -121,11 +124,11 @@ See picture 3 below. Do not forget to check that your phone has now the intended
 Picture 3: Check the Android version
 
 
-# Installing Sailfish X again to Xperia X, XA2, 10, 10 II, and 10 III
+# Installing Sailfish X again to Xperia
 
 Installing Sailfish can be made with Windows, Linux or Mac computers. In the next chapters, we have pointers to our official Sailfish X instructions.
 
-Make sure you have the **[latest available Sailfish OS](https://forum.sailfishos.org/tag/release-notes)** version downloaded to your computer and that the Sailfish variant is the correct one for your **phone model**. You can check the exact model by pulling out a white label from the SIM card slot, listing the info (e.g. H3113 or I4213). Other ways to check the model are the sales box label and the phone menus. Trying to install (flash) an incorrect one will fail.
+Make sure you have the **[latest available Sailfish OS](https://forum.sailfishos.org/tag/release-notes)** version downloaded to your computer and that the downloaded Sailfish image is the correct one for your **phone model**. You can check the exact model by pulling out a white label from the SIM card slot, listing the info (e.g. H3113 or I4213). Other ways to check the model are the sales box label and the phone menus. Trying to install (flash) an incorrect image will fail.
 
 The latest Sailfish OS version (and only the latest) is always available in **[this repository](https://shop.jolla.com/downloads/)** and can be downloaded from there. Please, sign in to this service by using the same Jolla account that you used for buying the Sailfish X license.
 
@@ -148,7 +151,7 @@ After downloading and unzipping the Sailfish package, it is good to check that t
 |<span class="md_figcaption">Picture 4c:Sony Xperia 10 II dual SIM (XQ-AU52)</span>|
 
 
-In particular, check that you have file "SW\_binaries\_for\_Xperia\_Android*.img" there. If missing, select the instructions applicable to you:
+In particular, check that you have the file "SW\_binaries\_for\_Xperia\_Android*.img" there. If missing, select the instructions applicable to you:
 
 * for Xperia X:      SW\_binaries\_for\_Xperia\_AOSP\_M\_MR1\_3.10\_**v13_loire**.img
     (if missing, visit chapter 5: **[Windows](https://jolla.com/sailfishx-windows-instructions/), [Linux](https://jolla.com/sailfishx-linux-instructions/), [Mac](https://jolla.com/sailfishx-macos-instructions/)** )  
@@ -173,10 +176,14 @@ Install (flash) Sailfish OS  to your Xperia. Select the instructions applicable
     
 
   
-While connecting the USB data cable (*) press the **Volume UP** button of the phone. Then, you must see a **BLUE light** lit on the phone (if green, disconnect, reconnect and try again - press the button gently).
+While connecting the USB data cable, press the **Volume Up** button of the phone. Then, you must see a **BLUE light** lit on the phone (if green, disconnect, reconnect and try again - press the button gently).
 
-After you have completed flashing, the printout similar to that shown in the **[PDF file Windows](/hc/en-us/article_attachments/360025713940/Flashing_Sailfish_X_to_Xperia_10_II_with_Windows_10_computer.pdf)** or **[PDF file Linux](/hc/en-us/article_attachments/360025717899/Flashing_Sailfish_X_to_Xperia_10_II_with_Linux_Ubuntu_computer.pdf)** should appear on your computer screen (Sailfish OS version ID will be different as time goes on).
-
+When the flashing script has reached the end, the lines 
+```
+Flashing completed.
+Remove the USB cable and bootup the device by pressing the Power key.
+```
+should appear on your computer screen.
 
 # Booting up to Sailfish OS
 
