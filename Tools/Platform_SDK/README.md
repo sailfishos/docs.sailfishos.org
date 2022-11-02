@@ -6,7 +6,9 @@ layout: default
 nav_order: 200
 ---
 
-**Attention: Platform development is now more convenient with the regular [Sailfish SDK](/Develop/Platform) through its command line frontend 'sfdk', available on all Linux, macOS and Windows. The Linux-only chroot based Sailfish Platform SDK remains available for special applications. It also remains the default (documented) option for [Hardware Adaptation Development](/Tools/Hardware_Adaptation_Development_Kit), although the regular Sailfish SDK can be used for that purpose as well.**
+The Sailfish Platform SDK is the default (documented) option for [Hardware Adaptation Development](/Tools/Hardware_Adaptation_Development_Kit). Further, it can be used for platform development.
+
+Note: Platform development is now more convenient with the regular [Sailfish SDK](/Develop/Platform) through its command line frontend 'sfdk', available on all Linux, macOS and Windows.
 
 # Overview
 
