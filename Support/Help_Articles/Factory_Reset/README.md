@@ -11,7 +11,7 @@ nav_order: 40
 * All user data, settings and accounts are deleted from the device and are **irretrievable** after this operation (however, data on the memory card remains intact) 
 * All applications installed by the user are removed
 * The operating system is reverted to the version the device had when leaving the factory or that was installed later by "flashing". You will need to update the phone to the latest OS version which implies installing a chain of Stop Releases. In the worst cases, this may take several hours.
-* **In the case of Xperia devices, we recommend re-installing (by "flashing") Sailfish OS to the device, instead of resetting it.** This is easier and saves you from many extra steps. While the reset reverts your phone to one of the earlier OS versions, you will get the latest OS release directly by flashing it to the phone. See our comparison of device reset to re-installation. Our instructions for flashing are in this support article.
+* **In the case of Xperia devices, we recommend re-installing (by "flashing") Sailfish OS to the device, instead of resetting it.** This is easier and saves you from many extra steps. While the reset reverts your phone to one of the earlier OS versions, you will get the latest OS release directly by flashing it to the phone. **[See our comparison](https://jolla.zendesk.com/hc/en-us/articles/4414662045074)** of device reset to re-installation. Our instructions for flashing are **[in this support article](https://docs.sailfishos.org/Support/Help_Articles/Reinstalling_Sailfish_OS/)**.
 
 # Preparation
 It is recommended to **[take a backup](https://jolla.zendesk.com/hc/en-us/articles/201804906)** of the data in your device and copy it to an **SD card** before running the reset (if possible). Once done then proceed to the reset.
@@ -21,7 +21,7 @@ Whether unsure if the device reset will erase data you will need once it's gone,
 # Resetting the device
 1. Connect a battery charger to the device.
 2. Go to menu Settings > System > 'Reset device'.
-**NOTE: This feature is missing from Xperia 10 II and Xperia 10 III devices. Consider re-installing ("flashing") the latest Sailfish OS release to the device. [This article](https://jolla.zendesk.com/hc/en-us/articles/201804906) explains how to do it.**
+**NOTE: This feature is missing from Xperia 10 II and Xperia 10 III devices. Consider re-installing ("flashing") the latest Sailfish OS release to the device. [This article](https://docs.sailfishos.org/Support/Help_Articles/Reinstalling_Sailfish_OS/) explains how to do it.**
 3. Tap 'Clear device'.
 4. Read the disclaimer, and tap 'Accept' if you are ready to proceed.
 5. If you have the device lock enabled, it will prompt for the security code.
