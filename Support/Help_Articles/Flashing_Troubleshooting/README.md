@@ -92,7 +92,7 @@ Also, send the output from the terminal window showing how the execution of the 
 ## Can the Sailfish community help
 
 Our community has many talented persons, even experts. One of them has composed the following instructions for those struggling with Sailfish installation. 
-The article (read-only) is beyond this **[link](https://together.jolla.com/question/222126/)**.
+The article (read-only) is beyond this **[link](https://gitlab.com/Olf0/sailfishX#guide-installing-sailfishx-on-xperias)**.
 We/Jolla have not tested the tricks and methods of that article. They may or may not help. Following those instructions requires a fair amount of skills with Linux commands and computer systems, so we do not recommend them for beginners. Use them with care and at your own risk.
 
 You can also search help or send questions to the **[Forum](https://forum.sailfishos.org/)**.
