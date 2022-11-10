@@ -1,9 +1,9 @@
 ---
-title: Making Backup and Restoring It
+title: Backup and Restore
 permalink: Support/Help_Articles/Backup_and_Restore/
 parent: Help Articles
 layout: default
-nav_order: 80
+nav_order: 13
 ---
 
 
