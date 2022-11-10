@@ -59,7 +59,7 @@ The emulator is an x86 VM image containing a stripped down version of the target
 
 ## sfdk command line tool
 
-sfdk is a command line tool which allows you to build software packages without using the Sailfish IDE. You can find the sfdk executable inside the bin directory of your Sailfish SDK installation. On Windows we recommend using it from MSYS2 shell for the best experience. On macOS a more recent version of `bash` and `bash-completion@2` from Homebrew is recommended.
+sfdk is a command line tool which allows you to build software packages without using the Sailfish IDE. You can find the sfdk executable inside the bin directory of your Sailfish SDK installation. Please be aware that on Windows it needs to be used from MSYS2 shell for proper operation. On macOS a more recent version of `bash` and `bash-completion@2` from Homebrew is recommended.
 
 ## Building blocks
 

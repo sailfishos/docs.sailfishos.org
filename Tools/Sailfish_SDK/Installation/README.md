@@ -52,7 +52,7 @@ A few hints on Docker installation:
 
 ### MSYS2 (Windows only)
 
-MSYS2 is not just the recommended environment in case you plan command line use of Sailfish SDK on Windows. It also satisfies certain dependencies of the Sailfish IDE.
+MSYS2 is not just the only one fully supported environment in case you plan command line use of Sailfish SDK on Windows. It also satisfies certain dependencies of the Sailfish IDE.
 
 Follow the general installation instructions on <https://www.msys2.org/>, then install the tools required by Sailfish SDK by issuing the following command under the shell invoked with the "MSYS2 MSYS" Start menu item:
 
