@@ -21,7 +21,7 @@ EMBED_CONSOLE=1 sailfish-browser
 ### Building with logging enabled
 
   - Logging is only available on development gecko builds. By default xulrunner builds as release for performance reasons.
-  - To switch to a development build, append an 'a' to the 'milestone' define in the spec.
+  - To switch to a development build, append an 'a' to the 'milestone' define in the RPM SPEC file.
   - The lib directory will also gain the 'a'. If you don't want to rebuild the other packages to link against the new path, create a symlink to this from the normal path.
 
 ### Enabling module log output

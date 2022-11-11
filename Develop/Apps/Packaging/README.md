@@ -137,7 +137,7 @@ $ sfdk build-shell ls /usr/share/qt5/mkspecs/features
 
 ### The .yaml File
 
-To create an RPM package, you need a `.spec` file that provides information about the software being packaged. For Sailfish OS projects, you don’t usually create or modify the `.spec` file directly. Instead, a more human-readable intermediate metadata file, a `.yaml` file, is used. The `.spec` file itself is generated automatically during the build process from the `.yaml` file.
+To create an RPM package, you need a SPEC file that provides information about the software being packaged. For Sailfish OS projects, you don’t usually create or modify the SPEC file directly. Instead, a more human-readable intermediate metadata file, a `.yaml` file, is used. The SPEC file itself is generated automatically during the build process from the `.yaml` file.
 
 An initial `.yaml` file is generated when you first create a project using the Sailfish OS Qt Quick application template under Sailfish IDE. You can see from the figure in the Installation Package Creation Overview section that the `.pro` file works as a source of data for the `.yaml` file. For this reason, the parts of the `.yaml` file are regenerated every time the Qt project file changed.
 
@@ -170,9 +170,9 @@ Files:
 - '%{_bindir}'
 ```
 
-Besides being the source for the generated `.spec` file, the `.yaml` is used to declare how to resolve both build-time and runtime dependencies for the project. These dependencies are controlled by the keywords described below.
+Besides being the source for the generated SPEC file, the `.yaml` is used to declare how to resolve both build-time and runtime dependencies for the project. These dependencies are controlled by the keywords described below.
 
-There are several keywords that control how the `.spec` file is generated. The most important of these are described next.
+There are several keywords that control how the SPEC file is generated. The most important of these are described next.
 
 #### Name (required)
 
@@ -220,7 +220,7 @@ Finding out which package provides which QML module may take a little detective 
 
 The *Files* keyword lists the files and directories that are copied to the system when the package is installed. Each of the files and paths listed in this section refers to one of the items in the `INSTALLS` declaration in the `sailfish.prf` file.
 
-Note that where the `.prf` file used Qt project variables, the `.yaml` file uses `.spec` file macros. The declarations for the project’s qml directory in the in the `.prf` file
+Note that where the `.prf` file used Qt project variables, the `.yaml` file uses SPEC file macros. The declarations for the project’s qml directory in the in the `.prf` file
 ```qmake
 qml.files = qml
 qml.path = /usr/share/$${TARGET}
@@ -251,15 +251,15 @@ The greater than or equal notation can be used to establish a minimum version re
 
 Where applicable, the use of *PkgConfigBR* preferred, as it insulates your project from possible package naming changes. The configuration can be referred to by the same name even if the package that provides it is renamed.
 
-### The .spec File
+### The SPEC File
 
-The `.spec` file contains instructions for building the project and for packaging the resulting binaries into an RPM package. The file is generated automatically during the build process from the `.yaml` file, and normally there is no need to modify the `.spec` manually. Every value that affects the generated file can usually be set elsewhere, for example via the `.yaml` file.
+The SPEC file contains instructions for building the project and for packaging the resulting binaries into an RPM package. The file is generated automatically during the build process from the `.yaml` file, and normally there is no need to modify the SPEC file manually. Every value that affects the generated file can usually be set elsewhere, for example via the `.yaml` file.
 
-If you take a look at the `.spec` file (it can be found in the rpm directory after the project has been built at least once), you’ll see it contains many of the values that were set in the `.yaml`, such as the package *Version* and *Requires* declarations.
+If you take a look at the SPEC file (it can be found in the rpm directory after the project has been built at least once), you’ll see it contains many of the values that were set in the `.yaml`, such as the package *Version* and *Requires* declarations.
 
-Most of the `.spec` file is overwritten during a build if the source `.yaml` file has changed. As such, there is little point in editing the `.spec` by hand, other than the sections which have been explicitly marked as editable.
+Most of the SPEC file is overwritten during a build if the source `.yaml` file has changed. As such, there is little point in editing the SPEC file by hand, other than the sections which have been explicitly marked as editable.
 
-Editable parts of the `.spec` are marked with `# >>` and `# <<`. For each step of the build process, there are markers for sections that are customizable. For example, the markers
+Editable parts of the SPEC file are marked with `# >>` and `# <<`. For each step of the build process, there are markers for sections that are customizable. For example, the markers
 ```specfile
 # >> build pre
 # << build pre
@@ -272,7 +272,7 @@ Editable parts of the `.spec` are marked with `# >>` and `# <<`. For each step o
 
 indicate points for custom commands to be executed before and after the project is compiled.
 
-For most Sailfish OS Qt Quick applications, there is no need to change the generated `.spec` file in any way. The generated file does everything that the vast majority of applications need but the customization option is there for the few exceptional cases that may require custom steps.
+For most Sailfish OS Qt Quick applications, there is no need to change the generated SPEC file in any way. The generated file does everything that the vast majority of applications need but the customization option is there for the few exceptional cases that may require custom steps.
 
 ### Tips and Tricks
 

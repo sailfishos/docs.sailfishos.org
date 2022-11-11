@@ -140,7 +140,7 @@ libfoo.so.1 -> libfoo.so.1.0.0
 libfoo.so.1.0 -> libfoo.so.1.0.0
 ```
 
-Since the build location is on the shared home directory from Windows which does not support symlinks, this error happens. You can work around this problem by setting `TARGET=plugin`, then a non-versioned library will be created during build time. If you want the symlinks in the RPM file, you could create them in the `%install` section of your `.spec` file like this:
+Since the build location is on the shared home directory from Windows which does not support symlinks, this error happens. You can work around this problem by setting `TARGET=plugin`, then a non-versioned library will be created during build time. If you want the symlinks in the RPM file, you could create them in the `%install` section of your SPEC file like this:
 ```specfile
 mv %{buildroot}/%{_libdir}/libfoo.so %{buildroot}/%{_libdir}/libfoo.so.1.0.0
 ln -s -t %{buildroot}/%{_libdir}/libfoo.so.1.0.0 %{buildroot}/%{_libdir}/libfoo.so
@@ -193,7 +193,7 @@ SDK issues the following build time warning when files with CRLF line endings ar
 Files with CRLF line endings found. Consult the Sailfish SDK FAQ to learn why to avoid that and how.
 ```
 
-Should you need to continue using CRLF line endings for your project files, it is sufficient that the RPM .spec and .yaml files use Unix-style line endings in order to suppress that warning.
+Should you need to continue using CRLF line endings for your project files, it is sufficient that the RPM SPEC and YAML files use Unix-style line endings in order to suppress that warning.
 
 ## Docker
 

@@ -57,11 +57,11 @@ $ ls ./RPMS
 cppqml-1.0-1.aarch64.rpm
 ```
 
-The recipe for building the package can be found in a .spec file in the rpm directory, in our exacmple case `rpm/cppqml.spec`.
+The recipe for building the package can be found in a SPEC file in the rpm directory, in our exacmple case `rpm/cppqml.spec`.
 
 ## Running arbitrary commands
 
-When you don't have a spec file, or you want to execute a command which is not in the spec, you can use the `mb2 build-shell` command to enter the build environment and execute commands directly. You can give the actual command you want to execute as an additional parameter.
+When you don't have a SPEC file, or you want to execute a command which is not in the SPEC file, you can use the `mb2 build-shell` command to enter the build environment and execute commands directly. You can give the actual command you want to execute as an additional parameter.
 ```nosh
 $ cat >hello.cpp <<END
 #include <iostream>
@@ -96,7 +96,7 @@ Any changes done under the build environment are persisted under build targets. 
 
 Use the 'build-requires diff' command to see how the current build environment differs from the clean build environment in terms of package installations, removals and replacements.
 
-**Note:** Installing packages with maintenance mode might be handy when experimenting, but you should always add the packages required for building packages as BuildRequires in the .spec file. It is a good habit to always verify that building a package works with a clean build enviroment.
+**Note:** Installing packages with maintenance mode might be handy when experimenting, but you should always add the packages required for building packages as BuildRequires in the SPEC file. It is a good habit to always verify that building a package works with a clean build enviroment.
 
 ## Further reading
 
