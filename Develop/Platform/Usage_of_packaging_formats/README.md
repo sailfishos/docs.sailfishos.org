@@ -9,17 +9,17 @@ nav_order: 100
 
 # Upstream git with submodules
 
-Submodules are usually sufficient in cases where we don't patch upstream a lot. Such packaging will usually contain a submodule named the same as the package **Name:** in .spec file, e.g. <https://github.com/sailfishos/crda/tree/master>
+Submodules are usually sufficient in cases where we don't patch upstream a lot. Such packaging will usually contain a submodule named the same as the package **Name:** in RPM SPEC file, e.g. <https://github.com/sailfishos/crda/tree/master>
 
 ## Creation/migration to submodules packaging
 
 If you are packaging a new upstream project (e.g. converting from dumb packaging or from scratch):
 ```nosh
 mkdir rpm/
-# Move .patch and .spec files to rpm/ from old packaging
+# Move .patch and SPEC files to rpm/ from old packaging
 # Ensure it does %autosetup -p1 -n %{name}-%{version}/%{name}
 
-# Create upstream submodule, <subdir name> should match package "Name:" in .spec file
+# Create upstream submodule, <subdir name> should match package "Name:" in SPEC file
 git submodule add <upstream git> <subdir name>
 cd <subdir name>
 git checkout <specific upstream tag or revision> # e.g. 0.1
@@ -44,7 +44,7 @@ git add -A # etc.
       - easy to see and track upstream
       - separate history of own changes and packaging from upstream history
   - Cons
-      - Need to modify .spec file to do building in subdir
+      - Need to modify RPM SPEC file to do building in subdir
       - Can't apply patches to upstream tree, they live as separate patches in rpm/
       - Gets easily out-of-hand as number of patches increases
 
@@ -52,7 +52,7 @@ git add -A # etc.
 
 Useful where there are many modifications to the upstream that are not accepted as part of the upstream (at least not yet), when it eventually becomes very tedious to version control many .patch files.
 
-You can recognise such packaging when the submodule is called **upstream** as well as directory matching the value of **Name:** in .spec, e.g. <https://github.com/sailfishos/connman/tree/master>
+You can recognise such packaging when the submodule is called **upstream** as well as directory matching the value of **Name:** in SPEC, e.g. <https://github.com/sailfishos/connman/tree/master>
 
 ## Creating subtrees packaging
 
@@ -81,7 +81,7 @@ cp /somewhere/with/packaging/connman.spec rpm/
 # Ensure it does %autosetup -p1 -n %{name}-%{version}/%{name}
 
 # subtree-merge the contents of the remote to a prefix, with squashing the commits
-# --prefix should match package "Name:" of our .spec file
+# --prefix should match package "Name:" of our SPEC file
 git subtree add --squash --prefix=connman upstream reference-branch
 
 # Apply old .patch files within the subtree prefix directory (e.g. connman/)

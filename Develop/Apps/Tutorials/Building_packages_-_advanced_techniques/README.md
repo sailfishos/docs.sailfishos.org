@@ -40,7 +40,7 @@ Choose the `i486` target as we will be running in emulator first.
 $ sfdk config target=SailfishOS-4.4.0.58-i486
 ```
 
-This guide assumes that all build dependencies that are not available by default are declared in the RPM `spec` file, so that they get installed automatically when you build your package. Should there be a reason to install more build dependencies manually, it can be done using `sfdk tools package-install` and related commands.
+This guide assumes that all build dependencies that are not available by default are declared in the RPM SPEC file, so that they get installed automatically when you build your package. Should there be a reason to install more build dependencies manually, it can be done using `sfdk tools package-install` and related commands.
 
 ## Building the sample application
 
@@ -62,7 +62,7 @@ $ sfdk make-install
 $ sfdk package
 ```
 
-Similarly to the `sfdk cmake` command, the `sfdk qmake` command exists for qmake based projects. Together with `sfdk make`, these commands allow to run `rpmbuild` in a way that just the corresponding part of the `%build` section of the .spec file is executed. Run these with `--help` to learn more.
+Similarly to the `sfdk cmake` command, the `sfdk qmake` command exists for qmake based projects. Together with `sfdk make`, these commands allow to run `rpmbuild` in a way that just the corresponding part of the `%build` section of the SPEC file is executed. Run these with `--help` to learn more.
 
 ## Running the sample application in the emulator
 
@@ -256,11 +256,11 @@ With this configuration, the project may be also built directly from Sailfish ID
 
 As an example of an alternative editing environment, consider using the ViM editor with YouCompleteMe plugin installed. With the YouCompleteMe plugin ViM looks for `compile_commands.json` file up the file system hierarchy starting from the directory when the file being edited exists, so at this point it should be all set up and after opening the `lib/automakesample.cpp` file all features provided by the YouCompleteMe plugin should be available.
 
-## Writing developer-friendly RPM spec files
+## Writing developer-friendly RPM SPEC files
 
-Nothing special is needed from a spec file to allow a full, in-place build to be performed (once) with the `sfdk build` command. A little of awareness is needed to allow more developer-friendly workflows with incremental (re)builds and shadow builds involved.
+Nothing special is needed from a SPEC file to allow a full, in-place build to be performed (once) with the `sfdk build` command. A little of awareness is needed to allow more developer-friendly workflows with incremental (re)builds and shadow builds involved.
 
-1.  The build and install procedure should be fully realized using the underlying build system (qmake, CMake, GNU Automake, make, ...) with no additional steps implemented at RPM spec level. This also means that the `%doc` macro should not be used.
+1.  The build and install procedure should be fully realized using the underlying build system (qmake, CMake, GNU Automake, make, ...) with no additional steps implemented at RPM SPEC file level. This also means that the `%doc` macro should not be used.
 2.  If the build system is other than qmake or CMake, and a configure-like step is involved in package's build procedure, the `%build` section should be written in a way that this step is skipped for repeated, incremental builds.
 
 Examples of well-written `%build` and `%install` sections follow.
@@ -302,13 +302,13 @@ make %{?_smp_mflags} doc
 
 ## Declaring dependencies
 
-If your package has run time dependencies to other packages, such dependencies should be stored in the package metadata so that package manager can install also the dependencies when installing your package. We can control this metadata in the .spec files. The simple way to add a dependency is by adding a Requires field to fhe .spec:
+If your package has run time dependencies to other packages, such dependencies should be stored in the package metadata so that package manager can install also the dependencies when installing your package. We can control this metadata in the SPEC files. The simple way to add a dependency is by adding a Requires field to the SPEC file:
 ```specfile
 Requires:   sailfishsilica-qt5 >= 0.10.9
 Requires:   libsailfishapp-launcher
 ```
 
-In many cases this is not necessary: If your app links to the Harbour-allowed libraries, or uses Harbour-allowed Python modules, the dependencies are created automatically. However, this process is not 100% accurate, so it might be necessary to add or remove dependencies manually in the .spec file.
+In many cases this is not necessary: If your app links to the Harbour-allowed libraries, or uses Harbour-allowed Python modules, the dependencies are created automatically. However, this process is not 100% accurate, so it might be necessary to add or remove dependencies manually in the SPEC file.
 
 If the automated process adds an unwanted depencency, it can be disabled for a single depencency using `%define __requires_exclude`. For example, if the automated depencency generation added an unwanted depencency to a python module called "wrongmodule", you could disable that by writing:
 ```specfile

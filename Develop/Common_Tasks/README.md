@@ -17,7 +17,7 @@ To do so, the contributor must:
 
 1.  request that a new repository be created
 2.  commit the code to that repository following the [Collaborative Development](/Develop/Collaborate) process
-3.  write an RPM .spec package file and commit that to the repository
+3.  write an RPM SPEC file and commit that to the repository
 4.  trigger OBS to build the package
 5.  ensure that the package is pulled into an image via the appropriate "pattern"
 
