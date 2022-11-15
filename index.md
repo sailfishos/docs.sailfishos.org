@@ -49,28 +49,6 @@ Sailfish OS is developed by <a href="https://jolla.com">Jolla</a> and powered by
 </div>
 <br>
 <div class="landing-container landing-blank-container">
-  <a href="/Support/Supported_Devices">
-  <div class="landing-blank">
-    <span class="landing-head">Supported<br/>Devices</span>
-    <div  class="landing-text landing-box-text">
-      Officially supported devices running Sailfish OS.
-      <br/><br/><br/>
-      <span class="landing-link">Learn more ›</span>
-    </div>
-  </div></a>
-</div>
-<div class="landing-container landing-blank-container">
-  <a href="/Support/Releases">
-  <div class="landing-blank">
-    <span class="landing-head">Releases</span>
-    <div  class="landing-text landing-box-text">
-      Public Sailfish OS releases.
-      <br/><br/><br/><br/>
-      <span class="landing-link">Learn more ›</span>
-    </div>
-  </div></a>
-</div>
-<div class="landing-container landing-blank-container">
   <a href="https://sailfishos.org/design/">
   <div class="landing-blank">
     <span class="landing-head">User<br/>Experience</span>
@@ -120,6 +98,18 @@ Sailfish OS is developed by <a href="https://jolla.com">Jolla</a> and powered by
     <span class="landing-head">Services</span>
     <div  class="landing-text landing-box-text">
       The online tools we use to facilitate the development and deployment process.
+      <br/><br/><br/>
+      <span class="landing-link">Learn more ›</span>
+    </div>
+  </div></a>
+  <div class="clearfix"></div>
+</div>
+<div class="landing-container landing-blank-container">
+  <a href="/Support">
+  <div class="landing-blank">
+    <span class="landing-head">Support</span>
+    <div  class="landing-text landing-box-text">
+      Help articles, supported devices and public Sailfish OS releases.
       <br/><br/><br/>
       <span class="landing-link">Learn more ›</span>
     </div>
