@@ -68,7 +68,7 @@ scp ./RPMS/<package>.rpm <user>@device:
 Listen to system logs
 ```nosh
 devel-su journalctl -fa # Sailfish
-devel-su chroot /opt/alien/ /system/bin/logcat -v time # Android apps
+devel-su /system/bin/logcat -v time # Android apps
 ```
 
 See also [logcat usage help article](https://jolla.zendesk.com/hc/en-us/articles/204110913)
@@ -104,6 +104,12 @@ dconf read /desktop/meego/background/portrait/picture_filename
 ```
 
 List incoming hardware input events
+
+Install mcetool
+```nosh
+zypper in mce-tools
+```
+
 ```nosh
 evdev_trace -t
 ```
@@ -180,6 +186,9 @@ There are many categories defined in Sailfish OS such as:
 org.sailfishos.settings.memorycard
 org.sailfishos.browser.core
 ```
+
+Qt logging categories can be searched from sources by looking for `Q_LOGGING_CATEGORY`.
+
 `
 Some processes can be made more verbose by installing specific "tracing" packages which configure the service to be more verbose when installed (via `devel-su -p pkcon install <pkgname>`). Some examples include:
 ```
