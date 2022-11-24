@@ -3,7 +3,7 @@ title: People App and Contacts
 permalink: Support/Help_Articles/People_App_and_Contacts/
 parent: Help Articles
 layout: default
-nav_order: 88
+nav_order: 600
 ---
 
 The People app is the **phonebook** of your Sailfish device. It is possible to add contacts to it by typing or by importing them. If you sign in to accounts like Google, Nextcloud, or Exchange, the contacts from them can be synchronised to your People app automatically.

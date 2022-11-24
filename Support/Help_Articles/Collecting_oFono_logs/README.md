@@ -3,7 +3,7 @@ title: Collecting oFono logs
 permalink: Support/Help_Articles/Collecting_oFono_logs/
 parent: Help Articles
 layout: default
-nav_order: 20
+nav_order: 310
 ---
 
 oFono is the SailfishOS component communicating with the cellular modem of the phone. oFono provides the SailfishOS applications with the cellular services. If there are problems in getting access to the Internet over a mobile data connection, for instance, it may be good to collect some oFono logs.

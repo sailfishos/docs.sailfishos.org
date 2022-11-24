@@ -3,7 +3,7 @@ title: Sailfish X licence
 permalink: Support/Help_Articles/Sailfish_X_Licence/
 parent: Help Articles
 layout: default
-nav_order: 650
+nav_order: 700
 ---
 
 

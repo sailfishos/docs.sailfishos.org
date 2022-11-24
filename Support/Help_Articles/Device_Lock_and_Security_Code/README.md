@@ -3,7 +3,7 @@ title: Device Lock and Security Code
 permalink: Support/Help_Articles/Device_Lock_and_Security_Code/
 parent: Help Articles
 layout: default
-nav_order: 23
+nav_order: 350
 ---
 
 

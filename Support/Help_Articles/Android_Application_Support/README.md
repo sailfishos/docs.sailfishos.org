@@ -3,7 +3,7 @@ title: Android Application Support
 permalink: Support/Help_Articles/Android_Application_Support/
 parent: Help Articles
 layout: default
-nav_order: 10
+nav_order: 110
 ---
 
 Sailfish OS aims to be compatible with the majority of Android apps, but due to the sheer volume of Android applications designed for Android-based devices with different configurations, we cannot guarantee 100% compatibility.

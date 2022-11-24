@@ -3,7 +3,7 @@ title: Internet Connections over Mobile Data and WiFi
 permalink: Support/Help_Articles/Internet_Connections/
 parent: Help Articles
 layout: default
-nav_order: 70
+nav_order: 510
 ---
 
   

@@ -3,7 +3,7 @@ title: Backup Extraction
 permalink: Support/Help_Articles/Backup_Extraction/
 parent: Help Articles
 layout: default
-nav_order: 14
+nav_order: 210
 ---
 
 The Restore function of Sailfish OS is to bring the data back to apps from a backup file. Sometimes this may fail, due to various reasons. In such a case there may be the need to rescue some data from the backup file manually. This article explains how to do it - using contacts and calendar appointments as an example.

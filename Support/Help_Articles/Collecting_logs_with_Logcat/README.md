@@ -3,7 +3,7 @@ title: Collecting logs with Logcat
 permalink: Support/Help_Articles/Collecting_logs_with_Logcat/
 parent: Help Articles
 layout: default
-nav_order: 15
+nav_order: 300
 ---
 
 When experiencing issues related to Android applications, collecting logs might provide additional information as to what is causing the issue. 

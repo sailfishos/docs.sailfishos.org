@@ -3,7 +3,7 @@ title: Recovery Mode
 permalink: Support/Help_Articles/Recovery_Mode/
 parent: Help Articles
 layout: default
-nav_order: 96
+nav_order: 630
 ---
 
 If your Xperia 10 II is not starting up normally or not starting up at all, you can attempt to fix your device with the help of the Recovery Mode. This article will provide you with step-by-step instructions on recovering a malfunctioning device.

@@ -3,7 +3,7 @@ title: SD Card Format and Encryption
 permalink: Support/Help_Articles/SD_Card_Format_and_Encryption/
 parent: Help Articles
 layout: default
-nav_order: 700
+nav_order: 720
 ---
 
 # Introduction

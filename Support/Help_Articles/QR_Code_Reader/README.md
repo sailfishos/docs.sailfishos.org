@@ -3,7 +3,7 @@ title: QR Code Reader
 permalink: Support/Help_Articles/QR_Code_Reader/
 parent: Help Articles
 layout: default
-nav_order: 92
+nav_order: 620
 ---
 
 The QR code reader can be enabled from Settings > Apps > Camera. After the feature is enabled the camera viewfinder will automatically recognise QR codes in the view and show a button for converting the code to a web address (URL).

@@ -3,7 +3,7 @@ title: Battery Lifetime
 permalink: Support/Help_Articles/Battery_Lifetime/
 parent: Help Articles
 layout: default
-nav_order: 14
+nav_order: 250
 ---
 
 Battery lifetime depends on how the device is used. Making a lot of calls, playing games and streaming videos consumes a lot of power compared to the case where the device is in an idle state with the display blank. Your device heating up is a sign of heavy strain on the device, meaning high battery drain.
