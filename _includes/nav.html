@@ -56,6 +56,11 @@
   {%- endfor -%}
 
   {%- assign pages_list = sorted_number_ordered_pages | concat: sorted_string_ordered_pages -%}
+
+  {%- assign link_array = page.url | split: "/" -%}
+  {%- if link_array.size < 3 -%}
+    {%- assign root_page_first_active = true -%}
+  {%- endif -%}
   
   {%- for node in pages_list -%}
     {%- comment -%}
@@ -70,7 +75,8 @@
       {%- unless node.nav_exclude -%}
       {%- assign topmost = node.url | split: "/" | slice: 1 -%}
       {{ node.parent | split: "/" | slice: 1 == page.url | split: "/" | slice: 1 }}
-      <li class="nav-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
+      <li class="nav-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title or root_page_first_active == true %} active{% endif %}">
+        {%- assign root_page_first_active = false -%}
         {%- if node.has_children -%}
           <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
         {%- endif -%}
