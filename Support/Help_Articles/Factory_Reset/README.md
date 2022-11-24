@@ -3,7 +3,7 @@ title: Factory Reset
 permalink: Support/Help_Articles/Factory_Reset/
 parent: Help Articles
 layout: default
-nav_order: 40
+nav_order: 440
 ---
 
 # Device reset to factory settings means the following

@@ -3,7 +3,7 @@ title: Internet Sharing
 permalink: Support/Help_Articles/Internet_Sharing/
 parent: Help Articles
 layout: default
-nav_order: 75
+nav_order: 520
 ---
 
 # What does 'Internet sharing' mean?

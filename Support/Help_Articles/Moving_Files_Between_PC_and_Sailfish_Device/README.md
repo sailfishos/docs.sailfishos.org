@@ -3,7 +3,7 @@ title: Moving files between a PC and a Sailfish Device
 permalink: Support/Help_Articles/Moving_Files_Between_PC_and_Sailfish_Device/
 parent: Help Articles
 layout: default
-nav_order: 85
+nav_order: 580
 ---
 
 

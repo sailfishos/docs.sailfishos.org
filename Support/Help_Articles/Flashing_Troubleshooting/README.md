@@ -3,7 +3,7 @@ title: Flashing Troubleshooting
 permalink: Support/Help_Articles/Flashing_Troubleshooting/
 parent: Help Articles
 layout: default
-nav_order: 50
+nav_order: 470
 ---
 
 # Flashing Sailfish to Xperia phone fails, troubleshooting.

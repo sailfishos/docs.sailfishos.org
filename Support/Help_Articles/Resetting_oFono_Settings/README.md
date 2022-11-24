@@ -3,7 +3,7 @@ title: Resetting oFono Settings
 permalink: Support/Help_Articles/Resetting_oFono_Settings/
 parent: Help Articles
 layout: default
-nav_order: 150
+nav_order: 670
 ---
 
 It may be that it is not possible to turn mobile data on by tapping the top most item in Settings > Mobile networks. The following tricks may be of help. 

@@ -3,7 +3,7 @@ title: Importing Contacts
 permalink: Support/Help_Articles/Importing_Contacts/
 parent: Help Articles
 layout: default
-nav_order: 60
+nav_order: 500
 ---
 
 

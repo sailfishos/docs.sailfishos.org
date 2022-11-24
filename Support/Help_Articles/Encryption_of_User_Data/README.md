@@ -3,7 +3,7 @@ title: Encryption of User Data
 permalink: Support/Help_Articles/Encryption_of_User_Data/
 parent: Help Articles
 layout: default
-nav_order: 30
+nav_order: 420
 ---
 
 

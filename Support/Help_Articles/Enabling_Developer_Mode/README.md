@@ -3,7 +3,7 @@ title: Enabling Developer Mode
 permalink: Support/Help_Articles/Enabling_Developer_Mode/
 parent: Help Articles
 layout: default
-nav_order: 25
+nav_order: 400
 ---
 
 

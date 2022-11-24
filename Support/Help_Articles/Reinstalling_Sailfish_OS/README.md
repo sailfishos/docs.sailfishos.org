@@ -3,7 +3,7 @@ title: Reinstalling Sailfish OS
 permalink: Support/Help_Articles/Reinstalling_Sailfish_OS/
 parent: Help Articles
 layout: default
-nav_order: 100
+nav_order: 650
 ---
 
 # Reverting Xperia device to Android OS and reinstalling Sailfish OS
