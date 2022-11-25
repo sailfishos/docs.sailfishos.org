@@ -79,6 +79,12 @@ In order to maintain compatibility with older Linux distributions, Sailfish SDK 
   - On Fedora the package ncurses-compat-libs must be installed
   - If you find no way to fix libtinfo.so.5 on your system, you may try creating it as a symbolic link to your system libncurses.so.5 (or even libncurses.so.6 or libtinfo.so.6)
 
+#### openssl 1.1 (Linux only)
+
+In order to maintain compatibility with older Linux distributions, Sailfish SDK links to this library, which may not be installed by default on more recent distributions:
+
+  - On Fedora the package openssl1.1 must be installed
+
 #### Modern bash
 
 _Sailfish SDK 3.7 and newer._
