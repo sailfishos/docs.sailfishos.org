@@ -54,6 +54,14 @@ These are the known issues with the Sailfish SDK. If you have any questions, fee
       - Sailfish IDE needs restart after changing SSH port of a Docker based build engine
       - Error starting the build engine on [Linux hosts with cgroups v2](https://forum.sailfishos.org/t/issues-with-installing-sailfish-sdk-docker-with-debian-bullseye-11/4454)
           - It is usually possible to revert back to cgroups v1 by adding `systemd.unified_cgroup_hierarchy=false` to the host kernel command line
+      - On some systems package manager gets stuck or crashes due to unreasonably high file descriptor limit and builds will not get past initialization phase. You may stop build engine with `sfdk engine stop` and then use this workaround:
+
+            sfdk engine exec sudo tee /etc/security/limits.d/95-nofile-sdk-fix.conf <<END
+            # This is a workaround for issues with package manager
+            * hard nofile 4096
+            root hard nofile 4096
+            END
+
 
 ### Sailfish OS Emulator
 
