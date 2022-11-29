@@ -1,9 +1,10 @@
 ---
 title: Setup General Email Account
-permalink: Support/Help_Articles/Setup_General_Email_Account/
-parent: Help Articles
+permalink: Support/Help_Articles/Accounts_Setup/Setup_General_Email_Account/
+parent: Accounts Setup
+grand_parent: Help Articles
 layout: default
-nav_order: 760
+nav_order: 400
 ---
 
 On Sailfish OS, accounts are created and managed in the menu "Settings > Accounts".

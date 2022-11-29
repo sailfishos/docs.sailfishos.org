@@ -1,9 +1,10 @@
 ---
 title: Setup Exchange Account
-permalink: Support/Help_Articles/Setup_Exchange_Account/
-parent: Help Articles
+permalink: Support/Help_Articles/Accounts_Setup/Setup_Exchange_Account/
+parent: Accounts Setup
+grand_parent: Help Articles
 layout: default
-nav_order: 750
+nav_order: 300
 ---
 
 

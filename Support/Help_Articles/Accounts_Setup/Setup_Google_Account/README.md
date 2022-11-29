@@ -1,9 +1,10 @@
 ---
 title: Setup Google Account
-permalink: Support/Help_Articles/Setup_Google_Account/
-parent: Help Articles
+permalink: Support/Help_Articles/Accounts_Setup/Setup_Google_Account/
+parent: Accounts Setup
+grand_parent: Help Articles
 layout: default
-nav_order: 770
+nav_order: 500
 ---
 
 Adding the Google account to your Sailfish OS device will allow you to:
