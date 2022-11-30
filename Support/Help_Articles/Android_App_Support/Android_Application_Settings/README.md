@@ -1,7 +1,8 @@
 ---
 title: Android Application Settings
-permalink: Support/Help_Articles/Android_Application_Settings/
-parent: Help Articles
+permalink: Support/Help_Articles/Android_App_Support/Android_Application_Settings/
+parent: Android App Support
+grand_parent: Help Articles
 layout: default
 nav_order: 100
 ---
@@ -109,8 +110,8 @@ Some Android apps produce sounds on every tap to the touch screen which may turn
 
 Learn more about Android App Support by clicking the links below.
 
-* What Android apps does Sailfish OS support and how do I get them? Read the document **[Android Application Support](/Support/Help_Articles/Android_Application_Support/)**
-* [Uninstalling Android App Support](https://jolla.zendesk.com/hc/en-us/articles/360015459134)
+* What Android apps does Sailfish OS support and how do I get them? Read the document **[Android Application Support](/Support/Help_Articles/Android_App_Support/)**
+* How to get rid of Android App Support? Read this: **[Uninstalling Android App Support](/Support/Help_Articles/Android_App_Support/Removing_Android_App_Support/)**.
 
 
 
