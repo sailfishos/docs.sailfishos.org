@@ -1,16 +1,17 @@
 ---
-title: Android Application Support
-permalink: Support/Help_Articles/Android_Application_Support/
+title: Android App Support
+permalink: Support/Help_Articles/Android_App_Support/
 parent: Help Articles
+has_children: true
 layout: default
-nav_order: 110
+nav_order: 100
 ---
 
 Sailfish OS aims to be compatible with the majority of Android apps, but due to the sheer volume of Android applications designed for Android-based devices with different configurations, we cannot guarantee 100% compatibility.
 
 In this article, you will learn how to make the best of the **Android™ App Support** on your Sailfish device.
 
-If you would like to remove Android apps (and support) from your Sailfish device, read [**this help article**](https://jolla.zendesk.com/hc/en-us/articles/360015459134).
+If you would like to remove Android apps (and support) from your Sailfish device, read [**this help article**](/Support/Help_Articles/Android_App_Support/Removing_Android_App_Support/).
 
 # Installing Android applications on your Sailfish device
 Installing Android applications is done by downloading **apk** files (an Android package file used to distribute applications) from application stores and by then installing them to your Sailfish device.
@@ -19,12 +20,12 @@ Before installing any Android apps one must install **Android™ App Support** (
 
 Android apps are installed in the internal storage of a phone. Installing apps on SD cards is not supported.
 
-After installing Android apps, the folder /home/.android/data/app shows all of your installed Android apps. The folder /home/defaultuser/android_storage/Android/data/ contains the data meaningful to you in various Android apps.
+After installing Android apps, the folder ```/home/.android/data/app``` shows all of your installed Android apps. The folder ```/home/defaultuser/android_storage/Android/data/``` contains the data meaningful to you in various Android apps.
 
 ## Installing applications from application stores
 The SailfishOS operating system of Jolla supports Android apps that are featured in the Jolla Store and in Jolla-certified app partner stores.
 
-We recommend first checking what is available in **Aptoide Store** [**Related help article here**](https://jolla.zendesk.com/hc/en-us/articles/202442148). This is our Android apps Store by Aptoide, available in Jolla Store (in category Marketplaces). After installing this app, it appears simply as **"Aptoide"** at the Sailfish apps grid.
+We recommend first checking what is available in **[Aptoide Store](https://jolla.zendesk.com/hc/en-us/articles/202442148)**. This is our Android apps store by Aptoide, available in the Jolla Store app (in category Marketplaces). After installing this app, it appears simply as **"Aptoide"** at the Sailfish apps grid.
 
 <div class="flex-images" markdown="1">
 
@@ -37,7 +38,7 @@ We recommend first checking what is available in **Aptoide Store** [**Related he
 There are also other Android app stores (see examples below), some of which we have tried out, and it is possible to download these stores to your Sailfish device and install apps from there.
 Some examples of other app stores:
 
-* APKpure  (see this [**help article**](https://jolla.zendesk.com/hc/en-us/articles/360011155279))
+* APKpure  (see this [**help article**](/Support/Help_Articles/Android_App_Support/APKPure/))
 * [**F-Droid**](https://f-droid.org/en/) (can be installed from Marketplaces of Jolla Store)
 * Aurora Store (can be installed from F-Droid)
 * [**Amazon**](http://www.amazon.com/gp/mas/get/android)
@@ -53,18 +54,18 @@ NOTE: We recommend installing Android apps directly from application stores (see
 
 ### Downloading with the Browser
 
-You can web search via the Sailfish browser for the app you are interested in and if you find the application's .apk file, you can download it, and then install it. The browser downloads the files to folder Downloads. To learn how to quickly go to Transfers from the Browser, please have a look [**here**](https://jolla.zendesk.com/hc/en-us/articles/204665507-).
+You can web search via the Sailfish browser for the app you are interested in and if you find the application's .apk file, you can download it, and then install it. The browser downloads the files to folder Downloads. Read about the Sailfish Browser [**in this document**](/Support/Help_Articles/Web_Browser/).
 
 Transfers can also be found in Settings > Transfers.
 
 Once you see the list of downloaded files, tap on the file to begin installing it.
 
-[**This help article**](https://jolla.zendesk.com/hc/en-us/articles/360011155279) has the detailed steps of installing APK Pure app store using this method.
+[**This help article**](/Support/Help_Articles/Android_App_Support/APKPure/) has the detailed steps of installing APK Pure app store using this method.
 
 ### Using File Manager
-Another option to install .apk files is to first copy them to your device (e.g. to the Downloads folder) and then use the **File manager** application (Settings > Storage > User data, see the pulley menu) to install the file/application (tap the .apk file in File Manager). To transfer files between your PC and your Sailfish device please [**see here**](https://docs.sailfishos.org/Support/Help_Articles/Moving_Files_Between_PC_and_Sailfish_Device/).
+Another option to install .apk files is to first copy them to your device (e.g. to the Downloads folder) and then use the **File manager** application (Settings > Storage > User data, see the pulley menu) to install the file/application (tap the .apk file in File Manager). To transfer files between your PC and your Sailfish device please [**see this document**](/Support/Help_Articles/Moving_Files_Between_PC_and_Sailfish_Device/).
 
-[**File Browser**](https://jolla.zendesk.com/hc/en-us/articles/205281757) app (available at Jolla Store) is another option for doing the same.
+[**File Browser**](/Support/Help_Articles/File_Browser/) app (available in Jolla Store) is another option for doing the same.
 
 ### Installing via Email
 
@@ -94,7 +95,7 @@ Some apps may show a disclaimer that they require a higher "Android SDK version"
 [^2]: Android App Support running on Xperia XA2 and on Xperia 10 simulates Android 8.1 "Oreo" but it is compatible with the hardware drivers of Android 9 (AOSP 9). This makes it possible to install Sailfish OS to a device having Android 9. However, Android App Support v.8.1 of Sailfish OS is not compatible with Android apps or features requiring Android v.9 - such apps/features would not run on any Sailfish devices.
 
 # Settings of Android apps
-[**The help article**](https://jolla.zendesk.com/hc/en-us/articles/360013922680) contains information about accessing and changing the generic and application-specific settings of your Android apps.
+[**This document**](/Support/Help_Articles/Android_App_Support/Android_Application_Settings/) contains information about accessing and changing the generic and application-specific settings of your Android apps.
 
 # Troubleshooting and FAQ
 
@@ -124,7 +125,7 @@ reboot
 
 You can download Android application stores from Marketplaces of Jolla Store. The availability depends on your Sailfish OS device but all of them have at least Aptoide Store. Aptoide has perhaps the biggest offering of applications. You may find what you are looking for by using Aptoide's "Search Other Stores" function.
 
-To read more about using the APKPure app store, please [**read this**](https://jolla.zendesk.com/hc/en-us/articles/360011155279).
+To read more about using the APKPure app store, please [**read this**](/Support/Help_Articles/Android_App_Support/APKPure/).
 
 To read more about using the Aptoide app store in general, please [**see here**](https://jolla.zendesk.com/hc/en-us/articles/202442148).
 
@@ -156,11 +157,11 @@ So, sign in from your Xperia device to the same Jolla account that you used when
 
 **Q: How can I change the permissions of Android apps?**
 
-See [**this article**](https://jolla.zendesk.com/hc/en-us/articles/360013922680), please.
+See [**this article**](/Support/Help_Articles/Android_App_Support/Android_Application_Settings/), please.
 
 **Q: How can I uninstall Android apps and Android App Support?**
 
-See [**this article**](https://jolla.zendesk.com/hc/en-us/articles/360015459134), please.
+See [**this article**](/Support/Help_Articles/Android_App_Support/Removing_Android_App_Support/), please.
 
 **Q: I cannot install or open an Android app as it says "your device is rooted"**
 
