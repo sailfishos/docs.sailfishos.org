@@ -1,10 +1,12 @@
 ---
-title: Collecting logs with Logcat
-permalink: Support/Help_Articles/Collecting_logs_with_Logcat/
-parent: Help Articles
+title: Collect Logs with Logcat
+permalink: Support/Help_Articles/Collecting_Logs/Collect_Logs_with_Logcat/
+grand_parent: Help Articles
+parent: Collecting Logs
 layout: default
-nav_order: 300
+nav_order: 1000
 ---
+
 
 When experiencing issues related to Android applications, collecting logs might provide additional information as to what is causing the issue. 
 You will need to enable the **[Developer mode](https://docs.sailfishos.org/Support/Help_Articles/Enabling_Developer_Mode/)** for this. 
@@ -78,5 +80,10 @@ Here we print a list of Android apps installed, seen from Sailfish (super-user r
 lxc-attach -n aliendalvik -- /system/bin/sh ## ignore the warning 
 :/ # pm list packages | sort
 ```
+
+
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
 
 
