@@ -13,7 +13,7 @@ APKPure store contains a good choice of popular Android apps. It is easy to inst
 1. Open the Sailfish Browser app.
 2. Type and open page **m.apkpure.com**
 3. Tap the green-and-white "Download" on that page, to the right of "Use APKPure App" (see the picture below on the left). Avoid the advertisements popping up.
-4. Tap another green-and-white "Download" - it has the version number and size now. The download of the APKPure apk file (installation file) begins.
+4. Long-press another green-and-white "Download" - it has the version number and size now. Select "Open link in new tab". The download of the APKPure apk file (installation file) begins.
 5. Sailfish will show a download banner at the top of the display. Please wait until the download is complete.
 
 <div class="flex-images" markdown="1">
