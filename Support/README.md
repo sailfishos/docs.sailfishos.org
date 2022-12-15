@@ -5,7 +5,7 @@ layout: default
 nav_exclude: true
 ---
 
-<h1 class="no_toc">Contents</h1>
+<h3 class="no_toc">Contents</h3>
 
 <ol>
 {% assign sorted_pages = site.pages | sort:"nav_order" %}
