@@ -326,6 +326,58 @@ Enabled=0
 Enabled=0
 ```
 
+### System service debugging
+
+Sometimes changes to system services that are being started at boot cause unwanted results and the service crashes. Or the service crashes only on device boot. These can be resolved by checking the backtraces of such service. This set of instructions applies generally for other services as well.
+
+This requires only `gdb` from the `sdk` repository:
+```nosh
+ssu ar sdk && pkcon refresh && pkcon install gdb
+```
+
+And the relevant debuginfo (and debugsource, installed as dependency) packages to have meaningful output.
+
+In order to get the backtrace out from a service during boot create a following gdb command file (suffix does not matter):
+```ini
+set width 0
+set height 0
+set verbose off
+set logging file <path_to_log_file>
+set logging on
+handle SIG33 pass nostop noprint
+run
+backtrace full
+```
+
+And add a systemd drop-in file to `/usr/lib/systemd/system/<service_name>.service.d/override.conf` with the content to override the existing service file variables:
+```ini
+[Service]
+ExecStart=
+ExecStart=/usr/bin/gdb --batch --command=<command_file> --args <copy_this_part_from_original_service_file>
+Restart=no
+```
+
+`ExecStart` needs to be cleared to avoid error `Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services. Refusing`. `Restart` is prevented in order to avoid overwriting the log file.
+
+For example with ofono following can be used. Put the following (change path to `--command` if needed) and do:
+```nosh
+mkdir -p /usr/lib/systemd/system/ofono.service.d/
+cat << EOM >/usr/lib/systemd/system/ofono.service.d/override.conf
+[Service]
+ExecStart=
+ExecStart=/usr/bin/gdb --batch --command=/root/ofono.gdb --args /usr/sbin/ofonod -n --nobacktrace \$OFONO_ARGS \$OFONO_DEBUG
+Restart=no
+EOM
+```
+
+To make sure that the change is applied do:
+```nosh
+systemctl daemon-reload
+```
+And reboot the device. The log is available with the backtrace in `<path_to_log_file>` pointed in the `<command_file>`.
+
+When there is no need for gdb anymore the `override.conf` can be removed. After removal `daemon-reload` and service restart is required for the change to be in effect.
+
 ## Restart System Services
 
 Restart user session
