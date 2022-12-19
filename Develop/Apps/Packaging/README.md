@@ -202,113 +202,87 @@ In addition to the instructions for building the binaries, the SPEC file is used
 
 The most important items in the SPEC file are described next.
 
-#### Name (required)
+#### Name
 
-The name of your project. Note that this is not the name of the application as it appears to the user. Instead it is the base name used to form file names elsewhere in the `.yaml` file. For example, the application icon is referred to as `%{name}.png`. Hence the value for Name should always match the `TARGET` declaration in the Qt project file.
+The name of your project. Note that this is not the name of the application as it appears to the user. Instead it is the base name used to form file names elsewhere in the SPEC file. For example, the application icon is referred to as `%{name}.png`. Hence the value for Name should always match the `TARGET` declaration in the Qt project file.
 
-#### Summary (required)
+#### Summary
 
 A short description of the package.
 
-#### Version (required)
+#### Version
 
 The version number of the package.
 
 When set to `0` (zero) and the project resides under a Git working directory, the actual version number will be determined programmatically from the name of the latest Git tag on the current branch. Additionally, if the current HEAD, index or working tree differs from the tree denoted by the tag, a suffix composed from the current branch name, time stamp and a commit SHA1 will be added to the package version. If git-state is not clean a git-stash will be created and its SHA1 will be used instead of HEAD.
 
-#### Group (required)
+#### License
 
-The group where the installed application should appear in the system’s application launcher. For Sailfish OS Qt Quick applications, the value should always be `Qt/Qt`.
+The name of the license the package adheres to. 
 
-#### License (required)
+#### BuildRequires
 
-The name of the license the package adheres to.
+This item defines a package required to build your project. 
 
-#### PkgConfigBR (optional)
+The value can either be an exact package name, or package configuration name. If you are using a package configuration name, you should use the syntax `pkgconfig(<package configuration name>)`. The package configuration name refers to a `.pc` file. Similarly to Qt feature files, if you know the name of the package configuration file, you don’t need to know the exact name of the package that provides the functionality.
 
-This keyword is one of the ways to define which packages are required to build your project. The values listed for the *PkgConfigBR* keyword are names of package configuration, or `.pc` files. Similarly to Qt feature files, if you know the name of the package configuration file, you don’t need to know the exact name of the package that provides the functionality. See About the PkgConfigBR and PkgBR Keywords below for a more detailed discussion.
+For example, the following two snippets both establish a build-time requirement for the sailfishapp configuration:
 
-#### About the PkgConfigBR and PkgBR Keywords
-
-In addition to *PkgConfigBR*, the *PkgBR* keyword is also used to manage build-time dependencies. For both, the “BR” stands for Build Requires. The difference is that with *PkgConfigBR* you give the name of the package configuration, with *PkgBR* you have to know the exact name of the package providing said configuration. For example the following two `.yaml` snippets both establish a build-time requirement for the `sailfishapp` configuration:
-```yaml
-PkgBR:
-- libsailfishapp-devel >= 0.0.10
 ```
-
-```yaml
-PkgConfigBR:
-- sailfishapp >= 1.0.0
+BuildRequires:  libsailfishapp-devel >= 1.0.2
 ```
+```
+BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
+```
+The greater than or equal notation can be used to establish a minimum version requirement. Note that on the first example the comparison is made against the version of the package, whereas with the *pkgconfig* notation the comparison is made against the version of the package configuration, i.e. the version number specified by the Version field in the `.pc` file itself.
 
-The greater than or equal notation can be used to establish a minimum version requirement. Note how *PkgBR* uses the version of the package, whereas *PkgConfigBR* refers to the version of the package configuration, i.e. the version number specified by the Version field in the `.pc` file itself.
+Where applicable, the use of *pkgconfig* is preferred,  as it insulates your project from possible package naming changes. The configuration can be referred to by the same name even if the package that provides it is renamed.
 
-Where applicable, the use of *PkgConfigBR* preferred, as it insulates your project from possible package naming changes. The configuration can be referred to by the same name even if the package that provides it is renamed.
-
-#### Requires (optional)
+#### Requires
 
 The *Requires* keyword specifies packages that are required by the application at runtime. In case these packages are not already present in the target environment, they get installed automatically when the RPM package for the application is installed.
 
 Typically the packages listed for *Requires* provide importable QML modules, for example the package `sailfishsilica-qt5` enables the application’s QML files to use the Sailfish Silica module via the `import Sailfish.Silica 1.0` statement.
 
-Finding out which package provides which QML module may take a little detective work, see the Tips and tricks section for a few hints on how to locate the package you need.
+Finding out which package provides which QML module may take a little detective work, see the [Tips and tricks](#tips-and-tricks) section for a few hints on how to locate the package you need.
 
-#### Description (optional)
+#### %description
 
-A longer form description of the package. The pipe character in `Description: |` means that newlines are significant in the description text that follows and should not be folded into spaces.
+A longer form description of the package. 
 
-#### Builder (optional)
+#### %build
 
-The tool that should be used to build this project. Examples of valid values are `qmake5` and `cmake`.
+The `%build` section contains the commands for building the application. For applications which use QMake, as is the case for the application created by the wizard, macros `%qmake5` and `%make_build` should be used instead of actual commands.
 
-#### Files (optional)
+#### %install
 
-The *Files* keyword lists the files and directories that are copied to the system when the package is installed. Each of the files and paths listed in this section refers to one of the items in the `INSTALLS` declaration in the `sailfish.prf` file.
+The `%install` section contains the commands for installing the application to `%buildroot` - which is a directory structure with the files to be packaged. This is done as part of the build process when creating a package, not when the end-user install the package. For applications which use QMake, macro `%qmake5_install` should be used for installing the files defined in the 
 
-Note that where the `.prf` file used Qt project variables, the `.yaml` file uses SPEC file macros. The declarations for the project’s qml directory in the in the `.prf` file
+#### %files
+
+The `%files` section lists the files and directories that are copied to the system when the package is installed. Each of the files and paths listed in this section refers to one of the items in the `INSTALLS` declaration in either the `sailfishapp.prf` file, or your `.pro` file.
+
+Note that where the `.prf` and `.pro` files use Qt project variables, the SPEC file uses macros. The declarations for the project’s qml directory in the in the `.prf` file
 ```qmake
 qml.files = qml
 qml.path = /usr/share/$${TARGET}
 ```
 
-correspond to the line - `'%{_datadir}/%{name}/qml'` in the `.yaml` file.
+correspond to the line `'%{_datadir}/%{name}/qml'` in the SPEC file.
 
-The number of items in the *Files* section must match the number of items in `INSTALLS` declarations. If this is not the case, you are either attempting to install something that is not generated in the first place, or forgetting to install something that is generated, i.e. you have more lines in the *Files* section than items in `INSTALLS` declarations, or vice versa. Both of these are actually errors, resulting in the error messages when trying to deploy the project.
+The number of items in the *%files* section must match the number of items in `INSTALLS` declarations. If this is not the case, you are either attempting to install something that is not generated in the first place, or forgetting to install something that is generated, i.e. you have more lines in the *%files* section than items in `INSTALLS` declarations, or vice versa. Both of these are actually errors, resulting in the error messages when trying to deploy the project.
 
-Note that you should always use the macros, such as `%{_bindir}` for `/usr/bin`, to refer to standard platform locations in the `.yaml` file. A warning is printed to the compilation output if you don’t.
+Note that you should always use the macros, such as `%{_bindir}` for `/usr/bin`, to refer to standard platform locations in the SPEC file. 
 
-It may seem strange that the path is spelled out in the Qt feature file but referred to with a macro in the `.yaml`. But both of these are actually provided by the SDK – the Qt feature file is a part of the SDK and the line in the `.yaml` file in generated by Sailfish IDE. Hence, if the standard paths ever change, the paths will not get out of sync, as both change when the SDK is updated. Using the macros when you modify a `.yaml` file ensures your project will continue to work without any modifications if the standards paths are ever changed.
-
-### The SPEC File
-
-The SPEC file contains instructions for building the project and for packaging the resulting binaries into an RPM package. The file is generated automatically during the build process from the `.yaml` file, and normally there is no need to modify the SPEC file manually. Every value that affects the generated file can usually be set elsewhere, for example via the `.yaml` file.
-
-If you take a look at the SPEC file (it can be found in the rpm directory after the project has been built at least once), you’ll see it contains many of the values that were set in the `.yaml`, such as the package *Version* and *Requires* declarations.
-
-Most of the SPEC file is overwritten during a build if the source `.yaml` file has changed. As such, there is little point in editing the SPEC file by hand, other than the sections which have been explicitly marked as editable.
-
-Editable parts of the SPEC file are marked with `# >>` and `# <<`. For each step of the build process, there are markers for sections that are customizable. For example, the markers
-```specfile
-# >> build pre
-# << build pre
-```
-
-```specfile
-# >> build post
-# << build post
-```
-
-indicate points for custom commands to be executed before and after the project is compiled.
-
-For most Sailfish OS Qt Quick applications, there is no need to change the generated SPEC file in any way. The generated file does everything that the vast majority of applications need but the customization option is there for the few exceptional cases that may require custom steps.
+It may seem strange that the path is spelled out in the Qt feature file but referred to with a macro in the SPEC file. But both of these are actually provided by the SDK – the Qt feature file is a part of the SDK and the line in the SPEC file in generated by Sailfish IDE. Hence, if the standard paths ever change, the paths will not get out of sync, as both change when the SDK is updated. Using the macros when you modify a SPEC file ensures your project will continue to work without any modifications if the standards paths are ever changed.
 
 ### Tips and Tricks
 
-This section shows a few terminal commands that may be useful for tracking down specific packages or names as they should appear in the *PkgBR*, *PkgConfigBR*, and *Requires* sections of the `.yaml` file. All of the commands should be run under a build environment with `sfdk build-shell --maintain`.
+This section shows a few terminal commands that may be useful for tracking down specific packages or names as they should appear in the Requires and BuildRequires lines of the RPM SPEC file. All of the commands should be run under a build environment with `sfdk build-shell --maintain`.
 
 Note that the `zypper` package manager is not available in the emulator nor on a real device in their default configurations. The equivalent command in the emulator virtual machine or on a device is `pkcon`. These two commands have slightly different options and one may not support all the functionality the other has, but both may coexists on one system - `zypper` can be installed with `pkcon install zypper`.
 
-List all available package configurations (for use with the *PkgConfigBR* keyword):
+List all available package configurations (for use with `BuildRequires: pkgconfig()`):
 ```nosh
 $ pkg-config --list-all
 ```
