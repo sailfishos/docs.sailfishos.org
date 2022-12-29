@@ -15,7 +15,7 @@ _Please be advised that in the Developer Mode you can run commands or enable fea
 ## Turning Developer Mode on
 
 
-Turning the Developer Mode on is protected by the **[Security code.](https://jolla.zendesk.com/hc/en-us/articles/201440487)**
+Turning the Developer Mode on is protected by the **[Security code.](/Support/Help_Articles/Device_Lock_and_Security_Code/)**
 
 Developer mode is pre-installed on Sailfish OS devices that have Sailfish OS version 3.2.1 or newer. Developer mode can be enabled locally, without any Internet connection. Not even the Jolla account is required.
 
@@ -114,6 +114,45 @@ Read more about SSH connection over USB:  **[Windows](https://jolla.zendesk.com
 * Be careful in writing commands. A misspelt command may cause irreparable damage to the device or its data. All commands must be written correctly, including upper and lower case letters, punctuation and spaces.
 * If you are in doubt about how to do something with Developer mode, please stop there. Do not take the risk.
 
+## How to use the 'vi' or 'nano' text editors at Sailfish Terminal
+There are two options for an editor to be run at the Sailfish Terminal app.
+
+Note that you would often need the superuser rights ("root rights") to be able to save the file after editing it (in case of configuration files typically). Hence, you should get those rights with command devel-su first **[See above](#using-developer-mode)**.
+
+### nano
+Text editor 'nano' may be easier for a beginner than VI but the choice is yours.
+
+Nano can be installed via
+```
+devel-su pkcon install nano
+```
+Launch the editor with (choose the file you want to edit):
+```
+nano file.txt
+```
+Nano appears as a layer on the Sailfish Terminal. There is a toolbar at the bottom of the display.
+
+The instructions in [**this link**](https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/) explain how to use nano. For example:
+
+* Saving the text in the buffer to a file is called “writing out” and is triggered by hitting **Ctrl+O**. You’ll be prompted for a filename to use.
+
+* When you want to quit Nano, you just hit **Ctrl+X**. Nano will politely ask you if you want to save your buffer, and you can cancel this action as well.
+
+### vi
+This editor is ready for use in Sailfish Terminal. If you are not familiar with using the vi editor the brief instructions below should help you.
+
+Launch the editor with (choose the file you want to edit):
+```
+vi file.txt
+```
+The instructions in [**this link**](https://www.howtogeek.com/102468/a-beginners-guide-to-editing-text-files-with-vi/) explain how to use vi. 
+
+For example:
+* Tap **"i"** to enter the insert mode
+* Move the cursor to the appropriate point with the arrow keys
+* Type in the changes needed (be careful not to make any unintended changes while moving the cursor)
+* Tap "Esc" to exit the insert mode
+* Type **":wq"** and tap "Enter" to save the changes and exit the editor, or type just **":q"** and tap "Enter" to exit the editor without saving any changes.
 
 - - - -
 
