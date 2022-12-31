@@ -67,19 +67,13 @@
 
       width: $nav-list-item-height-sm;
       height: $nav-list-item-height-sm;
-      padding-top: #{$nav-list-item-height-sm / 4};
-      padding-right: #{$nav-list-item-height-sm / 4};
-      padding-bottom: #{$nav-list-item-height-sm / 4};
-      padding-left: #{$nav-list-item-height-sm / 4};
+      padding: #{$nav-list-item-height-sm * 0.25};
       color: $link-color;
 
       @include mq(md) {
         width: $nav-list-item-height;
         height: $nav-list-item-height;
-        padding-top: #{$nav-list-item-height / 4};
-        padding-right: #{$nav-list-item-height / 4};
-        padding-bottom: #{$nav-list-item-height / 4};
-        padding-left: #{$nav-list-item-height / 4};
+        padding: #{$nav-list-item-height * 0.25};
       }
 
       &:hover {
@@ -132,10 +126,7 @@
 }
 
 .nav-category {
-  padding-top: $sp-2;
-  padding-right: $gutter-spacing-sm;
-  padding-bottom: $sp-2;
-  padding-left: $gutter-spacing-sm;
+  padding: $sp-2 $gutter-spacing-sm;
   font-weight: 600;
   text-align: end;
   text-transform: uppercase;
@@ -143,8 +134,7 @@
   @include fs-2;
 
   @include mq(md) {
-    padding-right: $gutter-spacing;
-    padding-left: $gutter-spacing;
+    padding: $sp-2 $gutter-spacing;
     margin-top: $gutter-spacing-sm;
     text-align: start;
 
