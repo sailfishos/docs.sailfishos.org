@@ -60,7 +60,10 @@ More information about logs below:
 
 ## Android apps
 * `/system/bin/logcat`
-* `devel-su lxc-attach -n aliendalvik /system/bin/logcat`
+* On Sailfish OS 4.4.0:
+    * `devel-su lxc-attach -n aliendalvik /system/bin/logcat`
+* On Sailfish OS 4.5.0 onwards:
+    * `devel-su appsupport-attach /system/bin/logcat`
 
 ## EMail
 * [How to collect EMail logs](https://jolla.zendesk.com/hc/en-us/articles/201975906-How-to-collect-Email-logs-General-email-IMAP-POP-)

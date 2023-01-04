@@ -67,7 +67,7 @@ The same about Android apps. Note that the command is different for different OS
 
 ```
 lxc-attach -n aliendalvik -- /system/bin/logcat > $MYHOME/android-logs.txt
-lxc-attach -n aliendalvik --lxcpath=/tmp/aliendalvik -- /system/bin/logcat > $MYHOME/android-logs.txt
+appsupport-attach /system/bin/logcat > $MYHOME/android-logs.txt
 ```
 The events in the Android system will now be printed to file ```android-logs.txt```. The command runs until you stop it with \<ctrl\>C. 
 
@@ -95,7 +95,7 @@ The same about Android apps. Note that the command is different for different OS
 
 ```
 lxc-attach -n aliendalvik -- /system/bin/pm list packages | sort > $MYHOME/android-packages.txt
-lxc-attach -n aliendalvik --lxcpath=/tmp/aliendalvik -- /system/bin/pm list packages | sort > $MYHOME/android-packages.txt
+appsupport-attach /system/bin/pm list packages | sort > $MYHOME/android-packages.txt
 ## Ignore the warnings...
 
 ```

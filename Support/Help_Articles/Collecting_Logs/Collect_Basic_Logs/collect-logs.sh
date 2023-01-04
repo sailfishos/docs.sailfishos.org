@@ -112,7 +112,7 @@ else
     # The next block covers Xperia 10, 10 II, 10 III, and XA2
     if [ "${MODELSTR:14:10}" = "Xperia 10 " ] || [ "${MODELSTR:14:10}" = "Xperia XA2" ]; then 
         # Longer command if release is 4.5. or later
-        LOGCATCMD="lxc-attach -q -n aliendalvik --lxcpath=/tmp/aliendalvik -- /system/bin/logcat -d"
+        LOGCATCMD="appsupport-attach /system/bin/logcat -d"
         if [ "${RELEASESTR:11:5}" = "4.4.0" ]; then
             LOGCATCMD="lxc-attach -q -n aliendalvik -- /system/bin/logcat -d"       
         fi
