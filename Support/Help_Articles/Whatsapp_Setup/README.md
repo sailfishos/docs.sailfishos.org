@@ -6,16 +6,18 @@ layout: default
 nav_order: 10000
 ---
 
-Please note that the Sailfish OS must be in the very latest version in order for all features described in this article to work. Read about updating your software [**here**](/Support/Help_Articles/Updating_Sailfish_OS/). These instructions were updated for Sailfish OS version 4.1.0 and Whatsapp version 2.21.7.14 but they will be precise enough for some earlier and later versions, too.
+Please note that the Sailfish OS must be in the very latest version in order for all features described in this article to work. Read about updating your software [**here**](/Support/Help_Articles/Updating_Sailfish_OS/). These instructions were updated for Sailfish OS version 4.1.0.
 
 WhatsApp application (like most Android apps) get updates on a regular basis. We recommend installing these updates as after some time the app and Sailfish OS might become incompatible.
 
-NOTE: The implementation of Android App Support varies by device. On the older devices, i.e., Jolla Phone, Jolla Tablet, Jolla C and Xperia X, Android App Support simulates Android version 4, whereas, in the case of the more recent products, Xperia XA2 and Xperia 10, the simulated Android version is 10.  Also, the related Sailfish menu pages for Android Support have some differences between those two support categories. Bear this in mind when reading [this chapter](#making-sure-whatsapp-gives-notifications-even-when-not-open).
+NOTE: The implementation of Android App Support varies by device. On the older devices, i.e., Jolla Phone, Jolla Tablet, Jolla C and Xperia X, Android App Support simulates Android version 4, whereas, in the case of the more recent products, Xperia XA2 and Xperia 10, the simulated Android version is 10 or higher.  Also, the related Sailfish menu pages for Android Support have some differences between those two support categories. Bear this in mind when reading [this chapter](#making-sure-whatsapp-gives-notifications-even-when-not-open).
 
 # Downloading WhatsApp
 If you have not used WhatsApp before you are reading the correct instructions here. Carry on.
 
 However, if you have had WhatsApp on some phone previously and you would like to migrate it to a new phone then [jump here](#moving-your-whatsapp-data-to-a-new-phone).
+
+## Download from Aptoide app store
 
 1) Open **Aptoide Store** on your device. Aptoide Store icon (April 2021) is shown below. This app appears by the name **Store** in the Sailfish application grid.
 
@@ -42,6 +44,16 @@ You can [**install Aptoide Store**](https://jolla.zendesk.com/hc/en-us/articles/
 </div>
 
 Note that the recent Aptoide app has advertisements which it tends to show (video clips) while installing apps. Try to ignore them somehow unless they appear interesting to you.
+
+## Download directly from the WhatsApp website
+
+1. Open Sailfish Browser
+2. Browse to [https://www.whatsapp.com/android](https://www.whatsapp.com/android)
+3. Tap "Package installer" (it is located to the right from the "Google Play" item)
+    ==> whatsapp.apk is downloaded to your phone
+4. Open "Settings > System > Transfers" and see the apk file at the top of the list
+5. Install the apk by tapping it (if there is a warning about installing untrusted software, first go to "Settings > System > Untrusted software" and allow it.
+
 
 After downloading and installing, you are required to activate WhatsApp before starting to use it.
 
