@@ -16,6 +16,7 @@ Welcome to the Sailfish OS Docs source repo.
     * [Syntax highlighting](#syntax-highlighting)
     * [Templates and forgotten ./precheckin.sh](#templates-and-forgotten-precheckinsh)
     * [Images](#images)
+    * [Redirects](#redirects)
 * [Feedback](#feedback)
 * [Credits](#credits)
 
@@ -199,6 +200,13 @@ You can use the `flex-images` style to add two narrow images, e.g. device screen
     Example image 2
   </span>
 </div>
+```
+
+#### Redirects
+
+Sometimes it is necessary to move a page to a new location. As we can't control all possible links to a page, it might be useful to provide a redirect from the old location to the new. This can be done by leaving a README.md in the old place, with the following line in the front matter:
+```
+redirect_to: /new_location
 ```
 
 ## Feedback
