@@ -111,7 +111,7 @@ The incoming SMS and MMS messages appear automatically in the home view of the M
 
 A notification banner is shown briefly at the top of the display on every incoming message.
 
-Incoming messages are also indicated in the **[Events view]([https://sailfishos.org/design/ux-framework/](https://sailfishos.org/design/ux-framework/))**. Tap the arrowhead on this item followed by the "Reply" button (see Pic 10) and the message gets opened for you in a few seconds.
+Incoming messages are also indicated in the **[Events view](https://sailfishos.org/design/ux-framework/)**. Tap the arrowhead on this item followed by the "Reply" button (see Pic 10) and the message gets opened for you in a few seconds.
 
 You can always open the Messages app at the App Grid, too, by tapping its icon.
 
