@@ -144,3 +144,9 @@ Sailfish OS utilises the GeoClue framework to provide positioning information to
 Sailfish OS offers secure storage and cryptographic operation functionality to client applications. These facilities are provided by plugins to a system daemon, and those plugins may optionally use a Secure Peripheral or Trusted Execution Environment application to perform the storage or crypto operations. Clients can use the provided Qt-based APIs to send requests to the system daemon via D-Bus.
 
 [More info](/Reference/Core_Areas_and_APIs/Apps_and_MW/Secrets_and_Crypto)
+
+### Opening Files and URLs
+
+Applications can request URLs and local files to be opened with another application which is registered to handle such resources. The common method for this is Qt.openUrlExternally() for opening, and .desktop file MimeType field for registering capabilities.
+
+[More info](/Reference/Core_Areas_and_APIs/Apps_and_MW/URLs_and_Files)
