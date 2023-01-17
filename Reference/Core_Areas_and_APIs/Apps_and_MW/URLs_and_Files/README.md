@@ -1,6 +1,6 @@
 ---
 title: URLs and Files
-permalink: Reference/Core_Areas_and_APIs/Apps_and_MW/URLs_and_Files
+permalink: Reference/Core_Areas_and_APIs/Apps_and_MW/URLs_and_Files/
 parent: Apps and MW
 grand_parent: Core Areas and APIs
 layout: default
