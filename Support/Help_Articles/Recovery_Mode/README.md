@@ -8,9 +8,8 @@ nav_order: 630
 
 If your Xperia 10 II is not starting up normally or not starting up at all, you can attempt to fix your device with the help of the Recovery Mode. This article will provide you with step-by-step instructions on recovering a malfunctioning device.
 
-**NOTE:** This article is for Xperia 10 II and Xperia 10 III only. There are separate articles for all other Xperias, Jolla Phone, Jolla C (also Aqua Fish) and for Jolla Tablet:
+**NOTE:** This article is for Xperia phones only. There are separate articles for the Jolla Phone, Jolla C (also Aqua Fish) and for Jolla Tablet:
 
-* [**Xperia X, XA2, 10**](https://jolla.zendesk.com/hc/en-us/articles/360002996893)
 * [**Jolla Phone**](https://jolla.zendesk.com/hc/en-us/articles/204709607)
 * [**Jolla C & Aqua Fish**](https://jolla.zendesk.com/hc/en-us/articles/115000663928)
 * [**Jolla Tablet**](https://jolla.zendesk.com/hc/en-us/articles/208406917) 
@@ -32,23 +31,23 @@ If you have questions about Recovery Mode, you can raise those at the [**Sailfis
 * Some parts of the Sailfish OS system seem to be missing. For example, opening Settings crashes the phone or Settings opens as a blank screen.
 * You were instructed by Jolla's Service & Support personnel to use it.
 
-# Setting up the Recovery Mode
+# Setting up the Recovery Mode on the phone
 
-## Forcing Xperia 10 II or Xperia 10 III to the Recovery Mode
-* Disconnect the USB cable from Xperia 10 II
-* Turn the phone OFF
-* If you have the fastboot drivers (Windows) or fastboot tools (Linux, Mac) already installed on your computer, skip to the next step. You have them if you installed Sailfish OS to your Xperia 10 II or Xperia 10 III with the present computer. If not, install fastboot now - the instructions are:
+## Preparing Xperia 10 II or Xperia 10 III to the Recovery Mode
+1. Disconnect the USB cable from Xperia 10 II
+2. Turn the phone OFF
+3. If you have the _fastboot drivers_ (Windows) or _fastboot tools_ (Linux, Mac) already installed on your computer, skip to the next step (4). You have them if you installed Sailfish OS to your Xperia 10 II or Xperia 10 III with the present computer. If not, install fastboot now - the instructions are:
 	* Windows computer: chapter 2 in [**Xperia 10 II Sailfish X instructions - Windows**](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-windows/)
 	* Linux computer: chapter 2 in [**Xperia 10 II Sailfish X instructions - Linux**](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-linux/)
 	* Mac computer: chapter 2 in [**Xperia 10 II Sailfish X instructions - Mac**](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-macos/)
 	* Windows computer: chapter 2 in [**Xperia 10 III Sailfish X instructions - Windows**](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-windows/)
 	* Linux computer: chapter 2 in [**Xperia 10 III Sailfish X instructions - Linux**](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-linux/)
 	* Mac computer: chapter 2 in [**Xperia 10 III Sailfish X instructions - Mac**](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-macos/)
-* Force your Xperia 10 II or Xperia 10 III to the fastboot mode:
+4. Force your Xperia 10 II or Xperia 10 III to the fastboot mode:
 	* Hold the Volume Up key down and connect a data-connected USB cable (a charging cable would not work)
 	* Ensure that the LED at the top of the display area is lit in BLUE colour (if not, disconnect the cable, release the key and try again)
-* You will need the same version of hybris-recovery.img as belongs to the Sailfish OS version of your phone currently. If you have updated your phone to the latest release then download the latest Sailfish OS image from [**Jolla Shop**](https://shop.jolla.com/downloads/). The downloaded package contains the matching hybris-recovery.img. If you happen to have an older OS release on the phone get the hybris-recovery.img from the installation directory of that release. If you do not have it on your computer, [**contact us**](https://jolla.zendesk.com/hc/en-us/requests/new).
-* The following commands will enable the Recovery Mode (the BLUE LED should be lit at this point)
+5. You will need the same version of hybris-recovery.img as belongs to the Sailfish OS version of your phone currently. If you have updated your phone to the latest release then download the latest Sailfish OS image from [**Jolla Shop**](https://shop.jolla.com/downloads/). The downloaded package contains the matching hybris-recovery.img. If you happen to have an older OS release on the phone get the hybris-recovery.img from the installation directory of that release. If you do not have it on your computer, [**contact us**](https://jolla.zendesk.com/hc/en-us/requests/new).
+6. The following commands will enable the Recovery Mode (the BLUE LED should be lit at this point)
 
 On Windows:
 ```
@@ -71,9 +70,63 @@ sudo fastboot reboot
   </span>
 </div>
 
-After this, there should not be any BLUE light on your Xperia 10 II. Instead, the following text should appear (in a really tiny font) at the top of Xperia 10 II display :
+Disconnect the USB cable.
 
-"RECOVERY: Connect USB cable and open telnet to address 10.42.66.66"
+## Preparing Xperia X, Xperia XA2 or Xperia 10 to the Recovery Mode
+
+1. Disconnect the USB cable from the Xperia phone.
+2. Turn Xperia OFF
+3. If you have the _fastboot drivers_ (Windows) or _fastboot tools_ (Linux, Mac) already installed on your computer, skip to the next step (4). You probably have them if you installed Sailfish OS to your Xperia with the present computer.
+    If not, install _fastboot_ now - the instructions are:
+    * Windows computer: chapter 2 in **[Sailfish X instructions - Windows](https://jolla.com/sailfishx-windows-instructions/)**
+    * Linux computer: chapter 2 in **[Sailfish X instructions - Linux](https://jolla.com/sailfishx-linux-instructions/)**
+    * Mac computer: chapter 2 in **[Sailfish X instructions - Mac](https://jolla.com/sailfishx-macos-instructions/)**
+4. Force your Xperia to the _fastboot mode_:
+    * Hold the Volume Up key down and connect the data-connected USB cable
+    * Ensure that the LED at the top of the display area is lit in BLUE colour
+      _(if not, disconnect the cable, release the key and try again)_
+5. You will need the same version of `hybris-recovery.img` as belongs to the Sailfish OS version of your phone currently. In other words, if you have updated OS version 4.3.0 (say) to your phone, then you should use the hybris-recovery.img of OS version 4.3.0. To ensure this, download the latest Sailfish OS image from [**Jolla Shop**](https://shop.jolla.com/downloads/) (provided that you have updated your phone to the latest).  Unzip the archive and observe the hybris-recovery.img file in it.
+6. Open the Terminal app on your computer. Proceed to the directory where you have the hybris-recovery.img file.
+7. The following command will enable the Recovery Mode (the BLUE LED should be lit at this point)
+      
+On Windows:
+```
+fastboot boot hybris-recovery.img
+```
+
+On Linux or Mac:
+```    
+sudo fastboot boot hybris-recovery.img
+```
+
+This is how it goes on Windows:
+
+<div class="flex-images" markdown="1">
+
+* <a href="XA2-entering-recovery-mode.png"><img src="XA2-entering-recovery-mode.png" alt="Booted to recovery Win"></a>
+  <span class="md_figcaption">
+    XA2 booted to recovery mode on Windows
+  </span>
+</div>
+
+Ubuntu Linux was used here:
+
+<div class="flex-images" markdown="1">
+
+* <a href="XA2-entering-recovery-mode-Ubuntu.png"><img src="XA2-entering-recovery-mode-Ubuntu.png" alt="Booted to recovery Ubu"></a>
+  <span class="md_figcaption">
+    XA2 booted to recovery mode on Ubuntu
+  </span>
+</div>
+
+Disconnect the USB cable.
+
+
+## Forcing the phone to the Recovery Mode
+
+After reaching this point, there should not be any BLUE light on your Xperia. Instead, the following text should appear at the top of Xperia display (in a really tiny font):
+
+**"RECOVERY: Connect USB cable and open telnet to address 10.42.66.66"**
 
 <div class="flex-images" markdown="1">
 
@@ -89,20 +142,20 @@ Next, if you have
 * a Mac computer, go to this [chapter](#preparing-your-mac-computer-for-the-recovery-mode)
 * a Linux computer, go to this [chapter](#preparing-your-linux-computer-for-the-recovery-mode)
 
+
+# Setting up the Recovery Mode on the computer
+
 ## Preparing your Windows computer for the Recovery Mode
-Controlling the Recovery Mode from a Windows computer requires the "RNDIS" drivers and a terminal application. If you have used Recovery mode before and installed RNDIS drivers then they might still be okay. In such a case, creating a Telnet connection from the PC to the phone could go as simple as this:
+Controlling the Recovery Mode from a Windows computer requires the _RNDIS drivers_ and a terminal application. If you have used the Recovery Mode before and installed RNDIS drivers then they might still be okay. In such a case, creating a Telnet connection from the PC to the phone could go as simple as this:
 
 1. Connect your Xperia 10 II to your PC with a data-enabled USB cable.
-If you came to this step just from this [chapter](#forcing-xperia-10-ii-or-xperia-10-iii-to-the-recovery-mode) you can keep using the same cable (no need to change or reconnect)
-
 2. Open the Windows CMD terminal.
-You can keep using the same terminal window as in this [chapter](#forcing-xperia-10-ii-or-xperia-10-iii-to-the-recovery-mode)
-
+You can keep using the same terminal window as in [this chapter](#setting-up-the-recovery-mode-on-the-phone)
 3. Type into the Terminal:
 ```
 telnet 10.42.66.66
 ```
-If this worked correctly you would see the black Recovery Mode menu on your computer screen (below). You are now ready to move to chapter [Fixing your device with Recovery Mode](#fixing-your-device-with-the-recovery-mode).
+If this worked correctly you would see the black Recovery Mode menu on your computer screen (below). You are now ready to move to chapter [Fixing your phone with Recovery Mode](#fixing-your-phone-with-the-recovery-mode).
 
 <div class="flex-images" markdown="1">
 
@@ -116,8 +169,7 @@ However, if the telnet command (above) failed then continue following the instru
 
 Do the following to install the "RNDIS drivers" and the terminal application.
 
-1) Connect your Xperia 10 II (which is now in the Recovery Mode after running the steps of this [chapter](#forcing-xperia-10-ii-or-xperia-10-iii-to-the-recovery-mode)) with a USB cable to your computer. While doing this, do not press any buttons of Xperia 10 II
-* simply connect the cable.
+1) Connect your Xperia (which is now in the Recovery Mode after running the steps of [this chapter](#setting-up-the-recovery-mode-on-the-phone)) with a USB cable to your computer. While doing this, do not press any buttons of the Xperia. Simply, connect the cable.
 
 2) Launch the Windows Device Manager:
 * Windows 7: Open Start Menu and right-click on "Computer". Select "Manage".
@@ -205,12 +257,12 @@ NOTE 2: The fastboot device "sa0114" of Sony must not appear in the listing of W
 
 This signifies that you are ready to perform a fix by using Recovery Mode.
 
-You are now ready to move to chapter [Fixing your device with Recovery Mode](#fixing-your-device-with-the-recovery-mode).
+You are now ready to move to chapter [Fixing your phone with Recovery Mode](#fixing-your-phone-with-the-recovery-mode).
 
-After you have fixed what you need to fix, do not forget to return to chapter [reverting phone back to the normal state](#reverting-phone-back-to-the-normal-state) of this document. You must revert the phone back to its normal state.
+After you have fixed what you need to fix, do not forget to return to chapter [Reverting phone back to the normal state](#reverting-the-phone-back-to-the-normal-state) of this document. You must revert the phone back to its normal state.
 
 ## Preparing your Mac computer for the Recovery Mode
-To run the Recovery Mode on a Mac computer, you need to download the HoRNDIS driver but all other software is already on your computer. You must use version 9 (or later) of HoRNDIS driver.
+To run the Recovery Mode on a **Mac computer**, you need to download the _HoRNDIS driver_ but all other software is already on your computer. You must use version 9 (or later) of HoRNDIS driver.
 
 Citation of proof of [joshuawise.com](www.joshuawise.com/horndis): "Versions 10.11 and newer of Mac OS X have a rewritten USB stack that is substantially less compatible than that in 10.10 and below. HoRNDIS 9.0 has been rewritten to support MacOS 10.11 and above (El Capitan, Sierra, High Sierra and Mojave); for those versions of MacOS, please try the latest version of HoRNDIS!"
 
@@ -230,7 +282,8 @@ Citation of proof of [joshuawise.com](www.joshuawise.com/horndis): "Versions 10.
 
 Please click OK on the pop-up and restart your computer if you are unsure should you do so or not.
 
-4) Once the driver is installed, attach your Xperia 10 II to your Mac. (Note: the phone must be in "Recovery Mode" before attaching the cable, see this [chapter](#forcing-xperia-10-ii-or-xperia-10-iii-to-the-recovery-mode))
+4) Once the driver is installed, attach your Xperia 10 II to your Mac with a data-enabled USB cable.
+Note: The phone must be in the Recovery Mode before attaching the cable, see [this chapter](#setting-up-the-recovery-mode-on-the-phone).
 
 5) Next, you need to locate the Terminal application. To do so:
 * Open Finder
@@ -294,14 +347,15 @@ Please click OK on the pop-up and restart your computer if you are unsure should
   </span>
 </div>
 
-You are now ready to move to chapter [Fixing your device with Recovery Mode](#fixing-your-device-with-the-recovery-mode).
+You are now ready to move to chapter [Fixing your phone with Recovery Mode](#fixing-your-phone-with-the-recovery-mode).
 
 ## Preparing your Linux computer for the Recovery Mode
-It is likely that you won't need to download any additional software to use Recovery Mode. Below we've used Ubuntu.
+It is likely that you won't need to download any additional software to use the Recovery Mode. Below we've used Ubuntu.
 
-1. Connect your Xperia 10 II to your PC. You will likely see a notification relating to a disconnect/connect and Ethernet/Wired connection:
+1. Connect your Xperia 10 II to your PC with a data-enabled USB cable.
+Note: The phone must be in the Recovery Mode before attaching the cable, see [this chapter](#setting-up-the-recovery-mode-on-the-phone).
 
-2. Open the Terminal application
+2. Open the Terminal application.
 
 3. Type into the Terminal:
 ```
@@ -317,28 +371,30 @@ telnet 10.42.66.66
   </span>
 </div>
 
-You are now ready to move to chapter [Fixing your device with Recovery Mode](#fixing-your-device-with-the-recovery-mode).
+You are now ready to move to chapter [Fixing your phone with Recovery Mode](#fixing-your-phone-with-the-recovery-mode).
 
-After you have fixed what you need to fix, do not forget to return to the chapter [reverting phone back to the normal state](#reverting-phone-back-to-the-normal-state) of this document. You must revert the phone back to its normal state.
+After you have fixed what you need to fix, do not forget to return to the chapter [Reverting the phone back to the normal state](#reverting-the-phone-back-to-the-normal-state) of this document. You must revert the phone back to its normal state.
 
-# Fixing your device with the Recovery Mode
+# Fixing your phone with the Recovery Mode
 
 ## Backing up data from your phone to a memory card
 It may be possible to save some data from your device using option "3) Shell" in the Recovery menu. For this operation, you will need a MicroSD card inserted into your phone. The card must have been formatted for Sailfish OS (see the [help article on SD cards](/Support/Help_Articles/SD_Card_Format_and_Encryption/)).
 
-To learn about saving some of your data through the Recovery Mode, please follow [this help article](https://jolla.zendesk.com/hc/en-us/articles/360021766699).
+To learn about saving some of your data through the Recovery Mode, please follow [Using the SD card in Recovery Mode](/Support/Help_Articles/SD_Card_in_Recovery_Mode/).
+
+When the process is complete, you will need to revert the phone back to its normal state as instructed in the chapter [Reverting the phone back to the normal state](#reverting-the-phone-back-to-the-normal-state) of this document.
 
 ## Resetting phone to factory settings in the Recovery Mode
 NOTE: this option deletes **ALL** data from your device. Resetting to factory settings does not affect data on the SD (memory card) and SIM cards, however.
 
-1. Prepare your PC and device for Recovery Mode as described in this [chapter](#setting-up-the-recovery-mode), until you see the Recovery Menu.
+1. Prepare your PC and device for Recovery Mode as described in [this chapter](#setting-up-the-recovery-mode-on-the-phone), until you see the Recovery Menu.
 2. In the Recovery Mode menu take option #1 "Reset device to factory state"
 
 **Note**: If your terminal application suddenly disappears when attempting to run this function, simply connect to Recovery Mode again, and go straight to performing the Device Reset. You may have to repeat this a number of times.
 
 3. Give the process some time to run and follow on-screen instructions.
 
-When the process is complete, you will need to revert the phone back to its normal state as instructed in the chapter [reverting phone back to the normal state](#reverting-phone-back-to-the-normal-state) of this document.
+When the process is complete, you will need to revert the phone back to its normal state as instructed in the chapter [Reverting the phone back to the normal state](#reverting-the-phone-back-to-the-normal-state) of this document.
 
 ## Releasing Xperia 10 II or 10 III from "Permanent lock"
 This requires that you know the correct security code!
@@ -355,7 +411,7 @@ exit
 NOTE: There is no feedback from the 2nd command, so be sure to type your security code correctly. You will see the result (i.e. phone no more permanently locked) only after leaving the Recovery Mode.
 
 * Type exit to escape the Shell and return to the main menu of Recovery Mode.
-* Skip to chapter [reverting phone back to the normal state](#reverting-phone-back-to-the-normal-state) of this document now.
+* In this document, go to the chapter [Reverting the phone back to the normal state](#reverting-the-phone-back-to-the-normal-state) of this document.
 
 ## Running file system check
 It is possible to have the file system of your Xperia 10 II checked by selecting option #4 in the Recovery menu. This utility will try to fix problems if possible, too.
@@ -383,28 +439,34 @@ Type the number of the desired action and press [Enter]: 4 /dev/mmcblk0rpmb:
   read failed after 0 of 4096 at 0: Input/output error 0 logical volume(s) in volume
   group "sailfish" now active Done
 ```
-Press [Enter] to return to recovery menu...
+Press [Enter] to return to recovery menu. AFter that, proceed to reading the next chapter of this document.
 
-# Reverting phone back to the normal state
+
+# Reverting the phone back to the normal state
 It is crucial to follow the below steps to successfully revert your phone from Recovery Mode back to its normal state:
 * Select option 6 'Exit' in the Recovery Mode menu.
 * Disconnect the USB cable from the phone.
 * Press the Vol Up key down, keep it pressed and press the Power key, too. When you feel the vibrator play once and soon after three (3) times (this should happen in about 20 seconds), release both keys. In this way, we ensure that the phone is completely turned off before we proceed to the next phase.
 
-Your phone has exited the Recovery mode now. It is off. You will still need to return it to its normal state. This is done by installing the hybris-boot.img back to your phone in the fastboot mode.
+Your phone has exited the Recovery mode now. It is off. You will still need to return it to its normal state. 
+How this is done depends on the Xperia model. Read carefully.
 
-Force your Xperia 10 II again to the fastboot mode:
+## Reverting Xperia 10 II or Xperia 10 III to the normal mode
+
+On these phone models, the boot image _hybris-boot.img_ must be re-installed in the fastboot mode.
+
+Force your Xperia again to the fastboot mode:
 
 * Hold the Volume Up key down and connect your USB cable again
 * Ensure that the LED at the top of the display area is lit in BLUE colour
 
-You will need the same version of hybris-boot.img as belongs to the Sailfish OS version of your phone currently. If you have updated your phone to the latest release then download the latest Sailfish OS image from [**Jolla Shop**](https://shop.jolla.com/downloads/). The downloaded package contains the matching hybris-boot.img. If you happen to have an older OS release on the phone get the hybris-boot.img from the installation directory of that release.
-Another way would be to extract the file from your device by selecting the option "5) Run sshd" and using "scp" to retrieve it from 
-```
-/rootfs/boot/hybris-boot.img.
-```
+You will need the same version of hybris-boot.img as belongs to the Sailfish OS version of your phone currently. If you have updated your phone to the latest release then download the latest Sailfish OS image from [**Jolla Shop**](https://shop.jolla.com/downloads/). The downloaded package contains the matching hybris-boot.img. 
 
-* Open the Terminal app on your computer. Proceed to the directory where you have the hybris-boot.img file.
+If you happen to have an older OS release on the phone, get the hybris-boot.img from the installation directory of that release.
+Another way would be to extract the file from your device by selecting the option "5) Run sshd" and using "scp" to retrieve it from ``` /rootfs/boot/hybris-boot.img```.
+
+We are ready to install the boot image:
+* Open the Terminal app on your computer. Proceed to the directory where you have the _hybris-boot.img_ file.
 * The following commands will restore the boot partition (the BLUE LED must be lit at this point)
 
 On Windows:
@@ -427,4 +489,19 @@ On Linux or Mac:
   </span>
 </div>
 
-After the reboot, your phone will be back to the normal state. Sailfish UI should appear. Disconnect the USB cable.
+After the reboot, your phone will be back to the normal state. Sailfish UI will appear. Disconnect the USB cable.
+
+
+## Reverting Xperia X, Xperia XA2 or Xperia 10 to the normal mode
+
+
+1. Select option 6 'Exit' in the Recovery Mode menu.
+2. Disconnect the USB cable from the phone.
+3. Press the Vol Up key down, keep it pressed and then also press the Power key. Release both keys when you feel the vibrator play three times - this will happen in about 20-30 seconds. The phone is turned off now.
+4. Turn the phone on by applying the Power key in the normal way.
+
+The phone is back in its normal state.
+
+
+
+
