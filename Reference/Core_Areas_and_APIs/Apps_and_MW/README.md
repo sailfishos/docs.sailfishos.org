@@ -17,3 +17,4 @@ nav_order: 100
       - [Email](/Reference/Core_Areas_and_APIs/Apps_and_MW/Email)
       - [Browser](/Reference/Core_Areas_and_APIs/Browser)
       - [Alarms and timezone](/Reference/Core_Areas_and_APIs/Apps_and_MW/Alarms)
+      - [URLs and Files](/Reference/Core_Areas_and_APIs/Apps_and_MW/URLs_and_Files)
