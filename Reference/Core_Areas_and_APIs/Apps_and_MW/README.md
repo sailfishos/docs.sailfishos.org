@@ -7,14 +7,14 @@ layout: default
 nav_order: 100
 ---
 
-  - [Application / Middleware](/Reference/Core_Areas_and_APIs/Apps_and_MW)
-      - [Lipstick](/Reference/Core_Areas_and_APIs/Apps_and_MW/Lipstick)
-      - [Contacts](/Reference/Core_Areas_and_APIs/Apps_and_MW/Contacts)
-      - [Telephony](/Reference/Core_Areas_and_APIs/Apps_and_MW/Telephony)
-      - [Messaging](/Reference/Core_Areas_and_APIs/Apps_and_MW/Messaging)
-      - [Calendar](/Reference/Core_Areas_and_APIs/Apps_and_MW/Calendar)
-      - [Accounts & SSO](/Reference/Core_Areas_and_APIs/Apps_and_MW/Accounts_and_SSO)
-      - [Email](/Reference/Core_Areas_and_APIs/Apps_and_MW/Email)
-      - [Browser](/Reference/Core_Areas_and_APIs/Browser)
-      - [Alarms and timezone](/Reference/Core_Areas_and_APIs/Apps_and_MW/Alarms)
-      - [URLs and Files](/Reference/Core_Areas_and_APIs/Apps_and_MW/URLs_and_Files)
+<ul>
+{% assign sorted_pages = site.pages | sort:"title" %}
+{% for item in sorted_pages %}
+  {% assign item_dir_parts = item.dir | remove_first: page.dir | split: '/' %}
+  {% if item.dir contains page.dir and item_dir_parts.size == 1 %}
+    <li>
+      <a href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+  {% endif %}
+{% endfor %}
+</ul>
