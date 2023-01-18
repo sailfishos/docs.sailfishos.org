@@ -6,7 +6,7 @@ layout: default
 nav_order: 630
 ---
 
-If your Xperia 10 II is not starting up normally or not starting up at all, you can attempt to fix your device with the help of the Recovery Mode. This article will provide you with step-by-step instructions on recovering a malfunctioning device.
+If your Xperia is not starting up normally or not starting up at all, you can attempt to fix your device with the help of the Recovery Mode. This article will provide you with step-by-step instructions on recovering a malfunctioning device.
 
 **NOTE:** This article is for Xperia phones only. There are separate articles for the Jolla Phone, Jolla C (also Aqua Fish) and for Jolla Tablet:
 
@@ -19,13 +19,13 @@ If your Xperia 10 II is not starting up normally or not starting up at all, you 
 
 Recovery Mode is considered a last resort and should be used only if there is no other way. It is a powerful tool and using it always means that your data on the device is at risk. Please read the instructions in this article carefully.
 
-**NOTE:** You can install Sailfish X again ("re-flash") to your Xperia 10 II and Xperia 10 III devices. This is an effective way to resolve many kinds of problems, compared to Recovery Mode. Your Sailfish X license even entitles you to download a more recent Sailfish version from [**Jolla Shop**](https://shop.jolla.com/downloads/). On the other hand, flashing implies that all data and apps in the device will be wiped away and lost. Please consider which way suits better to you.
+**NOTE:** You can install Sailfish X again ("re-flash") to your Xperia devices. This is an effective way to resolve many kinds of problems, compared to the Recovery Mode. Your Sailfish X licence even entitles you to download a more recent Sailfish version from [**Jolla Shop**](https://shop.jolla.com/downloads/). On the other hand, re-installing (flashing) implies that all data and apps in the device will be wiped away and lost. Please consider which way suits better to you.
 
 If you have questions about Recovery Mode, you can raise those at the [**Sailfish Forum**](https://forum.sailfishos.org/) or you can [**contact us**](https://jolla.zendesk.com/hc/en-us/requests/new).
 
 ## When should I use Recovery Mode?
 * You are experiencing problems starting up your device.
-* Your device doesn't start past the Sony logo.
+* Your device doesn't boot up past the Sony logo.
 * Your device seems to never complete the startup process, before restarting again (AKA "boot loop", starts up to "Sony logo" but no further).
 * Your device starts up to a state where it is unusable because of a corrupted or not visible user interface.
 * Some parts of the Sailfish OS system seem to be missing. For example, opening Settings crashes the phone or Settings opens as a blank screen.
@@ -66,7 +66,7 @@ sudo fastboot reboot
 
 * <a href="Flashing_and_booting_Xperia_10_II_to_RecoveryMode.png"><img src="Flashing_and_booting_Xperia_10_II_to_RecoveryMode.png" alt="Flashing_and_booting_Xperia_10_II_to_RecoveryMode"></a>
   <span class="md_figcaption">
-    Flashing and booting Xperia 10 II to_RecoveryMode
+    Flashing and booting up Xperia 10 II to the Recovery Mode
   </span>
 </div>
 
@@ -105,7 +105,7 @@ This is how it goes on Windows:
 
 * <a href="XA2-entering-recovery-mode.png"><img src="XA2-entering-recovery-mode.png" alt="Booted to recovery Win"></a>
   <span class="md_figcaption">
-    XA2 booted to recovery mode on Windows
+    XA2 booted up to the Recovery Mode on Windows
   </span>
 </div>
 
@@ -115,7 +115,7 @@ Ubuntu Linux was used here:
 
 * <a href="XA2-entering-recovery-mode-Ubuntu.png"><img src="XA2-entering-recovery-mode-Ubuntu.png" alt="Booted to recovery Ubu"></a>
   <span class="md_figcaption">
-    XA2 booted to recovery mode on Ubuntu
+    XA2 booted up to Recovery Mode on Ubuntu
   </span>
 </div>
 
@@ -136,19 +136,21 @@ After reaching this point, there should not be any BLUE light on your Xperia. In
   </span>
 </div>
 
-Next, if you have
-
-* a Windows computer, go to this [chapter](#preparing-your-windows-computer-for-the-recovery-mode)
-* a Mac computer, go to this [chapter](#preparing-your-mac-computer-for-the-recovery-mode)
-* a Linux computer, go to this [chapter](#preparing-your-linux-computer-for-the-recovery-mode)
-
 
 # Setting up the Recovery Mode on the computer
+
+There are dedicated subchapters for Windows, Mac and Linux computers below. 
+
+* Windows: go to [this chapter](#preparing-your-windows-computer-for-the-recovery-mode)
+* Mac: go to [this chapter](#preparing-your-mac-computer-for-the-recovery-mode)
+* Linux: go to [this chapter](#preparing-your-linux-computer-for-the-recovery-mode)
+
 
 ## Preparing your Windows computer for the Recovery Mode
 Controlling the Recovery Mode from a Windows computer requires the _RNDIS drivers_ and a terminal application. If you have used the Recovery Mode before and installed RNDIS drivers then they might still be okay. In such a case, creating a Telnet connection from the PC to the phone could go as simple as this:
 
-1. Connect your Xperia 10 II to your PC with a data-enabled USB cable.
+1. Connect your Xperia phone to your PC with a data-enabled USB cable.<br>
+Note: The phone must be in the Recovery Mode before attaching the cable, see [this chapter](#setting-up-the-recovery-mode-on-the-phone).
 2. Open the Windows CMD terminal.
 You can keep using the same terminal window as in [this chapter](#setting-up-the-recovery-mode-on-the-phone)
 3. Type into the Terminal:
@@ -282,7 +284,7 @@ Citation of proof of [joshuawise.com](www.joshuawise.com/horndis): "Versions 10.
 
 Please click OK on the pop-up and restart your computer if you are unsure should you do so or not.
 
-4) Once the driver is installed, attach your Xperia 10 II to your Mac with a data-enabled USB cable.
+4) Once the driver is installed, attach your Xperia to your Mac with a data-enabled USB cable.<br>
 Note: The phone must be in the Recovery Mode before attaching the cable, see [this chapter](#setting-up-the-recovery-mode-on-the-phone).
 
 5) Next, you need to locate the Terminal application. To do so:
@@ -352,7 +354,7 @@ You are now ready to move to chapter [Fixing your phone with Recovery Mode](#fix
 ## Preparing your Linux computer for the Recovery Mode
 It is likely that you won't need to download any additional software to use the Recovery Mode. Below we've used Ubuntu.
 
-1. Connect your Xperia 10 II to your PC with a data-enabled USB cable.
+1. Connect your Xperia to your PC with a data-enabled USB cable.<br>
 Note: The phone must be in the Recovery Mode before attaching the cable, see [this chapter](#setting-up-the-recovery-mode-on-the-phone).
 
 2. Open the Terminal application.
@@ -387,22 +389,22 @@ When the process is complete, you will need to revert the phone back to its norm
 ## Resetting phone to factory settings in the Recovery Mode
 NOTE: this option deletes **ALL** data from your device. Resetting to factory settings does not affect data on the SD (memory card) and SIM cards, however.
 
-1. Prepare your PC and device for Recovery Mode as described in [this chapter](#setting-up-the-recovery-mode-on-the-phone), until you see the Recovery Menu.
-2. In the Recovery Mode menu take option #1 "Reset device to factory state"
+1) Prepare your PC and device for Recovery Mode as described in [this chapter](#setting-up-the-recovery-mode-on-the-phone), until you see the Recovery Menu.
+2) In the Recovery Mode menu take option #1 "Reset device to factory state"
 
 **Note**: If your terminal application suddenly disappears when attempting to run this function, simply connect to Recovery Mode again, and go straight to performing the Device Reset. You may have to repeat this a number of times.
 
-3. Give the process some time to run and follow on-screen instructions.
+3) Give the process some time to run and follow on-screen instructions.
 
 When the process is complete, you will need to revert the phone back to its normal state as instructed in the chapter [Reverting the phone back to the normal state](#reverting-the-phone-back-to-the-normal-state) of this document.
 
-## Releasing Xperia 10 II or 10 III from "Permanent lock"
-This requires that you know the correct security code!
+## Releasing Xperia from "Permanent lock"
+This requires that you know the correct security code of the phone!
 
-In some circumstances it may happen that the allowed maximum number of unlocking attempts of the device lock gets exceeded, resulting in "Maximum attempts used. Device is permanently locked". The following procedure may help in unlocking the device:
+In some circumstances, it may happen that the allowed maximum number of unlocking attempts of the device lock gets exceeded, resulting in "Maximum attempts used. Device is permanently locked". The following procedure may help in unlocking the device:
 
 Take option "3) Shell" in the Recovery menu
-Type the following two commands. In the latter command replace **"12345"** with your correct security code!
+Type the following two commands. In the latter command, **replace "12345"** with your correct security code!
 ```
 chroot /rootfs
 /usr/lib*/qt5/plugins/devicelock/encsfa-fpd --check-code 12345
@@ -414,11 +416,11 @@ NOTE: There is no feedback from the 2nd command, so be sure to type your securit
 * In this document, go to the chapter [Reverting the phone back to the normal state](#reverting-the-phone-back-to-the-normal-state) of this document.
 
 ## Running file system check
-It is possible to have the file system of your Xperia 10 II checked by selecting option #4 in the Recovery menu. This utility will try to fix problems if possible, too.
+It is possible to have the file system of your Xperia checked by selecting option #4 in the Recovery menu. This utility will try to fix problems if possible, too.
 
-Please type the security code of your Xperia 10 II when requested.
+Please type the security code of your Xperia when requested.
 
-The following excerpt shows sample output from an Xperia XA2 (that of Xperia 10 II is similar):
+The following excerpt shows sample output from an Xperia:
 ```
 Type the number of the desired action and press [Enter]: 4 /dev/mmcblk0rpmb:
   read failed after 0 of 4096 at 0: Input/output error /dev/mmcblk0rpmb: read failed
@@ -443,13 +445,18 @@ Press [Enter] to return to recovery menu. AFter that, proceed to reading the nex
 
 
 # Reverting the phone back to the normal state
-It is crucial to follow the below steps to successfully revert your phone from Recovery Mode back to its normal state:
+It is crucial to follow the steps below to successfully revert your phone from Recovery Mode back to its normal state:
 * Select option 6 'Exit' in the Recovery Mode menu.
 * Disconnect the USB cable from the phone.
 * Press the Vol Up key down, keep it pressed and press the Power key, too. When you feel the vibrator play once and soon after three (3) times (this should happen in about 20 seconds), release both keys. In this way, we ensure that the phone is completely turned off before we proceed to the next phase.
 
 Your phone has exited the Recovery mode now. It is off. You will still need to return it to its normal state. 
 How this is done depends on the Xperia model. Read carefully.
+
+## Reverting Xperia X, Xperia XA2 or Xperia 10 to the normal mode
+
+On these phone models, there is no need to re-install anything.
+The phone is back in its normal state as soon as you turn the phone on by applying the Power key in the normal way.
 
 ## Reverting Xperia 10 II or Xperia 10 III to the normal mode
 
@@ -467,7 +474,7 @@ Another way would be to extract the file from your device by selecting the optio
 
 We are ready to install the boot image:
 * Open the Terminal app on your computer. Proceed to the directory where you have the _hybris-boot.img_ file.
-* The following commands will restore the boot partition (the BLUE LED must be lit at this point)
+* The following commands will restore the boot partition (the BLUE LED must be lit at this point) and restart the phone:
 
 On Windows:
 ```
@@ -491,16 +498,6 @@ On Linux or Mac:
 
 After the reboot, your phone will be back to the normal state. Sailfish UI will appear. Disconnect the USB cable.
 
-
-## Reverting Xperia X, Xperia XA2 or Xperia 10 to the normal mode
-
-
-1. Select option 6 'Exit' in the Recovery Mode menu.
-2. Disconnect the USB cable from the phone.
-3. Press the Vol Up key down, keep it pressed and then also press the Power key. Release both keys when you feel the vibrator play three times - this will happen in about 20-30 seconds. The phone is turned off now.
-4. Turn the phone on by applying the Power key in the normal way.
-
-The phone is back in its normal state.
 
 
 
