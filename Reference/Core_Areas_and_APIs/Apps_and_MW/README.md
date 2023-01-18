@@ -8,13 +8,10 @@ nav_order: 100
 ---
 
 <ul>
-{% assign sorted_pages = site.pages | sort:"title" %}
+{% assign sorted_pages = site.pages | where: "parent", "Apps and MW" | sort:"title" %}
 {% for item in sorted_pages %}
-  {% assign item_dir_parts = item.dir | remove_first: page.dir | split: '/' %}
-  {% if item.dir contains page.dir and item_dir_parts.size == 1 %}
     <li>
       <a href="{{ item.url }}">{{ item.title }}</a>
     </li>
-  {% endif %}
 {% endfor %}
 </ul>
