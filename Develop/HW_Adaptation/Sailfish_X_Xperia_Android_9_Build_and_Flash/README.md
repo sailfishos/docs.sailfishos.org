@@ -17,7 +17,7 @@ Here you will find instructions how to build Sailfish OS image and flash it to S
 
 ## Building
 
-Please download the latest Sailfish OS HADK (Hardware Adaptation Development Kit) from within [this link](https://sailfishos.org/hadk).
+Please download the latest Sailfish OS HADK (Hardware Adaptation Development Kit) from within [this link](/Develop/HADK).
 
 Minimum Sailfish OS version for this port is 4.4.0.58.
 
