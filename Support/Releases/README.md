@@ -10,17 +10,17 @@ nav_order: 100
 
 | Release   | Name                 | Published     | Note                        |
 | --------- | -------------------- | ------------- | --------------------------- |
-| 4.4.0.72  | Vanha Rauma          | 30th Sep 2022 | **Stop release**            |
-| 4.3.0.15  | Suomenlinna          | 10th Feb 2022 | **Stop release**            |
-| 4.2.0.21  | Verla                | 16th Sep 2021 | **Stop release**            |
-| 4.1.0.24  | Kvarken              | 27th May 2021 | **Stop release** &nbsp;Support for aarch64 |
-| 4.0.1.48  | Koli                 | 16th Feb 2021 | **Stop release**            |
+| [4.4.0.72](https://forum.sailfishos.org/t/release-notes-vanha-rauma-4-4-0-72/13110)  | Vanha Rauma          | 30th Sep 2022 | **Stop release**            |
+| [4.3.0.15](https://forum.sailfishos.org/t/release-notes-suomenlinna-4-3-0/8495)      | Suomenlinna          | 10th Feb 2022 | **Stop release**            |
+| [4.2.0.21](https://forum.sailfishos.org/t/release-notes-verla-4-2-0/7092)            | Verla                | 16th Sep 2021 | **Stop release**            |
+| [4.1.0.24](https://forum.sailfishos.org/t/release-notes-kvarken-4-1-0/5942)          | Kvarken              | 27th May 2021 | **Stop release** &nbsp;Support for aarch64 |
+| [4.0.1.48](https://forum.sailfishos.org/t/release-notes-koli-4-0-1/4542)             | Koli                 | 16th Feb 2021 | **Stop release**            |
 
 ## Sailfish 3 - Finnish national parks
 
 | Release   | Name                 | Published     | Note                        |
 | --------- | -------------------- | ------------- | --------------------------- |
-| 3.4.0.24  | Pallas-Yllästunturi  | 13th Oct 2020 | **Stop release** &nbsp;Last release for Jolla Phone |
+| [3.4.0.24](https://forum.sailfishos.org/t/release-notes-pallas-yllastunturi-3-4-0/2258)  | Pallas-Yllästunturi  | 13th Oct 2020 | **Stop release** &nbsp;Last release for Jolla Phone |
 | 3.3.0.16  | Rokua                | 28th Apr 2020 |                              |
 | 3.2.1.20  | Nuuksio              | 18th Dec 2019 |                              |
 | 3.2.0.12  | Torronsuo            | 06th Nov 2019 | **Stop release**            |
