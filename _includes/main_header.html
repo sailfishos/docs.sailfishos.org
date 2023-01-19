@@ -1,0 +1,44 @@
+<div id="main-header" class="main-header">
+  {% include header_custom.html %}
+  {% if site.aux_links %}
+    <nav aria-label="Auxiliary" class="aux-nav">
+      <ul class="aux-nav-list">
+        {%- assign link_array = page.url | split: "/" -%}
+        {%- assign url_top = link_array[1] -%}
+        {% for link in site.aux_links %}
+          {%- assign link_array = link.last | split: "/" -%}
+          {%- assign aux_link_top = link_array[1] | replace: '"]', '' -%}
+
+          <li class="aux-nav-list-item">
+            <a href="{{ link.last }}"
+              {% if url_top == aux_link_top %}
+                class="site-button site-button-active"
+              {% else %}
+                class="site-button"
+              {% endif %}
+              {% if site.aux_links_new_tab %}
+                target="_blank" rel="noopener noreferrer"
+              {% endif %}
+            >
+              {{ link.first }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  {% endif %}
+  <div class="search-and-logo">
+    {% if site.search_enabled != false %}
+      <div class="search">
+        <div class="search-input-wrap">
+          <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Sailfish OS docs" aria-label="Search {{ site.title }}" autocomplete="off">
+          <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+        </div>
+        <div id="search-results" class="search-results"></div>
+      </div>
+    {% endif %}
+    <a href="https://jolla.com">
+      <img src="/assets/images/jolla.svg" class="img-logo" style="margin:11px;width:40px;height:31px">
+    </a>
+  </div>
+</div>
