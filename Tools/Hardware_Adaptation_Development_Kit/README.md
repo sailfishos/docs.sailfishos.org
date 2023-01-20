@@ -11,7 +11,7 @@ If you want to get Sailfish OS running on a particular device then you're doing 
 
 It's about working with device bootloaders, configuring and building the Linux kernel, low level Android™ systems, low level linux systems, C, C++ and shellscript coding, debugging and working blind - all fun stuff!
 
-There is a lot more detail at [the current HADK site](https://sailfishos.org/develop/hadk/).
+There is a lot more detail at [the current HADK site](/Develop/HADK/).
 
 # Hardware Abstraction Layer
 
@@ -29,4 +29,4 @@ By utilising [libhybris](https://github.com/mer-hybris/libhybris) within Sailfis
 
 The goal of a Hardware Adaptation developer is the creation of a board specific HAL to address the [ hardware components](/Develop/HW_Adaptation).
 
-As mentioned this is covered in great detail in the Hardware Adaptation Development Kit which is a highly technical document which explains how to port Sailfish OS to an Android™ device. You may [download a PDF of the HADK](https://sailfishos.org/develop/hadk/).
+As mentioned this is covered in great detail in the Hardware Adaptation Development Kit which is a highly technical document which explains how to port Sailfish OS to an Android™ device. You may [download a PDF of the HADK](/Develop/HADK/).

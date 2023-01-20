@@ -1,0 +1,33 @@
+<div class="side-bar">
+  <div class="site-header">
+    <a href="https://sailfishos.org" class="">
+      <div style="width:69px;height:54px;background-image: url('/assets/images/sfos.svg');background-repeat: no-repeat; background-position: left center; background-size: contain;"></div>
+    </a>
+    <a href="/">
+      <div class="landing-highlight" style="height:100%; padding-left:1em; padding-right:1em; display:flex; align-items:center; font-size:large;">
+        <b>Documentation</b>
+      </div>
+    </a>
+    <a href="#" id="menu-button" class="site-button">
+      <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+    </a>
+  </div>
+  <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+    {% if site.just_the_docs.collections %}
+      {% assign collections_size = site.just_the_docs.collections | size %}
+      {% for collection_entry in site.just_the_docs.collections %}
+        {% assign collection_key = collection_entry[0] %}
+        {% assign collection_value = collection_entry[1] %}
+        {% assign collection = site[collection_key] %}
+        {% if collection_value.nav_exclude != true %}
+          {% if collections_size > 1 %}
+            <div class="nav-category">{{ collection_value.name }}</div>
+          {% endif %}
+          {% include nav.html pages=collection %}
+        {% endif %}
+      {% endfor %}
+    {% else %}
+      {% include nav.html pages=site.html_pages %}
+    {% endif %}
+  </nav>
+</div>
