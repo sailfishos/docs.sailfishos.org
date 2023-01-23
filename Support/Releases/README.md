@@ -64,7 +64,7 @@ nav_order: 100
 | 1.0.5.16  | Paarlampi            | 11th Apr 2014 |                              |
 | 1.0.4.20  | Ohijärvi             | 17th Mar 2014 |                              |
 | 1.0.3.8   | Naamankajärvi        | 31st Jan 2014 |                              |
-| 1.0.2.5   | Maadajärvi           | 27th Dec 2012 | **Stop release**            |
+| 1.0.2.5   | Maadajärvi           | 27th Dec 2013 | **Stop release**            |
 | 1.0.1.10  | Laadunjärvi          | 09th Dec 2013 |                              |
 | 1.0.0.5   | Kaajanlampi          | 20th Nov 2013 | **Stop release**            |
 | 0.99.5.11 | Haaganlampi          | 15th Nov 2013 | First release                |
