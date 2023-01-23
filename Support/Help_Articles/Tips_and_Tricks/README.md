@@ -161,6 +161,25 @@ _(please note that each line of the 3-line command above is separated by a space
 Sailfish OS does not support capturing video clips.
 
 
+# Quick calls from the call history
+
+Visit the menu "Settings > Apps > Phone". Look for the setting "Quick call".
+
+* When ON, one can make phone calls with one tap in the call history of the Phone application. This is the default setting of Sailfish OS.
+* When OFF, tapping on an item in call history brings up the contact information, allowing one to choose whether to call (and to which number if multiple numbers) or to send an SMS or an email.
+
+Choose which way you like it better.
+
+<div class="flex-images" markdown="1">
+
+* <a href="Call_app_settings.png" class="narrow-image"><img src="Call_app_settings.png" alt="Call app settings"></a>
+  <span class="md_figcaption">
+    Call app settings
+  </span>
+</div>
+
+
+
 # Sailfish Utilities
 
 
