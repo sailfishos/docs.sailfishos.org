@@ -28,6 +28,7 @@ Scratchbox 2 achieves this by employing target CPU emulation and by composing a 
 
   - Target device filesystem image
       - Target-compatible binaries
+      - Target device filesystem image is needed for each architecture (armv7hl, aarch64, i486)
 
 <!-- end list -->
 
@@ -48,6 +49,8 @@ Here is how the terms native to Scratchbox 2 map to the terms used in Sailfish S
 (\*) The word "tooling" is used instead of "tools" simply for the possibility to distinguish single from multiple.
 
 Depending on your choice of SDK, please see their corresponding documentation pages for listing and interacting with the toolings and targets: [Sailfish Platform SDK](/Tools/Platform_SDK/Building_Packages#listing-installed-build-targets) and [Sailfish SDK](/Tools/Sailfish_SDK/Building_packages#building-packages-locally)
+
+You can find more information about the internal working of Scratchbox 2 in the [original documentation](https://github.com/sailfishos/scratchbox2/blob/master/docs/SB2_internals_1st_ed_20120425.pdf).
 
 ### Build Tools
 
