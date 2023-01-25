@@ -36,7 +36,7 @@ The translation file will also define the layout directionality (e.g.: left-to-r
 
 Different locales require different input methods. In some locales, a QWERTY-layout virtual keyboard is the most common input method, but other locales require different keyboard layouts, and in some locales the most common input method is hand-writing-recognition.
 
-Sailfish OS allows different input methods to be used on the device, including virtual keyboards, physical keyboards, virtual handwriting pads, and microphone input. The input method system used in Sailfish OS is [Maliit](https://github.com/sailfishos/maliit-framework) which provides an extensible plugin architecture, allowing third-party input method engines (such as from Nuance) to be installed into the system.
+Sailfish OS allows different input methods to be used on the device, including virtual keyboards, physical keyboards, virtual handwriting pads, and microphone input. The input method system used in Sailfish OS is [Maliit](https://github.com/sailfishos/maliit-framework) which provides an extensible plugin architecture.
 
 ### Scripts
 
@@ -44,8 +44,19 @@ Different locales use different scripts for text content. These scripts must be 
 
   - Latin
   - Cyrillic
-  - Bokmål
-  - Sanskrit
+  - Greek
+  - Kannada
+  - Gujarati
+  - Devanagari
+  - Bengali
+  - Telugu
+  - Tamil
+  - Punjabi
+  - Malayalam
+  - Traditional Chinese
+  - Simplified Chinese
+  - Thai
+  - Arabic
 
 ### Fonts
 
