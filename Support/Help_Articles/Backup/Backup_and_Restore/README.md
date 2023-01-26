@@ -1,11 +1,11 @@
 ---
 title: Backup and Restore
-permalink: Support/Help_Articles/Backup_and_Restore/
-parent: Help Articles
+permalink: Support/Help_Articles/Backup/Backup_and_Restore/
+parent: Backup
+grand_parent: Help Articles
 layout: default
-nav_order: 200
+nav_order: 2000
 ---
-
 
 # Foreword
 
