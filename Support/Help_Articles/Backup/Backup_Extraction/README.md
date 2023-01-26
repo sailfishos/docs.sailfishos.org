@@ -1,16 +1,17 @@
 ---
 title: Backup Extraction
-permalink: Support/Help_Articles/Backup_Extraction/
-parent: Help Articles
+permalink: Support/Help_Articles/Backup/Backup_Extraction/
+parent: Backup
+grand_parent: Help Articles
 layout: default
-nav_order: 210
+nav_order: 3000
 ---
 
 The Restore function of Sailfish OS is to bring the data back to apps from a backup file. Sometimes this may fail, due to various reasons. In such a case there may be the need to rescue some data from the backup file manually. This article explains how to do it - using contacts and calendar appointments as an example.
 
 # Backup utility
 
-The **[backup utility](https://docs.sailfishos.org/Support/Help_Articles/Backup_and_Restore/)** of Sailfish OS saves the so-called **local contacts** only. It does not save the contacts synchronised to/from a cloud service (e.g. Gmail or MS Exchange) as that would be unnecessary: those contacts can be retrieved from the cloud by signing in to one's account again from the mobile device and by enabling the account setting for this.
+The **[backup utility](/Support/Backup/Help_Articles/Backup_and_Restore/)** of Sailfish OS saves the so-called **local contacts** only. It does not save the contacts synchronised to/from a cloud service (e.g. Gmail or MS Exchange) as that would be unnecessary: those contacts can be retrieved from the cloud by signing in to one's account again from the mobile device and by enabling the account setting for this.
 
 The same applies to calendar appointments. The **private (local) appointments** are kept in the Sailfish OS device. They are not synchronized to the cloud. However, they are included in the backup.
 

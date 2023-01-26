@@ -1,9 +1,10 @@
 ---
 title: Backing up Harbour Apps 
-permalink: Support/Help_Articles/Backing_up_Harbour_Apps/
-parent: Help Articles
+permalink: Support/Help_Articles/Backup/Backing_up_Harbour_Apps/
+parent: Backup
+grand_parent: Help Articles
 layout: default
-nav_order: 160
+nav_order: 1000
 ---
 
 This special procedure is needed and can be used because the current backup utility of Sailfish OS does not save the data of miscellaneous 3rd party apps.
@@ -162,3 +163,4 @@ sync
 7. Close Terminal (or SSH)
 8. Disable Developer Mode (if not needed)
 9. Launch Snake. You should see your previous app data now.
+
