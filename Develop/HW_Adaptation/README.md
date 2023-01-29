@@ -46,4 +46,4 @@ The hardware areas which need adapting are:
   - USB : Network/Charging
   - FM Radio
 
-The status of community adaptations to common devices are [recorded here](https://wiki.merproject.org/wiki/Adaptations/libhybris).
+The status of community adaptations to common devices are [recorded here](https://forum.sailfishos.org/t/community-hardware-adaptations/14081).
