@@ -47,7 +47,7 @@ It has the name "SW_binaries_for_Xperia_Android_8.1.6.4_r1_v17B_nile.zip".
 4. Give the following command
 
 ```
-fastboot flash oem_a **SW_binaries_for_Xperia_Android_8.1.6.4_r1_v17_nile.img
+fastboot flash oem_a SW_binaries_for_Xperia_Android_8.1.6.4_r1_v17_nile.img
 ```
 
 This is the expected output from the command:
