@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=3
+VERSION=4
 GATHER_LOGS_DIR="_gather_logs_tmp"
 GATHER_LOGS_FULL="/$GATHER_LOGS_DIR"
 
@@ -54,6 +54,19 @@ if [ ! -d "$GATHER_LOGS_FULL" ]; then
     mkdir -p /var/lib/environment/ofono
     echo "OFONO_DEBUG=-d" > /var/lib/environment/ofono/gather_logs.conf
 
+    if [ -d /etc/appsupport.conf.d ]; then
+        # Enable AppSupport crash logger
+        copy_to_backup /etc/appsupport.conf.d/99-gather-logs-crash-logger.conf
+        cat >/etc/appsupport.conf.d/99-gather-logs-crash-logger.conf <<EOF
+[Features]
+CrashLoggerEnabled=true
+EOF
+
+        # Enable verbose logging for alienaudioservice
+        copy_to_backup /etc/sysconfig/alienaudioservice.verbose
+        echo "RUN_FLAGS=-v" > /etc/sysconfig/alienaudioservice.verbose
+    fi
+
     sync
 
     echo "System prepared for logging."
@@ -83,7 +96,20 @@ else
 
     ls -l /dev > "$GATHER_LOGS_FULL/ls-dev"
     ls -l /dev/snd > "$GATHER_LOGS_FULL/ls-dev-snd"
-    ls -l /etc > "$GATHER_LOGS_FULL/ls-etc"
+    ls -l -R /etc > "$GATHER_LOGS_FULL/ls-etc"
+
+    APPSUPPORT_LOGS=0
+    # AppSupport
+    if systemctl is-active aliendalvik >/dev/null; then
+        APPSUPPORT_LOGS=1
+        /usr/sbin/appsupport-attach /bin/logcat -d '*:V' > $GATHER_LOGS_FULL/appsupport-logcat.log
+        /usr/sbin/appsupport-attach /bin/dumpsys > $GATHER_LOGS_FULL/appsupport-dumpsys.log
+    fi
+
+    if [ -d /tmp/appsupport/crashlogs ]; then
+        APPSUPPORT_LOGS=1
+        cp -a /tmp/appsupport/crashlogs $GATHER_LOGS_FULL/appsupport-crashlogs
+    fi
 
     # Restore original state
     copy_from_backup /etc/systemd/journald.conf
@@ -94,12 +120,19 @@ else
     copy_from_backup /etc/tracing/bluez/bluez.tracing
     rm -f /var/lib/environment/ofono/gather_logs.conf
     copy_from_backup /var/lib/environment/ofono/gather_logs.conf
+    rm -f /etc/sysconfig/alienaudioservice.verbose
+    copy_from_backup /etc/sysconfig/alienaudioservice.verbose
+    rm -f  /etc/appsupport.conf.d/99-gather-logs-crash-logger.conf
+    copy_from_backup /etc/appsupport.conf.d/99-gather-logs-crash-logger.conf
 
     LOG_PACKAGE="sailfish_logs_$(date +%Y.%m.%d-%H.%M.%S).tar.bz2"
     tar cjf "$LOG_PACKAGE" "$GATHER_LOGS_DIR" -C /
     rm -r -f "$GATHER_LOGS_FULL"
     echo "Logs gathered."
     echo "Contents of the package: full system log (verbose pulseaudio, ohmd, bluetoothd, ofono), logcat, installed packages, ssu lr output, df output, mount output, ps output, ls of /etc /dev /dev/snd, /etc/hw-release, /etc/sailfish-release /etc/passwd (this file doesn't contain actual passwords) /etc/group"
+    if [ $APPSUPPORT_LOGS -eq 1 ]; then
+        echo "    AppSupport logcat, dumpsys and possible crashlogs"
+    fi
     echo ""
     echo "Please submit $LOG_PACKAGE for investigation, thank you!"
 fi
