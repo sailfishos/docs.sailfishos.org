@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=4
+VERSION=5
 GATHER_LOGS_DIR="_gather_logs_tmp"
 GATHER_LOGS_FULL="/$GATHER_LOGS_DIR"
 
