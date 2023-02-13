@@ -99,15 +99,40 @@ else
 
     APPSUPPORT_LOGS=0
     # AppSupport
-    if systemctl is-active aliendalvik >/dev/null; then
+    APPSUPPORT_STATE="$(systemctl is-active aliendalvik)"
+    mkdir -p $GATHER_LOGS_FULL/appsupport
+    echo "state: $APPSUPPORT_STATE" > $GATHER_LOGS_FULL/appsupport/is-active
+
+    if [ "$APPSUPPORT_STATE" = "active" ] || [ "$APPSUPPORT_STATE" = "activating" ]; then
         APPSUPPORT_LOGS=1
-        /usr/sbin/appsupport-attach /bin/logcat -d '*:V' > $GATHER_LOGS_FULL/appsupport-logcat.log
-        /usr/sbin/appsupport-attach /bin/dumpsys > $GATHER_LOGS_FULL/appsupport-dumpsys.log
+        /usr/sbin/appsupport-attach /bin/logcat -d '*:V' > $GATHER_LOGS_FULL/appsupport/logcat.log
+        /usr/sbin/appsupport-attach /bin/dumpsys > $GATHER_LOGS_FULL/appsupport/dumpsys.log
     fi
 
-    if [ -d /tmp/appsupport/crashlogs ]; then
+    if [ -d /tmp/appsupport ]; then
         APPSUPPORT_LOGS=1
-        cp -a /tmp/appsupport/crashlogs $GATHER_LOGS_FULL/appsupport-crashlogs
+        mkdir -p $GATHER_LOGS_FULL/appsupport
+        cp -a /tmp/appsupport $GATHER_LOGS_FULL/appsupport
+    fi
+
+    APPSUPPORT_USER=
+    if [ -f /tmp/appsupport/aliendalvik/alien.user ]; then
+        APPSUPPORT_USER="$(cat /tmp/appsupport/aliendalvik/alien.user)"
+    fi
+    if [ -z "$APPSUPPORT_USER" ]; then
+        APPSUPPORT_USER="defaultuser"
+    fi
+
+    if [ -d /home/$APPSUPPORT_USER/android_storage/Android ]; then
+        APPSUPPORT_LOGS=1
+        mkdir -p $GATHER_LOGS_FULL/appsupport
+        ls -l -n -R /home/$APPSUPPORT_USER/android_storage/Android > $GATHER_LOGS_FULL/appsupport/ls-android_storage
+    fi
+
+    if [ -d /home/.android ]; then
+        APPSUPPORT_LOGS=1
+        mkdir -p $GATHER_LOGS_FULL/appsupport
+        ls -l -n -R /home/.android > $GATHER_LOGS_FULL/appsupport/ls-dot-android
     fi
 
     # Restore original state
@@ -130,7 +155,7 @@ else
     echo "Logs gathered."
     echo "Contents of the package: full system log (verbose pulseaudio, ohmd, bluetoothd, ofono), logcat, installed packages, ssu lr output, df output, mount output, ps output, ls of /etc /dev /dev/snd, /etc/hw-release, /etc/sailfish-release /etc/passwd (this file doesn't contain actual passwords) /etc/group"
     if [ $APPSUPPORT_LOGS -eq 1 ]; then
-        echo "    AppSupport logcat, dumpsys and possible crashlogs"
+        echo "    AppSupport listings of Android files and file permissions, logcat, dumpsys and possible crashlogs"
     fi
     echo ""
     echo "Please submit $LOG_PACKAGE for investigation, thank you!"
