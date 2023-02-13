@@ -94,9 +94,8 @@ else
 
     ps > "$GATHER_LOGS_FULL/ps"
 
-    ls -l /dev > "$GATHER_LOGS_FULL/ls-dev"
-    ls -l /dev/snd > "$GATHER_LOGS_FULL/ls-dev-snd"
-    ls -l -R /etc > "$GATHER_LOGS_FULL/ls-etc"
+    ls -l -n -R /dev > "$GATHER_LOGS_FULL/ls-dev"
+    ls -l -n -R /etc > "$GATHER_LOGS_FULL/ls-etc"
 
     APPSUPPORT_LOGS=0
     # AppSupport
