@@ -105,8 +105,8 @@ else
 
     if [ "$APPSUPPORT_STATE" = "active" ] || [ "$APPSUPPORT_STATE" = "activating" ]; then
         APPSUPPORT_LOGS=1
-        /usr/sbin/appsupport-attach /bin/logcat -d '*:V' > $GATHER_LOGS_FULL/appsupport/logcat.log
-        /usr/sbin/appsupport-attach /bin/dumpsys > $GATHER_LOGS_FULL/appsupport/dumpsys.log
+        /usr/sbin/appsupport-attach /bin/logcat -d '*:V' 1> $GATHER_LOGS_FULL/appsupport/logcat.log 2> $GATHER_LOGS_FULL/appsupport/logcat.err
+        /usr/sbin/appsupport-attach /bin/dumpsys 1> $GATHER_LOGS_FULL/appsupport/dumpsys.log 2> $GATHER_LOGS_FULL/appsupport/dumpsys.err
     fi
 
     if [ -d /tmp/appsupport ]; then
