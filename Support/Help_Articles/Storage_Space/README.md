@@ -16,7 +16,7 @@ Some symptoms of devices with the storage full:
 * Inability to download system updates due to low memory, or you can't get past the "Preparing the update" phase
 * The device works slowly.
 
-To read about transferring files between your device and a PC, please see the following articles for [**Windows and Linux users**](/Support/Help_Articles/Moving_Files_Between_PC_and_Sailfish_Device/), and for [**Mac users**](https://jolla.zendesk.com/hc/en-us/articles/201440867).
+To read about transferring files between your device and a PC, please see the following articles for [**Windows and Linux users**](/Support/Help_Articles/Moving_Files_Between_PC_and_Sailfish_Device/), and for [**Mac users**](/Support/Help_Articles/Moving_Files_between_Mac_and_Sailfish_Device/).
 
 # Determining the amount of free space on your device
 To find out the current status of your mass memory (disk space) on your device, open the menu "Settings > Storage":

@@ -65,6 +65,6 @@ A toolbar appears with long press. It has the following tools:
 
 3. Navigate to the location you want to paste the selected files.
 
-We recommend keeping at least 2-3 GB of free space in Home. This may require that you cut and paste files (video clips, in particular) from Home to the memory card every now and then, in the same way as in this example. Easiest way to monitor the status is from Settings -> Storage, you can read how to free storage from this [article](https://jolla.zendesk.com/hc/en-us/articles/206354737-Freeing-up-storage-space-on-your-device).
+We recommend keeping at least 2-3 GB of free space in Home. This may require that you cut and paste files (video clips, in particular) from Home to the memory card every now and then, in the same way as in this example. Easiest way to monitor the status is from Settings -> Storage, you can read how to free storage from this [article](/Support/Help_Articles/Storage_Space/).
 
 

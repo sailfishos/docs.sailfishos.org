@@ -21,7 +21,7 @@ The Jolla Account is required for the following things:
 
 The following Jolla service is separate from the Jolla Account
 
-* Jolla Customer Care (Zendesk)
+* Jolla Customer Care
 
 
 

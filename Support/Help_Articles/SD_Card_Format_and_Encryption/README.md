@@ -199,8 +199,8 @@ An example:
 
 # Moving data to/from the SD card
 
-If you have a Windows or Linux PC, read [this article](https://jolla.zendesk.com/hc/en-us/articles/201440587).
-If you have a Mac, read [this article](https://jolla.zendesk.com/hc/en-us/articles/201440867).
+If you have a Windows or Linux PC, read [this article](/Support/Help_Articles/Moving_Files_Between_PC_and_Sailfish_Device/).
+If you have a Mac, read [this article](/Support/Help_Articles/Moving_Files_between_Mac_and_Sailfish_Device/).
 
 
 - - - - -

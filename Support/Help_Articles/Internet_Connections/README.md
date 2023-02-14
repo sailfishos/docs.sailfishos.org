@@ -241,6 +241,6 @@ Connecting to the internet via WiFi works in the same way abroad. However, pay a
 We have some useful links for trouble situations below, as well as some generally good-to-know information:
 
 * [Troubleshooting phone calls, SMS & mobile data issues](https://jolla.zendesk.com/hc/en-us/articles/202505018-Jolla-phone-Troubleshooting-phone-call-SMS-mobile-data-issues)
-* [Troubleshooting a WLAN connection](https://docs.sailfishos.org/Support/Help_Articles/WLAN_Troubleshooting/)
-* [Some tricks that may help in getting access to mobile data](https://docs.sailfishos.org/Support/Help_Articles/Resetting_oFono_Settings/)
+* [Troubleshooting a WLAN connection](/Support/Help_Articles/WLAN_Troubleshooting/)
+* [Some tricks that may help in getting access to mobile data](/Support/Help_Articles/Resetting_oFono_Settings/)
 

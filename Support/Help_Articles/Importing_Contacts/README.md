@@ -108,7 +108,7 @@ Below there are detailed descriptions of setting up some accounts.
 
 Contacts and other selected items will be copied from Google to the phone immediately, provided that the Internet connection works.
 
-_Related article: [Step-by-Step: Setting up a Google Account](https://jolla.zendesk.com/hc/en-us/articles/203726746)_
+_Related article: [Setting up a Google Account](/Support/Help_Articles/Accounts_Setup/Setup_Google_Account/)_
 
 
 
@@ -132,7 +132,7 @@ _Related article: [Step-by-Step: Setting up a Google Account](https://jolla.zend
 
 9)  To force a sync, go to "Settings > Accounts > Exchange" and select "Sync" from the pulley menu above.
 
-_Related article: [How do I set up an Exchange account on my Sailfish OS device?](https://jolla.zendesk.com/hc/en-us/articles/201440117-How-do-I-get-MS-Exchange-on-my-Jolla-)_
+_Related article: [How do I set up an Exchange account on my Sailfish OS device?](/Support/Help_Articles/Accounts_Setup/Setup_Exchange_Account/)_
 
 
 # Sending a contacts file over email

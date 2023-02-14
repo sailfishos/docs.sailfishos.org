@@ -13,7 +13,7 @@ By **General email** we mean all IMAP and POP3 email accounts.
 
 If the email account you wish to set up is a **Microsoft Exchange** account, please see **[this article](/Support/Help_Articles/Setup_Exchange_Account/)**. Setting up a **Google** account is explained in **[this article](/Support/Help_Articles/Setup_Google_Account/)**.
 
-[**This article**](https://jolla.zendesk.com/hc/en-us/articles/205278388) has an overview of using the Email application of Sailfish OS.
+[**This article**](/Support/Help_Articles/Email/) has an overview of using the Email application of Sailfish OS.
 
 # What are IMAP and POP accounts?
 
@@ -62,8 +62,6 @@ Make sure you have an Internet connection from your device.
 In case Sailfish can't get your email account's settings from the server, i.e. the automatic setup failed, you will be asked to enter them by hand. The missing items are indicated in red colour. The correct email settings must then be entered. If you don't know them, please consult your service provider.
 
 Alternatively, you can start over at "Settings > Accounts > Add new account > Generic email". At the bottom of this page, tap the button "**Manual setup**".
-
-For a list of some known email server settings, please [**see here**](https://jolla.zendesk.com/hc/en-us/articles/203323503).
 
 Below, there is a list of settings you will need to type to the settings page.
 

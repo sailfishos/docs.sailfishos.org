@@ -25,7 +25,7 @@ After installing Android apps, the folder ```/home/.android/data/app``` shows al
 ## Installing applications from application stores
 The SailfishOS operating system of Jolla supports Android apps that are featured in the Jolla Store and in Jolla-certified app partner stores.
 
-We recommend first checking what is available in **[Aptoide Store](https://jolla.zendesk.com/hc/en-us/articles/202442148)**. This is our Android apps store by Aptoide, available in the Jolla Store app (in category Marketplaces). After installing this app, it appears simply as **"Aptoide"** at the Sailfish apps grid.
+We recommend first checking what is available in **[Aptoide Store](/Support/Help_Articles/Android_App_Support/Aptoide/)**. This is our Android apps store by Aptoide, available in the Jolla Store app (in category Marketplaces). After installing this app, it appears simply as **"Aptoide"** at the Sailfish apps grid.
 
 <div class="flex-images" markdown="1">
 
@@ -127,7 +127,7 @@ You can download Android application stores from Marketplaces of Jolla Store. Th
 
 To read more about using the APKPure app store, please [**read this**](/Support/Help_Articles/Android_App_Support/APKPure/).
 
-To read more about using the Aptoide app store in general, please [**see here**](https://jolla.zendesk.com/hc/en-us/articles/202442148).
+To read more about using the Aptoide app store in general, please [**see here**](/Support/Help_Articles/Android_App_Support/Aptoide/).
 
 **Q: I'm having trouble installing an application from an apk file, what can I do?**
 
