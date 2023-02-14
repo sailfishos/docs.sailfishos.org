@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=4
+VERSION=5
 GATHER_LOGS_DIR="_gather_logs_tmp"
 GATHER_LOGS_FULL="/$GATHER_LOGS_DIR"
 
@@ -21,6 +21,15 @@ copy_from_backup() {
     if [ -e "$GATHER_LOGS_FULL/backup/$f" ]; then
         cp "$GATHER_LOGS_FULL/backup/$f" "$1"
     fi
+}
+
+PROGRESS_BAR_PID=
+
+stop_progress_bar() {
+    if [ -n "$PROGRESS_BAR_PID" ] && [ $PROGRESS_BAR_PID -gt 1 ] ; then
+        kill -- $PROGRESS_BAR_PID
+    fi
+    PROGRESS_BAR_PID=
 }
 
 echo "$(basename $0) version $VERSION"
@@ -72,7 +81,17 @@ EOF
     echo "System prepared for logging."
     echo "Please restart your device, run it until the issue is reproduced, then re-run this script."
 else
-    echo "Gathering logs..."
+    echo -n "Gathering logs.."
+
+    (
+        while [ 1 ]; do
+            echo -n "."
+            sleep 1
+        done
+    ) &
+    PROGRESS_BAR_PID=$!
+
+    trap stop_progress_bar EXIT SIGINT
 
     echo "$VERSION" > "$GATHER_LOGS_FULL/gather_logs_version"
 
@@ -82,9 +101,9 @@ else
     mkdir -p "$GATHER_LOGS_FULL/etc"
     for f in /etc/hw-release /etc/sailfish-release /etc/passwd /etc/group; do
         cp $f "$GATHER_LOGS_FULL/etc"
-    done    
+    done
 
-    rpm -qa > "$GATHER_LOGS_FULL/installed-packages"
+    rpm -qa | sort > "$GATHER_LOGS_FULL/installed-packages"
 
     ssu lr > "$GATHER_LOGS_FULL/ssu-lr"
 
@@ -94,21 +113,45 @@ else
 
     ps > "$GATHER_LOGS_FULL/ps"
 
-    ls -l /dev > "$GATHER_LOGS_FULL/ls-dev"
-    ls -l /dev/snd > "$GATHER_LOGS_FULL/ls-dev-snd"
-    ls -l -R /etc > "$GATHER_LOGS_FULL/ls-etc"
+    ls -l -n -R /dev > "$GATHER_LOGS_FULL/ls-dev"
+    ls -l -n -R /etc > "$GATHER_LOGS_FULL/ls-etc"
 
     APPSUPPORT_LOGS=0
     # AppSupport
-    if systemctl is-active aliendalvik >/dev/null; then
+    APPSUPPORT_STATE="$(systemctl is-active aliendalvik)"
+    mkdir -p $GATHER_LOGS_FULL/appsupport
+    echo "state: $APPSUPPORT_STATE" > $GATHER_LOGS_FULL/appsupport/is-active
+
+    if [ "$APPSUPPORT_STATE" = "active" ] || [ "$APPSUPPORT_STATE" = "activating" ]; then
         APPSUPPORT_LOGS=1
-        /usr/sbin/appsupport-attach /bin/logcat -d '*:V' > $GATHER_LOGS_FULL/appsupport-logcat.log
-        /usr/sbin/appsupport-attach /bin/dumpsys > $GATHER_LOGS_FULL/appsupport-dumpsys.log
+        /usr/sbin/appsupport-attach /bin/logcat -d '*:V' 1> $GATHER_LOGS_FULL/appsupport/logcat.log 2> $GATHER_LOGS_FULL/appsupport/logcat.err
+        /usr/sbin/appsupport-attach /bin/dumpsys 1> $GATHER_LOGS_FULL/appsupport/dumpsys.log 2> $GATHER_LOGS_FULL/appsupport/dumpsys.err
     fi
 
-    if [ -d /tmp/appsupport/crashlogs ]; then
+    if [ -d /tmp/appsupport ]; then
         APPSUPPORT_LOGS=1
-        cp -a /tmp/appsupport/crashlogs $GATHER_LOGS_FULL/appsupport-crashlogs
+        mkdir -p $GATHER_LOGS_FULL/appsupport
+        cp -a /tmp/appsupport $GATHER_LOGS_FULL/appsupport
+    fi
+
+    APPSUPPORT_USER=
+    if [ -f /tmp/appsupport/aliendalvik/alien.user ]; then
+        APPSUPPORT_USER="$(cat /tmp/appsupport/aliendalvik/alien.user)"
+    fi
+    if [ -z "$APPSUPPORT_USER" ]; then
+        APPSUPPORT_USER="defaultuser"
+    fi
+
+    if [ -d /home/$APPSUPPORT_USER/android_storage/Android ]; then
+        APPSUPPORT_LOGS=1
+        mkdir -p $GATHER_LOGS_FULL/appsupport
+        ls -l -n -R /home/$APPSUPPORT_USER/android_storage/Android > $GATHER_LOGS_FULL/appsupport/ls-android_storage
+    fi
+
+    if [ -d /home/.android ]; then
+        APPSUPPORT_LOGS=1
+        mkdir -p $GATHER_LOGS_FULL/appsupport
+        ls -l -n -R /home/.android > $GATHER_LOGS_FULL/appsupport/ls-dot-android
     fi
 
     # Restore original state
@@ -128,10 +171,12 @@ else
     LOG_PACKAGE="sailfish_logs_$(date +%Y.%m.%d-%H.%M.%S).tar.bz2"
     tar cjf "$LOG_PACKAGE" "$GATHER_LOGS_DIR" -C /
     rm -r -f "$GATHER_LOGS_FULL"
-    echo "Logs gathered."
+    stop_progress_bar
+    echo "done."
+    echo ""
     echo "Contents of the package: full system log (verbose pulseaudio, ohmd, bluetoothd, ofono), logcat, installed packages, ssu lr output, df output, mount output, ps output, ls of /etc /dev /dev/snd, /etc/hw-release, /etc/sailfish-release /etc/passwd (this file doesn't contain actual passwords) /etc/group"
     if [ $APPSUPPORT_LOGS -eq 1 ]; then
-        echo "    AppSupport logcat, dumpsys and possible crashlogs"
+        echo "    AppSupport listings of Android files and file permissions, logcat, dumpsys and possible crashlogs"
     fi
     echo ""
     echo "Please submit $LOG_PACKAGE for investigation, thank you!"
