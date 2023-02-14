@@ -82,9 +82,9 @@ else
     mkdir -p "$GATHER_LOGS_FULL/etc"
     for f in /etc/hw-release /etc/sailfish-release /etc/passwd /etc/group; do
         cp $f "$GATHER_LOGS_FULL/etc"
-    done    
+    done
 
-    rpm -qa > "$GATHER_LOGS_FULL/installed-packages"
+    rpm -qa | sort > "$GATHER_LOGS_FULL/installed-packages"
 
     ssu lr > "$GATHER_LOGS_FULL/ssu-lr"
 
