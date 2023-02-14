@@ -23,6 +23,15 @@ copy_from_backup() {
     fi
 }
 
+PROGRESS_BAR_PID=
+
+stop_progress_bar() {
+    if [ -n "$PROGRESS_BAR_PID" ] && [ $PROGRESS_BAR_PID -gt 1 ] ; then
+        kill -- $PROGRESS_BAR_PID
+    fi
+    PROGRESS_BAR_PID=
+}
+
 echo "$(basename $0) version $VERSION"
 
 if [ ! -d "$GATHER_LOGS_FULL" ]; then
@@ -72,7 +81,17 @@ EOF
     echo "System prepared for logging."
     echo "Please restart your device, run it until the issue is reproduced, then re-run this script."
 else
-    echo "Gathering logs..."
+    echo -n "Gathering logs.."
+
+    (
+        while [ 1 ]; do
+            echo -n "."
+            sleep 1
+        done
+    ) &
+    PROGRESS_BAR_PID=$!
+
+    trap stop_progress_bar EXIT SIGINT
 
     echo "$VERSION" > "$GATHER_LOGS_FULL/gather_logs_version"
 
@@ -152,7 +171,9 @@ else
     LOG_PACKAGE="sailfish_logs_$(date +%Y.%m.%d-%H.%M.%S).tar.bz2"
     tar cjf "$LOG_PACKAGE" "$GATHER_LOGS_DIR" -C /
     rm -r -f "$GATHER_LOGS_FULL"
-    echo "Logs gathered."
+    stop_progress_bar
+    echo "done."
+    echo ""
     echo "Contents of the package: full system log (verbose pulseaudio, ohmd, bluetoothd, ofono), logcat, installed packages, ssu lr output, df output, mount output, ps output, ls of /etc /dev /dev/snd, /etc/hw-release, /etc/sailfish-release /etc/passwd (this file doesn't contain actual passwords) /etc/group"
     if [ $APPSUPPORT_LOGS -eq 1 ]; then
         echo "    AppSupport listings of Android files and file permissions, logcat, dumpsys and possible crashlogs"
