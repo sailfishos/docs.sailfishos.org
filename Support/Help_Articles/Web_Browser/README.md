@@ -136,7 +136,7 @@ The bookmarks have a context menu (tap and hold one of them - also shown in _Pic
 
 Yet another quick way to open frequently used web pages is to open them in the browsing history.
 
-The history resides in the lower part of the complete **[toolset](/hc/en-us/articles/204665507#ch02).**
+The history resides in the lower part of the complete **[toolset](#toolbar-and-toolset)**.
 
 <div class="flex-images" markdown="1">
 
@@ -274,7 +274,7 @@ All open tabs can be closed at the popup menu shown below.
   </span>
 </div>
 
-Another way is to let it happen automatically when closing the Browser app - there is the setting "_Close all tabs on exit_" in the **[Browser settings](/hc/en-us/articles/203398427)**.    <============ FIX
+Another way is to let it happen automatically when closing the Browser app - there is the setting "_Close all tabs on exit_" in the **[Browser settings](#web-browser-settings-privacy-and-browsing-history)**.
 
 Closing the current tab is done by invoking the toolset (with the hamburger button) and by tapping the close button at the toolbar. It is the white square with the 'x' on it in the picture below.
 
@@ -486,11 +486,31 @@ _Pic 42_ shows how the Downloads folder in the device storage was selected for t
   <span class="md_figcaption">
     Pic 41: Download folder selected
   </span>
-* <a href="Browser_settings_save_destination_ready.png"><img src="Browser_settings_save_destination_ready.png" alt="DOwnload setting ready"></a>
+* <a href="Browser_settings_save_destination_ready.png"><img src="Browser_settings_save_destination_ready.png" alt="Download setting ready"></a>
   <span class="md_figcaption">
     Pic 42: Download setting ready
   </span>
 </div>
 
+# Resetting the Browser
+
+The following procedure will reset the Browser if it should misbehave in a weird way. The saved passwords will be lost but the browsing history and bookmarks remain.
+
+1. Close the Browser app
+2. Enable the **[Developer mode](/Support/Help_Articles/Enabling_Developer_Mode/)** (if not done previously)
+3. Open the Terminal app
+4. Give the following commands:
+
+```
+cd $HOME
+devel-su     ## SSH password needed here
+  
+rm -r .local/share/org.sailfishos/browser/.mozilla/
+rm .local/share/org.sailfishos/browser/__PREFS_WRITTEN__ 
+
+## Note: there are 2 underscore characters before and after "PREFS_WRITTEN"
+```
+
+Restart the device. Open the Browser and check that it works.
 
 
