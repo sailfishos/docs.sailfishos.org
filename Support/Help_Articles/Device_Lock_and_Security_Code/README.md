@@ -22,11 +22,11 @@ The picture below shows the Lock screen. Note the lock icon at the top. The two 
 
 * <a href="Lock_screen_with_arrows.png"><img src="Lock_screen_with_arrows.png" alt="The lock screen with arrows hinting how to swipe"></a>
   <span class="md_figcaption">
-    The lock screen with arrows hinting how to swipe
+    Pic 1: The lock screen with arrows hinting how to swipe
   </span>
 * <a href="Entering_security_code.png"><img src="Entering_security_code.png" alt="Security code dialogue"></a>
   <span class="md_figcaption">
-    Security code dialogue
+    Pic 2: Security code dialogue
   </span>
 </div>
 
@@ -44,13 +44,42 @@ On a shared device (having multiple user accounts), there is no Device lock item
 
 ## Security code
 
-The security code of Sailfish OS can contain numeric characters {0, 1, 2, 3,... 9} only. The minimum length of the code is 5 digits but we recommend a considerably longer code. The maximum is 42.
+The security code of Sailfish OS can contain the following alphanumeric characters (from OS release 4.5.0 onwards):
+```
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+0123456789
+,.!?;:&%#()=+- and space
+```
 
-Please note that this same code is also used for the encryption of user data.
+If a wrong character is typed (which is possible as the standard keypad is used) the warning "Disallowed characters" immediately appears on the display.
 
-Support for an alphanumeric security code is coming up in one of the releases after 4.4.0.
+The minimum length of the code is 5 digits but we recommend a considerably longer code. The maximum is 42. By default, the security code dialog has the numeric keypad (see Pic 2 above). The alphanumeric keypad can be exposed by tapping the button at the top left corner of the display (see Pic 3 below).
 
+<div class="flex-images" markdown="1">
 
+* <a href="Security-code-change-alphanumeric-code-exposed.png" class="narrow-image"><img src="Security-code-change-alphanumeric-code-exposed.png" alt="New security code"></a>
+  <span class="md_figcaption">
+    Pic 3: Typing a new security code
+  </span>
+</div>
+
+Please note that this same code is used both for the device lock and the encryption of user data.
+
+The following two pictures show the security code dialogs for unlocking the encryption (Pic 4) and for unlocking the device (Pic 5).
+In both cases, the alphanumeric keypad has been opened by tapping the button at the top left corner.
+
+<div class="flex-images" markdown="1">
+
+* <a href="Unlock-encr-alphanumeric.jpg"><img src="Unlock-encr-alphanumeric.jpg" alt="Unlocking the encryption"></a>
+  <span class="md_figcaption">
+    Pic 4: Unclocking the encryption
+  </span>
+* <a href="Unlock-device-alphanumeric-kbd.png"><img src="Unlock-device-alphanumeric-kbd.png" alt="Unlocking the device"></a>
+  <span class="md_figcaption">
+    Pic 5: Unlocking the device
+  </span>
+</div>
 
 # Turning on the Device lock
 
@@ -60,7 +89,7 @@ Support for an alphanumeric security code is coming up in one of the releases af
 
 The Device lock is activated during the Startup wizard, i.e. the first startup of the device after installing/flashing Sailfish to the device.
 
-The activation is done so that you type the Security code of your choice (at least 5 digits but consider a longer one) once and then again for confirmation. There is no dedicated ON-switch. The Device lock is active now, immediately.  You will need to type this code always when beginning to use the secured functions discussed later in this article. Please memorise your code!
+The activation is done so that you type the Security code of your choice (at least 5 digits but consider a longer one or the alphanumeric code) once and then again for confirmation. There is no dedicated ON-switch. The Device lock is active now, immediately.  You will need to type this code always when beginning to use the secured functions discussed later in this article. Please memorise your code!
 
 
 ## Configuration of the Device lock
@@ -71,11 +100,11 @@ The correct Security code must be typed in before changing any of the settings b
 
 * <a href="Device_lock_settings.png"><img src="Device_lock_settings.png" alt="Device lock settings"></a>
   <span class="md_figcaption">
-    Device lock settings
+    Pic 6: Device lock settings
   </span>
 * <a href="Automatic_locking_settings.png"><img src="Automatic_locking_settings.png" alt="Options for Automatic locking"></a>
   <span class="md_figcaption">
-    Options for Automatic locking
+    Pic 7: Options for Automatic locking
   </span>
 </div>
 
@@ -109,7 +138,7 @@ This function requires a fingerprint detector on the device. Not all Sailfish OS
 
 * <a href="Fingerprint_1.png" class="narrow-image"><img src="Fingerprint_1.png" alt="Fingerprint menu"></a>
   <span class="md_figcaption">
-    Fingerprint menu
+    Pic 8: Fingerprint menu
   </span>
 </div>
 
@@ -126,11 +155,11 @@ NOTE:_  As the user data of Sailfish phones is encrypted (see **[this article](
 
 * <a href="Fingerprint_2.png"><img src="Fingerprint_2.png" alt="Teaching a fingerprint 1"></a>
   <span class="md_figcaption">
-    Teaching a fingerprint 1
+    Pic 9: Teaching a fingerprint 1
   </span>
 * <a href="Fingerprint_3.png"><img src="Fingerprint_3.png" alt="Teaching a fingerprint 2"></a>
   <span class="md_figcaption">
-    Teaching a fingerprint 2
+    Pic 10: Teaching a fingerprint 2
   </span>
 </div>
 
