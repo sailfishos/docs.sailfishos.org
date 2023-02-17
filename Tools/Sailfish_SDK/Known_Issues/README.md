@@ -38,6 +38,7 @@ These are the known issues with the Sailfish SDK. If you have any questions, fee
  - `sfdk tools list --available` hangs when SDK updates are available
  - Suspending under terminal (`^Z`) is not always possible
  - Not possible to run multiple builds simultaneously due to conflicts in package creation phase
+ - sfdk called from a shell script under Windows/MSYS2 with the help of the `exec` shell built-in fails with the following error: `[D] SOFT ASSERT: "parentPidIt != parentPids.constEnd()" in file ...\session.cpp, line 279`
 
 ### Sailfish SDK Build Engine
 
