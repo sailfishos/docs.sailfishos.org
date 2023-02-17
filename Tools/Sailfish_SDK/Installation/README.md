@@ -62,7 +62,11 @@ You may also consider configuring MSYS2 to use your Windows user home directory.
 
     db_home: windows cygwin desc
 
-_Sailfish SDK 3.6 and older:_ Ensure that the `usr\bin` directory from MSYS2 installation tree is on Windows PATH.
+When Docker is used, ensure that the `docker` command line tool is available on `PATH` under the MSYS2 shell. This can be accomplished by adding, e.g.,
+
+    export PATH="$PATH:/c/Program Files/Docker/Docker/resources/bin/"
+    
+to the `~/.bash_profile` script under the MSYS2 shell and reopening the shell.
 
 ### System Requirements
   - About 15GB of free disk space for the default component selection
@@ -157,7 +161,13 @@ Adding SDK's `bin` directory to `PATH` is not recommended. Creating a shell wrap
     END
     chmod +x ~/bin/sfdk
 
-On Linux (exclusively) you can also simply symlink `sfdk` into `~/bin`.
+On Windows it may be necessary to omit the `exec` keyword. Depending on your Windows version, the following error may occur when the `exec` keyword is used:
+
+    [D] SOFT ASSERT: "parentPidIt != parentPids.constEnd()" in file ...\session.cpp, line 279
+
+On Linux (exclusively) you can also simply symlink `sfdk` into `~/bin` instead of creating a shell wrapper (again, provided that your `~/bin` directory is on `PATH`)
+
+    ln -s /path/to/SailfishOS/bin/sfdk ~/bin/sfdk
 
 Start by reading the built-in help.
 
