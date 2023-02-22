@@ -43,7 +43,7 @@ MOZ_LOG="AudioStream:5,MediaFormatReader:5,MediaSource:5" sailfish-browser youtu
 
 ## Debugging User-Agent problems
 
-  - Current user-agent is "Mozilla/5.0 (Sailfish 4.0; Mobile; rv:60.0) Gecko/60.0 Firefox/60.0"
+  - Current user-agent is "Mozilla/5.0 (Mobile; rv:78.0) Gecko/78.0 Firefox/78.0"
   - User-agent string can be overriden site specifically
   - Debug user agents with CUSTOM_UA environment variable
   - Input for the over the air updates is located in [browser's git repository](https://github.com/sailfishos/sailfish-browser/blob/next/data/ua-update.json.in)
