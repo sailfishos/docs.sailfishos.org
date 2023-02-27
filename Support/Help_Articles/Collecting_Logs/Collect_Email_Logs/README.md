@@ -64,7 +64,11 @@ Reboot the device to put the new configuration in effect.
 Reproduce the email problem. Try to send/receive an email message using your email account, or run the Sync command in the pulley menu of your email account 
 (in "Settings > Accounts > \[account\]"), depending on how the issues have usually occurred. The messages related to this sync action are then collected to the log file defined above.
 
-It is useful to collect the **journal** log, too. Please follow the instructions in **[this article](https://jolla.zendesk.com/hc/en-us/articles/202886373)**.
+It is useful to collect the **journal** log, too. If you have not enabled the **[developer mode](/Support/Help_Articles/Enabling_Developer_Mode/)** do it now.
+The following command collects the journal log and prints it out to the file "journal.txt".
+```
+devel-su; journalctl -a -b --no-tail --no-pager > journal.txt
+```
 
 As soon as you have completed collecting the logs, connect your Sailfish device to your computer with a data-enabled USB cable in the MTP mode. In the File Manager of the computer, 
 find files **messageserver.log** and **journal.txt** in the Mass storage under your Sailfish device. 

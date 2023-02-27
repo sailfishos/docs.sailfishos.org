@@ -106,7 +106,7 @@ Note that you must be careful with the super-user rights or else you might break
 
 Typing complicated commands at the tiny Terminal is error-prone and can lead to serious problems at worst. A safer way of entering commands is to do it at a terminal app running on a PC, after creating an SSH connection from the PC to the Sailfish OS device. In this way, you can copy the commands (one by one) from our articles and then paste them into the SSH terminal.
 
-Read more about SSH connection over USB:  **[Windows](https://jolla.zendesk.com/hc/en-us/articles/202004823)** and **[Linux/Ubuntu](https://jolla.zendesk.com/hc/en-us/articles/202004793)**.
+Read more about SSH connection over USB:  **[Windows](/Support/Help_Articles/SSH_and_SCP/SSH_and_SCP_Windows/)** and **[Linux/Ubuntu](/Support/Help_Articles/SSH_and_SCP/SSH_and_SCP_Linux/)**.
 
 ## Warnings related to Developer Mode
 
@@ -156,12 +156,12 @@ For example:
 
 - - - -
 
-[^1]: [SSH connection over USB from Windows PC to Sailfish device](https://jolla.zendesk.com/hc/en-us/articles/202004823)
+[^1]: [SSH connection over USB from Windows PC to Sailfish device](/Support/Help_Articles/SSH_and_SCP/SSH_and_SCP_Windows/)
 
-[^2]: [SSH and SCP connections over USB from Ubuntu to your Sailfish device](https://jolla.zendesk.com/hc/en-us/articles/202004793)
+[^2]: [SSH and SCP connections over USB from Ubuntu to your Sailfish device](/Support/Help_Articles/SSH_and_SCP/SSH_and_SCP_Linux/)
 
-[^3]: [SSH connection over WLAN from Windows to Sailfish device](https://jolla.zendesk.com/hc/en-us/articles/202346707)
+[^3]: [SSH connection over WLAN from Windows to Sailfish device](/Support/Help_Articles/SSH_and_SCP/SSH_and_SCP_Windows/)
 
-[^4]: [SSH and SCP connections over WLAN from Ubuntu to your Sailfish device](https://jolla.zendesk.com/hc/en-us/articles/203307716)
+[^4]: [SSH and SCP connections over WLAN from Ubuntu to your Sailfish device](/Support/Help_Articles/SSH_and_SCP/SSH_and_SCP_Linux/)
 
-[^5]: [SSH over WLAN from MacOS to your Sailfish device](https://jolla.zendesk.com/hc/en-us/articles/202011903)
+[^5]: [SSH over WLAN from MacOS to your Sailfish device](/Support/Help_Articles/SSH_and_SCP/SSH_and_SCP_Mac/)

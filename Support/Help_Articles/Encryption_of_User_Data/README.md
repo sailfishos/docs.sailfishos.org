@@ -19,13 +19,13 @@ This article describes how encryption [^1] works on Sailfish OS releases.
 * Encryption of user data is available on all Xperia devices from Sailfish OS version 3.3.0 onwards.
 * Encrypting a device (that is done once) typically takes 10-15 minutes. During this phase, there is a spinner and the text "Encrypting user data, please wait" in the display.
 
-NOTE: _Encryption of memory cards (SD cards) is a separate feature. It is explained in **[this article](https://jolla.zendesk.com/hc/en-us/articles/201997993)**_.
+NOTE: _Encryption of memory cards (SD cards) is a separate feature. It is explained in **[this article](/Support/Help_Articles/SD_Card_Format_and_Encryption/)**_.
 
 
 
 ## Security code
 
-The security code of Sailfish OS is used both for unlocking the **[Device lock](https://jolla.zendesk.com/hc/en-us/articles/201440487)** and for unlocking the encryption of user data.
+The security code of Sailfish OS is used both for unlocking the **[Device lock](/Support/Help_Articles/Device_Lock_and_Security_Code/)** and for unlocking the encryption of user data.
 
 The security code can contain numeric characters {0, 1, 2, 3,... 9} only (on Sailfish OS 4.4.0 and earlier releases). The minimum length of the code is 5 digits but we recommend a considerably longer code. The maximum is 42. An alphanumeric security code is coming up.
 
@@ -33,7 +33,7 @@ The security code can contain numeric characters {0, 1, 2, 3,... 9} only (on Sai
 
 # Encryption - an extension to the Device lock
 
-Encryption of user data in Sailfish OS is to some extent bundled with the **[Device lock](https://jolla.zendesk.com/hc/en-us/articles/201440487)** and Security code of Sailfish OS. One could think of encryption as an extension of the Device lock.
+Encryption of user data in Sailfish OS is to some extent bundled with the **[Device lock](/Support/Help_Articles/Device_Lock_and_Security_Code/)** and Security code of Sailfish OS. One could think of encryption as an extension of the Device lock.
 
 The user data is in an encrypted state when the device is off. It remains encrypted until the correct Security code is entered when starting up the device. The acceptance of the Security code unlocks the data for use. The unencrypted data is then available for the apps as long as the device is up and running.
 

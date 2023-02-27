@@ -170,7 +170,6 @@ If you swipe to the left in the inbox, you will see the Folders view of this acc
 
 **Tip:** If you aren’t sure if you’ve sent an email, check the Outbox folder for unsent mails.
 
-If there are problems with sending emails, please see our troubleshooting articles for **[General email](https://jolla.zendesk.com/hc/en-us/articles/204471097)** and **[Exchange](https://jolla.zendesk.com/hc/en-us/articles/202011046)**.
 
 
 

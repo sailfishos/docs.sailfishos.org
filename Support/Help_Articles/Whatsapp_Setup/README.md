@@ -28,7 +28,7 @@ However, if you have had WhatsApp on some phone previously and you would like to
   </span>
 </div>
 
-You can [**install Aptoide Store**](https://jolla.zendesk.com/hc/en-us/articles/202442148#gettingstarted) from the Jolla Store if you don't already have it.
+You can [**install Aptoide Store**](/Support/Help_Articles/Android_App_Support/Aptoide/) from the Jolla Store if you don't already have it.
 
 2) Open the Aptoide app. Tap the Search button at the footer of the Home view. Type "whatsapp".  In the search results, tap "WhatsApp Messenger" and install it.
 

@@ -167,7 +167,7 @@ Disabled
         </tr>
         <tr>
           <td>Xperia XA2</td>
-          <td>With <a href="https://developer.sony.com/file/download/software-binaries-for-aosp-oreo-android-8-1-kernel-4-4-nile">v17B Sony vendor image</a> we observed a decrease in the perceived signal strength of the 5 GHz WLAN access points (investigations ongoing). Version <a href="https://developer.sony.com/file/download/software-binaries-for-aosp-oreo-android-8-1-kernel-4-4-nile-v16/">v16</a> works better in this respect. Therefore we would not recommend flashing v17B for the time being if you use WLAN networks in the 5 GHz band. You can reflash the vendor image of your choice by following the instructions <a href="https://jolla.zendesk.com/hc/en-us/articles/360019346354"> in here</a>.</td>
+          <td>With <a href="https://developer.sony.com/file/download/software-binaries-for-aosp-oreo-android-8-1-kernel-4-4-nile">v17B Sony vendor image</a> we observed a decrease in the perceived signal strength of the 5 GHz WLAN access points (investigations ongoing). Version <a href="https://developer.sony.com/file/download/software-binaries-for-aosp-oreo-android-8-1-kernel-4-4-nile-v16/">v16</a> works better in this respect. Therefore we would not recommend flashing v17B for the time being if you use WLAN networks in the 5 GHz band. You can reflash the vendor image of your choice by following the instructions <a href="/Support/Help_Articles/Updating_Vendor_Image/"> in here</a>.</td>
           <td></td>
           <td>Not planned</td>
         </tr>

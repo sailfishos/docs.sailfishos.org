@@ -123,7 +123,7 @@ There are the following ways to "clean up" a Sailfish phone. All user data, acco
 
 1. Device reset (a.k.a. factory reset) - see **[this article](/Support/Help_Articles/Factory_Reset/)**. This requires that the menus of the phone are still avalable.
 2. Reinstallation ("flashing") of Sailfish to Xperia phones - see **[this article](/Support/Help_Articles/Reinstalling_Sailfish_OS/#installing-sailfish-x-again-to-xperia)**
-3. Recovery mode - see the instructions for **[recent Xperia phones](/Support/Help_Articles/Recovery_Mode/)**, **[older Xperia models](https://jolla.zendesk.com/hc/en-us/articles/360002996893)**, **[Jolla Phone](https://jolla.zendesk.com/hc/en-us/articles/204709607)**, and **[Jolla Tablet](https://jolla.zendesk.com/hc/en-us/articles/208406917)**
+3. Recovery mode - see the instructions for **[recent Xperia phones](/Support/Help_Articles/Recovery_Mode/)**, **[older Xperia models](/Support/Help_Articles/Recovery_Mode/)**, **[Jolla Phone](https://jolla.zendesk.com/hc/en-us/articles/204709607)**, and **[Jolla Tablet](https://jolla.zendesk.com/hc/en-us/articles/208406917)**
 
 We compare options 1 and 2 in the table below.
 

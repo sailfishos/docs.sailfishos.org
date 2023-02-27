@@ -32,7 +32,12 @@ When evaluating the found bug it is important to make sure that the bug is valid
 
 In case bug can be reproduced easily then logs are not that crucial, since then the developer can easily also get those if the steps to reproduce are clear or sometimes logs are not simply needed if the bug is related to UI glitch etc. In case bug is hard to reproduce then it is very important to provide also logs since it might be that the bug simply can't be reproduced due to test environment etc. reasons. When providing logs it is also important either study the logs and highlight the related lines or at least inform on what time the bug orccurs so that it is easier to find the correct lines from the logs.
 
-When providing logs at least [journal logs](https://jolla.zendesk.com/hc/en-us/articles/202886373) should be provided.
+When providing logs at least the journal logs should be provided.
+If you have not enabled the **[developer mode](/Support/Help_Articles/Enabling_Developer_Mode/)** do it now.
+The following command collects the journal log and prints it out to the file "journal.txt".
+```
+devel-su; journalctl -a -b --no-tail --no-pager > journal.txt
+```
 
 On some areas journal logs are not enough to reveal the root cause and therefore additional logs might be needed.
 More information about logs below:
@@ -46,7 +51,7 @@ More information about logs below:
 * Show failed services: `systemctl list-units --failed`
 * Collect logs for a specific systemd unit `journalctl -u <unitname>`
 * Follow actions of out of memory killer: `dmesg -w | egrep "lowmemorykiller|oom_reaper|^ {19}.*|Out of memory"`
-* `collect-logs.zip` from [Collecting basic logs from a Sailfish device](https://jolla.zendesk.com/hc/en-us/articles/360013910599-Collecting-basic-logs-from-a-Sailfish-device) 
+* `collect-logs.zip` from [Collecting basic logs from a Sailfish device](/Support/Help_Articles/Collecting_Logs/Collect_Basic_Logs/) 
 
 ## Audio
 * `systemctl status pulseaudio` and `journalctl -u pulseaudio`
@@ -66,7 +71,7 @@ More information about logs below:
     * `devel-su appsupport-attach /system/bin/logcat`
 
 ## EMail
-* [How to collect EMail logs](https://jolla.zendesk.com/hc/en-us/articles/201975906-How-to-collect-Email-logs-General-email-IMAP-POP-)
+* [How to collect Email logs](/Support/Help_Articles/Collecting_Logs/Collect_Email_Logs/)
 
 ## Mobile Data / Calling / SMS
 the logs may contain your personal data!

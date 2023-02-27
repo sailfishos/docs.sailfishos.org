@@ -18,12 +18,12 @@ Before starting an OS update, ensure that the following crucial matters are as t
 * Always read the **release notes** of the OS version you are going to install. The release notes are kept in **[Sailfish OS Forum](https://forum.sailfishos.org/tag/release-notes)**, the latest on top of the list.
 * Check that you have a working **Internet** connection on your device. Use the Sailfish browser to check this. Note that the size of the update may be up to hundreds of megabytes. Prefer WLAN to download it. If you use mobile data, make sure that this will not incur costs for you.
 * Check that the **date and time** of your device are correct.
-* Check that you have a working **Jolla account** on your Sailfish device. Launch the Jolla Store application and try to install any application from the Store. If this works then your account is okay. Should there be any trouble please read **[this article](https://jolla.zendesk.com/hc/en-us/articles/201440377-Resolving-problems-with-Jolla-account-loading-applications-from-the-Jolla-store-and-or-getting-the-latest-OS-update)**.
+* Check that you have a working **Jolla account** on your Sailfish device. Launch the Jolla Store application and try to install any application from the Store. If this works then your account is okay. Should there be any trouble please read **[this article](/Support/Help_Articles/Accounts_Setup/Setup_Jolla_Account/)**.
 * We recommend keeping the device **connected to a battery charger** throughout the whole update process.
 * Make sure you have that you have enough **free storage space** (disk space) in the device: the user data "Used" is shown on menu page _Settings > Storage._
 * If you have installed applications from **OpenRepos** service, then see chapter OpenRepos in the end of this article. _If you have never heard of OpenRepos, no worries, please skip this step._
 
-NOTE: Xperia and Gemini device must have a valid **[Sailfish X licence](https://jolla.zendesk.com/hc/en-us/articles/115003837053)**, or else they won't get any OS updates.
+NOTE: Xperia and Gemini device must have a valid **[Sailfish X licence](/Support/Help_Articles/Sailfish_X_Licence/)**, or else they won't get any OS updates.
 
 ## Updating the operating system
 
@@ -134,7 +134,7 @@ As soon as the first stop release is installed on the device, seek the next one.
 
 ### Updating at the command line
 
-If the device keeps failing to indicate the availability of Sailfish OS updates, it may be possible to get them with the following commands (this requires the **Developer mode**, SSH password, and Terminal app  (see "_Settings > System > Developer mode_"). If you need help with the commands below, read this **[help article on Developer mode](https://jolla.zendesk.com/hc/en-us/articles/202011863)** or contact **[Jolla Customer Support](https://jolla.zendesk.com/hc/en-us/requests/new)**.
+If the device keeps failing to indicate the availability of Sailfish OS updates, it may be possible to get them with the following commands (this requires the **Developer mode**, SSH password, and Terminal app  (see "_Settings > System > Developer mode_"). If you need help with the commands below, read this **[help article on Developer mode](/Support/Help_Articles/Enabling_Developer_Mode/)** or contact **[Jolla Customer Support](https://jolla.zendesk.com/hc/en-us/requests/new)**.
 
 The way of working here is to download and install the stop releases one by one with the command set below (an example), and then, eventually, the latest public release.
 

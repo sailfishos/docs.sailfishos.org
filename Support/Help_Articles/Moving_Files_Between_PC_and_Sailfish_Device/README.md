@@ -12,7 +12,7 @@ _This document explains how to transfer files between your Sailfish device and y
 * Connecting your Sailfish device to a computer using a USB cable is best supported on Windows and Ubuntu systems.
 * Windows 10 & 11 support the media transfer (MTP) protocol by default
 * Depending on your Linux distribution it should be possible to form a connection between your PC and Sailfish without additional preparations. Should you have problems with media transfer (MTP), you might find help e.g. [**here**](https://askubuntu.com/questions/146529/how-to-connect-mtp-devices-via-usb).
-* There is a support article for **[file transfer between Sailfish and Mac](https://jolla.zendesk.com/hc/en-us/articles/201440867)** that hopefully works around the limitations.
+* There is a support article for **[file transfer between Sailfish and Mac](/Support/Help_Articles/Moving_Files_between_Mac_and_Sailfish_Device/)** that hopefully works around the limitations.
 
 
 # Transferring files over USB with MTP

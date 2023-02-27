@@ -151,7 +151,7 @@ _Pairing from the Sailfish command line may help._ _This advice is for advanced 
 
 Some Bluetooth tools need to be installed. The actual pairing command relies on the so-called MAC address of the device to be paired. The MAC can be checked from Settings > System > About phone on Sailfish devices and from a corresponding menu on other devices.
 
-You will need to enable the **[developer mode](/Support/Help_Articles/Enabling_Developer_Mode/)** for this. Once done, give the following commands in the Terminal app or make an SSH connection from a computer to the phone. The following links have SSH instructions for **[Windows computers](https://jolla.zendesk.com/hc/en-us/articles/202004823)** and for **[Linux computers](https://jolla.zendesk.com/hc/en-us/articles/202004793)**.
+You will need to enable the **[developer mode](/Support/Help_Articles/Enabling_Developer_Mode/)** for this. Once done, give the following commands in the Terminal app or make an SSH connection from a computer to the phone. The following links have SSH instructions for **[Windows computers](/Support/Help_Articles/SSH_and_SCP/SSH_and_SCP_Windows/)** and for **[Linux computers](/Support/Help_Articles/SSH_and_SCP/SSH_and_SCP_Linux/)**.
 
 
 ### Install the tools

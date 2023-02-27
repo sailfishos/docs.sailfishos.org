@@ -85,7 +85,7 @@ Open one photo. Tap the pen button in the toolbar below the image. The edit mode
   </span>
 </div>
 
-Note also the right-most tool at the toolbar of the original photo. It is the ambience tool that allows you to create a new ambience (background image and uniform colour pattern for the menus). Read more about **[Ambiences](https://jolla.zendesk.com/hc/en-us/articles/201440617)**.
+Note also the right-most tool at the toolbar of the original photo. It is the ambience tool that allows you to create a new ambience (background image and uniform colour pattern for the menus). Read more about **[Ambiences](/Support/Help_Articles/Ambiences/)**.
 
 In the example below, we use the crop tool.  The first step is to select the aspect ratio. Then, move the object to the desired position. Use the "Save" button at the top right corner.
 

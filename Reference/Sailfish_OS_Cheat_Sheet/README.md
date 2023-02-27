@@ -71,7 +71,7 @@ devel-su journalctl -fa # Sailfish
 devel-su /system/bin/logcat -v time # Android apps
 ```
 
-See also [logcat usage help article](https://jolla.zendesk.com/hc/en-us/articles/204110913)
+See also [logcat usage help article](/Support/Help_Articles/Collecting_Logs/Collect_Logs_with_Logcat/)
 
 Search log for keyword 'account' ignoring the case
 ```nosh

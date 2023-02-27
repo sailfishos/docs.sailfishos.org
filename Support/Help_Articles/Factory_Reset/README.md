@@ -11,17 +11,17 @@ nav_order: 440
 * All user data, settings and accounts are deleted from the device and are **irretrievable** after this operation (however, data on the memory card remains intact) 
 * All applications installed by the user are removed
 * The operating system is reverted to the version the device had when leaving the factory or that was installed later by "flashing". You will need to update the phone to the latest OS version which implies installing a chain of Stop Releases. In the worst cases, this may take several hours.
-* **In the case of Xperia devices, we recommend re-installing (by "flashing") Sailfish OS to the device, instead of resetting it.** This is easier and saves you from many extra steps. While the reset reverts your phone to one of the earlier OS versions, you will get the latest OS release directly by flashing it to the phone. **[See our comparison](https://jolla.zendesk.com/hc/en-us/articles/4414662045074)** of device reset to re-installation. Our instructions for flashing are **[in this support article](https://docs.sailfishos.org/Support/Help_Articles/Reinstalling_Sailfish_OS/)**.
+* **In the case of Xperia devices, we recommend re-installing (by "flashing") Sailfish OS to the device, instead of resetting it**. This is easier and saves you from many extra steps. While the reset reverts your phone to one of the earlier OS versions, you will get the latest OS release directly by flashing it to the phone. **[See our comparison](/Support/Help_Articles/Tips_and_Tricks/#total-device-reset)** of device reset to re-installation. Our instructions for flashing are **[in this support article](/Support/Help_Articles/Reinstalling_Sailfish_OS/)**.
 
 # Preparation
-It is recommended to **[take a backup](https://jolla.zendesk.com/hc/en-us/articles/201804906)** of the data in your device and copy it to an **SD card** before running the reset (if possible). Once done then proceed to the reset.
+It is recommended to **[take a backup](/Support/Help_Articles/Backup/Backup_and_Restore/)** of the data in your device and copy it to an **SD card** before running the reset (if possible). Once done then proceed to the reset.
 
-Whether unsure if the device reset will erase data you will need once it's gone, please make a list for yourself of all files or other information on your device that is important to you, and use our  **[backup](https://jolla.zendesk.com/hc/en-us/articles/201804906)** article as a resource to learn what information can be saved and how.
+Whether unsure if the device reset will erase data you will need once it's gone, please make a list for yourself of all files or other information on your device that is important to you, and use our  **[backup](/Support/Help_Articles/Backup/Backup_and_Restore/)** article as a resource to learn what information can be saved and how.
 
 # Resetting the device
 1. Connect a battery charger to the device.
 2. Go to menu Settings > System > 'Reset device'.
-**NOTE: This feature is missing from Xperia 10 II and Xperia 10 III devices. Consider re-installing ("flashing") the latest Sailfish OS release to the device. [This article](https://docs.sailfishos.org/Support/Help_Articles/Reinstalling_Sailfish_OS/) explains how to do it.**
+**NOTE: This feature is missing from Xperia 10 II and Xperia 10 III devices. Consider re-installing ("flashing") the latest Sailfish OS release to the device. [This article](/Support/Help_Articles/Reinstalling_Sailfish_OS/) explains how to do it.**
 3. Tap 'Clear device'.
 4. Read the disclaimer, and tap 'Accept' if you are ready to proceed.
 5. If you have the device lock enabled, it will prompt for the security code.
@@ -49,9 +49,9 @@ Let your phone install the apps before you proceed from here.
 The device has probably presented a notification about SailfishOS update by now. Please download and install it now:
 * Visit menu page "Settings > System > Sailfish OS updates"
 * Follow the on-screen instructions
-* Detailed instructions on installing a Sailfish OS update are given on **[this page](https://jolla.zendesk.com/hc/en-us/articles/201836347)** - please read it!
+* Detailed instructions on installing a Sailfish OS update are given on **[this page](/Support/Help_Articles/Updating_Sailfish_OS/)** - please read it!
 
-Please note that it is not necessarily possible to update the OS to the latest version directly but in one or more steps. There are so-called **[Stop Releases](https://jolla.zendesk.com/hc/en-us/articles/201836347#4.1)** in the update path. All of them must be traversed. Sailfish OS should automatically suggest the next stop release for you in "Settings > System > Sailfish OS updates".  Download and install it.
+Please note that it is not necessarily possible to update the OS to the latest version directly but in one or more steps. There are so-called **[Stop Releases](/Support/Help_Articles/Updating_Sailfish_OS/#the-update-path-and-stop-releases)** in the update path. All of them must be traversed. Sailfish OS should automatically suggest the next stop release for you in "Settings > System > Sailfish OS updates".  Download and install it.
 
 Should you need help with the commands above, please file a request at **[Jolla Service & Support](https://jolla.zendesk.com/hc/en-us/requests/new)**.
 
@@ -59,7 +59,7 @@ Should you need help with the commands above, please file a request at **[Jolla 
 Install your most-used applications from Jolla Store (install more apps later)
 
 ## Restore your data from the SD card
-Restore the backup from the SD card.  Follow the **[instructions here](https://jolla.zendesk.com/hc/en-us/articles/201804906)**.
+Restore the backup from the SD card.  Follow the **[instructions here](/Support/Help_Articles/Backup/Backup_and_Restore/)**.
 
 ## Check your accounts
 Check your accounts (e.g. Google, Exchange, Facebook) on the menu page Settings > Accounts. Backup should have restored the account settings; however, it is best to check all accounts and sign in again if necessary.
@@ -71,7 +71,7 @@ All settings are in their default values after the factory reset. Some of them m
 * Settings > Look and feel > Events view: "Setting shortcuts" and "Select actions"
 * Settings > Look and feel > Display: "Sleep after"
 * Settings > Location: "Location"
-* Settings > Apps > Phone: "Quick call" **[(read this)](https://jolla.zendesk.com/hc/en-us/articles/201440137)**
+* Settings > Apps > Phone: "Quick call" **[(read this)](/Support/Help_Articles/Tips_and_Tricks/#quick-calls-from-the-call-history)**
 * Settings > Apps > People: Check "Show" and "Sort" options
 * Settings > Apps > Camera: Select "Memory card" for "Storage" if card is available.
 
