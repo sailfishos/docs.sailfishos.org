@@ -7,7 +7,7 @@ layout: default
 nav_order: 200
 ---
 
-This information is valid as of Sailfish OS 4.4.0 release
+This information is valid as of Sailfish OS 4.5.0 release
 
 You can always check the up-to-date list from the [validator config files](https://github.com/sailfishos/sdk-harbour-rpmvalidator)
 
@@ -29,6 +29,12 @@ Your application can link against the following libraries:
   - libmdeclarativecache5.so.0
   - libsailfishsilica.so.1
 
+### Sailfish Secrets framework
+
+  - libsailfishcrypto.so.0
+  - libsailfishsecrets.so.0
+  - libsailfishsecretscrypto.so.0
+
 ### Sailfish WebView library
 
   - libqt5embedwidget.so.1
@@ -37,6 +43,11 @@ Your application can link against the following libraries:
 ### Amber Web Authorization framework
 
   - libamberwebauthorization.so.1
+
+### Sailfish Accounts library
+
+  - libsailfishaccounts.so.0
+    - We make no quarantees of backwards compatibility between releases. Supported since Sailfish OS 4.5.0.
 
 ### OpenGL ES 1.1, 2.0 and EGL
 
@@ -64,6 +75,7 @@ Your application can link against the following libraries:
   - libnemonotifications-qt5.so.1
   - libnemothumbnailer-qt5.so.1
   - libkeepalive.so.1
+  - libkeepalive-glib.so.1
 
 ### Additional Qt 5 modules
 
@@ -77,6 +89,7 @@ Your application can link against the following libraries:
   - libQt5Sensors.so.5
   - libQt5Positioning.so.5
   - libQt5WebSockets.so.5
+  - libQt5Location.so.5
 
 ### Various additional libraries that are useful
 
@@ -130,6 +143,11 @@ Your application can link against the following libraries:
   - libSDL2_net-2.0.so.0
   - libSDL2_ttf-2.0.so.0
 
+### BluezQt
+
+  - libKF5BluezQt.so.6
+    - We make no quarantees of backwards compatibility between releases. Supported since Sailfish OS 4.5.0.
+
 ## Allowed QML Imports
 
 Your app is not allowed to have QML imports matching the following patterns:
@@ -163,6 +181,20 @@ The exceptions to this rule are the following imports:
   - Sailfish.WebView.Pickers 1.0
   - Sailfish.WebView.Popups 1.0
   - Sailfish.WebEngine 1.0
+  - Sailfish.Secrets 1.0
+    - We make no quarantees of backwards compatibility between releases. Supported since Sailfish OS 4.5.0.
+  - Sailfish.Crypto 1.0
+    - We make no quarantees of backwards compatibility between releases. Supported since Sailfish OS 4.5.0.
+  - Sailfish.Media 1.0
+    - We make no quarantees of backwards compatibility between releases. Supported since Sailfish OS 4.5.0.
+  - Sailfish.Contacts 1.0
+    - We make no quarantees of backwards compatibility between releases. Supported since Sailfish OS 4.5.0.
+  - Sailfish.Accounts 1.0
+    - We make no quarantees of backwards compatibility between releases. Supported since Sailfish OS 4.5.0.
+  - Sailfish.Bluetooth 1.0
+    - We make no quarantees of backwards compatibility between releases. Supported since Sailfish OS 4.5.0.
+  - Sailfish.Telephony 1.0
+    - We make no quarantees of backwards compatibility between releases. Supported since Sailfish OS 4.5.0.
 
 ### Amber Web Authorization framework
 
@@ -210,13 +242,14 @@ The exceptions to this rule are the following imports:
   - QtGraphicalEffects 1.0
   - QtPositioning 5.2
   - QtPositioning 5.4
+  - QtLocation 5.0
+  - QtLocation 5.3
+  - QtLocation 5.4
   - QtQml.Models 2.1
   - QtQml.Models 2.2
   - QtQml.Models 2.3
-
-### QtFeedback hasn't been declared stable, but we allow a restricted part
-
   - QtFeedback 5.0
+    - QtFeedback hasn't been declared stable, but we allow a restricted partof QML qml side. Basically ThemeEffect with play() usingPressWeak, Press and PressStrong, together with .supported.
 
 ### ContextKit
 
@@ -238,6 +271,13 @@ The exceptions to this rule are the following imports:
   - Nemo.Configuration 1.0
   - Nemo.Thumbnailer 1.0
   - Nemo.KeepAlive 1.2
+  - org.nemomobile.contacts 1.0
+    - We make no quarantees of backwards compatibility between releases. Supported since Sailfish OS 4.5.0.
+
+### BluezQt
+
+  - org.kde.bluezqt 1.0
+    - We make no quarantees of backwards compatibility between releases. Supported since Sailfish OS 4.5.0.
 
 ## Allowed package dependencies
 
@@ -274,11 +314,32 @@ Usually you shouldn't add library depencencies or python module dependencies to 
   - sailfishsilica-qt5
   - libsailfishapp
   - mapplauncherd-booster-silica-qt5
+
+### Sailfish Components
+
+  - libkeepalive-glib
   - libqt5embedwidget.so.1
   - sailfish-components-webview-qt5
   - sailfish-components-webview-qt5-popups
   - sailfish-components-webview-qt5-pickers
   - libsailfishwebengine.so.1
+  - qml(Sailfish.Contacts)
+  - qml(Sailfish.Media)
+  - qml(Sailfish.Accounts)
+  - libsailfishaccounts.so.0
+  - qml(Sailfish.Bluetooth)
+  - qml(Sailfish.Telephony)
+
+### Sailfish Secrets framework
+
+  - libsailfishcrypto.so.0
+  - libsailfishsecrets.so.0
+  - libsailfishsecretscrypto.so.0
+  - sailfishsecretsdaemon
+  - sailfishsecretsdaemon-cryptoplugins-default
+  - sailfishsecretsdaemon-secretsplugins-default
+  - qml(Sailfish.Crypto)
+  - qml(Sailfish.Secrets)
 
 ### Amber Web Authorization framework
 
@@ -306,6 +367,7 @@ Usually you shouldn't add library depencencies or python module dependencies to 
   - qt5-qtquickcontrols-layouts
   - qt5-qtdeclarative-import-models2
   - qt5-qtwebsockets
+  - qml(QtLocation)
 
 ### Nemo QML Imports
 
@@ -316,12 +378,16 @@ Usually you shouldn't add library depencencies or python module dependencies to 
   - nemo-qml-plugin-contextkit-qt5
   - qml(org.freedesktop.contextkit)
   - libkeepalive
+  - qml(org.nemomobile.contacts)
 
 ### Qt Modules
 
   - qt5-qtmultimedia
   - qt5-qtmultimedia-plugin-audio-pulseaudio
   - qt5-qtpositioning
+  - qt5-qtlocation
+  - qt5-plugin-geoservices-here
+  - qt5-plugin-geoservices-osm
 
 ### Image format plugins
 
@@ -358,6 +424,10 @@ Usually you shouldn't add library depencencies or python module dependencies to 
   - python3dist(sortedcontainers)
   - python3dist(toml)
   - python3dist(twisted)
+  - python3dist(pillow)
+    - While we allow Pillow, we make no quarantees of backwards compatibility between releases. Supported since Sailfish OS 4.5.0.
+  - python3dist(pytz)
+    - Supported since Sailfish OS 4.5.0
 
 ### libxml2
 
@@ -381,6 +451,11 @@ Usually you shouldn't add library depencencies or python module dependencies to 
   - libSDL2_net-2.0.so.0
   - libSDL2_ttf-2.0.so.0
 
+### BluezQt
+
+  - libKF5BluezQt.so.6
+  - qml(org.kde.bluezqt)
+
 ## Deprecated libraries
 
 The following libraries have been deprecated, and they should no longer be used in new code. They will be dropped from allowed libraries in a future release:
@@ -394,13 +469,19 @@ The following libraries have been deprecated, and they should no longer be used 
   - libssl.so.10
   - libcrypto.so.10
 
-### Deprecated in Sailfish OS 4.4.0
+## Dropped libraries
+
+The following libraries are no longer allowed:
+
+### No longer allowed since Sailfish OS 4.5.0
 
   - libQt5WebKit.so.5
 
 ## Deprecated QML Imports
 
 The following QML Imports have been renamed. The old imports should no longer be used in new code. They will be dropped from allowed imports in a future release:
+
+### Renamed QML imports
 
   - org.nemomobile.notifications 1.0
     - Renamed as 'Nemo.Notifications 1.0'
@@ -410,5 +491,11 @@ The following QML Imports have been renamed. The old imports should no longer be
     - Renamed as 'Nemo.Configuration 1.0'
   - org.nemomobile.thumbnailer 1.0
     - Renamed as 'Nemo.Thumbnailer 1.0'
+
+## Dropped QML Imports
+
+The following QML Imports are no longer allowed:
+
+### No longer allowed since Sailfish OS 4.5.0
+
   - QtWebKit 3.0
-    - Deprecated in Sailfish 4.4.0
