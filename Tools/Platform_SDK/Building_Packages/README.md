@@ -73,7 +73,6 @@ $ mb2 build-shell g++ -o hello hello.cpp
 If you leave the command out, an interactive shell is opened:
 ```nosh
 $ mb2 build-shell
-NOTICE: Using the 'SailfishOS-4.4.0.58-aarch64.default' snapshot of the build target
 [SailfishOS-4.4.0.58-aarch64] $
 ```
 
@@ -88,11 +87,10 @@ $ mb2 build-shell --maintain zypper in ...
 Just like without the `--maintain` parameter, you can leave out the command to open an interactive shell:
 ```nosh
 $ mb2 build-shell --maintain
-NOTICE: Using the 'SailfishOS-4.4.0.58-aarch64.default' snapshot of the build target
 [SailfishOS-4.4.0.58-aarch64] #
 ```
 
-Any changes done under the build environment are persisted under build targets. Unless the --no-snapshot option is used, mb2 uses a working copy (a "snapshot") of the actual build target to persist your build environment. You have seen the informal message regarding the use of a snapshot a few times already. Thanks to this you can revert any modifications to the build environment using the 'build-requires reset' command, so don't be afraid to experiment, but be aware that changes may get reset implicitly under certain conditions (read more in the built-in help of mb2).
+Any changes done under the build environment are persisted under build targets. Unless the `--no-snapshot` option is used, mb2 uses a working copy (a "snapshot") of the actual build target to persist your build environment. Thanks to this you can revert any modifications to the build environment using the 'build-requires reset' command, so don't be afraid to experiment, but be aware that changes may get reset implicitly under certain conditions (read more in the built-in help of mb2).
 
 Use the 'build-requires diff' command to see how the current build environment differs from the clean build environment in terms of package installations, removals and replacements.
 
