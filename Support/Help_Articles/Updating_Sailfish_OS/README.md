@@ -237,7 +237,7 @@ It is best to read the **[release notes](https://forum.sailfishos.org/tag/releas
 
 **Sailfish OS does not support downgrading**. Never try to downgrade the OS version as this could brick your device.
 
-The only way to "downgrade" is to use the **[factory reset](https://jolla.zendesk.com/hc/en-us/articles/201890427)**. This will revert the OS version back to the initial one put in when flashing the device the previous time (at the factory or in repair service).
+The only way to "downgrade" is to use the **[factory reset](/Support/Help_Articles/Factory_Reset/)**. This will revert the OS version back to the initial one put in when flashing the device the previous time (at the factory or in repair service).
 
 ## Updating by reinstalling Sailfish OS
 
@@ -276,7 +276,7 @@ Please read the Prerequisites chapter in the beginning of this document and foll
 
 Sometimes the problem has turned out to be that the Store client (on the device) and Store backend (on Jolla internet) are not in sync with each other. We will try to eliminate some of those conflicts here.
 
-We need to go to the command line, i.e. use **the Terminal application**. You get this app by enabling the **[Developer mode](https://jolla.zendesk.com/hc/en-us/articles/202011863-How-to-enable-Developer-Mode)**. Remember to set the SSH password for yourself, too. Even a better way would be to use the **SSH connection** from Putty app on PC - see **[this article](https://jolla.zendesk.com/hc/en-us/articles/202004823)**.
+We need to go to the command line, i.e. use **the Terminal application**. You get this app by enabling the **[Developer mode](/Support/Help_Articles/Enabling_Developer_Mode/)**. Remember to set the SSH password for yourself, too. Even a better way would be to use the **SSH connection** from a terminal app on a PC - see **[this article](/Support/Help_Articles/SSH_and_SCP/SSH_and_SCP_Windows/)**.
   
 Now, open either the Terminal app or the Putty terminal.   Issue the following commands one by one:
 
@@ -294,7 +294,7 @@ Your Sailfish device will restart now. Once up and running, visit the menu page 
 
 ## The problem persists - collecting logs for Jolla R&D to investigate
 
-In case the OS download keeps failing, please collect some logs from your device. We have a script for doing this easily. Please read the **[instructions](https://jolla.zendesk.com/hc/en-us/articles/360013910599)**.
+In case the OS download keeps failing, please collect some logs from your device. We have a script for doing this easily. Please read the **[instructions](/Support/Help_Articles/Collecting_Logs/Collect_Basic_Logs/)**.
 
 Then, file a **[request to Jolla customer support](https://jolla.zendesk.com/hc/en-us/requests/new)** and attach the log file from your phone, please.
 
@@ -321,7 +321,7 @@ If the problem persists, try the command line update explained below. If that fa
 
 Let's download and install the OS update by initiating the process from the command line (Terminal app) instead of the menu page "Settings > System > Sailfish OS updates". In this way, some checks are by-passed which may allow the update to work okay.
 
-Please read this **[help article](https://jolla.zendesk.com/hc/en-us/articles/202011863)** first and do as instructed in it. It explains how to enable and disable the **Developer mode**. Developer mode makes access deeper to Sailfish OS possible by allowing you to get the super-user rights ("root" rights). Also, it installs the **Terminal application** to the device.
+Please read this **[help article](/Support/Help_Articles/Enabling_Developer_Mode/)** first and do as instructed in it. It explains how to enable and disable the **Developer mode**. Developer mode makes access deeper to Sailfish OS possible by allowing you to get the super-user rights ("root" rights). Also, it installs the **Terminal application** to the device.
 
 ### Start OS update from the command line
 
@@ -331,11 +331,11 @@ Once you have the Developer Mode enabled, do as follows:
 2.  Open the Terminal app. If the font is too small make it bigger using Settings at the top right corner.
 3.  Type and execute the following commands below in the grey box.
 
-NOTE: You must not skip any **Stop Releases** over. All of them, higher than the release of your phone now, must be traversed.  Get familiar with the details in chapter 4 of this **[help article](https://jolla.zendesk.com/hc/en-us/articles/201836347#4)** first.
+NOTE: You must not skip any **Stop Releases** over. All of them, higher than the release of your phone now, must be traversed.  Read more about stop releases in **[this chapter](#the-update-path-and-stop-releases)** first.
 
-Example:  _Your phone has the OS version 3.0.1.11 in it now (after a factory reset). To update the phone to 4.4.0.72, the update path via the stop releases is this:_
+Example:  _Your phone has the OS version 3.0.1.11 in it now (after a factory reset). To update the phone to 4.5.0.18, the update path via the stop releases is this:_
 
-_3.0.1.11 -> 3.2.0.12 -> 3.4.0.24 -> 4.0.1.48 -> 4.1.0.24 -> 4.2.0.21 -> 4.3.0.15 -> 4.4.0.72_
+_3.0.1.11 -> 3.2.0.12 -> 3.4.0.24 -> 4.0.1.48 -> 4.1.0.24 -> 4.2.0.21 -> 4.3.0.15 -> 4.4.0.72 -> 4.5.0.18_
 
 
 ```
