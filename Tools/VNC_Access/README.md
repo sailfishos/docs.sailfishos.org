@@ -9,7 +9,7 @@ nav_order: 1000
 
 **[Virtual Network Computing (VNC)](https://en.wikipedia.org/wiki/Virtual_Network_Computing)** is a graphical desktop program and protocol that allows to remotely control another networked device, in this context a Sailfish OS device.
 
-This document describes how to prepare a Sailfish device for VNC and how to connect to it from a VNC client running on a desktop computer.
+This document describes how to prepare a Sailfish OS device for VNC and how to connect to it from a VNC client running on a desktop computer.
 
 # Installing VNC server to Sailfish device
 
@@ -41,23 +41,47 @@ Before a connection from Vinagre to the Sailfish device can be made the systemd 
  ```
  systemctl --user start vnc.socket
  ```
+Next, decide which connection medium you want to use and set the connection address accordingly.
+
+## Prepare connecting over USB
  
- Connect the Sailfish device with a USB cable to the desktop computer. Choose "Developer mode" at the moment of connection. This assigns the default address of 192.168.2.15 for the Sailfish OS devide.
+Connect the Sailfish device with a USB cable to the desktop computer. Choose "Developer mode" on the phone at the moment of connection. This assigns the default USB IP address of `192.168.2.15` for the Sailfish OS device.
+
+Skip to chapter [Establish the connection from the VNC client to the phone](#establish-the-connection-from-the-vnc-client-to-the-phone).
+
+## Prepare connecting over WLAN
+
+ If you want to connect over WLAN you will need to check the WLAN address of the Sailfish device in the menu "Settings > System > Developer tools > WLAN IP addess".
  
- On Ubuntu Vinagre (or another VNC client), choose "VNC" for the protocol. Next, open the Connect dialogue and type the following host address:
+ In addition, as `lipstick2vnc` has been hardcoded to use the localhost (or usbnet), an SSH tunnel must be created. Create it with the following command from the PC to the phone:
  
-  ```
+```
+ssh -L 5900:localhost:5900 defaultuser@1.2.3.4
+## Replace 1.2.3.4 with the WLAN IP address of the phone! 
+```
+
+## Establish the connection from the VNC client to the phone 
+
+ On Ubuntu Vinagre (or another VNC client), choose "VNC" for the protocol. Next, open the Connect dialogue and type the host address:
+ 
+ a) when using USB
+ 
+```
  192.168.2.15:5900
- ```
+```
  
+ b) when using WLAN
+ 
+```
+ localhost:5900
+```
  Click 'Connect'.
  
- If you want to connect over WLAN (instead of USB), you will need to check the WLAN address of the Sailfish device in the menu "Settings > System > Developer tools > WLAN IP addess". Use the same port number, i.e. 5900. 
  
  
 # Sailfish display on desktop screen
  
- The current view on the Sailfish display should appear on the desktop screen, too. 
+ The current view of the Sailfish display should appear now on the desktop screen, too. 
  
  The first picture shows the Vinagre user-interface with the projection of the Sailfish display. 
  
