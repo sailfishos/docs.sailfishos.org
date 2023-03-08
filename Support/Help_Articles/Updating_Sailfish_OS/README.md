@@ -285,8 +285,7 @@ cd $HOME
 devel-su     ###  you will need to type your SSH password here
 pkill store-client  
 rm -rf /home/.pk-zypp-dist-upgrade-cache/*  
-rm -rf ./.cache/sailfish-osupdateservice/os-info
-exit  
+rm -rf ./.cache/sailfish-osupdateservice/os-info  
 reboot
 ```
 Your Sailfish device will restart now. Once up and running, visit the menu page "Settings > Sailfish OS updates" and seek updates. You should see the latest OS version available. Download and install it.
