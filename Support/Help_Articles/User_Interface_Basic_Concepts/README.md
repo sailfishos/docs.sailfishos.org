@@ -8,7 +8,7 @@ nav_order: 1150
 This document has a collection of links to short presentations of the basic concepts of Sailfish OS. 
 
 **[UX Framework](https://sailfishos.org/design/ux-framework/)**
-* The main vies of Sailfish OS explained: Lock screen, Home, Events, Top Menu, and App Grid
+* The main views of Sailfish OS explained: Lock screen, Home, Events, Top Menu, and App Grid
 
 **[Gestures](https://sailfishos.org/design/gestures/)**
 * This presentation shows the different swipes and taps that make it convenient to use Sailfish OS.
