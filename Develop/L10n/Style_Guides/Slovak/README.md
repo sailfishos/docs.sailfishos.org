@@ -69,14 +69,14 @@ Use the imperative form.
 For example:
 
   - Correct: **Prejsť do Nastavení**
-  - Incorrect: **Užívateľ ide do Nastavení**
+  - Incorrect: **Používateľ ide do Nastavení**
 
 ## Capitalisation
 
 Capitalise application names and company names. Only start the first word with a capital letter:
 
-  - Correct: **Nastavenia účtu, Užívateľské nastavenia...**
-  - Incorrect: **Nastavenia Účtu, Užívateľské Nastavenia...**
+  - Correct: **Nastavenia účtu, Používateľské nastavenia...**
+  - Incorrect: **Nastavenia Účtu, Používateľské Nastavenia...**
 
 However, distinguish between application name and activity/action/.., i.e. **Prejsť do Nastavení**(name of application, Settings), but **Vykonať nastavenia...**. In the UI, start the first word with a capital letter. Please remember that the days of the week, months, seasons and language names are not capitalized in Slovak.
 
@@ -119,8 +119,8 @@ Do not use a full stop with unit (measurement) symbols, e.g.:
 
 Use a full stop with Latin abbreviations, e.g.:
 
-  - Correct: **e.g., ca., etc.**
-  - Incorrect: **eg, ca, etc**
+  - Correct: **napr., cca, atď.**
+  - Incorrect: **napr, cca. atď**
 
 ## Hyphenation
 
