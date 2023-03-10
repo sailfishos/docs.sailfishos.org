@@ -23,6 +23,8 @@
       "assets/css/just-the-docs-default.scss",
       "assets/css/just-the-docs-light.scss",
       "assets/css/just-the-docs-dark.scss",
+      "assets/css/just-the-docs-sfos.scss",
+      "vendor/bundle/ruby/**/*.scss",
       "_sass/vendor/**/*.scss"
     ],
     "extends": [
