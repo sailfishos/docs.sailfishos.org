@@ -119,8 +119,8 @@ Do not use a full stop with unit (measurement) symbols, e.g.:
 
 Use a full stop with Latin abbreviations, e.g.:
 
-  - Correct: **napr., cca, atď.**
-  - Incorrect: **napr, cca. atď**
+  - Correct: **e.g., ca., etc.**
+  - Incorrect: **eg, ca, etc**
 
 ## Hyphenation
 
