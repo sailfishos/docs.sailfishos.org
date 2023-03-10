@@ -237,9 +237,11 @@
     margin-top: 0;
     counter-reset: item;
   }
+
   .nested-numbered-list li {
     display: block;
   }
+
   .nested-numbered-list li::before {
     position: static;
     content: counters(item, ".") " ";
