@@ -1,7 +1,5 @@
-//
 // Base element style overrides
-//
-// stylelint-disable selector-no-type, selector-max-type
+// stylelint-disable selector-no-type, selector-max-type, selector-max-specificity, selector-max-id
 
 * {
   box-sizing: border-box;
@@ -14,6 +12,7 @@
 
 html {
   @include fs-4;
+
   scroll-behavior: smooth;
 }
 
