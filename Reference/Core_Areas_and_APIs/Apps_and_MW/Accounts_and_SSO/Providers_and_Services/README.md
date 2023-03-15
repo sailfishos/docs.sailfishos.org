@@ -66,3 +66,20 @@ The description file elements and their usage in Sailfish OS are described in th
 | icon        | Icon used to represent the service in the UI. It should be URL which points to an image. Accessible as property [iconName](https://sailfishos.org/develop/docs/sailfish-accounts/qml-sailfishaccounts-servicetype.html/#iconName-prop) |
 | tags        |  List of tags for the service type. Accessible as property [tags](https://sailfishos.org/develop/docs/sailfish-accounts/qml-sailfishaccounts-servicetype.html/#tags-prop) |
 
+### Predefined service types
+
+The following table lists the service types already known by the system as of Sailfish OS 4.5.0:
+
+| Service type  | Description                                                                   |
+| ------------  | -----------                                                                   |
+| IM            | A service of this type provides instant messaging capabilities                |
+| caldav        | A service of this type allows syncing of calendar data                        |
+| carddav       | A service of this type allows syncing of contact data                         |
+| developermode | A service of this type allows developer mode to be enabled                    |
+| e-mail        | A service of this type allows sending and receiving emails                    |
+| microblogging | A service of this type provides short-form blogging capability                |
+| posts         | A service of this type provides feed-like posts                               |
+| sharing       | A service of this type allows images, videos, and other content to be shared  |
+| storage       | A service of this type allows data to be stored and accessed remotely         |
+| store         | A service of this type allows purchasing content or applications from a store |
+| sync          | A service of this type allows syncing PIM or other data                       |
