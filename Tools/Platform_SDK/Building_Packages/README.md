@@ -56,43 +56,6 @@ cppqml-1.0-1.aarch64.rpm
 
 The recipe for building the package can be found in a SPEC file in the rpm directory, in our exacmple case `rpm/cppqml.spec`.
 
-## Running arbitrary commands
-
-When you don't have a SPEC file, or you want to execute a command which is not in the SPEC file, you can use the `mb2 build-shell` command to enter the build environment and execute commands directly. You can give the actual command you want to execute as an additional parameter.
-```nosh
-$ cat >hello.cpp <<END
-#include <iostream>
-int main() { std::cout << "Hello!" << std::endl; return 0; }
-END
-$ mb2 build-shell g++ -o hello hello.cpp
-```
-
-If you leave the command out, an interactive shell is opened:
-```nosh
-$ mb2 build-shell
-[SailfishOS-4.4.0.58-aarch64] $
-```
-
-### Maintenance mode
-
-Pass the `--maintain` option when running maintenance commands - such that are used to inspect and/or modify the build environment itself. Failure to do so leads to undefined results.
-```nosh
-$ mb2 build-shell --maintain zypper se ...
-$ mb2 build-shell --maintain zypper in ...
-```
-
-Just like without the `--maintain` parameter, you can leave out the command to open an interactive shell:
-```nosh
-$ mb2 build-shell --maintain
-[SailfishOS-4.4.0.58-aarch64] #
-```
-
-Any changes done under the build environment are persisted under build targets. Unless the `--no-snapshot` option is used, mb2 uses a working copy (a "snapshot") of the actual build target to persist your build environment. Thanks to this you can revert any modifications to the build environment using the 'build-requires reset' command, so don't be afraid to experiment, but be aware that changes may get reset implicitly under certain conditions (read more in the built-in help of mb2).
-
-Use the 'build-requires diff' command to see how the current build environment differs from the clean build environment in terms of package installations, removals and replacements.
-
-**Note:** Installing packages with maintenance mode might be handy when experimenting, but you should always add the packages required for building packages as BuildRequires in the SPEC file. It is a good habit to always verify that building a package works with a clean build enviroment.
-
 ## Further reading
 
 The `mb2` tool comes with comprehensive built-in documentation. It is accessible with command `mb2 --help`.
