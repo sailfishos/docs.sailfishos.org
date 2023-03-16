@@ -4,6 +4,7 @@ permalink: Reference/Core_Areas_and_APIs/Apps_and_MW/Accounts_and_SSO/
 parent: Apps and MW
 grand_parent: Core Areas and APIs
 layout: default
+has_children: true
 ---
 
 ## Accounts And Single Sign On
@@ -25,3 +26,7 @@ The signond component of the Accounts&SSO project stores account credentials on 
 There are plans to move away from Accounts&SSO and instead implement an accounts framework specifically for Sailfish OS. It would consist of a lightweight API layer which uses private DBus connections to talk to a central accounts daemon. That accounts daemon would be responsible for servicing requests made via DBus, enforcing per-application access controls, secure storage, and OAuth2 token management and refreshing.
 
 Currently, no concrete roadmap for this work has yet been defined. Contributions are welcome.
+
+### Account plugins
+
+New account types can be added to the system via plugins. A plugin describes the services it provides using [description files](Providers_and_Services/).
