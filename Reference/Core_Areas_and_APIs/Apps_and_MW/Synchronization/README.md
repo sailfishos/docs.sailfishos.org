@@ -1,6 +1,6 @@
 ---
 title: Synchronization
-permalink: Reference/Core_Areas_and_APIs/Apps_and_MW/Accounts_and_SSO/Synchronization/
+permalink: Reference/Core_Areas_and_APIs/Apps_and_MW/Synchronization/
 parent: Apps and MW
 grand_parent: Core Areas and APIs
 layout: default
