@@ -29,4 +29,4 @@ Currently, no concrete roadmap for this work has yet been defined. Contributions
 
 ### Account plugins
 
-New account types can be added to the system via plugins. A plugin describes the services it provides using [description files](Providers_and_Services/) and provides [Accounts Settings UI integration](Settings_UI/).
+New account types can be added to the system via plugins. A plugin describes the services it provides using [description files](Providers_and_Services) and provides [Accounts Settings UI integration](Settings_UI).
