@@ -8,19 +8,19 @@ nav_order: 100
 
 ## Sailfish 4 - Finnish Unesco world heritage sites
 
-| Release                                              | Name                 | Published     | Note                        |
-| -----------------------------------------------------| -------------------- | ------------- | --------------------------- |
-| [4.5.0.16](https://forum.sailfishos.org/t/14290)   | Struven ketju        | 2nd Feb 2023  | **Stop release:** deltarpm relies on zstd compression; AppSupport 11. |
-| [4.4.0.72](https://forum.sailfishos.org/t/13110)     | Vanha Rauma          | 30th Sep 2022 | **Stop release:** enable zstd in deltarpm and related tools.<br />Browser engine esr78. Sailfish ported to Xperia 10 III. |
-| [4.3.0.15](https://forum.sailfishos.org/t/8495)      | Suomenlinna          | 10th Feb 2022 | **Stop release:** rpm update.<br />Signed Android system image.  |
-| [4.2.0.21](https://forum.sailfishos.org/t/7092)      | Verla                | 16th Sep 2021 | **Stop release:** preparing for signed Android AppSupport 10 on 4.3.0; adaptation repositories rectified. |
-| [4.1.0.24](https://forum.sailfishos.org/t/5942)      | Kvarken              | 27th May 2021 | **Stop release** Sailfish ported to Xperia 10 II. 64-bit architecture on Sailfish and on Android AppSupport. AppSupport 10 for XA2 & 10. |
-| [4.0.1.48](https://forum.sailfishos.org/t/4542)      | Koli                 | 16th Feb 2021 | **Stop release** AppSupport 9 (API level 28) for XA2, 10 & 10 II. |
+| Release                                              | Name           | Published  | Note                        |
+| :--------------------------------------------------: | -------------- | :--------: | --------------------------- |
+| [4.5.0.19](https://forum.sailfishos.org/t/15078/1)   | Struven ketju  | 2023-03-20 | **Stop release:** deltarpm relies on zstd compression; AppSupport 11. |
+| [4.4.0.72](https://forum.sailfishos.org/t/13110)     | Vanha Rauma    | 2022-09-30 | **Stop release:** enable zstd in deltarpm and related tools.<br />Browser engine esr78. Sailfish ported to Xperia 10 III. |
+| [4.3.0.15](https://forum.sailfishos.org/t/8495)      | Suomenlinna    | 2022-02-10 | **Stop release:** rpm update.<br />Signed Android system image.  |
+| [4.2.0.21](https://forum.sailfishos.org/t/7092)      | Verla          | 2021-09-16 | **Stop release:** preparing for signed Android AppSupport 10 on 4.3.0; adaptation repositories rectified. |
+| [4.1.0.24](https://forum.sailfishos.org/t/5942)      | Kvarken        | 2021-05-27 | **Stop release** Sailfish ported to Xperia 10 II. 64-bit architecture on Sailfish and on Android AppSupport. AppSupport 10 for XA2 & 10. |
+| [4.0.1.48](https://forum.sailfishos.org/t/4542)      | Koli           | 2021-02-16 | **Stop release** AppSupport 9 (API level 28) for XA2, 10 & 10 II. |
 
 ## Sailfish 3 - Finnish national parks
 
 | Release   | Name                 | Published     | Note                        |
-| --------- | -------------------- | ------------- | --------------------------- |
+| :-------: | -------------------- | ------------- | --------------------------- |
 | [3.4.0.24](https://forum.sailfishos.org/t/2258)  | Pallas-Yllästunturi  | 13th Oct 2020 | **Stop release** &nbsp;Last release for Jolla Phone. 'defaultuser' instead of 'nemo' |
 | 3.3.0.16  | Rokua                | 28th Apr 2020 |                             |
 | 3.2.1.20  | Nuuksio              | 18th Dec 2019 |                             |
@@ -34,7 +34,7 @@ nav_order: 100
 ## Sailfish 2 - Finnish rivers
 
 | Release   | Name                 | Published     | Note                        |
-| --------- | -------------------- | ------------- | --------------------------- |
+| :-------: | -------------------- | ------------- | --------------------------- |
 | 2.2.1.18  | Nurmonjoki           | 12th Sep 2018 |                             |
 | 2.2.0.29  | Mouhijoki            | 07th Jun 2018 | **Stop release**            |
 | 2.1.4.14  | Lapuanjoki           | 06th Mar 2018 |                             |
@@ -50,7 +50,7 @@ nav_order: 100
 ## Sailfish 1 - Finnish lakes
 
 | Release   | Name                 | Published     | Note                        |
-| --------- | -------------------- | ------------- | --------------------------- |
+| :-------: | -------------------- | ------------- | --------------------------- |
 | 2.0.1.11  | Taalojärvi           | 09th May 2016 |                              |
 | 2.0.0.10  | Saimaa               | 03rd Nov 2015 | **Stop release**            |
 | 1.1.9.30  | Eineheminlampi       | 03rd Nov 2015 | **Stop release**            |
