@@ -31,4 +31,4 @@ Currently, no concrete roadmap for this work has yet been defined. Contributions
 
 New account types can be added to the system via plugins. A plugin describes the services it provides using [description files](Providers_and_Services) and provides [Accounts Settings UI integration](Settings_UI).
 
-We have a separate document which describes [Backup Accounts](Backup_Accounts).
+We have a separate document which describes [Backup Accounts](Backup_Accounts), and another one for [Gallery Accounts](Gallery_Accounts).
