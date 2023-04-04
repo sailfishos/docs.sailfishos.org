@@ -244,6 +244,30 @@ The recipients of your messages will see your messages arriving from the account
 
 There are also the options to indicate the importance of the outbound message and to request read receipts.
 
+
+# Adding a new email certificate
+
+Email certificate is a security method which can be attached to an email in order to verify that the sender is the one claiming to be. It can also be used to encrypt the message and verify that the message is not altered. The pre-installed email certificates can be viewed at "Settings > Certificates > Email certificates". In case you need additional email certificates it is possible to add more certificates using the command line (as the UI does not support adding them). The certificates discussed here shall be in the [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) format.
+In this help article, we use the certificate by the name "JSCCinternalCA.crt" as an example. Replace it with the certificate you want to add.
+For executing the commands below you will need the Developer mode.
+ 
+1. Copy the certificate file (*.crt) from the PC to the home folder "$HOME" of your Sailfish OS device,  first.  Use the method of your preference as suggested in this [help article](/Support/Help_Articles/Moving_Files_Between_PC_and_Sailfish_Device/).
+2. In your Sailfish device, get the super-user rights (SSH password) first. See the [Developer mode](/Support/Help_Articles/Enabling_Developer_Mode/) article, if needed. Copy the certificate further to folder "/etc/pki/ca-trust/source/anchors".
+```
+cd $HOME
+export MYHOME=$(pwd)
+devel-su     ## you will need your SSH password here
+cp $MYHOME/JSCCinternalCA.crt /etc/pki/ca-trust/source/anchors
+```
+3. Run the command update-ca-trust
+```
+update-ca-trust
+```
+4. Open the menu page "Settings > Certificates > Email certificates". Check that the added certificate "JSCC internal CA" can be found in the list.
+Select that certificate. Restart your device.
+5. Turn Developer mode off if you do not need it anymore.
+
+
 # Related articles
 
 [Setting up a General Email account (IMAP/POP) on Sailfish](/Support/Help_Articles/Accounts_Setup/Setup_General_Email_Account/)
