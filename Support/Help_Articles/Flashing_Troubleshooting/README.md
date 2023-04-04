@@ -76,7 +76,7 @@ Flashing completed. Remove the USB cable and bootup the device by pressing power
 Restart your computer now to bring the USB3 ports to their normal mode. Alternatively, give the following reverting command:
 ```
 sudo su
-lspci -nn | grep USB | cut -d '\[' -f3 | cut -d '\]' -f1 | xargs -I@ sudo setpci -H1 -d @ d0.l=1
+lspci -nn | grep USB | cut -d '[' -f3 | cut -d ']' -f1 | xargs -I@ sudo setpci -H1 -d @ d0.l=1
 exit 
 ```
 
