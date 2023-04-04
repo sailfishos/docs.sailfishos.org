@@ -59,7 +59,7 @@ Bus 003 Device 015: ID 05c6:0afe Qualcomm, Inc. Xperia X Bus 003 Device 001: ID 
 * Force USB3 ports to USB2 mode temporarily (note that the 2nd command below is long - be sure to copy all of it)
 ```
 sudo su
-lspci -nn | grep USB | cut -d '\[' -f3 | cut -d '\]' -f1 | xargs -I@ sudo setpci -H1 -d @ d0.l=0
+lspci -nn | grep USB | cut -d '[' -f3 | cut -d ']' -f1 | xargs -I@ sudo setpci -H1 -d @ d0.l=0
 exit
 ```
 * Install Sailfish X to your Xperia XA2 now.
@@ -76,7 +76,7 @@ Flashing completed. Remove the USB cable and bootup the device by pressing power
 Restart your computer now to bring the USB3 ports to their normal mode. Alternatively, give the following reverting command:
 ```
 sudo su
-lspci -nn | grep USB | cut -d '\[' -f3 | cut -d '\]' -f1 | xargs -I@ sudo setpci -H1 -d @ d0.l=1
+lspci -nn | grep USB | cut -d '[' -f3 | cut -d ']' -f1 | xargs -I@ sudo setpci -H1 -d @ d0.l=1
 exit 
 ```
 
