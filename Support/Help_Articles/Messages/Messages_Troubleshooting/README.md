@@ -1,9 +1,10 @@
 ---
 title: Messages Troubleshooting
-permalink: Support/Help_Articles/Messages_Troubleshooting/
-parent: Help Articles
+permalink: Support/Help_Articles/Messages/Messages_Troubleshooting/
+grand_parent: Help Articles
+parent: Messages
 layout: default
-nav_order: 575
+nav_order: 3000
 ---
 
 This help article is meant to work as an MMS troubleshooter. The multimedia messaging service (MMS) is a fairly complicated system, to which different cellular operators (carriers) bring the flavours of their own. Conflicts may occur.
