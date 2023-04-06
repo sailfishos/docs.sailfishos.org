@@ -87,11 +87,24 @@ NumberOfEntries=3
 </div>
 
 
+# Which types of picture, audio & video files (media files) does Sailfish OS support
+
+The playback of media files discussed in this article requires the cooperation and resources of both the device and the Sailfish OS. Even if Sailfish OS supported certain media formats, it might be that the device hardware does not support it, which would result in a failure to use that media file.
+Not all media codecs are free but require licenses. This may prevent using them.
+ 
+## Multimedia formats compatible with Sailfish OS
+This is a list of codecs supported by Sailfish OS.
+* Audio and video formats currently supported by Sailfish are listed in this [document](/Reference/Core_Areas_and_APIs/Multimedia/).
+* Pictures: JPEG, PNG, GIF, TIFF, BMP and SVG. However SVG files doesn't appear in the gallery because the Tracker doesn't catch those. The SVG files can be opened with the File Browser and viewed via Gallery app.
+
+Only the files compatible with these codecs appear in the Media (audio) and Gallery (video & photo) apps of Sailfish OS.
+ 
+## Troubleshooting
+If your Sailfish OS device does not seem to be able to use your media files in the expected way, please check first in the manual of your device that your device is capable of handling the type of media file you have at hand. The next thing to check is if the media database of Sailfish OS is somehow corrupted. Please seek help from this [document](/Support/Help_Articles/Tips_and_Tricks/#clearing-the-media-database).
+ 
 
 # Related articles
 
 [Ringtones and Notifications](/Support/Help_Articles/Ringtones_and_Notifications/).
-
-[Multimedia: Which kind of media, music & video files does Jolla support?](/Reference/Core_Areas_and_APIs/Multimedia/).
 
 [What kind of SD cards and formats are supported](/Support/Help_Articles/SD_Card_Format_and_Encryption/).
