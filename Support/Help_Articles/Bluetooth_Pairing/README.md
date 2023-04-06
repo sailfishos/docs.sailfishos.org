@@ -215,4 +215,11 @@ devel-su
 
 The paired device appears in the Bluetooth menu of your phone now.
 
+# Bluetooth profiles supported by Sailfish OS
+
+Sailfish OS supports the Bluetooth profiles listed on this [separate document](/Reference/Core_Areas_and_APIs/Networking/#bluetooth).
+
+
+
+
 
