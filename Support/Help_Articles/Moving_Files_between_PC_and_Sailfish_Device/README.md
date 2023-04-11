@@ -1,9 +1,9 @@
 ---
 title: Moving files between a PC and a Sailfish Device
-permalink: Support/Help_Articles/Moving_Files_Between_PC_and_Sailfish_Device/
+permalink: Support/Help_Articles/Moving_Files_between_PC_and_Sailfish_Device/
 parent: Help Articles
 layout: default
-nav_order: 580
+nav_order: 585
 ---
 
 
@@ -69,7 +69,7 @@ In Settings, you can edit your preferences on what your Sailfish device should d
 
 ## SCP over WLAN
 
-If you are familiar with working on the command line then you could rely on **[SCP](https://en.wikipedia.org/wiki/Secure_copy)** with the **[developer mode](https://docs.sailfishos.org/Support/Help_Articles/Enabling_Developer_Mode/)** enabled on the Sailfish phone. It is fast and works over WLAN.
+If you are familiar with working on the command line then you could rely on **[SCP](https://en.wikipedia.org/wiki/Secure_copy)** with the **[developer mode](/Support/Help_Articles/Enabling_Developer_Mode/)** enabled on the Sailfish phone. It is fast and works over WLAN. Please read our documents about using **[SSH and SCP](/Support/Help_Articles/SSH_and_SCP/)**.
 
 The following may work on Windows 10 if you have installed the support for SSH and SCP protocols to it. Then the commands below can be given in **PowerShell** application or in the **CMD** terminal but it may be best to install **PuTTy** to Windows and then the add-on **PSCP** (see this **[web page](https://www.ssh.com/ssh/putty/putty-manuals/0.68/Chapter5.html)**).
 

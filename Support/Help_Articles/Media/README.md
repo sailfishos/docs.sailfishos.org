@@ -3,7 +3,7 @@ title: Media
 permalink: Support/Help_Articles/Media/
 parent: Help Articles
 layout: default
-nav_order: 568
+nav_order: 565
 ---
 
 This article is about the Media application that can be download from the Jolla Store.

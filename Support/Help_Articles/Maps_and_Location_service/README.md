@@ -3,7 +3,7 @@ title: Maps and Location service
 permalink: Support/Help_Articles/Maps_and_Location_service/
 parent: Help Articles
 layout: default
-nav_order: 567
+nav_order: 560
 ---
 
 
