@@ -24,7 +24,7 @@ The database of the Sailfish Notes application is in
 $HOME/.local/share/com.jolla/notes/QML/OfflineStorage/Databases/
 ```
 
-In some earlier Sailfish releases, this database used to be in
+In some earlier Sailfish releases (up to 3.4.0), this database used to be in
 ```
 $HOME/.local/share/jolla-notes/QML/OfflineStorage/Databases
 ```
@@ -45,8 +45,7 @@ mkdir /run/media/$USER/$MYSD/MySavedNotes    # make a folder to SD card
 ```
 Now, copy your notes to SD card:
 ```
-cp -ivR $HOME/.local/share/com.jolla/notes/QML/OfflineStorage/Databases/*  
-/run/media/$USER/$MYSD/MySavedNotes
+cp -ivR $HOME/.local/share/com.jolla/notes/QML/OfflineStorage/Databases/* /run/media/$USER/$MYSD/MySavedNotes
 ```
 Check that the copy operation worked - it should print out something similar to the example below (which has the real ID of my SD card):
 
@@ -71,8 +70,7 @@ export MYSD=$(ls /run/media/$USER)
 ```
 Copy the notes from the SD card to the correct directory on the phone:
 ```
-cp -ivR /run/media/$USER/$MYSD/MySavedNotes/*      
-$HOME/.local/share/com.jolla/notes/QML/OfflineStorage/Databases/
+cp -ivR /run/media/$USER/$MYSD/MySavedNotes/* $HOME/.local/share/com.jolla/notes/QML/OfflineStorage/Databases/
 ```
 Open the Notes app and check that it has the notes.
 
