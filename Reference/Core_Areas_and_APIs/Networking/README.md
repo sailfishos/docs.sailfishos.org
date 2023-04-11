@@ -48,6 +48,8 @@ Currently, Sailfish OS provides the following profiles:
   - SyncML client & server (SyncML) for synchronization of contact data
   - OBEX Object Push (OPP) for file exchange services
   - Phone Book Access Profile (PBAP) for exchanging phonebook data with a car kit
+  - AVCTP 1.3 (Audio/Video Control Transport Protocol), AVDTP 1.2 (Audio/Video Distribution Transport Protocol) and AVRCP 1.3 (Audio/Video Remote Control Profile). Allows using your Sailfish device as a rudimentary remote control to other Bluetooth devices: "play, stop, pause" etc. commands to devices.
+  - HID 1.0 (Human Interface Device Profile). Allows use of HIDs with a Sailfish device, for example keyboards and mice.
 
 The Sailfish OS adaptation of BlueZ is available at <https://github.com/sailfishos/bluez>. Generally, Sailfish app developers will find it easier to use [libbluez-qt](https://github.com/sailfishos/libbluez-qt) instead, as that provides a Qt-based API and QML module for accessing BlueZ functionality.
 
