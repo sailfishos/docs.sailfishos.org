@@ -12,7 +12,7 @@ The **Sailfish Calendar** application is your time-management tool. You can sync
 To be able to use the Calendar, you first have to get it from the Jolla Store. If you didn’t get it during the first launch of your phone, here’s how to get it:
 
 1. Make sure that your Sailfish device is connected to the internet
-2. Open up Jolla Store
+2. Open Jolla Store
 3. From the pulley menu above, search for “calendar”
 4. Download the Calendar app
 5. Open the Calendar
@@ -24,37 +24,49 @@ When your Calendar app opens, you are greeted with the Month view.
 
 * To change the month you are viewing, swipe left or right.
 * A dot(s) under a date indicates that there are one or more appointments for that day. Tapping on a date will show you the calendar entries on that day.
-* To view week numbers, you can swipe slightly from left to right (see the picture in the middle, below)
+* To view week numbers, you can swipe slightly from left to right.
 * Pulling down on the view reveals the pulley menu and the options to “New event”, “Go to today” and “Manage calendars”, and "Sync".
 * If you ever get lost or confused in the Month view, you can select “Go to today” to get back to view the current month and day.
 
 <div class="flex-images" markdown="1">
 
-* <a href="Cal-en-1.png"><img src="Cal-en-1.png" alt="Calendar"></a>
+* <a href="Cal-en-1.png"><img src="Cal-en-1.png" alt="Monthly view"></a>
   <span class="md_figcaption">
   </span>
-* <a href="Cal-en-2.png"><img src="Cal-en-2.png" alt="Calendar"></a>
+* <a href="Cal-en-2.png"><img src="Cal-en-2.png" alt="Monthly view top menu"></a>
+  <span class="md_figcaption">
+  </span>
+</div>
+
+## Weekly View
+
+* You can access the weekly view from the left top corner by selecting the weekly view (icon in the middle).
+* In the weekly view, it is easier to see the summary of the week's events. If you prefer you can also turn the device to landscape mode.
+* To change the week you are viewing, swipe left or right.
+
+<div class="flex-images" markdown="1">
+
+* <a href="Cal-en-3.png" class="narrow-image"><img src="Cal-en-3.png" alt="Weekly view"></a>
   <span class="md_figcaption">
   </span>
 </div>
 
 ## Day View
-You can access the Day view by first selecting a date in the Month view, and then pressing the selected day at the base of the calendar at the right-hand side ("Today" or the weekday like "Wednesday").
 
-In the Day view, it is easier to see if you have any overlapping events scheduled for that day.
-You can also create new events in this view, simply by tapping at the time you want.
-
-At the bottom of the view, you can see events that are coming up if you scroll further down. At the top of the screen, you can see events that are in the past that you can see by scrolling up.
+* You can access the day view from the left top corner by selecting the day view (icon in the right).
+* In the day view, it is easier to see if you have any overlapping events scheduled for that day.
+* You can also create new events in this view, simply by tapping at the time you want.
+* At the bottom of the view, you can see events that are coming up if you scroll further down. At the top of the screen, you can see events that are in the past that you can see by scrolling up.
 
 <div class="flex-images" markdown="1">
 
-* <a href="Cal-en-4.png" class="narrow-image"><img src="Cal-en-4.png" alt="Searching for devices"></a>
+* <a href="Cal-en-4.png" class="narrow-image"><img src="Cal-en-4.png" alt="Day view"></a>
   <span class="md_figcaption">
   </span>
 </div>
 
 # Creating a new Event in Calendar
-When it’s time to mark something important down, pull the view down in the Month view and select “Create new event”.
+When it’s time to mark something important down, pull the pulley menu from the top and select “Create new event”.
 
 1. Give your event a name
 2. Specify the location of the Event
@@ -62,16 +74,14 @@ When it’s time to mark something important down, pull the view down in the Mon
 4. You must then define the start and end date of your event. (Note: in the case of recurring events, this is the start and end time of one instance, not the whole chain of events!)
 
 Starts:
-The start date is by default today’s date.
-The default start time is the time it is now.
+The start date is by default today’s date. The default start time is the time it is now.
 
 Ends:
-The end date is by default also today’s date.
-The default end time is an hour from what the time is now.
+The end date is by default also today’s date. The default end time is an hour from what the time is now.
 
 Tapping on the start and end dates will take you to the Date picker view.
 Tapping on the start and end times will take you to the Time picker view.
-Remember to accept the date and time you chose by tapping on the top right corner where it shows what you chose for the date or time.
+Remember to accept the date and time you chose by tapping on the top right corner.
 
 5. Next, you can define to which calendar on your device the Event should be assigned to. Just press the text “Calendar” to see all the calendars available see [this chapter](#managing-your-calendars). Your calendar app keeps your current choice of the calendar as the default value for new appointments.
 Please note: calendars that have the text (Read-only) after their name, are calendars that can’t be synced back to the cloud. Making entries into these calendars will only be visible on your Sailfish OS device).
@@ -92,7 +102,7 @@ Please note: calendars that have the text (Read-only) after their name, are cale
 </div>
 
 # Managing your Calendars
-Sometimes you might want to control how many calendars are visible in your Calendar application, or just check which ones you’re currently subscribed to on your device.
+Sometimes you might want to control how many calendars are visible in your Calendar application, or just check which ones you’re currently subscribed to on your device. Calendars are shown in the calendar view with different colours.
 
 To manage your calendars:
 1. Open your Calendar app
@@ -124,10 +134,47 @@ Google calendar and Microsoft Exchange calendar are examples of calendar types, 
 </div>
 
 # Good-to-know about the Calendar in general
-If you set an end date for your calendar entry, the event will end on the date you’ve specified, but the calendar will treat it as a non-stop event. This means that an event will begin the date you specify, start at the time you specify, and then go on uninterrupted until the end date and time you time you’ve specified.
-There is no week view in the Calendar app.
-Birthday events cannot be created, deleted or modified in Calendar because they are obtained through syncing. It is, however, possible to change or delete a person’s birthday by modifying that person’s information in the People application (phonebook). Thereafter the modification made will appear in Calendar, too.
-The sync schedule for your calendars is the same as for the corresponding email service. For Exchange, there are more refined sync options in Settings > Accounts > Exchange.
-You can snooze a calendar alert by flipping the phone (turn it screen downwards) or by pressing the power key shortly.
+* Birthday events cannot be created, deleted or modified in Calendar because they are obtained through syncing. However it is possible to change or delete a person’s birthday by modifying that person’s information in the People application. That modification will appear also to Calendar.
+* The sync schedule for your calendars is the same as for the corresponding email service. For Exchange, there are more refined sync options in Settings > Accounts > Exchange.
+* You can snooze a calendar alert by flipping the phone (turn it screen downwards) or by pressing the power key shortly.
+* The calendar events can't be moved between calendars, so make sure you select the correct calendar when creating a new event.
+
+# How to heal the calendar or contact sync of Google
+This article may turn out helpful in resolving persistent issues in Google sync.
+ 
+It is known that sometimes, even though the actual calendar sync is pulling the appointments from the server to the database in the phone, these appointments do not appear in Sailfish Calendar. Likewise, the contact sync may not do its job.
+The following is a kind of reset of the sync utility. It does not do any harm to the appointments or contacts.
+ 
+## Preparations
+1. You will need the Developer mode and the SSH password. Do as instructed in [this help article](/Support/Help_Articles/Enabling_Developer_Mode/).
+2. Delete the Google account from your phone (Settings > Accounts).
+ 
+## Deleting sync state files
+Delete the sync state files of calendar and contacts (respectively) with the commands below.
+
+Check first what files you have:
+```
+devel-su ls -al /home/$USER/.local/share/system/privileged/Sync/
+```
+Delete Calendar initialisation file (if it exist) related to Google sync (note that after the command is given confirmation is asked, answer: yes and press Enter):
+```
+devel-su rm -i /home/$USER/.local/share/system/privileged/Sync/gcal.ini
+```
+Delete Contacts initialisation file (if it exist) related to Google sync (note that after the command is given confirmation is asked, answer: yes and press Enter):
+```
+devel-su rm -i /home/$USER/.local/share/system/privileged/Sync/gcontacts.ini 
+```
+
+## Checking the server
+It is good to visit calendar.google.com and contacts.google.com at this point, using a computer browser, and check how it looks there. Eliminate potential duplicates and other deviations from the normal.
+ 
+## Add Google account and sync it
+Add your Google account again at Settings > Accounts > Add Account.
+ 
+The next sync should be a "clean sync" which should pull in all of the events from the server.
+Trigger a sync cycle by opening up "Settings > Accounts". Then long-tap the account to be synced. Tap "Sync" in the pop-up menu.
+ 
+## Collecting of logs
+This [article](https://jolla.zendesk.com/hc/en-us/articles/115011963227) explains how to collect logs concerning the sync of various accounts.
 
 
