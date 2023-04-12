@@ -3,7 +3,7 @@ title: Language settings
 permalink: Support/Help_Articles/Language_Settings/
 parent: Help Articles
 layout: default
-nav_order: 550
+nav_order: 540
 ---
 
 

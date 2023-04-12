@@ -3,7 +3,7 @@ title: Locations of Apps
 permalink: Support/Help_Articles/Locations_of_Apps/
 parent: Help Articles
 layout: default
-nav_order: 565
+nav_order: 550
 ---
 
 This document attempts to answer the question _"Where do apps keep their data in the Sailfish filesystem?"_

@@ -3,7 +3,7 @@ title: Moving files between a Mac and a Sailfish Device
 permalink: Support/Help_Articles/Moving_Files_between_Mac_and_Sailfish_Device/
 parent: Help Articles
 layout: default
-nav_order: 575
+nav_order: 580
 ---
 
 # Transferring data over a USB connection
@@ -20,7 +20,7 @@ There are some commercial solutions that may help, including [**SyncMate**](http
 
 ## Via a graphical app
 
-If you prefer a solution with a graphical UI you could use **[Cyberduck for Mac](https://cyberduck.en.softonic.com/mac/download)**[^1]. Mac and your Sailfish device must be connected to the same WLAN network. Enable **[Developer Mode](https://docs.sailfishos.org/Support/Help_Articles/Enabling_Developer_Mode/)** and remote connections on the phone and set a password.
+If you prefer a solution with a graphical UI you could use **[Cyberduck for Mac](https://cyberduck.en.softonic.com/mac/download)**[^1]. Mac and your Sailfish device must be connected to the same WLAN network. Enable **[Developer Mode](/Support/Help_Articles/Enabling_Developer_Mode/)** and remote connections on the phone and set a password.
 
 On Cyberduck, make a new connection using SFTP (SSH) to the WLAN IP address of the phone (see "Settings > System > Developer tools"), username 'defaultuser' or 'nemo'. Then you can easily browse the phone's file system.
 \- _Jolla cannot however guarantee that this solution would make the connection between your Mac and Sailfish device work_.
@@ -36,7 +36,11 @@ On Cyberduck, make a new connection using SFTP (SSH) to the WLAN IP address of t
 
 ## Via the command line
 
-Another option is to rely on **[SCP](https://en.wikipedia.org/wiki/Secure_copy)**[^2] on Mac OS X (_we do not know whether it is installed by default_) with **[Developer Mode](https://docs.sailfishos.org/Support/Help_Articles/Enabling_Developer_Mode/)** enabled on the Sailfish phone. It is fast and works over WLAN. Use the following command to download files from the phone to Mac's current directory - in this example below we copy pictures. Do not forget to replace the fake address u.v.w.x with the actual WLAN IP address of your Sailfish phone (see the picture above).
+Another option is to rely on **[SCP](https://en.wikipedia.org/wiki/Secure_copy)**[^2] on Mac OS X (_we do not know whether it is installed by default_) with **[Developer Mode](/Support/Help_Articles/Enabling_Developer_Mode/)** enabled on the Sailfish phone. It is fast and works over WLAN. 
+
+Please read our document about **[SSH and SCP](/Support/Help_Articles/SSH_and_SCP/SSH_and_SCP_Mac/)** on Mac computers.
+
+Use the following command to download files from the phone to Mac's current directory - in this example we copy pictures. Do not forget to replace the fake address u.v.w.x with the actual WLAN IP address of your Sailfish phone (see the picture above).
 
 ```
 scp -r defaultuser@u.v.w.x:$HOME/Pictures/Camera/*
