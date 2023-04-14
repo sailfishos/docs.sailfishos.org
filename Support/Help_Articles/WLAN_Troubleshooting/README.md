@@ -52,7 +52,7 @@ Sometimes, the tick boxes of the portal web page have not worked (i.e. the user 
 4. Pull down and select "Connect to Internet"
 5. Select the network, type in the new password and tap "Connect"
 
-* Check with your network administrator which encryption protocol the network uses. Sailfish OS supports **WEP, WPA/WPA2 PSK** and **WPA-EAP (WPA2-Enterprise)**.  Other encryptions are not yet supported. In addition, check if the network requires more advanced settings like proxies or IP addresses. Those can be tweaked by going to "Settings > System > WLAN", then pressing and holding the network until the popup menu opens and selecting "Edit".
+* Check with your network administrator which encryption protocol the network uses. Sailfish OS supports **WPA/WPA2 PSK** and **WPA-EAP (WPA2-Enterprise)** (see the notes below about WEP).  Other encryption standards are not yet supported. In addition, check if the network requires more advanced settings like proxies or IP addresses. Those can be tweaked by going to "Settings > System > WLAN", then pressing and holding the network until the popup menu opens and selecting "Edit".
 
 * After pulling down "Connect to Internet" there is also the option to "Add network" which allows the manual configuration of a new network. Obviously, this requires a solid understanding of WLAN technology and detailed information on the characteristics of the WLAN network you are aiming to configure to your Sailfish device.
 
@@ -83,6 +83,12 @@ The connection should work now.
 
 # Do not use WLAN channel 13
 Android-based systems, including Xperia phones with Sailfish OS, cannot use WiFi channel 13. If the WiFi access point device is in your control, make sure that it does not offer channel 13 to connect to.
+
+# Do not use WEP
+Wired Equivalent Privacy (WEP) was a security algorithm for wireless networks. It is insecure, has long been deprecated and has recently been disabled in the connectivity backends Sailfish OS uses.  
+While the wireless setup wizard still allows to choose WEP as an encryption scheme, trying to connect to such a network will fail.
+
+If the WiFi access point device is in your control, you should upgrade it to use **WPA2**.
 
 # Xperia XA2 and the 5 GHz frequency band
 With version **[v17B](https://developer.sony.com/file/download/software-binaries-for-aosp-oreo-android-8-1-kernel-4-4-nile)** of the Sony vendor image, we have observed a decrease in the perceived signal strength of the 5GHz WLAN access points. Version **[v16](https://developer.sony.com/file/download/software-binaries-for-aosp-oreo-android-8-1-kernel-4-4-nile-v16/)** should work better in this respect. Therefore we would not recommend flashing v17B if you use WLAN networks in the 5GHz band.
