@@ -66,10 +66,10 @@ Switches L1 and L2 shall be enabled to make the location data available for map 
 ## Sailfish apps
 
 There are the two popular Sailfish map apps available for all devices in Jolla Store. More recent versions of them may be available in the Open Repos distribution.
-Both of these apps rely on [Open Street Maps](https://www.openstreetmap.org/about).
+Both of these apps rely on [Open Street Map](https://www.openstreetmap.org/about) data.
 
-* Pure Maps
-* OSM Scout (with or without OSM Scout Server [^2])
+* Pure Maps (It uses various online providers for map, routing and search. Can be used with OSM Scout Server [^2] for offline usage.)
+* OSM Scout (Essential functionality is available offline, so routing doesn't reflect current traffic. It requires download of map packages to work.)
 
 In addition, the good old Sailfish Maps is available for Jolla Phone, Jolla Tablet and Jolla C but not for other devices.
 
