@@ -3,6 +3,7 @@ title: Calendar
 permalink: Support/Help_Articles/Calendar/
 parent: Help Articles
 layout: default
+has_children: true
 nav_order: 285
 ---
 
