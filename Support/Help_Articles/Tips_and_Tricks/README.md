@@ -320,3 +320,34 @@ You can also use following command in terminal in case you have developer mode i
 ```
 rpm -qa --queryformat '%{license}\t%{name}-%{version}-%{release}\n'
 ```
+
+# Clearing notifications from Events view
+
+For various reasons, some notifications might get stuck in the Events view.
+With these instructions the whole notifications database can be cleared.
+
+## Preparations
+
+Enable the [Developer Mode](/Support/Help_Articles/Enabling_Developer_Mode/).
+
+Open the Terminal app on your computer and create an SSH connection to your Sailfish device
+* SSH over USB from Windows to Sailfish: [read this](/Support/Help_Articles/SSH_and_SCP/SSH_and_SCP_Windows/)
+* SSH over USB from Ubuntu to Sailfish: [read this](/Support/Help_Articles/SSH_and_SCP/SSH_and_SCP_Linux/)
+
+Install the sqlite utility:
+```
+devel-su
+pkcon refresh
+pkcon install sqlite
+exit
+```
+## Accessing the messages database
+
+Give the following commands to access the SQL database and to clear the notifications database:
+
+```
+devel-su -p sqlite3 ~/.local/share/system/privileged/Notifications/notifications.db
+delete from notifications;
+.quit
+systemctl --user restart lipstick
+```
