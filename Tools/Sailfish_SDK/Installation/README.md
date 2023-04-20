@@ -38,12 +38,14 @@ On Linux and Windows, both Oracle VM VirtualBox (version 4.1.18 or higher) and D
 
 For Sailfish OS Emulator, Oracle VM VirtualBox is needed regardless of the host platform.
 
-On Linux, you should install the virtualization platform packages supplied by your distribution. On other operating systems, we recommend using installation packages from <http://www.virtualbox.org> or <https://hub.docker.com/search/?q=&type=edition>.
+On Linux, you should install the virtualization platform packages supplied by your distribution. For example, on Ubuntu installing Docker happens simply with command `apt install docker.io`.
+On other operating systems, we recommend using installation packages from <http://www.virtualbox.org> or <https://docs.docker.com/get-docker/>.
 
 A few hints on Docker installation:
 
-  - Follow the [generic instructions](https://hub.docker.com/search/?type=edition&offering=community)
+  - Follow the [generic instructions](https://docs.docker.com/get-docker/)
   - Linux users may need [extra steps](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user) to ensure that Sailfish SDK can manage Docker as a non-root user
+    - Do *not* follow the instructions for installing Docker in rootless mode! Rootless mode is not needed for managing Docker as a non-root user.
   - Windows users should ensure that Docker is set up to use [Linux containers](https://docs.docker.com/desktop/windows/wsl/) (instead of Windows containers)
   - Using Docker in rootless mode is not supported
 
@@ -76,7 +78,7 @@ to the `~/.bash_profile` script under the MSYS2 shell and reopening the shell.
 
 In order to maintain compatibility with older Linux distributions, Sailfish SDK links to this library, which is usually not installed by default on more recent distributions:
 
-  - On Ubuntu 20.04, the package libtinfo5 must be installed
+  - On Ubuntu 20.04 and 22.04, the package libtinfo5 must be installed
   - On Fedora the package ncurses-compat-libs must be installed
   - If you find no way to fix libtinfo.so.5 on your system, you may try creating it as a symbolic link to your system libncurses.so.5 (or even libncurses.so.6 or libtinfo.so.6)
 
