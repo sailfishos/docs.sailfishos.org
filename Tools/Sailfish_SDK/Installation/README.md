@@ -78,7 +78,7 @@ to the `~/.bash_profile` script under the MSYS2 shell and reopening the shell.
 
 In order to maintain compatibility with older Linux distributions, Sailfish SDK links to this library, which is usually not installed by default on more recent distributions:
 
-  - On Ubuntu 20.04, the package libtinfo5 must be installed
+  - On Ubuntu 20.04 and 22.04, the package libtinfo5 must be installed
   - On Fedora the package ncurses-compat-libs must be installed
   - If you find no way to fix libtinfo.so.5 on your system, you may try creating it as a symbolic link to your system libncurses.so.5 (or even libncurses.so.6 or libtinfo.so.6)
 
