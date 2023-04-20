@@ -38,12 +38,14 @@ On Linux and Windows, both Oracle VM VirtualBox (version 4.1.18 or higher) and D
 
 For Sailfish OS Emulator, Oracle VM VirtualBox is needed regardless of the host platform.
 
-On Linux, you should install the virtualization platform packages supplied by your distribution. On other operating systems, we recommend using installation packages from <http://www.virtualbox.org> or <https://hub.docker.com/search/?q=&type=edition>.
+On Linux, you should install the virtualization platform packages supplied by your distribution. For example, on Ubuntu installing Docker happens simply with command `apt install docker.io`.
+On other operating systems, we recommend using installation packages from <http://www.virtualbox.org> or <https://docs.docker.com/get-docker/>.
 
 A few hints on Docker installation:
 
-  - Follow the [generic instructions](https://hub.docker.com/search/?type=edition&offering=community)
+  - Follow the [generic instructions](https://docs.docker.com/get-docker/)
   - Linux users may need [extra steps](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user) to ensure that Sailfish SDK can manage Docker as a non-root user
+    - Do *not* follow the instructions for installing Docker in rootless mode! Rootless mode is not needed for managing Docker as a non-root user.
   - Windows users should ensure that Docker is set up to use [Linux containers](https://docs.docker.com/desktop/windows/wsl/) (instead of Windows containers)
   - Using Docker in rootless mode is not supported
 
