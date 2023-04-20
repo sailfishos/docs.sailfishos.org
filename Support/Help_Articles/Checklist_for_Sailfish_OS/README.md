@@ -23,11 +23,15 @@ This document, although called a checklist, explains in detail how to flash the 
 Go through all chapters and ensure that you have done everything correctly.
 
 
-# Fastboot command and driver
+# Fastboot driver, tool and command
 
 In this chapter, we prepare the computer for the flashing.
 
 The Android tool _fastboot_  is required for unlocking the _bootloader_ of the Xperia device and for flashing (installing) Sailfish OS [^1] to your device. An alternative operating system (like Sailfish) can only be installed and used when the bootloader is unlocked.
+
+The fastboot tool requires the fastboot driver to be able to work. Typically, Linux and Mac computers have this driver by default, while it must be installed to Windows. The following three chapters help installing the fastboot driver on different computers.
+
+The fastboot command can be used only when the phone is connected to the computer in the _fastboot mode_, indicated by the **blue** light on the phone. For details, see the 1st item in ["Troubleshooting the USB connection and fastboot mode"](#troubleshooting-the-usb-connection-and-fastboot-mode).
 
 
 ## On Linux computer
@@ -62,7 +66,9 @@ Windows PCs do not have the _fastboot_ tool nor the drivers installed by default
 
 Moreover, it has turned out that these drivers must be re-installed if you connect a different Xperia device to your PC.
 
-After you have connected your Xperia to your Windows PC with a USB cable in the fastboot mode (i.e. the **blue LED** is lit on the phone), open the Windows **Device Manager** (press both the Windows button and the X button - then click Device Manager on the pop-up menu).
+The phone must be connected to the computer in the _fastboot mode_ before the fastboot driver can be installed to Windows. Press and hold the Volume Up button and connect the USB cable between your phone and your computer. Wait for the LED to light up **blue** on the phone. If the LED turn green check the 1st item in ["Troubleshooting the USB connection and fastboot mode"](#troubleshooting-the-usb-connection-and-fastboot-mode).
+
+Open the Windows **Device Manager** by pressing both the Windows button and the X button. Next, click Device Manager on the pop-up menu.
 
 If the Device Manager shows "Android" under "Other devices" (see Picture 1 below) then the correct fastboot driver (of Sony) is missing from your PC. This can be fixed by following these instructions:
 
@@ -93,7 +99,7 @@ You will end up in the view shown in Picture 2. The new device **Sony sa0114** s
 **Note 3:** There is some troubleshooting in chapter ["Troubleshooting the USB connection and fastboot mode"](#troubleshooting-the-usb-connection-and-fastboot-mode).
 
 
-## Troubleshooting the fastboot mode
+### Troubleshooting the fastboot mode on Windows
 
 **[This zip package](Win10-fastboot-driver-setup-in-phases.zip)** contains stepwise screenshots about installing the fastboot driver to a Windows computer.
 
@@ -346,12 +352,11 @@ The attached PDF files show the output from the flashing script run successfully
 
 ## Troubleshooting the USB connection and fastboot mode
 
-1.  If the Volume Up key is pressed too hard then **green** light may appear. Therefore, make sure you press the key **gently** when connecting the USB cable. If you keep getting the green light, restart the PC and the phone, and try again. If the phone has a cover (hiding the keys on the side) consider removing it. If the problem persists no matter what you try, check that the volume keys of your phone work in normal conditions, i.e. when playing music or video with the phone.
+1.  The phone must be connected to the computer in the _fastboot mode_ before the fastboot command can be used. Press and hold the Volume Up button and connect the USB cable between your phone and your computer. Wait for the LED to light up **blue** on the phone. If the Volume Up key is pressed too hard then **green** light may appear. Therefore, make sure you press the button **gently** when connecting the USB cable. If you keep getting the green light, restart the PC and the phone, and try again. If the phone has a cover (hiding the keys on the side) consider removing it. If the problem persists no matter what you try, check that the volume keys of your phone work in normal conditions, i.e. when playing music or video with the phone.
 2.  Make sure that your USB cable is a **data cable** (having all lines connected) and not a charging cable. You can test this by copying a file over the cable from the PC to the phone or v.v.
 3.  Sometimes a certain USB port on the PC may not work. In such a case try **another USB port**.
 4.  Sometimes  USB3 ports fail to work. In such a case try a **USB2 port**, if available. We recommend trying a **USB2 hub** if USB2 ports are not available.
-5.  Linux: flashing Sailfish to Xperia XA2 gets interrupted in the message " FAILED (remote: 'unknown command')"
-    \- read this **[document](/Support/Help_Articles/Flashing_Troubleshooting/)**.
+5.  Linux: flashing Sailfish to Xperia XA2 might get interrupted in the message " FAILED (remote: 'unknown command')". In that case, read this **[document](/Support/Help_Articles/Flashing_Troubleshooting/)**.
    
 
 ----
