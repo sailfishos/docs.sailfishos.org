@@ -178,4 +178,28 @@ Trigger a sync cycle by opening up "Settings > Accounts". Then long-tap the acco
 ## Collecting of logs
 This [article](https://jolla.zendesk.com/hc/en-us/articles/115011963227) explains how to collect logs concerning the sync of various accounts.
 
+## Deleting calendar database forcefully
+
+This article may help in deleting ghost calendars. With a ghost calendar we mean a calendar that persists in the Calendar app, no matter what you do to remove it.
+Unfortunately it will delete all valid calendars too, however deleting of the valid calendars is not critical if the those are synced calendars, since the calendar data will be synced from the server after the deletion. Only the data of the local (non-synced) calendars will be lost.
+
+### Enable developer mode
+
+You will need the Developer Mode and the password for root access & SSH.
+Do as instructed in [this help article](/Support/Help_Articles/Enabling_Developer_Mode/).  You will then have everything set up.
+
+### Delete calendar database
+
+1. Close all apps of your Sailfish device.
+2. Open Terminal app (or take SSH connection from PC to phone) and give the commands:
+```
+systemctl --user stop msyncd.service
+devel-su -p rm -rf  ~/.local/share/system/privileged/Calendar/mkcal/*
+```
+
+### Disable developer mode
+
+1. Go to Settings > Developer tools.
+2. Tap on "Developer mode" to turn it off, so that the switch light in front of it turns off.
+
 
