@@ -7,33 +7,26 @@ layout: default
 
 The Sailfish OS reference documentation describes all the key areas of the OS.
 
-  - [Architecture](/Reference/Architecture)
-  - [Software Packaging](/Reference/Software_Packaging)
-      - [Packages](/Develop/Apps/Packaging)
-  - [Security](/Reference/Security)
-  - [Internationalisation and Localisation](/Reference/I18n)
-  - [Qt](/Reference/Qt)
-      - [Supported APIs](/Reference/Core_Areas_and_APIs/Supported_APIs)
-      - [Silica Component API](/Reference/Core_Areas_and_APIs/Silica_Component_API)
-  - [Core Areas and APIs](/Reference/Core_Areas_and_APIs) (including SFOS Apps)
-      - [Toolchain](/Reference/Toolchain)
-      - [Essentials](/Reference/Core_Areas_and_APIs#system-essentials)
-      - [Session management](/Reference/Core_Areas_and_APIs#session-management)
-      - [Application / Middleware](/Reference/Core_Areas_and_APIs/Apps_and_MW)
-          - [Lipstick](/Reference/Core_Areas_and_APIs/Apps_and_MW/Lipstick)
-          - [Contacts](/Reference/Core_Areas_and_APIs/Apps_and_MW/Contacts)
-          - [Telephony](/Reference/Core_Areas_and_APIs/Apps_and_MW/Telephony)
-          - [Messaging](/Reference/Core_Areas_and_APIs/Apps_and_MW/Messaging)
-          - [Calendar](/Reference/Core_Areas_and_APIs/Apps_and_MW/Calendar)
-          - [Accounts & SSO](/Reference/Core_Areas_and_APIs/Apps_and_MW/Accounts_and_SSO)
-          - [Email](/Reference/Core_Areas_and_APIs/Apps_and_MW/Email)
-          - [Browser](/Reference/Core_Areas_and_APIs/Browser)
-          - [Alarms and timezone](/Reference/Core_Areas_and_APIs/Apps_and_MW/Alarms)
-      - [Networking](/Reference/Core_Areas_and_APIs/Networking)
-      - [Graphics](/Reference/Core_Areas_and_APIs#graphics)
-      - [Multimedia](/Reference/Core_Areas_and_APIs#multimedia)
-      - [Input](/Reference/Core_Areas_and_APIs#input)
-      - [Filesystem](/Reference/Core_Areas_and_APIs#filesystem)
-  - [Android Compatibility](/Reference/Android_Compatibility)
-  - [Cheat Sheet](/Reference/Sailfish_OS_Cheat_Sheet)
-  - [Tips and Tricks](/Reference/Sailfish_OS_Tips_and_Tricks)
+<ul>
+{% assign sorted_pages = site.pages | sort:"nav_order" %}
+{% for item in sorted_pages %}
+  {% assign item_dir_parts = item.dir | remove_first: page.dir | split: '/' %}
+  {% if item.dir contains page.dir and item_dir_parts.size == 1 %}
+    <li>
+      <a href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    <ul>
+    {% for subitem in sorted_pages %}
+      {% assign subitem_dir_parts = subitem.dir | remove_first: item.dir | split: '/' %}
+      {% if subitem.dir contains item.dir and subitem_dir_parts.size == 1 %}
+        <li>
+          <a href="{{ subitem.url }}">{{ subitem.title }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endfor %}
+</ul>
+
+
