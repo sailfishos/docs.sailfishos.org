@@ -51,6 +51,13 @@ Parameters in the Ambience file can be:
 6. calendarToneFile: { "file": "Calendar.wav", "enabled": 1 },
 7. clockAlarmToneFile: { "file": "Clock.wav", "enabled": 1 },
 
+### Image files
+
+Image files are placed under `images/` and can be for example for an Ambience with the name My Special Ambience:
+
+1. wallpaper-my-special-ambience.jpg: wallpaper listed in the Ambience file, size should be 2048x2048 pixels.
+2. my-special-ambience.jpg: image shown as hero image on Settings > Ambience, size should be 540x1600 pixels.
+
 
 ## Creating an Ambience
 
