@@ -14,6 +14,15 @@ _There are several ways to transfer contacts to the People app of your Sailfish 
 
 On Sailfish phones, you can see the options for importing contacts on the menu page "Settings > Apps > People" in the section "Import contacts" (see Pic 1 below). The import utility is based on using standardized **[vCard files](https://en.wikipedia.org/wiki/VCard)** (also known as "VCF files" or *.vcf). The standard structure of those files makes it possible to process the contact data in the correct way and save them to the Sailfish contacts database.
 
+Please note that the VCF files to be imported must be saved on the phone to one of the following directories or else the People app would not detect them: 
+* Downloads
+* Documents
+* Desktop
+
+Therefore, do not save the files in Home (which appears as "Mass storage" on a computer after connecting the phone in the media transfer mode).
+
+VCF files can also be imported from all directories on a memory card. Read the details in chapter **[Importing from micro-SD card](#importing-from-micro-sd-card)**.
+
 <div class="flex-images" markdown="1">
 
 * <a href="Menu_settings_apps_People.png" class="narrow-image"><img src="Menu_settings_apps_People.png" alt="Menu page Settings-Apps-People"></a>
@@ -23,7 +32,7 @@ On Sailfish phones, you can see the options for importing contacts on the menu p
 </div>
 
 
-After the import is complete, the People app is automatically started. The following view appears:
+After the import is complete, the People app is automatically started. The view of Pic 2 (below) appears. Tap "View all contacts" button at the bottom to see the result.
 
 <div class="flex-images" markdown="1">
 
