@@ -93,7 +93,7 @@ All ambiences, the built-in ones and those created by the user are managed in an
 /home/defaultuser/.local/share/system/privileged/Ambienced/ambienced.sqlite
 ```
 
-Settings of the current active Ambience are located in the dconf database at "/desktop/jolla/theme". Dconf is a settings database per user located in the file ".config/dconf/user". These settings can be shown bu running the shell command:
+Settings of the current active Ambience are located in the dconf database at "/desktop/jolla/theme". These settings can be shown bu running the shell command:
 
 ```nosh
 dconf dump /desktop/jolla/theme/
