@@ -205,6 +205,7 @@ This ambience is now set and automatically put in effect. It is the current ambi
 
 If you are interested in learning the technical side of ambience and have developer skills then the following links may be worth reading.
 
+* **[Develop an Ambience](/Develop/Ambience/)** The development side of ambiences on this website.
 * **[Theme Color](https://openrepos.net/content/nephros/theme-color)** An app made by our community member nephros
 * **["How-to ambience"](https://together.jolla.com/question/16673/howto-ambiences/)** Forum discussing ambiences (this is old but has still some useful information)
 

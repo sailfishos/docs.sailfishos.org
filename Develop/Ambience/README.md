@@ -2,26 +2,24 @@
 title: Ambience
 permalink: Develop/Ambience/
 layout: default
-nav_order: 700
+nav_order: 450
 ---
-
-## This article requires verification and updating.
 
 ## What is an Ambience?
 
-An Ambience defines the colors and other configuration used on your phone. Silica and all native apps will use the configuration from the Ambience.
+Read more about [Ambiences](Support/Help_Articles/Ambiences/) and how to use them.
 
-The system service `ambienced` will set the Ambience upon boot, or switch to a different Ambience upon request. The license of Ambienced is proprietary.
+The system service `ambienced` will set the Ambience upon boot, or switch to a different Ambience upon request. Ambienced runs as a user service which is started by systemd. The license of Ambienced is proprietary.
 
 ## Content of an .ambience file
 
-The .ambience file is located under `/usr/share/ambience/ambience-%name/` where %name is the name of the ambience, for example "ambience-my-special-ambience/".
-The Ambience file under that directory would be called "ambience-my-special-ambience.ambience".
+The .ambience file is located under `/usr/share/ambience/%name/` where %name is the name of the ambience, for example "my-special-ambience/".
+The Ambience file under that directory would be called "my-special-ambience.ambience".
 
 Parameters in that file can be:
 
 1. displayName: the name of the Ambience. Should correspondent with the file of the directory and with filename "ambience-%name.ambience" (string).
-2. wallpaper: full filename of the background image, located in "/images", for example "wallpaper-my-special-ambience.jpg" (string).
+2. wallpaper: full filename of the background image, located in "/images", for example "my-special-ambience.jpg" (string).
 3. primaryColor: the primary color of the Ambience, either in 6 or 8 character color strings for rgba, for example "#FFFFFF" (string).
 4. secondaryColor: the secondary color of the Ambience, either in 6 or 8 character color strings for rgba, for example "#FFFFFF" (string).
 5. highlightColor: the primary color for highlighting of the Ambience, either in 6 or 8 character color strings for rgba, for example "#FFFFFF" (string).
@@ -34,7 +32,8 @@ Parameters in that file can be:
 12. overlayBackgroundColor
 13. backgroundGlowColor
 16. version: version number of the ambience, for example 3 (integer).
-17. translationCatalog
+17. timestamp: the datetime of this version, the format is like "2018-10-24T15:00:00" (string).
+18. translationCatalog
 
 ### Ringer tones
 
@@ -55,8 +54,9 @@ Parameters in the Ambience file can be:
 
 Image files are placed under `images/` and can be for example for an Ambience with the name My Special Ambience:
 
-1. wallpaper-my-special-ambience.jpg: wallpaper listed in the Ambience file, size should be 2048x2048 pixels.
-2. my-special-ambience.jpg: image shown as hero image on Settings > Ambience, size should be 540x1600 pixels.
+1. my-special-ambience.jpg: wallpaper listed in the Ambience file, size should be 2048x2048 pixels.
+
+The file with the name of the ambience will be used as cover image under Settings > Ambience in the settings app.
 
 
 ## Creating an Ambience
@@ -82,8 +82,23 @@ It is also possible to create your own Ambience RPM package.
 Set image as the ambience:
 
 ```nosh
-dbus-send --session --print-reply --dest=com.jolla.ambienced /com/jolla/ambienced com.jolla.ambienced.setAmbience string:"file://home/<user>/Pictures/imag    e.jpg"
+dbus-send --session --print-reply --dest=com.jolla.ambienced /com/jolla/ambienced com.jolla.ambienced.setAmbience string:"file://home/<user>/Pictures/image.jpg"
 ```
+
+## Storage of Settings
+
+All ambiences, the built-in ones and those created by the user are managed in an SQLite database at
+
+```
+/home/defaultuser/.local/share/system/privileged/Ambienced/ambienced.sqlite
+```
+
+Settings of the current active Ambience are located in the dconf database at "/desktop/jolla/theme". Dconf is a settings database per user located in the file ".config/dconf/user". These settings can be shown bu running the shell command:
+
+```nosh
+dconf dump /desktop/jolla/theme/
+```
+
 
 ## Sailfish Browser
 
@@ -91,4 +106,4 @@ dbus-send --session --print-reply --dest=com.jolla.ambienced /com/jolla/ambience
 
 In the settings for the Sailfish Browser, you can select if the browser should use a light theme, dark theme or follow the Ambience.
 The dark mode will only work if the website supports a dark theme.
-It might be possible to create an Ambience that will make the browser follow the theme for dark mode.
+It is be possible to create an Ambience that will make the browser follow the theme for dark mode.
