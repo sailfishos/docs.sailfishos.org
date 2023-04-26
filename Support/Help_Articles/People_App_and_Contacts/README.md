@@ -80,7 +80,7 @@ There are _local contacts_ and _synced contacts_ in Sailfish OS. Both kinds of c
 
 # Importing contacts
 
-Go to Settings > Apps > People. There you can choose to initiate an import from your SIM card or from a file containing the contacts.
+Go to Settings > Apps > People. There you can choose to initiate an import from your SIM card or from a file containing the contacts. It must be a vCard file (*.vcf).
 
 **[This document](/Support/Help_Articles/Importing_Contacts/)** explains in detail how to import contacts from other devices.
 
@@ -186,7 +186,7 @@ From an SMS message:
 3. Pull down to Save the phone number. A contact card appears. Fill in the name and other details. Tap "Accept".
     
 
-# Sharing contact(s)
+# Sharing contacts
 
 One or more contacts can be shared at a time as standardized **[vCard files](https://en.wikipedia.org/wiki/VCard)** (also known as “VCF files” or *.vcf). The file is exported to one of the apps or transports, including Bluetooth, Email, Messages, or WhatsApp - depending on which apps are installed and which services are enabled.
 
@@ -211,7 +211,6 @@ To share multiple contacts:
     Selecting how to share
   </span>
 </div>
-
 
 # Editing or deleting a contact
 
@@ -275,5 +274,43 @@ The settings allow for changing the sorting order and if the last or first name 
 # People tab in the Phone app
 
 The Phone app has three subpages. One of them is "People". It basically replicates the content and view of the People app, making it easier to choose people to call.
+
+# Exporting contacts to vCard file using the Terminal
+
+_Working on the command line safely requires that you have required skills. Do it only if you feel confident about it._
+NOTE: Another way to export contacts is **[Sharing contacts](#sharing-contacts)**. This can be done via the People app without using the command line.
+
+You will need to enable the **[Developer mode](/Support/Help_Articles/Enabling_Developer_Mode/)** to get the Terminal and more permissions.
+
+The contacts are divided into collections in the phone database. Some examples of the collections are Local, SIM card and Aggregate. The first one contains the non-synced contacts, the 2nd those copied from the SIM card to the phone and the last one is a combination of all. You will need to choose which collection to export (if not all of them). It may not be easy to guess by a collection name what it contains. However, "Aggregate" should contain all contacts.
+
+Run the following command at the Terminal app to list the collections on your phone:
+```
+devel-su -p contacts-tool collections
+```
+
+It will print out a result like this:
+```
+Password: 
+Enjoy your privileges.
+  ID: qtcontacts:org.nemomobile.contacts.sqlite::636f6c2d31  Name: aggregate
+  ID: qtcontacts:org.nemomobile.contacts.sqlite::636f6c2d32  Name: local
+  ID: qtcontacts:org.nemomobile.contacts.sqlite::636f6c2d33  Name: SIM
+  ID: qtcontacts:org.nemomobile.contacts.sqlite::636f6c2d3130  Name: Contacts
+  ID: qtcontacts:org.nemomobile.contacts.sqlite::636f6c2d3131  Name: Contacts
+  ID: qtcontacts:org.nemomobile.contacts.sqlite::636f6c2d3132  Name: Suggested Contacts
+  ID: qtcontacts:org.nemomobile.contacts.sqlite::636f6c2d3133  Name: telepathy
+  ID: qtcontacts:org.nemomobile.contacts.sqlite::636f6c2d3134  Name: My Contacts
+```
+
+The actual export command is shown below followed by an example under it. This example shows how to export the aggregate collection (the 1st item in the list above).
+
+```
+devel-su -p vcardconverter --export <output-file> <ID>
+devel-su -p vcardconverter --export collection-aggregate.vcf qtcontacts:org.nemomobile.contacts.sqlite::636f6c2d31
+```
+
+The output file, collection-aggregate.vcf, can be imported to a Sailfish (or Android) phone in the way described in **[this document](/Support/Help_Articles/Importing_Contacts/)**.
+
 
 
