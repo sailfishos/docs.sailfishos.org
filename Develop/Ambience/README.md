@@ -7,7 +7,7 @@ nav_order: 450
 
 ## What is an Ambience?
 
-Read more about [Ambiences](Support/Help_Articles/Ambiences/) and how to use them.
+Read more about [Ambiences](/Support/Help_Articles/Ambiences/) and how to use them.
 
 The system service `ambienced` will set the Ambience upon boot, or switch to a different Ambience upon request. Ambienced runs as a *user* service which is started by systemd. The license of Ambienced is proprietary.
 
