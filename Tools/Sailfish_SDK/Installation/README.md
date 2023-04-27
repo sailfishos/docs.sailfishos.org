@@ -87,6 +87,7 @@ In order to maintain compatibility with older Linux distributions, Sailfish SDK 
 In order to maintain compatibility with older Linux distributions, Sailfish SDK links to this library, which may not be installed by default on more recent distributions:
 
   - On Fedora the package openssl1.1 must be installed
+  - As Ubuntu 22.04 and later no longer ships openssl1.1, you have to install the package libssl1.1 from older Ubuntu release. You can download it from <https://packages.ubuntu.com/focal/amd64/libssl1.1/download>
 
 #### Modern bash
 
