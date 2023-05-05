@@ -48,7 +48,7 @@ The backup utility of Sailfish OS does not save:
 * Document files in the Documents folder of the phone
 * Application data of Android apps
 
-Items NOT listed in chapter ["What is included in backups"](#what_is_included_in_backups) are not backed up, either, i.e., the list above may not have everything mentioned.
+Items NOT listed in chapter ["What is included in backups"](#what-is-included-in-backups) are not backed up, either, i.e., the list above may not have everything mentioned.
 
 
 ## What is included in backups
@@ -81,21 +81,24 @@ Items missing from this list are NOT backed up.
 
 ## Backup prior to factory reset and prior to reinstalling Sailfish
 
-If you intend to do a device reset (reset the device to factory settings) or reinstall Sailfish OS to the device, please note that ALL DATA in the device will be completely WIPED OUT. As written in chapters ["What is NOT included in backups"](#what_is_not_included_in_backups) and ["What is included in backups"](#what_is_included_in_backups) above, Sailfish backup does not save everything you have on your device, i.e. some data will be lost.  However, the data on the memory card and on the SIM card(s) remains intact.
+If you intend to do a device reset (reset the device to factory settings) or reinstall Sailfish OS to the device, please note that ALL DATA in the device will be completely WIPED OUT. As written in chapters ["What is NOT included in backups"](#what-is-not-included-in-backups) and ["What is included in backups"](#what-is-included-in-backups) above, Sailfish backup does not save everything you have on your device, i.e. some data will be lost.  However, the data on the memory card and on the SIM card(s) remains intact.
 
 Proceed in this order to restore your system after the reset:
 
-1\. First [**install all system updates**](https://docs.sailfishos.org/Support/Help_Articles/Updating_Sailfish_OS/) until you have the latest Sailfish OS version again. Note that this step is not needed if you just reinstalled the latest Sailfish OS version
+1\. First [**install all system updates**](/Support/Help_Articles/Managing_Sailfish_OS/Updating_Sailfish_OS/) until you have the latest Sailfish OS version again. Note that this step is not needed if you just reinstalled the latest Sailfish OS version
+
 2\. Install all of your applications
+
 3\. Restore the backup only now
+
 4\. Check your accounts at "Settings > Accounts". We recommend re-signing each of them.
 
 
 ## Backup prior to encrypting user data
 
-We recommend backing up your data before encrypting the user data (i.e., the home partition) of your device. This is our document on the [**encryption of user data**](https://docs.sailfishos.org/Support/Help_Articles/Encryption_of_User_Data/).
+We recommend backing up your data before encrypting the user data (i.e., the home partition) of your device. This is our document on the [**encryption of user data**](/Support/Help_Articles/Encryption_of_User_Data/).
 
-We also recommend encrypting your memory card (SD card) first, before encrypting home, to ensure that your backup data is safely stored on the card. How to encrypt the SD card is explained in this [**document on SD cards**](https://docs.sailfishos.org/Support/Help_Articles/SD_Card_Format_and_Encryption/).
+We also recommend encrypting your memory card (SD card) first, before encrypting home, to ensure that your backup data is safely stored on the card. How to encrypt the SD card is explained in this [**document on SD cards**](/Support/Help_Articles/SD_Card_Format_and_Encryption/).
 
 
 # Manual backups
@@ -114,7 +117,7 @@ The downside of keeping backups on a memory card is the risk of losing the card 
 
 1\. Turn your device off.
 
-2\. Insert a memory card (an SD card) into the device. Check what is said about compatibility in this [**document on SD cards**](https://docs.sailfishos.org/Support/Help_Articles/SD_Card_Format_and_Encryption/).
+2\. Insert a memory card (an SD card) into the device. Check what is said about compatibility in this [**document on SD cards**](/Support/Help_Articles/SD_Card_Format_and_Encryption/).
 
 3\. Turn the device on (it is always good to restart the device before taking a backup).
 
@@ -248,7 +251,7 @@ You will see afterwards a line of text in the Backup section of the Events view 
 
 ## Restoring from the cloud
 
-Restoring a backup from a cloud is done in the same way, on your command, as from a memory card in chapter ["Restoring from memory card"](#restoring_from_memory_card).
+Restoring a backup from a cloud is done in the same way, on your command, as from a memory card in chapter ["Restoring from memory card"](#restoring-from-memory-card).
 
 The only differences are that you will need an Internet connection and to be signed in to your cloud account before you start.
 
@@ -292,7 +295,7 @@ The default username of Sailfish OS is "defaultuser" since the early Sailfish 3 
 
 If the backup process stops in the middle of the progress line and cannot continue after a few minutes, then it is best to stop it and try again after restarting the device.
 
-it may be possible to find the reason for a failure in the logs (see chapter [5\. Logs](/hc/en-us/articles/201804906/#Logs)).
+It may be possible to find the reason for a failure in the logs (see chapter [5\. Logs](#logs)).
 
 
 
