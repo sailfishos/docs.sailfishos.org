@@ -310,6 +310,73 @@ Type the following command to delete the filesystem indexer database:
 tracker3 reset -s
 ```
 
+
+# Adding a folder to the scope of media indexing
+
+A need may arise to add a new folder to Home for some specific content (e.g. pictures, videos, documents or music) instead of using the default folders.
+
+We explain how to do it here. The required modifications are best done via an **[SSH connection](/Support/Help_Articles/SSH_and_SCP/)** to the phone.
+Enable the **[Developer mode](/Support/Help_Articles/Enabling_Developer_Mode/)**. You will need the root rights.
+
+## Create the folder
+
+First of all, create the folder. Replace 'MyNewFolder' with the name of your preference (also in the later commands).
+
+```
+$ mkdir $HOME/MyNewFolder
+```
+
+## Add the folder to indexing
+
+The new folder must be added to the list of folders the Tracker is indexing to make the content appear in apps like Gallery, Media or Documents.
+
+The new folder is added to the scope of indexing with this command:
+```
+$ devel-su -p tracker3 index --add --recursive "$HOME/MyNewFolder"
+```
+Check that it worked. The list of indexed folders is printed with the following command. The new folder appears as the last item in the list.
+It is okay that the path is `/home/defaultuser` instead of `$HOME`.
+```
+$ gsettings get org.freedesktop.Tracker3.Miner.Files index-recursive-directories
+
+['&DESKTOP', '&DOCUMENTS', '&DOWNLOAD', '&MUSIC', '&PICTURES', '&VIDEOS', 
+'$HOME/android_storage/DCIM', '$HOME/android_storage/Download', '$HOME/android_storage/Pictures', 
+'$HOME/android_storage/Podcasts', '$HOME/android_storage/Music', '/home/defaultuser/MyNewFolder']
+```
+
+## Set the required permissions
+
+NOTE: _You may need to redo this step after a Sailfish OS update, unfortunately._
+
+Adding the folder to the reach of the Tracker is not enough. The permissions must be arranged, too. Which permissions, exactly, depends on the data kept in the folder (pictures, videos, music, documents).
+
+Add the line `whitelist ${HOME}/MyNewFolder` to one or more of the following files:
+
+```
+* /etc/sailjail/permissions/Pictures.permission
+* /etc/sailjail/permissions/Videos.permission
+* /etc/sailjail/permissions/Music.permission
+* /etc/sailjail/permissions/Documents.permission
+```
+
+You will need to edit the file as a root. Be careful when doing it. For instance:
+```
+devel-su vi /etc/sailjail/permissions/Pictures.permission
+```
+
+After editing, the essential parts of `Pictures.permission` should be:
+```
+mkdir       ${HOME}/Pictures
+noblacklist ${HOME}/Pictures
+whitelist   ${HOME}/Pictures
+whitelist   ${HOME}/MyNewFolder
+                                          
+whitelist ${HOME}/android_storage/Pictures
+whitelist ${HOME}/android_storage/DCIM
+```
+
+Restart the phone to get everything in effect.
+
 # Checking Open Source Licenses
 
 Easiest way to check licenses is to go to **Settings > About product** and scroll a bit down and click "see information about packages" which takes you to the list of packages with licenses and shows you all the open source licenses.
