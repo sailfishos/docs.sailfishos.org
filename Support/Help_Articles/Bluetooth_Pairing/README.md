@@ -215,6 +215,73 @@ devel-su
 
 The paired device appears in the Bluetooth menu of your phone now.
 
+## Removing unknown Bluetooth devices from the device list
+
+In some circumstances, it could be that the list of Bluetooth devices in "Settings > System > Bluetooth" grows too long and even so that they cannot be deleted by the UI means. In such a case, remove the unnecessary devices by using the command line:
+
+1) Check the MAC address of your phone
+```
+$ ls -l /var/lib/bluetooth
+```
+
+2) List your paired devices with the bluetoothctl tool
+
+Install the tool unless you have it.
+```
+[defaultuser@Xperia10III ~]$ devel-su
+Password: 
+[root@Xperia10III defaultuser]# pkcon refresh
+[root@Xperia10III defaultuser]# pkcon install bluez5-tools
+
+[root@Xperia10III defaultuser]# bluetoothctl
+Agent registered
+```
+The response could be something like below, showing the MAC addresses and nicknames of the paired devices. We list them so that they wouldn't get deleted by accident.
+```
+[bluetooth]# devices Paired
+Device F4:B6:88:0F:3E:97 PLT V8200 Series
+Device 3C:01:EF:CB:CF:56 Xperia 10 II
+Device 04:D3:B0:C5:12:C2 MY LAPTOP
+Device A0:14:3D:07:2E:2B VW PHONE
+Device 00:12:6F:45:60:5B Nuforce BTR-100
+Device F8:5C:7D:3E:6C:EF JBL TUNE750BTNC
+```
+Without 'Paired', the list may have more devices (depending on previous device scans and error sitations). Consider removing some or all of them.
+```
+[bluetooth]# devices
+[CHG] Controller 3C:01:EF:8D:C8:8C Discovering: yes
+[NEW] Device 3C:01:EF:C7:5F:A2 Xperia 10 II - okay
+[CHG] Device 3C:01:EF:CB:CF:56 RSSI: -54
+[CHG] Device 3C:01:EF:CB:CF:56 TxPower: 4
+[NEW] Device 38:78:62:44:D5:51 XA2
+```
+
+Removing devices one-by-one happens with the following command:
+```
+[bluetooth]# remove <MAC>
+```
+Example:
+```
+[bluetooth]# remove 84:C7:EA:18:EE:7B 
+[DEL] Device 84:C7:EA:18:EE:7B XX
+Device has been removed
+
+[bluetooth]# exit
+```
+
+If this does not work then there is the option to do it as root, after exiting bluetoothctl.
+Delete devices one by one or all in one go (including your paired devices - repairing needed):
+```
+[root@Xperia10III defaultuser]# rm -R /var/lib/bluetooth/<MAC-of-my-device>/<MAC-of-device-to-be-removed>/
+[root@Xperia10III defaultuser]# rm -R /var/lib/bluetooth/<MAC-of-my-device>/*
+```
+Example:
+```
+[root]# rm -R /var/lib/bluetooth/3C\:01\:EF\:8D\:C8\:8C/0C\:FC\:30\:00\:7F\:CE/
+```
+Note: the MAC address is best written by typing the first two characters followed by the TAB which completes the address string for you (and adds the backslash characters).
+
+
 # Bluetooth profiles supported by Sailfish OS
 
 Sailfish OS supports the Bluetooth profiles listed on this [separate document](/Reference/Core_Areas_and_APIs/Networking/#bluetooth).
