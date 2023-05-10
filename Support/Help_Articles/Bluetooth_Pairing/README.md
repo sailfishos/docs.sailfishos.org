@@ -157,60 +157,56 @@ You will need to enable the **[developer mode](/Support/Help_Articles/Enabling_D
 ### Install the tools
 
 ```
-\[defaultuser\] devel-su       ## Type your SSH password
+[defaultuser]$ devel-su       ## Type your SSH password
 
-\[root\] ssu ar qa             ## Enable quality assurance repository
-\[root\] pkcon refresh
-\[root\] pkcon install bluez5-tools
-\[root\] pkcon install bluez5-tracing
+[root@Xperia10III defaultuser]# pkcon refresh
+[root@Xperia10III defaultuser]# pkcon install bluez5-tools
 ```
 
 ### Do the pairing
 
 ```
-\[root\] bluetoothctl
+[root@Xperia10III defaultuser]# bluetoothctl
 Agent registered
 
-\[bluetooth\]# scan on
+[bluetooth]# scan on
 Discovery started
-\[CHG\] Controller 3C:01:EF:CB:CF:56 Discovering: yes
-\[NEW\] Device 3C:01:EF:C7:5F:A2 Xp10II             ## New device, check & copy the MAC
-\[CHG\] Device 3C:01:EF:C7:5F:A2 RSSI: -53
+[CHG] Controller 3C:01:EF:CB:CF:56 Discovering: yes
+[NEW] Device 3C:01:EF:C7:5F:A2 Xp10II             ## New device, check & copy the MAC
+[CHG] Device 3C:01:EF:C7:5F:A2 RSSI: -53
 
-\[bluetooth\]# pair 3C:01:EF:C7:5F:A2               ## Pairing the new device, use the MAC ^
+[bluetooth]# pair 3C:01:EF:C7:5F:A2               ## Pairing the new device, use the MAC ^
 Attempting to pair with 3C:01:EF:C7:5F:A2
-\[CHG\] Device 3C:01:EF:C7:5F:A2 Connected: yes
+[CHG] Device 3C:01:EF:C7:5F:A2 Connected: yes
 Request confirmation
-**\[agent\] Confirm passkey 266780 (yes/no):** yes  ## Check the display of the new device
-\[CHG\] Device 3C:01:EF:C7:5F:A2 UUIDs: 00001105-0000-1000-8000-00805f9b34fb
-\[CHG\] Device 3C:01:EF:C7:5F:A2 UUIDs: 0000110a-0000-1000-8000-00805f9b34fb
-\[CHG\] Device 3C:01:EF:C7:5F:A2 UUIDs: 0000110b-0000-1000-8000-00805f9b34fb
-\[CHG\] Device 3C:01:EF:C7:5F:A2 UUIDs: 0000110c-0000-1000-8000-00805f9b34fb
-\[CHG\] Device 3C:01:EF:C7:5F:A2 UUIDs: 0000110e-0000-1000-8000-00805f9b34fb
-\[CHG\] Device 3C:01:EF:C7:5F:A2 UUIDs: 00001112-0000-1000-8000-00805f9b34fb
-\[CHG\] Device 3C:01:EF:C7:5F:A2 UUIDs: 0000111f-0000-1000-8000-00805f9b34fb
-\[CHG\] Device 3C:01:EF:C7:5F:A2 UUIDs: 0000112f-0000-1000-8000-00805f9b34fb
-\[CHG\] Device 3C:01:EF:C7:5F:A2 UUIDs: 00001200-0000-1000-8000-00805f9b34fb
-\[CHG\] Device 3C:01:EF:C7:5F:A2 UUIDs: 00001800-0000-1000-8000-00805f9b34fb
-\[CHG\] Device 3C:01:EF:C7:5F:A2 UUIDs: 00001801-0000-1000-8000-00805f9b34fb
-\[CHG\] Device 3C:01:EF:C7:5F:A2 UUIDs: 0000180a-0000-1000-8000-00805f9b34fb
-\[CHG\] Device 3C:01:EF:C7:5F:A2 ServicesResolved: yes
-\[CHG\] Device 3C:01:EF:C7:5F:A2 Paired: yes        ## Pairing succeeded
+**[agent] Confirm passkey 266780 (yes/no):** yes  ## Check the display of the new device
+[CHG] Device 3C:01:EF:C7:5F:A2 UUIDs: 00001105-0000-1000-8000-00805f9b34fb
+[CHG] Device 3C:01:EF:C7:5F:A2 UUIDs: 0000110a-0000-1000-8000-00805f9b34fb
+[CHG] Device 3C:01:EF:C7:5F:A2 UUIDs: 0000110b-0000-1000-8000-00805f9b34fb
+[CHG] Device 3C:01:EF:C7:5F:A2 UUIDs: 0000110c-0000-1000-8000-00805f9b34fb
+[CHG] Device 3C:01:EF:C7:5F:A2 UUIDs: 0000110e-0000-1000-8000-00805f9b34fb
+[CHG] Device 3C:01:EF:C7:5F:A2 UUIDs: 00001112-0000-1000-8000-00805f9b34fb
+[CHG] Device 3C:01:EF:C7:5F:A2 UUIDs: 0000111f-0000-1000-8000-00805f9b34fb
+[CHG] Device 3C:01:EF:C7:5F:A2 UUIDs: 0000112f-0000-1000-8000-00805f9b34fb
+[CHG] Device 3C:01:EF:C7:5F:A2 UUIDs: 00001200-0000-1000-8000-00805f9b34fb
+[CHG] Device 3C:01:EF:C7:5F:A2 UUIDs: 00001800-0000-1000-8000-00805f9b34fb
+[CHG] Device 3C:01:EF:C7:5F:A2 UUIDs: 00001801-0000-1000-8000-00805f9b34fb
+[CHG] Device 3C:01:EF:C7:5F:A2 UUIDs: 0000180a-0000-1000-8000-00805f9b34fb
+[CHG] Device 3C:01:EF:C7:5F:A2 ServicesResolved: yes
+[CHG] Device 3C:01:EF:C7:5F:A2 Paired: yes        ## Pairing succeeded
 Pairing successful
-\[CHG\] Device 3C:01:EF:C7:5F:A2 ServicesResolved: no
-\[CHG\] Device 3C:01:EF:C7:5F:A2 Connected: no
-\[bluetooth\]# exit
+[CHG] Device 3C:01:EF:C7:5F:A2 ServicesResolved: no
+[CHG] Device 3C:01:EF:C7:5F:A2 Connected: no
+[bluetooth]# exit
 ```
 
 ### Uninstall the tools
 
 ```
-devel-su
-\[root\] pkcon remove bluez5-tracing
-\[root\] pkcon remove bluez5-tools
-\[root\] ssu rr qa
-\[root\] pkcon refresh
-\[root\] exit
+[defaultuser]$ devel-su
+[root@Xperia10III defaultuser]# pkcon remove bluez5-tools
+[root@Xperia10III defaultuser]# pkcon refresh
+[root@Xperia10III defaultuser]# exit
 ```
 
 The paired device appears in the Bluetooth menu of your phone now.
@@ -221,7 +217,7 @@ In some circumstances, it could be that the list of Bluetooth devices in "Settin
 
 1) Check the MAC address of your phone
 ```
-$ ls -l /var/lib/bluetooth
+[defaultuser]$ ls -l /var/lib/bluetooth
 ```
 
 2) List your paired devices with the bluetoothctl tool
@@ -229,7 +225,7 @@ $ ls -l /var/lib/bluetooth
 Install the tool unless you have it.
 ```
 [defaultuser@Xperia10III ~]$ devel-su
-Password: 
+Password:
 [root@Xperia10III defaultuser]# pkcon refresh
 [root@Xperia10III defaultuser]# pkcon install bluez5-tools
 
@@ -262,7 +258,7 @@ Removing devices one-by-one happens with the following command:
 ```
 Example:
 ```
-[bluetooth]# remove 84:C7:EA:18:EE:7B 
+[bluetooth]# remove 84:C7:EA:18:EE:7B
 [DEL] Device 84:C7:EA:18:EE:7B XX
 Device has been removed
 
@@ -277,7 +273,7 @@ Delete devices one by one or all in one go (including your paired devices - repa
 ```
 Example:
 ```
-[root]# rm -R /var/lib/bluetooth/3C\:01\:EF\:8D\:C8\:8C/0C\:FC\:30\:00\:7F\:CE/
+[root@Xperia10III defaultuser]# rm -R /var/lib/bluetooth/3C\:01\:EF\:8D\:C8\:8C/0C\:FC\:30\:00\:7F\:CE/
 ```
 Note: the MAC address is best written by typing the first two characters followed by the TAB which completes the address string for you (and adds the backslash characters).
 
