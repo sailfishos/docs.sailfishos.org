@@ -74,16 +74,15 @@ It is possible to access the common settings of all Android apps by using the co
 
 For this, you need to enable the [**Developer mode**](/Support/Help_Articles/Enabling_Developer_Mode/), so that you get the **Terminal** app to your phone.
 
-_This CLI approach requires the Android App Support version 8.1 (or higher) which implies Xperia XA2, Xperia 10, Xperia 10 II and Xperia 10 III products._
+_This CLI approach requires the Android App Support version 8.1 (or higher) which implies Xperia XA2, Xperia 10, Xperia 10 II and Xperia 10 III products. The command does not work on Xperia X nor on Jolla products_
 
 Do as follows:
 
 1) Open the Terminal app<br>
-2) Run the command below
+2) Run the command below:
 ```
-apkd-launcher com.android.settings
+devel-su -p apkd-launcher com.android.settings
 ```
-
 The following view appears. In there, it is possible to adjust the settings in each category.
 
 <div class="flex-images" markdown="1">
