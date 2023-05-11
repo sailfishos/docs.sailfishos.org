@@ -390,7 +390,7 @@ rpm -qa --queryformat '%{license}\t%{name}-%{version}-%{release}\n'
 
 # Clearing notifications from Events view
 
-For various reasons, some notifications might get stuck in the Events view.
+For various reasons, some notifications might get stuck in the Events view (see [Events](https://sailfishos.org/design/ux-framework/)).
 With these instructions the whole notifications database can be cleared.
 
 ## Preparations
@@ -408,7 +408,7 @@ pkcon refresh
 pkcon install sqlite
 exit
 ```
-## Accessing the messages database
+## Accessing the notifications database
 
 Give the following commands to access the SQL database and to clear the notifications database:
 
