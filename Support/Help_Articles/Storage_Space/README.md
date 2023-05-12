@@ -49,6 +49,40 @@ devel-su
 du -xm /home | sort | tail -20 |  sort -nr
 ```
 
+## How to check the big disc space consumers
+
+The following commands may be helpful in checking what might be wrong with the file system. This information may help in resolving a problem in getting Sailfish OS updates.
+
+In many cases, the problem is found in some files that the user has installed to the system data partition, which then prevents installation of the update. This is usually because of some hacking/development which has brought stale files to the system data partition or the installation of packages that consume the disc space from the system data partition.
+Each case looks a bit different but was caused by the user doing things in the developer mode (without understanding the consequences).
+The [Developer mode](/Support/Help_Articles/Enabling_Developer_Mode/) is required for running the following commands.
+They can be run in the device Terminal app or preferably over an SSH connection (SSH/Windows, SSH/Linux) from a PC. In this latter case, you can conveniently copy/paste the commands to the command line.
+```
+cd $HOME
+export MYHOME=$(pwd)
+
+devel-su
+```
+
+High level list, both from the root and from home:
+```
+du -xa / | awk '{if($1 > 102400) print int($1/1024) "MB" " " $2 }' | sort -nr
+```
+```
+du -xa /home | awk '{if($1 > 102400) print int($1/1024) "MB" " " $2 }' | sort -nr
+```
+
+A full list (in reverse order). It gives you an idea of where the storage space consumers are, by folder size.
+```
+du -xa / | sort -n
+```
+
+This command presents the installed code (rpm) packages, listed by size:
+```
+rpm -qa --queryformat '%{SIZE}\t %{NAME}-%{version}\n' | sort -nr | more
+```
+Please note that removing packages can break your system, so if you are not 100% sure which packages to remove please do not remove any.
+
 # Using File Manager to transfer files onto a memory card
 We recommend using a memory card on your Xperia phone to save internal storage. As soon as you have the card inserted and formatted, consider moving some data from the phone to the card.
 
