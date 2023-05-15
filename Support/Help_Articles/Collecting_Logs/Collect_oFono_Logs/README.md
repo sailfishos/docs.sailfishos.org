@@ -30,6 +30,7 @@ exit
 9. It is useful to collect the **journal** log, too. If you have not enabled the **[developer mode](/Support/Help_Articles/Enabling_Developer_Mode/)** do it now.
 The following command collects the journal log and prints it out to the file "journal.txt".
 ```
-devel-su; journalctl -a -b --no-tail --no-pager > journal.txt
+devel-su journalctl -a -b --no-tail --no-pager > journal.txt
 ```
+Please make a note on the exact time when the issue to be investigated happened. This makes reading the log files easier.
 
