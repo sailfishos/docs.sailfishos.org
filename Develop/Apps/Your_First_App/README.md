@@ -22,9 +22,9 @@ As an example, on Ubuntu, open the dash, type in ‘sailfish’. Click on the �
          class="md_thumbnail" style="max-width:100%"/>
 </a>
 
-### Create a Sailfish UI Project
+### Create a Sailfish application Project
 
-The SDK comes with a Sailfish UI template project that makes it very easy to get started.
+The SDK comes with Sailfish application template projects that makes it very easy to get started. There is one project template for pure QML applications, and another for projects combining QML and C++. Below we go through the steps for creating a project of the latter type.
 
 1\. In the IDE, click on **File→New File** or **Project**.
 
@@ -34,15 +34,15 @@ The SDK comes with a Sailfish UI template project that makes it very easy to get
          class="md_thumbnail" style="max-width:100%"/>
 </a>
 
-2\. Select **Applications→Sailfish OS Qt Quick Application** and then click **Choose**.
+2\. Select **Application→Sailfish OS Qt Quick Application** and then click **Choose**. Alternatively, if you want to create a QML only project, select **Application→Sailfish OS Qt Quick Application (QML Only)**.
 
-<a href="QtC_Choose_Template.png" style="width:30em;display:block">
-    <img src="QtC_Choose_Template.png"
-         alt="QtC_Choose_Template.png"
+<a href="newproject.png" style="width:30em;display:block">
+    <img src="newproject.png"
+         alt="New File or Project wizard"
          class="md_thumbnail" style="max-width:100%"/>
 </a>
 
-3\. Give a name to your project. Ensure it is created somewhere under your home directory and click **Next**.
+3\. Give a name to your project. Ensure it is created somewhere under your workspace (by default your home directory) and click **Next**.
 
 <a href="QtC_Template_01.png" style="width:30em;display:block">
     <img src="QtC_Template_01.png"
@@ -90,11 +90,22 @@ The SDK comes with a Sailfish UI template project that makes it very easy to get
          class="md_thumbnail" style="max-width:100%"/>
 </a>
 
+8\. The IDE suggests to run qmake in order to detect possible additional qmake arguments. Select "Run qmake".
+
+<a href="start_engine.png" style="width:30em;display:block">
+    <img src="start_engine.png"
+         alt="Start Sailfish SDK Build Engine"
+         class="md_thumbnail" style="max-width:100%"/>
+</a>
+
+9\. If your Build Engine was not running before, the IDE suggests starting it now, in order to run qmake. Please read below for more information about the Build Engine
+
+
 ### Launch the Build Engine and the Emulator
 
 The Sailfish SDK uses a build engine (virtual machine or Docker container) to compile your code and another virtual machine to run an emulator. If these are not running when you attempt to build or deploy an application you will be asked to start them.
 
-> Note: The Build Engine needs access to your source code to compile it and by default your home directory is shared – this is why the project should be in your home.
+> Note: The Build Engine needs access to your source code to compile it. Your workspace, which you defined when installing the SDK, is shared to the Build Engine – this is why the project should be in your workspace. You can change the workspace folder in **Tools→Options→Sailfish OS**
 
 When a Sailfish OS project is open, the SDK automatically displays two control buttons in the left toolbar for starting/stopping the Build Engine and Emulator.
 
@@ -136,13 +147,27 @@ Sailfish SDK can also deploy application to Sailfish OS hardware device. This fe
 
 Sailfish OS hardware device setup is done using Qt Creator’s device settings. Depending on your host environment this is found from either the menu **Tools→Options→Devices** or **Qt Creator→Preferences→Devices**. In this settings view, click **Add…** to start creating device settings.
 
-Unless some custom configuration is used, these default values work just fine. If you encounter timeouts with SSH connections on your PC, you can modify the timeout setting also after the device has been created. Connect the device now, enter your SSH password and press Test Connection as described in the dialog. On successful completion, you can click Next to continue.
+Unless some custom configuration is used, these default values work just fine. The default IP address matches the IP address of a Sailfish device connected via USB. If you use WLAN to connect to the device, you need to specify the IP address of the device.
 
 <a href="HW_Select.png" style="width:30em;display:block">
     <img src="HW_Select.png"
          alt="HW_Select.png"
          class="md_thumbnail" style="max-width:100%"/>
 </a>
+
+If you encounter timeouts with SSH connections on your PC, you can modify the timeout setting also after the device has been created.
+
+In the next phase, you can deploy a SSH key to the device. If you don't have such a key, you can create one.
+
+<a href="deploy_key.png" style="width:30em;display:block">
+    <img src="deploy_key.png"
+         alt="Key Deployment"
+         class="md_thumbnail" style="max-width:100%"/>
+</a>
+
+You will be asked for a device password. This is the password which is set in the [Developer Mode settings](/Support/Help_Articles/Enabling_Developer_Mode/) on the device.
+
+After you click **Next**, the SDK will prepare your device for software development.
 
 In the next dialog, you can review and further adjust connection related configuration. Click **Next** to continue.
 
@@ -154,15 +179,15 @@ In the next dialog, you can review and further adjust connection related configu
 
 In next dialog just click **Next** unless you want to abort device creation. In that case click **Cancel**.
 
-Qt Creator shall then create device configuration, deploy the SSH key to device and finally test the setup. In those dialogs user can only click **Close** to go to next phase.
+Qt Creator shall then create device configuration and test the setup. In those dialogs user can only click **Close** to go to next phase.
 
-Once tested and verified, Qt Creator shows a view which shows the created device. Notice that configuration files are not updated yet, so if you don’t press **OK** or **Apply** changes will not be saved.
+Once tested and verified, Qt Creator shows a view which shows the created device.
 
 That’s it. Now Qt Creator can deploy your application to device.
 
-### Set ARM Kit to Deploy to Device
+### Set ARM or aarch64 Kit to Deploy to Device
 
-By default ARM kit will create RPM binaries, it won’t even try to deploy to device. The deploy option **Build RPM Package for Manual Deployment** is selected. This can be changed from Qt Creator’s main view with deploy options, select **Deploy as RPM Package** or **Deploy by Copying Binaries**.
+The kit selector (**Build→Open Build and Run Kit Selector**) allows you to select a deployment method. The deploy option **Build RPM Package for Manual Deployment** does not even try to deploy to the device, it just creates RPM packages. **Deploy as RPM Package** and **Deploy by Copying Binaries** methods allow deployment to the device. The former installs the application from RPM package, just like the end user would install it. The latter method simply copies the binaries directly to the device.
 
 <a href="ARM_Kit_Select_Deploy.png" style="width:30em;display:block">
     <img src="ARM_Kit_Select_Deploy.png"
@@ -187,6 +212,6 @@ That’s it! You just ran your first Sailfish OS application. It should be runni
 
 #### Build RPM Package for Manual Deployment
 
-The default deploy option is to only build RPM packages. In this case the Run and Debug buttons are replaced with single Deploy button, that can be used to create the RPM packages. Alternatively the menu **Build → Deploy Project “projectname”** can be used to trigger package creation.
+If "Build RPM Package for Manual Deployment" is selected as the deploy method, the Run and Debug buttons are replaced with single Deploy button. That button can be used to create the RPM packages. Alternatively the menu **Build → Deploy Project “projectname”** can be used to trigger package creation.
 
 Next steps: exploring how to [use the application](/Develop/Apps/Using_Sailfish_OS_Apps).
