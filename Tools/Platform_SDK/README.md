@@ -12,7 +12,7 @@ Note: Platform development is now more convenient with the regular [Sailfish SDK
 
 # Overview
 
-The Sailfish Platform SDK is a chroot based environment that encapsulates the [Sailfish SDK Toolchain](/Reference/Toolchain) in a portable manner.
+The Sailfish Platform SDK is a chroot based environment that encapsulates the [Sailfish SDK Toolchain](/Reference/Toolchain) in a portable manner. It runs on Linux machines with Intel x86 CPUs. Apple silicon is not supported.
 
 Installation is covered in the [Sailfish Platform SDK Installation](/Tools/Platform_SDK/Installation) and the [Sailfish Platform SDK Target Installation](/Tools/Platform_SDK/Target_Installation) guides.
 
