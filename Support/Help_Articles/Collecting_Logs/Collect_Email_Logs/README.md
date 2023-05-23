@@ -83,4 +83,8 @@ After taking the logs, turn the message logging off again by setting "Enabled" t
 
 Remember to reboot your phone.
 
+# More related information about email / Active Sync (e-mail) debugging
+
+You can find more information about email / Active Sync (e-mail) debugging from **[Sailfish OS Cheat Sheet document](/Reference/Sailfish_OS_Cheat_Sheet/#email--active-sync-e-mail-debugging)**.
+
 
