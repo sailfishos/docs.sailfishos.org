@@ -140,49 +140,47 @@ The settings button makes it possible to tune app the Android-specific settings 
 
 Open Whatsapp app. Tap the three dots near the top right corner and select Settings. Next, tap Notifications. On this menu page, you can select in which ways you want Whatsapp to alert you on incoming messages, group messages and calls.
 
+
 # Moving your WhatsApp data to a new phone
 You may want to copy your WhatsApp app with all of its messages from an old phone to a new one. The following steps should make it easier for you.
-
 On Google Android devices, this happens automatically through Google Drive, but on SailfishOS some manual steps are needed.
 
 ## On the old phone
-1. Open WhatsApp
-2. Tap the 3 dots at the upper right corner of the home view of the app
+1. Open WhatsApp. Select the Chat page.
+2. Tap the 3 dots at the upper right corner and select Settings
 3. Tap Chats
-4. Tap Chat backup and let the app make a backup of your messages to your phone.
+4. Tap Chat backup and let the app make a backup of your messages to your phone. This might take several minutes.
 5. Close WhatsApp app
 
 Connect your phone to your computer in MTP mode. On your computer, use the file manager to access your Sailfish phone.
 
-1. Find folder "Mass storage > android_storage > Whatsapp"
+1. Find folder "Mass storage > android_storage > Android > media > com.whatsapp > Whatsapp"
 2. Copy the Whatsapp folder over to your computer, to Downloads, for instance.
 3. Disconnect the phone from the computer.
 
 ## On the new phone
 1. Install WhatsApp application.
-2. Open "Settings > Apps > WhatsApp"
-3. If you have opened the Whatsapp app on this phone already then tap the "Clear data" button first. This will pave way for the data that we will copy to this phone soon.
+2. Open WhatsApp shortly so that it adds a folder to the phone. Select the langauge and close WhatsApp then.
+3. Open "Settings > Apps > WhatsApp"
 4. Tap "Open Android settings"
 5. Tap Permissions
-6. Tap Storage to allow Whatsapp to read and write your previous (and future) data on the phone.
+6. Tap Files and media to allow Whatsapp to read and write your previous (and future) data on the phone.
 7. Tap all other items you need for using WhatsApp. For full service, you will need to give all permissions.  If you do not give the permissions now the app will keep prompting for them later. See the 
 three pictures at step 5 of [this chapter](#making-sure-whatsapp-gives-notifications-even-when-not-open) above.
 
-Connect this phone to your computer in MTP mode. On your computer, use the file manager to access your Sailfish phone.
+Connect this new phone to your computer in the MTP mode. On your computer, use the file manager to access your Sailfish phone.
 
-1. Using the file manager, copy the WhatsApp folder
-2. Find folder "Mass storage > android_storage" on your phone. Open it and delete the folder Whatsapp in it (created while installing the app)
-3. Paste here the Whatsapp folder that you copied from your computer.
-4. Disconnect the phone from the computer.
+1. Using the file manager find folder "Mass storage > android_storage  > Android > media > com.whatsapp" on your phone. Open it and delete the folder Whatsapp in it (if exists)
+2. Paste here the Whatsapp folder that you copied from your computer. It should appear in "Mass storage > android_storage  > Android > media > com.whatsapp". This might take several minutes.
+3. Disconnect the phone from the computer.
 
 On the phone
 
 1. Open Whatsapp
 2. Type your phone number
-3. Type the confirmation code that you received as a text message
+3. Enter the verification code received from WhatsApp
 4. Type the code of the potential 2-factor authentication
-5. Whatsapp should offer to restore your backup now. Let it do it.
-
+5. Restoring of the Backup is offered, allow WhatsApp to restore the backup.
 <div class="flex-images" markdown="1">
 
 * <a href="Restore-WA-backup.png" class="narrow-image"><img src="Restore-WA-backup.png" alt="BackupRestore"></a>
@@ -190,18 +188,29 @@ On the phone
   </span>
 </div>
 
-The idea here was to do everything with the graphical UI of the computer and the phone. It seems (*), however, that we cannot fully avoid the command line. Namely, when we copy the Whatsapp folder, its ownership gets changed. This prevents the app from saving anything to the phone. To fix this, you will need to enable the [**Developer mode**](/Support/Help_Articles/Enabling_Developer_Mode/)  on the phone and give the following commands on the Terminal app:
+After these steps your WhatsApp should have your backup restored and everything ok.
+
+If you have problems to save content from WhatsApp to the device following steps should help.
+
+1. Enable the [**Developer mode**](/Support/Help_Articles/Enabling_Developer_Mode/)  on the phone
+2. Give the following commands on the Terminal app:
 
 ```
-cd $HOME
 devel-su
-chown -R media_rw:media_rw android_storage/WhatsApp
+
+ls -l /home/.android/data/data | grep com.android.providers.media.module
 ```
 
-Done.
-________
+This command prints a line like that below:
+```
+drwx------    7 510036   510036        4096 Mar 21 13:54 com.android.providers.media.module
+```
+On that line, the number 510036 is your UID, so replace that number with your own. We will need it in the next command. Use the numeric code in the command below.
+```
+chown -R 510036:appsupport-media_rw android_storage/Android/media/com.whatsapp/WhatsApp
+```
 
-(*) We are looking for alternative ways to do this easily.
+After this you are done and you can close the terminal connection.
 
 # Troubleshooting
 
