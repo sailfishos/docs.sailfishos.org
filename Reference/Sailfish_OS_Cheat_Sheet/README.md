@@ -141,6 +141,10 @@ zypper remove --clean-deps PACKAGENAME
 
 ## Diagnostics
 
+
+
+Also see [this section](https://docs.sailfishos.org/Develop/Platform/Testing_Advic)
+
 Saving logs is always good
 ```nosh
 devel-su journalctl -a > ~/saved.journal
