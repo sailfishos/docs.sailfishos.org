@@ -26,10 +26,10 @@ Note that the name of the QML file is not actually passed to [`SailfishApp::main
 The application template creates the QML file for you but you should be aware of the fact that the file cannot be renamed without updating the TARGET definition in the .pro file.
 ```cpp
 #ifdef QT_QML_DEBUG
-#include
+#include <QtQuick>
 #endif
 
-#include
+#include <sailfishapp.h>
 
 
 int main(int argc, char *argv[])
