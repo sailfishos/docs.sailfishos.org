@@ -232,6 +232,8 @@ Permissions=
 
 The qml directory contains files that should be deployed as a part of your application. In addition to QML files, audio, image, and JavaScript files that are used by the application should be placed in this directory or in a subdirectory in it. Basically, anything you put in the qml directory gets deployed when your application is installed in the emulator or on a device.
 
+Finally, we have `myfirstapp.spec` file in the `rpm` subdirectory. That file is a RPM SPEC file, which controls how the rpm package for the application is put together. Its contents are described on the [Packaging Apps](/Develop/Apps/Packaging) page. 
+
 ### Conclusion
 
 Creating intuitive Sailfish Silica UI applications is straightforward. The fact that they are based on QML, a declarative UI language, makes the process fast and easy. It brings in a rich set of user interface elements and an abundance of possibilities. Now you can explore and learn more about how to use them in your application. Check out the media gallery example code available in the SDK for more ideas.
