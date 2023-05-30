@@ -3,7 +3,7 @@ title: Code Walkthrough
 permalink: Develop/Apps/Code_Walkthrough/
 parent: Apps
 layout: default
-nav_order: 400
+nav_order: 50
 ---
 
 ## Code Walkthrough

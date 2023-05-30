@@ -3,7 +3,7 @@ title: Your First App
 permalink: Develop/Apps/Your_First_App/
 parent: Apps
 layout: default
-nav_order: 700
+nav_order: 25
 ---
 
 ## Your First App
