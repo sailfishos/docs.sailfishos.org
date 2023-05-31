@@ -424,7 +424,7 @@ Usually you shouldn't add library depencencies or python module dependencies to 
   - python3dist(sortedcontainers)
   - python3dist(toml)
   - python3dist(twisted)
-  - python3dist(pillow)
+  - python3-imaging
     - While we allow Pillow, we make no quarantees of backwards compatibility between releases. Supported since Sailfish OS 4.5.0.
   - python3dist(pytz)
     - Supported since Sailfish OS 4.5.0
