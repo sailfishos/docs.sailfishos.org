@@ -134,7 +134,7 @@ devel-su
 vi /vendor/etc/camera/camxoverridesettings.txt
 ## Look for item multiCameraEnable and set it to value TRUE, i.e. "multiCameraEnable=TRUE". Save the change.
 
-killall android.hardware.camera.provider@2.4-service_64   ## restart the camera service
+killall /vendor/bin/hw/android.hardware.camera.provider@2.4-service_64   ## restart the camera service
 ## alternatively to the last command above, just restart the phone
 ```
 
