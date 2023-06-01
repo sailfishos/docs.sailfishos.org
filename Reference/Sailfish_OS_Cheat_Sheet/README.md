@@ -141,6 +141,10 @@ zypper remove --clean-deps PACKAGENAME
 
 ## Diagnostics
 
+
+
+Also see [this section](/Develop/Platform/Testing_Advice)
+
 Saving logs is always good
 ```nosh
 devel-su journalctl -a > ~/saved.journal
