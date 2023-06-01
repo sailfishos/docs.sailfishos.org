@@ -3,7 +3,7 @@ title: Code Walkthrough
 permalink: Develop/Apps/Code_Walkthrough/
 parent: Apps
 layout: default
-nav_order: 400
+nav_order: 50
 ---
 
 ## Code Walkthrough
@@ -231,6 +231,8 @@ Permissions=
 `myfirstapp.pro` is a project file that ties the source code and the resulting application binary together. The file describes how the application is built by creating the `Makefile` into the appropriate build directory, which is then executed to actually build the application. The `CONFIG += sailfishapp` declaration in the project file causes your project to be linked against the libsailfishapp library that provides the implementation of the `SailfishApp::main()` function discussed at the beginning of this tutorial. The CONFIG declaration also ensures the application binary and its data files are deployed to the proper locations both on the emulator and on devices. For more information on the format of the project file, see the [qmake Manual](https://doc.qt.io/qt-5/qmake-manual.html).
 
 The qml directory contains files that should be deployed as a part of your application. In addition to QML files, audio, image, and JavaScript files that are used by the application should be placed in this directory or in a subdirectory in it. Basically, anything you put in the qml directory gets deployed when your application is installed in the emulator or on a device.
+
+Finally, we have `myfirstapp.spec` file in the `rpm` subdirectory. That file is a RPM SPEC file, which controls how the rpm package for the application is put together. Its contents are described on the [Packaging Apps](/Develop/Apps/Packaging) page. 
 
 ### Conclusion
 
