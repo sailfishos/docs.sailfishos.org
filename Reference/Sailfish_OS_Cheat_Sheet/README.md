@@ -143,7 +143,7 @@ zypper remove --clean-deps PACKAGENAME
 
 
 
-Also see [this section](https://docs.sailfishos.org/Develop/Platform/Testing_Advic)
+Also see [this section](/Develop/Platform/Testing_Advice)
 
 Saving logs is always good
 ```nosh
