@@ -36,7 +36,7 @@ You’ll encounter challenges along the way, as every phone has numerous differe
 ## Read
 Download the latest PDF of the HADK porting guide
 
-[4.4.0.68 (9 Sep 2022)](SailfishOS-HardwareAdaptationDevelopmentKit-4.4.0.68.pdf)
+[4.5.0.19 (7 Jun 2023)](SailfishOS-HardwareAdaptationDevelopmentKit-4.5.0.19.pdf)
  </div>
  <div class="split4-left" markdown="1">
 ## Port
