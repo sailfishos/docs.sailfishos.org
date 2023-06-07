@@ -79,9 +79,7 @@ Clone docs and config, install and start jekyll site generator
 ```nosh
 git clone https://github.com/sailfishos/docs.sailfishos.org
 cd docs.sailfishos.org/
-bundle config set --local path 'vendor/bundle'
-bundle install
-bundle exec jekyll serve
+./create-bundle.sh
 ```
 
 Follow the same process for creating PRs as previously.
