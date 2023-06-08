@@ -129,7 +129,67 @@ Number of test cases is defined case-by-case and a small sub-feature can be test
 Sanity testing is used to test release candidate’s basic functionality. It has ~50 selected test cases from the most important features.
 Sanity testing is relatively fast way to get understanding of the quality of the release candidate.
 
+# Collecting Endurance reports
 
+Endurance report contains various resource usage graphs and metrics collected from a device.
 
+## Build post processing tools
+
+Post processing tools are intended for desktop Linux. Following instructions are for Fedora but you should be able find same packages for other Linux distributions.
+
+```
+git clone git@github.com:sailfishos/sp-endurance.git
+cd sp-endurance/postproc-lib
+
+# Install requirements
+sudo dnf install perl-File-Basename  perl-List-MoreUtils perl-POSIX perl-IO  perl-Getopt-Long perl-blib perl-JSON
+sudo dnf install perl-Inline-C perl-List-MoreUtils perl-IO-String
+sudo dnf install gnuplot netpbm-progs
+
+perl Makefile.PL
+make
+sudo make install
+
+# This postproc directory is used later when creating a report
+cd ../postproc
+```
+
+## Install crash reporter
+
+Install `jolla-settings-crash-reporter` package to device. This package pulls in required dependencies and adds Settings app integration (*Crash reporter* entry). Prerequisite is that *Settings -> Developer* mode has remote connection enabled.
+
+```
+ssh defaultuser@192.168.2.15 # connect to device
+devel-su
+pkcon install jolla-settings-crash-reporter
+exit
+```
+
+## Collect endurance data
+
+Collect endurance report from the device (as root). You can execute the tool multiple times in different scenarios or just have a single set of endurance data.
+```
+ssh defaultuser@192.168.2.15 # connect to device
+devel-su
+/usr/libexec/endurance-collect
+exit
+```
+
+Endurance data is stored to `/var/cache/core-dumps/endurance/`.
+
+## Post processing on desktop
+
+Change directory to the *postproc* directory if you're not yet there and copy endurance data from the device.
+
+```
+scp -r defaultuser@192.168.2.15:/var/cache/core-dumps/endurance/* .
+./endurance-plot 000/ 001/ 002/
+```
+
+Above combines three different endurance data sets and generates *index.html* and various resource usage graphs. After post processing is done open *index.html* and start analysing.
+
+```
+xdg-open index.html
+```
 
 
