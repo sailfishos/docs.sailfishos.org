@@ -17,7 +17,7 @@ Please download the latest Sailfish OS HADK (Hardware Adaptation Development Kit
 
 Please check the requirements for your build host: <https://source.android.com/setup/build/requirements>
 
-Minimum Sailfish OS version for this port is 4.4.0.58.
+Minimum Sailfish OS version for this port is 4.4.0.58. You can also use Sailfish OS version 4.5.0.18. Using Platform SDK version 4.5.0.18 is strongly recommended. While it is possible to build with Platform SDK 4.4.0.58, these instructions assume using version 4.5.0.18.
 
 If you are new to HADK, please carefully read the disclaimer on page 1, then **chapters 1 and 2**.
 
@@ -88,7 +88,29 @@ PLATFORM_SDK $
 cd $ANDROID_ROOT
 sudo zypper ref
 rpm/dhd/helpers/build_packages.sh --droid-hal
-git clone --recursive https://github.com/mer-hybris/droid-config-sony-$FAMILY hybris/droid-configs -b master
+```
+If the above command prints:
+`Fatal: None of the selected test suites operate on the selected test levels. Nothing to do.`
+Ignore the error message, instead check the output of:
+```
+ls droid-local-repo/xqbt52
+```
+The output should be like:
+```
+droid-hal-pdx213-1.9.7-202306070618.aarch64.rpm
+droid-hal-pdx213-detritus-1.9.7-202306070618.aarch64.rpm
+droid-hal-pdx213-devel-1.9.7-202306070618.aarch64.rpm
+droid-hal-pdx213-kernel-1.9.7-202306070618.aarch64.rpm
+droid-hal-pdx213-kernel-dtbo-1.9.7-202306070618.aarch64.rpm
+droid-hal-pdx213-kernel-modules-1.9.7-202306070618.aarch64.rpm
+droid-hal-pdx213-tools-1.9.7-202306070618.aarch64.rpm
+droid-hal-pdx213-users-1.9.7-202306070618.aarch64.rpm
+droid-hal-rk3399_all-users-0.0.6-202208241247.aarch64.rpm
+```
+
+Now continue with:
+```
+git clone --recursive https://github.com/mer-hybris/droid-config-sony-$FAMILY hybris/droid-configs -b upgrade-4.5.0
 if [ -z "$(grep patterns-sailfish-consumer-generic $ANDROID_ROOT/hybris/droid-configs/patterns/patterns-sailfish-device-configuration-$DEVICE.inc)" ]; then
   sed -i "/Summary: Jolla Configuration $DEVICE/aRequires: patterns-sailfish-consumer-generic\n\n# Early stages of porting benefit from these:\nRequires: patterns-sailfish-device-tools" $ANDROID_ROOT/hybris/droid-configs/patterns/patterns-sailfish-device-configuration-$DEVICE.inc
 fi
@@ -100,17 +122,15 @@ if [ -n "$(grep ofono-vendor-qti-radio-plugin $ANDROID_ROOT/hybris/droid-configs
   sed -i "/ofono-vendor-qti-radio-plugin/d" $ANDROID_ROOT/hybris/droid-configs/patterns/patterns-sailfish-device-adaptation-$HABUILD_DEVICE.inc
 fi
 rpm/dhd/helpers/build_packages.sh --configs
-cd hybris/mw/libhybris
-git checkout master
-cd -
+```
+If the above command prints:
+`Fatal: None of the selected test suites operate on the selected test levels. Nothing to do.`
+try running it again.
 
-# Remove the next 6 lines when a new SFOS release comes out (one after 4.3.0):
-rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/libgbinder.git
-rpm/dhd/helpers/build_packages.sh --mw=https://github.com/sailfishos/libglibutil.git
-rpm/dhd/helpers/build_packages.sh --mw=https://github.com/sailfishos/ofono.git
-rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/libgbinder-radio.git
-rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/ofono-binder-plugin.git
-rpm/dhd/helpers/build_packages.sh --mw=https://github.com/sailfishos/sensorfw.git --spec=rpm/sensorfw-qt5-binder.spec
+```
+cd hybris/mw/libhybris
+git checkout upgrade-4.5.0
+cd -
 
 rpm/dhd/helpers/build_packages.sh --mw # select "all" option when asked
 ```
@@ -181,7 +201,7 @@ git clone --recursive https://github.com/mer-hybris/droid-hal-version-sony-$FAMI
 rpm/dhd/helpers/build_packages.sh --version
 
 # The next two variables are explained in chapter 8
-export RELEASE=4.4.0.58
+export RELEASE=4.5.0.19
 export EXTRA_NAME=-my1
 sudo zypper in lvm2 atruncate pigz android-tools
 cd $ANDROID_ROOT
