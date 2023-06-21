@@ -48,7 +48,22 @@ private:
 #endif
 ```
 
-There are a few things to take note of. The first is the `backing` variable which holds the list of animals we want to show to the user. The second is the custom method `activate` that we want to call from QML. To make it callable we need to mark it with the `Q_INVOKABLE` macro. In the implementation file we start by telling Qt what our data elements look like. This is simple as we only have one piece of data to show, the name of the animal.
+There are a few things to take note of. The first is the `backing` variable which holds the list of animals we want to show to the user. The second is the custom method `activate` that we want to call from QML. To make it callable we need to mark it with the `Q_INVOKABLE` macro.
+
+In the implementation file we first populate the list of animals to the `backing` vector.
+
+```cpp
+#include "demomodel.h"
+
+DemoModel::DemoModel(QObject *parent)
+    : QAbstractListModel(parent)
+{
+    backing << "sea cow" << "platypus" << "axolotl" << "quokka" << "pitahui" << "jerboa";
+}
+```
+
+After defining constructor, we tell to Qt what our data elements look like. This is simple as we only have one piece of data to show, the name of the animal.
+
 ```cpp
 QHash<int, QByteArray> DemoModel::roleNames() const
 {
