@@ -59,7 +59,8 @@ import Sailfish.Silica 1.0
 import "pages"
 ```
 
-The first two import statements allow the application to import the Qt Quick and Sailfish Silica modules we will later use. In addition, the final import statement makes the QML files under the pages directory available to `myfirstapp.qml`.
+The first two module [`import`](https://doc.qt.io/qt-5/qtqml-syntax-imports.html) statements allow the application to import the Qt Quick and Sailfish Silica modules we will later use. In addition, the final [directory import statement](https://doc.qt.io/qt-5/qtqml-syntax-imports.html#directory-imports) makes the QML files under the pages directory available to `myfirstapp.qml`.
+
 ```qml
 ApplicationWindow
 {
