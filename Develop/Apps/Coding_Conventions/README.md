@@ -16,14 +16,14 @@ When developing features for Sailfish applications, follow Qt C++ (which follows
 
 ## Qt Coding Conventions
 
-  - [Qt Coding Style](http://qt-project.org/wiki/Qt_Coding_Style)
-  - [Qt C++ Coding Conventions](http://qt-project.org/wiki/Coding-Conventions)
-  - [Qt API Design Principles](http://qt-project.org/wiki/API-Design-Principles)
+  - [Qt Coding Style](https://wiki.qt.io/Qt_Coding_Style)
+  - [Qt C++ Coding Conventions](https://wiki.qt.io/Coding_Conventions)
+  - [Qt API Design Principles](https://wiki.qt.io/API_Design_Principles)
 
 ## QML coding conventions
 
-  - [QML Coding Conventions](http://qt-project.org/doc/qt-5.0/qtquick/qml-codingconventions.html)
-  - [QML Best Practices](http://qt-project.org/doc/qt-4.8/qml-best-practices-coding.html)
+  - [QML Coding Conventions](https://doc.qt.io/qt-5/qml-codingconventions.html)
+  - [QML Best Practices](https://doc.qt.io/archives/qt-4.8/qml-best-practices-coding.html)
 
 ## Additional Sailfish Qt coding conventions
 
