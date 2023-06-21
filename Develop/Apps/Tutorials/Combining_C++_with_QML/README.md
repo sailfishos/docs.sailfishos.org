@@ -19,6 +19,11 @@ Combining C++ and QML requires three distinct steps. First we need to create a d
 
 Exposing data from C++ into QML is done via the [Qt Model/View framework](http://doc.qt.io/qt-5/model-view-programming.html). Our model is a simple array of strings. Qt provides a [QStringListModel](http://doc.qt.io/qt-5/qstringlistmodel.html) for this use case but for educational purposes we will provide our own by inheriting from a [QAbstractListModel](http://doc.qt.io/qt-5/qabstractlistmodel.html). The relevant parts of the model header file look like this.
 ```cpp
+#ifndef DEMOMODEL_H
+#define DEMOMODEL_H
+
+#include <QAbstractListModel>
+
 class DemoModel : public QAbstractListModel
 {
     Q_OBJECT
@@ -39,6 +44,8 @@ public:
 private:
     QVector<QString> backing;
 };
+
+#endif
 ```
 
 There are a few things to take note of. The first is the `backing` variable which holds the list of animals we want to show to the user. The second is the custom method `activate` that we want to call from QML. To make it callable we need to mark it with the `Q_INVOKABLE` macro. In the implementation file we start by telling Qt what our data elements look like. This is simple as we only have one piece of data to show, the name of the animal.
