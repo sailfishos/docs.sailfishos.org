@@ -34,10 +34,10 @@ public:
 
     explicit DemoModel(QObject *parent = 0);
 
-    virtual int rowCount(const QModelIndex&) const { return backing.size(); }
-    virtual QVariant data(const QModelIndex &index, int role) const;
+    int rowCount(const QModelIndex&) const override { return backing.size(); }
+    QVariant data(const QModelIndex &index, int role) const override;
 
-    QHash<int, QByteArray> roleNames() const;
+    QHash<int, QByteArray> roleNames() const override;
 
     Q_INVOKABLE void activate(const int i);
 
@@ -50,7 +50,8 @@ private:
 
 There are a few things to take note of. The first is the `backing` variable which holds the list of animals we want to show to the user. The second is the custom method `activate` that we want to call from QML. To make it callable we need to mark it with the `Q_INVOKABLE` macro. In the implementation file we start by telling Qt what our data elements look like. This is simple as we only have one piece of data to show, the name of the animal.
 ```cpp
-QHash<int, QByteArray> DemoModel::roleNames() const {
+QHash<int, QByteArray> DemoModel::roleNames() const
+{
     QHash<int, QByteArray> roles;
     roles[NameRole] = "name";
     return roles;
@@ -59,11 +60,12 @@ QHash<int, QByteArray> DemoModel::roleNames() const {
 
 If our data was more complicated we would define more roles here. As an example a list displaying people’s names could have two different roles: a given name role and a family name role. The second half of getting data displayed is the function that returns data for a given role. This is specified by Qt’s model system and it looks like this.
 ```cpp
-QVariant DemoModel::data(const QModelIndex &index, int role) const {
-    if(!index.isValid()) {
+QVariant DemoModel::data(const QModelIndex &index, int role) const
+{
+    if (!index.isValid()) {
         return QVariant();
     }
-    if(role == NameRole) {
+    if (role == NameRole) {
         return QVariant(backing[index.row()]);
     }
     return QVariant();
