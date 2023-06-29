@@ -3,6 +3,7 @@ title: Packaging
 permalink: Develop/Apps/Packaging/
 parent: Apps
 layout: default
+has_children: true
 nav_order: 500
 ---
 
