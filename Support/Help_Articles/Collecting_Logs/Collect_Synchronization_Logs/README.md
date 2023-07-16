@@ -38,19 +38,29 @@ RateLimitInterval=5s
 4. Save the file, and then reboot your device and open an SSH terminal to it again once it has booted.
 NOTE: We will revert this configuration to its original status in [this chapter](#reverting-the-device-to-original-configurations) below.
 
-## Basic sync logs
+## Get sync logs
 Preparations: do as instructed in the [Prepare for collecting journal chapter](#prepare-for-collecting-journal) above.
-Here we prepare your device for collecting the actual sync logs. Note that rebooting the device will bring it back to its normal state. Hence the settings below are in effect till the next reboot only.
+Here we prepare your device for collecting the actual sync logs. Note that rebooting the device will bring it back to its normal state. Hence the settings below are in effect until the next reboot only.
 
-1. Stop the sync daemon so that it can later be restarted with extra logging enabled, via (as a normal user, 'defaultuser')
+1. Stop the sync daemon so that it can later be restarted with extra logging enabled, via (as a normal user, 'defaultuser' or 'nemo')
 ```
 systemctl --user stop msyncd
 killall msyncd    # this may print "no process killed" - just ignore it.
 ```
 2. Start the sync daemon with extra debug logging enabled, via 
 ```
-devel-su
-MSYNCD_LOGGING_LEVEL=8 msyncd 2>&1 | cat > msyncd.log
+devel-su -p
+MSYNCD_LOGGING_LEVEL=8 msyncd 2>&1 | tee msyncd.log
+```
+or to get more verbose logs for contacts syncs, use
+```
+devel-su -p
+QTCONTACTS_SQLITE_TRACE=1 MSYNCD_LOGGING_LEVEL=8 msyncd 2>&1 | tee msyncd.log
+```
+or to get even more verbose output, use this:
+```
+devel-su -p
+QTCONTACTS_SQLITE_TWCSA_TRACE=1 QTCONTACTS_SQLITE_TRACE=1 MSYNCD_LOGGING_LEVEL=8 msyncd 2>&1 | tee msyncd.log
 ```
 3. Trigger a sync cycle by opening up "Settings > Accounts". Then long-press the account you want to debug. Tap Sync in the pop-up menu.
 4. Wait for 30 seconds or until the sync cycle has completed. The logs collected from the msyncd terminal were saved to file msyncd.log.
@@ -60,27 +70,12 @@ MSYNCD_LOGGING_LEVEL=8 msyncd 2>&1 | cat > msyncd.log
 journalctl -a -b > journal-sync.txt  
 ```
 7. Then continue from the [Sending logs chapter](#sending-logs).
-
-## More detailed logs on contact sync
-1. Preparations: do as instructed in the [Prepare for collecting journal chapter](#prepare-for-collecting-journal) above. 
-2. The level of debugging enabled in step 2 of the Basic sync logs chapter does not make the system print out too much data on contact sync. If there is a need to get deeper insight to the issues in contact sync then consider using the following setup
-(make sure that you copy the whole long command):
-```
-devel-su
-QTCONTACTS_SQLITE_TRACE=1 MSYNCD_LOGGING_LEVEL=8 msyncd 2>&1 | cat > msyncd.log
-```
-3. Trigger a sync cycle by opening up "Settings > Accounts". Then long-press the account you want to debug and tap Sync in the pop-up menu.
-4. Wait for 30 seconds or until the sync cycle has completed. The logs collected from the msyncd terminal were saved to file msyncd.log.
-5. Use \<ctrl\>C to stop the previous command.
-6. Collect the journal log:
-```
-journalctl -a -b > journal-sync.txt  
-```
-7. Then continue from the [Sending logs chapter](#sending-logs).
+8. Don't forget to [revert the changes back to the original configuration](#reverting-the-device-to-original-configurations).
 
 ## Detailed EAS logs
 1. Preparations: do as instructed in the [Prepare for collecting journal chapter](#prepare-for-collecting-journal) above. 
 2. More information and steps can be found from [this document](/Reference/Sailfish_OS_Cheat_Sheet/#email--active-sync-e-mail-debugging).
+3. Don't forget to [revert the changes back to the original configuration](#reverting-the-device-to-original-configurations).
 
 ## Sending logs
 Depending what logs you have taken you now have some of the following log files:
@@ -95,6 +90,7 @@ These files can be sent to Jolla customer service.
 The log files probably contain personal information from you. We will not share them in public but simply look for technical issues in them by a chief engineer in Jolla R&D.  If you are in doubt, glance through the files or do not send them at all.
 
 ## Reverting the device to original configurations
+To restore the original configuration for journald:
 ```
 devel-su 
 cd /etc/systemd 
