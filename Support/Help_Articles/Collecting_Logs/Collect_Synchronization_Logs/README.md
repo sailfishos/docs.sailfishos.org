@@ -63,7 +63,7 @@ devel-su -p
 QTCONTACTS_SQLITE_TWCSA_TRACE=1 QTCONTACTS_SQLITE_TRACE=1 MSYNCD_LOGGING_LEVEL=8 msyncd 2>&1 | tee msyncd.log
 ```
 3. Trigger a sync cycle by opening up "Settings > Accounts". Then long-press the account you want to debug. Tap Sync in the pop-up menu.
-4. Wait for 30 seconds or until the sync cycle has completed. The logs collected from the msyncd terminal were saved to file msyncd.log.
+4. Wait for 30 seconds or until the sync cycle has completed. (You should see something like this: `"void Buteo::Synchronizer::slotSyncStatus(QString, int, QString, int)" :Exit, execution time: 194 ms`) The logs collected from the msyncd terminal were saved to file msyncd.log.
 5. Use \<ctrl\>C to stop the previous command.
 6. Collect the journal log:
 ```
