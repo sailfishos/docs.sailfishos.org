@@ -162,11 +162,15 @@ Storage=persistent
 
 By default, the systemd journal throttles output from particularly noisy processes, which can be frustrating when trying to debug an application. Preventing journald from throttling logging from a verbose process - edit /etc/systemd/journald.conf and set
 ```ini
-RateLimitBurst=9999
-RateLimitInterval=5s
+RateLimitBurst=0
+RateLimitInterval=0
 ```
 
-Which will cause systemd to throttle journal output from any process which emits more than 9999 lines of output in any five second interval NOTE: after doing changes for /etc/systemd/journald.conf you should reboot the device.
+After doing changes for /etc/systemd/journald.conf restart journald.
+
+```nosh
+devel-su systemctl restart systemd-journald
+```
 
 Various processes can be made more verbose by setting certain environment variables:
 ```nosh
