@@ -175,7 +175,7 @@ Also every service and path in D-Bus should provide `org.freedesktop.DBus.Intros
 
 ### qdbus command
 
-Introspection is easiest with `qdbus` command. That command is found on Sailfish OS from *qt5-qttools-qdbus* at `/usr/lib/qt5/bin/qdbus`.
+Introspection is easiest with `qdbus` command. That command is found on Sailfish OS from *qt5-qttools-qdbus* at `/usr/lib/qt5/bin/qdbus` or `/usr/lib64/qt5/bin/qdbus`.
 
 List all services currently running on system bus:
 ```nosh
