@@ -32,9 +32,9 @@ However, if your Xperia cannot use the services of cellular network properly (or
 
 ## Getting Emma and connecting Xperia to it
 
-Reverting Xperia device back to Android requires the **[Emma](https://developer.sony.com/develop/open-devices/get-started/flash-tool/download-flash-tool/)** flashing tool from Sony. Emma runs on **Windows PC** only. It does not work on Linux or Mac computers.
+Reverting Xperia device back to Android can be performed by the **[Emma](https://developer.sony.com/open-source/aosp-on-xperia-open-devices/get-started/flash-tool)** flashing tool from Sony. Emma runs on **Windows PC** only. It does not work on Linux or Mac computers.
 
-1. Download and install the Flash tool “Emma”  from **[Sony’s developer website](https://developer.sony.com/develop/open-devices/get-started/flash-tool/download-flash-tool/)** to your Windows computer.
+1. Download and install the Flash tool “Emma”  from **[Sony’s developer website](https://developerworld.wpp.developer.sony.com/file/download/download-the-flash-tool/)** to your Windows computer.
 2. Turn off your Xperia device. Leave it off for at least fifteen (15) seconds to be sure it is off.
 3. Hold down the **Volume Down** button on the device while connecting your device to your computer with a USB **data** cable. The LED next to the speaker on the device should soon turn from red to **green** (not blue).
 4. Run the Emma tool. A view similar to that in [Picture 1](#picture_1) should appear. It shows the phone model on the left. 
