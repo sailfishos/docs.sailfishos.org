@@ -57,7 +57,15 @@ This is how it should look at the vi editor:
 
 
 Save the changes by tapping “Esc” to exit the insert mode, and then, by typing “:wq” followed by “Enter”. 
-Reboot the device to put the new configuration in effect.
+Reboot the device to put the new configuration in effect. Alternatively the messageserver5 can be restarted as root user using terminal:
+```
+devel-su
+```
+and calling systemctl-user to restart the service:
+```
+systemctl-user restart messageserver5
+```
+after which new email app instance will start generating log info.
 
 # Collecting logs
 
