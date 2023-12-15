@@ -10,7 +10,7 @@ nav_order: 350
 
 **_Aptoide is a 3rd party app_**
 
-_Please note that the Aptoide app was not developed by Jolla Ltd and that Jolla has no control over it. Jolla has simply made this Android app available in the Jolla Store._
+_Please note that the Aptoide app was not developed by Jolla and that Jolla has no control over it. Jolla has simply made this Android app available in the Jolla Store._
 
 _If you have something to report on Aptoide or on any of the apps available in the store, please contact the **[Aptoide company](https://en.aptoide.com/company/about-us)** directly._
 
@@ -187,7 +187,7 @@ Aptoide Store notifies you when there are updates available to your applications
   
 # Substores within Aptoide Store
 
-Aptoide Store is, in fact, a collection of several application stores. Anyone is free to start their own application store and publish them on Aptoide Store. One can then “subscribe” to these stores to broaden search results. _Jolla Ltd has no visibility to and control over those stores._
+Aptoide Store is, in fact, a collection of several application stores. Anyone is free to start their own application store and publish them on Aptoide Store. One can then “subscribe” to these stores to broaden search results. _Jolla has no visibility to and control over those stores._
 
 Use the "Store" Button of the toolbar to get familiar with this feature.
 

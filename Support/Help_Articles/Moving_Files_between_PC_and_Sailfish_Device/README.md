@@ -97,7 +97,7 @@ SCP works over a USB connection, too. In this case, replace the IP address "u.v.
 
 ## AirSail Transfer
 
-OpenRepos store has a clever application named [**AirSail Transfer**](https://openrepos.net/content/6uvnpr/airsail-transfer) for transferring files to/from your Sailfish OS device using your computer's web browser. Install the latest rpm file - for this, you will need to allow untrusted software in "Settings > System > Untrusted software". _Jolla Ltd. cannot however guarantee that this solution works_.
+OpenRepos store has a clever application named [**AirSail Transfer**](https://openrepos.net/content/6uvnpr/airsail-transfer) for transferring files to/from your Sailfish OS device using your computer's web browser. Install the latest rpm file - for this, you will need to allow untrusted software in "Settings > System > Untrusted software". _We cannot however guarantee that this solution works_.
 
 # Transferring files via cloud-based services
 

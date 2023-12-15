@@ -48,7 +48,7 @@ The message "Sign in via Browser app" will shortly appear on a black background.
 
 Type your Google email address into the text box on the Sign in page (see Pic 3 below). Tap "Next".
 
-NOTE: _The text "to continue to Jolla" might appear confusing to you. It should actually be stated as "to continue to Sailfish OS" because Jolla Ltd,  the company, has nothing to do with your Google account and has no access to your phone. The name "Jolla" in this view is derived from the Google service interface (used by this Sailfish app) as Jolla Ltd is the 'owner' of the app_.
+NOTE: _The text "to continue to Jolla" might appear confusing to you. It should actually be stated as "to continue to Sailfish OS" because Jolla has nothing to do with your Google account and has no access to your phone. The name "Jolla" in this view is derived from the Google service interface (used by this Sailfish app) as Jolla is the 'owner' of the app_.
 
 The page for entering your password appears (see Pic 4). Type your password. Check what you wrote by using the "Show password" checkbox. Tap "Next" to proceed.
 
@@ -99,7 +99,7 @@ Read the text message and type the code you received (Pic 7). Tap "Next".
 
 As soon as the account verification is complete, the following page will appear. It lists the actions that Sailfish OS is allowed to do on the data of your Google account (Pic 8).
 
-NOTE: _The sentences "Jolla wants to access..." and "This will allow Jolla to..." might appear confusing to you. They should actually be stated as "Sailfish OS needs the access to..." and "This will allow Sailfish OS to..." because Jolla Ltd, the company, has nothing to do with your Google account and no access to your phone. The name "Jolla" in this view is derived from the Google service interface (used by this Sailfish app) as Jolla Ltd is the 'owner' of the app_.
+NOTE: _The sentences "Jolla wants to access..." and "This will allow Jolla to..." might appear confusing to you. They should actually be stated as "Sailfish OS needs the access to..." and "This will allow Sailfish OS to..." because Jolla has nothing to do with your Google account and no access to your phone. The name "Jolla" in this view is derived from the Google service interface (used by this Sailfish app) as Jolla is the 'owner' of the app_.
 
 <div class="flex-images" markdown="1">
 

@@ -228,7 +228,7 @@ You can disable Developer Mode now if you wish.
 
 _If you have not heard about OpenRepos or Warehouse, you can ignore this chapter._
 
-**[OpenRepos](https://openrepos.net/)** is an application store that contains lots of nice and useful apps for Sailfish OS and other operating systems. This store is independent of Jolla Ltd. Many developers publish their work in OpenRepos for feedback before trying to get them accepted to the Jolla Store (to become so-called Harbour apps).
+**[OpenRepos](https://openrepos.net/)** is an application store that contains lots of nice and useful apps for Sailfish OS and other operating systems. This store is independent of Jolla. Many developers publish their work in OpenRepos for feedback before trying to get them accepted to the Jolla Store (to become so-called Harbour apps).
 
 This chapter is a disclaimer. It has turned out that some (a minority) of the Sailfish apps in OpenRepos are not fully compatible with Sailfish OS. Those apps may make Sailfish OS updates fail, partly or completely.
 
