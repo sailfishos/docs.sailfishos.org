@@ -9,7 +9,7 @@ nav_order: 700
 
 # Devices compatible with and licensed for Sailfish X
 
-**Sailfish X** [^1] has been ported to certain Sony Xperia and Gemini PDA models by Jolla. Some community people have ported Sailfish OS to some other devices, too, but that work is unofficial, i.e. Jolla Ltd. has not been involved and the Sailfish X licence is not valid on those devices.
+**Sailfish X** [^1] has been ported to certain Sony Xperia and Gemini PDA models by Jolla. Some community people have ported Sailfish OS to some other devices, too, but that work is unofficial, i.e. Jolla has not been involved and the Sailfish X licence is not valid on those devices.
 
 **Sailfish X licence** from Jolla allows installing Sailfish OS on the Sony Xperia and Gemini PDA devices listed below. The licence makes it also possible to update Sailfish OS over the air, triggered from the phone UI.
 

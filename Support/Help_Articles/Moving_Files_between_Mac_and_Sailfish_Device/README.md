@@ -13,7 +13,7 @@ The **OS X** operating system on Mac computers does not support the **MTP** (**[
 
 There are some commercial solutions that may help, including [**SyncMate**](http://www.sync-mac.com/mtp-sync.html).
 
-\- _Jolla Ltd cannot guarantee that those solutions would make the connection between your Mac and Sailfish device work_.
+\- _We cannot guarantee that those solutions would make the connection between your Mac and Sailfish device work_.
 
 
 # Transferring files over a WLAN connection
@@ -47,7 +47,7 @@ scp -r defaultuser@u.v.w.x:$HOME/Pictures/Camera/*
 ```
 
 ## AirSail
-OpenRepos store has a clever application named **[AirSail Transfer](https://openrepos.net/content/6uvnpr/airsail-transfer)**[^3] for transferring files to/from your Sailfish OS device using your computer's web browser. Install the latest rpm file - for this, you will need to allow untrusted software in "Settings > System > Untrusted software". _Jolla Ltd cannot guarantee that this solution would make the connection between your Mac and Sailfish device work_.
+OpenRepos store has a clever application named **[AirSail Transfer](https://openrepos.net/content/6uvnpr/airsail-transfer)**[^3] for transferring files to/from your Sailfish OS device using your computer's web browser. Install the latest rpm file - for this, you will need to allow untrusted software in "Settings > System > Untrusted software". _We cannot guarantee that this solution would make the connection between your Mac and Sailfish device work_.
 
 
 # Transferring files via an SD card to/from Mac
@@ -117,7 +117,7 @@ On Sailfish, use the File Manager (find it in the pulley menu of "Settings > Sys
 
 Yet another option is to install support for over-the-USB file transfer for Android phones on your Mac. Please visit this site: **[https://www.android.com/filetransfer/](https://www.android.com/filetransfer/)**
 
-_Jolla Ltd hasn't verified this method, so please use this method at your own risk._
+_We haven't verified this method, so please use this method at your own risk._
 
 - - - - -
 [^1]: Thanks to user _femtopeta_ in together.jolla.com
