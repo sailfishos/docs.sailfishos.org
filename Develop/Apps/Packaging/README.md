@@ -13,7 +13,7 @@ A Sailfish OS application has to be packaged into an installation package before
 
 ### Deployment Methods
 
-Deploying an application to the Sailfish OS emulator or to a device is the process of transferring application binaries and any required resource files (such as QML files, images, the desktop integration file, etc.) to the target execution environment. There are two principal methods for deploying the application: copying binaries directly and creating an RPM installation package containing the files. You can choose the deployment method by using the project kit selector in Sailfiish IDE.
+Deploying an application to the Sailfish OS emulator or to a device is the process of transferring application binaries and any required resource files (such as QML files, images, the desktop integration file, etc.) to the target execution environment. There are two principal methods for deploying the application: copying binaries directly and creating an RPM installation package containing the files. You can choose the deployment method by using the project kit selector in Sailfish IDE.
 
 <a href="QtC_Deployment_Method.png" style="width:30em;display:block">
     <img src="QtC_Deployment_Method.png"
@@ -257,7 +257,7 @@ The `%build` section contains the commands for building the application. For app
 
 #### %install
 
-The `%install` section contains the commands for installing the application to `%buildroot` - which is a directory structure with the files to be packaged. This is done as part of the build process when creating a package, not when the end-user install the package. For applications which use QMake, macro `%qmake5_install` should be used for installing the files defined in the 
+The `%install` section contains the commands for installing the application to `%buildroot` - which is a directory structure with the files to be packaged. This is done as part of the build process when creating a package, not when the end-user install the package. For applications which use QMake, macro `%qmake5_install` should be used for installing the files defined in the [%files](#files) section.
 
 #### %files
 
