@@ -15,6 +15,27 @@ They are read by [Lipstick](/Reference/Core_Areas_and_APIs/Apps_and_MW/Lipstick/
 Desktop Entry Specification allows extending the specification with product specific keys. Sailfish
 OS uses that to specify some extensions to support certain functions better.
 
+### Launcher and Booster Type
+_X-Nemo-Application-Type_, and _X-Nemo-Single-Instance_ can be used instead
+of giving the the `--single-instance`, and `--type` options to invoker in the
+_Exec_ key.  
+See the documentation for Invoker, and the
+[Harbour FAQ](https://harbour.jolla.com/faq#.desktop-Files) for details.
+
+### Hiding app from launcher grid
+In addition to the _Hidden_, and _NoDisplay_ keys, app developers can use
+_NotShowIn=X-MeeGo_, to hide the launcher from the launcher grid.  
+This is mainly useful for registering a MIME Type launchers.
+
+### Localization
+In addition to the _Name[xx]_ method from the Desktop spec, launcher names can
+be localized using the keys _X-MeeGo-Translation-Catalog_, and
+_X-MeeGo-Logical-Id_. The former gives the basename (without language suffix, and
+without file extension) of a Qt translation (.qm) file. The latter specifies
+the translation ID (as used in Qt "id-based" translation).  
+This way, developers can re-use a translation present in their application also
+for the launcher name.
+
 ### Application sandboxing profile
 Application developers can control their app's
 [sandbox](https://github.com/sailfishos/sailjail-permissions#sailfish-os-application-sandboxing-and-permissions)
@@ -70,3 +91,15 @@ In Sailfish OS 4.3.0 _ExecDBus_ is not considered when validating the arguments 
 launched via D-Bus which limits usefulness of that key. To work around that, the launch arguments
 used for D-Bus activation must match _Exec_ key in _Desktop Entry_ section. This issue is fixed in
 Sailfish OS 4.4.0.
+
+## D-Bus method calls
+The keys _X-Maemo-Service_, _X-Maemo-Object-Path_, and _X-Maemo-Method_ can be
+used to specify a D-Bus method on a certain object path, which is called when
+the launcher is activated.
+
+This is similar to, but different from D-Bus activation above. The D-Bus
+Service must already be registered (using the method above, or from the app
+after launch), and `path` and `method` must exist for that service.
+
+This is used e.g. by MimeType .desktop files to open an app at a certain page.
+
