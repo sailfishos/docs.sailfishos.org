@@ -93,12 +93,14 @@ used for D-Bus activation must match _Exec_ key in _Desktop Entry_ section. This
 Sailfish OS 4.4.0.
 
 ## D-Bus method calls
-The keys _X-Maemo-Service_, _X-Maemo-Object-Path_, and _X-Maemo-Method_ can be
+The keys _X-Maemo-Service_, _X-Maemo-Object-Path_, _X-Maemo-Method_ can be
 used to specify a D-Bus method on a certain object path, which is called when
 the launcher is activated.
 
+The optional _X-Maemo-Fixed-Args_ tag can pass arguments to the call.
+
 This is similar to, but different from D-Bus activation above. The D-Bus
-Service must already be registered (using the method above, or from the app
+Service must already be registered (e.g. using the method above, or from the app
 after launch), and `path` and `method` must exist for that service.
 
 This is used e.g. by MimeType .desktop files to open an app at a certain page.
