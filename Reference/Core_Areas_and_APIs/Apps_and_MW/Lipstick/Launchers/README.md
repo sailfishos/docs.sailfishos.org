@@ -29,12 +29,21 @@ This is mainly useful for registering a MIME Type launchers.
 
 ### Localization
 In addition to the _Name[xx]_ method from the Desktop spec, launcher names can
-be localized using the keys _X-MeeGo-Translation-Catalog_, and
-_X-MeeGo-Logical-Id_. The former gives the basename (without language suffix, and
-without file extension) of a Qt translation (.qm) file. The latter specifies
-the translation ID (as used in Qt "id-based" translation).  
-This way, developers can re-use a translation present in their application also
-for the launcher name.
+be localized using an existing Qt translation (.qm) file.
+
+The key _X-Amber-Translation-Catalog_ gives the basename (without language
+suffix or file extension).
+
+Keys of the format _X-Amber-Logical-Id-KEYNAME_ specify the translation ID (as
+used in Qt "id-based" translation), where KEYNAME is one of the
+.desktop keys.
+
+For example, the following looks up the translations for _Name_ and _Summary_ in the
+files `my-app-*.qm`:
+
+    X-Amber-Translation-Catalog: my-app
+    X-Amber-Logical-Id-Name: l10n-id_name
+    X-Amber-Logical-Id-Summary: l10n-id_desc
 
 ### Application sandboxing profile
 Application developers can control their app's
