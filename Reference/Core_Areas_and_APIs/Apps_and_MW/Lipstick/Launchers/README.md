@@ -19,8 +19,11 @@ OS uses that to specify some extensions to support certain functions better.
 _X-Nemo-Application-Type_, and _X-Nemo-Single-Instance_ can be used instead
 of giving the the `--single-instance`, and `--type` options to invoker in the
 _Exec_ key.  
-See the documentation for Invoker, and the
-[Harbour FAQ](https://harbour.jolla.com/faq#.desktop-Files) for details.
+Note however that _X-Nemo-Application-Type_ will have no effect for sandboxed
+apps, which will always be treated as _generic_.
+
+See the documentation for SailJail, Invoker, and the
+[Harbour FAQ](https://harbour.jolla.com/faq#.desktop-Files) for more.
 
 ### Hiding app from launcher grid
 To hide an desktop entry form the Launcher Grid, use _NoDisplay=true_.
