@@ -23,9 +23,11 @@ See the documentation for Invoker, and the
 [Harbour FAQ](https://harbour.jolla.com/faq#.desktop-Files) for details.
 
 ### Hiding app from launcher grid
-In addition to the _Hidden_, and _NoDisplay_ keys, app developers can use
-_NotShowIn=X-MeeGo_, to hide the launcher from the launcher grid.  
+To hide an desktop entry form the Launcher Grid, use _NoDisplay=true_.
 This is mainly useful for registering a MIME Type launchers.
+
+In case of multi-platform apps sharing the same .desktop file, app developers
+can use _NotShowIn=X-MeeGo_, to hide the launcher only in Sailfish OS.
 
 ### Localization
 In addition to the _Name[xx]_ method from the Desktop spec, launcher names can
