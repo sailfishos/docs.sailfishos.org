@@ -43,9 +43,9 @@ used in Qt "id-based" translation), where KEYNAME is one of the
 For example, the following looks up the translations for _Name_ and _Summary_ in the
 files `my-app-*.qm`:
 
-    X-Amber-Translation-Catalog: my-app
-    X-Amber-Logical-Id-Name: l10n-id_name
-    X-Amber-Logical-Id-Summary: l10n-id_desc
+    X-Amber-Translation-Catalog=my-app
+    X-Amber-Logical-Id-Name=l10n-id_name
+    X-Amber-Logical-Id-Summary=l10n-id_desc
 
 ### Application sandboxing profile
 Application developers can control their app's
