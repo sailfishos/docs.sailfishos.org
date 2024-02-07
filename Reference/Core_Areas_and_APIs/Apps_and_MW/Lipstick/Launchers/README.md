@@ -114,3 +114,7 @@ after launch), and `path` and `method` must exist for that service.
 
 This is used e.g. by MimeType .desktop files to open an app at a certain page.
 
+## Legacy and Deprecated
+
+ - _X-MeeGo-Translation-Catalog_ and _X-MeeGo-Logical-Id_.  Used for translations. Replaced by the _X-Amber-_ variants.
+
