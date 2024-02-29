@@ -28,7 +28,7 @@ If you want to consider using other app stores, please read **[this document](/S
 
 _If you have installed Android AppSupport already, you are ready to jump to the chapter **[Installing Aptoide](/Support/Help_Articles/Android_App_Support/Aptoide/#installing-aptoide)** below._
 
-Installing and running Android applications on your Sailfish device requires the **Android™ AppSupport** platform from the Jolla Store. Please note that in the case of Sailfish X (i.e., Xperia devices), you will need a valid **[licence](/Support/Help_Articles/Sailfish_X_Licence/)** for being able to download and install **Android™ AppSupport**.
+Installing and running Android applications on your Sailfish device requires the **Android AppSupport** platform from the Jolla Store. Please note that in the case of Sailfish X (i.e., Xperia devices), you will need a valid **[licence](/Support/Help_Articles/Sailfish_X_Licence/)** for being able to download and install **Android AppSupport**.
 
 ### This is how to install Android AppSupport
 
@@ -42,7 +42,7 @@ NOTE: _Android AppSupport is not an actual app, so it will not appear in the app
   
 ## Installing Aptoide
 
-Once Android™ AppSupport is installed, download **Aptoide Store** from the Marketplaces folder in the Jolla Store and install it. This app appears by the name **Aptoide** with an orange icon having a white V shape on it.
+Once Android AppSupport is installed, download **Aptoide Store** from the Marketplaces folder in the Jolla Store and install it. This app appears by the name **Aptoide** with an orange icon having a white V shape on it.
 
 <div class="flex-images" markdown="1">
 

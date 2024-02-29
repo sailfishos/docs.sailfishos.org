@@ -9,14 +9,14 @@ nav_order: 100
 
 Sailfish OS aims to be compatible with the majority of Android apps, but due to the sheer volume of Android applications designed for Android-based devices with different configurations, we cannot guarantee 100% compatibility.
 
-In this article, you will learn how to make the best of the **Android™ AppSupport** on your Sailfish device.
+In this article, you will learn how to make the best of the **Android AppSupport** on your Sailfish device.
 
 If you would like to remove Android apps (and support) from your Sailfish device, read [**this help article**](/Support/Help_Articles/Android_App_Support/Removing_Android_App_Support/).
 
 # Installing Android applications on your Sailfish device
 Installing Android applications is done by downloading **apk** files (an Android package file used to distribute applications) from application stores and by then installing them to your Sailfish device.
 
-Before installing any Android apps one must install **Android™ AppSupport** (simulation of the Android system on Sailfish OS) which is available in the Jolla Store. This requires the Sailfish X licence on Xperia devices.
+Before installing any Android apps one must install **Android AppSupport** (simulation of the Android system on Sailfish OS) which is available in the Jolla Store. This requires the Sailfish X licence on Xperia devices.
 
 Android apps are installed in the internal storage of a phone. Installing apps on SD cards is not supported.
 
@@ -133,8 +133,8 @@ To read more about using the Aptoide app store in general, please [**see here**]
 
 If you are having troubles installing applications from .apk files, please follow the steps below:
 
-1. Ensure that you have AndroidTM support installed from the Jolla Store. Install if missing.
-2. Download and install any Android application from the Jolla Store. This mandatory step will initialize the AndroidTM support of your device so that it will be possible to install .apk files.
+1. Ensure that you have Android support installed from the Jolla Store. Install if missing.
+2. Download and install any Android application from the Jolla Store. This mandatory step will initialize the Android support of your device so that it will be possible to install .apk files.
 3. Attempt installation of the file again. If this step didn't solve your problem, please keep reading:
 4. Attempt installing another application from .apk
 
@@ -142,8 +142,8 @@ If you are successful in installing another application from .apk, it is likely 
 
 **Q: I'm having trouble with running Android apps, what can I do?**
 
-If some of your Android apps fail to launch or tend to crash, then it is worthwhile trying to restart the AndroidTM AppSupport of your Sailfish device. Restarting the Android service ends all processes related to it, and after this starts them up again.
-In order to do this, go to Settings > AndroidTM AppSupport and stop it by tapping the "Stop" button and then restart it by tapping the "Start" button.
+If some of your Android apps fail to launch or tend to crash, then it is worthwhile trying to restart the Android AppSupport of your Sailfish device. Restarting the Android service ends all processes related to it, and after this starts them up again.
+In order to do this, go to Settings > Android AppSupport and stop it by tapping the "Stop" button and then restart it by tapping the "Start" button.
 
 **Q: I updated my Android app to a new version but it fails to work now. What can I do?**
 

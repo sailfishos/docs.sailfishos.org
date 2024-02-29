@@ -8,7 +8,7 @@ nav_order: 350
 
 ## Fill your phone with Sailfish OS
 
-GNU/Linux based Sailfish OS natively running on an Android™ phone you like? Yes, it can be achieved when following our HADK porting guide! The document takes you through:
+GNU/Linux based Sailfish OS natively running on an Android phone you like? Yes, it can be achieved when following our HADK porting guide! The document takes you through:
 
  - The hardware and software requirements
  - Sets up the Sailfish OS Platform SDK and the supporting development environment
@@ -20,7 +20,7 @@ You’ll encounter challenges along the way, as every phone has numerous differe
 
  - Linux Kernel and OS knowledge and development
  - Fluency in Git, Github code-review process
- - Android™ Platform SDK
+ - Android Platform SDK
  - Observed [IRC guidelines](/Develop/Collaborate/IRC_Guidelines/)
  - That immense desire to have Linux in your pocket!
  </div>

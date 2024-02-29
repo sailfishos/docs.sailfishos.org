@@ -58,7 +58,7 @@ Note that the recent Aptoide app has advertisements which it tends to show (vide
 After downloading and installing, you are required to activate WhatsApp before starting to use it.
 
 # Activating WhatsApp service on your device
-Next, we will activate WhatsApp on your Sailfish OS device. WhatsApp uses an automated text message system for verification. We will have to help it a little by hand though, as Android™ AppSupport of Sailfish OS may not be able to read the necessary info from the verification message sent by WhatsApp.
+Next, we will activate WhatsApp on your Sailfish OS device. WhatsApp uses an automated text message system for verification. We will have to help it a little by hand though, as Android AppSupport of Sailfish OS may not be able to read the necessary info from the verification message sent by WhatsApp.
 
 1. Please ensure that your device has a connection to the cellular network and that Mobile Data is enabled & functioning (see Settings > Mobile network > Use SIM card).  Note that although a mobile network connection (arranged with your SIM card) must be available in the registration phase, you can use WhatsApp service over a WiFi connection later on.
 
@@ -112,7 +112,7 @@ You may need to restart WhatsApp for this change to be applied.
 
 Please also note the other controls for the Whatsapp application in the view above.
 
-5) The button "Open Android ™ settings" (see the picture above) exists on Android AppSupport version 8.1 and later only, i.e. on Xperia XA2 and Xperia 10 devices.  
+5) The button "Open Android settings" (see the picture above) exists on Android AppSupport version 8.1 and later only, i.e. on Xperia XA2 and Xperia 10 devices.  
 
 If you have a different device, go to step 6.
 
@@ -221,7 +221,7 @@ On Sailfish 4 and on the latest releases of Sailfish 3, the contacts saved in th
 A1: If you have an Xperia XA2 or Xperia 10, then follow step #5 in [this chapter](#making-sure-whatsapp-gives-notifications-even-when-not-open) to give the required permissions. Should this not help, carry on reading the instructions just below the next two pictures.
 
 A2: If you have an Xperia X, Jolla C, Jolla Tablet or Jolla Phone, then this is for you.
-First, please make sure that you have given Android applications permission to access your contacts in Settings > Android ™ AppSupport - the pictures below represent the Sailfish settings for Android AppSupport on Jolla1, JollaC and Xperia X devices:
+First, please make sure that you have given Android applications permission to access your contacts in Settings > Android AppSupport - the pictures below represent the Sailfish settings for Android AppSupport on Jolla1, JollaC and Xperia X devices:
 
 <div class="flex-images" markdown="1">
 
@@ -241,7 +241,7 @@ Below is a list of everything you can try to jostle up WhatsApp to find all your
 * Go to WhatsApp "Settings" > "Contacts" (i.e. touch the 3 dots at top right corner; then touch Contacts). Activate "Show all contacts" option.
 * Return to the home view of the app.
 * Tap on the green “New Chat” button at the lower right corner of WhatsApp main view. Select the three dots (top-right) and select "Refresh". This is great for updating your WhatsApp contacts with changes made to their e.g. phone numbers in the People app.
-* Restart (stop and start) Android ™ AppSupport from the Android ™ AppSupport page in Settings (see screenshots above).
+* Restart (stop and start) Android AppSupport from the Android AppSupport page in Settings (see screenshots above).
 * Restart WhatsApp
 * Restart your device.
 * Try the troubleshooting steps provided by WhatsApp in the WhatsApp application. You can find them as follows:

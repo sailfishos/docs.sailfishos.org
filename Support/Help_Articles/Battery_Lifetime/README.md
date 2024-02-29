@@ -89,7 +89,7 @@ If you are able to pinpoint an application or process that is constantly running
 * If it relates to a phone process, see if you can investigate the app it could be related to, or whether a simple reboot would solve the situation.
 * A [**device reset**](/Support/Help_Articles/Factory_Reset/). is often the best way to determine whether the software is causing the increased drain of the battery. Resetting your device is likely to have positive implications on the battery life.
 
-## Controlling the Android™ AppSupport
+## Controlling the Android AppSupport
 The purpose of **stopping** or **starting** the Android AppSupport is to see whether it is a process related to an Android application that is causing the battery drain because it is stuck or simply power-hungry.
 
 <div class="flex-images" markdown="1">

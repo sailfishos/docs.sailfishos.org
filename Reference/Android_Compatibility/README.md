@@ -7,7 +7,7 @@ nav_order: 800
 
 ## Android Compatibility
 
-When talking about Android™ compatibility in relation to Sailfish OS, there are two distinct possible meanings. This page gives an overview of the ways in which Sailfish OS provides Android compatibility in relation to those distinct meanings.
+When talking about Android compatibility in relation to Sailfish OS, there are two distinct possible meanings. This page gives an overview of the ways in which Sailfish OS provides Android compatibility in relation to those distinct meanings.
 
 ### Hardware Support
 

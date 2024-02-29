@@ -14,7 +14,7 @@ The most often needed settings are the permissions to access certain services an
 
 # Adjusting the settings of Android AppSupport of Sailfish OS
 
-The Settings app of Sailfish OS has the item **Android<sup>TM</sup> AppSupport** almost at the end of the page, in the section "Info".
+The Settings app of Sailfish OS has the item **Android AppSupport** almost at the end of the page, in the section "Info".
 
 <div class="flex-images" markdown="1">
 
@@ -48,7 +48,7 @@ We are looking at the settings of WhatsApp application in the example shown in P
 </div>
 
   
-2) Tap the button "Open Android<sup>TM</sup> settings" (_see Pic 2 above)_
+2) Tap the button "Open Android settings" (_see Pic 2 above)_
 
 3) Tap "Permissions" (Pic 3) to check or change the permissions of this particular app.
 
