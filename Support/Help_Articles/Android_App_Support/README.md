@@ -101,7 +101,7 @@ Some apps may show a disclaimer that they require a higher "Android SDK version"
 
 **Q: I cannot find Android AppSupport in Jolla Store although I have the Sailfish licence activated on this device. I may have uninstalled something on the command line.**
 
-"I have tried to install the Android support even at the command line but it fails":
+"I have tried to install the Android AppSupport even at the command line but it fails":
 ```
 devel-su
 pkcon install aliendalvik
@@ -133,8 +133,8 @@ To read more about using the Aptoide app store in general, please [**see here**]
 
 If you are having troubles installing applications from .apk files, please follow the steps below:
 
-1. Ensure that you have Android support installed from the Jolla Store. Install if missing.
-2. Download and install any Android application from the Jolla Store. This mandatory step will initialize the Android support of your device so that it will be possible to install .apk files.
+1. Ensure that you have Android AppSupport installed from the Jolla Store. Install if missing.
+2. Download and install any Android application from the Jolla Store. This mandatory step will initialize the Android AppSupport of your device so that it will be possible to install .apk files.
 3. Attempt installation of the file again. If this step didn't solve your problem, please keep reading:
 4. Attempt installing another application from .apk
 
