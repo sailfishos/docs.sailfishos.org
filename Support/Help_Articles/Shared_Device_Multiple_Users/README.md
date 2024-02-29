@@ -61,7 +61,7 @@ What can the admin do:
 * can reset the device
 * can see the data of the additional users with super-user rights (devel-su) but not as "defaultuser"
 * can manage the device lock
-* can install and use Android App Support and Android apps (given there is a valid licence)
+* can install and use Android AppSupport and Android apps (given there is a valid licence)
 * can create an SSH connection from a computer to the device -- pay attention to the username: it is either nemo or defaultuser (the correct one works, the other does not).
 
 ## Additional users
@@ -88,8 +88,8 @@ What can and cannot Additional users do:
 * do not have any Jolla accounts
 * do not have Jolla Store                         
 * do not have the Developer mode and Terminal available, cannot get super-user (root) rights
-* do not see Android App Support and Android app
-* cannot install Android App Support and Android apps
+* do not see Android AppSupport and Android app
+* cannot install Android AppSupport and Android apps
 * cannot install OS updates; don't even get advertisements on OS updates
 * cannot install or uninstall apps
 * cannot see or change the data of other users

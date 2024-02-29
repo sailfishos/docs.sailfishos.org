@@ -95,7 +95,7 @@ echo ""
 echo "9. Android logs"
 ALIENDALVIK=$(rpm -qa | grep aliendalvik)
 if [ "$ALIENDALVIK" = "" ]; then
-    echo "Android App Support not installed on this device. Skipping Android logs."
+    echo "Android AppSupport not installed on this device. Skipping Android logs."
 else
     MODELSTR=$(ssu s | grep model)
     # Model and release specific commands:
@@ -121,7 +121,7 @@ else
     # Did we catch any Android logs?
     if [ "$LOGCATCMD" != "" ]; then
 	echo "- logcat log"
-        echo "- status of Android App Support"
+        echo "- status of Android AppSupport"
         $LOGCATCMD > $TMPDIR/android-logcat.txt
 	systemctl status aliendalvik.service > $TMPDIR/aliendalvik-status.txt
     else

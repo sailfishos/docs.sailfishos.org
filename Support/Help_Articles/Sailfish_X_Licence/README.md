@@ -68,9 +68,9 @@ After you have activated the licence by signing in from your Xperia to this same
 
     Check the availability of updates in "Settings > System > Sailfish OS updates" by pulling down "Check for updates". If you need guidance read the document **[Updating Sailfish OS](/Support/Help_Articles/Updating_Sailfish_OS/)**.
     
-2.  **Android™ App Support**
+2.  **Android™ AppSupport**
 
-    Allows installing Android app stores which in turn makes it possible to install actual Android apps. The main control item of Android™ App Support can be found at the end of the Settings app.
+    Allows installing Android app stores which in turn makes it possible to install actual Android apps. The main control item of Android™ AppSupport can be found at the end of the Settings app.
     
 3.  **Microsoft Exchange support**
 
@@ -91,7 +91,7 @@ Note that none of these apps will appear as icons in the app grid (after install
 
 Sailfish X **Free licence** is a trial version for the Xperia product variants. You can download and install it free of charge to try out Sailfish OS on your Sony device.
 
-Sailfish X **Full licence** entitles you to use all Sailfish X services (including Android™ App Support) on the Xperia™ 10 III, Xperia™ 10 II, Xperia™ 10, and Xperia™ XA2 devices. The same applies to the Xperia™ X devices, however, the Android support on those devices is the older version that corresponds to Android version 4.4.
+Sailfish X **Full licence** entitles you to use all Sailfish X services (including Android™ AppSupport) on the Xperia™ 10 III, Xperia™ 10 II, Xperia™ 10, and Xperia™ XA2 devices. The same applies to the Xperia™ X devices, however, the Android support on those devices is the older version that corresponds to Android version 4.4.
 
 This is the list of **[supported devices](https://docs.sailfishos.org/Support/Supported_Devices/)**.
 

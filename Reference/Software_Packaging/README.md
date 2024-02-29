@@ -39,7 +39,7 @@ We are following quite closely Fedora's packaging guidelines, which you can read
 
 ## APK
 
-Sailfish OS with Android App Support, can use applications in apk format from Android. One core service provided by Sailfish OS is called apkd, which mediates installation, deinstallation, upgrades and other interaction with apk packages within Sailfish OS.
+Sailfish OS with Android AppSupport, can use applications in apk format from Android. One core service provided by Sailfish OS is called apkd, which mediates installation, deinstallation, upgrades and other interaction with apk packages within Sailfish OS.
 
 ## Commands
 

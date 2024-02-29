@@ -20,7 +20,7 @@ The table below lists some significant known issues in Sailfish OS releases. The
     <tbody>
         <tr>
           <td>All</td>
-          <td>Bluetooth devices are not supported by Android App Support with the exception of speakers.<br /><a href="https://forum.sailfishos.org/t/3120">Forum</a></td>
+          <td>Bluetooth devices are not supported by Android AppSupport with the exception of speakers.<br /><a href="https://forum.sailfishos.org/t/3120">Forum</a></td>
           <td>All</td>
           <td></td>
         </tr>
@@ -32,7 +32,7 @@ The table below lists some significant known issues in Sailfish OS releases. The
         </tr>
         <tr>
           <td>Xperia X, Jolla Tablet</td>
-          <td>FIXED.<br />Manual Android app installation from the terminal or file managers is currently not working on the Android 4.4 version of Android App Support on Sailfish OS 4.4. To solve this, disable sandboxing for this handler by editing the file <code>/usr/share/applications/apkd-mime-handler.desktop</code> and adding the following to the end of the file:
+          <td>FIXED.<br />Manual Android app installation from the terminal or file managers is currently not working on the Android 4.4 version of Android AppSupport on Sailfish OS 4.4. To solve this, disable sandboxing for this handler by editing the file <code>/usr/share/applications/apkd-mime-handler.desktop</code> and adding the following to the end of the file:
 <div markdown="1">
 
 ```ini
@@ -47,7 +47,7 @@ Disabled
         </tr>
         <tr>
           <td>Android AppSupport 10 on Xperia 10 II, 10 and XA2</td>
-          <td>FIXED.<br />Sometimes, Android apps may not be able to use Internet connections via a mobile network. If there are connection problems later on (either WLAN or mobile data), stopping and starting the Android service at “Settings > Android App Support” should help. Toggling the connection off and on is another trick to try.</td>
+          <td>FIXED.<br />Sometimes, Android apps may not be able to use Internet connections via a mobile network. If there are connection problems later on (either WLAN or mobile data), stopping and starting the Android service at “Settings > Android AppSupport” should help. Toggling the connection off and on is another trick to try.</td>
           <td></td>
           <td>4.5.0<br />Struven ketju</td>
         </tr>

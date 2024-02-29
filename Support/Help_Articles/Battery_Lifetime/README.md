@@ -19,7 +19,7 @@ Below are some general tips on how to maximize battery life. The tips listed bel
 * Turn **Bluetooth** and **NFC** off unless you need it on a regular basis (Settings > Bluetooth and Settings > NFC).
 * Turn **Internet sharing** (WLAN hotspot, tethering) off if no more needed.
 * Turn **Location service** off in Settings > Location if you are not using map applications daily. Depending on the navigation settings of those apps, the current drain from the battery may grow significantly.
-* Disable Settings > **Android App Support** unless you use your Android apps regularly. There is more information about this later in this article.
+* Disable Settings > **Android AppSupport** unless you use your Android apps regularly. There is more information about this later in this article.
 * Consider turning **mobile data** off if you can be connected to the Internet via WLAN. You would still be reachable via phone calls.
 * Check the **network mode** of mobile data. By default, your device will search for the fastest network available (4G, 5G), but if speed is not critical to you or you usually use a WLAN network, then consider using a 2G or 3G mobile network instead (Settings > Mobile network > Network mode).
 * Select the **cellular operator** (carrier) with the best network in your area. The better the network coverage, the less the phone needs to rely on remote base stations and swap between network generations (4G, 3G, 2G). If the operator has a firewall for mobile data then the phone will receive less (unnecessary) incoming data traffic, allowing it to stay in a suspended state longer.
@@ -89,8 +89,8 @@ If you are able to pinpoint an application or process that is constantly running
 * If it relates to a phone process, see if you can investigate the app it could be related to, or whether a simple reboot would solve the situation.
 * A [**device reset**](/Support/Help_Articles/Factory_Reset/). is often the best way to determine whether the software is causing the increased drain of the battery. Resetting your device is likely to have positive implications on the battery life.
 
-## Controlling the Android™ App Support
-The purpose of **stopping** or **starting** the Android App Support is to see whether it is a process related to an Android application that is causing the battery drain because it is stuck or simply power-hungry.
+## Controlling the Android™ AppSupport
+The purpose of **stopping** or **starting** the Android AppSupport is to see whether it is a process related to an Android application that is causing the battery drain because it is stuck or simply power-hungry.
 
 <div class="flex-images" markdown="1">
 
@@ -99,11 +99,11 @@ The purpose of **stopping** or **starting** the Android App Support is to see wh
   </span>
 </div>
 
-**Stopping Android App Support**: ends all processes related to the Android service, including background tasks. The service will be automatically restarted if you launch an Android app (in this case it takes longer to get the app up and running).
+**Stopping Android AppSupport**: ends all processes related to the Android service, including background tasks. The service will be automatically restarted if you launch an Android app (in this case it takes longer to get the app up and running).
 
-**Starting Android App Support**: you can manually start the Android App Support when needed. This is an alternative to letting Sailfish OS start the service when the device is restarted. Note that the Stop button in the picture above appears as "Start" when Android App Support is off.
+**Starting Android AppSupport**: you can manually start the Android AppSupport when needed. This is an alternative to letting Sailfish OS start the service when the device is restarted. Note that the Stop button in the picture above appears as "Start" when Android AppSupport is off.
 
-**"Start Android App Support on bootup"** means that Sailfish OS will start the service automatically when the device is started up. Hence the service will be running in the background, making it faster to open Android apps and making it possible to receive notifications from the installed apps (e.g. notifications on received Whatsapp messages).
+**"Start Android AppSupport on bootup"** means that Sailfish OS will start the service automatically when the device is started up. Hence the service will be running in the background, making it faster to open Android apps and making it possible to receive notifications from the installed apps (e.g. notifications on received Whatsapp messages).
 
 ## Apps from untrusted sources
 It is possible to install apps onto your Sailfish device such that those apps have not passed the quality control of Jolla. Typically, those apps have been developed for Sailfish but they have not yet been accepted to Jolla Store because they have failed some quality control steps.
