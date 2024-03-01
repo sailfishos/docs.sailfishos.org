@@ -13,7 +13,7 @@ D-Bus APIs provided by Sailfish OS. Some of the APIs are not available on all ha
 
 | Name                                  | Purpose                                                                                                              | Access                                                          | Activation |
 | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- | ---------- |
-| com.jolla.apkd                        | Integration with Android™ AppSupport. Manages service state and installtion/removal of Android application packages. | Unrestricted, with exceptions for special package installations | Yes        |
+| com.jolla.apkd                        | Integration with Android AppSupport. Manages service state and installtion/removal of Android application packages. | Unrestricted, with exceptions for special package installations | Yes        |
 | com.meego.usb_moded                   | Controls the USB states.                                                                                             | TBA                                                             | No         |
 | com.nokia.diskmonitor                 | Monitor for free space on filesystems.                                                                               | TBA                                                             | No         |
 | com.nokia.dsme                        | Device State Management Entity; e.g. battery empty notification and requesting reboot.                               | TBA                                                             | No         |

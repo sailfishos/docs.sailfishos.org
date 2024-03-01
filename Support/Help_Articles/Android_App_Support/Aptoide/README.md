@@ -1,7 +1,7 @@
 ---
 title: Aptoide
 permalink: Support/Help_Articles/Android_App_Support/Aptoide/
-parent: Android App Support
+parent: Android AppSupport
 grand_parent: Help Articles
 layout: default
 nav_order: 350
@@ -23,26 +23,26 @@ If you want to consider using other app stores, please read **[this document](/S
 # Getting started
 
   
-## Installing Android App Support
+## Installing Android AppSupport
 
 
-_If you have installed Android App Support already, you are ready to jump to the chapter **[Installing Aptoide](/Support/Help_Articles/Android_App_Support/Aptoide/#installing-aptoide)** below._
+_If you have installed Android AppSupport already, you are ready to jump to the chapter **[Installing Aptoide](/Support/Help_Articles/Android_App_Support/Aptoide/#installing-aptoide)** below._
 
-Installing and running Android applications on your Sailfish device requires the **Android™ App Support** platform from the Jolla Store. Please note that in the case of Sailfish X (i.e., Xperia devices), you will need a valid **[licence](/Support/Help_Articles/Sailfish_X_Licence/)** for being able to download and install **Android™ App Support**.
+Installing and running Android applications on your Sailfish device requires the **Android AppSupport** platform from the Jolla Store. Please note that in the case of Sailfish X (i.e., Xperia devices), you will need a valid **[licence](/Support/Help_Articles/Sailfish_X_Licence/)** for being able to download and install **Android AppSupport**.
 
-### This is how to install Android App Support
+### This is how to install Android AppSupport
 
 * If you do not have the Sailfish X licence yet, buy it in the **[Jolla Shop](https://shop.jolla.com/)** first. Make sure you select the licence matching your phone.
 * **[This document](/Support/Help_Articles/Sailfish_X_Licence/#how-does-the-licence-work)** explains how to activate the licence on your phone.
 * Open the Jolla Store app on the phone.
-* Scroll down and go to folder "Jolla". You will then see the item "Android App Support". Tap it and pull down the command "Install".
+* Scroll down and go to folder "Jolla". You will then see the item "Android AppSupport". Tap it and pull down the command "Install".
       
-NOTE: _Android App Support is not an actual app, so it will not appear in the app grid after installation but work in the background. However, there will be a new menu item: "Settings > System > Android App Support"._
+NOTE: _Android AppSupport is not an actual app, so it will not appear in the app grid after installation but work in the background. However, there will be a new menu item: "Settings > System > Android AppSupport"._
 
   
 ## Installing Aptoide
 
-Once Android™ App Support is installed, download **Aptoide Store** from the Marketplaces folder in the Jolla Store and install it. This app appears by the name **Aptoide** with an orange icon having a white V shape on it.
+Once Android AppSupport is installed, download **Aptoide Store** from the Marketplaces folder in the Jolla Store and install it. This app appears by the name **Aptoide** with an orange icon having a white V shape on it.
 
 <div class="flex-images" markdown="1">
 

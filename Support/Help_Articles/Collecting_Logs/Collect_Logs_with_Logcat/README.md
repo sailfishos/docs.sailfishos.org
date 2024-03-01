@@ -12,7 +12,7 @@ You will need to enable the **[Developer mode](https://docs.sailfishos.org/Suppo
 
 # Logcat tool 
 Logcat is a command-line tool that dumps a log of system messages from the Android driver subsystem. 
-With the Logcat tool, it goes easily to collect Android logs from the system. There are two ways to use logcat: a) from Sailfish OS b) from Android App Support (see the next chapters). The resulting logs differ. Choose a) or b) depending on the problem you want to look at.
+With the Logcat tool, it goes easily to collect Android logs from the system. There are two ways to use logcat: a) from Sailfish OS b) from Android AppSupport (see the next chapters). The resulting logs differ. Choose a) or b) depending on the problem you want to look at.
 
 # Using Logcat
 

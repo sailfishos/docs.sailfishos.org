@@ -1,7 +1,7 @@
 ---
 title: APKPure
 permalink: Support/Help_Articles/Android_App_Support/APKPure/
-parent: Android App Support
+parent: Android AppSupport
 grand_parent: Help Articles
 layout: default
 nav_order: 300

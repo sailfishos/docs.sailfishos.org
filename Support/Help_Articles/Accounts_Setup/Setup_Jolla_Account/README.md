@@ -155,7 +155,7 @@ Ensure that all that works - read ahead.
 * Swipe the display to the left to expose the app categories
 * Tap on the category you want
 * Tap on each app you want to get. Pull down "Install".
-* Jolla Store should soon show the status "Installed". The app should appear at the end of the App Grid. Note that "Android App Support", "Predictive Text Input" and "Microsoft Exchange" are exceptions: there is no icon for them at the App Grid. Instead, they appear in the Settings and elsewhere.
+* Jolla Store should soon show the status "Installed". The app should appear at the end of the App Grid. Note that "Android AppSupport", "Predictive Text Input" and "Microsoft Exchange" are exceptions: there is no icon for them at the App Grid. Instead, they appear in the Settings and elsewhere.
 
 <div class="flex-images" markdown="1">
 
@@ -184,7 +184,7 @@ If there is an update available take it by selecting "Download" in the pulley me
 
 ### Finding the licensed apps in Jolla Store
 
-The Sailfish OS licence is available for users of Xperia phones to which Sailfish OS has been ported - see **[this list of supported devices](/Support/Supported_Devices/)**. The licence entitles the user to install OS updates and install some apps, including _Android™ App Support_ and _Microsoft Exchange_. Check the details of the **[Sailfish X licence](/Support/Help_Articles/Sailfish_X_Licence/)**.
+The Sailfish OS licence is available for users of Xperia phones to which Sailfish OS has been ported - see **[this list of supported devices](/Support/Supported_Devices/)**. The licence entitles the user to install OS updates and install some apps, including _Android AppSupport_ and _Microsoft Exchange_. Check the details of the **[Sailfish X licence](/Support/Help_Articles/Sailfish_X_Licence/)**.
 
 All of the licensed apps appear in the **Jolla category** of the Jolla Store app. Scroll down the home page to see the categories on the right. Tap "Jolla >".
 

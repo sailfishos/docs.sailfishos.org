@@ -1,5 +1,5 @@
 ---
-title: Android App Support
+title: Android AppSupport
 permalink: Support/Help_Articles/Android_App_Support/
 parent: Help Articles
 has_children: true
@@ -9,14 +9,14 @@ nav_order: 100
 
 Sailfish OS aims to be compatible with the majority of Android apps, but due to the sheer volume of Android applications designed for Android-based devices with different configurations, we cannot guarantee 100% compatibility.
 
-In this article, you will learn how to make the best of the **Android™ App Support** on your Sailfish device.
+In this article, you will learn how to make the best of the **Android AppSupport** on your Sailfish device.
 
 If you would like to remove Android apps (and support) from your Sailfish device, read [**this help article**](/Support/Help_Articles/Android_App_Support/Removing_Android_App_Support/).
 
 # Installing Android applications on your Sailfish device
 Installing Android applications is done by downloading **apk** files (an Android package file used to distribute applications) from application stores and by then installing them to your Sailfish device.
 
-Before installing any Android apps one must install **Android™ App Support** (simulation of the Android system on Sailfish OS) which is available in the Jolla Store. This requires the Sailfish X licence on Xperia devices.
+Before installing any Android apps one must install **Android AppSupport** (simulation of the Android system on Sailfish OS) which is available in the Jolla Store. This requires the Sailfish X licence on Xperia devices.
 
 Android apps are installed in the internal storage of a phone. Installing apps on SD cards is not supported.
 
@@ -71,10 +71,10 @@ Another option to install .apk files is to first copy them to your device (e.g. 
 
 The third way is to send a .apk file attached to an email message. Once you receive the email with the attachment, simply tap on the attachment to download and install it.
 
-# Known limitations to Android App Support
+# Known limitations to Android AppSupport
 As mentioned before, we cannot ensure 100% compatibility of Android apps with Sailfish OS. Often, this is caused by the missing access to certain interfaces at Google services (see chapter above). It is also possible that some features of Android applications are not supported.
 
-Various Sailfish OS devices (generations) have a different Android App Support, i.e.  the Android version they are compatible with is different:
+Various Sailfish OS devices (generations) have a different Android AppSupport, i.e.  the Android version they are compatible with is different:
 
 * Android 10 on Xperia XA2, Xperia 10 and Xperia 10 II from Sailfish OS 4.1.0 [^1] onwards (Android 11 is recommended for Xperia X 10 III, please note that Android 12 is not yet recommended) 
 	* API level (SDK version) 29
@@ -88,20 +88,20 @@ Various Sailfish OS devices (generations) have a different Android App Support, 
 	* API level (SDK version) 16
 If an Android application requires let's say Android 5.0 Lollipop it will typically refuse to install on any other Sailfish OS devices but Xperia XA2 and Xperia 10. Even if it were possible to install the app it would not work fully or at all.
 
-Some apps may show a disclaimer that they require a higher "Android SDK version". This means that the Android App Support on your Sailfish phone is not compatible with that app. However, that app would probably work on Xperia XA2 or Xperia 10 as the Android SDK version supported on them is 28 or 29, given that the phone has Sailfish 4 installed.
+Some apps may show a disclaimer that they require a higher "Android SDK version". This means that the Android AppSupport on your Sailfish phone is not compatible with that app. However, that app would probably work on Xperia XA2 or Xperia 10 as the Android SDK version supported on them is 28 or 29, given that the phone has Sailfish 4 installed.
 
 [^1]: Rolled out in May 2021.
 
-[^2]: Android App Support running on Xperia XA2 and on Xperia 10 simulates Android 8.1 "Oreo" but it is compatible with the hardware drivers of Android 9 (AOSP 9). This makes it possible to install Sailfish OS to a device having Android 9. However, Android App Support v.8.1 of Sailfish OS is not compatible with Android apps or features requiring Android v.9 - such apps/features would not run on any Sailfish devices.
+[^2]: Android AppSupport running on Xperia XA2 and on Xperia 10 simulates Android 8.1 "Oreo" but it is compatible with the hardware drivers of Android 9 (AOSP 9). This makes it possible to install Sailfish OS to a device having Android 9. However, Android AppSupport v.8.1 of Sailfish OS is not compatible with Android apps or features requiring Android v.9 - such apps/features would not run on any Sailfish devices.
 
 # Settings of Android apps
 [**This document**](/Support/Help_Articles/Android_App_Support/Android_Application_Settings/) contains information about accessing and changing the generic and application-specific settings of your Android apps.
 
 # Troubleshooting and FAQ
 
-**Q: I cannot find Android App Support in Jolla Store although I have the Sailfish licence activated on this device. I may have uninstalled something on the command line.**
+**Q: I cannot find Android AppSupport in Jolla Store although I have the Sailfish licence activated on this device. I may have uninstalled something on the command line.**
 
-"I have tried to install the Android support even at the command line but it fails":
+"I have tried to install the Android AppSupport even at the command line but it fails":
 ```
 devel-su
 pkcon install aliendalvik
@@ -119,7 +119,7 @@ pkcon install feature-alien
 reboot
 ```
 **2) In Jolla Store**
-- install Android App Support
+- install Android AppSupport
 
 **Q: I'm having trouble finding all the Android apps I need. How can I get these apps?**
 
@@ -133,8 +133,8 @@ To read more about using the Aptoide app store in general, please [**see here**]
 
 If you are having troubles installing applications from .apk files, please follow the steps below:
 
-1. Ensure that you have AndroidTM support installed from the Jolla Store. Install if missing.
-2. Download and install any Android application from the Jolla Store. This mandatory step will initialize the AndroidTM support of your device so that it will be possible to install .apk files.
+1. Ensure that you have Android AppSupport installed from the Jolla Store. Install if missing.
+2. Download and install any Android application from the Jolla Store. This mandatory step will initialize the Android AppSupport of your device so that it will be possible to install .apk files.
 3. Attempt installation of the file again. If this step didn't solve your problem, please keep reading:
 4. Attempt installing another application from .apk
 
@@ -142,24 +142,24 @@ If you are successful in installing another application from .apk, it is likely 
 
 **Q: I'm having trouble with running Android apps, what can I do?**
 
-If some of your Android apps fail to launch or tend to crash, then it is worthwhile trying to restart the AndroidTM App Support of your Sailfish device. Restarting the Android service ends all processes related to it, and after this starts them up again.
-In order to do this, go to Settings > AndroidTM App Support and stop it by tapping the "Stop" button and then restart it by tapping the "Start" button.
+If some of your Android apps fail to launch or tend to crash, then it is worthwhile trying to restart the Android AppSupport of your Sailfish device. Restarting the Android service ends all processes related to it, and after this starts them up again.
+In order to do this, go to Settings > Android AppSupport and stop it by tapping the "Stop" button and then restart it by tapping the "Start" button.
 
 **Q: I updated my Android app to a new version but it fails to work now. What can I do?**
 
 Find an earlier version of this app - many app stores have the previous versions available. Install an earlier version, effectively downgrade the app. This may help sometimes. Keep an eye on future updates - they may come with fixes that make the app work on the Android app platform of Sailfish OS again.
 
-**Q: I want to install Android apps but cannot as there is no Android App Support in the Jolla Store!**
+**Q: I want to install Android apps but cannot as there is no Android AppSupport in the Jolla Store!**
 
-You have probably installed Sailfish X on your Xperia device. In this combination, the Sailfish X licence must be activated on the device. Only then Android App Support starts appearing in Jolla Store
+You have probably installed Sailfish X on your Xperia device. In this combination, the Sailfish X licence must be activated on the device. Only then Android AppSupport starts appearing in Jolla Store
 
-So, sign in from your Xperia device to the same Jolla account that you used when purchasing the licence. If you have signed in already then restart the device. The licence is now tied both to your account and to the IMEI code of your device. It is active. Next, open Jolla Store and look for **Android App Support** in the Jolla category.
+So, sign in from your Xperia device to the same Jolla account that you used when purchasing the licence. If you have signed in already then restart the device. The licence is now tied both to your account and to the IMEI code of your device. It is active. Next, open Jolla Store and look for **Android AppSupport** in the Jolla category.
 
 **Q: How can I change the permissions of Android apps?**
 
 See [**this article**](/Support/Help_Articles/Android_App_Support/Android_Application_Settings/), please.
 
-**Q: How can I uninstall Android apps and Android App Support?**
+**Q: How can I uninstall Android apps and Android AppSupport?**
 
 See [**this article**](/Support/Help_Articles/Android_App_Support/Removing_Android_App_Support/), please.
 
@@ -167,7 +167,7 @@ See [**this article**](/Support/Help_Articles/Android_App_Support/Removing_Andro
 
 Sailfish OS release 4.3.0 brings the signing of the Android system image. The practical consequence of this is that the warning on a rooted device should not appear anymore, and the related apps should work now on Sailfish devices.
 
-**Q: My device cannot fully boot up to the Home view. I suspect Android App Support is causing trouble. How can I disable it?**
+**Q: My device cannot fully boot up to the Home view. I suspect Android AppSupport is causing trouble. How can I disable it?**
 
 Make an SSH connection to the phone.
 
