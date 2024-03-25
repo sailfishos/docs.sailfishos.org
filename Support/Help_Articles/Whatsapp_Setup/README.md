@@ -6,7 +6,7 @@ layout: default
 nav_order: 10000
 ---
 
-Please note that the Sailfish OS must be in the very latest version in order for all features described in this article to work. Read about updating your software [**here**](/Support/Help_Articles/Updating_Sailfish_OS/). These instructions were updated for Sailfish OS version 4.1.0.
+Please note that the Sailfish OS must be in the very latest version in order for all features described in this article to work. Read about updating your software [**here**](/Support/Help_Articles/Updating_Sailfish_OS/). 
 
 WhatsApp application (like most Android apps) get updates on a regular basis. We recommend installing these updates as after some time the app and Sailfish OS might become incompatible.
 
@@ -47,12 +47,13 @@ Note that the recent Aptoide app has advertisements which it tends to show (vide
 
 ## Download directly from the WhatsApp website
 
-1. Open Sailfish Browser
-2. Browse to [https://www.whatsapp.com/android](https://www.whatsapp.com/android)
-3. Tap "Package installer" (it is located to the right from the "Google Play" item)
+1. Ensure that you have enabled "Settings > System > Untrusted software > Allow untrusted software"
+2. Open Sailfish Browser
+3. Browse to [https://www.whatsapp.com/android](https://www.whatsapp.com/android)
+4. Tap "Package installer" (it is located to the right from the "Google Play" item)
     ==> whatsapp.apk is downloaded to your phone
-4. Open "Settings > System > Transfers" and see the apk file at the top of the list
-5. Install the apk by tapping it (if there is a warning about installing untrusted software, first go to "Settings > System > Untrusted software" and allow it.
+5. Open "Settings > System > Transfers" and see the apk file at the top of the list
+6. Install the apk by tapping it. If there is a warning about installing untrusted software, first go to "Settings > System > Untrusted software" and allow it.
 
 
 After downloading and installing, you are required to activate WhatsApp before starting to use it.

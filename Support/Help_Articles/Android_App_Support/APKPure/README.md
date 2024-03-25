@@ -10,12 +10,13 @@ nav_order: 300
 APKPure store contains a good choice of popular Android apps. It is easy to install Android apps to your Sailfish OS device after installing the app of APKPure. This document explains how to do it.
 
 # Downloading the APKPure apk to your Sailfish device
-1. Open the Sailfish Browser app.
-2. Type and open page **apkpure.net**
-3. Tap the green-and-white "Download" on that page, to the right of "Use APKPure App" (**[Pic 1](#pic_1))**. 
-4. Avoid the advertisements. DO NOT tap the START button of **[Pic 2](#pic_2)**. Scroll down a couple of pages until you see the view of **[Pic 3](#pic_3)**. The green button with the white text "Download APK" is the one we are looking for.
-5. Tap the "Download APK" button. The download of the APKPure apk file (installation file) begins. The browser may ask you to select the folder into which to download the file. "Home > Downloads" is a good choice.
-6. Sailfish will show a download banner at the top of the display (**[Pic 4](#pic_4)**). Please wait until the download is complete.
+1. Ensure that you have enabled "Settings > System > Untrusted software > Allow untrusted software"
+2. Open the Sailfish Browser app.
+3. Type and open page **apkpure.net**
+4. Tap the green-and-white "Download" on that page, to the right of "Use APKPure App" (**[Pic 1](#pic_1))**. 
+5. Avoid the advertisements. DO NOT tap the START button of **[Pic 2](#pic_2)**. Scroll down a couple of pages until you see the view of **[Pic 3](#pic_3)**. The green button with the white text "Download APK" is the one we are looking for.
+6. Tap the "Download APK" button. The download of the APKPure apk file (installation file) begins. The browser may ask you to select the folder into which to download the file. "Home > Downloads" is a good choice.
+7. Sailfish will show a download banner at the top of the display (**[Pic 4](#pic_4)**). Please wait until the download is complete.
 
 <div class="flex-images" markdown="1">
 
