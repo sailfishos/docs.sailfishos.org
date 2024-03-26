@@ -8,28 +8,28 @@ nav_order: 100
 
 This document describes contribution example how to contribute the code:
 
-For this example, we will consider a hypothetical bug which affects the Sailfish Browser. The community member "Alice" discovers that for some content-aggregator sites, the wrong User Agent string seems to be used when fetching content. She decides to investigate and contribute a fix. These are the steps she takes:
+For this example, we will consider a hypothetical bug which affects the Sailfish Browser. A community member discovers that for some content-aggregator sites, the wrong User Agent string seems to be used when fetching content. These are the steps that should be taking in contributing a fix:
 
-1\) She files an issue on <https://github.com/sailfishos/sailfish-browser/issues> with example issue template from above.
+1\) An issue must be filed on <https://github.com/sailfishos/sailfish-browser/issues> with example issue template from above.
 
-2\) She comments on the issue to say that she will investigate the issue.
+2\) The issue is to be commented that the user will start investigating it.
 
-3\) She searches for the upstream code repository, and finds <https://github.com/sailfishos/sailfish-browser> and notes that it depends on embedlite-components-qt5. After browsing that source code, she realises that the user agent override behaviour is defined in code from the embedlite-components-qt5 package.
+3\) First place to look for the issue is the upstream code repository: <https://github.com/sailfishos/sailfish-browser>. In this case, a closer inspection reveals that the user that agent override behaviour is defined in code from the `embedlite-components-qt5` package.
 
-4\) She searches for that package on her Sailfish OS device via command `rpm -qi embedlite-components-qt5 | grep URL` and finds its upstream repository URL <https://github.com/sailfishos/embedlite-components>
+4\) To find the upstream repository for the `embedlite-components-qt5` package, the following command can be used on a Sailfish OS device: `rpm -qi embedlite-components-qt5 | grep URL`. The upstream repository URL in this case is <https://github.com/sailfishos/embedlite-components>.
 
-5\) She creates a personal fork of that repository using the web interface at <https://github.com/sailfishos/embedlite-components>
+5\) Create a personal fork of that repository using the web interface at <https://github.com/sailfishos/embedlite-components>
 
-6\) She clones that personal fork to her local host machine via `git clone https://github.com/alice/embedlite-components.git> alice-embedlite-components`
+6\) Clone the personal fork to the local host machine with `git clone https://github.com/username/embedlite-components.git username-embedlite-components`
 
-7\) She attempts to build the package but it fails to locate some build time dependencies
+7\) Build the package with sfdk. In this example, the build fails to locate some build time dependencies:
 ```nosh
-# cd into her local clone
+# cd into the local clone dir
 ~ $ cd alice-embedlite-components
 
-# attempt to build the package for her SailfishOS-4.3.0.12-armv7hl target
-~/alice-embedlite-components $ sfdk config target=SailfishOS-4.3.0.12-armv7hl
-~/alice-embedlite-components $ sfdk build
+# attempt to build the package for SailfishOS-4.3.0.12-armv7hl target
+~/username-embedlite-components $ sfdk config target=SailfishOS-4.3.0.12-armv7hl
+~/username-embedlite-components $ sfdk build
 No provider of 'xulrunner-qt5-devel >= 60.9.1' found.
 Building target platforms: armv7hl-meego-linux
 Building for target armv7hl-meego-linux
@@ -38,9 +38,9 @@ error: Failed build dependencies:
     pkgconfig(nspr) is needed by embedlite-components-qt5-1.0.0-1.armv7hl
 ```
 
-8\) She knows that she needs to enable additional package repositories under her build environment. To find out which ssu repository provides those packages, she now ssh's into her device, and runs `zypper info` (can also use `pkcon get-details` or search on OBS).
+8\) This error means that additional package repositories needs to be enabled in the build environment. To find out which ssu repository provides those packages, run `zypper info` (can also use `pkcon get-details` or search on OBS).
 ```nosh
-~/alice-embedlite-components $ ssh defaultuser@device
+~/username-embedlite-components $ ssh defaultuser@device
 [defaultuser@XperiaXA2-DualSIM ~]$ devel-su -p pkcon install zypper
 ## snipped ##
 [defaultuser@XperiaXA2-DualSIM ~]$ zypper info xulrunner-qt5-devel
@@ -61,50 +61,50 @@ Description    : abzaza
   Development files for xulrunner.
 ```
 
-9\) She now knows that it comes from the "jolla" repository. She goes back to her development terminal, and enables the repository under her build environment the way suggested in [Enabling Additional Package Repositories](/Tools/Sailfish_SDK/Building_packages/#enabling-additional-package-repositories):
+9\) The package comes from the "jolla" repository. This repository needs to be enabled in the build environment as it is suggested in [Enabling Additional Package Repositories](/Tools/Sailfish_SDK/Building_packages/#enabling-additional-package-repositories):
 ```nosh
-~/alice-embedlite-components $ sfdk tools exec SailfishOS-4.3.0.12-armv7hl
+~/username-embedlite-components $ sfdk tools exec SailfishOS-4.3.0.12-armv7hl
 
-# might be required to register her SDK depending on her SDK setup.
+# This might require registering the SDK depending on the SDK setup.
 [SailfishOS-4.3.0.12-armv7hl] ~ # ssu r
 
-# list the available repos
+# List the available repos
 [SailfishOS-4.3.0.12-armv7hl] ~ # ssu lr
 ## snipped ##
 Disabled repositories (global, might be overridden by user config):
  - jolla ... https://releases.jolla.com/releases/4.3.0.12/jolla/armv7hl/
 ## snipped ##
 
-# she enables the repository.
+# Enables the repository.
 [SailfishOS-4.3.0.12-armv7hl] ~ # ssu er jolla
 
-# she refreshes the available package list
-[SailfishOS-4.3.0.12-armv7hl] ~ # zypper ref -f
+# Refresh the available package list from "jolla" repository
+[SailfishOS-4.3.0.12-armv7hl] ~ # zypper ref jolla
 
-# now she is ready to go back sfdk to build the package again
+# Use sfdk to build the package again
 [SailfishOS-4.3.0.12-armv7hl] ~ # exit
-~/alice-embedlite-components $ sfdk build
-# success! The missing package was found now
+~/username-embedlite-components $ sfdk build
+# Success! The missing package was found now
 ```
 
-10\) Now that she has successfully built the package locally, she tests deploying the package.
+10\) Now that the package is successfully built the package can be deployed:
 ```nosh
-# she registered her device using the "my device" name within the Sailfish IDE before
-~/alice-embedlite-components $ sfdk config device="my device"
-# she can deploy the convenient zypper-dup way
-~/alice-embedlite-components $ sfdk deploy --zypper-dup
+# Use the name of the registered device in the Sailfish IDE, here "my device"
+~/username-embedlite-components $ sfdk config device="my device"
+# Deploy the package using zypper-dup
+~/username-embedlite-components $ sfdk deploy --zypper-dup
 # or the forceful way
-~/alice-embedlite-components $ sfdk deploy --manual
-~/alice-embedlite-components $ sfdk device exec
+~/username-embedlite-components $ sfdk deploy --manual
+~/username-embedlite-components $ sfdk device exec
 [defaultuser@XperiaXA2-DualSIM ~]$ devel-su rpm -Uvh --force RPMS/embedlite-components-qt5-1.0.0-1.armv7hl.rpm
 ```
 
-11\) After rebooting the device and opening browser, she sees that it works. She is now ready to begin development. She makes changes, adds debug statements, deploys the package to the device, and retrieves the logging information from the journal with `devel-su journalctl -af | grep browser`.
+11\) Reboot the device and open the browser to test that it still works. After this the development on the fork can start. First create a new branch for the changes `git checkout -b user_agent_fixes` and then the changes and debug statements can be added. Compile the package and deploy it to the device. Before using the modified browser, open up a terminal to see logging output from the journal with `devel-su journalctl -af | grep browser`.
 
-12\) After she has resolved the issue, and commits her fix locally. She then pushes the commit to her personal fork, and creates a pull request to the upstream repository. This will look something like <https://github.com/sailfishos/embedlite-components/pull/14>
+12\) After the issue is resolved and the fixes are committed locally, the commits need to be pushed to the personal fork. Next a pull request to the upstream repository is to be created. This will look something like <https://github.com/sailfishos/embedlite-components/pull/14>
 
-13\) She now updates the issue report with her findings, and a link to her pull request.
+13\) After the work is complete update the issue report with the findings, and a link to the pull request.
 
-14\) After receiving some review comments, she updates her commit with `git commit --amend`, force pushes it to her personal fork via `git push origin master:master --force` and comments in the merge request that it has been updated.
+14\) After receiving review comments, the commit is to be updated with `git commit --amend <changed_file>`. Then force push the branch to the personal fork via `git push origin master:master --force`. Add a comment into the merge request about the updates.
 
 15\) The maintainer merges the patch, tags it, and comments on the original bug report the tagged version which should be in a future release.
