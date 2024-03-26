@@ -87,10 +87,15 @@ ssu er <repo_name>
 
 to enable repositories, and then
 ```nosh
-zypper ref -f
+zypper ref <repo_name>
 ```
 
-to update the installable package information. `ssu lr` may be used to list known repositories, and `ssu rr <repo_name>` will remove a repository.
+to update the installable package information from the newly added repository. `ssu lr` may be used to list known repositories, and `ssu rr <repo_name>` will remove a repository.
+
+To update all repositories, use
+```nosh
+zypper ref -f
+```
 
 Example:
 ```nosh

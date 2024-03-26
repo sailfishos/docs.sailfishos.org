@@ -18,15 +18,22 @@ Note that packages installed in this fashion ("sideloaded") may cause conflicts 
 
 Some of the possible issues can be avoided by deploying with `zypper`, pointing it to the directory where the .rpm files were copied using the `-p|--plus-repo` option. New packages can be initially deployed with
 ```nosh
-zypper -p <rpms-dir> -v in <package>...
+zypper -p <rpms-dir> --no-gpg-checks -v in <package>...
 ```
+
+The `--no-gpg-checks` is for allowing non-signed packages to be installed. Like the ones that are built with `sfdk`.
 
 Packages that are already installed can be updated with
 ```nosh
-zypper -p <rpms-dir> -v dup
+zypper -p <rpms-dir> --no-gpg-checks -v dup
 ```
 
 With this command zypper upgrades the system using the latest .rpm packages found in <rpms-dir>. As `sfdk` produces evergrowing version numbers (unless told otherwise), this command always updates to the latest built version found in the directory while obeying package dependencies. When the repositories contain newer package versions, the `--from ~plus-repo-1` option to `zypper dup` helps.
+
+Or if you need to downgrade a specific package to a older version use:
+```nosh
+zypper -p <rpms-dir> --no-gpg-checks -v in --oldpackage <package>...
+```
 
 A shorthand syntax exists for this approach – it is the `--zypper-dup` deployment method:
 ```nosh
@@ -63,7 +70,12 @@ or to the SDK via:
 zypper ref -f
 ```
 
-followed by
+or refreshing only a specific repository:
+```nosh
+zypper ref <repo_name>
+```
+
+and then followed by
 ```nosh
 zypper in <pkg_name>
 ```
