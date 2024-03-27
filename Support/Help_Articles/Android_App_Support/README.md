@@ -18,9 +18,11 @@ Installing Android applications is done by downloading **apk** files (an Android
 
 Before installing any Android apps one must install **Android AppSupport** (simulation of the Android system on Sailfish OS) which is available in the Jolla Store. This requires the Sailfish X licence on Xperia devices.
 
+Another preparatory step is to enable "Settings > System > Untrusted software > Allow untrusted software". Installing Android apps (including application stores) from previously unused sources is considered potentially risky. Therefore, you must deliberately allow it.
+
 Android apps are installed in the internal storage of a phone. Installing apps on SD cards is not supported.
 
-After installing Android apps, the folder ```/home/.android/data/app``` shows all of your installed Android apps. The folder ```/home/defaultuser/android_storage/Android/data/``` contains the data meaningful to you in various Android apps.
+After installing Android apps, the folder ```/home/.android/data/data``` shows all of your installed Android apps. The folder ```/home/defaultuser/android_storage/Android/data/``` contains the data meaningful to you in various Android apps.
 
 ## Installing applications from application stores
 The SailfishOS operating system of Jolla supports Android apps that are featured in the Jolla Store and in Jolla-certified app partner stores.
@@ -41,7 +43,7 @@ Some examples of other app stores:
 * APKpure  (see this [**help article**](/Support/Help_Articles/Android_App_Support/APKPure/))
 * [**F-Droid**](https://f-droid.org/en/) (can be installed from Marketplaces of Jolla Store)
 * Aurora Store (can be installed from F-Droid)
-* [**Amazon**](http://www.amazon.com/gp/mas/get/android)
+* [**Amazon**](https://www.amazon.com/gp/mas/get/amazonapp)
 
 ### Note regarding the Google Play Store
 Sailfish OS does not support the Google Play store, because it relies on Google's proprietary background services only found on Android devices running Google's Android. We always advise against installing Google Services on SailfishOS, as it is known to potentially cause different problems.
@@ -63,7 +65,7 @@ Once you see the list of downloaded files, tap on the file to begin installing i
 [**This help article**](/Support/Help_Articles/Android_App_Support/APKPure/) has the detailed steps of installing APK Pure app store using this method.
 
 ### Using File Manager
-Another option to install .apk files is to first copy them to your device (e.g. to the Downloads folder) and then use the **File manager** application (Settings > Storage > User data, see the pulley menu) to install the file/application (tap the .apk file in File Manager). To transfer files between your PC and your Sailfish device please [**see this document**](/Support/Help_Articles/Moving_Files_Between_PC_and_Sailfish_Device/).
+Another option to install .apk files is to first copy them to your device (e.g. to the Downloads folder) and then use the **File manager** application (Settings > Storage > User data, see the pulley menu) to install the file/application. Start the installation simply by tapping  the .apk file in File Manager. To transfer files between your PC and your Sailfish device, please [**see this document**](/Support/Help_Articles/Moving_Files_between_PC_and_Sailfish_Device/).
 
 [**File Browser**](/Support/Help_Articles/File_Browser/) app (available in Jolla Store) is another option for doing the same.
 
@@ -134,9 +136,10 @@ To read more about using the Aptoide app store in general, please [**see here**]
 If you are having troubles installing applications from .apk files, please follow the steps below:
 
 1. Ensure that you have Android AppSupport installed from the Jolla Store. Install if missing.
-2. Download and install any Android application from the Jolla Store. This mandatory step will initialize the Android AppSupport of your device so that it will be possible to install .apk files.
-3. Attempt installation of the file again. If this step didn't solve your problem, please keep reading:
-4. Attempt installing another application from .apk
+2. Ensure that you have enabled "Settings > System > Untrusted software > Allow untrusted software".
+3. Download and install any Android application from the Jolla Store. This mandatory step will initialize the Android AppSupport of your device so that it will be possible to install .apk files.
+4. Attempt installation of the file again. If this step didn't solve your problem, please keep reading:
+5. Attempt installing another application from .apk
 
 If you are successful in installing another application from .apk, it is likely that your .apk file is corrupted. Please try to obtain the file again from another source.
 
