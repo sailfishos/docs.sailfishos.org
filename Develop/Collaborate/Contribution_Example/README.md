@@ -8,13 +8,13 @@ nav_order: 100
 
 This document describes contribution example how to contribute the code:
 
-For this example, we will consider a hypothetical bug which affects the Sailfish Browser. A community member discovers that for some content-aggregator sites, the wrong User Agent string seems to be used when fetching content. These are the steps that should be taking in contributing a fix:
+For this example, we will consider a hypothetical bug which affects the Sailfish Browser. A community member discovers that for some content-aggregator sites, a wrong User Agent string seems to be used when fetching content. These are the steps that should be taken in contributing a fix:
 
-1\) An issue must be filed on <https://github.com/sailfishos/sailfish-browser/issues> with example issue template from above.
+1\) File a new issue using the [example issue template](/Develop/Collaborate/Issue_Report_Example/) to <https://github.com/sailfishos/sailfish-browser/issues>.
 
-2\) The issue is to be commented that the user will start investigating it.
+2\) Comment on the issue that you will start investigating it.
 
-3\) First place to look for the issue is the upstream code repository: <https://github.com/sailfishos/sailfish-browser>. In this case, a closer inspection reveals that the user that agent override behaviour is defined in code from the `embedlite-components-qt5` package.
+3\) First place to look for the issue is the upstream code repository: <https://github.com/sailfishos/sailfish-browser>. In this case, a closer inspection reveals that the user agent override behaviour is defined in code from the `embedlite-components-qt5` package.
 
 4\) To find the upstream repository for the `embedlite-components-qt5` package, the following command can be used on a Sailfish OS device: `rpm -qi embedlite-components-qt5 | grep URL`. The upstream repository URL in this case is <https://github.com/sailfishos/embedlite-components>.
 
@@ -25,7 +25,7 @@ For this example, we will consider a hypothetical bug which affects the Sailfish
 7\) Build the package with sfdk. In this example, the build fails to locate some build time dependencies:
 ```nosh
 # cd into the local clone dir
-~ $ cd alice-embedlite-components
+~ $ cd username-embedlite-components
 
 # attempt to build the package for SailfishOS-4.3.0.12-armv7hl target
 ~/username-embedlite-components $ sfdk config target=SailfishOS-4.3.0.12-armv7hl
@@ -61,7 +61,7 @@ Description    : abzaza
   Development files for xulrunner.
 ```
 
-9\) The package comes from the "jolla" repository. This repository needs to be enabled in the build environment as it is suggested in [Enabling Additional Package Repositories](/Tools/Sailfish_SDK/Building_packages/#enabling-additional-package-repositories):
+9\) The package comes from the "jolla" repository. This repository needs to be enabled in the build environment as suggested in [Enabling Additional Package Repositories](/Tools/Sailfish_SDK/Building_packages/#enabling-additional-package-repositories):
 ```nosh
 ~/username-embedlite-components $ sfdk tools exec SailfishOS-4.3.0.12-armv7hl
 
@@ -75,7 +75,7 @@ Disabled repositories (global, might be overridden by user config):
  - jolla ... https://releases.jolla.com/releases/4.3.0.12/jolla/armv7hl/
 ## snipped ##
 
-# Enables the repository.
+# Enable the repository.
 [SailfishOS-4.3.0.12-armv7hl] ~ # ssu er jolla
 
 # Refresh the available package list from "jolla" repository
@@ -101,9 +101,9 @@ Disabled repositories (global, might be overridden by user config):
 
 11\) Reboot the device and open the browser to test that it still works. After this the development on the fork can start. First create a new branch for the changes `git checkout -b user_agent_fixes` and then the changes and debug statements can be added. Compile the package and deploy it to the device. Before using the modified browser, open up a terminal to see logging output from the journal with `devel-su journalctl -af | grep browser`.
 
-12\) After the issue is resolved and the fixes are committed locally, the commits need to be pushed to the personal fork. Next a pull request to the upstream repository is to be created. This will look something like <https://github.com/sailfishos/embedlite-components/pull/14>
+12\) After the issue is resolved and the fixes are committed locally, the commits need to be pushed to the personal fork. Next, a pull request to the upstream repository is to be created. This will look something like <https://github.com/sailfishos/embedlite-components/pull/14>
 
-13\) After the work is complete update the issue report with the findings, and a link to the pull request.
+13\) After the work is complete, update the issue report with the findings and add a link to the pull request.
 
 14\) After receiving review comments, the commit is to be updated with `git commit --amend <changed_file>`. Then force push the branch to the personal fork via `git push origin master:master --force`. Add a comment into the merge request about the updates.
 
