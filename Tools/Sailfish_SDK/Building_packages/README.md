@@ -186,22 +186,6 @@ Basically how it works is that each line that has the `[ ]` is added to the chan
 
 This line does not need to be the first line in the git commit message and there can be multiple lines within one git commit message.
 
-The **SHORT** description is any descriptive word like "backend" or "UI" or "bluetooth". Long description describes the change in plain English and shall contain a reference to a bug.
+The **SHORT** description is any descriptive word like "backend" or "UI" or "bluetooth". Long description describes the change in plain English. To help the maintainer and the reviewers, describe the change well in the long description and use appropriate **SHORT** tags in the commit. If the contribution touches many locations inside the project, it might be good idea to have them as separate commits and use more scoped **SHORT** tags to make the contribution clearer.
 
-There are couple of ways to refer bugs in the git commit messages
-
-| Commit suffix           |                                                                                                                                                                                                                                                                                                                            |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contributes to xyz#123  | Means that this change contributes to the referred bug number, but does not fully fix it yet. This kind of lines are usually used when the required fixes to one bug are needed across multiple packages or for example the fix improves the issue, but there might still be some corner case that it might be reproduced. |
-| Fixes xyz#124           | Means that this change fixes the bug.                                                                                                                                                                                                                                                                                      |
-
-Currently known and accepted bug tags for the above **xyz** are:
-
-| Tag  |                                                                                 |
-| ---- | ------------------------------------------------------------------------------- |
-| MER  | Bugs referring to old Mer infrastructure. (Obsolete)                            |
-| NEMO | Bugs referring to old Nemo infrastructure. (Obsolete)                           |
-| JB   | For bugs in internal Jolla Bugzilla                                             |
-| TJC  | To reference issues listed in [together](https://together.jolla.com) (Obsolete) |
-
-These lines are picked to the changelog based on tags, meaning that between two tags all the lines that are following the format are picked up and added to the changelog.
+The maintainer will either use squash commit or any other suitable method to define the correct **SHORT** description for the merge, as well as to add a suitable bug reference in the format that is used only internally.
