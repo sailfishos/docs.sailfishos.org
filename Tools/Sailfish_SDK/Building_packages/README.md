@@ -188,4 +188,6 @@ This line does not need to be the first line in the git commit message and there
 
 The **SHORT** description is any descriptive word like "backend" or "UI" or "bluetooth". Long description describes the change in plain English. To help the maintainer and the reviewers, describe the change well in the long description and use appropriate **SHORT** tags in the commit. If the contribution touches many locations inside the project, it might be good idea to have them as separate commits and use more scoped **SHORT** tags to make the contribution clearer.
 
+Select an appropriate **SHORT** tag from the ones that have been already used within the project. Project **SHORT** tags can be searched, for example, with: `git log --oneline path/to/source.c` that shows only the commit titles.
+
 The maintainer will either use squash commit or any other suitable method to define the correct **SHORT** description for the merge, as well as to add a suitable bug reference in the format that is used only internally.
