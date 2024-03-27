@@ -192,4 +192,53 @@ Above combines three different endurance data sets and generates *index.html* an
 xdg-open index.html
 ```
 
+# Static code analysis with Coverity®
 
+Coverity® is a static code analysis tool developed by the Synopsys company. It is also available through the service called [Coverity Scan](https://scan.coverity.com/), offered free of charge to open source projects.
+
+This section describes how the Coverity Scan service can be used with Sailfish SDK for C/C++ code analysis.
+
+Start by downloading the Linux32 version of the [Coverity Scan Build Tool](https://scan.coverity.com/download). Choose the Linux32 version no matter what your host or target platform is. Unpack the downloaded archive somewhere under your Sailfish SDK workspace (this defaults to your home directory).
+
+Static analysis with Coverity Scan is essentially a two step process from its user point of view. First the Coverity Scan Build Tool is used to capture the source code in an intermediate format, accompanied with information on how it is built. The captured data are then submitted for the actual analysis by the Coverity Scan service.
+
+The most convenient way to accomplish the first step is by using the `cov-build` tool, available from the `bin` subdirectory of the downloaded archive. Compared to the [alternative ways](https://sig-product-docs.synopsys.com/bundle/coverity-docs/page/coverity-analysis/topics/build_capture_for_compiled_languages.html), it works by intercepting calls to the compiler as it is invoked by the build system during a regular build process.
+
+There is one issue with the `cov-build` tool though. It has the bad habit of polluting `stdout` with its informal messages, which prevents its use deeper in the build stack. Work this around by creating a wrapper script for `cov-build` and use this wrapper in next steps instead.
+
+```
+cat > path/to/cov-analysis-linux-2023.6.2/bin/cov-build.sh <<END
+#!/bin/sh
+real=${0%.sh}
+exec "$real" 3>&1 >&2 --dir cov-int sh -c 'exec >&3 "$@"' - "$@"
+END
+
+chmod +x path/to/cov-analysis-linux-2023.6.2/bin/cov-build.sh
+```
+
+The wrapper redirects the `stdout` to `strerr` just in case of `cov-build` itself, preserving the `stdout` of the actual build command intact. For simplicity it also directly passes all required options to `cov-build`. Otherwise the arguments in `$@` would have to be processed by the script and those intended for `cov-build` separated from those intended for the actual build command. Here the arguments are `--dir cov-int`, instructing `cov-build` to store its outputs in the `cov-int` directory (this name is forced by the Coverity Scan service). You can add more arguments according to your needs.
+
+Wrapped this way, `cov-build` can be used with Sailfish SDK as in the following example:
+
+```
+cd my-package
+sfdk qmake
+sfdk -c build-shell.args='../path/to/cov-analysis-linux-2023.6.2/bin/cov-build.sh' make
+```
+
+In this example a `qmake`-based package is used. The build steps are invoked separately in order to limit the parts of the build process that will be intercepted by `cov-build`. It is not desired to, e.g., capture sources that may get built during the "configure" phase. Just those `sfdk` invocations with `build-shell.args` set as in the example will have compiler calls intercepted by `cov-build`.
+
+Not all packages have their RPM SPEC files in a shape that allows invoking the required build steps separately as in the example. Some random hints follows on what are the options to deal with those.
+
+- Invoke build commands manually with `sfdk build-shell`, setting `build-shell.args` as in the above example only when desired.
+- Change unconditional `./configure` invocations to `if [ ! -e .configured ]; then ./configure; touch .configured; fi` so that the configuration phase is skipped on subsequent `sfdk make` invocations.
+- Combined with the previous hint, `sfdk qmake` can be used also with non-qmake based project as a trick to skip any `make` (without "q") invocation.
+- The `COVERITY_LD_PRELOAD` environment variable can be test for its presence as a sign of `cov-build`-intercepted execution
+
+After successful execution, the captured sources reside in the `cov-int` directory. Pack it into an archive and submit for analysis. The name of the directory is forced by the Coverity Scan service. The archive may be named arbitrarily.
+
+```
+tar -cjf my-package.tar.bz2 cov-int
+```
+
+More information can be found in the [manual page](https://sig-product-docs.synopsys.com/bundle/coverity-docs/page/commands/topics/cov-build.html) of `cov-build`, on the previously mentioned [download](https://scan.coverity.com/download) page of the Coverity Scan Build Tool or in the comprehensive [Coverity documentation](https://sig-product-docs.synopsys.com/bundle/coverity-docs/page/webhelp-files/help_center_start.html).
