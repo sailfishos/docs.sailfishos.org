@@ -8,7 +8,7 @@ nav_order: 100
 
 This document describes contribution example how to contribute the code:
 
-For this example, we will consider a hypothetical bug which affects the Sailfish Browser. A community member discovers that for some content-aggregator sites, a wrong User Agent string seems to be used when fetching content. These are the steps that should be taken in contributing a fix:
+For this example, we will consider a hypothetical bug which affects the Sailfish Browser. A community member discovers that for some content-aggregator sites, a wrong User Agent string seems to be used when fetching the content. These are the steps that should be taken in contributing a fix:
 
 1\) File a new issue using the [example issue template](/Develop/Collaborate/Issue_Report_Example/) to <https://github.com/sailfishos/sailfish-browser/issues>.
 
@@ -87,7 +87,7 @@ Disabled repositories (global, might be overridden by user config):
 # Success! The missing package was found now
 ```
 
-10\) Now that the package is successfully built the package can be deployed:
+10\) Now that the package is successfully built it can be deployed:
 ```nosh
 # Use the name of the registered device in the Sailfish IDE, here "my device"
 ~/username-embedlite-components $ sfdk config device="my device"
@@ -105,6 +105,6 @@ Disabled repositories (global, might be overridden by user config):
 
 13\) After the work is complete, update the issue report with the findings and add a link to the pull request.
 
-14\) After receiving review comments, the commit is to be updated with `git commit --amend <changed_file>`. Then force push the branch to the personal fork via `git push origin master:master --force`. Add a comment into the merge request about the updates.
+14\) After receiving review comments, the commit is to be updated with `git commit --amend <changed_file>`. Then force push the branch to the personal fork via `git push origin user_agent_fixes --force`. Add a comment into the merge request about the updates.
 
-15\) The maintainer merges the patch, tags it, and comments on the original bug report the tagged version which should be in a future release.
+15\) The maintainer merges the patch and tags it. Then the original bug report is commented that the tagged version will be in a future release.
