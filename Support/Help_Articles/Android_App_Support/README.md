@@ -25,17 +25,7 @@ Android apps are installed in the internal storage of a phone. Installing apps o
 After installing Android apps, the folder ```/home/.android/data/data``` shows all of your installed Android apps. The folder ```/home/defaultuser/android_storage/Android/data/``` contains the data meaningful to you in various Android apps.
 
 ## Installing applications from application stores
-The SailfishOS operating system of Jolla supports Android apps that are featured in the Jolla Store and in Jolla-certified app partner stores.
-
-We recommend first checking what is available in **[Aptoide Store](/Support/Help_Articles/Android_App_Support/Aptoide/)**. This is our Android apps store by Aptoide, available in the Jolla Store app (in category Marketplaces). After installing this app, it appears simply as **"Aptoide"** at the Sailfish apps grid.
-
-<div class="flex-images" markdown="1">
-
-* <a href="aptoide3.png" class="narrow-image"><img src="aptoide3.png" alt="Apptoide"></a>
-  <span class="md_figcaption">
-    Apptoide app at the app grid
-  </span>
-</div>
+The SailfishOS operating system of Jolla supports Android apps that are featured in the Jolla Store.
 
 There are also other Android app stores (see examples below), some of which we have tried out, and it is possible to download these stores to your Sailfish device and install apps from there.
 Some examples of other app stores:
