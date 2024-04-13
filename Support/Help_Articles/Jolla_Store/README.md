@@ -32,7 +32,7 @@ You need to have added a Jolla Account to your phone to use the Store. Instructi
   </span>
 </div>
 
-* At the bottom of this page there is a coarse ranking by the content: Apps, Games, Jolla and Marketplaces. Marketplaces has application stores (e.g. Aptoide) for getting [**Android apps**](/Support/Help_Articles/Android_App_Support/).
+* At the bottom of this page there is a coarse ranking by the content: Apps, Games, Jolla and Marketplaces. Marketplaces has application stores (e.g. F-Droid) for getting [**Android apps**](/Support/Help_Articles/Android_App_Support/).
 
 <div class="flex-images" markdown="1">
 
