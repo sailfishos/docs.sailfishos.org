@@ -70,7 +70,7 @@ _Sailfish OS devices just like any other electrical devices require maintenance
 1.  Update the **Sailfish OS** operating system to its latest version. New versions bring new features to your Sailfish device and fix problems observed on earlier versions. The latest available version is the best. **[This article](/Support/Help_Articles/Updating_Sailfish_OS/)** tells how to update the OS. The device attempts to optimize the storage space before downloading an update; however, this may not work if there is no more space left for the optimization! Please follow the guidelines in step 5 below.
 
 
-2.  Update the **applications** you have installed. Jolla Store will send reminders to your device - they appear on the **[Events View](https://sailfishos.org/design/ux-framework/)**. Update your Android apps in the respective application stores (e.g. Aptoide).
+2.  Update the **applications** you have installed. Jolla Store will send reminders to your device - they appear on the **[Events View](https://sailfishos.org/design/ux-framework/)**. Update your Android apps in the respective application stores (e.g. F-Droid).
 
 
 3.  Uninstall apps that you do not really use.
