@@ -37,12 +37,11 @@ We recommend first checking what is available in **[Aptoide Store](/Support/Help
   </span>
 </div>
 
-There are also other Android app stores (see examples below), some of which we have tried out, and it is possible to download these stores to your Sailfish device and install apps from there.
-Some examples of other app stores:
+There are also other Android app stores (see examples below) we have tried out, whose client apps can be installed on your Sailfish device to download and install Android apps.
 
 * APKpure  (see this [**help article**](/Support/Help_Articles/Android_App_Support/APKPure/))
-* [**F-Droid**](https://f-droid.org/en/) (can be installed from Marketplaces of Jolla Store)
-* Aurora Store (can be installed from F-Droid)
+* [**F-Droid**](https://f-droid.org/en/) client app (can be installed from category "Marketplaces" of Jolla Store)
+* [Aurora Store app](https://f-droid.org/en/packages/com.aurora.store/) (can be installed from F-Droid)
 * [**Amazon**](https://www.amazon.com/gp/mas/get/amazonapp)
 
 ### Note regarding the Google Play Store
