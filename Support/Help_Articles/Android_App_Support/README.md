@@ -43,7 +43,6 @@ Some examples of other app stores:
 * APKpure  (see this [**help article**](/Support/Help_Articles/Android_App_Support/APKPure/))
 * [**F-Droid**](https://f-droid.org/en/) (can be installed from Marketplaces of Jolla Store)
 * Aurora Store (can be installed from F-Droid)
-* [**Amazon**](https://www.amazon.com/gp/mas/get/amazonapp)
 
 ### Note regarding the Google Play Store
 Sailfish OS does not support the Google Play store, because it relies on Google's proprietary background services only found on Android devices running Google's Android. We always advise against installing Google Services on SailfishOS, as it is known to potentially cause different problems.
