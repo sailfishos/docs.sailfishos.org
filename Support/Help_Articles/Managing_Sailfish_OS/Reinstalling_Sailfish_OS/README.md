@@ -217,7 +217,7 @@ First, you will see a reminder of an unlocked boot loader, which you can ignore.
 
 Sign in to your **[Jolla account](/Support/Help_Articles/Accounts_Setup/Setup_Jolla_Account/)** in order to get the Android AppSupport and other licensed content. The Jolla account must be the same as you used when purchasing the Sailfish X licence.
 
-Next, you can install more **Sailfish apps** from the **[Jolla store](/Support/Help_Articles/Jolla_Store/)**  and **[Android apps](/Support/Help_Articles/Android_App_Support/)** from stores like **[APKPure](/Support/Help_Articles/Android_App_Support/APKPure/)** or **[Aptoide](/Support/Help_Articles/Android_App_Support/Aptoide/)**.
+Next, you can install more **Sailfish apps** from the **[Jolla store](/Support/Help_Articles/Jolla_Store/)** and **Android apps** from their **[respective app stores](/Support/Help_Articles/Android_App_Support/)**.
 
 ----
 
