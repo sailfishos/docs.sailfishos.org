@@ -41,14 +41,14 @@ Open the Jolla Store app on the phone and install some of these applications fro
 
 # Install Android app store(s)
 
-The Sailfish OS operating system of Jolla supports Android apps that are featured in the Jolla Store and in Jolla-certified app partner stores. More information can be found from [here](/Support/Help_Articles/Android_App_Support/#installing-applications-from-application-stores). Note that Settings > Untrusted software needs to be enabled in order to install these.
-* APKPure, more information and how to install APKPure can be found from [this separate document about APKPure](/Support/Help_Articles/Android_App_Support/APKPure/)
-* [Aurora Store](https://auroraoss.com)
+The Sailfish OS operating system of Jolla supports Android apps that are featured in the Jolla Store and from other Android app stores. More information can be found from [here](/Support/Help_Articles/Android_App_Support/#installing-applications-from-application-stores).
 
 # Install Android apps
 
 Install some popular Android apps, for example:
 * [WhatsApp](/Support/Help_Articles/Whatsapp_Setup/)
+* Firefox mobile
+* Bromite (a privacy-enhanced Google Chrome variant)
 * Opera Mini
 * Instagram
 * Spotify
