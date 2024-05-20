@@ -46,7 +46,7 @@ Some examples of other app stores:
 * [**Amazon**](https://www.amazon.com/gp/mas/get/amazonapp)
 
 ### Note regarding the Google Play Store
-Sailfish OS does not support the Google Play Store client app, because it relies on the proprietary Google Play Services, which are preinstalled on Android devices running Google's Android. We strongly advise against installing the Google Play Services on Sailfish OS, as they are known to cause various issues. But the Google Play Store can be accessed by the aforementioned Aurora Store app, which does not rely on the Google Play Services.
+Sailfish OS does not support the Google Play Store client app, because it relies on the proprietary Google Play Services, which are preinstalled on Android devices running Google's Android. We strongly advise against installing the Google Play Services on Sailfish OS, as they are known to cause various issues; this also applies to "[Open GApps](https://github.com/opengapps/opengapps/wiki/FAQ#1-what-are-gapps)", because they comprise Google Play Services, Play Store etc. But the Google Play Store can be accessed by the aforementioned Aurora Store app, which does not rely on the Google Play Services.
 
 Applications that report to require Google Play Services may work entirely or partially regardless of such a disclaimer; on the other hand, it may be impossible to install or sucessfully run some Android apps without them. Advanced Sailfish OS users may resort to installing MircoG, an Open Source Software replacement for the Play services, see [this community contributed guide](https://forum.sailfishos.org/t/installing-microg-on-sailfish-os/14375).
 
