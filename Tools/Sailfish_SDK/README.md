@@ -41,9 +41,9 @@ Offline installers allow Sailfish SDK installation with VirtualBox-based build e
 
 You can get the SDK updates approximately a week or two earlier, if you start using the Early Access repository. This can be useful for e.g. testing the new SDK features before the final Sailfish SDK release. Check out for more information from the [Early Access SDK page](/Tools/Sailfish_SDK/Early_Access).
 
-### EA Build Targets
+### EA Build Targets and Emulator
 
-You can get the build target updates approximately a week earlier, if you install an Early Access build target or targets into your SDK. This can be useful for e.g. testing your apps before the official public Sailfish OS release. Check out for more information about the [Early Access Build Targets](/Tools/Sailfish_SDK/Early_Access#early-access-build-targets).
+You can get build target and emulator updates for the upcoming Sailfish OS release approximately a week earlier, if you install the corresponding Early Access components into your SDK. This can be useful for e.g. testing your apps before the official public Sailfish OS release. Check out for more information about the [Early Access Build Targets and Emulator](/Tools/Sailfish_SDK/Early_Access#early-access-build-targets-and-emulator).
 
 ## Guides
 
