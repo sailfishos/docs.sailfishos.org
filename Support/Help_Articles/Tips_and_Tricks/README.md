@@ -187,9 +187,9 @@ Choose which way you like it better.
 
 Sailfish Utilities is a collection of tools for healing a Sailfish device which does not perform well. The tools are designed to help if your device feels sluggish, it's running out of disk space or you're experiencing problems with connectivity.
 
-You can install Utilities from **[Jolla Store](/Support/Help_Articles/Jolla_Store/)**. Search for **Sailfish Utilities** in the Store. After having been installed it appears near the end of the page "Settings > System" by the name **Utilities** (i.e., there is no app icon at the app grid for it).
+You can install Utilities from the **[Jolla Store](/Support/Help_Articles/Jolla_Store/)**. Search for **Sailfish Utilities** in the Store. After having been installed it appears near the end of the page "Settings > System" by the name **Utilities** (i.e., there is no app icon at the app grid for it).
 
-Utilities have the following tools currently (this order of items is from OS release 4.5.0):
+Utilities have the following tools currently (this is the order of items on the OS release 4.6.0):
 
 <div class="flex-images" markdown="1">
 
@@ -212,31 +212,33 @@ Utilities have the following tools currently (this order of items is from OS rel
 
 ## Restart network connections
 
-This tool initializes the WLAN and mobile data networks. You need not restart the device, so do not tap on _Restart now_ button but at the lower (empty) part of the display.
+This tool initializes the WLAN and mobile data networks.
 
 _Issues that might get solved by running this utility:_
 
-* If you get constant notifications of connecting to either Mobile Data or WLAN, even you are already connected to a network
+* If you get constant notifications of connecting to either Mobile Data or WLAN, even if you are already connected to a network
 * You've noticed an exclamation mark ("!") on your Mobile Data and/or WLAN connection indicator in the **[Lock Screen](https://sailfishos.org/design/ux-framework/)**
 * Apps report you being offline even though you are connected to the Internet.
 
+## Restart the keyboard
 
+This tool is used to give a new start for the keyboard if it behaves incorrectly or becomes unresponsive.
 
 ## Restart the Home screen
 
-
 This useful tool can be used if an application gets stuck or can't be launched.
-
 
 ## Restart the fingerprint service
 
 If your valid fingerprints saved to the device are no more recognised, it may help to restart the fingerprint service.
 
+## Restart the audio service
+
+If the phone has lost audio, i.e., no voice or music can be heard, this tool may help.
 
 ## Restart the Bluetooth service
 
 If there are problems with detecting nearby Bluetooth devices or with connecting to them it is worth trying to restart the Bluetooth service.
-
 
 ## Fix the package cache
 
@@ -245,7 +247,7 @@ If there are problems with installing and managing apps from the Jolla Store the
 _Issues that this utility might solve:_
 
 * If you can't install apps from the Jolla Store and might receive a "Problem with Store - Critical problem with the app registry" message
-* If your "My Apps" section in Jolla Store is empty
+* If your "My Apps" section in the Jolla Store is empty
 * You can't uninstall applications using the Jolla Store.
 
 
