@@ -15,7 +15,7 @@ If your Xperia is not starting up normally or not starting up at all, you can at
 * [**Jolla Tablet**](https://jolla.zendesk.com/hc/en-us/articles/208406917) 
 
 # What is the Recovery Mode?
-**Recovery Mode** is a tool designed to help your device recover from critical errors. It is somewhat "hidden" because you are not meant to have to use it except in case of a rare device malfunction. To use it successfully you need a MicroSD card on your device.
+**Recovery Mode** is a tool designed to help your device recover from critical errors. It is somewhat "hidden" because you are not meant to have to use it except in case of a rare device malfunction. To use it successfully you may need a MicroSD card on your device.
 
 Recovery Mode is considered a last resort and should be used only if there is no other way. It is a powerful tool and using it always means that your data on the device is at risk. Please read the instructions in this article carefully.
 
@@ -46,8 +46,10 @@ If you have questions about Recovery Mode, you can raise those at the [**Sailfis
 4. Force your Xperia 10 II or Xperia 10 III to the fastboot mode:
 	* Hold the Volume Up key down and connect a data-connected USB cable (a charging cable would not work)
 	* Ensure that the LED at the top of the display area is lit in BLUE colour (if not, disconnect the cable, release the key and try again)
-5. You will need the same version of hybris-recovery.img as belongs to the Sailfish OS version of your phone currently. If you have updated your phone to the latest release then download the latest Sailfish OS image from [**Jolla Shop**](https://shop.jolla.com/downloads/). The downloaded package contains the matching hybris-recovery.img. If you happen to have an older OS release on the phone get the hybris-recovery.img from the installation directory of that release. If you do not have it on your computer, [**contact us**](https://jolla.zendesk.com/hc/en-us/requests/new).
+5. You will need the same version of hybris-recovery.img as belongs to the Sailfish OS version of your phone currently. If you have updated your phone to the latest release then download the latest Sailfish OS image from [**Jolla Shop**](https://shop.jolla.com/downloads/). The downloaded package contains a matching **hybris-recovery.img (*)**. If you happen to have an older OS release on the phone get the hybris-recovery.img from the installation directory of that release. If you do not have it on your computer, [**contact us**](https://jolla.zendesk.com/hc/en-us/requests/new).
 6. The following commands will enable the Recovery Mode (the BLUE LED should be lit at this point)
+
+**(*) NOTE:** As the hybris-recovery image of the OS release 4.6.0 does not work correctly, we advice you to use the recovery image of the OS release 4.5.0 instead, [available here](https://releases.sailfishos.org/images/4.5.0.25/).
 
 On Windows:
 ```
@@ -85,10 +87,12 @@ Disconnect the USB cable.
     * Hold the Volume Up key down and connect the data-connected USB cable
     * Ensure that the LED at the top of the display area is lit in BLUE colour
       _(if not, disconnect the cable, release the key and try again)_
-5. You will need the same version of `hybris-recovery.img` as belongs to the Sailfish OS version of your phone currently. In other words, if you have updated OS version 4.3.0 (say) to your phone, then you should use the hybris-recovery.img of OS version 4.3.0. To ensure this, download the latest Sailfish OS image from [**Jolla Shop**](https://shop.jolla.com/downloads/) (provided that you have updated your phone to the latest).  Unzip the archive and observe the hybris-recovery.img file in it.
+5. You will need the same version of `hybris-recovery.img` as belongs to the Sailfish OS version of your phone currently **(#)**. In other words, if you have updated OS version 4.3.0 (say) to your phone, then you should use the hybris-recovery.img of OS version 4.3.0. To ensure this, download the latest Sailfish OS image from [**Jolla Shop**](https://shop.jolla.com/downloads/) (provided that you have updated your phone to the latest).  Unzip the archive and observe the hybris-recovery.img file in it.
 6. Open the Terminal app on your computer. Proceed to the directory where you have the hybris-recovery.img file.
 7. The following command will enable the Recovery Mode (the BLUE LED should be lit at this point)
-      
+
+**(#) NOTE:** As the hybris-recovery image of the OS release 4.6.0 does not work correctly, we advice you to use the recovery image of the OS release 4.5.0 instead, [available here](https://releases.sailfishos.org/images/4.5.0.25/).
+
 On Windows:
 ```
 fastboot boot hybris-recovery.img
