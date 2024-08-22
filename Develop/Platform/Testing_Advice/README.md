@@ -194,6 +194,8 @@ xdg-open index.html
 
 # Static code analysis with Coverity®
 
+*(This section contains instructions applicable with Sailfish SDK 3.11 and newer)*
+
 Coverity® is a static code analysis tool developed by the Synopsys company. It is also available through the service called [Coverity Scan](https://scan.coverity.com/), offered free of charge to open source projects.
 
 This section describes how the Coverity Scan service can be used with Sailfish SDK for C/C++ code analysis.
