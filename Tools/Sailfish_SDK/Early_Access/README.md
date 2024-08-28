@@ -34,7 +34,7 @@ The early access build targets and emulator will be released in sync with the ea
 
 If you have installed early access build targets or emulators, you will get an update notification under the Sailfish IDE automatically when a newer early access release is available.
 
-Please, remember, that the Early Access build targets should not be used for submitting apps to the Jolla Harbour. For that purpose, you should always use the latest non-EA (`SailfishOS-latest-armv7hl` or `SailfishOS-latest-i486`) build targets.
+Please, remember, that the Early Access build targets should not be used for submitting apps to the Jolla Harbour. For that purpose, you should always use the latest non-EA (`SailfishOS-latest-<arch>`) build targets.
 
 ## Latest Early Access SDK Release
 
