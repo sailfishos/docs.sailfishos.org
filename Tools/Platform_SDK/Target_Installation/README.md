@@ -19,9 +19,16 @@ The shorter terms "build tools", "(build) tooling(s)" and "(build) target(s)" ar
 
 Single build tooling is required to enable development for a particular Sailfish OS version, accompanied with one or more build targets for each target HW architecture to support.
 
-## Installing SDK Target and Tooling Tarballs
+## Installing SDK Targets and Tooling Tarballs
 
-The latest public releases of build target and tooling images can be found here: <https://releases.sailfishos.org/sdk/targets/>
+Build targets and tooling images matching the latest public releases of Sailfish OS can be downloaded through the following links:
+
+* [Sailfish_OS-latest-Sailfish_SDK_Tooling-i486.tar.7z](https://releases.sailfishos.org/sdk/targets/Sailfish_OS-latest-Sailfish_SDK_Tooling-i486.tar.7z) ([md5](https://releases.sailfishos.org/sdk/targets/Sailfish_OS-latest-Sailfish_SDK_Tooling-i486.tar.7z.md5sum))
+* [Sailfish_OS-latest-Sailfish_SDK_Target-aarch64.tar.7z](https://releases.sailfishos.org/sdk/targets/Sailfish_OS-latest-Sailfish_SDK_Target-aarch64.tar.7z) ([md5](https://releases.sailfishos.org/sdk/targets/Sailfish_OS-latest-Sailfish_SDK_Target-aarch64.tar.7z.md5sum))
+* [Sailfish_OS-latest-Sailfish_SDK_Target-armv7hl.tar.7z](https://releases.sailfishos.org/sdk/targets/Sailfish_OS-latest-Sailfish_SDK_Target-armv7hl.tar.7z) ([md5](https://releases.sailfishos.org/sdk/targets/Sailfish_OS-latest-Sailfish_SDK_Target-armv7hl.tar.7z.md5sum))
+* [Sailfish_OS-latest-Sailfish_SDK_Target-i486.tar.7z](https://releases.sailfishos.org/sdk/targets/Sailfish_OS-latest-Sailfish_SDK_Target-i486.tar.7z) ([md5](https://releases.sailfishos.org/sdk/targets/Sailfish_OS-latest-Sailfish_SDK_Target-i486.tar.7z.md5sum))
+
+Images corresponding to other releases, including the Early Access release, may be found on the [full list](https://releases.sailfishos.org/sdk/targets/).
 
 Use the sdk-assistant tool within Sailfish Platform SDK to create new targets and toolings from the downloaded images:
 ```nosh
