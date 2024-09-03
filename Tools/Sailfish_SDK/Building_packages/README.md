@@ -119,7 +119,10 @@ In some cases, you will not want to build an entire package (.rpm) to install, b
 
 In this case, you simply need to invoke the build commands directly from within the build environment. For example, to build a simple Qt-based project (located under `~/test/` of the host) the following steps could be taken:
 ```nosh
-~ $ cd ~/test && sfdk build-shell qmake && sfdk build-shell make
+~ $ cd ~/test
+~ $ sfdk build-init
+~ $ sfdk build-shell qmake
+~ $ sfdk build-shell make
 ```
 
 The resulting binary can be copied to the device with `scp` and executed directly.
