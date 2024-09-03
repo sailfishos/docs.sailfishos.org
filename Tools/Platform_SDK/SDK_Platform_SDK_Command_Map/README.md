@@ -27,6 +27,8 @@ As described in the other articles, it is possible to use either the Sailfish SD
 | Remove packages from tooling/target  | sdk-assistant package-remove  | sfdk tools package-remove   |
 | Execute maintenance commands         | sdk-assistant maintain        | sfdk tools exec             |
 |                                      | mb2 build-shell --maintain    | sfdk build-shell --maintain |
+|                                      | mb2 build-requires diff       | sfdk build-requires diff    |
+|                                      | mb2 build-requires reset      | sfdk build-requires reset   |
 
 
 ## Building Packages
