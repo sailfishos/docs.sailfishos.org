@@ -10,28 +10,28 @@ nav_order: 100
 
 The latest Sailfish SDK release can be downloaded for Linux, OS X and Windows platforms from below.
 
-### **Sailfish SDK 3.10**
+### **Sailfish SDK 3.11**
 
 | Linux                                                                                                                                 | macOS                                                                                                                         | Windows                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| [**SailfishSDK-3.10.4-linux64-online.run**](https://releases.sailfishos.org/sdk/installers/3.10.4/SailfishSDK-3.10.4-linux64-online.run) | [**SailfishSDK-3.10.4-mac-online.dmg**](https://releases.sailfishos.org/sdk/installers/3.10.4/SailfishSDK-3.10.4-mac-online.dmg) | [**SailfishSDK-3.10.4-windows-online.exe**](https://releases.sailfishos.org/sdk/installers/3.10.4/SailfishSDK-3.10.4-windows-online.exe) |
+| [**SailfishSDK-3.11.1-linux64-online.run**](https://releases.sailfishos.org/sdk/installers/3.11.1/SailfishSDK-3.11.1-linux64-online.run) | [**SailfishSDK-3.11.1-mac-online.dmg**](https://releases.sailfishos.org/sdk/installers/3.11.1/SailfishSDK-3.11.1-mac-online.dmg) | [**SailfishSDK-3.11.1-windows-online.exe**](https://releases.sailfishos.org/sdk/installers/3.11.1/SailfishSDK-3.11.1-windows-online.exe) |
 
 After downloading the SDK for your platform, please follow through with the [installation instructions](/Tools/Sailfish_SDK/Installation).
 
 ### Release Notes
 
-The release notes for this SDK release are available at [Sailfish OS Forum](https://forum.sailfishos.org/t/14301).
+The release notes for this SDK release are available at [Sailfish OS Forum](https://forum.sailfishos.org/t/19748).
 
 ### All Download Options
 
 | Filename                                                                                                                                | Size                    | MD5 Hash                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| [**SailfishSDK-3.10.4-linux64-online.run**](https://releases.sailfishos.org/sdk/installers/3.10.4/SailfishSDK-3.10.4-linux64-online.run)   | 29M (29628748 bytes)    | [**c4fde1a9b0b861829336df05f4ec8d13**](https://releases.sailfishos.org/sdk/installers/3.10.4/SailfishSDK-3.10.4-linux64-online.run.md5)  |
-| [**SailfishSDK-3.10.4-linux64-offline.run**](https://releases.sailfishos.org/sdk/installers/3.10.4/SailfishSDK-3.10.4-linux64-offline.run) | 1.9G (2029236527 bytes) | [**463c77c21a3fbe0923608e6ad916cc33**](https://releases.sailfishos.org/sdk/installers/3.10.4/SailfishSDK-3.10.4-linux64-offline.run.md5) |
-| [**SailfishSDK-3.10.4-mac-online.dmg**](https://releases.sailfishos.org/sdk/installers/3.10.4/SailfishSDK-3.10.4-mac-online.dmg)           | 12M (11816287 bytes)    | [**3e421e913e2907e47a3e7ff5882327a6**](https://releases.sailfishos.org/sdk/installers/3.10.4/SailfishSDK-3.10.4-mac-online.dmg.md5)      |
-| [**SailfishSDK-3.10.4-mac-offline.dmg**](https://releases.sailfishos.org/sdk/installers/3.10.4/SailfishSDK-3.10.4-mac-offline.dmg)         | 1.9G (1958631274 bytes) | [**52e30acfac9dad03fe4e860b21d2e3dd**](https://releases.sailfishos.org/sdk/installers/3.10.4/SailfishSDK-3.10.4-mac-offline.dmg.md5)     |
-| [**SailfishSDK-3.10.4-windows-online.exe**](https://releases.sailfishos.org/sdk/installers/3.10.4/SailfishSDK-3.10.4-windows-online.exe)   | 24M (25008329 bytes)    | [**932441963d89fb69dd37b5fdab314b04**](https://releases.sailfishos.org/sdk/installers/3.10.4/SailfishSDK-3.10.4-windows-online.exe.md5)  |
-| [**SailfishSDK-3.10.4-windows-offline.exe**](https://releases.sailfishos.org/sdk/installers/3.10.4/SailfishSDK-3.10.4-windows-offline.exe) | 1.8G (1930668073 bytes) | [**d00b81cebcbfb02da5821cd829c15f77**](https://releases.sailfishos.org/sdk/installers/3.10.4/SailfishSDK-3.10.4-windows-offline.exe.md5) |
+| [**SailfishSDK-3.11.1-linux64-online.run**](https://releases.sailfishos.org/sdk/installers/3.11.1/SailfishSDK-3.11.1-linux64-online.run)   | 29M (30408496 bytes)    | [**2305fc4658fc88a34eee32eb88abcfa4**](https://releases.sailfishos.org/sdk/installers/3.11.1/SailfishSDK-3.11.1-linux64-online.run.md5)  |
+| [**SailfishSDK-3.11.1-linux64-offline.run**](https://releases.sailfishos.org/sdk/installers/3.11.1/SailfishSDK-3.11.1-linux64-offline.run) | 2.1G (2240528607 bytes) | [**29ff20aa4496718a6c9daffcd3c8adf3**](https://releases.sailfishos.org/sdk/installers/3.11.1/SailfishSDK-3.11.1-linux64-offline.run.md5) |
+| [**SailfishSDK-3.11.1-mac-online.dmg**](https://releases.sailfishos.org/sdk/installers/3.11.1/SailfishSDK-3.11.1-mac-online.dmg)           | 12M (11840243 bytes)    | [**bc3c3be651b8ae3eeed0ad0295e26ffb**](https://releases.sailfishos.org/sdk/installers/3.11.1/SailfishSDK-3.11.1-mac-online.dmg.md5)      |
+| [**SailfishSDK-3.11.1-mac-offline.dmg**](https://releases.sailfishos.org/sdk/installers/3.11.1/SailfishSDK-3.11.1-mac-offline.dmg)         | 2.0G (2104320962 bytes) | [**61f37f813a6c7aebec48479ffbb316ec**](https://releases.sailfishos.org/sdk/installers/3.11.1/SailfishSDK-3.11.1-mac-offline.dmg.md5)     |
+| [**SailfishSDK-3.11.1-windows-online.exe**](https://releases.sailfishos.org/sdk/installers/3.11.1/SailfishSDK-3.11.1-windows-online.exe)   | 25M (25211084 bytes)    | [**4b05a93fe76284392e1729b7ae69f634**](https://releases.sailfishos.org/sdk/installers/3.11.1/SailfishSDK-3.11.1-windows-online.exe.md5)  |
+| [**SailfishSDK-3.11.1-windows-offline.exe**](https://releases.sailfishos.org/sdk/installers/3.11.1/SailfishSDK-3.11.1-windows-offline.exe) | 2.0G (2134264291 bytes) | [**b64cf64b7168e4504da194bcf768e913**](https://releases.sailfishos.org/sdk/installers/3.11.1/SailfishSDK-3.11.1-windows-offline.exe.md5) |
 
 Offline installers allow Sailfish SDK installation with VirtualBox-based build engine, latest build targets and latest emulator on hosts with limited network access.
 

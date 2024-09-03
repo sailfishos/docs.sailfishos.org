@@ -12,10 +12,8 @@ We provide a graphical installer to make it easy to setup the Sailfish SDK.
 
 Sailfish SDK functionality has been verified on the following systems:
 
-  - Ubuntu 20.04 64 bit (Sailfish SDK 3.10 and older)
   - Ubuntu 22.04 64 bit
   - Windows 10 64 bit
-  - macOS 10.15.7 (Sailfish SDK 3.10 and older)
   - macOS 13.6.7
     - Only Intel CPUs are supported. Apple silicon is not supported.
 
@@ -76,22 +74,7 @@ to the `~/.bash_profile` script under the MSYS2 shell and reopening the shell.
 
 ### Others
 
-#### libtinfo.so.5 (Sailfish SDK 3.10 and older; Linux only)
-
-In order to maintain compatibility with older Linux distributions, Sailfish SDK links to this library, which is usually not installed by default on more recent distributions:
-
-  - On Ubuntu 20.04 and 22.04, the package libtinfo5 must be installed
-  - On Fedora the package ncurses-compat-libs must be installed
-  - If you find no way to fix libtinfo.so.5 on your system, you may try creating it as a symbolic link to your system libncurses.so.5 (or even libncurses.so.6 or libtinfo.so.6)
-
-#### openssl 1.1 (Sailfish SDK 3.10 and older; Linux only)
-
-In order to maintain compatibility with older Linux distributions, Sailfish SDK links to this library, which may not be installed by default on more recent distributions:
-
-  - On Fedora the package openssl1.1 must be installed
-  - As Ubuntu 22.04 and later no longer ships openssl1.1, you have to install the package libssl1.1 from older Ubuntu release. You can download it from <https://packages.ubuntu.com/focal/amd64/libssl1.1/download>
-
-#### libcrypt.so.1 (Sailfish SDK 3.11 and newer; Linux only)
+#### libcrypt.so.1 (Linux only)
 
 In order to maintain compatibility with older Linux distributions, Sailfish SDK links to this library, which may not be installed by default on more recent distributions:
 

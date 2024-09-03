@@ -25,12 +25,12 @@ These are the known issues with the Sailfish SDK. If you have any questions, fee
   - In macOS /tmp directory cannot be used as alternate source directory.
   - Various warnings are produced by the QML static code checker for Sailfish.Silica types with the build targets matching a few Sailfish OS releases prior to 4.4.0.58, like `Could not resolve the prototype "SilicaItem" of "PageHeader". (M301)`
     - There is a [partial workaround](https://forum.sailfishos.org/t/resolve-error-in-qt-creator/9889/8).
-  - The Amber.Mpris QML module is not initially recognized by the IDE (SDK 3.9)
-    - This can be fixed by installing the `amber-qml-plugin-mpris` package under build targets using Options > Sailfish OS > Build Engine > Manage Build Targets… > Manage Packages
+  - Some QML modules are not initially recognized by the IDE
+    - This can be fixed by installing the corresponding package under build targets using Options > Sailfish OS > Build Engine > Manage Build Targets… > Manage Packages. All packages corresponding to QML APIs [enabled on Harbour](https://harbour.jolla.com/faq#QML_API) are installed by default and should not need any extra action in this respect.
   - Sailfish IDE may not find header files from packages added as dependencies via PKGCONFIG qmake variable.
     - This is often caused by "qmake system() behavior when parsing" option under Build Settings set to "Ignore". See the next item to learn about the drawbacks before changing it to "Run". (SDK 3.9+)
   - Qmake's system() function is ignored by the project parser under the default configuration.
-    - This is controlled by the "qmake system() behavior when parsing" option under Build Settings. (SDK 3.9+)
+    - This is controlled by the "qmake system() behavior when parsing" option under Build Settings.
     - It is ignored by default because it runs directly on host, not under the build environment as one would expect.
 
 
@@ -75,10 +75,6 @@ These are the known issues with the Sailfish SDK. If you have any questions, fee
 ### Debugging
 
   - GDB may crash occasionally when stepping into code.
-  - In order to maintain compatibility with older Linux distributions, Sailfish SDK links to this library, which is usually not installed by default on more recent distributions:
-    - On Ubuntu 20.04, the package libtinfo5 must be installed
-    - On Fedora the package ncurses-compat-libs must be installed
-    - If you find no way to fix libtinfo.so.5 on your system, you may try creating it as a symbolic link to your system libncurses.so.5 (or even libncurses.so.6 or libtinfo.so.6)
 
 ### General / Other
 
