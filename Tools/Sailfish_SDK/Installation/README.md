@@ -38,8 +38,8 @@ On Linux and Windows, both Oracle VM VirtualBox (version 4.1.18 or higher) and D
 
 For Sailfish OS Emulator, Oracle VM VirtualBox is needed regardless of the host platform.
 
-On Linux, you should install the virtualization platform packages supplied by your distribution. For example, on Ubuntu installing Docker happens simply with command `apt install docker.io`.
-On other operating systems, we recommend using installation packages from <http://www.virtualbox.org> or <https://docs.docker.com/get-docker/>.
+On Linux, you can usually install the virtualization platform packages supplied by your distribution. For example, on Ubuntu it is sufficient to install Docker with the command `apt install docker-buildx`.
+On other operating systems or in case of issues, we recommend using installation packages from <http://www.virtualbox.org> or <https://docs.docker.com/get-docker/>.
 
 A few hints on Docker installation:
 
