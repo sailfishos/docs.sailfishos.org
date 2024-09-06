@@ -51,7 +51,7 @@ b) Viewed from Android Support
 chroot /opt/alien /system/bin/logcat -v time > $MYHOME/android-logs.txt
 ```
 
-### Xperia XA2 and Xperia 10, Xperia 10 II and Xperia 10 III
+### Xperia XA2, Xperia 10, Xperia 10 II, Xperia 10 III, Xperia 10 IV, Xperia 10 V and Jolla C2
 
 a) Viewed from Sailfish OS
 

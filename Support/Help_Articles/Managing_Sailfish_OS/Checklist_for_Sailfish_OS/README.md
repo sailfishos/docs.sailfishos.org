@@ -9,9 +9,9 @@ nav_order: 1000
 
 # Introduction
 
-Our official instructions for installing Sailfish X are [**on this web page**](https://jolla.com/sailfishxinstall/). There are separate instructions for Windows, Linux and Mac computers. Furthermore, there is a different set of instructions for the Xperia X,  Xperia XA2, Xperia 10, Xperia 10 II, and Xperia 10 III.
+Our official instructions for installing Sailfish X (Sailfish OS) [^1] are [**on this web page**](https://jolla.com/sailfishxinstall/). There are separate instructions for Windows, Linux and Mac computers. Furthermore, there is a different set of instructions for the Xperia X, Xperia XA2, Xperia 10, Xperia 10 II, Xperia 10 III, Xperia 10 IV, and Xperia 10 V.
 
-Jolla Shop has a selection of **[Sailfish OS "images"](https://shop.jolla.com/downloads/)** for each **[supported device](/Support/Supported_Devices/)** model. An image means a binary package or a compressed file that contains the executable code of the Sailfish operating system and some tools needed for the installation. The images can be downloaded as zip packages from the Jolla Shop after purchasing the **[Sailfish X licence](/Support/Help_Articles/Sailfish_X_Licence/)**. You will need to sign in to the Shop for the download using the same Jolla account that you used for purchasing the licence.
+Jolla Shop has a selection of **[Sailfish OS "images"](https://shop.jolla.com/downloads/)** for each **[supported device](/Support/Supported_Devices/)** model. An image means a binary package or a compressed file that contains the executable code of the Sailfish operating system and some tools needed for the installation. The images can be downloaded as zip packages from the Jolla Shop after purchasing the **[Sailfish licence](/Support/Help_Articles/Sailfish_X_Licence/)**. You will need to sign in to the Shop for the download using the same Jolla account that you used for purchasing the licence.
 
 In brief, installing Sailfish can be done on a device connected to a computer with a USB cable. At the moment of connection, the device is forced to a special state, the _fastboot_ state. The computer shall have a directory holding the uncompressed Sailfish image.
 
@@ -28,7 +28,7 @@ Go through all chapters and ensure that you have done everything correctly.
 
 In this chapter, we prepare the computer for the flashing.
 
-The Android tool _fastboot_  is required for unlocking the _bootloader_ of the Xperia device and for flashing (installing) Sailfish OS [^1] to your device. An alternative operating system (like Sailfish) can only be installed and used when the bootloader is unlocked.
+The Android tool _fastboot_  is required for unlocking the _bootloader_ of the Xperia device and for flashing (installing) Sailfish OS to your device. An alternative operating system (like Sailfish) can only be installed and used when the bootloader is unlocked.
 
 The fastboot tool requires the fastboot driver to be able to work. Typically, Linux and Mac computers have this driver by default, while it must be installed to Windows. The following three chapters help installing the fastboot driver on different computers.
 
@@ -43,6 +43,8 @@ Usually, the Android tools are ok by default on Linux computers. The _fastboot_ 
 * [Xperia 10](https://jolla.com/install-sailfish-x-xperia-10-linux/#L10-3)
 * [Xperia 10 II](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-linux/#L10ii-3)
 * [Xperia 10 III](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-linux/#L10iii-3)
+* [Xperia 10 IV](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iv-on-linux/#L10iv-3)
+* [Xperia 10 V](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-v-on-linux/#L10v-3)
 
 There is some troubleshooting in chapter ["Troubleshooting the USB connection and fastboot mode"](#troubleshooting-the-usb-connection-and-fastboot-mode).
 
@@ -56,6 +58,8 @@ Next, install the support for the _fastboot_ by following these instructions:
 * [Xperia 10](https://jolla.com/sailfishx-xperia10-macos/#M10-3)
 * [Xperia 10 II](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-macos/#M10ii-3)
 * [Xperia 10 III](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-macos/#M10iii-3)
+* [Xperia 10 IV](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iv-on-macos/#M10iv-3)
+* [Xperia 10 V](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-v-on-macos/#M10v-3)
 
 There is some troubleshooting in chapter ["Troubleshooting the USB connection and fastboot mode"](#troubleshooting-the-usb-connection-and-fastboot-mode).
 
@@ -67,7 +71,7 @@ Windows PCs do not have the _fastboot_ tool nor the drivers installed by default
 
 Moreover, it has turned out that these drivers must be re-installed if you connect a different Xperia device to your PC.
 
-The phone must be connected to the computer in the _fastboot mode_ before the fastboot driver can be installed to Windows. Press and hold the Volume Up button and connect the USB cable between your phone and your computer. Wait for the LED to light up **blue** on the phone. If the LED turn green check the 1st item in ["Troubleshooting the USB connection and fastboot mode"](#troubleshooting-the-usb-connection-and-fastboot-mode).
+The phone must be connected to the computer in the _fastboot mode_ before the fastboot driver can be installed to Windows. Press and hold the Volume Up button and connect the USB cable between your phone and your computer. Wait for the indicator light to light up **blue** on the phone. If the light turns green check the 1st item in ["Troubleshooting the USB connection and fastboot mode"](#troubleshooting-the-usb-connection-and-fastboot-mode).
 
 Open the Windows **Device Manager** by pressing both the Windows button and the X button. Next, click Device Manager on the pop-up menu.
 
@@ -78,6 +82,9 @@ If the Device Manager shows "Android" under "Other devices" (see Picture 1 below
 * [Xperia 10](https://jolla.com/install-sailfish-x-xperia-10-windows/#W10-3)
 * [Xperia 10 II](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-windows/#W10ii-3)
 * [Xperia 10 III](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-windows/#W10iii-3)
+* [Xperia 10 IV](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iv-on-windows/#W10iv-3)
+* [Xperia 10 V](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-v-on-windows/#W10v-3)
+
 
 You will end up in the view shown in Picture 2. The new device **Sony sa0114** shall appear.
 
@@ -95,7 +102,7 @@ You will end up in the view shown in Picture 2. The new device **Sony sa0114** s
 
 **Note 1**: In contrast to Sony's instructions, _Android SDK_ needs not (should not) be installed on the PC.
 
-**Note 2**: There is no dedicated driver for Xperia XA2, Xperia 10, Xperia 10 II or Xperia 10 III devices. Instead, the same driver that is used for Xperia X devices works for all of these devices, too.
+**Note 2**: There is no dedicated driver for Xperia XA2, Xperia 10, Xperia 10 II, Xperia 10 III, Xperia 10 IV or Xperia 10 V devices. Instead, the same driver that is used for Xperia X devices works for all of these devices, too.
 
 **Note 3:** There is some troubleshooting in chapter ["Troubleshooting the USB connection and fastboot mode"](#troubleshooting-the-usb-connection-and-fastboot-mode).
 
@@ -131,13 +138,10 @@ A menu page should pop up. Tap "Service info > Configuration" and seek "Rooting 
     It is unfortunately not possible to install Sailfish on this device. You should contact your Sony dealer in this case. There is no point to continue reading this document.
     
 3) "_Bootloader unlock allowed: Yes_"<br />
-    Your next task is to **unlock the bootloader**. Do that by following chapter 7 of our Xperia 10 III instructions (use the 3 links below). _This approach is good for all Xperia devices (not just Xperia 10 III)- just select the correct phone model at the Sony website_.
-   * [Windows](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-windows/#W10iii-7) 
-   * [Linux](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-linux/#L10iii-7) 
-   * [Mac](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-macos/#M10iii-7)
+    Your next task is to **unlock the bootloader**. The detailed instructions are given in the next chapter.
 
 
-## This is how your Android device should look like when it is ready for installing Sailfish X
+## This is how your Android device should look like when it is ready for installing Sailfish OS
 
 The following pictures represent the phone when it is still running the Android operating system. Either you are just preparing the device for Sailfish OS, or else Sailfish OS did not work properly and you have reverted the device to Android using Sony's _Emma tool_ (see this **[document on reverting Xperia back to Android](/Support/Help_Articles/Reinstalling_Sailfish_OS/)** for a detailed approach).
 
@@ -145,9 +149,9 @@ The following pictures represent the phone when it is still running the Android 
 
 ### A) Settings > System > About phone
 
-Check the device model (Picture 3). All supported models are **[listed in this table](/Support/Supported_Devices/)**. Note that there are several different Sailfish X images (read: installation packages) for the various models. Be sure to download the one matching your device.
+Check the device model (Picture 3). All supported models are **[listed in this table](/Support/Supported_Devices/)**. Note that there are several different Sailfish OS images (read: installation packages) for the various models. Be sure to download the one matching your device.
 
-Also, check the Build number (Picture 4). The valid build numbers (a.k.a. Android baseband version) are explained in **[this table](/Support/Help_Articles/Reinstalling_Sailfish_OS/#the-baseband-version-table)**. The Build number also indicates the Android OS version (although not explicitly). Read carefully the first lines of our **[Sailfish X instructions](https://jolla.com/sailfishxinstall/)** to see which phones should be updated and which not.
+Also, check the Build number (Picture 4). The valid build numbers (a.k.a. Android baseband version) are explained in **[this table](/Support/Help_Articles/Reinstalling_Sailfish_OS/#the-baseband-version-table)**. The Build number also indicates the Android OS version (although not explicitly). Read carefully the first lines of our **[Sailfish OS instructions](https://jolla.com/sailfishxinstall/)** to see which phones should be updated and which not.
 
 <div class="flex-images" markdown="1">
 
@@ -172,12 +176,19 @@ You must enable the **Developer options** to be able to carry on. Enable them by
 
 Scroll down and find item **OEM unlocking** (which means bootloader unlocking). If the bootloader of your device has been unlocked previously, you will see it greyed out like in Picture 5 below. This is ok and no further actions are required for this setting.
 
-However, if the item "OEM unlocking"  appears black and locked (i.e. the slider is on the left), then you must first push the slider switch to the right to make the unlocking possible. The **actual unlocking** shall be done as instructed in chapter 7 of our Xperia 10 III instructions (use the 3 links below). _This approach is good for all Xperia devices (not just Xperia 10 III)- just select the correct phone model at the Sony website_.
-* [Windows](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-windows/#W10iii-7) 
-* [Linux](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-linux/#L10iii-7) 
-* [Mac](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-macos/#M10iii-7)
+However, if the item "OEM unlocking"  appears black and locked (i.e. the slider is on the left), then you must first push the slider switch to the right to make the unlocking possible. The **actual unlocking** shall be done as instructed in document collection below - use the links of the table.
 
-Scroll further down and find the item "USB debugging". This is also a prerequisite for the fastboot mode. You must enable it to make installing Sailfish X successful.
+|   Linux     |    Mac      |   Windows        |
+| :---------: | :---------: | :--------------: |
+| [Xperia X](https://jolla.com/sailfishx-linux-instructions/#LX-4) | [Xperia X](https://jolla.com/sailfishx-macos-instructions/#MX-4) | [Xperia X](https://jolla.com/sailfishx-windows-instructions/#WX-4) |
+| [Xperia XA2](https://jolla.com/sailfishx-linux-instructions-xa2/#LXA2-4) | [Xperia XA2](https://jolla.com/sailfishx-macos-instructions-xa2/#MXA2-4) | [Xperia XA2](https://jolla.com/sailfishx-windows-instructions-xa2/#WXA2-4) |
+| [Xperia X10](https://jolla.com/install-sailfish-x-xperia-10-linux/#L10-7) | [Xperia X10](https://jolla.com/sailfishx-xperia10-macos/#M10-7) | [Xperia X10](https://jolla.com/install-sailfish-x-xperia-10-windows/#W10-7) |
+| [Xperia X10 II](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-linux/#L10ii-7) | [Xperia X10 II](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-macos/#M10ii-7) | [Xperia X10 II](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-windows/#W10ii-7) |
+| [Xperia X10 III](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-linux/#L10iii-7) | [Xperia X10 III](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-macos/#M10iii-7) | [Xperia X10 III](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-windows/#W10iii-7) |
+| [Xperia X10 IV](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iv-on-linux/#L10iv-7) | [Xperia X10 IV](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iv-on-macos/#M10iv-7) | [Xperia X10 IV](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iv-on-windows/#W10iv-7) |
+| [Xperia X10 V](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-v-on-linux/#L10v-7) | [Xperia X10 V](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-v-on-macos/#M10v-7) | [Xperia X10 V](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-v-on-windows/#W10v-7) |
+
+Scroll further down and find the item "USB debugging". This is also a prerequisite for the fastboot mode. You must enable it to make installing Sailfish OS successful.
 
 <div class="flex-images" markdown="1">
 
@@ -193,7 +204,7 @@ Scroll further down and find the item "USB debugging". This is also a prerequisi
 
 By _flashing directory_ (a.k.a. _"Sailfish directory"_), we mean the location on your PC to which you have unzipped the Sailfish OS image. Check that you have prepared the contents of the directory correctly.
 
-Note that there are different instructions for Xperia X, Xperia XA2, Xperia 10, Xperia 10 II, and Xperia 10 III.  Also for different computers. Make sure you read the correct instructions. We have linked them for you below:
+Note that there are different instructions for Xperia X, Xperia XA2, Xperia 10, Xperia 10 II, Xperia 10 III, Xperia 10 IV, and Xperia 10 V.  Also for different computers. Make sure you read the correct instructions. We have linked them for you below:
 
 |   Linux     |    Mac      |   Windows        |
 | :---------: | :---------: | :--------------: |
@@ -202,22 +213,24 @@ Note that there are different instructions for Xperia X, Xperia XA2, Xperia 10, 
 | [Xperia X10](https://jolla.com/install-sailfish-x-xperia-10-linux/#L10-4) | [Xperia X10](https://jolla.com/sailfishx-xperia10-macos/#M10-4) | [Xperia X10](https://jolla.com/install-sailfish-x-xperia-10-windows/#W10-4) |
 | [Xperia X10 II](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-linux/#L10ii-4) | [Xperia X10 II](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-macos/#M10ii-4) | [Xperia X10 II](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-windows/#W10ii-4) |
 | [Xperia X10 III](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-linux/#L10iii-4) | [Xperia X10 III](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-macos/#M10iii-4) | [Xperia X10 III](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-windows/#W10iii-4) |
+| [Xperia X10 IV](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iv-on-linux/#L10iv-4) | [Xperia X10 IV](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iv-on-macos/#M10iv-4) | [Xperia X10 IV](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iv-on-windows/#W10iv-4) |
+| [Xperia X10 V](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-v-on-linux/#L10v-4) | [Xperia X10 V](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-v-on-macos/#M10v-4) | [Xperia X10 V](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-v-on-windows/#W10v-4) |
 
 
 Check that you have the following two items in the flashing directory:
 
 1) **The correct Sailfish image for your device model**
-* There are 2 different installable images for Xperia X, 6 images for Xperia XA2, 4 images for Xperia 10, 2 images for Xperia 10 II, and one image for Xperia 10 III. Pick up the correct one.
-* You can check the phone model by pulling out a white label from the SIM card slot,  from the sales package, or from the phone menus
+* There are 2 different installable images for Xperia X, 6 images for Xperia XA2, 4 images for Xperia 10, 2 images for Xperia 10 II, one image for Xperia 10 III, 1 or 2 images for Xperia 10 IV, and 1 or 2 images for Xperia 10 V. Pick up the correct one.
+* You can check the phone model by pulling out a white label from the SIM card slot, from the sales package, or from the phone menus
 * If in doubt about the device model, please see the chapter ["Final check before flashing"](#final-check-before-flashing) below
 
 2) **The correct Sony vendor binary**
-* There are different vendor binaries for Xperia X, Xperia XA2, Xperia 10, Xperia 10 II, and Xperia 10 III
+* There are different vendor binaries for Xperia X, Xperia XA2, Xperia 10, Xperia 10 II, Xperia 10 III, Xperia 10 IV, and Xperia 10 V.
 * Find more information in the chapters right below
 
 ## Xperia X
 
-Extracting the Sailfish zip package brings in everything necessary, except for the Sony binary image `SW_binaries_for_Xperia_AOSP_M_MR1_3.10_v13_loire.img` which you need to download as instructed in chapter 5 of Sailfish X instructions for Xperia X:
+Extracting the Sailfish zip package brings in everything necessary, except for the Sony binary image `SW_binaries_for_Xperia_AOSP_M_MR1_3.10_v13_loire.img` which you need to download as instructed in chapter 5 of Sailfish instructions for Xperia X:
 * [Windows](https://jolla.com/sailfishx-windows-instructions/#WX-5) 
 * [Linux](https://jolla.com/sailfishx-linux-instructions/#LX-5) 
 * [Mac](https://jolla.com/sailfishx-macos-instructions/#MX-5)
@@ -235,7 +248,7 @@ Check that the contents of the flashing directory are like in the picture below 
 
 ## Xperia XA2
 
-Extracting the Sailfish zip package brings in everything necessary, except for the Sony binary image `SW_binaries_for_Xperia_Android_8.1.6.4_r1_v16_nile.img`  which you need to download as instructed in chapter 5 of Sailfish X instructions for Xperia XA2:
+Extracting the Sailfish zip package brings in everything necessary, except for the Sony binary image `SW_binaries_for_Xperia_Android_8.1.6.4_r1_v16_nile.img`  which you need to download as instructed in chapter 5 of Sailfish instructions for Xperia XA2:
 * [Windows](https://jolla.com/sailfishx-windows-instructions-xa2/#WXA2-5) 
 * [Linux](https://jolla.com/sailfishx-linux-instructions-xa2/#LXA2-5) 
 * [Mac](https://jolla.com/sailfishx-macos-instructions-xa2/#MXA2-5)
@@ -258,7 +271,7 @@ You can change the vendor binary by flashing just it without affecting Sailfish 
 
 ## Xperia 10
 
-Extracting the Sailfish zip package brings in everything necessary, except for the Sony binary image `SW_binaries_for_Xperia_Android_9.0_2.3.2_v9_ganges.img`  which you need to download as instructed in chapter 5 of Sailfish X instructions for Xperia 10:
+Extracting the Sailfish zip package brings in everything necessary, except for the Sony binary image `SW_binaries_for_Xperia_Android_9.0_2.3.2_v9_ganges.img`  which you need to download as instructed in chapter 5 of Sailfish instructions for Xperia 10:
 * [Windows](https://jolla.com/install-sailfish-x-xperia-10-windows/#W10-5) 
 * [Linux](https://jolla.com/install-sailfish-x-xperia-10-linux/#L10-5) 
 * [Mac](https://jolla.com/sailfishx-xperia10-macos/#M10-5)
@@ -276,7 +289,7 @@ Check that the contents of the flashing directory are like in the picture below 
 
 ## Xperia 10 II
 
-Extracting the Sailfish zip package brings in everything necessary, except for the Sony binary image `SW_binaries_for_Xperia_Android_10.0.7.1_r1_v12b_seine.img`  which you need to download as instructed in chapter 5 of Sailfish X instructions for Xperia 10 II:
+Extracting the Sailfish zip package brings in everything necessary, except for the Sony binary image `SW_binaries_for_Xperia_Android_10.0.7.1_r1_v12b_seine.img`  which you need to download as instructed in chapter 5 of Sailfish instructions for Xperia 10 II:
 * [Windows](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-windows/#W10ii-5) 
 * [Linux](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-linux/#L10ii-5) 
 * [Mac](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-macos/#M10ii-5)
@@ -294,7 +307,7 @@ Check that the contents of the flashing directory are like in the picture below.
 
 ## Xperia 10 III
 
-Extracting the Sailfish zip package brings in everything necessary, except for the Sony binary image `SW_binaries_for_Xperia_Android_10.0.7.1_r1_v9a_lena.img`  which you need to download as instructed in chapter 5 of Sailfish X instructions for Xperia 10 III:
+Extracting the Sailfish zip package brings in everything necessary, except for the Sony binary image `SW_binaries_for_Xperia_Android_10.0.7.1_r1_v9a_lena.img`  which you need to download as instructed in chapter 5 of Sailfish instructions for Xperia 10 III:
 * [Windows](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-windows/#W10iii-5) 
 * [Linux](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-linux/#L10iii-5) 
 * [Mac](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-macos/#M10iii-5)
@@ -309,11 +322,44 @@ Check that the contents of the flashing directory are like in the picture below.
   </span>
 </div>
 
+## Xperia 10 IV
+
+* [Windows](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iv-on-windows/#W10iv-5) 
+* [Linux](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iv-on-linux/#L10iv-5) 
+* [Mac](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iv-on-macos/#M10iv-5)
+
+Check that the contents of the flashing directory are like in the picture below.
+
+<div class="flex-images" markdown="1">
+
+* <a href="Xperia10iv_flashing.png"><img src="Xperia10iv_flashing.png" alt="Flashing directory"></a>
+  <span class="md_figcaption">
+    Picture 11: A flashing directory (here: Xperia 10 IV [xqcc54] and OS version 4.6.0.15)
+  </span>
+</div>
+
+## Xperia 10 V
+
+* [Windows](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-v-on-windows/#W10v-5) 
+* [Linux](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-v-on-linux/#L10v-5) 
+* [Mac](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-v-on-macos/#M10v-5)
+
+Check that the contents of the flashing directory are like in the picture below.
+
+<div class="flex-images" markdown="1">
+
+* <a href="Xperia10v_flashing.png"><img src="Xperia10v_flashing.png" alt="Flashing directory"></a>
+  <span class="md_figcaption">
+    Picture 12: A flashing directory (here: Xperia 10 V [xqdc54] and OS version 4.6.0.15)
+  </span>
+</div>
+
+
 # Final check before flashing
 
 Here we check that fastboot really works and that the bootloader is unlocked. The procedure below should not be needed. Run it if there are problems in installing Sailfish OS.
 
-1.  Connect your device in the fastboot mode (blue LED) to your computer with a USB cable.
+1.  Connect your device in the fastboot mode (blue indicator light is lit) to your computer with a USB cable.
 2.  On the computer, open the terminal and change the directory to your flashing directory (see the chapter ["Correct contents in the flashing directory"](#correct-contents-in-the-flashing-directory). _This is crucial in the case of Windows especially, as we rely on fastboot.exe located in this directory._
 3.  Give the command below. NOTE for Windows: _We recommend using the default command shell of Windows (CMD) instead of PowerShell as the latter may have an incompatible configuration and the command syntax below would not work._
     
@@ -323,16 +369,16 @@ fastboot getvar all
 It should print 20 to 200 lines of text, including:
 * `(bootloader) unlocked: yes`
 * `(bootloader) secure: no`
-* `(bootloader) product: H4113` <br />
-    this item dictates which Sailfish image you need to select
+* `(bootloader) product: H4113` (or XQ-DC54 or another code)<br />
+    this item dictates which Sailfish image you need to select at https://shop.jolla.com/downloads/
 * `(bootloader) version-baseband: 1311-2918_50.1.A.13.83` <br />
-    where "50.1.A.13.83" (an example here) is the build number (a.k.a. baseband version) from your phone (see chapter ["A) Settings > System > About phone"](#a-settings--system--about-phone) above).
+    where "50.1.A.13.83" (an example here) is the build number (a.k.a. Android baseband version) from your phone (see chapter ["A) Settings > System > About phone"](#a-settings--system--about-phone) above).
 
 If you get a decent result containing the items above, proceed to the next chapter. However, if the command failed then check again everything in the chapters above and retry. If the command indicated that the bootloader is not unlocked (i.e., it is still locked), then you cannot install Sailfish OS to this device (unless you are able to unlock it).
 
 # Flashing Sailfish OS
 
-The instructions for the **actual flashing** (installing the code to the phone) are in our **[Sailfish X instructions](https://jolla.com/sailfishxinstall/)**. Note that there are different instructions for Xperia X, Xperia XA2, Xperia 10, Xperia 10 II, and Xperia 10 III. Please select the correct link below depending on your phone:
+The instructions for the **actual flashing** (installing the code to the phone) are in our **[Sailfish OS instructions](https://jolla.com/sailfishxinstall/)**. Note that there are different instructions for Xperia X, Xperia XA2, Xperia 10, Xperia 10 II, Xperia 10 III, Xperia 10 IV and, Xperia 10 V. Please select the correct link below depending on your phone and computer:
 
 |   Linux     |    Mac      |   Windows        |
 | :---------: | :---------: | :--------------: |
@@ -341,6 +387,8 @@ The instructions for the **actual flashing** (installing the code to the phone) 
 | [Xperia X10](https://jolla.com/install-sailfish-x-xperia-10-linux/#L10-8) | [Xperia X10](https://jolla.com/sailfishx-xperia10-macos/#M10-8) | [Xperia X10](https://jolla.com/install-sailfish-x-xperia-10-windows/#W10-8) |
 | [Xperia X10 II](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-linux/#L10ii-8) | [Xperia X10 II](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-macos/#M10ii-8) | [Xperia X10 II](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-windows/#W10ii-8) |
 | [Xperia X10 III](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-linux/#L10iii-8) | [Xperia X10 III](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-macos/#M10iii-8) | [Xperia X10 III](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-windows/#W10iii-8) |
+| [Xperia X10 IV](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iv-on-linux/#L10iv-8) | [Xperia X10 IV](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iv-on-macos/#M10iv-8) | [Xperia X10 IV](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iv-on-windows/#W10iv-8) |
+| [Xperia X10 V](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-v-on-linux/#L10v-8) | [Xperia X10 V](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-v-on-macos/#M10v-8) | [Xperia X10 V](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-v-on-windows/#W10v-8) |
 
 
 
@@ -353,7 +401,7 @@ The attached PDF files show the output from the flashing script run successfully
 
 ## Troubleshooting the USB connection and fastboot mode
 
-1.  The phone must be connected to the computer in the _fastboot mode_ before the fastboot command can be used. Press and hold the Volume Up button and connect the USB cable between your phone and your computer. Wait for the LED to light up **blue** on the phone. If the Volume Up key is pressed too hard then **green** light may appear. Therefore, make sure you press the button **gently** when connecting the USB cable. If you keep getting the green light, restart the PC and the phone, and try again. If the phone has a cover (hiding the keys on the side) consider removing it. If the problem persists no matter what you try, check that the volume keys of your phone work in normal conditions, i.e. when playing music or video with the phone.
+1.  The phone must be connected to the computer in the _fastboot mode_ before the fastboot command can be used. Ensure that the phone has power off. If in doubt, use the [Forced Power Off](Support/Help_Articles/Tips_and_Tricks/#forced-power-off) method. Press and hold the Volume Up button and connect the USB cable between your phone and your computer. Wait for the indicator light to light up **blue** on the phone. If the Volume Up key is pressed too hard then **green** light may appear. Therefore, make sure you press the button **gently** when connecting the USB cable. If you keep getting the green light, restart the PC and the phone, and try again. If the phone has a cover (hiding the keys on the side) consider removing it. If the problem persists no matter what you try, check that the volume keys of your phone work in normal conditions, i.e. when playing music or video with the phone.
 2.  Make sure that your USB cable is a **data cable** (having all lines connected) and not a charging cable. You can test this by copying a file over the cable from the PC to the phone or v.v.
 3.  Sometimes a certain USB port on the PC may not work. In such a case try **another USB port**.
 4.  Sometimes  USB3 ports fail to work. In such a case try a **USB2 port**, if available. We recommend trying a **USB2 hub** if USB2 ports are not available.

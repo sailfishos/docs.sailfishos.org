@@ -10,7 +10,7 @@ nav_order: 6000
 
 # How to download and install a Sailfish OS update
 
-
+This document explains how to update the Sailfish operating system "over-the-air" (OTA).
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ Before starting an OS update, ensure that the following crucial matters are as t
 * Make sure you have that you have enough **free storage space** (disk space) in the device: the user data "Used" is shown on menu page _Settings > Storage._
 * If you have installed applications from **OpenRepos** service, then see chapter OpenRepos in the end of this article. _If you have never heard of OpenRepos, no worries, please skip this step._
 
-NOTE: Xperia and Gemini device must have a valid **[Sailfish X licence](/Support/Help_Articles/Sailfish_X_Licence/)**, or else they won't get any OS updates.
+NOTE: Xperia and Jolla C2 devices must have a valid **[Sailfish X licence](/Support/Help_Articles/Sailfish_X_Licence/)**, or else they won't get any OS updates.
 
 ## Updating the operating system
 
@@ -55,7 +55,7 @@ Notifications on available Sailfish OS updates appear in the **Events View** whi
 
 ### Preparations for the update
 
-A good amount of free storage space is required for a successful OS update. Sailfish OS will do its best to make space for the update by running an optimization task as soon as an OS update has been detected. The text "_Preparing update_" may appear briefly. Once done, the view with "_Update available_" with the download size will appear (see the picture  on the left above).
+A good amount of free storage space is required for a successful OS update. Sailfish OS will do its best to make space for the update by running an optimization task as soon as an OS update has been detected. The text "_Preparing update_" may appear briefly. Once done, the view with "_Update available_" with the download size will appear (see the picture on the left above).
 
 
 ### Downloading the update from Jolla Store to your device
@@ -81,9 +81,8 @@ A good amount of free storage space is required for a successful OS update. Sail
 
 ### Installing the update
 
-* Installing the update will not delete contacts or other user data in the device. It will not affect the memory card or the SIM card, either.
-
-* Never try to interrupt the installation as this would very likely break your device. Do not turn the phone off (unless an hour has passed without getting the job completed)
+* Installing the update over-the-air does not delete contacts or other user data in the device. It does not affect the memory card or the SIM card, either.
+* Never try to interrupt the installation as this would very likely break your device. Do not turn the phone off (unless an hour has passed without getting the job completed).
 * Make sure your device is connected to a charger. Your device must not turn off during this phase.
 * Start the process by selecting "Install" in the pull-down menu.
 * The phone will restart first. The Sony logo appears. Soon after, you will need to type the security code.
@@ -98,9 +97,9 @@ A good amount of free storage space is required for a successful OS update. Sail
 </div>
 
 
-* Wait patiently until the update is installed - do not turn the device off (in fact, the Power key is disabled at this point). Let the device restart itself - you will eventually see the familiar Lock Screen. At this point, the installation is over and the device is ready for use. It takes usually about 10-20 minutes to install an update.
+* Wait patiently until the update is installed - do not turn the device off (in fact, the Power key is disabled at this point). Let the device restart itself - you will eventually see the familiar Lock Screen. At this point, the installation is over and the device is ready for use. It usually takes about 10-20 minutes to install an update.
 
-NOTE: If the progress bar of the black Sailfish screen stalls at 100% and stays there for more than 15 minutes, it is safe to force the phone to restart. Do it by pressing both the Power key and the Volume Up key at the same time for 20-30 seconds, until you feel the vibrator play three times. Now, release the keys. Turn the phone on in the normal way with the Power key. Check at Settings > System > About product that your phone has the new OS release.
+NOTE: If the progress bar of the black Sailfish screen stalls at 100% and stays there for more than 15 minutes, it is safe to force the phone to restart. Do it by pressing both the Power key and the Volume Up key at the same time for 20-30 seconds, until you feel the vibrator play three times. Now, release the keys. Turn the phone on in the normal way with the Power key. Check at "_Settings > System > About product_" that your phone has the new OS release.
 
 
 ## Updating from early Sailfish OS versions
@@ -117,13 +116,13 @@ The reason for the current version being from the past would be that you have pe
 If you always download and install the new OS release when it becomes available then there is no hassle with the stop releases. You would not even notice that they exist!
 
 **NOTE for the users of Xperia devices:**
-Instead of performing the factory reset, we recommend **reinstalling** ("flashing") the latest Sailfish OS version to your Xperia device. In this way, you will avoid the nuisance of stop releases. Read here the **[comparison of flashing and resetting](https://docs.sailfishos.org/Support/Help_Articles/Tips_and_Tricks/#total-device-reset)**.
+Instead of performing the factory reset, we recommend **reinstalling** ("flashing") the latest Sailfish OS version over a USB cable to your Xperia device. In this way, you will avoid the nuisance of stop releases. Read here the **[comparison of flashing and resetting](https://docs.sailfishos.org/Support/Help_Articles/Tips_and_Tricks/#total-device-reset)**.
 
 ### The Stop Releases are listed at Sailfish OS Docs
 
 If you start updating your device from an early release, your device will have to download and install all of the **[Stop Releases](https://docs.sailfishos.org/Support/Releases/)** between the current release on the phone and the latest available release.
 
-The phone will automatically suggest the next stop release in _Settings > System > Sailfish OS update._
+The phone will automatically suggest the next stop release in "_Settings > System > Sailfish OS update_".
 
 **NOTE:** Do not install any apps or sign in to your accounts (your Jolla account is an exception) before you have completed updating the OS to the latest version!
 
@@ -135,7 +134,7 @@ As soon as the first stop release is installed on the device, seek the next one.
 
 ### Updating at the command line
 
-If the device keeps failing to indicate the availability of Sailfish OS updates, it may be possible to get them with the following commands (this requires the **Developer mode**, SSH password, and Terminal app  (see "_Settings > System > Developer mode_"). If you need help with the commands below, read this **[help article on Developer mode](/Support/Help_Articles/Enabling_Developer_Mode/)** or contact **[Jolla Customer Support](https://jolla.zendesk.com/hc/en-us/requests/new)**.
+If the device keeps failing to indicate the availability of Sailfish OS updates, it may be possible to get them with the following commands (this requires the **Developer mode**, SSH password, and Terminal app  (see "_Settings > System > Developer tools_"). If you need help with the commands below, read this **[help article on Developer mode](/Support/Help_Articles/Enabling_Developer_Mode/)** or contact **[Jolla Customer Support](https://jolla.zendesk.com/hc/en-us/requests/new)**.
 
 The way of working here is to download and install the stop releases one by one with the command set below (an example), and then, eventually, the latest public release.
 
@@ -149,7 +148,7 @@ reboot                 ## Restart device
 **(*)** NOTE: Use the next stop release counted from the current OS version of your phone. You must traverse through all stop releases, and only after the last one of them you can "version dup" to the latest OS version. Otherwise, there is a great risk of breaking your device.
 
 Q: What is my next stop release?
-A: Check the current OS version of your device in _Settings > About product_ (or _Settings > Info > About product_ on some very old Sailfish 1 releases). Then look at the **[list of stop releases](https://docs.sailfishos.org/Support/Releases/)**. If your current version is let's say 1.1.6, then the next stop release would be 1.1.7.28.
+A: Check the current OS version of your device in "_Settings > About product_" (or "_Settings > Info > About product_" on some very old Sailfish 1 releases). Then look at the **[list of stop releases](https://docs.sailfishos.org/Support/Releases/)**. If your current version is let's say 1.1.6, then the next stop release would be 1.1.7.28. Note that only the top-most one on each table row is a stop release. For instance, 4.5.0.25 is a stop release but 4.5.0.24 is not.
 
 Q: If I have OS version **1.0.0.5** on my device which steps do I need to take to update it to the latest version?
 A: Unfortunately, all of the following:
@@ -213,10 +212,17 @@ ssu release 4.4.0.72
 version --dup
 reboot
 
-ssu release     ## the latest OS version
+ssu release 4.5.0.25
 version --dup
 reboot
 
+ssu release 4.6.0.15
+version --dup
+reboot
+
+ssu release     ## the latest available OS version
+version --dup
+reboot
 ```
 
 You can disable Developer Mode now if you wish.
@@ -258,7 +264,7 @@ _Sometimes the download of an OS update fails unexpectedly. This article has som
 
 One of the typical reasons for a download failure is that the device does not have free storage space left for the update to be downloaded and processed.
 
-We recommend ensuring that there is at least some 3-4 GB of free space in the internal storage of your device before starting the OS download. To make space, move your pictures, videos, and other big files to your SD card (or to your PC or to a cloud service).  Check the space in "Settings > Storage".
+We recommend ensuring that there is at least some 3-4 GB of free space in the internal storage of your device before starting the OS download. To make space, move your pictures, videos, and other big files to your SD card (or to your PC or to a cloud service).  Check the space in "_Settings > Storage_".
   
 Also, there are some apps from the OpenRepos app distribution that have sometimes caused problems when updating the OS. Please uninstall those apps before you proceed to update. Check the **[release notes](https://forum.sailfishos.org/tag/release-notes)** of the OS update you are aiming to install.
 
@@ -268,7 +274,7 @@ Also, there are some apps from the OpenRepos app distribution that have sometime
 
 ### The phone does not indicate the availability of an update at all
 
-After running the command "Check for updates" in the pulley menu of the page "Settings > Sailfish OS updates", the phone replies "Up to date".  What should be done?
+After running the command "Check for updates" in the pulley menu of the page "_Settings > System > Sailfish OS updates_", the phone replies "Up to date".  What should be done?
 
 Please read the Prerequisites chapter in the beginning of this document and follow the advice. Visit the page "Sailfish OS updates" again and try to get an update.
 
@@ -289,7 +295,7 @@ rm -rf /home/.pk-zypp-dist-upgrade-cache/*
 rm -rf ./.cache/sailfish-osupdateservice/os-info  
 reboot
 ```
-Your Sailfish device will restart now. Once up and running, visit the menu page "Settings > Sailfish OS updates" and seek updates. You should see the latest OS version available. Download and install it.
+Your Sailfish device will restart now. Once up and running, visit the menu page "_Settings > Sailfish OS updates_" and seek updates. You should see the latest OS version available. Download and install it.
  
 
 ## The problem persists - collecting logs for Jolla R&D to investigate
@@ -319,7 +325,7 @@ If the problem persists, try the command line update explained below. If that fa
 
 ## Update using the command line
 
-Let's download and install the OS update by initiating the process from the command line (Terminal app) instead of the menu page "Settings > System > Sailfish OS updates". In this way, some checks are by-passed which may allow the update to work okay.
+Let's download and install the OS update by initiating the process from the command line (Terminal app) instead of the menu page "_Settings > System > Sailfish OS updates_". In this way, some checks are by-passed which may allow the update to work okay.
 
 Please read this **[help article](/Support/Help_Articles/Enabling_Developer_Mode/)** first and do as instructed in it. It explains how to enable and disable the **Developer mode**. Developer mode makes access deeper to Sailfish OS possible by allowing you to get the super-user rights ("root" rights). Also, it installs the **Terminal application** to the device.
 
@@ -333,9 +339,9 @@ Once you have the Developer Mode enabled, do as follows:
 
 NOTE: You must not skip any **Stop Releases** over. All of them, higher than the release of your phone now, must be traversed.  Read more about stop releases in **[this chapter](#the-update-path-and-stop-releases)** first.
 
-Example:  _Your phone has the OS version 3.0.1.11 in it now (after a factory reset). To update the phone to 4.5.0.18, the update path via the stop releases is this:_
+Example:  _Your phone has the OS version 3.0.1.11 in it now (after a factory reset). To update the phone to 4.5.0.25, the update path via the stop releases is this:_
 
-_3.0.1.11 -> 3.2.0.12 -> 3.4.0.24 -> 4.0.1.48 -> 4.1.0.24 -> 4.2.0.21 -> 4.3.0.15 -> 4.4.0.72 -> 4.5.0.18_
+_3.0.1.11 -> 3.2.0.12 -> 3.4.0.24 -> 4.0.1.48 -> 4.1.0.24 -> 4.2.0.21 -> 4.3.0.15 -> 4.4.0.72 -> 4.5.0.25_
 
 
 ```
@@ -383,7 +389,7 @@ pkill store-client
 rm ./.cache/sailfish-osupdateservice/os-info
 ```
 
-Once done, visit the menu "Settings > System > Sailfish OS updates" and seek updates using the pull-down menu. Your phone should not indicate any updates at this point but trying to search for them completes the cleanup.
+Once done, visit the menu "_Settings > System > Sailfish OS updates_" and seek updates using the pull-down menu. Your phone should not indicate any updates at this point but trying to search for them completes the cleanup.
 
 ### Troubleshooting
 
@@ -422,7 +428,7 @@ If you want to keep your repositories for some reason then it is also possible t
 ssu dr <_repository-name_>
 ```
 
-Afterward, they can be enabled with
+Afterwards, they can be enabled with
 
 ```
 ssu er <_repository-name_> 

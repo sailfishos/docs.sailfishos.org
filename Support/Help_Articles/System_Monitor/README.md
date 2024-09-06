@@ -20,7 +20,7 @@ The following chapters show how to install the discussed apps.
 2. Go to web page **[https://openrepos.net/content/ade/system-monitor-fork](https://openrepos.net/content/ade/system-monitor-fork/)**
 
 3. Download the latest version of **harbour-systemmonitor** file. Make sure that you take the correct variant for your device:
-	* **aarch64.rpm** for Xperia 10 II and Xperia 10 III
+	* **aarch64.rpm** for Xperia 10 II, Xperia 10 III, Xperia 10 IV, Xperia 10 V and, Jolla C2
 	* **armv7hl.rpm** for other Xperias and Jolla phones
 
 4. Go to Settings > Untrusted software and enable "Allow untrusted software".
@@ -47,7 +47,7 @@ The following chapters show how to install the discussed apps.
 
 3. Download the latest version of **harbour-lighthouse** file. Make sure that you take the correct variant for your device:
 
-	* **aarch64.rpm** for Xperia 10 II and Xperia 10 III
+	* **aarch64.rpm** for Xperia 10 II, Xperia 10 III, Xperia 10 IV, Xperia 10 V and, Jolla C2
 	* **armv7hl.rpm** for other Xperias and Jolla phones
 	
 4. Go to Settings > Untrusted software and enable "Allow untrusted software".
@@ -74,7 +74,7 @@ The following chapters show how to install the discussed apps.
 
 3. Download the latest version of **harbour-batterybuddy** file. Make sure that you take the correct variant for your device:
 
-	* **aarch64.rpm** for Xperia 10 II and Xperia 10 III
+	* **aarch64.rpm** for Xperia 10 II, Xperia 10 III, Xperia 10 IV, Xperia 10 V and, Jolla C2
 	* **armv7hl.rpm** for other Xperias and Jolla phones
 	
 4. Go to Settings > Untrusted software and enable "Allow untrusted software".
