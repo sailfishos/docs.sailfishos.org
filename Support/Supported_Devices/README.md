@@ -5,15 +5,20 @@ layout: default
 nav_order: 200
 ---
 
+Status regarding Sailfish OS version 4.6.0:
+* Jolla has ported Sailfish OS to and supports the phone models listed in the table SUPPORTED DEVICES.
+* The last 4.6.0 update(s) (after 4.6.0.13) contain(s) the free trial version of Sailfish OS for the Xperia models XQ-CC54 and XQ-DC54. Android AppSupport is not yet available.
+
+
 SUPPORTED DEVICES
 
-Status on OS release 4.6: Sailfish OS has been ported to the following phone models.
-Sailfish licences and installable Sailfish OS images are available at [Jolla Shop](https://shop.jolla.com).
+Sailfish licences and installable Sailfish OS images are available at [Jolla Shop](https://shop.jolla.com). However, there is no licence for the Xperia 10 IV (XQ-CC54) and 10 V (XQ-DC54) yet. Their free trial images can be downloaded from the [4.6.0 image folder](https://releases.sailfishos.org/images/).
 
-| Device                     | Model               | Required stock Android version[^1]  | Kernel / BSP[^2] | AppSupport[^3] version /<br />API level[^4] | First Sailfish OS release        |
-| -------------------------- | ------------------- | :---------------------------------: | :--------------: | :-----------------------------------------: | :------------------------------: |
-| Xperia 10 V SIM+uSD+eSIM   | XQ-DC54             | Android 13<br />                    | 5.4 / 13         | NA/NA                                       | 4.6.0<br />Sauna<br />2024       |
-| Xperia 10 IV SIM+uSD+eSIM  | XQ-CC54             | Android 13<br />                    | 5.4 / 13         | -"-                                         | -"-                              |
+
+| Device                     | Model               | Required stock Android version[^1]  | Kernel / BSP[^2] | AppSupport[^3] /<br />API level[^4] | First Sailfish OS release        |
+| -------------------------- | ------------------- | :---------------------------------: | :--------------: | ------------------------------------------- | -------------------------------- |
+| Xperia 10 V SIM+uSD+eSIM   | XQ-DC54             | Android 13<br />(14 is ok)          | 5.4 / 14         | NA / NA                                     | 4.6.0<br />Sauna<br />2024       |
+| Xperia 10 IV SIM+uSD+eSIM  | XQ-CC54             | Android 13<br />(14 is ok)          | 5.4 / 14         | -"-                                         | 4.6.0<br />Sauna<br />2024       |
 | Xperia 10 III Dual SIM     | XQ-BT52             | Android 11<br />(12 is ok)          | 4.19 / 11        | 11 / 30                                     | 4.4.0<br />Vanha Rauma<br />2022 |
 | Xperia 10 II Single SIM    | XQ-AU51             | Android 11<br />(10 is ok)          | 4.14 / 10        | -"-                                         | 4.1.0<br />Kvarken<br />2021     |
 | Xperia 10 II Dual SIM      | XQ-AU52             | -"-                                 |   -"-            | -"-                                         | -"-                              |
@@ -31,14 +36,11 @@ Sailfish licences and installable Sailfish OS images are available at [Jolla Sho
 
 [^1]: **Required stock Android version** : The Android version of a phone (shown in the "About phone" menu) before flashing Sailfish OS to it.
 [^2]: **BSP**                            : BSP = Board Support Package, Android drivers prepared for certain Android version.
-[^3]: **AppSupport**                     : AppSupport is the sales name of the Android runtime environment of Sailfish OS.
+[^3]: **AppSupport**                     : The version of AppSupport. AppSupport is the sales name of the Android runtime environment of Sailfish OS.
 [^4]: **API Level**                      : The version of Android API implemented into AppSupport.
 
 
-UNSUPPORTED DEVICES
-
-The following devices are not supported any more after OS release 4.6:
-
+DEVICES WE HAVE CEASED TO SUPPORT
 
 | Device               | Model       | First Sailfish OS release           | Last Sailfish OS release                 |
 | -------------------- | ----------- | :---------------------------------: | :--------------------------------------: |
