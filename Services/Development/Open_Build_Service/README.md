@@ -23,6 +23,8 @@ If the build fails, either due to a missing dependency specification in the .spe
 
 If the build succeeds, a set of automated tests will be run (if specified for the package), allowing a first-stage quality gate to be applied. If those automated tests succeed, the package will be accepted to the next stage of releasing.
 
+See [Packaging Software on OBS] for more.
+
 ## Promotion in OBS
 
 When a package is promoted, it becomes accessible to any device which has that repository added to their update configuration (modifiable via the `ssu` command). There are different promotion layers which correspond to different release types:
