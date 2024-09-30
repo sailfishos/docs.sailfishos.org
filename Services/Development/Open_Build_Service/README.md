@@ -17,7 +17,7 @@ Each package is added under a *project*. For example, there is a [ofono](https:/
 
 ## Building in OBS
 
-After the maintainer has tagged the repository, the CI system will be informed (via webhook) of the change. This will trigger a package build in [OBS](/Services/Development/Open_Build_Service). OBS will attempt to build the package, with a build environment constructed specifically for that package after examining the build requirements which are listed in its RPM .spec file.
+After the maintainer has tagged the repository, the CI system will be informed (via webhook) of the change. This will trigger a package build in OBS. OBS will attempt to build the package, with a build environment constructed specifically for that package after examining the build requirements which are listed in its RPM .spec file.
 
 If the build fails, either due to a missing dependency specification in the .spec file, or due to a code error, the package will not be tested, and the developer is expected to respond to the failure notification and fix the issue.
 
