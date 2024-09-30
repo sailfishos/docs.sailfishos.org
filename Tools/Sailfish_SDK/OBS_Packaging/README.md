@@ -313,3 +313,61 @@ package maintainer to include proper RPM `Provides` metadata.
 This is a rare error which means one of the build dependencies is known to the
 OBS system, but the package can not be accessed for the builder to install.  
 You can not fix this yourself, you have to report this to the OBS maintainers.
+
+## Publishing packages
+
+Once you have successfully built your package, you may want to test it.
+
+You can download the build results if you are logged into your account in the
+Web Interface, or use `osc getbinaries`.
+
+Another approach is to publish the RPM repository for your project. Publishing
+makes all packages available in a repository that can be used by tools like
+`zypper` or `pkcon`, and managed by `ssu`.  
+Note however there is no access control over such published repositories, and
+you can't know who will download your packages. This may or may not be what you want.
+
+To "properly" make your package available to the world, you are encouraged to 
+[submit your package to Chum](https://github.com/sailfishos-chum/main#user-content-submitting-actively-maintained-software).
+
+
+To publish a package, either use the graphical tool in the Web Interface, or edit the Meta information.
+
+Not that Meta can be set globally or a Project, and then overridden per-package.
+
+With `osc`, the commands are: `osc meta -e prj`, and `osc meta -e pkg`
+
+
+**Example Project Meta configuration:**
+
+Support x64, arm, arm64, build for both arm and arm64, but only publish arm64:
+
+```
+<project name="home:username:devel:foo">
+  <title>Foo</title>
+  <description>The Foo suite of software</description>
+  <person userid="username" role="bugowner"/>
+  <person userid="username" role="maintainer"/>
+  <build>
+    <disable/>
+    <enable repository="4.6_aarch64"/>
+    <enable repository="4.6_armv7hl"/>
+  </build>
+  <publish>
+    <disable/>
+    <enable repository="4.6_aarch64"/>
+  </publish>
+  <repository name="4.6_armv7hl">
+    <path project="sailfishos:4.6" repository="latest_i486"/>
+    <arch>i586</arch>
+  </repository>
+  <repository name="4.6_armv7hl">
+    <path project="sailfishos:4.6" repository="latest_armv7hl"/>
+    <arch>armv8el</arch>
+  </repository>
+  <repository name="4.6_aarch64">
+    <path project="sailfishos:4.6" repository="latest_aarch64"/>
+    <arch>aarch64</arch>
+  </repository>
+</project>
+```
