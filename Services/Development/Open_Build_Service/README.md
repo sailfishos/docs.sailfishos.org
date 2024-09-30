@@ -23,7 +23,7 @@ If the build fails, either due to a missing dependency specification in the .spe
 
 If the build succeeds, a set of automated tests will be run (if specified for the package), allowing a first-stage quality gate to be applied. If those automated tests succeed, the package will be accepted to the next stage of releasing.
 
-See [Packaging Software on OBS] for more.
+See [Packaging Software on OBS](/Services/Development/Open_Build_Service/Packaging_for_OBS) for more.
 
 ## Promotion in OBS
 
