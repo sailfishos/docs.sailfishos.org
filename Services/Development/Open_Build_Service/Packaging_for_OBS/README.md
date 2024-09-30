@@ -376,3 +376,86 @@ Support x64, arm, arm64, build for both arm and arm64, but only publish arm64:
   </repository>
 </project>
 ```
+
+## Advanced Trickery
+
+### OBS Branches and `tar_git`
+
+One of the drawbacks of using a `_service` file and "Packaging Repository"
+setups is that the OBS feature of [branching](https://openbuildservice.org/help/manuals/obs-user-guide/art-obs-bg#sec-obsbg-uc-branchprj)
+becomes less useful, because your branched package will only contain the
+`_service` file, but not any sources to change.
+
+You can of course fork the git repo specified in the `_service` file, and make
+changes as usual. But you might not want to do that.
+
+Luckily, there is a workaround:
+
+As branches are links, and the link concept of OBS supports patching the source
+files before the build process starts through the `apply` tag of the `_link`
+file, we can do some changes locally, create a patch, and add that patch to the
+`_link` file.
+
+This is prettty hard to do on the Web Interface alone, so here we assume usage of `osc`.
+
+In this example, we assume what you want to change is the .spec file, but the
+same process applies to any file in the packaging repo you can use a patch to
+change.
+
+First, create a branch on OBS as usual, and check it out
+
+```
+osc branch path:to:source:project sourcepackage
+osc co home:username:branches:path:to:source:project sourcepackage
+```
+*(Alternatively, you can just use linking instead of branching)*
+
+Your branched package will contain just the `_service` file, which is not very
+useful if you actually want to change something in the build process (the.spec
+file).
+
+Lets change to link view in the local package:
+
+```
+osc up --unexpand-link
+```
+
+The contents of the local checkout will change to a `_link` file. Edit it and configure the `apply` tag:
+
+```
+  <apply name="spec.patch" />
+```
+
+Get a local copy of the tag_git-generated .spec file:
+
+```
+mkdir a
+mkdir b
+osc cat _service:tar_git:myapp.spec > a/_service:tar_git:myapp.spec
+cp a/_service:tar_git:myapp.spec b/_service:tar_git:myapp.spec
+```
+
+Now, apply your changes to the file `b/_service:tar_git:myapp.spec`.
+
+When finished, do
+
+```
+diff -u a b > spec.patch
+```
+
+Now the files are in place, and the `_link` file has been edited, lets commit:
+
+
+```
+osc add spec.patch
+osc commit
+```
+*(Note we add just the spec file, and no other files.*
+
+OBS will now:
+
+ 1. check out the sources from the upstream repos as usual
+ 1. apply the path `spec.patch` to these sources
+ 1. Comtinue the building as usual.
+
+
