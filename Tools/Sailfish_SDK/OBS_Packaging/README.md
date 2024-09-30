@@ -17,13 +17,12 @@ You can interact with the OBS either on the web interface at [https://build.sail
 
 **A note about terminology**
 
-*There are some terms, like  "repository", "source", "package" that are used
-both in the context of OBS, or in a general sense, and may have different
-meanings depending on context. For example "repo" can mean either a build
-environment configuration on OBS, or it's corresponding published RPM
-repository. But it can also refer to a git repository.*
+*Some terms, like  "repository", "source", "package", have different meanings
+depending on context. For example "repo" can mean either a build environment
+configuration on OBS, or it's corresponding published RPM repository. But it
+can also refer to a git repository.*
 
-## Setting up the (Home) Project
+## Setting up the (Home) Project and creating a Package
 
 To create an account on OBS, follow the instructions on [the Chum help page](https://github.com/sailfishos-chum/main#user-content-submitting-actively-maintained-software).
 
@@ -32,9 +31,7 @@ You can create various packages in that project and also create sub-projects.
 
 See the official OBS [Beginnerʼs Guide](https://openbuildservice.org/help/manuals/obs-user-guide/art-obs-bg) for an introduction to OBS in general.
 
-## Creating an OBS Package
-
-Click "Create Package" in your project if using the Web Interface, or `osc mkpac mypackage` if using `osc`.
+Click "Create Package" in your project if using the Web Interface, or `osc mkpac mypackage` if using `osc` to get started.
 
 ## Adding the sources
 
@@ -61,7 +58,7 @@ application.spec
 application-1.2.3.tar.gz
 ```
 
-OBS will pick up both and run the build.
+OBS will pick up both and run the build. No `_service` file is necessary in this case.
 
 To get the source information into OBS, either upload them using the Web Interface, or use the `osc` tool:
 
@@ -72,6 +69,12 @@ cp /path/to/mypackage.spec .
 osc add *
 osc commit
 ```
+
+*Note: Using a plain tarball is an convenient and quick way to package software
+on OBS. Still, you are encouraged to move to a "Packaging Repo" approach for
+various reasons, including better revision control and history, easier forking
+by others, and backup/restore considerations.*
+
 ### `tar_git` sources
 
 `tar_git` is a OBS Service which clones a repository from a public git hoster,
@@ -161,7 +164,7 @@ So the root may end up looking like this:
 ```
 
 **A note about "dumb" packages:**
-*You notice there is a "dumb" parameter in the service confifuration. Setting
+*You notice there is a "dumb" parameter in the service configuration. Setting
 this to true switches the behaviour of the service to assume a very flat source
 structure, and not generate a tarball. 
 You may use this if your sources are very simple, for example contain only a
@@ -242,7 +245,9 @@ BuildRequires:  pkgconfig(Qt5Widgets)
 BuildRequires:  pkgconfig(Qt5Xml)
 ```
 
-### Common errors
+====
+
+## Common errors
 
 To retry after fixong an error, run either `osc service rr` from the locally
 checked out OBS package, or "Trigger Services" from the Web Interface.
