@@ -450,7 +450,7 @@ Now the files are in place, and the `_link` file has been edited, lets commit:
 osc add spec.patch
 osc commit
 ```
-*(Note we add just the spec file, and no other files.*
+*(Note we add just the spec file, and no other files.)*
 
 OBS will now:
 
