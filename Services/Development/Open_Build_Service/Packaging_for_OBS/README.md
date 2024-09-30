@@ -1,7 +1,7 @@
 ---
 title: Packaging Software on OBS
-permalink: Tools/Sailfish_SDK/OBS_Packaging
-parent: Sailfish SDK
+permalink: Services/Development/Open_Build_Service/Packaging_for_OBS
+parent: Open Build Service
 layout: default
 nav_order: 400
 ---
