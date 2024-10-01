@@ -6,21 +6,27 @@ layout: default
 nav_order: 400
 ---
 
-This page deals specifically with building packages using the [Open Build Service](/Services/Development/Open_Build_Service) instance.
+This page deals specifically with building packages using the [Open Build
+Service](/Services/Development/Open_Build_Service) instance, and tries to cover
+all the tasks necessary and some pitfalls along the way.
+While this may seem lengthy at first glance, the actual steps involved are not that many.
 
-This requires the user to create a home project, and then create a package
-under that project, with the appropriate `_service` file to specify how the
-project should be built and packaged. Once the build has been triggered, OBS
-will attempt to pull in the required dependencies and build the package.
+The highlevel overview of the process looks like this:
+
+
+ 1. Get an account on OBS
+ 1. Create a project, and a package on OBS
+ 1. Upload the source files, or a special `_service` file to the OBS package
+ 1. Adjust the .spec file for some peculiarities involved with building on OBS
 
 You can interact with the OBS either on the web interface at [https://build.sailfishos.org](https://build.sailfishos.org), or use the command-line tool, [osc](https://en.opensuse.org/openSUSE:OSC)
 
 **A note about terminology**
 
-*Some terms, like  "repository", "source", "package", have different meanings
-depending on context. For example "repo" can mean either a build environment
-configuration on OBS, or it's corresponding published RPM repository. But it
-can also refer to a git repository.*
+*Some terms, like  "repository", "source", "project", "package", have different
+meanings depending on context. For example "repo" can mean either a build
+environment configuration on OBS, or it's corresponding published RPM
+repository. But it can also refer to a git repository.*
 
 ## Setting up the (Home) Project and creating a Package
 
@@ -31,9 +37,23 @@ You can create various packages in that project and also create sub-projects.
 
 See the official OBS [Beginnerʼs Guide](https://openbuildservice.org/help/manuals/obs-user-guide/art-obs-bg) for an introduction to OBS in general.
 
+In your project, click on "Repositories", ignore all the checkmarks offered, and select only "SailfishOS latest".
+This should be enough to get a basic build environment set up. You can add more repositories and architectures to build against later.
+
 Click "Create Package" in your project if using the Web Interface, or `osc mkpac mypackage` if using `osc` to get started.
 
+
 ## Adding the sources
+
+To get the source files into your OBS Project, either upload them using the Web Interface, or use the `osc` tool:
+
+```
+cd my:project:mypackage
+cp /path/to/mypackage.tar.bz2 .
+cp /path/to/mypackage.spec .
+osc add *
+osc commit
+```
 
 There are about three common "packaging formats" used in Sailfish OS development, which are described under [Packaging Formats](https://docs.sailfishos.org/Tools/Sailfish_SDK/Building_packages/#packaging-formats):
 
@@ -45,45 +65,35 @@ A packaging repository is a git repository which contains just the build
 instructions and some other files (like patches) to package software for
 Sailfish OS, with the actual source code living in a git submodule of this
 repository.  
-An "Application Repository" contains the source code itself, e.g. because you wrote it or cloned a third-party git repository.
+An "Application Repository" contains the source code itself, e.g. because you
+wrote it or cloned a third-party git repository.
 
 ### Plain Tarball sources
 
 Usually, nothing special needs to be done if you want to build software from a source tarball.
+Just populate the OBS Package like below, OBS will pick up both and run the build. No `_service` file is necessary in this case.
 
-You just populate the OBS package source like this:
+However, you must place a .spec file alongside the source tarball, it cannot be contained within the tarball.
 
 ```
 application.spec
 application-1.2.3.tar.gz
 ```
 
-OBS will pick up both and run the build. No `_service` file is necessary in this case.
-
-To get the source information into OBS, either upload them using the Web Interface, or use the `osc` tool:
-
-```
-cd my:project:mypackage
-cp /path/to/mypackage.tar.bz2 .
-cp /path/to/mypackage.spec .
-osc add *
-osc commit
-```
-
 *Note: Using a plain tarball is an convenient and quick way to package software
 on OBS. Still, you are encouraged to move to a "Packaging Repo" approach for
 various reasons, including better revision control and history, easier forking
-by others, and backup/restore considerations.*
+by others, and considerations about backup/restore
 
 ### `tar_git` sources
 
 `tar_git` is a OBS Service which clones a repository from a public git hoster,
 creates a tarball from it, extracts the build information, and places all those
-files into the OBS Package source location.
+files into the OBS Package source location. After this it starts to build the package.
 
-You may look at its [source code](https://github.com/MeeGoIntegration/obs-service-tar-git) detailed information.
+To get the service configured on OBS, create a file called `_service` with the
+following content, and then upload that file like you would a source file:
 
-To get the service configured on OBS, create a file called `_service` with the following content:
 ```
 <services>
   <service name="tar_git">
@@ -97,13 +107,8 @@ To get the service configured on OBS, create a file called `_service` with the f
 </services>
 ```
 
-and then either upload them using the Web Interface, or use the `osc` tool:
-```
-cd my:project:mypackage
-cp /path/to/_service .
-osc add _service
-osc commit
-```
+You may want to look at its [source code](https://github.com/MeeGoIntegration/obs-service-tar-git) detailed information about `tar_git`.
+
 
 #### Understanding version mangling performed by `tar_git`
 
