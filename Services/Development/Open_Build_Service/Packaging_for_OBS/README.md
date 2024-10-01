@@ -169,11 +169,11 @@ So the root may end up looking like this:
 ```
 
 **A note about "dumb" packages:**
-*You notice there is a "dumb" parameter in the service configuration. Setting
-this to true switches the behaviour of the service to assume a very flat source
-structure, and not generate a tarball. 
-You may use this if your sources are very simple, for example contain only a
-single source code file and a Makefile, without any directory structure.*
+*You'll notice there is a "dumb" parameter in the service configuration. Setting
+this to true switches the behaviour of the service to assume a flat source
+structure without any directories and not generate a tarball. 
+You may want to use this if your sources are very simple, for example contain only a
+single source file and a Makefile.*
 
 
 **Some Examples**
@@ -197,7 +197,7 @@ single source code file and a Makefile, without any directory structure.*
 `_service:tar_git:foo-2.2+git3.tar.bz2`
 
 
-#### Adjust the %setup macro parameters and other paths
+#### Adjust the spec file: %setup macro and other paths
 
 The name of the tarball must be the first `Source:` line in the .spec file.
 
@@ -224,16 +224,14 @@ So if the upstream submodule is called "upstream", the line should look like
 ```
 You can choose a literal string as the name, but you must use the `%{version}` macro.
 
-Similarly, if you change working directories in the build process, be aware of where the actual source code is located relative to `%{_builddir}`:
-
-`%{_builddir}/%{name}-%{version}/upstream`
+Similarly, if you change working directories in the build process, be aware of where the actual source code is located relative to `%{_builddir}`: `%{_builddir}/%{name}-%{version}/upstream`
 
 On the other hand, the contents of the `rpm` sub-directory will be in the
 package root, not under `rpm` or `%_topdir/SOURCES` during the build. Usually,
 this does not affect you though, as OBS sets the internal source path
 accordingly, so things like `%SOURCE2` will work as expected.
 
-#### Adjust the build requirements (BuildRequires).
+#### Adjust the spec file: build requirements (BuildRequires).
 
 The building service runner setup used on OBS is more bare-bones than the one
 used in the Sailfish SDK, also with regard to the pre-installed packages.  If
@@ -250,7 +248,7 @@ BuildRequires:  pkgconfig(Qt5Widgets)
 BuildRequires:  pkgconfig(Qt5Xml)
 ```
 
-====
+---
 
 ## Common errors
 
@@ -405,16 +403,15 @@ file, we can do some changes locally, create a patch, and add that patch to the
 This is pretty hard to do on the Web Interface alone, so here we assume usage of `osc`.
 
 In this example, we assume what you want to change is the .spec file, but the
-same process applies to any file in the packaging repo you can use a patch to
-change.
+same process applies to any file in the packaging repo you can change using a patch.
 
 **Overview:**
 
  1. Create a branch (or a link) of the package in question
  1. Check out the package sources in "unexpand mode"
- 1. Get copies of the tar\_git-generated .spec file
+ 1. Get copies of the extracted .spec file
  1. Set up a local structure we can later use with `diff` to create a patch
- 1. Create a patch containing the changes to the  tar\_git-generated .spec file
+ 1. Create a patch containing the changes to the .spec file
  1. Edit the `_link` file, using the `<apply>` tag to include our patch
 
 
@@ -432,13 +429,14 @@ osc up --unexpand-link
 ```
 
 Edit the `_link` file to contain
-```
+```xml
   <apply name="spec.patch" />
 ```
 
 Perform whatever changes to the file we want to do, and create a patch:
+
 *Note: the reason we use the a/b directories and don't just leave the spec file
-in the package root is that `osc` will actually delete it on the next commit.*
+in the package root is that `osc` would actually delete that on the next commit.*
 
 ```
 # list the contents of the package directory, just so we can confirm the exact name of the extracted .spec file
@@ -447,6 +445,7 @@ osc status
 mkdir a
 osc cat _service:tar_git:myapp.spec > a/_service:tar_git:myapp.spec
 cp -r a b
+# Make some changes:
 $EDITOR b/_service:tar_git:myapp.spec
 diff -u a b > spec.patch
 ```
@@ -463,6 +462,6 @@ OBS will now:
 
  1. check out the sources and .spec file from the upstream repos as usual
  1. apply the path `spec.patch` to these sources
- 1. Continue the building as usual.
+ 1. continue the building as usual
 
 
