@@ -11,7 +11,7 @@ Service](/Services/Development/Open_Build_Service) instance, and tries to cover
 all the tasks necessary and some pitfalls along the way.
 While this may seem lengthy at first glance, the actual steps involved are not that many.
 
-The highlevel overview of the process looks like this:
+The high-level overview of the process looks like this:
 
 
  1. Get an account on OBS
@@ -254,7 +254,7 @@ BuildRequires:  pkgconfig(Qt5Xml)
 
 ## Common errors
 
-To retry after fixong an error, run either `osc service rr` from the locally
+To retry after fixing an error, run either `osc service rr` from the locally
 checked out OBS package, or "Trigger Services" from the Web Interface.
 
 **ERROR: no packaging in this git clone**
@@ -402,7 +402,7 @@ files before the build process starts through the `apply` tag of the `_link`
 file, we can do some changes locally, create a patch, and add that patch to the
 `_link` file.
 
-This is prettty hard to do on the Web Interface alone, so here we assume usage of `osc`.
+This is pretty hard to do on the Web Interface alone, so here we assume usage of `osc`.
 
 In this example, we assume what you want to change is the .spec file, but the
 same process applies to any file in the packaging repo you can use a patch to
