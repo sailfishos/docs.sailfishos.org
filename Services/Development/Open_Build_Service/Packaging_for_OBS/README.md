@@ -402,60 +402,61 @@ In this example, we assume what you want to change is the .spec file, but the
 same process applies to any file in the packaging repo you can use a patch to
 change.
 
-First, create a branch on OBS as usual, and check it out
+**Overview:**
+
+ 1. Create a branch (or a link) of the package in question
+ 1. Check out the package sources in "unexpand mode"
+ 1. Get copies of the tar\_git-generated .spec file
+ 1. Set up a local structure we can later use with `diff` to create a patch
+ 1. Create a patch containing the changes to the  tar\_git-generated .spec file
+ 1. Edit the `_link` file, using the `<apply>` tag to include our patch
+
+
+**Step-by-Step**:
 
 ```
+# Create a branch and check it out
 osc branch path:to:source:project sourcepackage
+# Alternatively, use linking instead of branching:
+# osc branch path:to:source:project sourcepackage path:to:my:local:project sourcepackage
 osc co home:username:branches:path:to:source:project sourcepackage
-```
-*(Alternatively, you can just use linking instead of branching)*
-
-Your branched package will contain just the `_service` file, which is not very
-useful if you actually want to change something in the build process (the.spec
-file).
-
-Lets change to link view in the local package:
-
-```
+cd home:username:branches:path:to:source:project/sourcepackage
+# Fetch the _link file:
 osc up --unexpand-link
 ```
 
-The contents of the local checkout will change to a `_link` file. Edit it and configure the `apply` tag:
-
+Edit the `_link` file to contain
 ```
   <apply name="spec.patch" />
 ```
 
-Get a local copy of the tag_git-generated .spec file:
+Perform whatever changes to the file we want to do, and create a patch:
+*Note: the reason we use the a/b directories and don't just leave the spec file
+in the package root is that `osc` will actually delete it on the next commit.*
 
 ```
+# list the contents of the package directory, just so we can confirm the exact name of the extracted .spec file
+osc status
+# Fetch the .spec file and put it in our local a/b workspace
 mkdir a
-mkdir b
 osc cat _service:tar_git:myapp.spec > a/_service:tar_git:myapp.spec
-cp a/_service:tar_git:myapp.spec b/_service:tar_git:myapp.spec
-```
-
-Now, apply your changes to the file `b/_service:tar_git:myapp.spec`.
-
-When finished, do
-
-```
+cp -r a b
+$EDITOR b/_service:tar_git:myapp.spec
 diff -u a b > spec.patch
 ```
 
-Now the files are in place, and the `_link` file has been edited, lets commit:
-
-
+Finally, add the patch file and commit:
 ```
 osc add spec.patch
-osc commit
+osc commit spec.patch _link
 ```
-*(Note we add just the spec file, and no other files.)*
+
+*(Note we add just the `spec.patch` file, and no other files.)*
 
 OBS will now:
 
- 1. check out the sources from the upstream repos as usual
+ 1. check out the sources and .spec file from the upstream repos as usual
  1. apply the path `spec.patch` to these sources
- 1. Comtinue the building as usual.
+ 1. Continue the building as usual.
 
 
