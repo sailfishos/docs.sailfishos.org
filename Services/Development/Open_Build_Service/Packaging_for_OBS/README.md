@@ -47,7 +47,7 @@ Click "Create Package" in your project if using the Web Interface, or `osc mkpac
 
 To get the source files into your OBS Project, either upload them using the Web Interface, or use the `osc` tool:
 
-```
+```sh
 cd my:project:mypackage
 cp /path/to/mypackage.tar.bz2 .
 cp /path/to/mypackage.spec .
@@ -94,7 +94,7 @@ files into the OBS Package source location. After this it starts to build the pa
 To get the service configured on OBS, create a file called `_service` with the
 following content, and then upload that file like you would a source file:
 
-```
+```xml
 <services>
   <service name="tar_git">
   <param name="url">https://github.com/orgname/reponame.git</param>
@@ -202,7 +202,7 @@ single source code file and a Makefile, without any directory structure.*
 The name of the tarball must be the first `Source:` line in the .spec file.
 
 You should name it
-```
+```specfile
 Source: %{name}-%{version}.tar.bz2
 ```
 
@@ -218,7 +218,7 @@ as the main source.
 
 So if the upstream submodule is called "upstream", the line should look like
 
-```
+```specfile
 %prep
 %setup -q -n %{name}-%{version}/upstream
 ```
@@ -243,7 +243,7 @@ fine under the SDK.
 
 Typically this involves the Qt dependencies, so you will need to add lines like the following:
 
-```
+```specfile
 BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  pkgconfig(Qt5Widgets)
@@ -267,7 +267,7 @@ Check the `url` parameter in the `_service` file.
 Also, check the settings on your git host. The repository may be set to private.
 And be sure to use a clone URL, not a web view of the repo (like git-web).
 
-```
+```xml
   <param name="url">https://github.com/sailfishos-chum/qt6.git</param>
   <param name="branch">gcc</param>
 ```
@@ -290,7 +290,7 @@ There are two possible solutions for that.
  Note that if you actually want to build all the .spec files, you can either use OBS Links (`_link`), or a [Multibuild](https://openbuildservice.org/help/manuals/obs-user-guide/cha-obs-multibuild) setup to achieve that.
  Either create linked Packages that have the same name as the other .spec files or create a `_multibuild` file using the .spec file names as `flavor`:
 
-```
+```xml
 <multibuild>
   <flavor>foo</flavor>
   <flavor>bar</flavor>
@@ -353,7 +353,7 @@ With `osc`, the commands are: `osc meta -e prj`, and `osc meta -e pkg`
 
 Support x64, arm, arm64, build for both arm and arm64, but only publish arm64:
 
-```
+```xml
 <project name="home:username:devel:foo">
   <title>Foo</title>
   <description>The Foo suite of software</description>
@@ -420,7 +420,7 @@ change.
 
 **Step-by-Step**:
 
-```
+```sh
 # Create a branch and check it out
 osc branch path:to:source:project sourcepackage
 # Alternatively, use linking instead of branching:
