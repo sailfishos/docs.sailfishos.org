@@ -72,9 +72,20 @@ The commands below will definitely and quickly remove all Android stuff. Use it 
   
 2) Run the following commands in the Terminal. Note that they remove all of your installed Android apps and their data, too, in addition to AppSupport.
 ```
+# Sailfish OS version 4 and lower
 devel-su
-rm -rf /home/.android/
-rm -rf /home/defaultuser/android_storage/   ## On some phones: /home/nemo/android_storage/
+rm -rf /home/defaultuser/android_storage
+reboot
+```
+
+```
+# Sailfish OS version 5 and higher
+devel-su
+rm -rf /home/.appsupport
+rm -rf /home/appsupport-root
+rm -rf /home/defaultuser/android_storage
+reboot
+
 ```
 3) Restart the device.
 
