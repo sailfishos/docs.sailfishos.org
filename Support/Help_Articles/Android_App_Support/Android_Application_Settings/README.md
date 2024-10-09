@@ -14,7 +14,7 @@ The most often needed settings are the permissions to access certain services an
 
 # Adjusting the settings of Android AppSupport of Sailfish OS
 
-The Settings app of Sailfish OS has the item **Android AppSupport** almost at the end of the page, in the section "Info".
+The Settings app of Sailfish OS has the item **Android AppSupport** almost at the end of the page "Settings > System > Android AppSupport", in the section "Info".
 
 <div class="flex-images" markdown="1">
 
@@ -27,14 +27,14 @@ The Settings app of Sailfish OS has the item **Android AppSupport** almost at th
 
 Android AppSupport is a dedicated run environment for Android apps on top of Sailfish OS. It can be thought of as a kind of sandbox for playing Android apps in it. This sandbox sets limits on what the Android apps can do. Having Android AppSupport running in the background consumes system resources, including the battery.
 
-You can decide if the Android AppSupport is automatically started when you restart your phone or not until it is really needed. If you leave it OFF (i.e., the switch light in front of "**Start Android AppSupport on bootup**" is dimmed) then the Android service would be started only when you open an Android app on your phone. If Android AppSupport is OFF then the background services of various Android apps (e.g. messengers) cannot work. This implies that messaging apps, for instance, cannot communicate. On the positive side, the battery will last longer.
+You can decide if the Android AppSupport is automatically started when you restart your phone or not until it is really needed. If you leave it OFF (i.e., the switch light in front of "**Start Android AppSupport on bootup**" is dimmed - see Pic 1 above) then the Android service would be started only when you open an Android app on your phone. If Android AppSupport is OFF then the background services of various Android apps (e.g. messengers) cannot work. This implies that messaging apps, for instance, cannot communicate. On the positive side, the battery will last longer.
 
-The other option to start the Android service is to do it manually by tapping the **Start** button at the bottom of the said menu page. If you have had Android AppSupport running you can stop it with the **Stop** button. Note that only one of these two buttons is visible at a time.
+The other option to start the Android service is to do it manually by tapping the **Start** button on page "Settings > System > Android AppSupport". If you have had Android AppSupport running you can stop it with the **Stop** button. Note that only one of these two buttons is visible at a time.
 
 
 # Accessing the settings of an individual Android app
 
-_The "Open Android settings" button and Android settings app are not available on products with earlier versions (4.1 and 4.4.) of Android AppSupport (Jolla Phone, Jolla Tablet, Jolla C, Xperia X). The instructions below are for Xperia XA2, Xperia 10, Xperia 10 II and Xperia 10 III_.
+_The "Open Android settings" button and Android settings app are not available on products with earlier versions (4.1 and 4.4.) of Android AppSupport (Jolla Phone, Jolla Tablet, Jolla C, Xperia X). The instructions below are for Xperia XA2, various Xperia 10 models and, Jolla C2_.
 
 1) Go to Settings > Apps > \[_name-of-an-Android-app_\]<br>
 We are looking at the settings of WhatsApp application in the example shown in Pic 2.
@@ -48,7 +48,7 @@ We are looking at the settings of WhatsApp application in the example shown in P
 </div>
 
   
-2) Tap the button "Open Android settings" (_see Pic 2 above)_
+2) Tap the button "Open Android settings" (see Pic 2 above).
 
 3) Tap "Permissions" (Pic 3) to check or change the permissions of this particular app.
 
@@ -64,25 +64,19 @@ We are looking at the settings of WhatsApp application in the example shown in P
   </span>
 </div>
 
- 
-  
+
 4) Consider checking the notifications, storage, and other settings, too.
 
-# Accessing the common Android settings from the command line
+# Accessing the common Android settings
 
-It is possible to access the common settings of all Android apps by using the command-line interface (CLI).
+Open the common settings of all Android apps by tapping the "Android version" five (5) times at the top of the page "Settings > System > Android AppSupport" 
 
-For this, you need to enable the [**Developer mode**](/Support/Help_Articles/Enabling_Developer_Mode/), so that you get the **Terminal** app to your phone.
-
-_This CLI approach requires the Android AppSupport version 8.1 (or higher) which implies Xperia XA2, Xperia 10, Xperia 10 II and Xperia 10 III products. The command does not work on Xperia X nor on Jolla products_
-
-Do as follows:
-
-1) Open the Terminal app<br>
-2) Run the command below:
+It is possible to access the common settings also by using the command-line interface (CLI):
 ```
 devel-su -p apkd-launcher com.android.settings
 ```
+## Common settings
+
 The following view appears. In there, it is possible to adjust the settings in each category.
 
 <div class="flex-images" markdown="1">
@@ -95,7 +89,7 @@ The following view appears. In there, it is possible to adjust the settings in e
   
   
 
-# An example:  Turning the touch screen sounds off
+## An example: Turning the touch screen sounds off
 
 Some Android apps produce sounds on every tap to the touch screen which may turn annoying after a while. At least on earlier Sailfish OS releases, the Sailfish settings could not prevent these sounds from playing. To silence them:
 

@@ -46,6 +46,8 @@ See [Picture 1](#picture_1) below. It shows the Emma home view on your PC once y
 
 Check the latest compatible Android baseband version (or "service" as they are called in Emma) according to the **[baseband version table](#the-baseband-version-table)** below. The corresponding Android OS versions shown in the phone settings are in parentheses. Pay attention to the first 2 numbers (preceeding the letter A).
 
+_NOTE: Emma works only with phones having the bootloaders unlocked. On the other hand, if Emma does not offer the baseband version that you want, you might get it by upgrading the phone with the Android GUI. For this, you must use Emma to revert the phone to Android, boot it up, turn it off and then relock the bootloader in the fastboot mode using the command "fastboot oem lock". Restart the phone and the GUI may have OS updates thereafter. Before installing Sailfish again you must unlock the bootloader._
+
 <div class="flex-images" markdown="1">
 
 * <a href="Emma_X10II_home.png" name="picture_1"><img src="Emma_X10II_home.png" alt="Emma home view"></a>
@@ -60,18 +62,22 @@ As of March 2023, the latest services were as below but note that the exact vers
 
 | Device        | Android baseband version                                                      |
 | ------------- | ----------------------------------------------------------------------------- |
-| Xperia X      | **34.4**.A.2.118 (Android 8)                                                  |
-| Xperia XA2    | **50.2**.A.0.400 (Android 9) [^1] <br /> **50.1**.A.13.123 (Android 8) [^2]   |
-| Xperia 10     | **53.0**.A.8.69 (Android 9) [^3]                                              |
-| Xperia 10 II  | **59.1.**A.2.169 (Android 11) <br /> **59.0**.A.6.24 (Android 10) [^4]        |
-| Xperia 10 III | **62.0.**A.3.109 (Android 11) <br /> **62.1.**A (Android 12) [^5]             |
+| Xperia X      | **34.4.**A.2.118 (Android 8)                                                  |
+| Xperia XA2    | **50.2.**A.0.400 (Android 9) [^1] <br /> **50.1.**A.13.123 (Android 8) [^2]   |
+| Xperia 10     | **53.0.**A.8.69 (Android 9) [^3]                                              |
+| Xperia 10 II  | **59.1.**A.2.169 (Android 11) <br /> **59.0.**A.6.24 (Android 10) [^4]        |
+| Xperia 10 III | **62.0.**A.x.yyy (Android 11) <br /> **62.1.**A.x.yyy (Android 12) [^5]       |
+| Xperia 10 IV  | **65.1.**A.x.yyy (Android 13) <br /> **65.2.**A.x.yyy (Android 14) [^6]                                            |
+| Xperia 10 V   | **68.0.**A.x.yyy (Android 13) <br /> **68.1.**A.x.yyy (Android 14) [^7]                                            |
 
 
 [^1]: This Android 9 version appears to sometimes get an invalid WiFi MAC which prevents the phone from using WiFi networks (in the Android mode). In such a case, first flash an Android 8 version, boot up, and then flash Android 9.  Note that even if there was no WiFi on Android 9, after installing Sailfish, WiFi works again.
 [^2]: We recommend Android 9 for Sailfish 3.3.0 and later. Baseband version 50.3.A.z.y might become available. Do not take it as it corresponds to Android 10, the compatibility with Sailfish has not been tested.
 [^3]: Use 53.0.A.x.y (Android 9). Do not install Android 10 as Sailfish is not compatible with it. Baseband versions 53.1.A.x.y imply Android 10, so do not install them with Emma as the WiFi service of the phone would get broken.
-[^4]: Both Android 10 and Android 11 are compatible with Sailfish. However, we recommend using Android 11, so select Android baseband 59.1.A.x.y if available.
-[^5]: Both Android 11 and Android 12 are compatible with Sailfish. However, we still recommend using Android 11, so select Android baseband 62.0.A.x.y if available.
+[^4]: Both Android 10 and 11 are compatible with Sailfish. However, we recommend using Android 11, so select Android baseband 59.1.A.x.y if available.
+[^5]: Both Android 11 and 12 are compatible with Sailfish.
+[^6]: Both Android 13 and 14 are compatible with Sailfish.
+[^7]: Both Android 13 and 14 are compatible with Sailfish.
 
 If there are two code packages with the same version ID, choose the one with the type "Software Update Content Erase" (instead of "Firmware update"), please (see [Picture 2](#picture_2) below). This is to force all possible changes into place.
 
@@ -153,7 +159,7 @@ See [Picture 6](#picture_6) below. Do not forget to check that your phone has no
 </div>
 
 
-# Installing Sailfish X again to Xperia
+# Installing Sailfish OS again to Xperia
 
 Installing Sailfish can be made with Windows, Linux or Mac computers. In the next chapters, we have pointers to our official Sailfish X instructions.
 
@@ -178,25 +184,31 @@ After downloading and unzipping the Sailfish package, it is good to check that t
 In particular, check that you have the correct file "SW_binaries_for_Xperia_Android*.img" (the so-called vendor binary image) there. There is a dedicated vendor image for different phone models. In the case of Xperia 10 II, it has the image name contains nickname "seine". If missing, select the instructions applicable to you:
 
 * for Xperia X:      SW\_binaries\_for\_Xperia\_AOSP\_M\_MR1\_3.10\_**v13_loire**.img
-    (if missing, visit chapter 5: **[Windows](https://jolla.com/sailfishx-windows-instructions/), [Linux](https://jolla.com/sailfishx-linux-instructions/), [Mac](https://jolla.com/sailfishx-macos-instructions/)** )
+    (if missing, visit chapter 5: [Windows](https://jolla.com/sailfishx-windows-instructions/#WX-5), [Linux](https://jolla.com/sailfishx-linux-instructions/#LX-5), [Mac](https://jolla.com/sailfishx-macos-instructions/#MX-5) )
     
 * for Xperia XA2:  SW\_binaries\_for\_Xperia\_Android\_8.1.6.4\_r1_**v16_nile**.img
-    (if missing, visit chapter 5: **[Windows](https://jolla.com/sailfishx-windows-instructions-xa2/), [Linux](https://jolla.com/sailfishx-linux-instructions-xa2/), [Mac](https://jolla.com/sailfishx-macos-instructions-xa2/)** )
+    (if missing, visit chapter 5: [Windows](https://jolla.com/sailfishx-windows-instructions-xa2/#WXA2-5), [Linux](https://jolla.com/sailfishx-linux-instructions-xa2/#LXA2-5), [Mac](https://jolla.com/sailfishx-macos-instructions-xa2/#MXA2-5) )
     
 * for Xperia 10:  SW\_binaries\_for\_Xperia\_Android\_9.0\_2.3.2_**v9_ganges**.img
-    (if missing, visit chapter 5: **[Windows](https://jolla.com/install-sailfish-x-xperia-10-windows/), [Linux](https://jolla.com/install-sailfish-x-xperia-10-linux/), [Mac](https://jolla.com/sailfishx-xperia10-macos/)** )
+    (if missing, visit chapter 5: [Windows](https://jolla.com/install-sailfish-x-xperia-10-windows/#W10-5), [Linux](https://jolla.com/install-sailfish-x-xperia-10-linux/#L10-5), [Mac](https://jolla.com/sailfishx-xperia10-macos/#M10-5) )
 * for Xperia 10 II:  SW\_binaries\_for\_Xperia\_Android\_10.0.7.1\_r1_**v12b_seine**.img
-    (if missing, visit chapter 5: **[Windows](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-windows/)**, **[Linux](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-linux/)**, **[Mac](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-macos/)** )
+    (if missing, visit chapter 5: [Windows](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-windows/#W10ii-5), [Linux](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-linux/#L10ii-5), [Mac](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-macos/#M10ii-5) )
 * for Xperia 10 III:  SW\_binaries\_for\_Xperia\_Android\_11\_4.19_**v9a_lena**.img
-    (if missing, visit chapter 5: [**Windows**](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-windows/), **[Linux](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-linux/)**, **[Mac](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-macos/)** )
+    (if missing, visit chapter 5: [Windows](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-windows/#W10iii-5), [Linux](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-linux/#L10iii-5), [Mac](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-macos/#M10iii-5) )
+* for Xperia 10 IV:  SW\_binaries\_for\_Xperia\_Android\_14\_5.4_**v3a_murray**.img
+    (if missing, visit chapter 5: [Windows](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iv-on-windows/#W10iv-5), [Linux](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iv-on-linux/#L10iv-5), [Mac](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iv-on-macos/#M10iv-5) )
+* for Xperia 10 V:  SW\_binaries\_for\_Xperia\_Android\_14\_5.4_**v3a_zambezi**.img
+    (if missing, visit chapter 5: [Windows](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-v-on-windows/#W10v-5), [Linux](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-v-on-linux/#L10v-5), [Mac](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-v-on-macos/#M10v-5) )
 
-Install (flash) Sailfish OS  to your Xperia. Select the instructions applicable to you:
+Install (flash) Sailfish OS  to your Xperia. Select the instructions applicable to your phone and computer:
 
-* Xperia X, as instructed in chapters 6: [Windows](https://jolla.com/sailfishx-windows-instructions/), [Linux](https://jolla.com/sailfishx-linux-instructions/), [Mac](https://jolla.com/sailfishx-macos-instructions/).
-* Xperia XA2, as instructed in chapters 6: [Windows](https://jolla.com/sailfishx-windows-instructions-xa2/)[,](https://jolla.com/sailfishx-macos-instructions/) [Linux](https://jolla.com/sailfishx-linux-instructions-xa2/)[,](https://jolla.com/sailfishx-macos-instructions/) [Mac](https://jolla.com/sailfishx-macos-instructions-xa2/)
-* Xperia 10, as instructed in chapters **8**: [Windows](https://jolla.com/install-sailfish-x-xperia-10-windows/), [Linux](https://jolla.com/install-sailfish-x-xperia-10-linux/), [Mac](https://jolla.com/sailfishx-xperia10-macos/)
-* Xperia 10 II, as instructed in chapters **8**: [Windows](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-windows/), [Linux](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-linux/), [Mac](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-macos/)
-* Xperia 10 III, as instructed in chapters **8**: [Windows](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-windows/), [Linux](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-linux/), [Mac](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-macos/)
+* Xperia X, as instructed in chapter **6**: [Windows](https://jolla.com/sailfishx-windows-instructions/#WX-6), [Linux](https://jolla.com/sailfishx-linux-instructions/#LX-6), [Mac](https://jolla.com/sailfishx-macos-instructions/#MX-6).
+* Xperia XA2, as instructed in chapter **6**: [Windows](https://jolla.com/sailfishx-windows-instructions-xa2/#WXA2-6)[,](https://jolla.com/sailfishx-macos-instructions/) [Linux](https://jolla.com/sailfishx-linux-instructions-xa2/#LXA2-6)[,](https://jolla.com/sailfishx-macos-instructions/) [Mac](https://jolla.com/sailfishx-macos-instructions-xa2/#MXA2-6)
+* Xperia 10, as instructed in chapter **8**: [Windows](https://jolla.com/install-sailfish-x-xperia-10-windows/#W10-8), [Linux](https://jolla.com/install-sailfish-x-xperia-10-linux/#L10-8), [Mac](https://jolla.com/sailfishx-xperia10-macos/#M10-8)
+* Xperia 10 II, as instructed in chapter **8**: [Windows](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-windows/#W10ii-8), [Linux](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-linux/#L10ii-8), [Mac](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-macos/#M10ii-8)
+* Xperia 10 III, as instructed in chapter **8**: [Windows](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-windows/#W10iii-8), [Linux](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-linux/#L10iii-8), [Mac](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-macos/#M10iii-8)
+* Xperia 10 IV, as instructed in chapter **8**: [Windows](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iv-on-windows/#W10iv-8), [Linux](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iv-on-linux/#L10iv-8), [Mac](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iv-on-macos/#M10iv-8)
+* Xperia 10 V, as instructed in chapter **8**: [Windows](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-v-on-windows/#W10v-8), [Linux](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-v-on-linux/#L10v-8), [Mac](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-v-on-macos/#M10v-8)
     
 
   
@@ -217,7 +229,7 @@ First, you will see a reminder of an unlocked boot loader, which you can ignore.
 
 Sign in to your **[Jolla account](/Support/Help_Articles/Accounts_Setup/Setup_Jolla_Account/)** in order to get the Android AppSupport and other licensed content. The Jolla account must be the same as you used when purchasing the Sailfish X licence.
 
-Next, you can install more **Sailfish apps** from the **[Jolla store](/Support/Help_Articles/Jolla_Store/)**  and **[Android apps](/Support/Help_Articles/Android_App_Support/)** from stores like **[APKPure](/Support/Help_Articles/Android_App_Support/APKPure/)** or **[Aptoide](/Support/Help_Articles/Android_App_Support/Aptoide/)**.
+Next, you can install more **Sailfish apps** from the **[Jolla store](/Support/Help_Articles/Jolla_Store/)**  and **[Android apps](/Support/Help_Articles/Android_App_Support/)** from stores like **F-Droid** or **Aurora Store**.
 
 ----
 

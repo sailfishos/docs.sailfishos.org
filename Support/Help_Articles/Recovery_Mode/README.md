@@ -33,23 +33,29 @@ If you have questions about Recovery Mode, you can raise those at the [**Sailfis
 
 # Setting up the Recovery Mode on the phone
 
-## Preparing Xperia 10 II or Xperia 10 III to the Recovery Mode
-1. Disconnect the USB cable from Xperia 10 II
-2. Turn the phone OFF
-3. If you have the _fastboot drivers_ (Windows) or _fastboot tools_ (Linux, Mac) already installed on your computer, skip to the next step (4). You have them if you installed Sailfish OS to your Xperia 10 II or Xperia 10 III with the present computer. If not, install fastboot now - the instructions are:
-	* Windows computer: chapter 2 in [**Xperia 10 II Sailfish X instructions - Windows**](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-windows/)
-	* Linux computer: chapter 2 in [**Xperia 10 II Sailfish X instructions - Linux**](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-linux/)
-	* Mac computer: chapter 2 in [**Xperia 10 II Sailfish X instructions - Mac**](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-macos/)
-	* Windows computer: chapter 2 in [**Xperia 10 III Sailfish X instructions - Windows**](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-windows/)
-	* Linux computer: chapter 2 in [**Xperia 10 III Sailfish X instructions - Linux**](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-linux/)
-	* Mac computer: chapter 2 in [**Xperia 10 III Sailfish X instructions - Mac**](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-macos/)
-4. Force your Xperia 10 II or Xperia 10 III to the fastboot mode:
-	* Hold the Volume Up key down and connect a data-connected USB cable (a charging cable would not work)
-	* Ensure that the LED at the top of the display area is lit in BLUE colour (if not, disconnect the cable, release the key and try again)
-5. You will need the same version of hybris-recovery.img as belongs to the Sailfish OS version of your phone currently. If you have updated your phone to the latest release then download the latest Sailfish OS image from [**Jolla Shop**](https://shop.jolla.com/downloads/). The downloaded package contains a matching **hybris-recovery.img (*)**. If you happen to have an older OS release on the phone get the hybris-recovery.img from the installation directory of that release. If you do not have it on your computer, [**contact us**](https://jolla.zendesk.com/hc/en-us/requests/new).
-6. The following commands will enable the Recovery Mode (the BLUE LED should be lit at this point)
+## Preparing Xperia 10 II, 10 III, 10 IV or 10 V to the Recovery Mode
+1) Disconnect the USB cable from the Xperia
 
-**(*) NOTE:** As the hybris-recovery image of the OS release 4.6.0 does not work correctly, we advice you to use the recovery image of the OS release 4.5.0 instead, [available here](https://releases.sailfishos.org/images/4.5.0.25/).
+2) Turn the phone OFF
+
+3) If you have the _fastboot drivers_ (Windows) or _fastboot tools_ (Linux, Mac) already installed on your computer, skip to the next step (4). You may have them if you installed Sailfish OS to your Xperia with the present computer. If not, install fastboot now - the instructions are:
+
+|   Linux     |    Mac      |   Windows        |
+| :---------: | :---------: | :--------------: |
+| [Xperia X10 II](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-linux/#L10ii-3) | [Xperia X10 II](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-macos/#M10ii-3) | [Xperia X10 II](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-ii-on-windows/#W10ii-3) |
+| [Xperia X10 III](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-linux/#L10iii-3) | [Xperia X10 III](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-macos/#M10iii-3) | [Xperia X10 III](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iii-on-windows/#W10iii-3) |
+| [Xperia X10 IV](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iv-on-linux/#L10iv-3) | [Xperia X10 IV](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iv-on-macos/#M10iv-3) | [Xperia X10 IV](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-iv-on-windows/#W10iv-3) |
+| [Xperia X10 V](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-v-on-linux/#L10v-3) | [Xperia X10 V](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-v-on-macos/#M10v-3) | [Xperia X10 V](https://jolla.com/how-to-install-sailfish-x-on-xperia-10-v-on-windows/#W10v-3) |
+
+4) Force your Xperia 10 to the fastboot mode:
+
+* Hold the Volume Up key down and connect a data-connected USB cable (a charging cable would not work)
+* Ensure that the indicator light at the top of the display area is lit in BLUE colour (if not, disconnect the cable, release the key and try again)
+
+5) You will need the same version of hybris-recovery.img as belongs to the Sailfish OS version of your phone currently. If you have updated your phone to the latest release then download the latest Sailfish OS image from [**Jolla Shop**](https://shop.jolla.com/downloads/). The downloaded package contains a matching **hybris-recovery.img**. If you happen to have an older OS release on the phone get the hybris-recovery.img from the installation directory of that release. If you do not have it on your computer, [**contact us**](https://jolla.zendesk.com/hc/en-us/requests/new).
+
+6) The following commands will enable the Recovery Mode (the BLUE indicator light should be lit at this point)
+
 
 On Windows:
 ```
@@ -76,22 +82,31 @@ Disconnect the USB cable.
 
 ## Preparing Xperia X, Xperia XA2 or Xperia 10 to the Recovery Mode
 
-1. Disconnect the USB cable from the Xperia phone.
-2. Turn Xperia OFF
-3. If you have the _fastboot drivers_ (Windows) or _fastboot tools_ (Linux, Mac) already installed on your computer, skip to the next step (4). You probably have them if you installed Sailfish OS to your Xperia with the present computer.
-    If not, install _fastboot_ now - the instructions are:
-    * Windows computer: chapter 2 in **[Sailfish X instructions - Windows](https://jolla.com/sailfishx-windows-instructions/)**
-    * Linux computer: chapter 2 in **[Sailfish X instructions - Linux](https://jolla.com/sailfishx-linux-instructions/)**
-    * Mac computer: chapter 2 in **[Sailfish X instructions - Mac](https://jolla.com/sailfishx-macos-instructions/)**
-4. Force your Xperia to the _fastboot mode_:
-    * Hold the Volume Up key down and connect the data-connected USB cable
-    * Ensure that the LED at the top of the display area is lit in BLUE colour
-      _(if not, disconnect the cable, release the key and try again)_
-5. You will need the same version of `hybris-recovery.img` as belongs to the Sailfish OS version of your phone currently **(#)**. In other words, if you have updated OS version 4.3.0 (say) to your phone, then you should use the hybris-recovery.img of OS version 4.3.0. To ensure this, download the latest Sailfish OS image from [**Jolla Shop**](https://shop.jolla.com/downloads/) (provided that you have updated your phone to the latest).  Unzip the archive and observe the hybris-recovery.img file in it.
-6. Open the Terminal app on your computer. Proceed to the directory where you have the hybris-recovery.img file.
-7. The following command will enable the Recovery Mode (the BLUE LED should be lit at this point)
+1) Disconnect the USB cable from the Xperia phone.
 
-**(#) NOTE:** As the hybris-recovery image of the OS release 4.6.0 does not work correctly, we advice you to use the recovery image of the OS release 4.5.0 instead, [available here](https://releases.sailfishos.org/images/4.5.0.25/).
+2) Turn Xperia OFF
+
+3) If you have the _fastboot drivers_ (Windows) or _fastboot tools_ (Linux, Mac) already installed on your computer, skip to the next step (4). You probably have them if you installed Sailfish OS to your Xperia with the present computer.
+    If not, install _fastboot_ now - the instructions are:
+
+|   Linux     |    Mac      |   Windows        |
+| :---------: | :---------: | :--------------: |
+| [Xperia X](https://jolla.com/sailfishx-linux-instructions/#LX-2) | [Xperia X](https://jolla.com/sailfishx-macos-instructions/#MX-2) | [Xperia X](https://jolla.com/sailfishx-windows-instructions/#WX-2) |
+| [Xperia XA2](https://jolla.com/sailfishx-linux-instructions-xa2/#LXA2-2) | [Xperia XA2](https://jolla.com/sailfishx-macos-instructions-xa2/#MXA2-2) | [Xperia XA2](https://jolla.com/sailfishx-windows-instructions-xa2/#WXA2-2) |
+| [Xperia X10](https://jolla.com/install-sailfish-x-xperia-10-linux/#L10-3) | [Xperia X10](https://jolla.com/sailfishx-xperia10-macos/#M10-3) | [Xperia X10](https://jolla.com/install-sailfish-x-xperia-10-windows/#W10-3) |
+
+4) Force your Xperia to the _fastboot mode_:
+
+* Hold the Volume Up key down and connect the data-connected USB cable
+* Ensure that the indictor light at the top of the display area is lit in BLUE colour
+_(if not, disconnect the cable, release the key and try again)_
+
+5) You will need the same version of `hybris-recovery.img` as belongs to the Sailfish OS version of your phone currently. In other words, if you have updated OS version 4.6.0 (say) to your phone, then you should use the hybris-recovery.img of OS version 4.6.0. To ensure this, download the latest Sailfish OS image from [**Jolla Shop**](https://shop.jolla.com/downloads/) (provided that you have updated your phone to the latest).  Unzip the archive and observe the hybris-recovery.img file in it.
+
+6) Open the Terminal app on your computer. Proceed to the directory where you have the hybris-recovery.img file.
+
+7) The following command will enable the Recovery Mode (the BLUE indicator light should be lit at this point)
+
 
 On Windows:
 ```
@@ -462,14 +477,14 @@ How this is done depends on the Xperia model. Read carefully.
 On these phone models, there is no need to re-install anything.
 The phone is back in its normal state as soon as you turn the phone on by applying the Power key in the normal way.
 
-## Reverting Xperia 10 II or Xperia 10 III to the normal mode
+## Reverting Xperia 10 II, 10 III, 10 IV or 10 V to the normal mode
 
 On these phone models, the boot image _hybris-boot.img_ must be re-installed in the fastboot mode.
 
 Force your Xperia again to the fastboot mode:
 
 * Hold the Volume Up key down and connect your USB cable again
-* Ensure that the LED at the top of the display area is lit in BLUE colour
+* Ensure that the indicator light at the top of the display area is lit in BLUE colour
 
 You will need the same version of hybris-boot.img as belongs to the Sailfish OS version of your phone currently. If you have updated your phone to the latest release then download the latest Sailfish OS image from [**Jolla Shop**](https://shop.jolla.com/downloads/). The downloaded package contains the matching hybris-boot.img. 
 
@@ -478,7 +493,7 @@ Another way would be to extract the file from your device by selecting the optio
 
 We are ready to install the boot image:
 * Open the Terminal app on your computer. Proceed to the directory where you have the _hybris-boot.img_ file.
-* The following commands will restore the boot partition (the BLUE LED must be lit at this point) and restart the phone:
+* The following commands will restore the boot partition (the BLUE indicator light must be lit at this point) and restart the phone:
 
 On Windows:
 ```

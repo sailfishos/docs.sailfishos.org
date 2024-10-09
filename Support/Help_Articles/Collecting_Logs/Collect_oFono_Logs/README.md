@@ -12,8 +12,8 @@ oFono is the SailfishOS component communicating with the cellular modem of the p
 Collecting oFono logs is helpful for many bugs related to voice calls, SMS and mobile data. You can use the **oFono Logger** app for collecting the logs.
 
 1. Install oFono Logger
-* Jolla devices, Xperia X and Xperia XA2: install the app from Jolla Store.
-* Xperia 10, Xperia 10 II, and Xperia 10 III (64-bit devices): install the app on the command line as shown below. You will need to enable the **[Developer mode](/Support/Help_Articles/Enabling_Developer_Mode/)**.
+* Jolla devices, Xperia X, Xperia XA2 and Xperia 10 (armv7hl devices): install the app from the Jolla Store.
+* Xperia 10 II, Xperia 10 III, Xperia 10 IV, and Xperia 10 V (64-bit devices): install the app on the command line as shown below. You will need to enable the **[Developer mode](/Support/Help_Articles/Enabling_Developer_Mode/)**.
 ```
 devel-su
 pkcon refresh
