@@ -15,7 +15,7 @@ This document instructs how to revert a Sailfish device back to a state where th
 This is the recommended way of removing the Android AppSupport. It is to remove everything necessary but you can optionally keep the installed Android apps or some of them.
 
 1) Uninstall all Android apps installed from the Jolla Store
-* Jolla Store has the following Android apps: _F-Droid_, _Aptoide_ and _Here WeGo_ (2024 July).
+* Jolla Store has the following Android apps: _F-Droid_, _Aurora Store_ and _Here WeGo_ (2024 October).
 * These apps **must** be uninstalled before uninstalling the AppSupport due to some dependency issues. AppSupport cannot be fully uninstalled without doing this step.
 * Open the Jolla Store. Pull down My Apps.
 * Look for the 3 apps mentioned above. Long-tap one at a time and select “Uninstall”.
@@ -74,6 +74,7 @@ The commands below will definitely and quickly remove all Android stuff. Use it 
 ```
 # Sailfish OS version 4 and lower
 devel-su
+rm -rf /home/.android
 rm -rf /home/defaultuser/android_storage
 reboot
 ```

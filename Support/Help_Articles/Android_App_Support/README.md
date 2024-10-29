@@ -14,28 +14,28 @@ In this article, you will learn how to make the best of the **Android AppSupport
 If you would like to remove Android apps (and support) from your Sailfish device, read [**this help article**](/Support/Help_Articles/Android_App_Support/Removing_Android_App_Support/).
 
 # Installing Android applications on your Sailfish device
-Installing Android applications is done by downloading **apk** files (an Android package file used to distribute applications) from application stores and by then installing them to your Sailfish device.
+Installing Android applications is done by downloading **apk** files (an Android package file used to distribute applications) from Android application stores, followed by the installation in the app store.
 
-Before installing any Android apps one must install **Android AppSupport** (simulation of the Android system on Sailfish OS) which is available in the Jolla Store. This requires the Sailfish X licence on Xperia devices.
-
-Another preparatory step is to enable "Settings > System > Untrusted software > Allow untrusted software". Installing Android apps (including application stores) from previously unused sources is considered potentially risky. Therefore, you must deliberately allow it.
+Before installing any Android apps, **Android AppSupport** (simulation of the Android system on Sailfish OS) must be installed. It is available in the Jolla Store. This requires the Sailfish OS licence.
 
 Android apps are installed in the internal storage of a phone. Installing apps on SD cards is not supported.
 
-After installing Android apps, the folder ```/home/.appsupport/instance/defaultuser/data/data``` shows all of your installed Android apps. The folder ```/home/defaultuser/android_storage/Android/data/``` contains the data meaningful to you in various Android apps.
+After installing Android apps, the folder ```/home/.appsupport/instance/defaultuser/data/data``` has all of your installed Android apps. The folder ```/home/defaultuser/android_storage/Android/data/``` contains the data meaningful to you in various Android apps. 
+Files saved using Android apps, for example downloaded files in a web browser or photos taken in a camera app, are stored in their respective folders in ```/home/defaultuser/android_storage```.
 
 ## Installing applications from application stores
-The SailfishOS operating system of Jolla supports Android apps that are featured in the Jolla Store and in Jolla-certified app partner stores.
+Sailfish OS supports Android apps featured in the Jolla Store and the Jolla-certified app partner stores.
 
-We recommend first checking what is available in **Aurora Store** and **F-Droid**. They are our Android apps stores, available in the Jolla Store app (in category Marketplaces). 
+We recommend first checking what is available in **Aurora Store** and **F-Droid**. They are the Android apps stores also available in the Jolla Store app (in category Marketplaces). 
 
 ### Note regarding the Google Play Store
 Sailfish OS does not support the Google Play store, because it relies on Google's proprietary background services only found on Android devices running Google's Android. We always advise against installing Google Services on SailfishOS, as it is known to potentially cause different problems.
 
-Applications that report that they require Google Play Services may work entirely or partially regardless of that disclaimer.  On the other hand, it may not be possible to install some apps at all.
+Applications reporting that they require Google Play Services may work entirely or partially regardless of that disclaimer.  On the other hand, it may not be possible to install some apps at all.
 
 ## Installing applications from .apk files
 Android applications are installed from files with the extension ".apk". Once you point your Sailfish device to such a file, it is possible to install the Android application from this file.
+Installing .apk files requires enabling "Settings > System > Untrusted software > Allow untrusted software". Installing Android apps (including Android application stores) from previously unused sources is considered potentially risky. Therefore, you must deliberately allow it.
 NOTE: We recommend installing Android apps directly from application stores (see chapter above) instead of installing ".apk" files.
 
 ### Downloading with the Browser
@@ -45,8 +45,6 @@ You can web search via the Sailfish browser for the app you are interested in an
 The downloaded files can also be found in "Settings > Transfers".
 
 Once you see the list of downloaded files, tap on a file to begin installing it.
-
-[**This help article**](/Support/Help_Articles/Android_App_Support/APKPure/) has the detailed steps of installing APK Pure app store using this method.
 
 ### Using File Manager
 Another option to install .apk files is to first copy them to your device (e.g. to the Downloads folder) and then use the **File manager** application (Settings > Storage > User data, see the pulley menu) to install the file/application. Start the installation simply by tapping  the .apk file in File Manager. To transfer files between your PC and your Sailfish device, please [**see this document**](/Support/Help_Articles/Moving_Files_between_PC_and_Sailfish_Device/).
