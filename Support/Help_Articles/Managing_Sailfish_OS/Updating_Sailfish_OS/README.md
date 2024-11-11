@@ -290,7 +290,7 @@ Now, open either the Terminal app or the Putty terminal.   Issue the following
 ```
 cd $HOME
 devel-su     ###  you will need to type your SSH password here
-pkill store-client  
+pkill -f osupdateservice
 rm -rf /home/.pk-zypp-dist-upgrade-cache/*  
 rm -rf ./.cache/sailfish-osupdateservice/os-info  
 reboot
@@ -368,7 +368,7 @@ Delete the reminders of earlier failing OS update attempts to make a clean updat
 ```
 cd $HOME  
 devel-su  
-pkill  store-client
+pkill -f osupdateservice
 rm -rf /home/.pk-zypp-dist-upgrade-cache/*
 rm ./.cache/sailfish-osupdateservice/os-info
 exit
@@ -385,7 +385,7 @@ The OS update notification may persist in the device after updating the OS with 
 ```
 cd $HOME  
 devel-su  
-pkill store-client
+pkill -f osupdateservice
 rm ./.cache/sailfish-osupdateservice/os-info
 ```
 
