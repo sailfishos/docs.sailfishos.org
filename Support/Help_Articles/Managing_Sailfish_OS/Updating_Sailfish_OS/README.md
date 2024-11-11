@@ -148,7 +148,7 @@ reboot                 ## Restart device
 **(*)** NOTE: Use the next stop release counted from the current OS version of your phone. You must traverse through all stop releases, and only after the last one of them you can "version dup" to the latest OS version. Otherwise, there is a great risk of breaking your device.
 
 Q: What is my next stop release?
-A: Check the current OS version of your device in "_Settings > About product_" (or "_Settings > Info > About product_" on some very old Sailfish 1 releases). Then look at the **[list of stop releases](https://docs.sailfishos.org/Support/Releases/)**. If your current version is let's say 1.1.6, then the next stop release would be 1.1.7.28. Note that only the top-most one on each table row is a stop release. For instance, 4.5.0.25 is a stop release but 4.5.0.24 is not.
+A: Check the current OS version of your device in "_Settings > About product_" (or "_Settings > Info > About product_" on some very old Sailfish 1 releases). Then look at the **[list of stop releases](https://docs.sailfishos.org/Support/Releases/)**. If your current version is let's say 1.1.6, then the next stop release would be 1.1.7.28. Note that you only need to go through the top-most one on each table row. For instance, from 4.4 you can update to 4.5.0.25 without first going to 4.5.0.24.
 
 Q: If I have OS version **1.0.0.5** on my device which steps do I need to take to update it to the latest version?
 A: Unfortunately, all of the following:
