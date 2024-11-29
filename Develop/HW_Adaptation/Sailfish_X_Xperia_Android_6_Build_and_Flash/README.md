@@ -58,7 +58,7 @@ git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
 ```
 
-You'll need to ensure you have the `repo` command from the AOSP source code repositories installed. See the [Android Source instructions](https://source.android.com/setup/develop#installing-repo) for how to install it. Once available you can continue:
+You'll need to ensure you have the `repo` command from the AOSP source code repositories installed. See the [Android Source instructions](https://source.android.com/docs/setup/start/requirements#repo) for how to install it. Once available you can continue:
 ```nosh
 HABUILD_SDK $
 
