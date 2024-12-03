@@ -66,8 +66,8 @@ sudo mkdir -p $ANDROID_ROOT
 sudo chown -R $USER $ANDROID_ROOT
 cd $ANDROID_ROOT
 repo init -u https://github.com/mer-hybris/android.git -b hybris-$HAVERSION -m tagged-manifest.xml
-# Adjust X to your bandwidth capabilities
-repo sync -jX --fetch-submodules
+# The -j parameter can be adjusted to your bandwidth capabilities
+repo sync -j4 --fetch-submodules
 source build/envsetup.sh
 export USE_CCACHE=1
 lunch aosp_$DEVICE-userdebug
@@ -108,8 +108,8 @@ cd $ANDROID_ROOT/..
 mkdir syspart
 cd syspart
 repo init -u https://github.com/mer-hybris/android.git -b syspart-$HAVERSION -m tagged-manifest.xml
-# Adjust X to your bandwidth capabilities
-repo sync -jX --fetch-submodules
+# The -j parameter can be adjusted to your bandwidth capabilities
+repo sync -j4 --fetch-submodules
 source build/envsetup.sh
 export USE_CCACHE=1
 lunch aosp_$DEVICE-userdebug

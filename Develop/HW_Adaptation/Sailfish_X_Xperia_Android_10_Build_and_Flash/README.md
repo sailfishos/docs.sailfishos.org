@@ -56,8 +56,8 @@ You'll need to ensure you have the `repo` command from the AOSP source code repo
 ```nosh
 # To save space, you can add "--depth=1 -c" flags to repo init:
 repo init -u https://github.com/mer-hybris/android.git -b $HAVERSION -m tagged-localbuild.xml
-# Adjust X to bandwidth capabilities
-repo sync -jX --fetch-submodules
+# The -j parameter can be adjusted to your bandwidth capabilities
+repo sync -j4 --fetch-submodules
 git clone --recurse-submodules https://github.com/mer-hybris/droid-src-sony droid-src -b "hybris-"$HAVERSION
 ln -s droid-src/patches
 droid-src/apply-patches.sh --mb
@@ -116,8 +116,8 @@ sudo chown -R $USER $ANDROID_ROOT-syspart
 cd $ANDROID_ROOT-syspart
 # if you plan to contribute to syspart (/system partition), remove "--depth=1" and "-c" flags below
 repo init -u https://github.com/mer-hybris/android.git -b $HAVERSION -m tagged-manifest.xml --depth=1
-# Adjust X to bandwidth capabilities
-repo sync -jX --fetch-submodules -c
+# The -j parameter can be adjusted to your bandwidth capabilities
+repo sync -j4 --fetch-submodules -c
 ln -s rpm/patches .
 rpm/apply-patches.sh --mb
 

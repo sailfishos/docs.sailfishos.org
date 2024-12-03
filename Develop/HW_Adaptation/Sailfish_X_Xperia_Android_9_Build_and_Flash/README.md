@@ -59,8 +59,8 @@ git clone --recurse-submodules https://github.com/mer-hybris/droid-hal-sony-$FAM
 ln -s ../dhd rpm/
 mv rpm dhd-rpm
 repo init -u https://github.com/mer-hybris/android.git -b $HAVERSION -m tagged-manifest.xml
-# Adjust X to bandwidth capabilities
-repo sync -jX --fetch-submodules
+# The -j parameter can be adjusted to your bandwidth capabilities
+repo sync -j4 --fetch-submodules
 mv rpm droid-src
 ln -s droid-src/patches .
 droid-src/apply-patches.sh --mb
@@ -111,8 +111,8 @@ sudo chown -R $USER $ANDROID_ROOT-syspart
 cd $ANDROID_ROOT-syspart
 # if you plan to contribute to syspart (/system partition), remove "--depth=1" and "-c" flags below
 repo init -u https://github.com/mer-hybris/android.git -b $HAVERSION -m tagged-manifest.xml --depth=1
-# Adjust X to bandwidth capabilities
-repo sync -jX --fetch-submodules -c
+# The -j parameter can be adjusted to your bandwidth capabilities
+repo sync -j4 --fetch-submodules -c
 ln -s rpm/patches .
 rpm/apply-patches.sh --mb
 
