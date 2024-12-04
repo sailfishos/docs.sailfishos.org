@@ -60,13 +60,13 @@ git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
 ```
 
-You'll need to ensure you have the `repo` command from the AOSP source code repositories installed. See the [Android Source instructions](https://source.android.com/setup/develop#installing-repo) for how to install it. Once available you can continue:
+You'll need to ensure you have the `repo` command from the AOSP source code repositories installed. See the [Android Source instructions](https://source.android.com/docs/setup/start/requirements#repo) for how to install it. Once available you can continue:
 
 ```nosh
 # To save space, you can add "--depth=1 -c" flags to repo init:
 repo init -u https://github.com/mer-hybris/android.git -b $HAVERSION -m tagged-localbuild.xml
-# Adjust X to bandwidth capabilities
-repo sync -jX
+# The -j parameter can be adjusted to your bandwidth capabilities
+repo sync -j4
 git clone --recurse-submodules https://github.com/mer-hybris/droid-src-sony droid-src -b "hybris-"$HAVERSION
 ln -s droid-src/patches
 droid-src/apply-patches.sh --mb
@@ -153,8 +153,8 @@ sudo chown -R $USER $ANDROID_SYSPART
 cd $ANDROID_SYSPART
 # If you plan to contribute to syspart (/system partition), remove the "--depth=1 -c" flags below
 repo init -u https://github.com/mer-hybris/android.git -b $HAVERSION -m tagged-manifest.xml --depth=1 -c
-# Adjust X to bandwidth capabilities
-repo sync -jX --fetch-submodules
+# The -j parameter can be adjusted to your bandwidth capabilities
+repo sync -j4 --fetch-submodules
 ln -s rpm/patches .
 rpm/apply-patches.sh --mb
 
