@@ -12,7 +12,7 @@ Getting started with the SDK is a fairly simple process:
 
 ## Install
 
-[Download the latest SDK](/Tools/Sailfish_SDK) installers and install it. Read more about [SDK Installation](/Tools/Sailfish_SDK/Installation).
+The SDK runs in its own virtual machine on Linux, Windows and OS X. Read our [installation guide](/Tools/Sailfish_SDK/Installation).
 
 ## Run
 
