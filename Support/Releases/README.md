@@ -8,7 +8,7 @@ nav_order: 100
 
 This is the [link to the release notes of all Sailfish OS releases](https://forum.sailfishos.org/tag/release-notes) in the Forum.
 
-## Sailfish 4 - Finnish Unesco world heritage sites
+## Sailfish 4 - Finnish Unesco world heritage list
 
 | Release                                                    | Name           | Published  | Note                        |
 | :--------------------------------------------------------: | -------------- | :--------: | --------------------------- |
