@@ -67,6 +67,7 @@ These are the known issues with the Sailfish SDK. If you have any questions, fee
 ### Sailfish OS Emulator
 
   - If the Emulator fails to boot to user interface, the reason might be disabled virtualization technology settings in host computer’s BIOS. By turning on virtualization technology settings from BIOS, the emulator should boot up to user interface.
+  - On recent macOS versions, when the emulator crashes during startup, ensure your VirtualBox version is at least 7.1. Alternatively, disabling access to microphone in the corresponding virtual machine settings may help.
   - Emulator may display a banner about Charging status when starting up. It can be dismissed by clicking on it. Emulator follows the battery status of the host computer.
   - Emulator might start flickering on slow computers.
   - Timeout problems connecting to emulator
