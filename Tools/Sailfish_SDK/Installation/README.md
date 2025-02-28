@@ -80,6 +80,10 @@ In order to maintain compatibility with older Linux distributions, Sailfish SDK 
 
   - On Arch Linux the package libxcrypt-compat must be installed
 
+### libxcb-xinerama0 (Ubuntu 24.10 only)
+
+This package is missing from some installations of Ubuntu 24.10 (at least) and must be installed manually.
+
 #### Modern bash
 
 Command completion for sfdk, the command line frontend to the Sailfish SDK, is only provided for bash shell interpreter. This requirement concerns especially macOS users, where the default shell is either a too old bash or zsh. If you plan to use Sailfish SDK from CLI on macOS, it is recommended to use newer `bash` and `bash-completion@2` packages from [Homebrew](https://brew.sh).
