@@ -25,12 +25,12 @@ You can interact with the OBS either on the web interface at [https://build.sail
 
 *Some terms, like  "repository", "source", "project", "package", have different
 meanings depending on context. For example "repo" can mean either a build
-environment configuration on OBS, or it's corresponding published RPM
+environment configuration on OBS, or its corresponding published RPM
 repository. But it can also refer to a git repository.*
 
 ## Setting up the (Home) Project and creating a Package
 
-To create an account on OBS, follow the instructions on [the Chum help page](https://github.com/sailfishos-chum/main#user-content-submitting-actively-maintained-software).
+To create an account on OBS, follow the instructions on [the OBS front page](https://build.sailfishos.org/).
 
 After creating a user account you are automatically the owner of the so-called "Home Project" named `home:$username`.
 You can create various packages in that project and also create sub-projects.
@@ -55,7 +55,9 @@ osc add *
 osc commit
 ```
 
-There are about three common "packaging formats" used in Sailfish OS development, which are described under [Packaging Formats](https://docs.sailfishos.org/Tools/Sailfish_SDK/Building_packages/#packaging-formats):
+There are about three common "packaging formats" used in Sailfish OS
+development, which are described under
+[Packaging Formats](/Tools/Sailfish_SDK/Building_packages/#packaging-formats):
 
  - Plain Tarball
  - "Application Repository": `tar_git` with source code repository
@@ -66,12 +68,13 @@ instructions and some other files (like patches) to package software for
 Sailfish OS, with the actual source code living in a git submodule of this
 repository.  
 An "Application Repository" contains the source code itself, e.g. because you
-wrote it or cloned a third-party git repository.
+wrote it or forked a git repository.
 
 ### Plain Tarball sources
 
 Usually, nothing special needs to be done if you want to build software from a source tarball.
-Just populate the OBS Package like below, OBS will pick up both and run the build. No `_service` file is necessary in this case.
+Just populate the OBS Package like below, OBS will pick up both and run the
+build. No `_service` file is necessary in this case.
 
 However, you must place a .spec file alongside the source tarball, it cannot be contained within the tarball.
 
@@ -83,7 +86,7 @@ application-1.2.3.tar.gz
 *Note: Using a plain tarball is an convenient and quick way to package software
 on OBS. Still, you are encouraged to move to a "Packaging Repo" approach for
 various reasons, including better revision control and history, easier forking
-by others, and considerations about backup/restore
+by others, and considerations about backup/restore.
 
 ### `tar_git` sources
 
@@ -107,42 +110,43 @@ following content, and then upload that file like you would a source file:
 </services>
 ```
 
-You may want to look at its [source code](https://github.com/MeeGoIntegration/obs-service-tar-git) detailed information about `tar_git`.
+You may want to look at its [source code](https://github.com/MeeGoIntegration/obs-service-tar-git)
+for detailed information about `tar_git`.
 
 
 #### Understanding version mangling performed by `tar_git`
 
 Before starting the build process, OBS will perform certain changes to the
 cloned .spec file. This mainly affects the contents of the `%{version}` and
-`%{revision}` macros.
+`%{release}` macros.  
+(This means you cannot use literal version or revision contents in your build
+setup. If you need those, you should parse the values of `%version` and `%release`).
 
 For some examples, see below.
 
-`%specialversion` will consist of:
- - if a tag parameter was specified in the `_service`, it will be used as the version
- - if a branch parameter was specified in the `_service`, it will be appended to the name, along with the hash of the git ref, prepended by the letter "g".
- - if no tag parameter was specified in the `_service`, but a branch name was, it will contain the value of the *latest* tag in the branch, and the branch name, timestamp, and git ref hash appended to it.
+The new `%version` will consist of:
+ - if a git hash was specified as `revision` parameter in the `_service`, it will be used as the version
+ - if a `branch` parameter was specified in the `_service`, it will be appended to the release name, along with the hash of the git ref, prepended by the letter "g".
+ - if no `revision` parameter was specified in the `_service`, but a branch
+   name was, it will contain the value of the "nearest" tag in the branch, plus
+   the branch name, timestamp, and git ref hash appended to it.
 
-`%specialrevision` will have the format X.Y.Z where:
- - X is always 1
- - Y is a counter that roughly corresponds to the number of revisions of the OBS package source.
- - Z is a counter starting at 1 and increasing each time OBS decides to automatically rebuild the package (usually because a dependency was rebuilt or newly published)
+The new `%release` will have the format `X.Y.Z.qual` where:
+ - `X` is always 1
+ - `Y` is a counter that roughly corresponds to the number of revisions of the OBS package source.
+ - `Z` is a counter starting at 1 and increasing each time OBS decides to automatically rebuild the package (usually because a dependency was rebuilt or newly published)
+ - `qual` is a string, on OBS ist is set to `bso` (short for `build.sailfishos.org`). `jolla` is also commonly seen.
 
-These auto-generated revision and version parameters will replace the
-`%version` and `%revision` macros in the .spec file throughout the OBS build
-process. So you cannot use literal version or revision contents in your build
-setup. If you need those, you should parse `%version` and `%revision`.
-
-(*Note: `%specialversion` and `%specialrevision` are not real macros, they are used here as examples only*)
+(This `%release` mangling can be configured using the [`Release`](https://en.opensuse.org/openSUSE:Build_Service_prjconf#Release) configration setting in the OBS project's `prjconf`.)
 
 **About tagging**
 
 It is common practice to leverage the rules above and use git tags as version
 specifiers. This is especially true for "Packaging Repositories", where tags
-like `X.Y.Z+gitN` signify version `X.Y.Z` of the upstream software, and N the
+like `X.Y.Z+gitN` signify version `X.Y.Z` of the upstream software, and `N` the
 iteration in the packaging repository.
 
-Be aware though that the parser above is not perfect. Also, some characters are
+Be aware though that the parser is not perfect. Also, some characters are
 disallowed to appear in RPM version strings. So be conservative in the naming
 of your tags.
 
@@ -150,15 +154,16 @@ of your tags.
 
 The tarball produced by the service has the following properties:
 
- - it will be named `_service:tar_git:%{name}-%{specialversion}-%{specialrevision}.tar.bz2` (see above about the `special` variables)
- - it will contain a directory `%{name}-%{specialversion}-%{specialrevision}`
+ - it will be named `_service:tar_git:%{name}-%{version}-%{release}.tar.bz2` (using the changed values explained above)
+ - it will contain a directory called `%{name}-%{version}`
  - the directory will:
    - contain the content of the repository, but will not include the `.git` directory (so any git calls in your build process will not function).
    - contain clones of all submodules (usually the "upstream" submodule), also without `.git`
    - the same applies to submodules within submodules.
 
-The service will also extract `rpm` sub-directory from the source repo and place its contents in the OBS package root.
-So the root may end up looking like this:
+The service will also extract `rpm` sub-directory from the source repo and
+place its contents in the OBS package root.  So the root may end up looking
+like this:
 
 ```
   _service
@@ -182,13 +187,13 @@ single source file and a Makefile.*
      - branch: development
      - revision: *empty*
 
-`_service:tar_git:foo-2.1+development.20240215221650.74.g0773230.tar.bz2` if the development branch contains a tag called 2.1
+`_service:tar_git:foo-2.1+development.20240215221650.74.gcafebab.tar.bz2` if the development branch contains a tag called 2.1
 
      - url: https://github.com/orgname/foo.git
      - branch: development
      - revision: 2.2
 
-`_service:tar_git:foo-2.2+development.20240215221650.74.g0773230.tar.bz2`
+`_service:tar_git:foo-2.2+development.20240215221650.74.gacb0e27.tar.bz2`
 
      - url: https://github.com/orgname/foo.git
      - branch: *empty*
@@ -283,7 +288,7 @@ Your project does contain a directory called `rpm`, but that directory contains 
 There are two possible solutions for that.
 
  1. delete one of the .spec files in the repo ;)
- 1. name the OBS package or the .spec file so their names match exactly. `tar_git` will accept a .spec file that has the same name as the project.
+ 1. name the OBS package or the .spec file so their names match exactly. `tar_git` will accept a .spec file that has the same name as the package.
 
  Note that if you actually want to build all the .spec files, you can either use OBS Links (`_link`), or a [Multibuild](https://openbuildservice.org/help/manuals/obs-user-guide/cha-obs-multibuild) setup to achieve that.
  Either create linked Packages that have the same name as the other .spec files or create a `_multibuild` file using the .spec file names as `flavor`:
