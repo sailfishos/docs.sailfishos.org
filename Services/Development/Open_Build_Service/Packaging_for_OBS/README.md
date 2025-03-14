@@ -100,7 +100,7 @@ following content, and then upload that file like you would a source file:
 ```xml
 <services>
   <service name="tar_git">
-  <param name="url">https://github.com/orgname/reponame.git</param>
+  <param name="url">https://git.example.org/orgname/reponame.git</param>
   <param name="branch"></param>
   <param name="revision"></param>
   <param name="token"/>
