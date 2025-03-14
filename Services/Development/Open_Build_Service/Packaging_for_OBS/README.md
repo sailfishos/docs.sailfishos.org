@@ -257,7 +257,7 @@ BuildRequires:  pkgconfig(Qt5Xml)
 
 ## Common errors
 
-To retry after fixing an error, run either `osc service rr` from the locally
+To retry after fixing an error, run either `osc service remoterun` from the locally
 checked out OBS package, or "Trigger Services" from the Web Interface.
 
 **ERROR: no packaging in this git clone**
@@ -349,7 +349,7 @@ To publish a package, either use the graphical tool in the Web Interface, or edi
 
 Not that Meta can be set globally or a Project, and then overridden per-package.
 
-With `osc`, the commands are: `osc meta -e prj`, and `osc meta -e pkg`
+With `osc`, the commands are: `osc meta --edit prj`, and `osc meta --edit pkg`
 
 
 **Example Project Meta configuration:**
@@ -430,7 +430,7 @@ osc branch path:to:source:project sourcepackage
 osc co home:username:branches:path:to:source:project sourcepackage
 cd home:username:branches:path:to:source:project/sourcepackage
 # Fetch the _link file:
-osc up --unexpand-link
+osc update --unexpand-link
 ```
 
 Edit the `_link` file to contain
