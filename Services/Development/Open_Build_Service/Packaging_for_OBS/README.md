@@ -90,7 +90,7 @@ by others, and considerations about backup/restore.
 
 ### `tar_git` sources
 
-`tar_git` is a OBS Service which clones a repository from a public git hoster,
+`tar_git` is a OBS Service which clones a repository from a public git location,
 creates a tarball from it, extracts the build information, and places all those
 files into the OBS Package source location. After this it starts to build the package.
 
