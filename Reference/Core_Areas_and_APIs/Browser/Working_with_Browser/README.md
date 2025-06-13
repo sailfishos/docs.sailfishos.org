@@ -41,6 +41,8 @@ MOZ_LOG="AudioStream:5,MediaFormatReader:5,MediaSource:5" sailfish-browser youtu
     - GMP - Gecko Media Plugin activity
     - PlatformDecoderModule - system codecs such as ffmpeg
 
+See the [Mozilla documentation](https://firefox-source-docs.mozilla.org/xpcom/logging.html) about logging for more information. 
+
 ## Debugging User-Agent problems
 
   - Current user-agent is "Mozilla/5.0 (Mobile; rv:78.0) Gecko/78.0 Firefox/78.0"
