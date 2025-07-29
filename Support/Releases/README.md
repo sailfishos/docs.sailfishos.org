@@ -12,7 +12,15 @@ This is the [link to the release notes of all Sailfish OS releases](https://foru
 
 | Release                                                    | Name           | Published  | Note                        |
 | :--------------------------------------------------------: | -------------- | :--------: | --------------------------- |
-| **[5.0.0.68](https://forum.sailfishos.org/t/release-notes-tampella-5-0-0-68/23427)**<br />[5.0.0.67](https://forum.sailfishos.org/t/release-notes-tampella-5-0-0-67/22916)<br />[5.0.0.62](https://forum.sailfishos.org/t/release-notes-tampella-5-0-0-62/22378)<br />[5.0.0.61](https://forum.sailfishos.org/t/release-notes-tampella-5-0-0-61/22224)<br />[5.0.0.55](https://forum.sailfishos.org/t/release-notes-tampella-5-0-0-55/21801)<br />[5.0.0.43](https://forum.sailfishos.org/t/release-notes-tampella-5-0-0-43-for-jolla-c2/21428)<br />[5.0.0.29](https://forum.sailfishos.org/t/release-notes-tampella-5-0-0-29-for-jolla-c2/21029)<br />[5.0.0.21](https://forum.sailfishos.org/t/release-notes-tampella-5-0-0-21-for-jolla-c2/20558)<br />[5.0.0.5](https://forum.sailfishos.org/uploads/short-url/ijwl2JG0i9D14epEOHLOuRROcPn.md)<br /> | Tempella  | 2025-06-13 <br />2025-04-67 <br />2025-02-27 <br />2025-02-20<br />2025-01-30 <br />2024-12-17 <br />2024-11-14 <br />2024-10-25 <br />2024-10-25 |- For all supported Sailfish OS device users. <br />- AppSupport is available for Xperia 10 IV and 10V. <br />- For all supported Sailfish OS device users. <br />- For all supported Sailfish OS device users. <br />- Early Access. <br />- Early Access for all supported Sailfish OS devices. <br />- Jolla C2. <br />- Jolla C2. <br />- Factory image for Jolla C2. |
+| **[5.0.0.68](https://forum.sailfishos.org/t/release-notes-tampella-5-0-0-68/23427)**| Tempella| 2025-06-13 | For all supported Sailfish OS device users. |
+| [5.0.0.67](https://forum.sailfishos.org/t/release-notes-tampella-5-0-0-67/22916)| Tempella | 2025-04-17 | AppSupport is available for Xperia 10 IV and 10V. | 
+| [5.0.0.62](https://forum.sailfishos.org/t/release-notes-tampella-5-0-0-62/22378)| Tempella |2025-02-27 | For all supported Sailfish OS device users. |
+| [5.0.0.61](https://forum.sailfishos.org/t/release-notes-tampella-5-0-0-61/22224)| Tempella |2025-02-20 | For all supported Sailfish OS device users. |
+| [5.0.0.55](https://forum.sailfishos.org/t/release-notes-tampella-5-0-0-55/21801)| Tempella |2025-01-30 | Early Access. |
+| [5.0.0.43](https://forum.sailfishos.org/t/release-notes-tampella-5-0-0-43-for-jolla-c2/21428)| Tempella |2024-12-17 | Early Access for all supported Sailfish OS devices. |
+| [5.0.0.29](https://forum.sailfishos.org/t/release-notes-tampella-5-0-0-29-for-jolla-c2/21029)| Tempella |2024-11-14 | Jolla C2. |
+| [5.0.0.21](https://forum.sailfishos.org/t/release-notes-tampella-5-0-0-21-for-jolla-c2/20558)| Tempella |2024-10-25 | Jolla C2. |
+| [5.0.0.5]| Tempella  | 2024-10-25 | Factory image for Jolla C2. |
 
 ## Sailfish 4 - Finnish Unesco world heritage list
 
