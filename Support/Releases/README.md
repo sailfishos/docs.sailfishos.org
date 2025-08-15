@@ -12,7 +12,8 @@ This is the [link to the release notes of all Sailfish OS releases](https://foru
 
 | Release                                                    | Name           | Published  | Note                        |
 | :--------------------------------------------------------: | -------------- | :--------: | --------------------------- |
-| **[5.0.0.68](https://forum.sailfishos.org/t/release-notes-tampella-5-0-0-68/23427)**| Tempella| 2025-06-13 | For all supported Sailfish OS device users. |
+| **[5.0.0.70](https://forum.sailfishos.org/t/release-notes-tampella-5-0-0-70-jolla-c2-only/24477)**| Tempella| 2025-08-14 | Jolla C2. |
+| [5.0.0.68](https://forum.sailfishos.org/t/release-notes-tampella-5-0-0-68/23427)| Tempella| 2025-06-13 | For all supported Sailfish OS device users. |
 | [5.0.0.67](https://forum.sailfishos.org/t/release-notes-tampella-5-0-0-67/22916)| Tempella | 2025-04-17 | AppSupport is available for Xperia 10 IV and 10V. | 
 | [5.0.0.62](https://forum.sailfishos.org/t/release-notes-tampella-5-0-0-62/22378)| Tempella |2025-02-27 | For all supported Sailfish OS device users. |
 | [5.0.0.61](https://forum.sailfishos.org/t/release-notes-tampella-5-0-0-61/22224)| Tempella |2025-02-20 | For all supported Sailfish OS device users. |
