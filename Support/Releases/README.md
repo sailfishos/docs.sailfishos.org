@@ -8,6 +8,13 @@ nav_order: 100
 
 This is the [link to the release notes of all Sailfish OS releases](https://forum.sailfishos.org/tag/release-notes) in the Forum.
 
+## Sailfish 5 - Tampere region
+
+| Release                                                    | Name           | Published  | Note                        |
+| :--------------------------------------------------------: | -------------- | :--------: | --------------------------- |
+| **[5.0.0.70](https://forum.sailfishos.org/t/24477)**<br/>[5.0.0.68](https://forum.sailfishos.org/t/23427)<br/>[5.0.0.67](https://forum.sailfishos.org/t/22916)<br/>[5.0.0.62](https://forum.sailfishos.org/t/22378)<br/>[5.0.0.61](https://forum.sailfishos.org/t/22224)<br/>[5.0.0.55](https://forum.sailfishos.org/t/21801)<br/>[5.0.0.43](https://forum.sailfishos.org/t/21428)<br/>[5.0.0.29](https://forum.sailfishos.org/t/21029)<br/>[5.0.0.21](https://forum.sailfishos.org/t/20558)<br />5.0.0.5 | Tampella  | 2025-08-14<br/>2025-06-13<br/>2025-04-17<br/>2025-02-27<br/>2025-02-24<br/>2025-01-30<br/>2024-12-17<br/>2024-11-14<br/>2024-10-24<br/>2024-09-26 | **Stop release**<br />- New devices Jolla C2 and Mind2, and Xperia X10 IV and V beta<br />- AppSupport 13 for new devices<br/>- MicroG 0.3.6 enablers<br/>- Browser engine esr91<br/> |
+
+
 ## Sailfish 4 - Finnish Unesco world heritage list
 
 | Release                                                    | Name           | Published  | Note                        |
