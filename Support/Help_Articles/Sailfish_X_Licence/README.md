@@ -9,40 +9,13 @@ nav_order: 700
 
 # Devices compatible with and licensed for Sailfish X
 
-**Sailfish X** [^1] has been ported to certain Sony Xperia and Gemini PDA models by Jolla. Some community people have ported Sailfish OS to some other devices, too, but that work is unofficial, i.e. Jolla has not been involved and the Sailfish X licence is not valid on those devices.
+**Sailfish X** [^1] has been ported to selected devices by Jolla. Community people have ported Sailfish OS to some other devices, too, but that work is unofficial, i.e. Jolla has not been involved and the Sailfish OS licence is not valid on those devices.
 
-**Sailfish X licence** from Jolla allows installing Sailfish OS on the Sony Xperia and Gemini PDA devices listed below. The licence makes it also possible to update Sailfish OS over the air, triggered from the phone UI.
+Find table of officially supported devices from **[the Supported Devices](/Support/Supported_Devices/)** section. 
 
-There are six licence groups currently (4Q/2022). A licence from one group cannot be used on a device from another group.
+We are always looking into porting Sailfish OS into new devices. Please stay tuned to **[Jolla Blog](https://blog.jolla.com/)** and **[Sailfish OS Forum](https://forum.sailfishos.org/)** for the latest information.
 
-1.  Licence group Xperia 10 III
-    * Sony Xperia 10 III Dual SIM (XQ-BT52)
-2.  Licence group Xperia 10 II
-    * Sony Xperia 10 II Single SIM (XQ-AU51)
-    * Sony Xperia 10 II Dual SIM (XQ-AU52)
-3.  Licence group Xperia 10
-    * Sony Xperia 10 Single SIM (I3113 & I3123)
-    * Sony Xperia 10 Dual SIM (I4113 & I4193)
-    * Sony Xperia 10 Plus Single SIM (I3213 & I3223)
-    * Sony Xperia 10 Plus Dual SIM (I4213 & I4293)
-4.  Licence group Xperia XA2
-    * Sony Xperia XA2 Single SIM (H3113 & H3123 & H3133)
-    * Sony Xperia XA2 Dual SIM (H4113 & H4133)
-    * Sony Xperia XA2 Plus Single-SIM (H3413)
-    * Sony Xperia XA2 Plus Dual-SIM (H4413 & H4493)
-    * Sony Xperia XA2 Ultra Single-SIM (H3213 & H3223)
-    * Sony Xperia XA2 Ultra Dual-SIM (H4213 & H4233)
-5.  Licence group Xperia X
-    * Sony Xperia X Single SIM (F5121)
-    * Sony Xperia X Dual SIM (F5122)
-6.  Licence group Gemini
-    * Gemini PDA x25
-    * Gemini PDA x27
-
-We are always looking into porting Sailfish OS into new devices, and naturally, the latest Sony devices are always on our radar.  Please stay tuned to **[Jolla Blog](https://blog.jolla.com/)** and **[Sailfish OS Forum](https://forum.sailfishos.org/)** for the latest information.
-
-
-  
+ 
 
 # How does the licence work
 
