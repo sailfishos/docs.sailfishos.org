@@ -18,7 +18,7 @@ Sony Xperia 10 III is used as an example but the same guidelines are good for al
 
 # Purchase the Sailfish OS licence
 
-1. Sailfish OS licence can be purchased from [Jolla Shop](https://shop.jolla.com/)
+1. Sailfish OS licence can be purchased from [Jolla Shop](https://commerce.jolla.com/)
 2. Sign in using your Jolla Account registered above.
 3. If you have a voucher use that for the purchase.
 
