@@ -8,7 +8,7 @@ nav_order: 10000
 ---
 
 This article is meant for troubleshooting problems with Exchange accounts, please note that setting up Exchange account is explained in [this article](/Support/Help_Articles/Accounts_Setup/Setup_Exchange_Account/).
-Please also note that in order to have Exchange account you need to have Sailfish X license, you can read more and buy the license from the [Jolla Shop](https://commerce.jolla.com/).
+Please also note that in order to have Exchange account you need to have Sailfish OS license, you can read more and buy the license from the [Jolla Shop](https://commerce.jolla.com/).
 
 # Known limitations related to Exchange
 

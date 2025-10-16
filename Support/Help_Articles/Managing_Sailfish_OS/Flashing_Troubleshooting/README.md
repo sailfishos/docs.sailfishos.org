@@ -9,7 +9,7 @@ nav_order: 2000
 
 # Flashing Sailfish to Xperia phone fails, troubleshooting.
 
-The following issue has been observed to happen on Ubuntu computers (version 18.04 at least) sometimes when installing Sailfish X to an Xperia XA2 device via a USB3 port.  It is not clear where the culprit is.
+The following issue has been observed to happen on Ubuntu computers (version 18.04 at least) sometimes when installing Sailfish OS to an Xperia XA2 device via a USB3 port.  It is not clear where the culprit is.
 Similar problems have been reported from different linux distributions, too, and while flashing Xperia X, Xperia XA2 and Xperia 10 devices.
 In our experience, flashing with Ubuntu (we use it on Lenovo Thinkpad computers) works in a reliable way. 
 
@@ -19,7 +19,7 @@ The failures typically hit when using a USB3 port on Ubuntu 18.04 computer (we a
 
 ### Flashing starts but later fails
 
-Soon after starting the script to flash Sailfish X to an Xperia XA2 the following can happen and appear at the computer terminal:
+Soon after starting the script to flash Sailfish OS to an Xperia XA2 the following can happen and appear at the computer terminal:
 ```
 $ ./flash.sh
 Detected Linux
@@ -63,7 +63,7 @@ sudo su
 lspci -nn | grep USB | cut -d '[' -f3 | cut -d ']' -f1 | xargs -I@ sudo setpci -H1 -d @ d0.l=0
 exit
 ```
-* Install Sailfish X to your Xperia XA2 now.
+* Install Sailfish OS to your Xperia XA2 now.
 ```
 ./flash.sh
 ```

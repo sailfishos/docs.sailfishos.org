@@ -9,9 +9,9 @@ nav_order: 1000
 
 # Introduction
 
-Our official instructions for installing Sailfish X (Sailfish OS) [^1] are [**on this web page**](https://jolla.com/sailfishxinstall/). There are separate instructions for Windows, Linux and Mac computers. Furthermore, there is a different set of instructions for the Xperia X, Xperia XA2, Xperia 10, Xperia 10 II, Xperia 10 III, Xperia 10 IV, and Xperia 10 V.
+Our official instructions for installing Sailfish OS are [**on this web page**](https://jolla.com/sailfishxinstall/). There are separate instructions for Windows, Linux and Mac computers. Furthermore, there is a different set of instructions for the Xperia X, Xperia XA2, Xperia 10, Xperia 10 II, Xperia 10 III, Xperia 10 IV, and Xperia 10 V.
 
-Jolla Shop has a selection of **[Sailfish OS "images"](https://shop.jolla.com/downloads/)** for each **[supported device](/Support/Supported_Devices/)** model. An image means a binary package or a compressed file that contains the executable code of the Sailfish operating system and some tools needed for the installation. The images can be downloaded as zip packages from the Jolla Shop after purchasing the **[Sailfish licence](/Support/Help_Articles/Sailfish_X_Licence/)**. You will need to sign in to the Shop for the download using the same Jolla account that you used for purchasing the licence.
+Jolla Shop has a selection of **[Sailfish OS "images"](https://shop.jolla.com/downloads/)** for each **[supported device](/Support/Supported_Devices/)** model. An image means a binary package or a compressed file that contains the executable code of the Sailfish operating system and some tools needed for the installation. The images can be downloaded as zip packages from the Jolla Shop after purchasing the **[Sailfish licence](/Support/Help_Articles/Sailfish_OS_Licence/)**. You will need to sign in to the Shop for the download using the same Jolla account that you used for purchasing the licence.
 
 In brief, installing Sailfish can be done on a device connected to a computer with a USB cable. At the moment of connection, the device is forced to a special state, the _fastboot_ state. The computer shall have a directory holding the uncompressed Sailfish image.
 
@@ -408,5 +408,3 @@ The attached PDF files show the output from the flashing script run successfully
 5.  Linux: flashing Sailfish to Xperia XA2 might get interrupted in the message " FAILED (remote: 'unknown command')". In that case, read this **[document](/Support/Help_Articles/Flashing_Troubleshooting/)**.
    
 
-----
-[^1]: Sailfish OS is the technical name while Sailfish X is the commercial name.
