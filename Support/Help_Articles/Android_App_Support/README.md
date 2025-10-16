@@ -116,9 +116,9 @@ Find an earlier version of this app - many app stores have the previous versions
 
 **Q: I want to install Android apps but cannot as there is no Android AppSupport in the Jolla Store!**
 
-The Sailfish OS licence must be activated on the device. Only then Android AppSupport starts appearing in the Jolla Store.
+The [Sailfish OS license](/Support/Help_Articles/Sailfish_OS_Licence/) must be activated on the device. Only then Android AppSupport starts appearing in the Jolla Store.
 
-Buy the licence at the [Jolla Shop](https://shop.jolla.com/). As soon as you have the licence, sign in from your Xperia device to the same Jolla account that you used when purchasing the licence. If you have signed in already then restart the device. The licence is now tied both to your account and to the IMEI code of your device. It is active. Next, open the Jolla Store and look for **Android AppSupport** in the Jolla category.
+As soon as you have the licence, sign in from your Xperia device to the same Jolla account that you used when purchasing the licence. If you have signed in already then restart the device. The licence is now tied both to your account and to the IMEI code of your device. It is active. Next, open the Jolla Store and look for **Android AppSupport** in the Jolla category.
 
 **Q: How can I change the permissions of Android apps?**
 

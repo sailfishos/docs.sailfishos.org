@@ -19,7 +19,7 @@ If your Xperia is not starting up normally or not starting up at all, you can at
 
 Recovery Mode is considered a last resort and should be used only if there is no other way. It is a powerful tool and using it always means that your data on the device is at risk. Please read the instructions in this article carefully.
 
-**NOTE:** You can install Sailfish X again ("re-flash") to your Xperia devices. This is an effective way to resolve many kinds of problems, compared to the Recovery Mode. Your Sailfish X licence even entitles you to download a more recent Sailfish version from [**Jolla Shop**](https://shop.jolla.com/downloads/). On the other hand, re-installing (flashing) implies that all data and apps in the device will be wiped away and lost. Please consider which way suits better to you.
+**NOTE:** You can install Sailfish OS again ("re-flash") to your Xperia devices. This is an effective way to resolve many kinds of problems, compared to the Recovery Mode. Your Sailfish OS licence even entitles you to download a more recent Sailfish version from [**Jolla Shop**](https://shop.jolla.com/downloads/). On the other hand, re-installing (flashing) implies that all data and apps in the device will be wiped away and lost. Please consider which way suits better to you.
 
 If you have questions about Recovery Mode, you can raise those at the [**Sailfish Forum**](https://forum.sailfishos.org/) or you can [**contact us**](https://jolla.zendesk.com/hc/en-us/requests/new).
 

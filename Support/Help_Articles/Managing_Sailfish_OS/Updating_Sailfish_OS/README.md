@@ -24,7 +24,7 @@ Before starting an OS update, ensure that the following crucial matters are as t
 * Make sure you have that you have enough **free storage space** (disk space) in the device: the user data "Used" is shown on menu page _Settings > Storage._
 * If you have installed applications from **OpenRepos** service, then see chapter OpenRepos in the end of this article. _If you have never heard of OpenRepos, no worries, please skip this step._
 
-NOTE: Xperia and Jolla C2 devices must have a valid **[Sailfish X licence](/Support/Help_Articles/Sailfish_X_Licence/)**, or else they won't get any OS updates.
+NOTE: **[Supported devices](/Support/Supported_Devices/)** must have a valid **[Sailfish OS licence](/Support/Help_Articles/Sailfish_OS_Licence/)**, or else they won't get any OS updates.
 
 ## Updating the operating system
 
@@ -250,7 +250,7 @@ The only way to "downgrade" is to use the **[factory reset](/Support/Help_Articl
 
 If getting or installing a Sailfish OS update keeps failing for unknown reasons on an Xperia device then please consider **[reinstalling Sailfish OS](https://docs.sailfishos.org/Support/Help_Articles/Reinstalling_Sailfish_OS/)** to the device.
 
-Given that you have a valid Sailfish X licence on your Jolla account for your Xperia phone, you can download the latest Sailfish OS version from **[Jolla Shop](https://shop.jolla.com/downloads/)** and reinstall it.
+Given that you have a valid Sailfish OS licence on your Jolla account for your Xperia phone, you can download the latest Sailfish OS version from **[Jolla Shop](https://shop.jolla.com/downloads/)** and reinstall it.
 
 
 
