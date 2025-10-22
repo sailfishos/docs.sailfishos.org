@@ -146,7 +146,7 @@ Your application can link against the following libraries:
 ### BluezQt
 
   - libKF5BluezQt.so.6
-    - We make no quarantees of backwards compatibility between releases. Supported since Sailfish OS 4.5.0.
+    - We make no guarantees of backwards compatibility between releases. Supported since Sailfish OS 4.5.0.
 
 ## Allowed QML Imports
 
