@@ -184,7 +184,7 @@ If there is an update available take it by selecting "Download" in the pulley me
 
 ### Finding the licensed apps in Jolla Store
 
-The Sailfish OS licence is available for users of Xperia phones to which Sailfish OS has been ported - see **[this list of supported devices](/Support/Supported_Devices/)**. The licence entitles the user to install OS updates and install some apps, including _Android AppSupport_ and _Microsoft Exchange_. Check the details of the **[Sailfish X licence](/Support/Help_Articles/Sailfish_X_Licence/)**.
+The Sailfish OS licence is available for users of Xperia phones to which Sailfish OS has been ported - see **[this list of supported devices](/Support/Supported_Devices/)**. The licence entitles the user to install OS updates and install some apps, including _Android AppSupport_ and _Microsoft Exchange_. Check the details of the **[Sailfish OS licence](/Support/Help_Articles/Sailfish_OS_Licence/)**.
 
 All of the licensed apps appear in the **Jolla category** of the Jolla Store app. Scroll down the home page to see the categories on the right. Tap "Jolla >".
 

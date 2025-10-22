@@ -13,10 +13,10 @@ It has turned out that the following procedure may sometimes help if something h
 
 These instructions are applicable for all [Xperia models supported by Sailfish OS](/Support/Supported_Devices/).
 
-Depending on the problems observed on your Xperia, it may be enough to just **reinstall ("reflash") Sailfish OS** to it. It is good to try this easier way first. In this case, skip to chapter "[Installing Sailfish X again to Xperia](#installing-sailfish-x-again-to-xperia)" in this document.
+Depending on the problems observed on your Xperia, it may be enough to just **reinstall ("reflash") Sailfish OS** to it. It is good to try this easier way first. In this case, skip to chapter "[Installing Sailfish OS again to Xperia](#installing-sailfish-os-again-to-xperia)" in this document.
 
 
-However, if your Xperia cannot use the services of cellular network properly (or at all), then it may be necessary to revert the device back to Android OS first, and finally, reinstall Sailfish X.
+However, if your Xperia cannot use the services of cellular network properly (or at all), then it may be necessary to revert the device back to Android OS first, and finally, reinstall Sailfish OS.
 
 **NOTE:** _Reverting the device back to Android means that **all data** in the device memory **will be deleted**. Only the SD and SIM cards remain untouched._
 
@@ -161,13 +161,13 @@ See [Picture 6](#picture_6) below. Do not forget to check that your phone has no
 
 # Installing Sailfish OS again to Xperia
 
-Installing Sailfish can be made with Windows, Linux or Mac computers. In the next chapters, we have pointers to our official Sailfish X instructions.
+Installing Sailfish can be made with Windows, Linux or Mac computers. In the next chapters, we have pointers to our official Sailfish OS instructions.
 
 NOTE: _Installing Sailfish OS again means that all data in the device memory will be deleted. Only the SD and SIM cards remain untouched._
 
 Make sure you have the **[latest available Sailfish OS](https://forum.sailfishos.org/tag/release-notes)** version downloaded to your computer and that the downloaded Sailfish image is the correct one for your **phone model**. You can check the exact model by pulling out a white label from the SIM card slot, listing the info (e.g. H3113 or I4213). Other ways to check the model are the sales box label and the phone menus. Trying to install (flash) an incorrect image will fail.
 
-The latest Sailfish OS version (and only the latest) is always available in **[this repository](https://shop.jolla.com/downloads/)** and can be downloaded from there. Please, sign in to this service with the same Jolla account that you used for buying the Sailfish X license.
+The latest Sailfish OS version (and only the latest) is always available in **[this repository](https://shop.jolla.com/downloads/)** and can be downloaded from there. Please, sign in to this service with the same Jolla account that you used for buying the Sailfish OS license.
 
 NOTE:  The links at the Download buttons are valid for a fairly short period of time only after entering the page. If you get the "403 permission denied" error when trying to download, you will need to reload the page to refresh the download links.
 
@@ -227,7 +227,7 @@ You can now turn your Xperia on by pressing the Power key. Let it then run the i
 
 First, you will see a reminder of an unlocked boot loader, which you can ignore. This is not a defect.
 
-Sign in to your **[Jolla account](/Support/Help_Articles/Accounts_Setup/Setup_Jolla_Account/)** in order to get the Android AppSupport and other licensed content. The Jolla account must be the same as you used when purchasing the Sailfish X licence.
+Sign in to your **[Jolla account](/Support/Help_Articles/Accounts_Setup/Setup_Jolla_Account/)** in order to get the Android AppSupport and other licensed content. The Jolla account must be the same as you used when purchasing the Sailfish OS licence.
 
 Next, you can install more **Sailfish apps** from the **[Jolla store](/Support/Help_Articles/Jolla_Store/)**  and **[Android apps](/Support/Help_Articles/Android_App_Support/)** from stores like **F-Droid** or **Aurora Store**.
 
