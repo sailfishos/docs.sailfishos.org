@@ -12,7 +12,7 @@ Support status on Sailfish OS version 5.0.0:
 
 SUPPORTED DEVICES
 
-Sailfish licences and installable Sailfish OS images are available at [Jolla Shop](https://shop.jolla.com). However, there is no licence for the Xperia 10 IV (XQ-CC54) and 10 V (XQ-DC54) yet. Their free trial images can be downloaded from the [4.6.0 image folder](https://releases.sailfishos.org/images/).
+Sailfish licences and installable Sailfish OS images are available at [Jolla Shop](https://commerce.jolla.com/). However, there is no licence for the Xperia 10 IV (XQ-CC54) and 10 V (XQ-DC54) yet. Their free trial images can be downloaded from the [4.6.0 image folder](https://releases.sailfishos.org/images/).
 
 
 | Device                     | Model               | Required stock Android version[^1]  | Kernel / BSP[^2] | AppSupport[^3] /<br />API level[^4]         | First Sailfish OS release        |
