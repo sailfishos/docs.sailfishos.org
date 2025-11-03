@@ -26,7 +26,7 @@ The table below lists some significant known issues in Sailfish OS releases. The
         </tr>
         <tr>
           <td>All</td>
-          <td>Flashing Sailfish X might fail (often caused by issues with USB ports). Please read <a href="/Support/Help_Articles/Flashing_Troubleshooting/">this article</a>.</td>
+          <td>Flashing Sailfish OS might fail (often caused by issues with USB ports). Please read <a href="/Support/Help_Articles/Flashing_Troubleshooting/">this article</a>.</td>
           <td>All</td>
           <td></td>
         </tr>
@@ -185,7 +185,7 @@ Disabled
         </tr>
         <tr>
           <td>Xperia X</td>
-          <td>Issues with mobile data persist on some SIM cards. Turn the Flight mode on and off to reset the network setup. Reverting the device to Android and re-installing Sailfish X has often helped. See our <a href="/Support/Help_Articles/Reinstalling_Sailfish_OS/">support article</a>.</td>
+          <td>Issues with mobile data persist on some SIM cards. Turn the Flight mode on and off to reset the network setup. Reverting the device to Android and re-installing Sailfish OS has often helped. See our <a href="/Support/Help_Articles/Reinstalling_Sailfish_OS/">support article</a>.</td>
           <td></td>
           <td>Not planned</td>
         </tr>

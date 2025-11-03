@@ -7,12 +7,13 @@ nav_order: 200
 
 Support status on Sailfish OS version 5.0.0:
 * Jolla has ported Sailfish OS to and supports the phone models listed in the table SUPPORTED DEVICES.
-* Sailfish OS release 4.6.0.15 contains the free trial version of Sailfish OS for the Xperia models XQ-CC54 and XQ-DC54. Android AppSupport is not yet available.
+* Jolla C2 device has [Sailfish OS license](/Support/Help_Articles/Sailfish_OS_Licence/) included.
+* Sailfish OS release 5.0.0.71 contains the free trial version of Sailfish OS for the Xperia models XQ-CC54 and XQ-DC54.
 
 
 SUPPORTED DEVICES
 
-Sailfish licences and installable Sailfish OS images are available at [Jolla Shop](https://shop.jolla.com). However, there is no licence for the Xperia 10 IV (XQ-CC54) and 10 V (XQ-DC54) yet. Their free trial images can be downloaded from the [4.6.0 image folder](https://releases.sailfishos.org/images/).
+Sailfish licences and installable Sailfish OS images are available at [Jolla Shop](https://commerce.jolla.com/).
 
 
 | Device                     | Model               | Required stock Android version[^1]  | Kernel / BSP[^2] | AppSupport[^3] /<br />API level[^4]         | First Sailfish OS release        |
