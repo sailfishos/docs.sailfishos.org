@@ -15,6 +15,30 @@ They are read by [Lipstick](/Reference/Core_Areas_and_APIs/Apps_and_MW/Lipstick/
 Desktop Entry Specification allows extending the specification with product specific keys. Sailfish
 OS uses that to specify some extensions to support certain functions better.
 
+### Launcher and Booster Type
+_X-Nemo-Application-Type_, and _X-Nemo-Single-Instance_ can be used instead
+of giving the the `--single-instance`, and `--type` options to invoker in the
+_Exec_ key.  
+Note however that _X-Nemo-Application-Type_ will have no effect for sandboxed
+apps, which will always be treated as _generic_.
+
+See the documentation for SailJail, Invoker, and the
+[Harbour FAQ](https://harbour.jolla.com/faq#.desktop-Files) for more.
+
+### Hiding app from launcher grid
+To hide an desktop entry form the Launcher Grid, use _NoDisplay=true_.
+This is mainly useful for registering a MIME Type launchers.
+
+In case of multi-platform apps sharing the same .desktop file, app developers
+can use _NotShowIn=X-MeeGo_, to hide the launcher only in Sailfish OS.
+
+### Localization
+In addition to the _Name[xx]_ method from the Desktop spec, launcher names can
+be localized using an existing Qt translation (.qm) file.
+
+See [I18N Documentation](Reference/I18n/I18n_Conventions/#application-names)
+about the keys _X-Amber-Translation-Catalog_ and _X-Amber-Logical-Id-*_.
+
 ### Application sandboxing profile
 Application developers can control their app's
 [sandbox](https://github.com/sailfishos/sailjail-permissions#sailfish-os-application-sandboxing-and-permissions)
@@ -70,3 +94,21 @@ In Sailfish OS 4.3.0 _ExecDBus_ is not considered when validating the arguments 
 launched via D-Bus which limits usefulness of that key. To work around that, the launch arguments
 used for D-Bus activation must match _Exec_ key in _Desktop Entry_ section. This issue is fixed in
 Sailfish OS 4.4.0.
+
+## D-Bus method calls
+The keys _X-Maemo-Service_, _X-Maemo-Object-Path_, _X-Maemo-Method_ can be
+used to specify a D-Bus method on a certain object path, which is called when
+the launcher is activated.
+
+The optional _X-Maemo-Fixed-Args_ tag can pass arguments to the call.
+
+This is similar to, but different from D-Bus activation above. The D-Bus
+Service must already be registered (e.g. using the method above, or from the app
+after launch), and `path` and `method` must exist for that service.
+
+This is used e.g. by MimeType .desktop files to open an app at a certain page.
+
+## Legacy and Deprecated
+
+ - _X-MeeGo-Translation-Catalog_ and _X-MeeGo-Logical-Id_.  Used for translations. Replaced by the _X-Amber-_ variants.
+
