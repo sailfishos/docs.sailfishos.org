@@ -77,13 +77,13 @@ Sailfish OS can run on top of standard Linux hardware with native drivers, or on
 
 In the middleware layer there are core system components for building services above hardware layer.
 
-The [Qt](http://www.qt.io) C++ application development framework provides the primary development libraries. Aside from the main Qt modules, Sailfish OS uses add-on modules such as Qt Maps, Qt Sensors and Qt Contacts. Also, all Sailfish applications are written with [QML](http://doc.qt.io/qt-5/qmlapplications.html), a Qt technology for easily building user interfaces into C++ applications.
+The [Qt](http://www.qt.io) C++ application development framework provides the primary development libraries. Aside from the main Qt modules, Sailfish OS uses add-on modules such as Qt Maps, Qt Sensors and Qt Contacts. Also, all Sailfish applications are written with [QML](https://doc.qt.io/archives/qt-5.6/qmlapplications.html), a Qt technology for easily building user interfaces into C++ applications.
 
 Sailfish OS also includes a large range of middleware libraries and frameworks that service the application layer, more details on the location for the sources please refer to [Sailfish OS Source](/Services/Development/Sailfish_OS_Source). They are written in C/C++, and libraries that are directly accessed by the UI layer include QML modules to allow them to be used by QML-based applications without additional QML/C++ bindings.
 
 ## Application and UI layer
 
-Sailfish OS applications are [written](/Develop/Apps) in a combination of C++ and [QML/Qt Quick](http://doc.qt.io/qt-5/qmlapplications.html). QML is a Qt technology primarily used to declaratively assemble application user interfaces and connect them to C++ backend code, and Qt Quick is a core part of the QML framework for UI creation. A Sailfish OS app typically defines the UI in QML, and if necessary, includes C++ utility code to execute further functionality that is otherwise unavailable from the QML layer.
+Sailfish OS applications are [written](/Develop/Apps) in a combination of C++ and [QML/Qt Quick](https://doc.qt.io/archives/qt-5.6/qmlapplications.html). QML is a Qt technology primarily used to declaratively assemble application user interfaces and connect them to C++ backend code, and Qt Quick is a core part of the QML framework for UI creation. A Sailfish OS app typically defines the UI in QML, and if necessary, includes C++ utility code to execute further functionality that is otherwise unavailable from the QML layer.
 
 Application launching and lifetime is controlled by [Lipstick](/Reference/Core_Areas_and_APIs/Apps_and_MW/Lipstick), which provides the essential user-session UI with an application launcher and other main screens, and also acts as the window manager.
 

@@ -17,7 +17,7 @@ Combining C++ and QML requires three distinct steps. First we need to create a d
 
 ## Creating the model
 
-Exposing data from C++ into QML is done via the [Qt Model/View framework](http://doc.qt.io/qt-5/model-view-programming.html). Our model is a simple array of strings. Qt provides a [QStringListModel](http://doc.qt.io/qt-5/qstringlistmodel.html) for this use case but for educational purposes we will provide our own by inheriting from a [QAbstractListModel](http://doc.qt.io/qt-5/qabstractlistmodel.html). The relevant parts of the model header file look like this.
+Exposing data from C++ into QML is done via the [Qt Model/View framework](https://doc.qt.io/archives/qt-5.6/model-view-programming.html). Our model is a simple array of strings. Qt provides a [QStringListModel](https://doc.qt.io/archives/qt-5.6/qstringlistmodel.html) for this use case but for educational purposes we will provide our own by inheriting from a [QAbstractListModel](https://doc.qt.io/archives/qt-5.6/qabstractlistmodel.html). The relevant parts of the model header file look like this.
 ```cpp
 #ifndef DEMOMODEL_H
 #define DEMOMODEL_H
@@ -133,7 +133,7 @@ int main(int argc, char *argv[])
 }
 ```
 
-Here we create an application and a [QQuickView](http://doc.qt.io/qt-5/qquickview.html). We store them in [QScopedPointers](http://doc.qt.io/qt-5/qscopedpointer.html) to make sure their resources are appropriately released. The next line does the actual exporting. It exposes the `DemoModel` under the namespace `com.example`, version 1.0. This allows QML pages to instantiate `DemoModel` components as if they were native data types. The last step to complete our application is to create a page to display the contents of the model.
+Here we create an application and a [QQuickView](https://doc.qt.io/archives/qt-5.6/qquickview.html). We store them in [QScopedPointers](https://doc.qt.io/archives/qt-5.6/qscopedpointer.html) to make sure their resources are appropriately released. The next line does the actual exporting. It exposes the `DemoModel` under the namespace `com.example`, version 1.0. This allows QML pages to instantiate `DemoModel` components as if they were native data types. The last step to complete our application is to create a page to display the contents of the model.
 
 ## Displaying data in a view
 

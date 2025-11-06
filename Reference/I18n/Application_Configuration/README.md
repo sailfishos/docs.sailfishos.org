@@ -10,7 +10,7 @@ This page explains how to configure your application for internationalisation on
 
 As an application developer you have more freedom for how you format and make use of the Qt internationalisation capabilities compared to Platform development. Nevertheless, in the longer term you may find it convenient to follow the [I18n Conventions](/Reference/I18n/I18n_Conventions) for your app.
 
-You may also find it useful to reference the Qt documentation on [Qt Quick internationalisation](https://doc.qt.io/qt-5/qtquick-internationalization.html) and [Qt Linguist](https://doc.qt.io/qt-5/linguist-programmers.html).
+You may also find it useful to reference the Qt documentation on [Qt Quick internationalisation](https://doc.qt.io/archives/qt-5.6/qtquick-internationalization.html) and [Qt Linguist](https://doc.qt.io/archives/qt-5.6/linguist-programmers.html).
 
 In the examples below we assume your app is called **harbour-myapp**; you'll need to adjust the statements to use the correct name for your app.
 
