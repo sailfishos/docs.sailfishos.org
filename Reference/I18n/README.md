@@ -14,7 +14,7 @@ All of the core components of Sailfish OS are fully internationalised, including
 
 When writing new applications or services to contribute to Sailfish OS, it is important to ensure that the contribution is internationalised, so that all users of Sailfish OS can eventually benefit from it.
 
-As far as possible Sailfish OS makes use of the existing Qt internationalisation capabilities. You may therefore find it useful to refer to the Qt documentation on [Qt Quick internationalisation](https://doc.qt.io/qt-5/qtquick-internationalization.html) and [Qt Linguist](https://doc.qt.io/qt-5/linguist-programmers.html).
+As far as possible Sailfish OS makes use of the existing Qt internationalisation capabilities. You may therefore find it useful to refer to the Qt documentation on [Qt Quick internationalisation](https://doc.qt.io/archives/qt-5.6/qtquick-internationalization.html) and [Qt Linguist](https://doc.qt.io/archives/qt-5.6/linguist-programmers.html).
 
 However, we also have our own conventions and technical requirements which are detailed on these pages. Here you can read more information about the [general conventions](/Reference/I18n/I18n_Conventions) that all Sailfish OS projects need to consider. We also have specific details about the canonical way to configure Qt-based [Platform projects](/Reference/I18n/Platform_Configuration) and [Sailfish applications](/Reference/I18n/Application_Configuration) for internationalisation.
 

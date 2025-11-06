@@ -124,7 +124,7 @@ We'll just look at the system and tool technologies most commonly used in a typi
   - Qt
     [Qt](http://qt-project.org/) is a powerful cross-platform application library which is ideal for connected devices. In the Sailfish OS system it serves as the main graphical UI and provides consistent APIs into most other commonly used device functions.
   - Qt Creator
-    The Qt project provides a sophisticated IDE which has been enhanced to work with Sailfish OS - you can read more about the standard Qt Creator on the [Qt Developer site](http://doc.qt.io/qt-5/topics-app-development.html) and then find out about the Sailfish OS extensions.
+    The Qt project provides a sophisticated IDE which has been enhanced to work with Sailfish OS - you can read more about the standard Qt Creator on the [Qt Developer site](https://doc.qt.io/archives/qt-5.6/topics-app-development.html) and then find out about the Sailfish OS extensions.
   - Scratchbox 2
     Scratchbox 2 solves the problem of cross-compilation by creating a virtual development environment that looks like a target system while allowing execution of both target-compatible and host-compatible binaries transparently. Scratchbox 2 is used both by the Sailfish SDK and the OBS.
   - git
