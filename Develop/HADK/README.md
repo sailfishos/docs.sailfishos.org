@@ -34,9 +34,7 @@ You’ll encounter challenges along the way, as every phone has numerous differe
 <div>
  <div class="split4-left" markdown="1">
 ## Read
-Download the latest PDF of the HADK porting guide
-
-[4.5.0.19 (7 Jun 2023)](SailfishOS-HardwareAdaptationDevelopmentKit-4.5.0.19.pdf)
+The HADK porting guide can be found [here](https://hadk.sailfishos.org/).
  </div>
  <div class="split4-left" markdown="1">
 ## Port
