@@ -8,16 +8,24 @@ nav_order: 100
 
 This is the [link to the release notes of all Sailfish OS releases](https://forum.sailfishos.org/tag/release-notes) in the Forum.
 
-## Sailfish 4 - Finnish Unesco world heritage sites
+## Sailfish 5 - Tampere region
 
 | Release                                                    | Name           | Published  | Note                        |
 | :--------------------------------------------------------: | -------------- | :--------: | --------------------------- |
-| [4.5.0.25](https://forum.sailfishos.org/t/18127)<br />[4.5.0.24](https://forum.sailfishos.org/t/16641/1)<br />[4.5.0.21](https://forum.sailfishos.org/t/16166/1)<br />[4.5.0.19](https://forum.sailfishos.org/t/15078/1)<br />[4.5.0.18](https://forum.sailfishos.org/t/14656/1)<br />[4.5.0.16](https://forum.sailfishos.org/t/14290/1) | Struven ketju  | 2024-03-04<br />2023-09-12<br />2023-07-12<br />2023-03-20<br />2023-02-16<br />2023-02-09 | **Stop release:** deltarpm relies on zstd compression; AppSupport 11. EULA update. |
-| [4.4.0.72](https://forum.sailfishos.org/t/13110/1)<br />[4.4.0.68](https://forum.sailfishos.org/t/12281/1)<br />[4.4.0.64](https://forum.sailfishos.org/t/10656/1) | Vanha Rauma    | 2022-09-30<br />2022-07-13 <br />2022-05-18 | **Stop release:** enable zstd in deltarpm and related tools.<br />Browser engine esr78. Sailfish ported to Xperia 10 III. |
-| [4.3.0.15](https://forum.sailfishos.org/t/8495/1)<br />[4.3.0.12](https://forum.sailfishos.org/t/8495/1) | Suomenlinna    | 2022-02-10<br />2021-11-10 | **Stop release:** rpm update.<br />Signed Android system image.  |
-| [4.2.0.21](https://forum.sailfishos.org/t/7092/1) | Verla          | 2021-09-16 | **Stop release:** preparing for signed Android AppSupport 10 on 4.3.0; adaptation repositories rectified. |
-| [4.1.0.24](https://forum.sailfishos.org/t/5942/1) | Kvarken        | 2021-05-27 | **Stop release** Sailfish ported to Xperia 10 II. 64-bit architecture on Sailfish and on Android AppSupport. AppSupport 10 for XA2 & 10. |
-| [4.0.1.48](https://forum.sailfishos.org/t/4542/1) | Koli           | 2021-02-16 | **Stop release** AppSupport 9 (API level 28) for XA2, 10 & 10 II. |
+| **[5.0.0.71](https://forum.sailfishos.org/t/25257)**<br/>[5.0.0.70](https://forum.sailfishos.org/t/24477)<br/>[5.0.0.68](https://forum.sailfishos.org/t/23427)<br/>[5.0.0.67](https://forum.sailfishos.org/t/22916)<br/>[5.0.0.62](https://forum.sailfishos.org/t/22378)<br/>[5.0.0.61](https://forum.sailfishos.org/t/22224)<br/>[5.0.0.55](https://forum.sailfishos.org/t/21801)<br/>[5.0.0.43](https://forum.sailfishos.org/t/21428)<br/>[5.0.0.29](https://forum.sailfishos.org/t/21029)<br/>[5.0.0.21](https://forum.sailfishos.org/t/20558)<br />5.0.0.5 | Tampella  | 2025-10-30<br/>2025-08-14<br/>2025-06-13<br/>2025-04-17<br/>2025-02-27<br/>2025-02-24<br/>2025-01-30<br/>2024-12-17<br/>2024-11-14<br/>2024-10-24<br/>2024-09-26 | **Stop release**<br />- New devices Jolla C2 and Mind2, and Xperia X10 IV and V beta<br />- AppSupport 13 for new devices<br/>- MicroG 0.3.6 enablers<br/>- Browser engine esr91<br/> |
+
+
+## Sailfish 4 - Finnish Unesco world heritage list
+
+| Release                                                    | Name           | Published  | Note                        |
+| :--------------------------------------------------------: | -------------- | :--------: | --------------------------- |
+| **[4.6.0.15](https://forum.sailfishos.org/t/19740)**<br />[4.6.0.13](https://forum.sailfishos.org/t/19088)<br />[4.6.0.12](https://forum.sailfishos.org/t/19007)<br />[4.6.0.11](https://forum.sailfishos.org/t/17815) | Sauna  | 2024-09-20<br />2024-06-19<br />2024-06-06<br />2024-05-20 | **Stop release:** Partition /opt2 added for XA2 and 10.<br />- Free trial versions for Xperia 10 IV and Xperia 10 V<br />- Last release for Jolla C, Tablet, Xperia X and Gemini PDA<br />- AppSupport 11 for all products (XA2 and later).|
+| **[4.5.0.25](https://forum.sailfishos.org/t/18127)**<br />[4.5.0.24](https://forum.sailfishos.org/t/16641/1)<br />[4.5.0.21](https://forum.sailfishos.org/t/16166/1)<br />[4.5.0.19](https://forum.sailfishos.org/t/15078/1)<br />[4.5.0.18](https://forum.sailfishos.org/t/14656/1)<br />[4.5.0.16](https://forum.sailfishos.org/t/14290/1) | Struven ketju  | 2024-03-04<br />2023-09-12<br />2023-07-12<br />2023-03-20<br />2023-02-16<br />2023-02-09 | **Stop release:** deltarpm relies on zstd compression; AppSupport 11. EULA update. |
+| **[4.4.0.72](https://forum.sailfishos.org/t/13110/1)**<br />[4.4.0.68](https://forum.sailfishos.org/t/12281/1)<br />[4.4.0.64](https://forum.sailfishos.org/t/10656/1) | Vanha Rauma    | 2022-09-30<br />2022-07-13 <br />2022-05-18 | **Stop release:** enable zstd in deltarpm and related tools.<br />Browser engine esr78. Sailfish ported to Xperia 10 III. |
+| **[4.3.0.15](https://forum.sailfishos.org/t/8495/1)**<br />[4.3.0.12](https://forum.sailfishos.org/t/8495/1) | Suomenlinna    | 2022-02-10<br />2021-11-10 | **Stop release:** rpm update.<br />Signed Android system image.  |
+| **[4.2.0.21](https://forum.sailfishos.org/t/7092/1)** | Verla          | 2021-09-16 | **Stop release:** preparing for signed Android AppSupport 10 on 4.3.0; adaptation repositories rectified. |
+| **[4.1.0.24](https://forum.sailfishos.org/t/5942/1)** | Kvarken        | 2021-05-27 | **Stop release** Sailfish ported to Xperia 10 II. 64-bit architecture on Sailfish and on Android AppSupport. AppSupport 10 for XA2 & 10. |
+| **[4.0.1.48](https://forum.sailfishos.org/t/4542/1)** | Koli           | 2021-02-16 | **Stop release** AppSupport 9 (API level 28) for XA2, 10 & 10 II. |
 
 ## Sailfish 3 - Finnish national parks
 

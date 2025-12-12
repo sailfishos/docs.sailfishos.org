@@ -17,9 +17,9 @@ When generating a new project based on the Sailfish OS application template, som
 => src/myfirstapp.cpp
 ```
 
-Every Sailfish application must define a simple Qt C++ application project that creates a [`QQuickView`](https://doc.qt.io/qt-5/qquickview.html) and instantiates a QML file with an [`ApplicationWindow`](https://sailfishos.org/develop/docs/silica/qml-sailfishsilica-sailfish-silica-applicationwindow.html/) as the top-level item. However, other than implementing the QML file itself, you don’t need to do anything else to accomplish this.
+Every Sailfish application must define a simple Qt C++ application project that creates a [`QQuickView`](https://doc.qt.io/archives/qt-5.6/qquickview.html) and instantiates a QML file with an [`ApplicationWindow`](https://sailfishos.org/develop/docs/silica/qml-sailfishsilica-sailfish-silica-applicationwindow.html/) as the top-level item. However, other than implementing the QML file itself, you don’t need to do anything else to accomplish this.
 
-Assuming you named your project “myfirstapp”, the Sailfish OS application template generates the source file `src/myfirstapp.cpp` that does the heavy lifting for you. This file implements the entry point to your application by simply passing the argument count and argument array to the function [`SailfishApp::main()`](https://sailfishos.org/develop/docs/libsailfishapp/sailfishapp.html/#main). This function in turn creates the required [`QGuiApplication`](https://doc.qt.io/qt-5/qguiapplication.html) and [`QQuickView`](https://doc.qt.io/qt-5/qquickview.html) instances and loads your main QML file.
+Assuming you named your project “myfirstapp”, the Sailfish OS application template generates the source file `src/myfirstapp.cpp` that does the heavy lifting for you. This file implements the entry point to your application by simply passing the argument count and argument array to the function [`SailfishApp::main()`](https://sailfishos.org/develop/docs/libsailfishapp/sailfishapp.html/#main). This function in turn creates the required [`QGuiApplication`](https://doc.qt.io/archives/qt-5.6/qguiapplication.html) and [`QQuickView`](https://doc.qt.io/archives/qt-5.6/qquickview.html) instances and loads your main QML file.
 
 Note that the name of the QML file is not actually passed to [`SailfishApp::main()`](https://sailfishos.org/develop/docs/libsailfishapp/sailfishapp.html/#main). Instead, the function expects the QML file name to be based on the name of your target. Again, if your project name is “myfirstapp”, the Qt project file will contain the declaration `TARGET = myfirstapp`, and `main()` will load the QML file `qml/myfirstapp.qml`.
 
@@ -59,7 +59,7 @@ import Sailfish.Silica 1.0
 import "pages"
 ```
 
-The first two module [`import`](https://doc.qt.io/qt-5/qtqml-syntax-imports.html) statements allow the application to import the Qt Quick and Sailfish Silica modules we will later use. In addition, the final [directory import statement](https://doc.qt.io/qt-5/qtqml-syntax-imports.html#directory-imports) makes the QML files under the pages directory available to `myfirstapp.qml`.
+The first two module [`import`](https://doc.qt.io/archives/qt-5.6/qtqml-syntax-imports.html) statements allow the application to import the Qt Quick and Sailfish Silica modules we will later use. In addition, the final [directory import statement](https://doc.qt.io/archives/qt-5.6/qtqml-syntax-imports.html#directory-imports) makes the QML files under the pages directory available to `myfirstapp.qml`.
 
 ```qml
 ApplicationWindow
@@ -96,7 +96,7 @@ SilicaFlickable {
         anchors.fill: parent
 ```
 
-Next, we add a pulldown menu with one menu item, labelled “Show Page 2″. [`qsTr()`](https://doc.qt.io/qt-5/qtquick-internationalization.html#1-use-qstr-for-all-literal-user-interface-strings) is a function which provides localised strings. Depending on the UI language of the device, the end user will see different texts.
+Next, we add a pulldown menu with one menu item, labelled “Show Page 2″. [`qsTr()`](https://doc.qt.io/archives/qt-5.6/qtquick-internationalization.html#1-use-qstr-for-all-literal-user-interface-strings) is a function which provides localised strings. Depending on the UI language of the device, the end user will see different texts.
 
 We then attach an [`onClicked`](https://sailfishos.org/develop/docs/silica/qml-sailfishsilica-sailfish-silica-menuitem.html/#clicked-signal) action to the [`MenuItem`](https://sailfishos.org/develop/docs/silica/qml-sailfishsilica-sailfish-silica-menuitem.html/) which will push the second page onto the top of the [`pageStack`](https://sailfishos.org/develop/docs/silica/qml-sailfishsilica-sailfish-silica-applicationwindow.html/#pageStack-prop) (provided by [`ApplicationWindow`](https://sailfishos.org/develop/docs/silica/qml-sailfishsilica-sailfish-silica-applicationwindow.html/)). Note that [`PullDownMenu`](https://sailfishos.org/develop/docs/silica/qml-sailfishsilica-sailfish-silica-pulldownmenu.html) and [`PushUpMenu`](https://sailfishos.org/develop/docs/silica/qml-sailfishsilica-sailfish-silica-pushupmenu.html) must always be nested inside a [`SilicaFlickable`](https://sailfishos.org/develop/docs/silica/qml-sailfishsilica-sailfish-silica-silicaflickable.html), [`SilicaListView`](https://sailfishos.org/develop/docs/silica/qml-sailfishsilica-sailfish-silica-silicalistview.html), or [`SilicaGridView`](https://sailfishos.org/develop/docs/silica/qml-sailfishsilica-sailfish-silica-silicalistview.html).
 
@@ -114,7 +114,7 @@ We set the height of [`SilicaFlickable`](https://sailfishos.org/develop/docs/sil
         contentHeight: column.height
 ```
 
-Finally, we arrange the content vertically. The [`Column`](https://doc.qt.io/qt-5/qml-qtquick-column.html) element positions its child items so that they are vertically aligned and not overlapping. We also provide the page title/header using the [`PageHeader`](https://sailfishos.org/develop/docs/silica/qml-sailfishsilica-sailfish-silica-pageheader.html) element. The page header is always placed at the top of content. We add a welcome text to our page using the [`Label`](https://sailfishos.org/develop/docs/silica/qml-sailfishsilica-sailfish-silica-label.html) element.
+Finally, we arrange the content vertically. The [`Column`](https://doc.qt.io/archives/qt-5.6/qml-qtquick-column.html) element positions its child items so that they are vertically aligned and not overlapping. We also provide the page title/header using the [`PageHeader`](https://sailfishos.org/develop/docs/silica/qml-sailfishsilica-sailfish-silica-pageheader.html) element. The page header is always placed at the top of content. We add a welcome text to our page using the [`Label`](https://sailfishos.org/develop/docs/silica/qml-sailfishsilica-sailfish-silica-label.html) element.
 ```qml
         Column {
             id: column
@@ -133,7 +133,7 @@ Finally, we arrange the content vertically. The [`Column`](https://doc.qt.io/qt-
         }
 ```
 
-The column [`spacing`](https://doc.qt.io/qt-5/qml-qtquick-column.html#spacing-prop), label [`x`](https://doc.qt.io/qt-5/qml-qtquick-item.html#x-prop), [`color`](https://doc.qt.io/qt-5/qml-qtquick-text.html#color-prop), and [`font.pixelSize`](https://doc.qt.io/qt-5/qml-qtquick-text.html#font.pixelSize-prop) properties use values from [`Theme`](https://sailfishos.org/develop/docs/silica/qml-sailfishsilica-sailfish-silica-theme.html/) type instead of hard coding sizes or colours. This ensures the application adapts to the currently active theme and does not clash with system provided components.
+The column [`spacing`](https://doc.qt.io/archives/qt-5.6/qml-qtquick-column.html#spacing-prop), label [`x`](https://doc.qt.io/archives/qt-5.6/qml-qtquick-item.html#x-prop), [`color`](https://doc.qt.io/archives/qt-5.6/qml-qtquick-text.html#color-prop), and [`font.pixelSize`](https://doc.qt.io/archives/qt-5.6/qml-qtquick-text.html#font.pixelSize-prop) properties use values from [`Theme`](https://sailfishos.org/develop/docs/silica/qml-sailfishsilica-sailfish-silica-theme.html/) type instead of hard coding sizes or colours. This ensures the application adapts to the currently active theme and does not clash with system provided components.
 
 ### Second Page of the Application
 ```
@@ -229,7 +229,7 @@ Permissions=
 
 `myfirstapp.png` is the launcher icon for the application. The `Icon` declaration in the .desktop file (i.e. the line `Icon=myfirstapp`) refers to this image file. The application template takes care of deploying the icon to the correct location, and the Icon declaration in the .desktop file should always refer to the file just by its basename without the suffix. Similarly to the main QML file, the name of the icon is based on the TARGET declaration in the project file. Hence, the icon file name should not be changed unless the TARGET declaration is also updated.
 
-`myfirstapp.pro` is a project file that ties the source code and the resulting application binary together. The file describes how the application is built by creating the `Makefile` into the appropriate build directory, which is then executed to actually build the application. The `CONFIG += sailfishapp` declaration in the project file causes your project to be linked against the libsailfishapp library that provides the implementation of the `SailfishApp::main()` function discussed at the beginning of this tutorial. The CONFIG declaration also ensures the application binary and its data files are deployed to the proper locations both on the emulator and on devices. For more information on the format of the project file, see the [qmake Manual](https://doc.qt.io/qt-5/qmake-manual.html).
+`myfirstapp.pro` is a project file that ties the source code and the resulting application binary together. The file describes how the application is built by creating the `Makefile` into the appropriate build directory, which is then executed to actually build the application. The `CONFIG += sailfishapp` declaration in the project file causes your project to be linked against the libsailfishapp library that provides the implementation of the `SailfishApp::main()` function discussed at the beginning of this tutorial. The CONFIG declaration also ensures the application binary and its data files are deployed to the proper locations both on the emulator and on devices. For more information on the format of the project file, see the [qmake Manual](https://doc.qt.io/archives/qt-5.6/qmake-manual.html).
 
 The qml directory contains files that should be deployed as a part of your application. In addition to QML files, audio, image, and JavaScript files that are used by the application should be placed in this directory or in a subdirectory in it. Basically, anything you put in the qml directory gets deployed when your application is installed in the emulator or on a device.
 

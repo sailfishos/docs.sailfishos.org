@@ -34,15 +34,6 @@ In the IDE,
 6.  Repeat from step 4 if needed
 7.  Proceed to next page to apply required changes
 
-***With Sailfish SDK older than 3.0:***
-
-The SDK control center provides options to extend the default Sailfish OS target. In the IDE,
-
-1.  Click on the **Sailfish OS** icon in the left toolbar to open the SDK control center.
-2.  Click on the **manage** button next to the SailfishOS-i486 target.
-3.  The list of development headers available for install is displayed.
-4.  Choose the package you wish to install and click on the **install** button next to it.
-
 ## How do I login into the emulator or build engine?
 
 ### Emulator
@@ -64,8 +55,6 @@ $ ssh -p 2223 -i ~/SailfishOS/vmshare/ssh/private_keys/sdk root@localhost
 
 **Note:** For connecting to other than the latest emulator, check Qt Creator's Options under the Devices category, where you will find the `SSH port` number under the corresponding device, or use `sfdk device list` on command line to retrieve the same information.
 
-**Note:** SSH key path changed in SDK 3.6. Use the above tip about SSH port number to determine the SSH key path with SDK older than 3.6.
-
 ### Build Engine
 
 For the purpose of opening a shell or running simple commands inside the build engine, sfdk provides a convenient interface:
@@ -81,8 +70,6 @@ $ ssh -p 2222 -i ~/SailfishOS/vmshare/ssh/private_keys/sdk mersdk@localhost
 # as root
 $ ssh -p 2222 -i ~/SailfishOS/vmshare/ssh/private_keys/sdk root@localhost
 ```
-
-**Note**: Prior to SDK 3.6 a separate key pair existed for each build engine user under the "engine" subdirectory
 
 The SSH daemon (and other network services) on the virtual machines can only be accessed from the host.
 
@@ -186,7 +173,7 @@ If this is intentional, attributes for the file should be explicitly overriden i
 file-with-crlf.txt text eol=crlf
 ```
 
-If it was unintentional, then your text editor may need to be reconfigured to use Unix-style line endings by default for newly created files. Under Qt Creator it is **Options \> Text Editor \> Behavior \> Default line endings**. (Requires SDK \>= 3.3)
+If it was unintentional, then your text editor may need to be reconfigured to use Unix-style line endings by default for newly created files. Under Qt Creator it is **Options \> Text Editor \> Behavior \> Default line endings**.
 
 SDK issues the following build time warning when files with CRLF line endings are found under the project repository:
 ```

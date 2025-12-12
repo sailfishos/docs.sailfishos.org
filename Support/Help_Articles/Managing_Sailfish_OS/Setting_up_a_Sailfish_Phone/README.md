@@ -9,7 +9,6 @@ nav_order: 5100
 
 This document is an tutorial for Sailfish OS setup. Precondition is that the SFOS device is flashed.
 After the steps described below the the device is set up. Further information how to install Sailfish and Android applications, adjust useful settings and sign in to your accounts can be found from the [tutorial part 2 document](/Support/Help_Articles/Managing_Sailfish_OS/Setting_up_a_Sailfish_Phone_part2/).
-Sony Xperia 10 III is used as an example but the same guidelines are good for all phones we have ported Sailfish OS to.
 
 # Register your Jolla account
 
@@ -18,7 +17,7 @@ Sony Xperia 10 III is used as an example but the same guidelines are good for al
 
 # Purchase the Sailfish OS licence
 
-1. Sailfish OS licence can be purchased from [Jolla Shop](https://shop.jolla.com/)
+1. Read more from [Sailfish OS licence](/Support/Help_Articles/Sailfish_OS_Licence/)
 2. Sign in using your Jolla Account registered above.
 3. If you have a voucher use that for the purchase.
 

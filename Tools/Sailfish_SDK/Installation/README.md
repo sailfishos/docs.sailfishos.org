@@ -12,9 +12,9 @@ We provide a graphical installer to make it easy to setup the Sailfish SDK.
 
 Sailfish SDK functionality has been verified on the following systems:
 
-  - Ubuntu 20.04 64 bit
+  - Ubuntu 22.04 64 bit
   - Windows 10 64 bit
-  - OS X 10.15.7
+  - macOS 13.6.7
     - Only Intel CPUs are supported. Apple silicon is not supported.
 
 Sailfish SDK should work on other Linux flavours as well, but at this stage, its functionality on other host environments has not been fully verified.
@@ -34,13 +34,12 @@ On Linux and Windows, both Oracle VM VirtualBox (version 4.1.18 or higher) and D
     ➖ Less optimal build performance
   - Docker\
     ➕ Optimal build performance\
-    ➖ Not as matured as the other option\
-    ➖ Compatibility issues with Sailfish OS emulators (Windows only)
+    ➖ Technical limitations affect some [configurations and use cases](/Tools/Sailfish_SDK/FAQ/#docker)
 
 For Sailfish OS Emulator, Oracle VM VirtualBox is needed regardless of the host platform.
 
-On Linux, you should install the virtualization platform packages supplied by your distribution. For example, on Ubuntu installing Docker happens simply with command `apt install docker.io`.
-On other operating systems, we recommend using installation packages from <http://www.virtualbox.org> or <https://docs.docker.com/get-docker/>.
+On Linux, you can usually install the virtualization platform packages supplied by your distribution. For example, on Ubuntu it is sufficient to install Docker with the command `apt install docker-buildx`.
+On other operating systems or in case of issues, we recommend using installation packages from <http://www.virtualbox.org> or <https://docs.docker.com/get-docker/>.
 
 A few hints on Docker installation:
 
@@ -75,20 +74,15 @@ to the `~/.bash_profile` script under the MSYS2 shell and reopening the shell.
 
 ### Others
 
-#### libtinfo.so.5 (Linux only)
-
-In order to maintain compatibility with older Linux distributions, Sailfish SDK links to this library, which is usually not installed by default on more recent distributions:
-
-  - On Ubuntu 20.04 and 22.04, the package libtinfo5 must be installed
-  - On Fedora the package ncurses-compat-libs must be installed
-  - If you find no way to fix libtinfo.so.5 on your system, you may try creating it as a symbolic link to your system libncurses.so.5 (or even libncurses.so.6 or libtinfo.so.6)
-
-#### openssl 1.1 (Linux only)
+#### libcrypt.so.1 (Linux only)
 
 In order to maintain compatibility with older Linux distributions, Sailfish SDK links to this library, which may not be installed by default on more recent distributions:
 
-  - On Fedora the package openssl1.1 must be installed
-  - As Ubuntu 22.04 and later no longer ships openssl1.1, you have to install the package libssl1.1 from older Ubuntu release. You can download it from <https://packages.ubuntu.com/focal/amd64/libssl1.1/download>
+  - On Arch Linux the package libxcrypt-compat must be installed
+
+### libxcb-xinerama0 (Ubuntu 24.10 only)
+
+This package is missing from some installations of Ubuntu 24.10 (at least) and must be installed manually.
 
 #### Modern bash
 

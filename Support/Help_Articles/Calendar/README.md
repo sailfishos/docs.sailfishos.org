@@ -125,7 +125,7 @@ Some calendars that you sync from web services may have the text "Read-only" in 
 
 Calendar type Personal is the local calendar. The events assigned to these calendars are not synced to any service - they are kept in the phone memory only. These local events are included in Sailfish [backups](/Support/Help_Articles/Backup_and_Restore/) (in contrast to the synchronised events).
 
-Google calendar and Microsoft Exchange calendar are examples of calendar types, the events of which are synchronized both ways with the server, depending on the account settings in menu Settings > Accounts. Note that in order to use Microsoft Exchange you need to have [Sailfish X license](https://shop.jolla.com/).
+Google calendar and Microsoft Exchange calendar are examples of calendar types, the events of which are synchronized both ways with the server, depending on the account settings in menu Settings > Accounts. Note that in order to use Microsoft Exchange you need to have a [Sailfish OS license](/Support/Help_Articles/Sailfish_OS_Licence/).
 
 <div class="flex-images" markdown="1">
 

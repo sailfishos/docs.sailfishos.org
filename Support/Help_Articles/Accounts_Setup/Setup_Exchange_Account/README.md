@@ -37,7 +37,7 @@ If you are still unsure which one to use, contact your service provider. The oth
 # Installing the Exchange service to Sailfish OS
 
 
-The Exchange service is one of the items that require the **[Sailfish X licence](https://docs.sailfishos.org/Support/Help_Articles/Sailfish_X_Licence/)**. After buying and activating the licence, it is possible to install Exchange.
+The Exchange service is one of the items that require the **[Sailfish OS licence](/Support/Help_Articles/Sailfish_OS_Licence/)**. After buying and activating the licence, it is possible to install Exchange.
 
 * Launch the Jolla Store application.
 * Sign in to your Jolla account if requested.

@@ -99,7 +99,7 @@ on the locale, and should be taken into account, such as:
  * number formatting
  * first day of week
  * currency formatting
- * translation can contain plural/singular. Use %n (https://doc.qt.io/qt-5/i18n-source-translation.html#handling-plurals)
+ * translation can contain plural/singular. Use %n (https://doc.qt.io/archives/qt-5.6/i18n-source-translation.html#handling-plurals)
  * translation can contain changing values. Use %1, %2 of QString
  * collation (sorting strings)
  * city/country names

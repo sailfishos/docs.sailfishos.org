@@ -30,7 +30,7 @@ EMBED_CONSOLE=1 sailfish-browser
   - A comma separated list with verbosity
   - Verbosity levels are: 0 = Disabled, 1 = Error, 2 = Warnings, 3 = Info, 4 = Debug, 5 = Verbose
   - EmbedLite and EmbedLiteTrace are log components of embedlite
-  - There is no option to turn all logging on, so explicit module names must be found in the source (grep for LazyLogModule).
+  - There is no option to turn all logging on, so explicit module names must be found in the source (grep for LazyLogModule, or use [this web-based tool](https://searchfox.org/mozilla-release/search?q=LazyLogModule+.*%5C%28%22&path=&case=true&regexp=true)).
   - For instance "Layers" can be used to analyze problems related to composited layers
   - Example
 ```nosh
@@ -40,6 +40,8 @@ MOZ_LOG="AudioStream:5,MediaFormatReader:5,MediaSource:5" sailfish-browser youtu
     - nsComponentManager - Component loading and unloading
     - GMP - Gecko Media Plugin activity
     - PlatformDecoderModule - system codecs such as ffmpeg
+
+See the [Mozilla documentation](https://firefox-source-docs.mozilla.org/xpcom/logging.html) about logging for more information. 
 
 ## Debugging User-Agent problems
 

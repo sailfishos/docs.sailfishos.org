@@ -78,6 +78,15 @@ journalctl -a -b > journal-sync.txt
 ```
 7. Then continue from the [Sending logs chapter](#sending-logs).
 
+## Triggering sync for a single profile
+An account may have several services defined, e.g. an image and an event sync. Starting synchronisation from the Settings -> Accounts page will trigger all of them.
+
+To trigger a sync for just a single service/sync-profile, use a DBus call from command line:
+
+    dbus-send --session --type=method_call --print-reply --dest=com.meego.msyncd /synchronizer com.meego.msyncd.startSync string:'example.Images-3'
+
+where `example.Images-3` corresponds to one of the sync profiles found in `~/.local/share/system/privileged/msyncd/sync`.
+
 ## Detailed EAS logs
 1. Preparations: do as instructed in the [Prepare for collecting journal chapter](#prepare-for-collecting-journal) above. 
 2. More information and steps can be found from [this document](/Reference/Sailfish_OS_Cheat_Sheet/#email--active-sync-e-mail-debugging).

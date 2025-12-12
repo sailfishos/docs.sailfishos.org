@@ -68,6 +68,8 @@ When updating the merge request clearly describe the changes that were done, for
 
 ### Releasing The Change
 
+If changes are made to a repository that requires a Contributor License Agreement (CLA), verify that the contributor has signed the Contributor License Agreement. For new contributors you should see a message from CLAassistant, stating that all committers have signed the CLA. For old contributors, the signature is checked as part of the automated workflow - you should see message about it in the checks section.
+
 At this point, the code or documentation change have been applied to the upstream Sailfish OS repository via an accepted merge request. It will not, however, be included in a release, until a package is generated from the repository. For that to occur, the maintainer will tag the repository with the new package version tag, and a [webhook](/Services/Development/Webhooks) will automatically inform the Continuous Integration (CI) system that it needs to pull the new code, build the package, run the automated tests on it, and promote it. At that point, the original bug report should be updated with the package version which should contain the fix, future reference.
 
 The contribution is included to the next branched release after merging the request, there is no solid ETA that can be given when the release with the contribution is released to the public.

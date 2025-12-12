@@ -14,7 +14,7 @@ All of the core components of Sailfish OS are fully internationalised, including
 
 When writing new applications or services to contribute to Sailfish OS, it is important to ensure that the contribution is internationalised, so that all users of Sailfish OS can eventually benefit from it.
 
-As far as possible Sailfish OS makes use of the existing Qt internationalisation capabilities. You may therefore find it useful to refer to the Qt documentation on [Qt Quick internationalisation](https://doc.qt.io/qt-5/qtquick-internationalization.html) and [Qt Linguist](https://doc.qt.io/qt-5/linguist-programmers.html).
+As far as possible Sailfish OS makes use of the existing Qt internationalisation capabilities. You may therefore find it useful to refer to the Qt documentation on [Qt Quick internationalisation](https://doc.qt.io/archives/qt-5.6/qtquick-internationalization.html) and [Qt Linguist](https://doc.qt.io/archives/qt-5.6/linguist-programmers.html).
 
 However, we also have our own conventions and technical requirements which are detailed on these pages. Here you can read more information about the [general conventions](/Reference/I18n/I18n_Conventions) that all Sailfish OS projects need to consider. We also have specific details about the canonical way to configure Qt-based [Platform projects](/Reference/I18n/Platform_Configuration) and [Sailfish applications](/Reference/I18n/Application_Configuration) for internationalisation.
 
@@ -30,13 +30,11 @@ The first step in localisation is usually defining translations for every user-v
 
 The tool includes the translated string identifier, context description, and Engineering English text, for every user-visible string in Sailfish OS. Translators can then contribute a new translation (or correction to an existing translation) for that string, for the localisation they wish to improve. The translation strings are added to the locale-specific catalogue which is then indexed at build time, which applications read from at run-time to display the appropriate translated string in the user interface.
 
-The translation file will also define the layout directionality (e.g.: left-to-right and top-to-bottom; right-to-left and top-to-bottom; etc) required for that locale.
-
 ### Input Methods
 
 Different locales require different input methods. In some locales, a QWERTY-layout virtual keyboard is the most common input method, but other locales require different keyboard layouts, and in some locales the most common input method is hand-writing-recognition.
 
-Sailfish OS allows different input methods to be used on the device, including virtual keyboards, physical keyboards, virtual handwriting pads, and microphone input. The input method system used in Sailfish OS is [Maliit](https://github.com/sailfishos/maliit-framework) which provides an extensible plugin architecture.
+Sailfish OS allows different input methods to be used on the device, including virtual keyboards, physical keyboards, virtual handwriting pads, and microphone input. The input method system used in Sailfish OS is [Maliit](https://github.com/sailfishos/maliit-framework) which provides an extensible plugin architecture. The Sailfish virtual keyboard also has its own extension mechanism to load different types of input UIs.
 
 ### Scripts
 

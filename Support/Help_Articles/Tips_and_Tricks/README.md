@@ -123,12 +123,12 @@ There are the following ways to "clean up" a Sailfish phone. All user data, acco
 
 1. Device reset (a.k.a. factory reset) - see **[this article](/Support/Help_Articles/Factory_Reset/)**. This requires that the menus of the phone are still avalable.
 2. Reinstallation ("flashing") of Sailfish to Xperia phones - see **[this article](/Support/Help_Articles/Reinstalling_Sailfish_OS/#installing-sailfish-x-again-to-xperia)**
-3. Recovery mode - see the instructions for **[recent Xperia phones](/Support/Help_Articles/Recovery_Mode/)**, **[older Xperia models](/Support/Help_Articles/Recovery_Mode/)**, **[Jolla Phone](https://jolla.zendesk.com/hc/en-us/articles/204709607)**, and **[Jolla Tablet](https://jolla.zendesk.com/hc/en-us/articles/208406917)**
+3. Recovery mode - see the instructions for **[Xperia phones](/Support/Help_Articles/Recovery_Mode/)**, **[Jolla Phone](https://jolla.zendesk.com/hc/en-us/articles/204709607)**, **[Jolla C](https://jolla.zendesk.com/hc/en-us/articles/115000663928)** and **[Jolla Tablet](https://jolla.zendesk.com/hc/en-us/articles/208406917)**
 
 We compare options 1 and 2 in the table below.
 
 |        | **PRO** | **CON** |
-| **Device reset** | * can be done with the phone only, no extra devices are needed<br>* simple to do via the phone UI as the command line (Linux commands) is not needed  <br>    NB:  _not available on Xperia 10 II nor on Xperia 10 III_ | * reverts the phone OS to an old version _(which must be updated)_<br>* after the reset, the OS update chain must traverse all **[Stop Releases](https://docs.sailfishos.org/Support/Releases/)** \- there may be plenty of them - lots of work and may take several hours<br>* the old OS version remains on the phone _(so, another reset later would require lots of work)_<br>* there are some known issues with the OS update chain - you would risk hitting them |
+| **Device reset** | * can be done with the phone only, no extra devices are needed<br>* simple to do via the phone UI as the command line (Linux commands) is not needed  <br>    NB:  _not available on all Sailfish phones_ | * reverts the phone OS to an old version _(which must be updated)_<br>* after the reset, the OS update chain must traverse all **[Stop Releases](https://docs.sailfishos.org/Support/Releases/)** \- there may be plenty of them - lots of work and may take several hours<br>* the old OS version remains on the phone _(so, another reset later would require lots of work)_<br>* there are some known issues with the OS update chain - you would risk hitting them |
 | **Reinstallation** | * you will get the latest OS version right away<br>* you would avoid the potential issues with the OS update chain as there is no need to update<br>* if the phone should be reset in the future, the reset would revert the OS to this fairly recent version only _(as the recovery version is updated in this process)_<br>* it takes only 10-15 minutes if the flashing environment is ready on a PC<br>* this clean-up is more powerful than the device reset | * preparing the flashing environment on a PC may take time from an inexperienced user _(although we have good instructions for you)_<br>* problems with USB ports are typical especially with some Linux flavours<br>* installing the _fastboot_ drivers to Windows is somewhat complicated<br>* not possible for Jolla Phone, Jolla C nor Jolla Tablet as flashable OS images are not available |
 
 NOTE: The common drawback with both device reset and reinstallation is that all data, apps, and accounts are deleted from the phone. A complete re-setup is needed afterward.
@@ -187,9 +187,9 @@ Choose which way you like it better.
 
 Sailfish Utilities is a collection of tools for healing a Sailfish device which does not perform well. The tools are designed to help if your device feels sluggish, it's running out of disk space or you're experiencing problems with connectivity.
 
-You can install Utilities from **[Jolla Store](/Support/Help_Articles/Jolla_Store/)**. Search for **Sailfish Utilities** in the Store. After having been installed it appears near the end of the page "Settings > System" by the name **Utilities** (i.e., there is no app icon at the app grid for it).
+You can install Utilities from the **[Jolla Store](/Support/Help_Articles/Jolla_Store/)**. Search for **Sailfish Utilities** in the Store. After having been installed it appears near the end of the page "Settings > System" by the name **Utilities** (i.e., there is no app icon at the app grid for it).
 
-Utilities have the following tools currently (this order of items is from OS release 4.5.0):
+Utilities have the following tools currently (this is the order of items on the OS release 4.6.0):
 
 <div class="flex-images" markdown="1">
 
@@ -212,31 +212,33 @@ Utilities have the following tools currently (this order of items is from OS rel
 
 ## Restart network connections
 
-This tool initializes the WLAN and mobile data networks. You need not restart the device, so do not tap on _Restart now_ button but at the lower (empty) part of the display.
+This tool initializes the WLAN and mobile data networks.
 
 _Issues that might get solved by running this utility:_
 
-* If you get constant notifications of connecting to either Mobile Data or WLAN, even you are already connected to a network
+* If you get constant notifications of connecting to either Mobile Data or WLAN, even if you are already connected to a network
 * You've noticed an exclamation mark ("!") on your Mobile Data and/or WLAN connection indicator in the **[Lock Screen](https://sailfishos.org/design/ux-framework/)**
 * Apps report you being offline even though you are connected to the Internet.
 
+## Restart the keyboard
 
+This tool is used to give a new start for the keyboard if it behaves incorrectly or becomes unresponsive.
 
 ## Restart the Home screen
 
-
 This useful tool can be used if an application gets stuck or can't be launched.
-
 
 ## Restart the fingerprint service
 
 If your valid fingerprints saved to the device are no more recognised, it may help to restart the fingerprint service.
 
+## Restart the audio service
+
+If the phone has lost audio, i.e., no voice or music can be heard, this tool may help.
 
 ## Restart the Bluetooth service
 
 If there are problems with detecting nearby Bluetooth devices or with connecting to them it is worth trying to restart the Bluetooth service.
-
 
 ## Fix the package cache
 
@@ -245,7 +247,7 @@ If there are problems with installing and managing apps from the Jolla Store the
 _Issues that this utility might solve:_
 
 * If you can't install apps from the Jolla Store and might receive a "Problem with Store - Critical problem with the app registry" message
-* If your "My Apps" section in Jolla Store is empty
+* If your "My Apps" section in the Jolla Store is empty
 * You can't uninstall applications using the Jolla Store.
 
 

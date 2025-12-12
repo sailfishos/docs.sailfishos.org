@@ -7,7 +7,7 @@ layout: default
 ---
 
 Launchers are defined with files in _/usr/share/applications_ following [Desktop Entry
-Specification](https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html).
+Specification](https://specifications.freedesktop.org/desktop-entry/latest-single).
 They are read by [Lipstick](/Reference/Core_Areas_and_APIs/Apps_and_MW/Lipstick/) and
 [Sailjail](https://github.com/sailfishos/sailjail) components.
 
@@ -49,7 +49,7 @@ introspecting the D-Bus API doesn't show a window and interfaces can avoid graph
 showing a window too early.
 
 Sailfish OS 4.5.0 and later support using [_org.freedesktop.Application_ D-Bus
-interface](https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html#dbus)
+interface](https://specifications.freedesktop.org/desktop-entry/latest-single/#dbus)
 for opening files and activating windows. However, Sailfish's implementation extends the
 specification in two important ways: Firstly, in addition to _DBusActivatable=true_ key in _Desktop
 Entry_ section, a prefixed custom _X-DBusActivatable=true_ key is also supported. They behave

@@ -32,6 +32,10 @@ We are following quite closely Fedora's packaging guidelines, which you can read
   - **Group:**, **Buildroot:** and **%clean** should not be used, see also <https://docs.fedoraproject.org/en-US/packaging-guidelines/#_tags_and_sections>
   - Use **%autosetup** instead of **%setup**
   - Packages having .desktop files don't need to anymore manually execute update-desktop-database in %post or %postun. It's now automatically handled by rpm file triggers.
+  - **%defattr(-,root,root)** is default and should not be defined explicitly
+  - All **%files** sections should be at the end of the spec
+  - Define **%files** sections in the same order as sub-package definitions
+  - Define Scriptlets before **%files** sections, more info at <https://docs.fedoraproject.org/en-US/packaging-guidelines/Scriptlets/#_syntax>
 
 #### Differences to Fedora guidelines
 

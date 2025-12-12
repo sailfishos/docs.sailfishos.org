@@ -22,7 +22,7 @@ When developing features for Sailfish applications, follow Qt C++ (which follows
 
 ## QML coding conventions
 
-  - [QML Coding Conventions](https://doc.qt.io/qt-5/qml-codingconventions.html)
+  - [QML Coding Conventions](https://doc.qt.io/archives/qt-5.6/qml-codingconventions.html)
   - [QML Best Practices](https://doc.qt.io/archives/qt-4.8/qml-best-practices-coding.html)
 
 ## Additional Sailfish Qt coding conventions
@@ -273,8 +273,8 @@ Item {
 
 Sailfish app development follows Qt conventions, and autotesting is no different.
 
-  - [Testing Qt C++ classes with Qt Test Framework](http://doc.qt.io/qt-5/qtest-tutorial.html)
-  - [Testing Qt QML elements with Qt Quick Test Framework](http://doc.qt.io/qt-5/qttest-qmlmodule.html)
+  - [Testing Qt C++ classes with Qt Test Framework](https://doc.qt.io/archives/qt-5.6/qtest-tutorial.html)
+  - [Testing Qt QML elements with Qt Quick Test Framework](https://doc.qt.io/archives/qt-5.6/qttest-qmlmodule.html)
 
 There are couple of common anti-patterns highlighted below that you should avoid.
 

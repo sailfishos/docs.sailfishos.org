@@ -6,7 +6,7 @@ layout: default
 nav_order: 500
 ---
 
-The preferred way of writing API documentation for Qt-based APIs is with the help of the [QDoc](https://doc.qt.io/qt-5/qdoc-index.html) documentation tool. [QDoc](https://doc.qt.io/qt-5/qdoc-index.html) usage on Sailfish OS is supported with the [Sailfish QDoc template](https://sailfishos.org/develop/docs/sailfish-qdoc-template/), which comes with essential usage notes. What follows here is a collection of advanced tips, recommendations and API docs writing conventions.
+The preferred way of writing API documentation for Qt-based APIs is with the help of the [QDoc](https://doc.qt.io/archives/qt-5.6/qdoc-index.html) documentation tool. [QDoc](https://doc.qt.io/archives/qt-5.6/qdoc-index.html) usage on Sailfish OS is supported with the [Sailfish QDoc template](https://sailfishos.org/develop/docs/sailfish-qdoc-template/), which comes with essential usage notes. What follows here is a collection of advanced tips, recommendations and API docs writing conventions.
 
 ### Tips on writing QDoc based documentation
 
@@ -22,7 +22,7 @@ Bad example:
 
 Not only that such links are not relocatable, they do not work with the offline QCH publication format.
 
-The correct approach is to tell QDoc about the external documentation projects it should consider for link resolution. This is done with the [depends](https://doc.qt.io/qt-5/22-qdoc-configuration-generalvariables.html#depends) variable in `qdocconf`:
+The correct approach is to tell QDoc about the external documentation projects it should consider for link resolution. This is done with the [depends](https://doc.qt.io/archives/qt-5.6/22-qdoc-configuration-generalvariables.html#depends) variable in `qdocconf`:
 
 ```
 depends = foo-bar
@@ -75,7 +75,7 @@ Not only that listing external items in a table of contents makes little sense, 
 
 ##### The 'project' variable should match the 'SAILFISH_QDOC.project' variable in the .pro file
 
-The [project](https://doc.qt.io/qt-5/25-qdoc-configuration-derivedprojects.html#project) variable in `.qdocconf` determines the index file base name. It needs to match the output directory base name, i.e. what is assigned to the `SAILFISH_QDOC.project` qmake variable in the `.pro` file. If these two do not match, other projects are not able to refer to it with the [depends](https://doc.qt.io/qt-5/22-qdoc-configuration-generalvariables.html#depends) variable.
+The [project](https://doc.qt.io/archives/qt-5.6/25-qdoc-configuration-derivedprojects.html#project) variable in `.qdocconf` determines the index file base name. It needs to match the output directory base name, i.e. what is assigned to the `SAILFISH_QDOC.project` qmake variable in the `.pro` file. If these two do not match, other projects are not able to refer to it with the [depends](https://doc.qt.io/archives/qt-5.6/22-qdoc-configuration-generalvariables.html#depends) variable.
 
 Provided that this is in your `.pro` file:
 
@@ -99,7 +99,7 @@ project = foo-bar
 
 ##### The 'url' variable should point where the documentation is published
 
-The [url](https://doc.qt.io/qt-5/25-qdoc-configuration-derivedprojects.html#url) variable is meant to point to the location where the documentation is going to be published. It is used as a base to form external links to the documentation module when it is refered by other modules.
+The [url](https://doc.qt.io/archives/qt-5.6/25-qdoc-configuration-derivedprojects.html#url) variable is meant to point to the location where the documentation is going to be published. It is used as a base to form external links to the documentation module when it is refered by other modules.
 
 Bad example:
 

@@ -18,3 +18,5 @@ nav_exclude: true
   {% endif %}
 {% endfor %}
 </ol>
+
+<a href="community.ics">SailfishOS Community Calendar (ICS format)</a>
