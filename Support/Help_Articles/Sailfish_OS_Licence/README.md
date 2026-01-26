@@ -49,11 +49,6 @@ After you have activated the licence by signing in from your Xperia to this same
 
     Allows signing into one's Exchange account from "Settings > Accounts", after which Exchange will appear in Email, Calendar, and People apps.
     
-4.  **Predictive text input**
-
-    Appears as predicted words on top of the virtual keyboard while typing. "Settings > System > Text input" has a button for purging the collected words.
-    
-
 It is good to restart the device after installing any of the apps above.
 
 Note that none of these apps will appear as icons in the app grid (after installing them) as they are rather background services. Use "My apps" in the pull-down menu of the Jolla Store app to view what is installed on your device.
