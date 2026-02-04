@@ -57,10 +57,10 @@ Bus 003 Device 015: ID 05c6:0afe Qualcomm, Inc. Xperia X Bus 003 Device 001: ID 
 3) If your USB hub has only USB3 ports, then connect the hub to the PC with a **USB2 data cable, and XA2 to the hub with any USB data cable ("USB C-type" in the XA2 end) [^2].
 
 4) If there are only USB3 ports available, then this problem can be worked around in the following way on the PC: 
-* Force USB3 ports to USB2 mode temporarily (note that the 2nd command below is long - be sure to copy all of it)
+* Force USB3 ports to USB2 mode temporarily
 ```
 sudo su
-lspci -nn | grep USB | cut -d '[' -f3 | cut -d ']' -f1 | xargs -I@ sudo setpci -H1 -d @ d0.l=0
+setpci -H1 -d ::0c03 d0.l=0
 exit
 ```
 * Install Sailfish OS to your Xperia XA2 now.
@@ -77,7 +77,7 @@ Flashing completed. Remove the USB cable and bootup the device by pressing power
 Restart your computer now to bring the USB3 ports to their normal mode. Alternatively, give the following reverting command:
 ```
 sudo su
-lspci -nn | grep USB | cut -d '[' -f3 | cut -d ']' -f1 | xargs -I@ sudo setpci -H1 -d @ d0.l=1
+setpci -H1 -d ::0c03 d0.l=1
 exit 
 ```
 
