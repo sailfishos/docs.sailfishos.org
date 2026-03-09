@@ -29,9 +29,9 @@ Sailfish OS supports Android apps featured in the Jolla Store and the Jolla-cert
 We recommend first checking what is available in **Aurora Store** and **F-Droid**. They are the Android apps stores also available in the Jolla Store app (in category Marketplaces). 
 
 ### Note regarding the Google Play Store
-Sailfish OS does not support the Google Play store, because it relies on Google's proprietary background services only found on Android devices running Google's Android. We always advise against installing Google Services on SailfishOS, as it is known to potentially cause different problems.
+Sailfish OS does not support the Google Play Store client app, because it relies on the proprietary Google Play Services, which are preinstalled on Android devices running Google's Android. We strongly advise against installing the Google Play Services on Sailfish OS, as they are known to cause various issues; this also applies to "[Open GApps](https://github.com/opengapps/opengapps/wiki/FAQ#1-what-are-gapps)", because they comprise Google Play Services, Play Store etc. But the Google Play Store can be accessed by the aforementioned Aurora Store app, which does not rely on the Google Play Services.
 
-Applications reporting that they require Google Play Services may work entirely or partially regardless of that disclaimer.  On the other hand, it may not be possible to install some apps at all.
+Applications that report to require Google Play Services may work entirely or partially regardless of such a disclaimer. On the other hand, it may be impossible to install or successfully run some Android apps without them. Sailfish OS users may choose to installing MircoG, an Open Source Software replacement for the Play services, see [this community contributed guide](https://forum.sailfishos.org/t/14375).
 
 ## Installing applications from .apk files
 Android applications are installed from files with the extension ".apk". Once you point your Sailfish device to such a file, it is possible to install the Android application from this file.
