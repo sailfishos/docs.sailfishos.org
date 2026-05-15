@@ -61,10 +61,6 @@ These are the known issues with the Sailfish SDK. If you have any questions, fee
   - Timeout problems connecting to emulator
   - Application covers near to the left/right screen edge are rendered incorrectly when emulator is running in landscape mode - part of the cover is darker.
 
-### Debugging
-
-  - GDB may crash occasionally when stepping into code.
-
 ### General / Other
 
   - Microsoft Hyper-V is incompatible with Virtualbox ([Virtualbox ticket 16801](https://www.virtualbox.org/ticket/16801)). Please, check that it's disabled in Windows Features before starting the Emulator or the Build Engine. This is a known issue especially with Windows 10.
