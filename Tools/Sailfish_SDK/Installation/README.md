@@ -61,12 +61,6 @@ You may also consider configuring MSYS2 to use your Windows user home directory.
 
     db_home: windows cygwin desc
 
-When Docker is used, ensure that the `docker` command line tool is available on `PATH` under the MSYS2 shell. This can be accomplished by adding, e.g.,
-
-    export PATH="$PATH:/c/Program Files/Docker/Docker/resources/bin/"
-    
-to the `~/.bash_profile` script under the MSYS2 shell and reopening the shell.
-
 ### System Requirements
   - About 15GB of free disk space for the default component selection
     - When Docker is used, installed files are split between the Sailfish SDK installation directory and Docker's [data-root](https://docs.docker.com/config/daemon/#docker-daemon-directory). Ensure that both provide enough free space.
