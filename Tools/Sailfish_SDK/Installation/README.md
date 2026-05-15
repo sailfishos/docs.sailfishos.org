@@ -74,9 +74,9 @@ In order to maintain compatibility with older Linux distributions, Sailfish SDK 
 
   - On Arch Linux the package libxcrypt-compat must be installed
 
-### libxcb-xinerama0 (Ubuntu 24.10 only)
+### libxcb-xinerama0 (Ubuntu 24.10 and newer)
 
-This package is missing from some installations of Ubuntu 24.10 (at least) and must be installed manually.
+This package is missing from some installations of Ubuntu 24.10 and newer and must be installed manually.
 
 #### Modern bash
 
