@@ -173,3 +173,6 @@ On Linux, the installer application may be run without graphical user interface 
 When installed on a multiuser machine, change the TCP ports used by the build engine to avoid conflicts with other users.
 
     sfdk engine set ssh.port=<number> dbus.port=<number>
+
+You can find more details in the "Using Sailfish SDK in an automated environment" section of the
+Sailfish SDK User Manual that comes with the Sailfish IDE.
