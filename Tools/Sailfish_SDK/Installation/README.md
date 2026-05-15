@@ -12,9 +12,9 @@ We provide a graphical installer to make it easy to setup the Sailfish SDK.
 
 Sailfish SDK functionality has been verified on the following systems:
 
-  - Ubuntu 22.04 64 bit
-  - Windows 10 64 bit
-  - macOS 13.6.7
+  - Ubuntu 22.04, 26.04 64 bit
+  - Windows 11 64 bit
+  - macOS 15.7.5
     - Only Intel CPUs are supported. Apple silicon is not supported.
 
 Sailfish SDK should work on other Linux flavours as well, but at this stage, its functionality on other host environments has not been fully verified.
