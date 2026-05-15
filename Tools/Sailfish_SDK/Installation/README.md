@@ -27,7 +27,7 @@ The native platform for Sailfish OS software development is GNU/Linux (Linux). I
 
 In addition to that, Sailfish SDK provides virtualized runtime environment for testing Sailfish OS applications - the Sailfish OS Emulator.
 
-On Linux and Windows, both Oracle VM VirtualBox (version 4.1.18 or higher) and Docker (version 18.09.3 or higher) are supported by the SDK Build Engine. On macOS, only VirtualBox is supported.
+On Linux and Windows, both Oracle VM VirtualBox (version 6.1 or higher) and Docker (version 19.03 or higher) are supported by the SDK Build Engine. On macOS, only VirtualBox is supported.
 
   - Oracle VM VirtualBox\
     ➕ Fully fledged solution\
