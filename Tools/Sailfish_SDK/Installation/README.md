@@ -148,9 +148,7 @@ Adding SDK's `bin` directory to `PATH` is not recommended. Creating a shell wrap
     END
     chmod +x ~/.local/bin/sfdk
 
-On Windows it may be necessary to omit the `exec` keyword. Depending on your Windows version, the following error may occur when the `exec` keyword is used:
-
-    [D] SOFT ASSERT: "parentPidIt != parentPids.constEnd()" in file ...\session.cpp, line 279
+On Windows it is necessary to omit the `exec` keyword. See [Sailfish SDK Known Issues](/Tools/Sailfish_SDK/Known_Issues/#sdk-cli-sfdk).
 
 On Linux (exclusively) you can also simply symlink `sfdk` into `~/.local/bin` instead of creating a shell wrapper (again, provided that your `~/.local/bin` directory is on `PATH`)
 
