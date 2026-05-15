@@ -140,21 +140,21 @@ Once the SDK is installed, proceed to creating your [first application](/Tools/S
 
 [sfdk](/Develop/Apps/#sfdk-command-line-tool), the command line frontend to the Sailfish SDK, can be found under the `bin` subdirectory of the installation directory.
 
-Adding SDK's `bin` directory to `PATH` is not recommended. Creating a shell wrapper under your `~/bin` directory is the most widely available option (provided that your `~/bin` directory is on `PATH`)
+Adding SDK's `bin` directory to `PATH` is not recommended. Creating a shell wrapper under a standardized location listed on `PATH` is the most widely supported option. On modern Linux systems the directory `~/.local/bin` should work out of box. Traditionally `~/bin` was used instead.
 
-    cat >~/bin/sfdk <<'END'
+    cat >~/.local/bin/sfdk <<'END'
     #!/bin/sh
     exec /path/to/SailfishOS/bin/sfdk "$@"
     END
-    chmod +x ~/bin/sfdk
+    chmod +x ~/.local/bin/sfdk
 
 On Windows it may be necessary to omit the `exec` keyword. Depending on your Windows version, the following error may occur when the `exec` keyword is used:
 
     [D] SOFT ASSERT: "parentPidIt != parentPids.constEnd()" in file ...\session.cpp, line 279
 
-On Linux (exclusively) you can also simply symlink `sfdk` into `~/bin` instead of creating a shell wrapper (again, provided that your `~/bin` directory is on `PATH`)
+On Linux (exclusively) you can also simply symlink `sfdk` into `~/.local/bin` instead of creating a shell wrapper (again, provided that your `~/.local/bin` directory is on `PATH`)
 
-    ln -s /path/to/SailfishOS/bin/sfdk ~/bin/sfdk
+    ln -s /path/to/SailfishOS/bin/sfdk ~/.local/bin/sfdk
 
 Start by reading the built-in help.
 
