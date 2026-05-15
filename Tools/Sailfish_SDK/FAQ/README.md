@@ -182,6 +182,16 @@ Files with CRLF line endings found. Consult the Sailfish SDK FAQ to learn why to
 
 Should you need to continue using CRLF line endings for your project files, it is sufficient that the RPM SPEC and YAML files use Unix-style line endings in order to suppress that warning.
 
+## Deployment to emulator times out
+
+When this happens with the Docker-based build engine, then:
+
+- Ensure that the `iptable_nat` kernel module is loaded on Linux hosts
+- Ensure that your firewall does not block connections from the virtual network managed by Docker for Sailfish SDK.
+    - *(Sailfish SDK >=3.13)* The corresponding network interface is named `br-sfdk-<username>`, where your `<username>` is possibly truncated to fit the maximum allowed network interface name length, which is usually 15 characters.
+    - *(Sailfish SDK <3.13)*  The corresponding network interface is named `br-<docker-network-ID>`, where the `<docker-network-ID>` can be found in the output of the `docker network ls` command.  The relevant docker network is named `sailfish-sdk:<username>`.
+    - With Uncomplicated Firewall (UFW) on Linux, the corresponding command is `sudo ufw allow in on <interface>`.
+
 ## Docker
 
 ### How can I set up Docker for use with Sailfish SDK?
