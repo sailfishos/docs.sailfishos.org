@@ -25,7 +25,7 @@ There are some Sailfish OS-specific GeoClue provider plugins which provide posit
 The code related to the location and positioning stack can be found in the following repositories:
 
   - geoclue-provider-hybris, the main GeoClue provider plugin, using libhybris interfaces to control the GPS: <https://github.com/mer-hybris/geoclue-providers-hybris>
-  - geoclue-provider-mlsdb, a secondary GeoClue provider plugin, using Mozilla Location Service to provide assisted-GPS position updates: <https://github.com/mer-hybris/geoclue-providers-mlsdb>
+  - geoclue-provider-mlsdb, a secondary GeoClue provider plugin. Was earlier using now-defunct Mozilla Location Services to provide assisted-GPS position updates. Nowadays it's using API-compatible [beaconDB](https://beacondb.net/) service. Code available at: <https://github.com/mer-hybris/geoclue-providers-mlsdb>
   - connman-plugin-jollagps, exposing GPS power state to connman: <https://github.com/sailfishos/connman/blob/master/connman/plugins/jolla-gps.c>
   - Proprietary positioning plugins (e.g. for HERE) also exist but are not open-source.
 

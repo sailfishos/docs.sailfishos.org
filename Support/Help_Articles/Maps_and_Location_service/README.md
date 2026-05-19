@@ -24,12 +24,9 @@ Switch L1 [(see Pic 1)](#picture_1) dictates if the location service runs on you
 * **L2 is the option to ensure the best speed and accuracy** in getting the location of the device. **We recommend using this option**.
 * L3 helps to save battery power by turning the GNSS service ("GPS") off. However, it may take long to get the location by using the online services.
 * L4 is to save data costs by not using the online services. The location is calculated by using the GNSS data only. It may take time to do it.
-* L5 is the switch to the advanced settings ([Pic 2](#picture_2)). Enable L5 and tap the button "Select custom settings" [^3].
+* L5 is the switch to the advanced settings. Enable L5 and tap the button "Select custom settings" [^3].
 
-The purpose of the advanced settings is to select the used services with more precise granularity.
-* A1 means "GNSS only" if used alone. This corresponds to L4. A1 can be complemented with A2 and A3.
-* A2 relies the offline Mozilla location services [^3]. It could be combined to A1 or used alone.
-* A3 enables using the online Mozilla location services [^3]. A3 is bundled with A2 (for an unknown reason).
+The purpose of the advanced settings is to select the used services with more precise granularity. The available options might depend on the device, but generally there should be available options for general GPS, AGPS and the [BeaconDb](https://beacondb.net/) service.
 
 
 <div class="flex-images" markdown="1">
@@ -38,24 +35,8 @@ The purpose of the advanced settings is to select the used services with more pr
   <span class="md_figcaption">
     Pic 1: Basic location settings
   </span>
-* <a href="Location_advanced_settings.png" name="picture_2"><img src="Location_advanced_settings.png" alt="Advanced location settings"></a>
-  <span class="md_figcaption">
-    Pic 2: Advanced location settings
-  </span>
 </div>
 
-
-## Assistance
-
-Jolla Store has some assisting data sets that one can download and install on the phone. They make the calculation of location faster. The following data sets are available:
-* Positioning - Australia
-* Positioning - India
-* Positioning - Eastern Europe
-* Positioning - Northern Europe
-* Positioning - Southern Europe
-* Positioning - Western Europe
-
- You get the benefit of these data sets by choosing option L2.
 
 # Map apps
 

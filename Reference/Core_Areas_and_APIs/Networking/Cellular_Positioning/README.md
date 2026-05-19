@@ -13,9 +13,9 @@ Cellular positioning is a part of the [Cellular Telephony Architecture](/Referen
 
 Geoclue is the component that provides location services offering a D-Bus interface for location aware applications. Geoclue supports multiple technologies and methods for finding the current location. The technology support is implemented as a provider and new providers can be added via a plugin mechanism.
 
-### Mozilla Location Service Provider
+### BeaconDB Location Provider
 
-Sailfish OS includes a Geoclue provider which uses oFono to fetch MCC, MNC, LAC, CID and SS (Mobile Country Code, Mobile Network Code, Location Area Code, Cell Id and Signal Strength) information about nearby cell towers, and uses that information along with public-domain information sourced from the [Mozilla Location Service](https://location.services.mozilla.com/downloads) to determine approximate device location. It also has an online mode whereby it can perform API requests to the Mozilla Location Service webservers, to get more accurate positioning information, by including information about nearby wireless networks.
+Sailfish OS includes a Geoclue provider which uses oFono to fetch MCC, MNC, LAC, CID and SS (Mobile Country Code, Mobile Network Code, Location Area Code, Cell Id and Signal Strength) information about nearby cell towers, and uses that information along with available WLAN networks to make online location requests to the [BeaconDB](https://beacondb.net/) service to determine approximate device location. The BeaconDB service is based on the now-defunct Mozilla Location Service API.
 
 The source code for that plugin can be found [here](https://github.com/mer-hybris/geoclue-providers-mlsdb).
 
