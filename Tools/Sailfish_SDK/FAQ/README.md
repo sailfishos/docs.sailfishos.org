@@ -261,3 +261,7 @@ Now you can start playing with the container:
 ```
 docker container run --rm --interactive --tty "${args[@]}" --show-status
 ```
+
+### Where can I find the build engine boot log?
+
+See `/var/log/systemboot.log` inside the build engine container.
