@@ -6,6 +6,48 @@ grand_parent: Core Areas and APIs
 layout: default
 ---
 
+## The Browser Profile
+
+The Sailfish OS Browser stores its profile at `${HOME}/.local/share/org.sailfishos/browser/.mozilla/`
+
+Some of the operations for configuring this profile given in the official
+Mozilla Documentation are supported.
+
+Such as:
+
+### Adding TLS Certificates
+
+User-specific CA or Client TLS certificates can be added to the user-specific certificate store:
+
+For a CA Certificate:
+
+```
+    export CA_NAME="My Root Authority"
+    export PEM=/path/to/ca.pem
+    export MOZILLA_PROFILE="${HOME}/.local/share/org.sailfishos/browser/.mozilla/"
+    certutil -A -n "$CA_NAME" -t "TC,," -d "${MOZILLA_PROFILE} -i ${PEM}
+```
+
+For a Client Certificate:
+
+Usually, client certificates come in a `.pfx` file.
+To be able to import it into the Browser, they must first be converted into PEM format.
+Refer to the OpenSSL documentation on how to do the conversion.
+
+Once you have the certificate in PEM format, import it as:
+```
+    export CRT_NAME="My Client Cert"
+    export PEM=/path/to/client.pem
+    export MOZILLA_PROFILE="${HOME}/.local/share/org.sailfishos/browser/.mozilla/"
+    certutil -A -n "$CRT_NAME" -t "Pu,," -d "${MOZILLA_PROFILE} -i ${PEM}
+```
+
+Note the differences in the parameter to the `-t` option!
+
+The `certutil` utility is provided by the `nss-tools` package.
+
+**Note:** in Sailfish OS releases prior to version 4.x, the Browser profile was stored in ` -d ${HOME}/.mozilla/mozembed/`
+
 ## Console API messages
 
   - EMBED_CONSOLE=1 environment variable be used to log messages to terminal / journal
