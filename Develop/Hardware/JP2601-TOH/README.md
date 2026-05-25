@@ -33,7 +33,7 @@ Note that the pogo pins provide only 5 V output but all the IO is 3.3 V thus mos
 The 5 V output is designed to be able to provide more power for TOH than what 3.3 V would allow.
 For low power TOH designs a simple low-dropout linear regulator (LDO) will suffice.
 
-Charging current is limited to maximum of 1 A to protect the pogo pins.
+Charging current is limited to maximum of 1 A by default.
 Charging from TOH is disabled when USB power is connected.
 
 ## Dimensions, pin locations and mounting points
