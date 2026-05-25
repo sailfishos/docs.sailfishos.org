@@ -32,9 +32,13 @@ Pogo pins are spaced 2.90 mm apart in both dimensions (horizontally and vertical
 Note that the pogo pins provide only 5 V output but all the IO is 3.3 V thus most TOH designs need a voltage regulator.
 The 5 V output is designed to be able to provide more power for TOH than what 3.3 V would allow.
 For low power TOH designs a simple low-dropout linear regulator (LDO) will suffice.
+Power output is provided during reading of the memory chip and on request after that until detaching of TOH is detected.
 
 Charging current is limited to maximum of 1 A by default.
 Charging from TOH is disabled when USB power is connected.
+
+The device acts as I²C / I3C controller.
+TOH should not provide its own pull-ups on SCL and SDA pins.
 
 ## Dimensions, pin locations and mounting points
 
