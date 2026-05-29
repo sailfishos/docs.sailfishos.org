@@ -106,7 +106,7 @@ sqlite> select * from Components;
 sqlite> .quit 
 ```
 
-Note that when using sqlite3 version 3.52 or later you should use `.mode csv --limits off` to prevent long values (e.g., a detailed Description field) from being truncated. In versions 3.51 and earlier this option was neither necessary nor available, [values were not truncated by default prior to version 3.52](https://web.archive.org/web/20260520190538/https://sqlite.org/climode.html#default_output_formats).
+Note that if you are using sqlite3 version 3.52+ on a computer you should use `.mode csv --limits off` to prevent long values (e.g., a detailed Description field) from being truncated in the CSV output. This is *not* necessary when exporting to CSV on your phone in the current version of Sailfish OS, though.
 
 ## Collect the resulting file
 
