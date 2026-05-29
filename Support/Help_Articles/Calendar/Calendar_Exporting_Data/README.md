@@ -106,6 +106,8 @@ sqlite> select * from Components;
 sqlite> .quit 
 ```
 
+Note that if you are using sqlite3 version 3.52+ on a computer you should use `.mode csv --limits off` to prevent long values (e.g., a detailed Description field) from being truncated in the CSV output. This is *not* necessary when exporting to CSV on your phone in the current version of Sailfish OS, though.
+
 ## Collect the resulting file
 
 Move file `calendars.csv` from your Sailfish OS device to a computer where you have LibreOffice Calc (or a corresponding spreadsheet app).  Open the CSV file with that app.
