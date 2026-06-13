@@ -48,7 +48,7 @@ fastboot flash oem_a <filename>
 
 ## Example: Xperia XA2
 
-1. Download the zipped vendor image file **[v17B](https://developer.sony.com/file/download/software-binaries-for-aosp-oreo-android-8-1-kernel-4-4-nile/)** to your Sailfish OS flashing directory.
+1. Download the zipped vendor image file **[v17B](https://opendevices.sony.net/file/download/software-binaries-for-aosp-oreo-android-8-1-kernel-4-4-nile/)** to your Sailfish OS flashing directory.
 It has the name "SW_binaries_for_Xperia_Android_8.1.6.4_r1_v17B_nile.zip".
 2. Unzip it there. The resulting file is "SW_binaries_for_Xperia_Android_8.1.6.4_r1_v17_nile.img"
 3. Connect your XA2 to a **USB2** port.
@@ -75,7 +75,7 @@ Downgrading the vendor image goes in the same way as upgrading - see chapter [Up
 
 ## Example: Xperia XA2
 
-You may want to return to the v16 image on the Xperia XA2. Download the **[v16 image file](https://developer.sony.com/file/download/software-binaries-for-aosp-oreo-android-8-1-kernel-4-4-nile-v16/)**.
+You may want to return to the v16 image on the Xperia XA2. Download the **[v16 image file](https://opendevices.sony.net/file/download/software-binaries-for-aosp-oreo-android-8-1-kernel-4-4-nile-v16/)**.
 
 The command to flash it is this: 
 ```

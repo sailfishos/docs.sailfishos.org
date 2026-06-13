@@ -91,7 +91,7 @@ While the wireless setup wizard still allows to choose WEP as an encryption sche
 If the WiFi access point device is in your control, you should upgrade it to use **WPA2**.
 
 # Xperia XA2 and the 5 GHz frequency band
-With version **[v17B](https://developer.sony.com/file/download/software-binaries-for-aosp-oreo-android-8-1-kernel-4-4-nile)** of the Sony vendor image, we have observed a decrease in the perceived signal strength of the 5GHz WLAN access points. Version **[v16](https://developer.sony.com/file/download/software-binaries-for-aosp-oreo-android-8-1-kernel-4-4-nile-v16/)** should work better in this respect. Therefore we would not recommend flashing v17B if you use WLAN networks in the 5GHz band.
+With version **[v17B](https://opendevices.sony.net/file/download/software-binaries-for-aosp-oreo-android-8-1-kernel-4-4-nile)** of the Sony vendor image, we have observed a decrease in the perceived signal strength of the 5GHz WLAN access points. Version **[v16](https://opendevices.sony.net/file/download/software-binaries-for-aosp-oreo-android-8-1-kernel-4-4-nile-v16/)** should work better in this respect. Therefore we would not recommend flashing v17B if you use WLAN networks in the 5GHz band.
 
 Our flashing script allows you to use either of the two versions. You can change the vendor image later by reflashing just the vendor image of your choice (and not Sailfish OS) by following the instructions **[here](/Support/Help_Articles/Updating_Vendor_Image/)**.
 
