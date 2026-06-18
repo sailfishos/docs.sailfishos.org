@@ -12,9 +12,9 @@ We provide a graphical installer to make it easy to setup the Sailfish SDK.
 
 Sailfish SDK functionality has been verified on the following systems:
 
-  - Ubuntu 22.04 64 bit
-  - Windows 10 64 bit
-  - macOS 13.6.7
+  - Ubuntu 22.04, 26.04 64 bit
+  - Windows 11 64 bit
+  - macOS 15.7.5
     - Only Intel CPUs are supported. Apple silicon is not supported.
 
 Sailfish SDK should work on other Linux flavours as well, but at this stage, its functionality on other host environments has not been fully verified.
@@ -27,7 +27,7 @@ The native platform for Sailfish OS software development is GNU/Linux (Linux). I
 
 In addition to that, Sailfish SDK provides virtualized runtime environment for testing Sailfish OS applications - the Sailfish OS Emulator.
 
-On Linux and Windows, both Oracle VM VirtualBox (version 4.1.18 or higher) and Docker (version 18.09.3 or higher) are supported by the SDK Build Engine. On macOS, only VirtualBox is supported.
+On Linux and Windows, both Oracle VM VirtualBox (version 6.1 or higher) and Docker (version 19.03 or higher) are supported by the SDK Build Engine. On macOS, only VirtualBox is supported.
 
   - Oracle VM VirtualBox\
     ➕ Fully fledged solution\
@@ -74,9 +74,9 @@ In order to maintain compatibility with older Linux distributions, Sailfish SDK 
 
   - On Arch Linux the package libxcrypt-compat must be installed
 
-### libxcb-xinerama0 (Ubuntu 24.10 only)
+### libxcb-xinerama0 (Ubuntu 24.10 and newer)
 
-This package is missing from some installations of Ubuntu 24.10 (at least) and must be installed manually.
+This package is missing from some installations of Ubuntu 24.10 and newer and must be installed manually.
 
 #### Modern bash
 
@@ -140,21 +140,19 @@ Once the SDK is installed, proceed to creating your [first application](/Tools/S
 
 [sfdk](/Develop/Apps/#sfdk-command-line-tool), the command line frontend to the Sailfish SDK, can be found under the `bin` subdirectory of the installation directory.
 
-Adding SDK's `bin` directory to `PATH` is not recommended. Creating a shell wrapper under your `~/bin` directory is the most widely available option (provided that your `~/bin` directory is on `PATH`)
+Adding SDK's `bin` directory to `PATH` is not recommended. Creating a shell wrapper under a standardized location listed on `PATH` is the most widely supported option. On modern Linux systems the directory `~/.local/bin` should work out of box. Traditionally `~/bin` was used instead.
 
-    cat >~/bin/sfdk <<'END'
+    cat >~/.local/bin/sfdk <<'END'
     #!/bin/sh
     exec /path/to/SailfishOS/bin/sfdk "$@"
     END
-    chmod +x ~/bin/sfdk
+    chmod +x ~/.local/bin/sfdk
 
-On Windows it may be necessary to omit the `exec` keyword. Depending on your Windows version, the following error may occur when the `exec` keyword is used:
+On Windows it is necessary to omit the `exec` keyword. See [Sailfish SDK Known Issues](/Tools/Sailfish_SDK/Known_Issues/#sdk-cli-sfdk).
 
-    [D] SOFT ASSERT: "parentPidIt != parentPids.constEnd()" in file ...\session.cpp, line 279
+On Linux (exclusively) you can also simply symlink `sfdk` into `~/.local/bin` instead of creating a shell wrapper (again, provided that your `~/.local/bin` directory is on `PATH`)
 
-On Linux (exclusively) you can also simply symlink `sfdk` into `~/bin` instead of creating a shell wrapper (again, provided that your `~/bin` directory is on `PATH`)
-
-    ln -s /path/to/SailfishOS/bin/sfdk ~/bin/sfdk
+    ln -s /path/to/SailfishOS/bin/sfdk ~/.local/bin/sfdk
 
 Start by reading the built-in help.
 
@@ -173,3 +171,6 @@ On Linux, the installer application may be run without graphical user interface 
 When installed on a multiuser machine, change the TCP ports used by the build engine to avoid conflicts with other users.
 
     sfdk engine set ssh.port=<number> dbus.port=<number>
+
+You can find more details in the "Using Sailfish SDK in an automated environment" section of the
+Sailfish SDK User Manual that comes with the Sailfish IDE.
