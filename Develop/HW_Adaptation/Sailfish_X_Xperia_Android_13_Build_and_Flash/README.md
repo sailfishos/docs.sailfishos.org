@@ -263,7 +263,7 @@ Known issues:
 ### Contributing to Sony AOSP
 
 If you want to help out with underlying issues in AOSP (fixing those will also fix them in SFOS, magic!:), follow this guide to build an AOSP 13 image:
-<https://developer.sony.com/open-source/aosp-on-xperia-open-devices/guides/aosp-build-instructions/build-aosp-android-13/>
+<https://opendevices.sony.net/open-source/aosp-on-xperia-open-devices/guides/aosp-build-instructions/build-aosp-android-13/>
 
 Use this script to flash the AOSP images (the above website is pending an update for that step):
 
