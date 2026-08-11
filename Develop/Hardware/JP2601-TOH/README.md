@@ -175,3 +175,8 @@ Two letter strings were chosen for keys to save space and provide sufficient ext
 | PI  | Boolean | Whether this is a power input TOH |
 
 The table may be extended to support more keys in the future.
+
+### TOH daemon
+TOH daemon on Sailfish OS side is called [symbiosis](https://github.com/sailfishos/symbiosis).
+Its purpose is to detect TOH, start related systemd units and load and bind drivers as needed.
+It does not implement features provided by specific TOHs.
