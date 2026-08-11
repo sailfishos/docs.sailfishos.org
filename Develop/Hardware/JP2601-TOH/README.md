@@ -60,6 +60,9 @@ Those are the main way of attaching TOHs.
 There are also four M1.4 screw inserts (2.0 mm deep) around the device for securing TOH in place.
 This is useful for heavier and bulkier TOHs that may not have sufficient grip from plastic clips alone.
 
+TOH 3D model is available in [toh-designs repository](https://github.com/sailfishos/toh-designs).
+That can be used for developing new TOHs.
+
 ## Detecting TOH presence and type
 
 There are three things on TOH detection: interrupt that tells a cover may have been attached or detached, ID pull-down resistor that tells how to detect TOH, and then I²C communication to read a memory chip.
