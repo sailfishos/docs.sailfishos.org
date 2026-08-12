@@ -9,6 +9,8 @@ layout: default
 
 This page contains information for developing _The Other Half (TOH)_ back covers for _Jolla Phone (2026)_.
 
+For information about the Official Jolla TOHs see [a separate page](/Reference/Devices/JP2601-TOH/).
+
 The page uses 0x prefix to denote hexadecimal integer values.
 
 _Any details on this page are still under development and subject to change without notice._
