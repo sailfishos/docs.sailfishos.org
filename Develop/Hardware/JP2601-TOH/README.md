@@ -9,6 +9,8 @@ layout: default
 
 This page contains information for developing _The Other Half (TOH)_ back covers for _Jolla Phone (2026)_.
 
+For information about the Official Jolla TOHs see [a separate page](/Reference/Devices/JP2601-TOH/).
+
 The page uses 0x prefix to denote hexadecimal integer values.
 
 _Any details on this page are still under development and subject to change without notice._
@@ -59,6 +61,9 @@ Those are the main way of attaching TOHs.
 
 There are also four M1.4 screw inserts (2.0 mm deep) around the device for securing TOH in place.
 This is useful for heavier and bulkier TOHs that may not have sufficient grip from plastic clips alone.
+
+TOH 3D model is available in [toh-designs repository](https://github.com/sailfishos/toh-designs).
+That can be used for developing new TOHs.
 
 ## Detecting TOH presence and type
 
@@ -172,3 +177,8 @@ Two letter strings were chosen for keys to save space and provide sufficient ext
 | PI  | Boolean | Whether this is a power input TOH |
 
 The table may be extended to support more keys in the future.
+
+### TOH daemon
+TOH daemon on Sailfish OS side is called [symbiosis](https://github.com/sailfishos/symbiosis).
+Its purpose is to detect TOH, start related systemd units and load and bind drivers as needed.
+It does not implement features provided by specific TOHs.
