@@ -107,6 +107,10 @@ In addition to C++, Python is a fully supported language for developing Sailfish
 
 Sailfish SDK provides a streamlined developer experience through the Sailfish IDE. However, native support is only available for projects that use either qmake or CMake as their build system, which may not be the case when porting existing applications over to Sailfish OS and especially when working on platform components. Such projects may be built manually from command line and with an intermediate step involved it is also possible to open them in the Sailfish IDE, with the usual advanced editing features enabled. Techniques described in this document are also useful to those who prefer using a different code editing environment or want to use Sailfish SDK in the context of a continuous integration system. ([Read more…](/Develop/Apps/Tutorials/Building_packages_-_advanced_techniques))
 
+## Events View widgets
+
+Third-party applications can register widgets for the Events View screen with a QML component and a JSON descriptor installed by the RPM. ([Read more…](/Develop/Apps/Tutorials/Events_View_Widgets))
+
 ## QML Live Coding With Qt QmlLive
 
 Creating Qt Quick applications for Sailfish OS can be more effective with the help of Qt QmlLive tool from Qt Automotive Suite. Qt QmlLive supports live coding with two essential features. First it allows to distribute source code modifications, removing the need to redeploy your application to see the effect. Secondly it can instruct yor application which particular QML component should it load instead of the "main" one, so that each component can be worked on independently. ([Read more...](/Develop/Apps/Tutorials/QML_Live_Coding_With_Qt_QmlLive))
