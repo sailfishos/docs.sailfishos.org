@@ -179,6 +179,11 @@ Two letter strings were chosen for keys to save space and provide sufficient ext
 The table may be extended to support more keys in the future.
 
 ### TOH daemon
+
 TOH daemon on Sailfish OS side is called [symbiosis](https://github.com/sailfishos/symbiosis).
 Its purpose is to detect TOH, start related systemd units and load and bind drivers as needed.
 It does not implement features provided by specific TOHs.
+
+Symbiosis uses [configuration files](https://github.com/sailfishos/symbiosis/blob/main/doc/configuration.md) and
+[provides TOH info and access to the I²C bus for services via D-Bus](https://github.com/sailfishos/symbiosis/blob/main/doc/dbus_interface.md).
+Please see [symbiosis' repository](https://github.com/sailfishos/symbiosis) for more documentation on configuring TOH daemon and on use of its D-Bus interfaces.
