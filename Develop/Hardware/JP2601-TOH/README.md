@@ -106,10 +106,13 @@ The table may be extended in the future.
 Note that the chips may expand to further blocks in following target device addresses after 0x50.
 For example AT24C16 uses 8 blocks in addresses 0x50-0x57.
 
-A TOH with a microcontroller unit may emulate a memory chip at target device address 0x50.
+On TOHs with a microcontroller unit (mcu) a memory chip can be replaced by emulating it with the mcu at the target device address 0x50.
+This can save some cost if the microcontroller can provide multiple target device addresses.
 In that case it should use a resistor that corresponds to the emulated memory chip.
 Most microcontrollers cannot support very many I²C addresses when acting as a target device.
 Thus it is recommended that TOHs with emulated memory chips use 15 kohm resistor and 16-bit addresses if they ever want to expand beyond 256 bytes but remain within one block of memory.
+
+Any other target address is free to be used for any purpose by TOH.
 
 ### Memory chip content
 
