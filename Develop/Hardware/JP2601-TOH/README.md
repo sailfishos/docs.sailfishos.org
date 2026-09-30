@@ -102,6 +102,7 @@ The table may be extended in the future.
 |-----------------------|------|--------------|
 | 10 kohm               | 8-bit addressed memory chip with up to 256 byte blocks | AT24C16 |
 | 15 kohm               | 16-bit addressed memory chip with up to 65,536 byte blocks | AT24C256 |
+| 6.2 kohm              | Special type without memory chip, use this only for development | None |
 
 Note that the chips may expand to further blocks in following target device addresses after 0x50.
 For example AT24C16 uses 8 blocks in addresses 0x50-0x57.
@@ -113,6 +114,10 @@ Most microcontrollers cannot support very many I²C addresses when acting as a t
 Thus it is recommended that TOHs with emulated memory chips use 15 kohm resistor and 16-bit addresses if they ever want to expand beyond 256 bytes but remain within one block of memory.
 
 Any other target address is free to be used for any purpose by TOH.
+
+The special variant with 6.2 kohm resistor does not need a memory chip.
+Instead of reading a memory chip, TOH daemon uses predefined data and allows to use I²C bus as usual.
+**This variant must never be used for actual products** but it can serve as a useful developer tool.
 
 ### Memory chip content
 
