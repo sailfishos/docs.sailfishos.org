@@ -161,7 +161,7 @@ Connect your phone to your computer in MTP mode. On your computer, use the file 
 
 ## On the new phone
 1. Install WhatsApp application.
-2. Open WhatsApp shortly so that it adds a folder to the phone. Select the langauge and close WhatsApp then.
+2. Open WhatsApp shortly so that it adds a folder to the phone. Select the language and close WhatsApp then.
 3. Open "Settings > Apps > WhatsApp"
 4. Tap "Open Android settings"
 5. Tap Permissions
