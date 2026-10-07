@@ -492,6 +492,38 @@ _Pic 42_ shows how the Downloads folder in the device storage was selected for t
   </span>
 </div>
 
+## Adding TLS Certificates
+
+There is currently no user interface for adding custom or third-party TLS
+certificates. This must be done on the command line, using the `certutil`
+tool (which is provided by the `nss-tools` package).
+
+To add a CA Certificate to the user-specific trust store:
+
+```
+    export CA_NAME="My Root Authority"
+    export PEM=/path/to/ca.pem
+    export MOZILLA_PROFILE="${HOME}/.local/share/org.sailfishos/browser/.mozilla/"
+    certutil -A -n "$CA_NAME" -t "TC,," -d "${MOZILLA_PROFILE} -i ${PEM}
+```
+
+To add a Client Certificate:
+
+Usually, client certificates come in a `.pfx` file.
+To be able to import it into the Browser, they must first be converted into PEM format.
+Refer to the OpenSSL documentation on how to do the conversion.
+
+Once you have the certificate in PEM format, import it as:
+
+```
+    export CRT_NAME="My Client Cert"
+    export PEM=/path/to/client.pem
+    export MOZILLA_PROFILE="${HOME}/.local/share/org.sailfishos/browser/.mozilla/"
+    certutil -A -n "$CRT_NAME" -t "Pu,," -d "${MOZILLA_PROFILE} -i ${PEM}
+```
+
+Note the differences in the parameter to the `-t` option!
+
 # Resetting the Browser
 
 The following procedure will reset the Browser if it should misbehave in a weird way. The saved passwords will be lost but the browsing history and bookmarks remain.
