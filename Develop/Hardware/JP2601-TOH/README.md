@@ -96,20 +96,28 @@ To facilitate that some ID resistor values have been assigned to certain types o
 This allows for a good range of values and takes into account variance in ADC accuracy.
 
 Below you can find currently assigned resistor values for ID pin pull-down.
-The table may be extended in the future.
+The table may be extended in the future to support [other possible values](Resistor_values/).
 
 | ID pull-down resistor | Type | Example chip |
 |-----------------------|------|--------------|
 | 10 kohm               | 8-bit addressed memory chip with up to 256 byte blocks | AT24C16 |
 | 15 kohm               | 16-bit addressed memory chip with up to 65,536 byte blocks | AT24C256 |
+| 6.2 kohm              | Special type without memory chip, use this only for development | None |
 
 Note that the chips may expand to further blocks in following target device addresses after 0x50.
 For example AT24C16 uses 8 blocks in addresses 0x50-0x57.
 
-A TOH with a microcontroller unit may emulate a memory chip at target device address 0x50.
+On TOHs with a microcontroller unit (mcu) a memory chip can be replaced by emulating it with the mcu at the target device address 0x50.
+This can save some cost if the microcontroller can provide multiple target device addresses.
 In that case it should use a resistor that corresponds to the emulated memory chip.
 Most microcontrollers cannot support very many I²C addresses when acting as a target device.
 Thus it is recommended that TOHs with emulated memory chips use 15 kohm resistor and 16-bit addresses if they ever want to expand beyond 256 bytes but remain within one block of memory.
+
+Any other target address is free to be used for any purpose by TOH.
+
+The special variant with 6.2 kohm resistor does not need a memory chip.
+Instead of reading a memory chip, TOH daemon uses predefined data and allows to use I²C bus as usual.
+**This variant must never be used for actual products** but it can serve as a useful developer tool.
 
 ### Memory chip content
 
@@ -179,6 +187,11 @@ Two letter strings were chosen for keys to save space and provide sufficient ext
 The table may be extended to support more keys in the future.
 
 ### TOH daemon
+
 TOH daemon on Sailfish OS side is called [symbiosis](https://github.com/sailfishos/symbiosis).
 Its purpose is to detect TOH, start related systemd units and load and bind drivers as needed.
 It does not implement features provided by specific TOHs.
+
+Symbiosis uses [configuration files](https://github.com/sailfishos/symbiosis/blob/main/doc/configuration.md) and
+[provides TOH info and access to the I²C bus for services via D-Bus](https://github.com/sailfishos/symbiosis/blob/main/doc/dbus_interface.md).
+Please see [symbiosis' repository](https://github.com/sailfishos/symbiosis) for more documentation on configuring TOH daemon and on use of its D-Bus interfaces.
