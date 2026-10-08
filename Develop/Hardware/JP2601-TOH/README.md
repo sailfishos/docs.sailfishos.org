@@ -96,7 +96,7 @@ To facilitate that some ID resistor values have been assigned to certain types o
 This allows for a good range of values and takes into account variance in ADC accuracy.
 
 Below you can find currently assigned resistor values for ID pin pull-down.
-The table may be extended in the future.
+The table may be extended in the future to support [other possible values](Resistor_values/).
 
 | ID pull-down resistor | Type | Example chip |
 |-----------------------|------|--------------|
