@@ -9,7 +9,7 @@ nav_order: 100
 
 Sailfish OS is a mobile operating system based on GNU/Linux.
 
-The Sailfish OS architecture is primarily made up of three areas hardware adapation layer, the middleware layer and the app/UI layer:
+The Sailfish OS architecture is primarily made up of three areas: The hardware adapation layer, the middleware layer and the app/UI layer:
 
 <div style="margin:auto; width:80%; text-align:center;">
 
