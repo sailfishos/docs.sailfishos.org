@@ -53,6 +53,8 @@ Events provides quick access to:
   - Quick Actions and Settings Shortcuts for essential Sailfish OS functions (these are user-customisable)
   - Other extensions like Twitter tweets
 
+Third-party applications can also register their own Events View widgets. See [Events View widgets](/Develop/Apps/Tutorials/Events_View_Widgets) for the JSON registration format and widget QML expectations.
+
 Quick Actions and Settings Shortcuts are accessed by dragging downwards within the Events screen. Quick Actions provide one-click access to common functions such as setting an alarm and performing a web search, while Settings Shortcuts are settings embedded within the Events screen, that make it possible to access system settings without navigating through the Settings application. Both Quick Actions and Settings Shortcuts can be added or removed in the Settings application.
 
 Past event notifications are automatically displayed in the Events screen, unless they have been configured otherwise.
