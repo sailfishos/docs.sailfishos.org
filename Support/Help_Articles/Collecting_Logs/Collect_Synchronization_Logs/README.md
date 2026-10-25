@@ -66,8 +66,7 @@ journalctl -a -b > journal-sync.txt
 2. The level of debugging enabled in step 2 of the Basic sync logs chapter does not make the system print out too much data on contact sync. If there is a need to get deeper insight to the issues in contact sync then consider using the following setup
 (make sure that you copy the whole long command):
 ```
-devel-su
-QTCONTACTS_SQLITE_TRACE=1 MSYNCD_LOGGING_LEVEL=8 msyncd 2>&1 | cat > msyncd.log
+sudo -E -g privileged QTCONTACTS_SQLITE_TRACE=1 MSYNCD_LOGGING_LEVEL=8 msyncd 2>&1 | cat > msyncd.log
 ```
 3. Trigger a sync cycle by opening up "Settings > Accounts". Then long-press the account you want to debug and tap Sync in the pop-up menu.
 4. Wait for 30 seconds or until the sync cycle has completed. The logs collected from the msyncd terminal were saved to file msyncd.log.
