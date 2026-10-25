@@ -109,7 +109,7 @@ scp defaultuser@192.168.2.15:/home/defaultuser/journal.log ./
 
 4) Copy all ".log" files from the phone directory /var/log to the Ubuntu directory /testdir/logs:
 ```
-scp defaultuser@192.168.2.15:/var/log/*.log /testdir/logs/
+scp defaultuser@192.168.2.15:/var/log/*.log /testdir/logs/
 ```
 
 ## Over WLAN
@@ -118,5 +118,37 @@ Replace the USB address 192.168.2.15 with the current WLAN IP address of your Sa
 
 # Troubleshooting
 
-If the connection attempt fails, disconnect the phone from the PC. Restart the phone (consider restarting the PC, too).  Try again.
+If the connection attempt fails, disconnect the phone from the PC. Restart the phone (consider restarting the PC, too). Try again.
 
+If that does not help, continue with the items below.
+
+## NetworkManager does not accept two 'wired' connections
+
+Check which devices exist and their state:
+
+```
+nmcli device status
+```
+
+Pin your existing wired connection to its interface, then create a separate connection for the phone's USB interface:
+
+```
+nmcli connection modify "Wired" connection.interface-name <your-wired-interface>
+nmcli connection add type ethernet ifname <your-phone-interface> con-name "Phone USB" ipv4.method auto ipv4.addresses "" ipv6.method disabled
+```
+
+## Internet stops working while the USB network is up
+
+The USB connection may claim the default route, sending all internet traffic towards the phone. Prevent that:
+
+```
+nmcli connection modify "Phone USB" ipv4.never-default yes ipv6.never-default yes
+nmcli connection up "Phone USB"
+```
+
+Now traffic to `192.168.2.15` goes over USB while everything else keeps using your regular connection. Verify that both interfaces are connected and that the phone answers:
+
+```
+nmcli device status
+ping -c1 192.168.2.15
+```
