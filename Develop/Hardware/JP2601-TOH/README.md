@@ -44,6 +44,8 @@ Charging from TOH is disabled when USB power is connected.
 The device acts as I²C / I3C controller.
 TOH should not provide its own pull-ups on SCL and SDA pins.
 
+**NOTE:** All current and future TOH's must be backwards compatible with I²C.
+
 ID pin and INT pin use are described later in [Detecting TOH presence and type](#detecting-toh-presence-and-type).
 ID and INT pins should not be connected to 3.3 V or 5 V.
 
